@@ -33,7 +33,7 @@ def today_jobs(now=None):
     if not rendered and not any(j.startswith(('LATE', 'UPLOAD')) for _, j in jobs):
         r = next((x for x in p.get('redo', []) if x['status'] != 'held'), None)
         if r: jobs.append((50, 'REDO %s (%s): %s' % (r['id'], r['status'], {
-            'storyboard': 'storyboard it in the film style by STYLE.md 2b (every spoken beat its own shot; real archival photos with smoke/photo.py listed in "photos"; "film": true; the hook formulas; the three final thumbnails); pass the FILM CHECK (--pacing), then set its redo status to render',
+            'storyboard': 'its film storyboard is done (tools/storyboard/<id>.py); add the acted dialogue, comparisons and callbacks of STYLE.md 2c (a cast entry and voice per speaker), keep it 30-45 minutes; storyboard anything new by STYLE.md 2b (every spoken beat its own shot; real archival photos with smoke/photo.py listed in "photos"; "film": true; the hook formulas; the three final thumbnails); pass the FILM CHECK (--pacing), then set its redo status to render',
             'render': 'render it (wip.py restore/save, --resume), cut both Shorts (cut_shorts.py <id> auto), make the thumbnails (make_thumb_sb.py --ab), then set its redo status to held. DO NOT UPLOAD: the owner decides where it goes'}[r['status']])))
     if now.weekday() == 0: jobs.append((99, 'REVIEW: weekly competitor watch + our channel numbers -> smoke/LEARNINGS.md, and update STYLE.md / plan.json if the numbers say so.'))
     return [j for _, j in sorted(jobs)]
