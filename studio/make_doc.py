@@ -535,7 +535,7 @@ def film_check(tl, chapters, total):
     def rnd(i): x = math.sin(i * 127.1 + 311.7) * 43758.5453; return x - math.floor(x)
     angle = 0
     for e in sc:
-        if e.get('shot') in ('doc', 'card', 'talk', 'off') or e.get('angles') is False: continue
+        if not e.get('angles') or e.get('shot') in ('doc', 'card', 'talk', 'off'): continue   # zoom-cuts are off (owner, 15 Nov 2026)
         a, i_ = 0, 0
         while True:
             a += 2.6 + rnd(e['t'] * 7 + i_ * 3.1) * 0.9

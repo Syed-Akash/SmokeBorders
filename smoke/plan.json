@@ -70,7 +70,7 @@
    "id": "sb-pig-war",
    "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
    "publish": "2026-11-18T16:00:00Z",
-   "status": "scripted",
+   "status": "hold",
    "audience": "US CA UK",
    "shorts": [
     {
@@ -81,7 +81,7 @@
     }
    ],
    "angle": "Hidden people: Lyman Cutlar, the farmer who shot the pig, and the pig's owner Charles Griffin.",
-   "note": "Owner, 15 Nov 2026: re-render in the new style (acted dialogue, 3-4 s cuts, comparisons). Narration voice clips are saved on wip/sb-pig-war; the old finished render is kept on branch keep/sb-pig-war-v1 as a fallback."
+   "note": "Owner, 15 Nov 2026: hold. The new-style preview was rejected (zoom cuts on stills, eyes flapping, no motion graphics). The engine is being rebuilt (acting characters, real transitions, motion graphics); set back to \"scripted\" when the new preview is approved. Must render by 17 Nov for 18 Nov."
   },
   {
    "id": "sb-ww2-both-sides",

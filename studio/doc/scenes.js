@@ -283,9 +283,9 @@
     const inn = S.fadeIn == null ? .35 : S.fadeIn; if (S.u < inn) { c.fillStyle = `rgba(0,0,0,${1 - S.u / inn})`; c.fillRect(0, 0, W, H) }
     const out = S.fadeOut || 0, d = S.dur || 8; if (out && S.u > d - out) { c.fillStyle = `rgba(0,0,0,${clamp((S.u - d + out) / out)})`; c.fillRect(0, 0, W, H) }
     return true };
-  const NOANGLE = { doc: 1, card: 1, talk: 1, off: 1 };
+  const NOANGLE = { doc: 1, card: 1, talk: 1, off: 1 }, ANGLES_ON = false;   // owner, 15 Nov 2026: zoom-cuts on one still look bad; off
   const ANGLES = [[1.18, -.07, -.04], [1.1, .06, .02], [1.26, .02, -.07], [1.14, -.05, .03], [1.22, .07, -.05]];
-  G.SCENE_CUTS = S => { if (NOANGLE[S.shot] || S.angles === false) return []; const d = S.dur || 8, out = []; let a = 0, i = 0;   // where the angle cuts fall
+  G.SCENE_CUTS = S => { if (!ANGLES_ON && !S.angles) return []; if (NOANGLE[S.shot] || S.angles === false) return []; const d = S.dur || 8, out = []; let a = 0, i = 0;   // where the angle cuts fall
     while (true) { a += 2.6 + rnd((S.t || 0) * 7 + i * 3.1) * 0.9; if (a > d - 1.8) break; out.push(a); i++ } return out };
   G.SCENE_ANGLE = (S, W, H) => { const cuts = G.SCENE_CUTS(S); let k = 0; while (k < cuts.length && S.u >= cuts[k]) k++; if (!k) return null;
     const g = ANGLES[(k - 1 + Math.floor(rnd((S.t || 0) * 13) * 5)) % ANGLES.length]; return { z: g[0], dx: g[1] * W, dy: g[2] * H } };
