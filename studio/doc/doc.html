@@ -147,7 +147,8 @@ function frame(t){if(!T)return;const st=state(t),cam=st.cam,sx=Math.sin(t*43)*st
   // the base map is cached and reused while the camera doesn't move (most frames)
   const eraNow=st.era?ERAS[st.era.to]:ERAS[T.era]||ERA,eraOld=st.era&&st.era.u<1?ERAS[st.era.from]:null;ERA=eraNow;
   const key=[cam.lon,cam.lat,cam.scale*(1+st.zoom),sx,sy].map(v=>v.toFixed(3)).join()+(st.era?st.era.to+(st.era.u<1?st.era.u.toFixed(2):''):'');
-  if(key!==BASE.key){const bx=BASE.ctx,bpath=d3.geoPath(proj,bx);BASE.key=key;
+  const MAP=!(st.scene&&window.SCENE);   // a film shot covers the whole frame: skip the map under it (it was ~90% of every frame)
+  if(MAP){if(key!==BASE.key){const bx=BASE.ctx,bpath=d3.geoPath(proj,bx);BASE.key=key;
     const sea=bx.createRadialGradient(W/2,H*.45,100,W/2,H/2,W*.75);const TH=T.thumb;sea.addColorStop(0,TH?'#4a93d6':PAL().sea0);sea.addColorStop(1,TH?'#1d4f8c':PAL().sea1);bx.fillStyle=sea;bx.fillRect(0,0,W,H);
     bx.beginPath();bpath(GRAT);bx.strokeStyle=PAL().grat;bx.lineWidth=1;bx.stroke();
     bx.beginPath();bpath(LAND);bx.fillStyle=TH?'#cbbd94':PAL().land;bx.fill();bx.lineJoin='round';
@@ -189,7 +190,7 @@ function frame(t){if(!T)return;const st=state(t),cam=st.cam,sx=Math.sin(t*43)*st
   // balls
   for(const b of Object.values(st.balls).sort((p,q)=>q.lat-p.lat)){const p=BP(b);if(!p)continue;const bob=Math.sin(t*2.2+b.lon)*4;ball(b,p[0],p[1]+bob,b.r*rs,t)}
   for(const q of st.bubbles){const b=st.balls[q.who],p=b&&BP(b);if(!p)continue;bubble(p[0],p[1],b.r*rs,q.text,q.u,q.dur,MAIN[b.flag])}
-  if(st.dim>0){ctx.fillStyle=`rgba(3,5,12,${st.dim})`;ctx.fillRect(0,0,W,H)}
+  if(st.dim>0){ctx.fillStyle=`rgba(3,5,12,${st.dim})`;ctx.fillRect(0,0,W,H)}}
   if(st.scene&&window.SCENE){SCENE(ctx,W,H,st.scene,t,{LAND,d3,drawChar:window.drawChar,PRESETS:window.CHAR_PRESETS,story:T.story});if(st.shake>0){ctx.save();ctx.globalCompositeOperation='lighter';ctx.fillStyle=`rgba(255,240,220,${st.shake*.08})`;ctx.fillRect(0,0,W,H);ctx.restore()}}
   if(st.snow>0){ctx.save();ctx.fillStyle='#fff';for(let i=0;i<220;i++){const x=(rnd(i)*W+Math.sin(t*.8+i)*30)%W,y=((rnd(i+7)*H+t*(40+rnd(i+3)*60))%H);ctx.globalAlpha=st.snow*(.3+rnd(i+5)*.6);ctx.beginPath();ctx.arc(x,y,1.5+rnd(i+9)*2.5,0,7);ctx.fill()}ctx.restore()}
   // cards
