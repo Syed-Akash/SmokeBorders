@@ -15,7 +15,7 @@ def analytics(tok, **q):
     except urllib.error.HTTPError as e: return {'error': e.code, 'body': e.read().decode(errors='replace')[:300]}
 
 def main():
-    tok = upload.token(); cid, title = upload.whoami(tok)
+    tok = upload.token(); cid, title = upload.whoami(tok)[:2]
     if upload.EXPECT and title != upload.EXPECT: sys.exit('token belongs to %r, not %r' % (title, upload.EXPECT))
     vids = upload.recent(tok, 50); ids = [v[0] for v in vids]; today = datetime.date.today(); out = {'date': today.isoformat(), 'channel': title, 'videos': []}
     pub = {}

@@ -63,14 +63,16 @@ take two runs.
   thumb.wikimedia.org is blocked, upload.wikimedia.org works.
 
 ## Secrets and accounts
-- Repository secrets needed: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN_SMOKE`. If the channel's title is not
-  exactly "Smoke & Borders", set the repository variable / env `YT_EXPECT_TITLE` (the uploader refuses any other channel).
+- Repository secrets needed: `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN_SMOKE` (signed in as the NEW channel).
+- The uploader refuses any channel whose title is not "Smoke & Borders" AND whose handle is not **@SmokeAndBorders**
+  (both channels share the title, so the handle is what stops an upload landing on the old one). `YT_EXPECT_HANDLE`
+  overrides it. Check with `python3 studio/upload.py --whoami`.
 - OAuth scopes: youtube.upload, youtube.force-ssl, yt-analytics.readonly. Tokens expire every 7 days while the Google
   OAuth app is in Testing mode: the owner should publish the app (OAuth consent screen → Publish app).
-- **New channel (14 Nov 2026):** the owner made a fresh Smoke & Borders channel on its own email (before, both channels
-  shared one Google account). Still needed from the owner: its channel ID/handle, a refresh token signed in with that
-  account (the new email must be a test user of the OAuth app, or the app published), and the decision where the redone
-  episodes go. Until then nothing uploads to the new channel.
+- **New channel (14 Nov 2026): "Smoke & Borders", @SmokeAndBorders**, on its own email (before, both channels shared one
+  Google account). All new episodes (Pig War onwards) go there. Still needed from the owner: a refresh token signed in
+  with that account (the new email must be a test user of the OAuth app, or the app published), and the decision where
+  the redone episodes go. Until the token is in, runs do everything except upload.
 
 ## Where things stand (14 Nov 2026)
 - Old channel (UChRyy_-XdfEp04lyQA1WoJg, @SmokeBorders): American Revolution (y2nbDhzbAN8, published), Rome vs Carthage

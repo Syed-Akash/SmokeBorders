@@ -13,7 +13,9 @@ import json, os, sys, urllib.request, urllib.parse, urllib.error
 
 CHANNEL = os.environ.get('YT_CHANNEL', 'smoke')   # this repo is Smoke & Borders only
 TOKEN_VAR = {'flagbomb': 'YT_REFRESH_TOKEN', 'smoke': 'YT_REFRESH_TOKEN_SMOKE'}[CHANNEL]
-EXPECT = os.environ.get('YT_EXPECT_TITLE') or {'flagbomb': None, 'smoke': 'Smoke & Borders'}[CHANNEL]   # the new channel may have another title: set YT_EXPECT_TITLE   # the channel title an upload must land on
+EXPECT = os.environ.get('YT_EXPECT_TITLE') or {'flagbomb': None, 'smoke': 'Smoke & Borders'}[CHANNEL]   # the channel title an upload must land on
+# the old and the new channel share the title, so the handle decides (owner, 14 Nov 2026: new channel @SmokeAndBorders)
+EXPECT_HANDLE = (os.environ.get('YT_EXPECT_HANDLE') or {'flagbomb': '', 'smoke': '@SmokeAndBorders'}[CHANNEL]).lower()
 
 def token():
     data = urllib.parse.urlencode({'client_id': os.environ['YT_CLIENT_ID'], 'client_secret': os.environ['YT_CLIENT_SECRET'],
@@ -101,10 +103,13 @@ PENDING = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'pending_yout
 
 def whoami(tok):
     it = api(tok, 'GET', 'channels?part=snippet&mine=true').get('items', [])
-    return (it[0]['id'], it[0]['snippet']['title']) if it else (None, None)
+    return (it[0]['id'], it[0]['snippet']['title'], (it[0]['snippet'].get('customUrl') or '').lower()) if it else (None, None, '')
 
 def check_channel(tok):
-    if EXPECT and whoami(tok)[1] != EXPECT: sys.exit('wrong channel: this token belongs to %r, not %r; nothing uploaded' % (whoami(tok)[1], EXPECT))
+    cid, title, handle = whoami(tok)
+    if EXPECT and title != EXPECT: sys.exit('wrong channel: this token belongs to %r, not %r; nothing uploaded' % (title, EXPECT))
+    if EXPECT_HANDLE and handle != EXPECT_HANDLE:
+        sys.exit('wrong channel: this token belongs to %s (%s), not %s; nothing uploaded' % (handle or '?', cid, EXPECT_HANDLE))
 
 def comment(tok, video_id, text):
     """First comment from the channel. Needs the youtube.force-ssl scope; pinning is done by hand in the app."""
