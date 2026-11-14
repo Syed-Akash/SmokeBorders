@@ -543,6 +543,26 @@
        "facing": 1,
        "y": 0.86,
        "depth": 0.8
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "settler",
+         "x": 0.3,
+         "pose": "think",
+         "facing": 1,
+         "h": 0.6,
+         "y": 0.93,
+         "walk": [
+          0.15,
+          0.32,
+          0,
+          4
+         ]
+        }
+       ],
+       "depth": 0.85
       }
      ],
      "fx": [
@@ -604,19 +624,24 @@
        "depth": 0.8
       },
       {
-       "type": "people",
+       "type": "actors",
        "list": [
         {
-         "x": 0.2,
-         "pose": "point",
+         "preset": "settler",
+         "x": 0.3,
+         "pose": "aim",
          "facing": 1,
-         "h": 0.9,
-         "cap": false,
-         "hat": "wide"
+         "h": 0.6,
+         "y": 0.93,
+         "mood": "angry",
+         "act": [
+          [
+           1.4,
+           "fire"
+          ]
+         ]
         }
        ],
-       "lx": 0.4,
-       "ly": 0.6,
        "depth": 0.85
       }
      ],
@@ -736,10 +761,57 @@
      "scale": 20000
     },
     "scene": {
-     "shot": "photo",
-     "img": "american_camp",
-     "caption": "American Camp, San Juan Island, 1867",
-     "move": "out"
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.5,
+       "n": 2,
+       "seed": 4,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.74,
+       "depth": 0.6
+      },
+      {
+       "type": "cannons",
+       "y": 0.8,
+       "n": 3,
+       "x0": 0.35,
+       "gap": 240,
+       "depth": 0.7
+      },
+      {
+       "type": "soldiers",
+       "y": 0.86,
+       "n": 14,
+       "rows": 2,
+       "x0": 0.45,
+       "gap": 80,
+       "col": "#1f3150",
+       "march": false,
+       "depth": 0.7
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "pickett",
+         "x": 0.2,
+         "pose": "point",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.93,
+         "mood": "smug"
+        }
+       ],
+       "depth": 0.85
+      }
+     ]
     }
    },
    {
@@ -913,10 +985,64 @@
      }
     ],
     "scene": {
-     "shot": "photo",
-     "img": "bellevue",
-     "caption": "Belle Vue sheep farm, San Juan Island",
-     "move": "right"
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.55,
+       "n": 2,
+       "seed": 3,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.74,
+       "depth": 0.6
+      },
+      {
+       "type": "farm",
+       "x": 0.8,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "animal",
+       "kind": "pig",
+       "x": 0.85,
+       "s": 0.8,
+       "y": 0.9,
+       "walk": true,
+       "facing": -1,
+       "depth": 0.8
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "settler",
+         "x": 0.32,
+         "pose": "hips",
+         "facing": 1,
+         "h": 0.6,
+         "y": 0.93,
+         "talk": false
+        },
+        {
+         "preset": "hbc_man",
+         "x": 0.66,
+         "pose": "cross",
+         "facing": -1,
+         "h": 0.6,
+         "y": 0.93
+        }
+       ],
+       "depth": 0.85
+      }
+     ]
     }
    },
    {
@@ -5490,6 +5616,27 @@
         "facing": 1,
         "y": 0.86,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.25,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "shock",
+          "act": [
+           [
+            1.2,
+            "point"
+           ]
+          ]
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -5534,22 +5681,6 @@
         "depth": 0.6
        },
        {
-        "type": "people",
-        "list": [
-         {
-          "x": 0.3,
-          "pose": "point",
-          "facing": 1,
-          "h": 1.0,
-          "cap": false,
-          "hat": "wide"
-         }
-        ],
-        "lx": 0.8,
-        "ly": 0.6,
-        "depth": 0.85
-       },
-       {
         "type": "animal",
         "kind": "pig",
         "x": 0.75,
@@ -5558,6 +5689,27 @@
         "facing": -1,
         "y": 0.86,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.3,
+          "pose": "aim",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry",
+          "act": [
+           [
+            1.0,
+            "fire"
+           ]
+          ]
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -5622,27 +5774,38 @@
         "depth": 0.6
        },
        {
-        "type": "people",
+        "type": "actors",
         "list": [
          {
-          "x": 0.35,
-          "pose": "stand",
+          "preset": "settler",
+          "x": 0.2,
+          "pose": "idle",
           "facing": 1,
-          "h": 0.85,
-          "cap": false,
-          "hat": "wide"
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.12,
+           0.42,
+           0,
+           3.5
+          ],
+          "act": [
+           [
+            3.5,
+            "hold"
+           ]
+          ],
+          "prop": "coin"
          },
          {
-          "x": 0.6,
-          "pose": "arms",
+          "preset": "hbc_man",
+          "x": 0.7,
+          "pose": "hips",
           "facing": -1,
-          "h": 0.85,
-          "cap": false,
-          "hat": "wide"
+          "h": 0.6,
+          "y": 0.93
          }
         ],
-        "lx": 0.5,
-        "ly": 0.4,
         "depth": 0.85
        }
       ]
@@ -5736,10 +5899,56 @@
       }
      ],
      "scene": {
-      "shot": "card",
-      "time": "$10  →  $100",
-      "place": "BELLE VUE FARM",
-      "date": "the price of a pig"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.8,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.38,
+          "pose": "shrug",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "shock"
+         },
+         {
+          "preset": "hbc_man",
+          "x": 0.66,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry",
+          "talk": true
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -5775,19 +5984,24 @@
         "depth": 0.6
        },
        {
-        "type": "people",
+        "type": "actors",
         "list": [
          {
-          "x": 0.4,
-          "pose": "arms",
+          "preset": "settler",
+          "x": 0.45,
+          "pose": "think",
           "facing": 1,
-          "h": 1.0,
-          "cap": false,
-          "hat": "wide"
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "grim",
+          "act": [
+           [
+            2.5,
+            "cross"
+           ]
+          ]
          }
         ],
-        "lx": 0.6,
-        "ly": 0.4,
         "depth": 0.85
        }
       ],
@@ -5911,10 +6125,63 @@
       "scale": 45000
      },
      "scene": {
-      "shot": "photo",
-      "img": "fort_victoria",
-      "caption": "Victoria, seat of the colonial government",
-      "move": "in"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.8,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "hbc_man",
+          "x": 0.62,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry"
+         },
+         {
+          "preset": "rn_officer",
+          "x": 0.78,
+          "pose": "hips",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93
+         },
+         {
+          "preset": "settler",
+          "x": 0.25,
+          "pose": "shrug",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "shock"
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -5944,12 +6211,62 @@
       }
      ],
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "The American settlers ask",
-      "lines": [
-       "for the protection",
-       "of the United States Army"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 10,
+        "gap": 150,
+        "h": 140,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.3,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry",
+          "talk": true
+         },
+         {
+          "preset": "settler",
+          "x": 0.5,
+          "pose": "hips",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "hair": "#2a1d12"
+          }
+         },
+         {
+          "preset": "settler",
+          "x": 0.68,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "hair": "#8a6a3a"
+          }
+         }
+        ],
+        "depth": 0.85
+       }
       ]
      }
     },
@@ -6098,10 +6415,40 @@
       "scale": 5200
      },
      "scene": {
-      "shot": "photo",
-      "img": "harney",
-      "caption": "William S. Harney",
-      "move": "out"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.5,
+          "pose": "hips",
+          "facing": 1,
+          "h": 0.66,
+          "y": 0.93,
+          "mood": "grim"
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -6194,14 +6541,52 @@
       "scale": 20000
      },
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Department of Oregon, orders in short",
-      "lines": [
-       "one company to San Juan Island;",
-       "stop the British from landing."
-      ],
-      "stamp": "ORDERS"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.35,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.64,
+          "y": 0.93,
+          "mood": "angry",
+          "talk": true
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.72,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "coat": "#1f3150"
+          }
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      },
      "date": "JULY 1859"
     },
@@ -6231,13 +6616,59 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "pickett",
-      "caption": "Captain George E. Pickett",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.3
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.55,
+        "gap": 200,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "pickett",
+          "x": 0.2,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.64,
+          "y": 0.93,
+          "walk": [
+           0.05,
+           0.45,
+           0,
+           4
+          ],
+          "act": [
+           [
+            4,
+            "hips"
+           ]
+          ],
+          "mood": "smug"
+         }
+        ],
+        "depth": 0.85
+       }
       ]
      }
     },
@@ -6462,6 +6893,21 @@
         "y": 0.62,
         "h": 100,
         "depth": 0.3
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "pickett",
+          "x": 0.2,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "smug"
+         }
+        ],
+        "depth": 0.85
        }
       ]
      },
@@ -6632,6 +7078,32 @@
         "gap": 70,
         "col": "#1c2a44",
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "pickett",
+          "x": 0.3,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "smug"
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.45,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "coat": "#1f3150"
+          }
+         }
+        ],
+        "depth": 0.85
        }
       ]
      }
@@ -6698,6 +7170,42 @@
         "x0": 0.1,
         "gap": 200,
         "col": "#1c2a44",
+        "depth": 0.85
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.3,
+          "pose": "dig",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "coat": "#1f3150"
+          }
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.5,
+          "pose": "dig",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "coat": "#1f3150"
+          }
+         },
+         {
+          "preset": "pickett",
+          "x": 0.75,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93
+         }
+        ],
         "depth": 0.85
        }
       ],
@@ -7014,6 +7522,21 @@
         "depth": 0.5,
         "gap": -360,
         "steam": true
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "rn_officer",
+          "x": 0.32,
+          "pose": "hips",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.93,
+          "mood": "grim"
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "push": 0.1
@@ -7042,13 +7565,47 @@
       }
      ],
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Orders to Captain Hornby, in short",
-      "lines": [
-       "get the American soldiers",
-       "off the island,",
-       "and avoid a fight, if possible."
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "douglas",
+          "x": 0.35,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "talk": true
+         },
+         {
+          "preset": "rn_officer",
+          "x": 0.65,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93
+         }
+        ],
+        "depth": 0.85
+       }
       ]
      }
     },
@@ -7570,18 +8127,18 @@
         "depth": 0.6
        },
        {
-        "type": "people",
+        "type": "actors",
         "list": [
          {
-          "x": 0.62,
-          "pose": "stand",
-          "facing": -1,
-          "h": 0.8,
-          "cap": true
+          "preset": "rn_officer",
+          "x": 0.4,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.93,
+          "mood": "grim"
          }
         ],
-        "lx": 0.5,
-        "ly": 0.45,
         "depth": 0.85
        }
       ],
@@ -7763,25 +8320,30 @@
         "depth": 0.6
        },
        {
-        "type": "people",
+        "type": "actors",
         "list": [
          {
+          "preset": "douglas",
           "x": 0.3,
-          "pose": "arms",
+          "pose": "point",
           "facing": 1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry"
          },
          {
-          "x": 0.65,
-          "pose": "point",
+          "preset": "rn_officer",
+          "x": 0.66,
+          "pose": "cross",
           "facing": -1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "hair": "#d8d4cc"
+          },
+          "mood": "grim"
          }
         ],
-        "lx": 0.4,
-        "ly": 0.45,
         "depth": 0.85
        }
       ]
@@ -8285,13 +8847,47 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "scott",
-      "caption": "General Winfield Scott",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.3
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.3,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.66,
+          "y": 0.93,
+          "walk": [
+           0.1,
+           0.45,
+           0,
+           4
+          ],
+          "spec": {
+           "hair": "#e8e4dc"
+          }
+         }
+        ],
+        "depth": 0.85
+       }
       ]
      }
     },
@@ -8523,15 +9119,52 @@
       "scale": 45000
      },
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Scott and Douglas agree",
-      "lines": [
-       "joint military occupation",
-       "not more than one hundred men",
-       "on each side"
-      ],
-      "stamp": "AGREED"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.36,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "prop": "paper",
+          "spec": {
+           "hair": "#e8e4dc"
+          }
+         },
+         {
+          "preset": "douglas",
+          "x": 0.64,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      },
      "date": "NOVEMBER 1859"
     },
@@ -8732,10 +9365,75 @@
       "scale": 70000
      },
      "scene": {
-      "shot": "photo",
-      "img": "marines_camp",
-      "caption": "Royal Marines camp, San Juan Island, around 1866",
-      "move": "in"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.5,
+        "y": 0.62,
+        "h": 90,
+        "depth": 0.3
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.5,
+        "gap": 200,
+        "col": "#e8e0c8",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "redcoat",
+          "x": 0.25,
+          "pose": "dig",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93
+         },
+         {
+          "preset": "redcoat",
+          "x": 0.45,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.6,
+           0.45,
+           0,
+           3
+          ]
+         },
+         {
+          "preset": "redcoat",
+          "x": 0.7,
+          "pose": "hips",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      },
      "date": "1860"
     },
@@ -8926,6 +9624,33 @@
         "gap": 90,
         "col": "#1c2a44",
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "redcoat",
+          "x": 0.35,
+          "pose": "toast",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "happy"
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.62,
+          "pose": "toast",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "happy",
+          "spec": {
+           "coat": "#1f3150"
+          }
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -9039,6 +9764,51 @@
         "gap": 120,
         "col": "#1c2a44",
         "march": true,
+        "depth": 0.85
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "redcoat",
+          "x": 0.2,
+          "pose": "run",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.1,
+           0.8,
+           0,
+           4
+          ]
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.3,
+          "pose": "run",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.05,
+           0.75,
+           0.2,
+           4.2
+          ],
+          "spec": {
+           "coat": "#1f3150"
+          }
+         },
+         {
+          "preset": "redcoat",
+          "x": 0.85,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93
+         }
+        ],
         "depth": 0.85
        }
       ],
@@ -9678,10 +10448,60 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "pickett",
-      "caption": "George Pickett",
-      "move": "out"
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.55,
+        "gap": 200,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "pickett",
+          "x": 0.5,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "grim",
+          "act": [
+           [
+            2.5,
+            "idle"
+           ]
+          ],
+          "walk": [
+           0.5,
+           0.9,
+           2.5,
+           7
+          ]
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      },
      "date": "TUESDAY, 25 JUNE 1861\nFORT STEILACOOM"
     },
@@ -10130,32 +10950,41 @@
         "depth": 0.6
        },
        {
-        "type": "people",
+        "type": "actors",
         "list": [
          {
-          "x": 0.3,
+          "preset": "us_officer",
+          "x": 0.5,
+          "pose": "shrug",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "shock",
+          "spec": {
+           "hair": "#6b4a2a"
+          }
+         },
+         {
+          "preset": "governor",
+          "x": 0.25,
           "pose": "point",
           "facing": 1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry"
          },
          {
-          "x": 0.55,
-          "pose": "arms",
+          "preset": "governor",
+          "x": 0.78,
+          "pose": "cross",
           "facing": -1,
-          "h": 0.8,
-          "cap": true
-         },
-         {
-          "x": 0.75,
-          "pose": "stand",
-          "facing": -1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "hair": "#9a8a7a"
+          }
          }
         ],
-        "lx": 0.5,
-        "ly": 0.6,
         "depth": 0.85
        }
       ]
@@ -10226,15 +11055,44 @@
       }
      ],
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "POCKET MANUAL OF RULES OF ORDER",
-      "lines": [
-       "for Deliberative Assemblies",
-       "by Major Henry M. Robert",
-       "February 1876"
-      ],
-      "stamp": "1876"
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "us_officer",
+          "x": 0.45,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "prop": "paper",
+          "mood": "happy",
+          "spec": {
+           "hair": "#6b4a2a"
+          }
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -10692,13 +11550,42 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wilhelm",
-      "caption": "Wilhelm I, German Emperor",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.3
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "de",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "king_george",
+          "x": 0.5,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.66,
+          "y": 0.93,
+          "spec": {
+           "hair": "#e8e4dc",
+           "beard": "full"
+          }
+         }
+        ],
+        "depth": 0.85
+       }
       ]
      }
     },
@@ -11100,17 +11987,45 @@
       }
      ],
      "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Award of the German Emperor",
-      "lines": [
-       "...the claim of the Government",
-       "of the United States",
-       "is most in accordance with the true",
-       "interpretation of the Treaty..."
-      ],
-      "stamp": "HARO STRAIT",
-      "stampAt": 4
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "de",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "king_george",
+          "x": 0.45,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "hair": "#e8e4dc",
+           "beard": "full"
+          },
+          "mood": "smug",
+          "talk": true
+         }
+        ],
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -11190,6 +12105,51 @@
         "col": "#8a1a14",
         "accent": "#e8e0d0",
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "redcoat",
+          "x": 0.3,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.3,
+           0.95,
+           0,
+           6
+          ]
+         },
+         {
+          "preset": "redcoat",
+          "x": 0.15,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.15,
+           0.85,
+           0.4,
+           6.4
+          ]
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.1,
+          "pose": "wave",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "spec": {
+           "coat": "#1f3150"
+          }
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "push": 0.08
@@ -11531,6 +12491,30 @@
         "facing": 1,
         "y": 0.86,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.3,
+          "pose": "cross",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "grim"
+         },
+         {
+          "preset": "hbc_man",
+          "x": 0.68,
+          "pose": "hips",
+          "facing": -1,
+          "h": 0.6,
+          "y": 0.93,
+          "mood": "angry"
+         }
+        ],
+        "depth": 0.85
        }
       ]
      }
@@ -12081,6 +13065,26 @@
         "facing": 1,
         "y": 0.86,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "settler",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.6,
+          "y": 0.93,
+          "walk": [
+           0.4,
+           0.1,
+           2,
+           9
+          ]
+         }
+        ],
+        "depth": 0.85
        }
       ],
       "push": 0.15,

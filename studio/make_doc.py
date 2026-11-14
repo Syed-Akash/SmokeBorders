@@ -243,7 +243,15 @@ def build(story, k):
     sc = sorted([e for e in ev if e['k'] == 'scene'], key=lambda e: e['t'])   # each shot lasts until the next cut (its camera move spans the shot)
     for i, e in enumerate(sc):
         if 'dur' not in e: e['dur'] = round(((sc[i + 1]['t'] if i + 1 < len(sc) else t) - e['t']), 2)
-    if story.get('film'): film_sound(sc, cues)
+    if story.get('film'):   # coverage: a long acted scene cuts to a close-up of its main character halfway (owner, 15 Nov 2026: real cuts, not zooms)
+        for e in list(sc):
+            acts = [q for p in (e.get('parts') or []) if p.get('type') in ('actors', 'people') for q in p.get('list', []) if not q.get('photo')]
+            if e.get('shot') == 'set' and acts and e.get('dur', 0) > 6.5 and e.get('close', True):
+                a = dict(acts[0]); a.setdefault('preset', 'settler' if a.get('hat') == 'wide' else 'governor'); at = round(e['t'] + e['dur'] * .5, 2)
+                ev.append({'k': 'scene', 't': at, 'shot': 'close', 'actor': a, 'bg': {k_: v_ for k_, v_ in e.items() if k_ not in ('k', 't', 'dur')}, 'from': round(at - e['t'], 2), 'dur': round(e['t'] + e['dur'] - at, 2), 'transition': 'cut'})
+                e['dur'] = round(at - e['t'], 2)
+        sc = sorted([e for e in ev if e['k'] == 'scene'], key=lambda e: e['t'])
+        film_sound(sc, cues)
     if story.get('short') or story.get('demo'):   # a standalone Short (or a style demo): just the story, no outro, reminder or end card (cut_shorts.py makes it vertical)
         start = next(b['cam'] for c in ([story['intro']] if story.get('intro') else []) + story['chapters'] for b in c['beats'] if 'cam' in b)
         total = t + 1.0
@@ -349,7 +357,8 @@ def film_sound(sc, cues):
         if k == 'talk':   # dialogue: one soft whoosh into the exchange, none between its lines
             if i and sc[i - 1].get('shot') != 'talk': cues.append(('cut', t0))
             continue
-        if i and not any(abs(x - t0) < 1.2 for x in loud): cues.append(('cut', t0))
+        if k == 'close': e = dict(e['bg'], t=t0, dur=d); k = 'set'   # a close-up keeps its scene's background sound, and cuts hard (no whoosh)
+        elif i and not any(abs(x - t0) < 1.2 for x in loud): cues.append(('cut', t0))
         if k == 'photo': cues.append(('bed', t0, d, 'projector', .16))
         elif k == 'card': cues.append(('bed', t0, min(d, 7), 'clock', .45))
         elif k == 'doc': cues.append(('paper', t0 + .15))

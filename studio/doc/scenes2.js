@@ -39,7 +39,18 @@
     } }
   function tone(c, W, H, t) {   // archival grade: sepia (default), bw, warm, cold
     if (t === 'none') return; c.save(); c.globalCompositeOperation = 'color'; c.fillStyle = t === 'bw' ? '#808080' : t === 'cold' ? 'rgba(90,110,140,.55)' : t === 'warm' ? 'rgba(170,110,60,.45)' : 'rgba(150,110,70,.65)'; c.fillRect(0, 0, W, H); c.restore() }
-  function caption(c, W, H, txt, u) { if (!txt) return; c.save(); c.globalAlpha = clamp((u - .6) / .6) * .85; c.font = `400 24px ${TYPE}`; c.fillStyle = '#e9dcc0'; c.shadowColor = '#000'; c.shadowBlur = 8; c.textAlign = 'right'; c.fillText(txt, W - 60, H - BAR - 24); c.restore() }
+  function caption(c, W, H, txt, u) {   // a lower third that slides in (motion graphics, owner 15 Nov 2026)
+    if (!txt) return; const k = o3(clamp((u - .5) / .5)), out = clamp((u - 5.5) / .4); if (k <= 0 || out >= 1) return;
+    c.save(); c.font = `600 30px ${BODY}`; const w = c.measureText(txt).width + 70, x = 80 - (1 - k) * (w + 120), y = H - BAR - 110;
+    c.globalAlpha = 1 - out; c.fillStyle = 'rgba(12,9,6,.82)'; c.fillRect(x, y, w * Math.min(1, k * 1.4), 58); c.fillStyle = '#c8462e'; c.fillRect(x, y, 7, 58);
+    c.fillStyle = '#f3e7cf'; c.textBaseline = 'middle'; c.save(); c.beginPath(); c.rect(x, y, w * Math.min(1, k * 1.4), 58); c.clip(); c.fillText(txt, x + 30, y + 30); c.restore(); c.restore() }
+  function mark(c, W, H, m, u) {   // a circle drawn onto the picture, and its label (S.mark = {x, y, r, label})
+    if (!m) return; const a = clamp((u - (m.at || 1.2)) / .7); if (a <= 0) return; const x = W * m.x, y = H * m.y, r = (m.r || .1) * H;
+    c.save(); c.strokeStyle = '#e8b04a'; c.lineWidth = 7; c.lineCap = 'round'; c.shadowColor = 'rgba(0,0,0,.7)'; c.shadowBlur = 10;
+    c.beginPath(); c.ellipse(x, y, r * 1.15, r, -.1, -1.6, -1.6 + 6.5 * a); c.stroke();
+    if (m.label && a >= 1) { const b = o3(clamp((u - (m.at || 1.2) - .7) / .4)), lx = x + r * 1.2, ly = y - r * .9; c.beginPath(); c.moveTo(lx, ly); c.lineTo(lx + 80 * b, ly - 50 * b); c.stroke();
+      c.font = `700 40px ${BODY}`; c.fillStyle = '#f3e7cf'; c.globalAlpha = b; c.fillText(m.label, lx + 92, ly - 56) }
+    c.restore() }
   const cover = (im, W, H) => { const s = Math.max(W / im.width, H / im.height); return [im.width * s, im.height * s] };
 
   // ---------- photo: 2.5-D archival photo ----------
@@ -55,7 +66,7 @@
     if (fg) { c.save(); c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 30; draw(fg, 1.9); c.restore() }
     tone(c, W, H, S.tone || 'sepia');
     c.save(); c.globalCompositeOperation = 'soft-light'; c.fillStyle = 'rgba(255,190,120,.18)'; c.fillRect(0, 0, W, H); c.restore();
-    fx(c, W, H, u, [].concat(S.fx || []).filter(f => f !== 'fog')); vignette(c, W, H, .7); grain(c, W, H, .09); caption(c, W, H, S.caption, u);
+    fx(c, W, H, u, [].concat(S.fx || []).filter(f => f !== 'fog')); vignette(c, W, H, .7); grain(c, W, H, .09); mark(c, W, H, S.mark, u); caption(c, W, H, S.caption, u);
   };
 
   // ---------- doc: a document filling the frame ----------
@@ -76,7 +87,10 @@
         if (kind === 'telegram') { c.font = `700 40px ${BODY}`; c.fillText(S.header || 'TELEGRAM', 0, y); y += 20; c.fillRect(-pw / 2 + 50, y, pw - 100, 3); y += 60 }
         else { c.font = `italic 400 30px ${SERIF}`; c.fillText(S.header || '', 0, y); y += 70 }
         c.textAlign = 'left'; c.font = kind === 'telegram' ? `700 34px ${TYPE}` : `italic 400 36px ${SERIF}`; let n = Math.floor(u * (S.speed || 22));
-        for (const L of [].concat(S.lines || [])) { const s = L.slice(0, Math.max(0, n)); n -= L.length + 6; c.fillText(s, -pw / 2 + 70, y); y += 56 }
+        const LS = [].concat(S.lines || []), ys = [], n0 = n;
+        for (const L of LS) { const s = L.slice(0, Math.max(0, n)); n -= L.length + 6; ys.push(y); c.fillText(s, -pw / 2 + 70, y); y += 56 }
+        const tot = LS.reduce((a, L) => a + L.length + 6, 0), hi = S.hl == null ? LS.length - 1 : S.hl;   // a highlighter sweeps the key line once it is typed
+        if (LS.length && S.hl !== false && hi >= 0) { const k = io(clamp((n0 - tot) / (S.speed || 22) / .5)); if (k > 0) { c.save(); c.globalCompositeOperation = 'multiply'; c.fillStyle = 'rgba(255,205,70,.75)'; c.fillRect(-pw / 2 + 62, ys[hi] - 38, (c.measureText(LS[hi]).width + 16) * k, 48); c.restore() } }
         if (S.sign) { c.font = `italic 400 34px ${SERIF}`; c.textAlign = 'right'; c.globalAlpha = clamp(n / 20); c.fillText(S.sign, pw / 2 - 70, ph / 2 - 80); c.globalAlpha = 1 } }
       if (S.stamp) { const k = clamp((u - (S.stampAt || 2.2)) / .25); if (k > 0) { c.save(); c.translate(pw * .22, ph * .28); c.rotate(-.18); c.scale(1.6 - .6 * k, 1.6 - .6 * k); c.globalAlpha = .85 * k; c.strokeStyle = '#b3161c'; c.lineWidth = 7; c.font = `700 56px ${BODY}`; const w = c.measureText(S.stamp).width + 50; c.strokeRect(-w / 2, -45, w, 90); c.fillStyle = '#b3161c'; c.textAlign = 'center'; c.fillText(S.stamp, 0, 20); c.restore() } }
       c.restore();
@@ -88,11 +102,33 @@
   SH['card'] = (c, W, H, S) => {
     const u = S.u; c.fillStyle = '#070605'; c.fillRect(0, 0, W, H); glow(c, W / 2, H / 2, 700, '255,170,90', .1);
     const a = clamp(u / .4); c.save(); c.globalAlpha = a; c.textAlign = 'center'; c.fillStyle = '#f3e7cf';
-    c.font = `700 ${S.size || 150}px ${TYPE}`; const T = String(S.time || ''); c.fillText(T.slice(0, Math.ceil(clamp(u / .7) * T.length)), W / 2, H * .5);
+    c.font = `700 ${S.size || 150}px ${TYPE}`; const T = String(S.time || ''), num = T.match(/\d[\d,]*(\.\d+)?/);
+    let shown;   // a number counts up to its value (motion graphics, owner 15 Nov 2026); other text is typed
+    if (num && !/^\d{1,2} [A-Z]|^[A-Z]+ \d{4}$|^\d{4}$|BC|AD/.test(T)) { const v = parseFloat(num[0].replace(/,/g, '')), k = io(clamp(u / 1.1)), dec = (num[1] || '').length - 1;
+      let s2 = (v * k).toFixed(Math.max(0, dec)); if (num[0].includes(',')) s2 = Number(s2).toLocaleString('en-US', { minimumFractionDigits: Math.max(0, dec), maximumFractionDigits: Math.max(0, dec) }); shown = T.replace(num[0], s2) }
+    else shown = T.slice(0, Math.ceil(clamp(u / .7) * T.length));
+    c.fillText(shown, W / 2, H * .5); const tw = c.measureText(T).width, rl = io(clamp((u - .9) / .5)); c.fillStyle = '#b3161c'; c.fillRect(W / 2 - tw / 2, H * .5 + 22, tw * rl, 6); c.fillStyle = '#f3e7cf';
     c.font = `400 40px ${TYPE}`; c.fillStyle = 'rgba(243,231,207,.8)'; c.fillText(S.place || '', W / 2, H * .5 + 80); if (S.date) { c.font = `400 30px ${TYPE}`; c.fillText(S.date, W / 2, H * .5 + 130) }
     if (S.tick !== false) { c.strokeStyle = '#b3161c'; c.lineWidth = 4; const r = 34, x = W / 2, y = H * .5 - (S.size || 150) - 40, a2 = Math.floor(u) / 60 * 6.283 + (S.sec || 0); c.beginPath(); c.arc(x, y, r, 0, 7); c.stroke(); c.beginPath(); c.moveTo(x, y); c.lineTo(x + Math.sin(a2) * r * .85, y - Math.cos(a2) * r * .85); c.stroke() }
     c.restore(); grain(c, W, H, .06);
   };
+
+  // ---------- transitions between shots (owner, 15 Nov 2026: "modern editing", not a fade through black every time) ----------
+  // whip (a fast pan with motion streaks), ink (a round wipe), push (the new shot shoves the old one up), zoom (through the old shot).
+  // Dialogue cuts hard between lines; a chapter card keeps its own fade. The old shot keeps playing under the transition.
+  const TR = .42, OFFS = {};
+  function offc(i, W, H) { let o = OFFS[i]; if (!o) { const cv = document.createElement('canvas'); cv.width = W; cv.height = H; o = OFFS[i] = [cv, cv.getContext('2d')] } o[1].setTransform(1, 0, 0, 1, 0, 0); o[1].clearRect(0, 0, W, H); return o }
+  G.SCENE_TRANSITION = (c, W, H, st, t, env) => {
+    const S = st.scene, P = st.prev; if (!S || !P || S.u >= TR || S.shot === 'talk' || P.shot === 'talk' && S.shot === 'talk' || S.transition === 'cut') return false;
+    const kind = S.transition || ['whip', 'ink', 'push', 'zoom', 'whip'][(st.sceneN || 0) % 5], k = io(clamp(S.u / TR));
+    const [ca, xa] = offc(0, W, H), [cb, xb] = offc(1, W, H);
+    G.SCENE(xa, W, H, Object.assign({}, P, { u: t - P.t, fadeOut: 0 }), t, env); G.SCENE(xb, W, H, Object.assign({}, S, { fadeIn: 0 }), t, env);
+    c.save();
+    if (kind === 'whip') { const d = W * k; for (let i = 3; i >= 0; i--) { c.globalAlpha = i ? .22 : 1; c.drawImage(ca, -d - i * 40 * Math.sin(Math.PI * k), 0); c.drawImage(cb, W - d - i * 40 * Math.sin(Math.PI * k), 0) } }
+    else if (kind === 'push') { const d = H * k; c.drawImage(ca, 0, -d); c.drawImage(cb, 0, H - d); c.fillStyle = 'rgba(0,0,0,.5)'; c.fillRect(0, H - d - 6, W, 6) }
+    else if (kind === 'zoom') { const z = 1 + k * .6; c.drawImage(cb, 0, 0); c.globalAlpha = 1 - k; c.translate(W / 2, H / 2); c.scale(z, z); c.drawImage(ca, -W / 2, -H / 2) }
+    else { c.drawImage(ca, 0, 0); c.beginPath(); c.arc(W * .5, H * .5, Math.hypot(W, H) * .55 * k, 0, 7); c.clip(); c.drawImage(cb, 0, 0) }   // ink
+    c.restore(); return true };
 
   // ---------- talk: a line of dialogue, acted (owner, 15 Nov 2026: characters talk, Paper Billions style) ----------
   // S = {who, name, preset, spec, side: 'l'|'r', other: {preset, spec}, text, mood, bg: <set shot>}. Shot / reverse shot: every line is
@@ -102,9 +138,9 @@
     if (S.bg && SH.set) { c.save(); c.translate(W / 2, H / 2); c.scale(1.12, 1.12); c.translate(-W / 2, -H / 2); SH.set(c, W, H, Object.assign({}, S.bg, { u: u + (S.t || 0) % 7, dur: 30 }), t, env); c.restore(); c.fillStyle = 'rgba(8,6,4,.42)'; c.fillRect(0, 0, W, H) }
     else { const g = c.createRadialGradient(W * (L ? .7 : .3), H * .4, 50, W / 2, H / 2, W * .8); g.addColorStop(0, '#3a2a1c'); g.addColorStop(1, '#0a0705'); c.fillStyle = g; c.fillRect(0, 0, W, H) }
     glow(c, W * (L ? .66 : .34), H * .35, 600, '255,180,110', .22);
-    const P = env.PRESETS || {}, talking = u > .1 && u < d - .35, flap = talking && Math.floor(u * 8.5) % 2 === 0;
+    const P = env.PRESETS || {}, talking = u > .1 && u < d - .35, open = talking ? Math.max(0, Math.sin(u * 13) * .6 + Math.sin(u * 7.3 + 1) * .4) : 0;
     if (env.drawChar) {
-      const sp = Object.assign({}, P[S.preset] || {}, S.spec || {}, { facing: L ? -1 : 1, mood: flap ? 'shock' : (S.mood || 'neutral') });
+      const sp = Object.assign({}, P[S.preset] || {}, S.spec || {}, { facing: L ? -1 : 1, mood: S.mood || 'neutral', talk: open });
       const x = W * (L ? .6 : .4) + Math.sin(u * .7) * 6, sway = Math.sin(u * 1.3) * 4;
       env.drawChar(c, x, H * 1.06 + sway, H * .92, sp, u);
       if (S.other) {   // over the shoulder: the listener, dark, out of the frame's edge
@@ -119,6 +155,15 @@
     c.fillText(ln.slice(0, Math.max(0, rem)), bx + pad, yy);
     c.restore(); vignette(c, W, H, .55); grain(c, W, H, .06);
   };
+
+  // ---------- close: coverage, the same scene from close up on its main character (a real second camera, not a zoom on a still) ----------
+  SH['close'] = (c, W, H, S, t, env) => {
+    const u = S.u, a = S.actor || {}, L = (a.facing || 1) < 0;
+    if (S.bg && SH.set) { c.save(); c.translate(W / 2, H / 2); c.scale(1.35, 1.35); c.translate(-W / 2 - (L ? -200 : 200), -H / 2 + 60); SH.set(c, W, H, Object.assign({}, S.bg, { parts: (S.bg.parts || []).filter(p => !['actors', 'people'].includes(p.type)), u: u + (S.from || 0), dur: 30 }), t, env); c.restore(); c.fillStyle = 'rgba(8,6,4,.25)'; c.fillRect(0, 0, W, H) }
+    const P = (env.PRESETS || {})[a.preset] || {}; glow(c, W * (L ? .62 : .38), H * .35, 600, '255,180,110', .18);
+    if (env.drawChar) { const sp = Object.assign({}, P, a.spec || {}, { facing: L ? -1 : 1, mood: a.mood || 'neutral', talk: a.talk ? Math.max(0, Math.sin(u * 13) * .6 + Math.sin(u * 7.3 + 1) * .4) : 0 });
+      env.drawChar(c, W * (L ? .6 : .4) + Math.sin(u * .6) * 8, H * 1.08 + Math.sin(u * 1.2) * 4, H * .95, sp, u) }
+    vignette(c, W, H, .6); grain(c, W, H, .06) };
 
   // ---------- set: an illustrated scene composed from parts ----------
   const SKY = { dawn: ['#2b3350', '#d98a62'], day: ['#7fa3c0', '#e6e1cf'], dusk: ['#1d2140', '#d0603a'], night: ['#050912', '#1a2640'], storm: ['#1b1f26', '#4a5058'] };
@@ -141,6 +186,65 @@
     c.fillRect(-9, -60, 18, 34); c.beginPath(); c.arc(0, -70, 8, 0, 7); c.fill(); c.fillRect(-7, -86, 14, 10);
     c.save(); c.translate(-4, -27); c.rotate(st); c.fillRect(-4, 0, 8, 27); c.restore(); c.save(); c.translate(4, -27); c.rotate(-st); c.fillRect(-4, 0, 8, 27); c.restore();
     c.fillStyle = o.gun || '#2a1f16'; c.fillRect(8, -95, 3, 60); if (o.accent) { c.fillStyle = o.accent; c.fillRect(-9, -60, 18, 4) } c.restore() }
+  // ---------- actors: full-body cartoon characters that act (owner, 15 Nov 2026: "like a movie with a story going on") ----------
+  // a = {preset, spec, x, y (foot, 0-1), h (height, share of H), facing, pose, mood, talk, prop, walk: [x0, x1, t0, t1], act: [[t, pose], ...]}
+  // poses: idle, point, rifle, aim, fire, wave, shrug, hips, hold, toast, dig, think, cross, run. The head comes from chars.js (drawChar),
+  // the body is drawn here: coat, arms with hands, legs with a walking cycle, props.
+  const SKIN = '#f2c9a0', INK2 = '#1a1210';
+  function limb(c, x0, y0, a1, l1, a2, l2, w, col, hand) {   // a1/a2: angles from straight down, radians (positive = forward)
+    const x1 = x0 + Math.sin(a1) * l1, y1 = y0 + Math.cos(a1) * l1, x2 = x1 + Math.sin(a1 + a2) * l2, y2 = y1 + Math.cos(a1 + a2) * l2;
+    c.lineCap = 'round'; c.lineJoin = 'round'; c.strokeStyle = INK2; c.lineWidth = w + 6; c.beginPath(); c.moveTo(x0, y0); c.lineTo(x1, y1); c.lineTo(x2, y2); c.stroke();
+    c.strokeStyle = col; c.lineWidth = w; c.beginPath(); c.moveTo(x0, y0); c.lineTo(x1, y1); c.lineTo(x2, y2); c.stroke();
+    if (hand) { c.fillStyle = hand; c.beginPath(); c.arc(x2, y2, w * .62, 0, 7); c.fill(); c.strokeStyle = INK2; c.lineWidth = 3; c.stroke() }
+    return [x2, y2] }
+  const POSES = {   // [shoulder, elbow] for the front arm and the back arm, radians; ~0 = hanging down
+    idle: [[.12, .15], [-.1, .12]], point: [[1.45, 0], [-.1, .1]], rifle: [[.9, -.9], [.5, -.6]], aim: [[1.4, -.15], [1.1, .25]], fire: [[1.4, -.15], [1.1, .25]],
+    wave: [[2.6, .5], [-.1, .1]], shrug: [[.9, -1.9], [.9, -1.9]], hips: [[.55, -1.9], [.55, -1.9]], hold: [[.7, -.9], [-.1, .1]], toast: [[2.1, -.9], [-.1, .1]],
+    dig: [[.8, .2], [.6, .5]], think: [[.4, -2.4], [.3, -1.5]], cross: [[.4, -1.6], [.35, -1.5]], run: [[.9, -1.4], [-.8, -1.2]] };
+  function actor(c, W, H, a, u, env) {
+    const P = (env.PRESETS || {})[a.preset] || {}, sp = Object.assign({ coat: '#3a4a6a', coat2: '#e9e2d0', trim: '#d4a72c' }, P, a.spec || {});
+    let x = W * (a.x == null ? .5 : a.x), f = a.facing || 1, moving = false;
+    if (a.walk) { const [x0, x1, t0, t1] = a.walk, k = clamp((u - (t0 || 0)) / Math.max(.1, (t1 == null ? 8 : t1) - (t0 || 0))); x = W * lerp(x0, x1, io(k)); moving = k > 0 && k < 1; if (x1 !== x0) f = x1 > x0 ? 1 : -1 }
+    let pose = a.pose || 'idle'; for (const [t, p] of (a.act || [])) if (u >= t) pose = p;
+    if (pose === 'run') moving = true;
+    const foot = H * (a.y == null ? .9 : a.y), Hb = H * (a.h || .5), R = Hb / 4.9, charH = R / .235, neck = foot - R * 2.75, hip = neck + R * 1.4;
+    const ph = moving ? u * (pose === 'run' ? 11 : 7) : 0, bob = moving ? Math.abs(Math.sin(ph)) * R * .08 : Math.sin(u * 1.6 + x) * R * .025, lw = R * .3;
+    c.save(); c.translate(0, -bob);
+    // shadow
+    c.fillStyle = 'rgba(0,0,0,.28)'; c.beginPath(); c.ellipse(x, foot + bob, R * 1.1, R * .18, 0, 0, 7); c.fill();
+    // legs (walking cycle)
+    const trous = sp.trousers || shade2(sp.coat, -.45), sw = moving ? Math.sin(ph) * (pose === 'run' ? .7 : .45) : 0;
+    for (const k of [-1, 1]) { const hx = x + k * R * .28; limb(c, hx, hip, sw * k, R * .68, Math.max(0, -sw * k) * .6, R * .62, lw * 1.15, trous, null);
+      const fx = hx + Math.sin(sw * k) * R * .68, fy = hip + Math.cos(sw * k) * R * .68 + R * .62; c.fillStyle = INK2; c.beginPath(); c.ellipse(fx + f * R * .1, Math.min(foot, fy), R * .26, R * .12, 0, 0, 7); c.fill() }
+    // back arm, body, front arm
+    const [fa, ba] = POSES[pose] || POSES.idle, swing = moving ? Math.sin(ph) * .5 : Math.sin(u * 1.3) * .04, wv = pose === 'wave' ? Math.sin(u * 9) * .35 : 0;
+    const shY = neck + R * .25, arm = (side, A, sgn) => limb(c, x + side * R * .62, shY, f * (A[0] + sgn * swing) + (side === f ? wv * f : 0), R * .78, f * A[1], R * .72, lw, sp.coat, sp.skin || SKIN);
+    arm(-f, ba, -1);
+    c.fillStyle = sp.coat; c.strokeStyle = INK2; c.lineWidth = 6; c.beginPath();   // coat
+    c.moveTo(x - R * .62, neck); c.quadraticCurveTo(x - R * .8, neck + R * .2, x - R * .78, hip + R * .25); c.lineTo(x + R * .78, hip + R * .25); c.quadraticCurveTo(x + R * .8, neck + R * .2, x + R * .62, neck); c.closePath(); c.fill(); c.stroke();
+    c.fillStyle = sp.coat2; c.beginPath(); c.moveTo(x - R * .22, neck); c.lineTo(x, neck + R * .55); c.lineTo(x + R * .22, neck); c.closePath(); c.fill(); c.stroke();
+    c.fillStyle = sp.trim; for (let i = 0; i < 3; i++) { c.beginPath(); c.arc(x, neck + R * (.7 + i * .25), R * .055, 0, 7); c.fill() }
+    // head (chars.js), clipped at the neck so its bust is not drawn
+    const hy = neck - R * .95, yb = hy + charH * .6; c.save(); c.beginPath(); c.rect(x - R * 3, -H, R * 6, neck + R * .05 + H); c.clip();
+    const tk = a.talk && (a.talk === true || (u >= a.talk[0] && u <= a.talk[1])) ? Math.max(0, Math.sin(u * 13) * .6 + Math.sin(u * 7.3 + 1) * .4) : 0;
+    if (env.drawChar) env.drawChar(c, x, yb, charH, Object.assign({}, sp, { facing: f, mood: a.mood || 'neutral', talk: tk }), u + x * .001);
+    c.restore();
+    const hand = arm(f, fa, 1);
+    // props
+    const pr = a.prop || (['rifle', 'aim', 'fire'].includes(pose) ? 'rifle' : pose === 'toast' ? 'cup' : pose === 'dig' ? 'shovel' : pose === 'hold' ? 'paper' : null);
+    if (pr) { c.save(); c.translate(hand[0], hand[1]); c.lineCap = 'round';
+      if (pr === 'rifle') { const ang = pose === 'rifle' ? -.9 : -.05; c.rotate(f * ang); c.scale(f, 1); c.strokeStyle = '#3a2614'; c.lineWidth = R * .16; c.beginPath(); c.moveTo(-R * .6, 0); c.lineTo(R * .5, 0); c.stroke(); c.strokeStyle = '#555'; c.lineWidth = R * .08; c.beginPath(); c.moveTo(R * .4, 0); c.lineTo(R * 1.6, 0); c.stroke();
+        if (pose === 'fire' && (u % 2.2) < .12) { c.fillStyle = 'rgba(255,220,120,.95)'; c.beginPath(); c.arc(R * 1.75, 0, R * .3, 0, 7); c.fill() } }
+      else if (pr === 'cup') { c.fillStyle = '#c9c2b0'; c.fillRect(-R * .14, -R * .38, R * .28, R * .34); c.strokeStyle = INK2; c.lineWidth = 3; c.strokeRect(-R * .14, -R * .38, R * .28, R * .34) }
+      else if (pr === 'paper') { c.rotate(-.2 * f); c.fillStyle = '#efe6cf'; c.fillRect(-R * .1, -R * .55, R * .5 * f, R * .65); c.strokeStyle = INK2; c.lineWidth = 3; c.strokeRect(-R * .1, -R * .55, R * .5 * f, R * .65) }
+      else if (pr === 'shovel') { const d = Math.sin(u * 3) * .3; c.rotate(f * (.6 + d)); c.strokeStyle = '#5a3a22'; c.lineWidth = R * .1; c.beginPath(); c.moveTo(0, -R * .4); c.lineTo(0, R * 1.2); c.stroke(); c.fillStyle = '#777'; c.fillRect(-R * .2, R * 1.1, R * .4, R * .4) }
+      else if (pr === 'coin') { c.fillStyle = '#e8c04a'; c.beginPath(); c.arc(R * .1 * f, -R * .1, R * .16, 0, 7); c.fill() }
+      else if (pr === 'lamp') { glow(c, 0, -R * .2, R * 2, '255,190,110', .5); c.fillStyle = '#e8b04a'; c.fillRect(-R * .12, -R * .4, R * .24, R * .3) }
+      c.restore() }
+    c.restore() }
+  function shade2(hex, k) { const n = parseInt((hex || '#555555').slice(1), 16), r = n >> 16, g = (n >> 8) & 255, b = n & 255, m = v => Math.max(0, Math.min(255, Math.round(v + (k < 0 ? v * k : (255 - v) * k)))); return `rgb(${m(r)},${m(g)},${m(b)})` }
+  G.SCENE_ACTOR = actor;
+
   const PARTS = {
     sea: (c, W, H, u, p) => { const y = H * (p.y || .62), g = c.createLinearGradient(0, y, 0, H); g.addColorStop(0, p.col || '#33485a'); g.addColorStop(1, '#0d1720'); c.fillStyle = g; c.fillRect(-300, y, W + 600, H);
       c.strokeStyle = 'rgba(220,230,240,.13)'; c.lineWidth = 2; for (let i = 0; i < 60; i++) { const yy = y + Math.pow(rnd(i), 1.6) * (H - y), xx = (rnd(i + 1) * W + u * 10 * (1 + rnd(i + 2))) % (W + 200) - 100, w = 20 + (yy - y) * .3; c.beginPath(); c.moveTo(xx, yy); c.lineTo(xx + w, yy); c.stroke() } },
@@ -195,13 +299,17 @@
       c.fillStyle = p.cloth || '#ddd2b4'; for (let i = 0; i < (p.papers || 4); i++) { c.save(); c.translate(x - w * .35 + i * w * .22, y + 50); c.transform(1, 0, -.3, .35, 0, 0); c.rotate(rnd(i) - .5); c.fillRect(-60, -80, 120, 160); c.restore() }
       if (p.lamp) { const lx = x + w * (p.lamp - .5); c.fillStyle = '#0f4a2c'; c.beginPath(); c.moveTo(lx - 90, y - 150); c.quadraticCurveTo(lx, y - 210, lx + 90, y - 150); c.fill(); c.fillStyle = '#5c4320'; c.fillRect(lx - 5, y - 150, 10, 150); glow(c, lx, y - 140, 700, '255,190,110', .45) }
       if (p.candles) for (let i = 0; i < p.candles; i++) { const cx = x - w * .3 + i * w * .6 / Math.max(1, p.candles - 1); c.fillStyle = '#e8dcc0'; c.fillRect(cx - 6, y - 50, 12, 50); glow(c, cx, y - 58, 160, '255,190,110', .6 + .1 * Math.sin(u * 9 + i)) } },
+    actors: (c, W, H, u, p, S) => { const env = S._env || {}; for (const a of [...(p.list || [])].sort((m, n) => (m.y || .9) - (n.y || .9))) actor(c, W, H, a, u, env) },
     people: (c, W, H, u, p, S) => { for (const q of (p.list || [])) {
         if (q.photo && IMG[`photos/${S._story}/${q.photo}-fg.png`]) { const im = IMG[`photos/${S._story}/${q.photo}-fg.png`], h = H * (q.h || .8), w = im.width * h / im.height, x = W * q.x - w / 2, y = H * (q.y || 1.02) - h + Math.sin(u * 1.5 + q.x * 9) * 3;
           c.save(); c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 30; c.drawImage(im, x, y, w, h); c.restore(); continue }
+        if (S._env && S._env.drawChar) {   // owner, 15 Nov 2026: acting cartoon characters instead of black silhouettes
+          const pose = q.pose === 'lean' ? 'think' : q.pose || (['hips', 'cross', 'idle', 'shrug'][Math.floor(rnd(q.x * 31) * 4)]);
+          actor(c, W, H, { preset: q.preset || p.preset || (q.hat === 'wide' ? 'settler' : 'governor'), spec: q.spec, x: q.x, y: Math.min(.97, (q.y || 1.04) - .06), h: (q.h || .8) * .78, facing: q.facing, pose, mood: q.mood, talk: q.talk, act: q.act, walk: q.walk, prop: q.prop }, u + q.x * 3, S._env); continue }
         figure(c, W, H, W * q.x, H * (q.y || 1.04), H * (q.h || .8), q, u + q.x * 10, W * (p.lx || .5), H * (p.ly || .4), p.warm || '255,170,90') } },
   };
   SH['set'] = (c, W, H, S, t, env) => {
-    const u = S.u, C = cam(S, W, H), tm = S.time || 'day', sky = SKY[S.weather === 'storm' ? 'storm' : tm] || SKY.day; S._story = env.story;
+    const u = S.u, C = cam(S, W, H), tm = S.time || 'day', sky = SKY[S.weather === 'storm' ? 'storm' : tm] || SKY.day; S._story = env.story; S._env = env;
     layer(c, C, W, H, .1, () => { const g = c.createLinearGradient(0, -300, 0, H * .7); g.addColorStop(0, sky[0]); g.addColorStop(1, sky[1]); c.fillStyle = g; c.fillRect(-300, -300, W + 600, H + 600);
       if (tm === 'night') { c.fillStyle = 'rgba(255,255,255,.8)'; for (let i = 0; i < 120; i++) c.fillRect(rnd(i) * W, rnd(i + 1) * H * .5, 1.5, 1.5); glow(c, W * .78, H * .16, 140, '220,230,255', .5) }
       else if (tm === 'dawn' || tm === 'dusk') glow(c, W * (S.sunX || .7), H * .55, 700, '255,170,90', .55); else glow(c, W * (S.sunX || .75), H * .12, 500, '255,245,215', .4);
