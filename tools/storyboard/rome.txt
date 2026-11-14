@@ -1,0 +1,14 @@
+alps	Turner Snow Storm Hannibal and his Army Crossing the Alps	flat
+dido	Turner Dido building Carthage Rise of the Carthaginian Empire	flat
+hannibal	Hannibal Barca bust marble Naples
+scipio	Scipio Africanus bust Naples
+cato	Cato the Elder bust Rome
+zama	Battle of Zama Cornelis Cort engraving	flat
+cannae	Death of Paulus Aemilius at the Battle of Cannae Trumbull	flat
+ruins	Carthage Byrsa Punic ruins Tunisia	flat
+ports	Punic ports Carthage harbour	flat
+hwife	Hasdrubal wife Woeiriot engraving	flat
+alpsart	Hannibal crossing the Alps Leutemann	flat
+burning	Destruction of Carthage painting 146 BC	flat
+corvus	corvus boarding bridge Roman ship drawing	flat
+pulcher	Claudius Pulcher sacred chickens	flat

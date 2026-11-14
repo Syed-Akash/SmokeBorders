@@ -310,8 +310,103 @@
      {
       "on": "Africa",
       "pin": "Carthage"
+     },
+     {
+      "on": "burning",
+      "scene": {
+       "shot": "photo",
+       "img": "burning",
+       "move": "in",
+       "caption": "The fall of Carthage, 146 BC",
+       "fallback": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.64,
+          "depth": 0.25
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.75,
+          "y": 0.62,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 16,
+          "gap": 120,
+          "h": 170,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 3,
+          "x": 0.7,
+          "s": 0.45,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.64,
+       "depth": 0.25
+      },
+      {
+       "type": "coast",
+       "x0": 0.0,
+       "x1": 0.75,
+       "y": 0.62,
+       "h": 120,
+       "depth": 0.3
+      },
+      {
+       "type": "town",
+       "y": 0.7,
+       "n": 16,
+       "gap": 120,
+       "h": 170,
+       "col": "#5a4636",
+       "depth": 0.4
+      },
+      {
+       "type": "ships",
+       "n": 3,
+       "x": 0.7,
+       "s": 0.45,
+       "flag": "white",
+       "y": 0.7,
+       "gap": 260,
+       "steam": false,
+       "depth": 0.5
+      }
+     ],
+     "fx": [
+      "smoke",
+      "embers"
+     ]
+    }
    },
    {
     "say": "Its people fought the Romans street by street, for seven days. Now about fifty thousand survivors walk out of the ruins. Every one of them will be sold as a slave.",
@@ -337,8 +432,58 @@
      {
       "on": "survivors",
       "zoomhit": 1
+     },
+     {
+      "on": "fifty",
+      "scene": {
+       "shot": "card",
+       "time": "≈ 50,000",
+       "place": "SURVIVORS SOLD AS SLAVES",
+       "date": "146 BC",
+       "size": 170
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "town",
+       "y": 0.72,
+       "n": 14,
+       "gap": 130,
+       "h": 160,
+       "col": "#2a2018",
+       "depth": 0.4
+      },
+      {
+       "type": "fire",
+       "x": 0.3,
+       "y": 0.66,
+       "r": 300,
+       "depth": 0.4
+      },
+      {
+       "type": "fire",
+       "x": 0.75,
+       "y": 0.68,
+       "r": 260,
+       "depth": 0.4
+      },
+      {
+       "type": "crowd",
+       "y": 0.95,
+       "n": 70,
+       "hats": true,
+       "depth": 0.8
+      }
+     ],
+     "fx": [
+      "smoke",
+      "embers"
+     ]
+    }
    },
    {
     "say": "And the Roman general who ordered all of it is standing on a hill, watching. And he is crying.",
@@ -359,28 +504,49 @@
     ],
     "pause": 0.8,
     "scene": {
-     "shot": "faces",
-     "names": [
-      [
-       "SCIPIO AEMILIANUS",
-       "Roman general"
-      ],
-      [
-       "CARTHAGE",
-       "146 BC"
-      ]
-     ],
-     "nameAt": 0.6,
-     "push": 0.06,
-     "people": [
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
       {
-       "preset": "roman",
-       "x": 0.3
+       "type": "hills",
+       "y": 0.6,
+       "n": 2,
+       "seed": 5,
+       "depth": 0.1
       },
       {
-       "preset": "carthaginian",
-       "x": 0.7
+       "type": "town",
+       "y": 0.76,
+       "n": 10,
+       "gap": 160,
+       "h": 140,
+       "col": "#1d1612",
+       "depth": 0.35
+      },
+      {
+       "type": "fire",
+       "x": 0.5,
+       "y": 0.74,
+       "r": 400,
+       "depth": 0.35
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "x": 0.25,
+         "facing": 1,
+         "h": 0.95
+        }
+       ],
+       "lx": 0.4,
+       "ly": 0.6,
+       "depth": 0.85
       }
+     ],
+     "fx": [
+      "smoke",
+      "embers"
      ]
     }
    },
@@ -427,10 +593,24 @@
      {
       "on": "versus",
       "zoomhit": 1
+     },
+     {
+      "on": "Three",
+      "scene": {
+       "shot": "card",
+       "time": "118 YEARS",
+       "place": "THREE WARS",
+       "date": "264 – 146 BC",
+       "size": 170
+      }
      }
     ],
     "scene": {
-     "shot": "off"
+     "shot": "card",
+     "time": "264 – 146 BC",
+     "place": "ROME vs CARTHAGE",
+     "date": "three wars, 118 years",
+     "size": 110
     }
    },
    {
@@ -458,8 +638,49 @@
      {
       "on": "about",
       "zoomhit": 1
+     },
+     {
+      "on": "question",
+      "scene": {
+       "shot": "off"
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "ruins",
+     "move": "in",
+     "caption": "The ruins of Carthage, Tunisia",
+     "fallback": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.8,
+        "y": 0.6,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.15
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
+    }
    },
    {
     "do": [
@@ -467,7 +688,10 @@
       "logo": 1
      }
     ],
-    "pause": 3.6
+    "pause": 3.6,
+    "scene": {
+     "shot": "off"
+    }
    }
   ]
  },
@@ -499,21 +723,49 @@
       {
        "on": "Carthage",
        "zoomhit": 1
+      },
+      {
+       "on": "coast",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "scene": {
-      "shot": "map-desk",
-      "center": [
-       12.5,
-       38.2
-      ],
-      "scale": 3000,
-      "lat": 38.2,
-      "push": 0.12,
-      "pan": [
-       40,
-       20
-      ]
+      "shot": "photo",
+      "img": "ports",
+      "move": "in",
+      "caption": "The Punic harbours of Carthage, today",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.0,
+         "x1": 0.8,
+         "y": 0.6,
+         "h": 120,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 3,
+         "x": 0.6,
+         "s": 0.45,
+         "flag": "white",
+         "y": 0.68,
+         "gap": 260,
+         "steam": false,
+         "depth": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -546,10 +798,83 @@
       {
        "on": "coast",
        "zoomhit": 1
+      },
+      {
+       "on": "Dido",
+       "scene": {
+        "shot": "photo",
+        "img": "dido",
+        "move": "left",
+        "focus": [
+         0.3,
+         0.5
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.64,
+           "depth": 0.3
+          },
+          {
+           "type": "coast",
+           "x0": 0.0,
+           "x1": 0.7,
+           "y": 0.62,
+           "h": 120,
+           "depth": 0.3
+          },
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 2,
+           "seed": 2,
+           "depth": 0.2
+          }
+         ],
+         "fx": [
+          "light"
+         ]
+        }
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "photo",
+      "img": "dido",
+      "move": "in",
+      "caption": "Dido Building Carthage (Turner, 1815)",
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.64,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.0,
+         "x1": 0.7,
+         "y": 0.62,
+         "h": 120,
+         "depth": 0.3
+        },
+        {
+         "type": "hills",
+         "y": 0.5,
+         "n": 2,
+         "seed": 2,
+         "depth": 0.2
+        }
+       ],
+       "fx": [
+        "light"
+       ]
+      }
      }
     },
     {
@@ -573,8 +898,96 @@
       {
        "on": "strips",
        "zoomhit": 1
+      },
+      {
+       "on": "clever",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.64,
+          "depth": 0.25
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.75,
+          "y": 0.62,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 16,
+          "gap": 120,
+          "h": 170,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 3,
+          "x": 0.7,
+          "s": 0.45,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 2,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "sheep",
+        "x": 0.6,
+        "s": 1.4,
+        "y": 0.86,
+        "walk": false,
+        "facing": -1,
+        "depth": 0.8
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
     },
     {
      "cam": {
@@ -607,8 +1020,66 @@
       {
        "on": "coast",
        "zoomhit": 1
+      },
+      {
+       "on": "navy",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 6,
+          "x": 0.1,
+          "s": 0.55,
+          "flag": "white",
+          "y": 0.66,
+          "gap": 250,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -639,8 +1110,103 @@
       {
        "on": "whole",
        "zoomhit": 1
+      },
+      {
+       "on": "army",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 3,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 20,
+          "rows": 3,
+          "x0": 0,
+          "gap": 75,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
+      },
+      {
+       "on": "warship",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "coast",
+          "x0": -0.2,
+          "x1": 0.4,
+          "y": 0.6,
+          "h": 100,
+          "depth": 0.3
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 3,
+        "seed": 21,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.65,
+        "s": 0.8,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "sheep",
+        "x": 0.3,
+        "s": 0.9,
+        "y": 0.87,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8
+       }
+      ]
+     }
     },
     {
      "talk": [
@@ -652,7 +1218,11 @@
        "who": "ROM",
        "text": "Fine by us. For now."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -671,7 +1241,38 @@
        "on": "northeastern",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.55,
+        "x1": 1.1,
+        "y": 0.6,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.62,
+        "n": 8,
+        "gap": 140,
+        "h": 120,
+        "col": "#5a4636",
+        "depth": 0.32
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "The Mamertines were mercenaries from southern Italy who had seized the town for themselves. When the king of Syracuse came to crush them, they called for help. First from Carthage. Then from Rome.",
@@ -715,8 +1316,47 @@
       {
        "on": "seized",
        "zoomhit": 1
+      },
+      {
+       "on": "help",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 150,
+        "h": 140,
+        "col": "#2a2018",
+        "depth": 0.4
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.2,
+        "gap": 80,
+        "col": "#3a3a3a",
+        "march": false,
+        "depth": 0.7
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.7,
+        "r": 200,
+        "depth": 0.4
+       }
+      ]
+     }
     },
     {
      "say": "This was a terrible idea. Two great powers, both invited into the same small town, by the same people, who were loyal to nobody.",
@@ -739,7 +1379,46 @@
        "on": "great",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 4,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "Rome sent a consul with two legions, about sixteen thousand men. He crossed the narrow strait and took Messana. Carthage saw an Italian army standing on its doorstep. Rome saw a Carthaginian empire one short crossing from Italy.",
@@ -781,8 +1460,46 @@
       {
        "on": "Carthaginian",
        "zoomhit": 1
+      },
+      {
+       "on": "Messana",
+       "scene": {
+        "shot": "card",
+        "time": "2 LEGIONS",
+        "place": "ABOUT 16,000 MEN",
+        "date": "Messana, 264 BC",
+        "size": 150
+       }
+      },
+      {
+       "on": "Carthaginian",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 8,
+        "x": 0.05,
+        "s": 0.45,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 220,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Both sides believed they were defending themselves. Both sides were partly right. And so began a war over a town that neither of them had owned.",
@@ -801,8 +1518,71 @@
       {
        "on": "themselves",
        "zoomhit": 1
+      },
+      {
+       "on": "neither",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 13,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Nobody expected it to last a generation. It would last twenty three years.",
@@ -815,7 +1595,14 @@
         "dur": 3
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "23 YEARS",
+      "place": "THE FIRST PUNIC WAR",
+      "date": "264 – 241 BC",
+      "size": 170
+     }
     }
    ]
   },
@@ -842,6 +1629,31 @@
         "ROM",
         "shock"
        ]
+      },
+      {
+       "on": "navy",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.5,
+          "y": 0.6,
+          "h": 100,
+          "depth": 0.3
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
      ],
      "scene": {
@@ -879,10 +1691,69 @@
         "note": "World History Encyclopedia, First Punic War",
         "dur": 6
        }
+      },
+      {
+       "on": "sixty",
+       "scene": {
+        "shot": "card",
+        "time": "120 WARSHIPS",
+        "place": "BUILT IN 60 DAYS",
+        "date": "260 BC",
+        "size": 140
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 1.1,
+        "y": 0.7,
+        "h": 60,
+        "depth": 0.3
+       },
+       {
+        "type": "sea",
+        "y": 0.75,
+        "depth": 0.3
+       },
+       {
+        "type": "camp",
+        "y": 0.78,
+        "n": 5,
+        "x0": 0.05,
+        "gap": 260,
+        "col": "#a08060",
+        "fire": 0.2,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.8,
+          "pose": "point"
+         },
+         {
+          "x": 0.6,
+          "facing": -1,
+          "h": 0.8,
+          "pose": "lean"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -899,7 +1770,78 @@
        "on": "rowers",
        "sfx": "boots"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.1,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.2,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.30000000000000004,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.4,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.6,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.7000000000000001,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         },
+         {
+          "x": 0.8,
+          "facing": 1,
+          "h": 0.7,
+          "pose": "lean"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "talk": [
@@ -911,7 +1853,11 @@
        "who": "ROM",
        "text": "It's a Roman ship now."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "Then they added a trick. A long boarding bridge, about eleven metres, with an iron spike on the end. The Romans called it the corvus, the raven. Drop it onto an enemy deck, and the spike holds it there. Now a sea battle becomes a land battle. And land battles were what Rome did best.",
@@ -928,8 +1874,93 @@
       {
        "on": "spike",
        "zoomhit": 1
+      },
+      {
+       "on": "raven",
+       "scene": {
+        "shot": "card",
+        "time": "THE CORVUS",
+        "place": "AN 11-METRE BOARDING BRIDGE",
+        "date": "\"the raven\"",
+        "size": 130
+       }
+      },
+      {
+       "on": "land",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.58,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.1,
+          "s": 0.5,
+          "flag": "red",
+          "y": 0.64,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.7,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 240,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "corvus",
+      "move": "in",
+      "caption": "The corvus: a Roman boarding bridge",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.58,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 5,
+         "x": 0.1,
+         "s": 0.5,
+         "flag": "red",
+         "y": 0.64,
+         "gap": 260,
+         "steam": false,
+         "depth": 0.5
+        },
+        {
+         "type": "ships",
+         "n": 5,
+         "x": 0.7,
+         "s": 0.5,
+         "flag": "white",
+         "y": 0.7,
+         "gap": 240,
+         "steam": false,
+         "depth": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -953,8 +1984,72 @@
        "happy": [
         "ROM"
        ]
+      },
+      {
+       "on": "won",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 8,
+          "x": 0.2,
+          "s": 0.5,
+          "flag": "red",
+          "y": 0.66,
+          "gap": 200,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "cam": {
@@ -982,8 +2077,77 @@
        ],
        "color": "#c8102e",
        "big": 1
+      },
+      {
+       "on": "Africa",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 13,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 10,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "say": "So Carthage hired a Greek soldier called Xanthippus. He used cavalry and a hundred war elephants, and in 255 BC he crushed Regulus near Tunis. About twelve thousand Romans died.",
@@ -1002,8 +2166,72 @@
         "ROM",
         "sad"
        ]
+      },
+      {
+       "on": "twelve",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 12,000",
+        "place": "ROMANS KILLED",
+        "date": "near Tunis, 255 BC",
+        "size": 170
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.3,
+        "s": 0.5,
+        "y": 0.86,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.62,
+        "s": 0.45,
+        "y": 0.88,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       },
+       {
+        "type": "soldiers",
+        "y": 0.9,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Then the sea itself joined the war. The Roman fleet that rescued the survivors sailed into a storm. Ancient writers say as many as a hundred thousand men drowned. More storms followed. Rome lost whole fleets to the weather, without a single enemy in sight.",
@@ -1019,9 +2247,70 @@
         "text": "UP TO 100,000 DROWNED",
         "dur": 3.4
        }
+      },
+      {
+       "on": "hundred",
+       "scene": {
+        "shot": "card",
+        "time": "UP TO 100,000",
+        "place": "DROWNED",
+        "date": "ancient writers",
+        "size": 130
+       }
+      },
+      {
+       "on": "weather",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.4,
+          "y": 0.62,
+          "h": 80,
+          "depth": 0.3
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
      ],
-     "pause": 0.8
+     "pause": 0.8,
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "weather": "storm",
+      "fx": [
+       "rain"
+      ]
+     }
     },
     {
      "cam": {
@@ -1044,8 +2333,62 @@
         "who": "Claudius Pulcher (as reported)",
         "dur": 4
        }
+      },
+      {
+       "on": "threw",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Claudius Pulcher, as reported",
+        "lines": [
+         "If they won't eat,",
+         "let them drink."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "pulcher",
+      "move": "in",
+      "caption": "Claudius Pulcher and the sacred chickens",
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.58,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 5,
+         "x": 0.1,
+         "s": 0.5,
+         "flag": "red",
+         "y": 0.64,
+         "gap": 260,
+         "steam": false,
+         "depth": 0.5
+        },
+        {
+         "type": "ships",
+         "n": 5,
+         "x": 0.7,
+         "s": 0.5,
+         "flag": "white",
+         "y": 0.7,
+         "gap": 240,
+         "steam": false,
+         "depth": 0.5
+        }
+       ],
+       "fx": [
+        "fog"
+       ]
+      }
+     }
     },
     {
      "say": "He lost ninety three of his hundred and twenty ships.",
@@ -1061,7 +2404,14 @@
         "shock"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "93 OF 120",
+      "place": "SHIPS LOST",
+      "date": "Drepana, 249 BC",
+      "size": 170
+     }
     },
     {
      "cam": {
@@ -1084,8 +2434,48 @@
       {
        "on": "lightning",
        "flash": 0.4
+      },
+      {
+       "on": "Eryx",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.45,
+          "n": 2,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.7,
+          "depth": 0.6
+         },
+         {
+          "type": "camp",
+          "y": 0.74,
+          "n": 4,
+          "x0": 0.4,
+          "gap": 200,
+          "col": "#7a6040",
+          "fire": 0.4,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "hannibal",
+      "move": "in"
+     }
     },
     {
      "say": "But a war at sea eats money, and ships, and men. After twenty years, both cities were exhausted. Rome built one more fleet, of about two hundred warships.",
@@ -1097,8 +2487,63 @@
         "text": "≈ 200 WARSHIPS",
         "dur": 3
        }
+      },
+      {
+       "on": "fleet",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 10,
+          "x": 0.02,
+          "s": 0.4,
+          "flag": "red",
+          "y": 0.66,
+          "gap": 190,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.7,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": -0.2,
+        "x1": 0.3,
+        "y": 0.6,
+        "h": 80,
+        "depth": 0.3
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1144,8 +2589,64 @@
         "note": "World History Encyclopedia, First Punic War",
         "dur": 6
        }
+      },
+      {
+       "on": "caught",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.58,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.1,
+          "s": 0.5,
+          "flag": "red",
+          "y": 0.64,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.7,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 240,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      },
+      {
+       "on": "prisoner",
+       "scene": {
+        "shot": "card",
+        "time": "10,000",
+        "place": "CARTHAGINIAN PRISONERS",
+        "date": "50 ships sunk · 70 captured",
+        "size": 180
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "10 MARCH 241 BC",
+      "place": "THE AEGATES ISLANDS",
+      "date": ""
+     }
     },
     {
      "say": "Hamilcar's men were still holding out on their mountain. But Carthage told him to make peace.",
@@ -1157,7 +2658,46 @@
         "angry"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.45,
+        "n": 2,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "camp",
+        "y": 0.74,
+        "n": 4,
+        "x0": 0.4,
+        "gap": 200,
+        "col": "#7a6040",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     }
    ]
   },
@@ -1197,6 +2737,16 @@
         ],
         "note": "Britannica; World History Encyclopedia",
         "dur": 6
+       }
+      },
+      {
+       "on": "Sicily",
+       "scene": {
+        "shot": "card",
+        "time": "3,200 TALENTS",
+        "place": "OF SILVER, OVER 10 YEARS",
+        "date": "241 BC",
+        "size": 130
        }
       }
      ],
@@ -1245,7 +2795,37 @@
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 13,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 16,
+        "rows": 3,
+        "x0": 0.1,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
      }
     },
     {
@@ -1281,8 +2861,44 @@
         "CAR",
         "angry"
        ]
+      },
+      {
+       "on": "protested",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.4,
+        "x1": 1.1,
+        "y": 0.6,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "talk": [
@@ -1294,7 +2910,11 @@
        "who": "ROM",
        "text": "Neither is our patience."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "From the Carthaginian side, it proved something. A treaty with Rome only lasted as long as Rome wanted it to.",
@@ -1306,7 +2926,41 @@
         "smug"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1340,8 +2994,63 @@
         "lat": 38.2,
         "color": "#e0b45a"
        }
+      },
+      {
+       "on": "silver",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 13,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 12,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 31,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "Before he sailed, he made a sacrifice at the altar. The Greek historian Polybius tells what happened next. Hamilcar's son, about nine years old, begged to come along.",
@@ -1359,7 +3068,49 @@
         "happy"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#1a120c"
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.74,
+        "r": 260,
+        "depth": 0.4
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.95
+         },
+         {
+          "x": 0.62,
+          "facing": -1,
+          "h": 0.55
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "embers"
+      ]
+     }
     },
     {
      "say": "His father agreed, on one condition. The boy put his hand on the altar, and swore that he would never be a friend to Rome. The boy's name was Hannibal.",
@@ -1379,9 +3130,68 @@
         "HAN",
         "angry"
        ]
+      },
+      {
+       "on": "swore",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Hannibal's oath, as told by Polybius",
+        "lines": [
+         "Never to be",
+         "a friend to Rome."
+        ]
+       }
+      },
+      {
+       "on": "Hannibal",
+       "scene": {
+        "shot": "photo",
+        "img": "hannibal",
+        "move": "in",
+        "caption": "Hannibal"
+       }
       }
      ],
-     "pause": 0.8
+     "pause": 0.8,
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#1a120c"
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.74,
+        "r": 300,
+        "depth": 0.4
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.45,
+          "facing": 1,
+          "h": 0.6,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "embers"
+      ]
+     }
     },
     {
      "say": "Hamilcar died in Spain in 229 BC. His son-in-law, Hasdrubal, took over, and signed a deal with Rome. Carthage would stay south of the river Ebro.",
@@ -1410,8 +3220,44 @@
        ],
        "color": "#ff6a1f",
        "hold": 60
+      },
+      {
+       "on": "Ebro",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 13,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 10,
+        "rows": 3,
+        "x0": 0.1,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1443,8 +3289,56 @@
         ],
         "dur": 4
        }
+      },
+      {
+       "on": "Saguntum",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 2,
+          "seed": 9,
+          "depth": 0.2
+         },
+         {
+          "type": "town",
+          "y": 0.64,
+          "n": 8,
+          "gap": 140,
+          "h": 140,
+          "col": "#6a5844",
+          "depth": 0.35
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 16,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "hannibal",
+      "move": "out",
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
     },
     {
      "say": "Was this an attack on Rome? Carthage said no. Saguntum was on Carthage's side of the line. Rome said yes. Saguntum was Rome's friend. Historians still argue about it.",
@@ -1462,8 +3356,54 @@
         "ROM",
         "angry"
        ]
+      },
+      {
+       "on": "argue",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "point"
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "Rome sent envoys to Carthage, and demanded that Hannibal be handed over. The Carthaginian council refused. And so Rome declared war again. This time, Hannibal would not wait for Rome to come to him.",
@@ -1485,8 +3425,45 @@
       {
        "on": "wait",
        "shake": 0.4
+      },
+      {
+       "on": "Hannibal",
+       "scene": {
+        "shot": "photo",
+        "img": "hannibal",
+        "move": "in"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     }
     }
    ]
   },
@@ -1530,6 +3507,31 @@
         ]
        ],
        "color": "#c8102e"
+      },
+      {
+       "on": "sea",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 8,
+          "x": 0.05,
+          "s": 0.45,
+          "flag": "red",
+          "y": 0.66,
+          "gap": 220,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
      ],
      "scene": {
@@ -1606,10 +3608,92 @@
        ],
        "color": "#7b3fa0",
        "big": 1
+      },
+      {
+       "on": "Alps",
+       "scene": {
+        "shot": "photo",
+        "img": "alps",
+        "move": "in",
+        "caption": "Snow Storm: Hannibal and his Army Crossing the Alps (Turner, 1812)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.42,
+           "n": 3,
+           "seed": 8,
+           "depth": 0.2
+          },
+          {
+           "type": "land",
+           "kind": "snow",
+           "y": 0.72,
+           "depth": 0.6
+          },
+          {
+           "type": "animal",
+           "kind": "elephant",
+           "x": 0.45,
+           "s": 0.5,
+           "y": 0.86,
+           "walk": true,
+           "facing": 1,
+           "depth": 0.8,
+           "col": "#4a4440",
+           "tower": true
+          },
+          {
+           "type": "soldiers",
+           "y": 0.9,
+           "n": 10,
+           "rows": 2,
+           "x0": 0.6,
+           "gap": 80,
+           "col": "#3d2a55",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "weather": "snow",
+         "fx": [
+          "fog"
+         ]
+        }
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 13,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 16,
+        "rows": 3,
+        "x0": 0.1,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
      }
     },
     {
@@ -1622,7 +3706,11 @@
        "who": "ROM",
        "text": "Nobody marches an army over the Alps."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "He did not go light. Writers give his army on the road as tens of thousands of men, thousands of horses, and about thirty seven war elephants. When he reached the Alps, he had about fifty thousand foot soldiers and nine thousand cavalry.",
@@ -1648,8 +3736,70 @@
         "note": "History.com; World History Encyclopedia",
         "dur": 7
        }
+      },
+      {
+       "on": "elephants",
+       "scene": {
+        "shot": "card",
+        "time": "37",
+        "place": "WAR ELEPHANTS",
+        "date": "218 BC",
+        "size": 220
+       }
+      },
+      {
+       "on": "Alps",
+       "scene": {
+        "shot": "card",
+        "time": "50,000 + 9,000",
+        "place": "FOOT · HORSE",
+        "date": "at the Alps",
+        "size": 120
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 14,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 24,
+        "rows": 3,
+        "x0": 0,
+        "gap": 70,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.75,
+        "s": 0.45,
+        "y": 0.9,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1663,8 +3813,48 @@
       {
        "on": "Snow",
        "snow": 1
+      },
+      {
+       "on": "Snow",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.4,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.7,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.9,
+          "n": 14,
+          "rows": 2,
+          "x0": 0.1,
+          "gap": 85,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "weather": "snow"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "OCTOBER 218 BC",
+      "place": "THE ALPS",
+      "date": "snow on the passes"
+     }
     },
     {
      "say": "Mountain tribes rolled rocks down onto the column. Horses and pack animals slipped off the narrow paths and fell. And the elephants, animals from the warm south, had to be walked through ice.",
@@ -1679,8 +3869,98 @@
         "HAN",
         "sad"
        ]
+      },
+      {
+       "on": "elephants",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.42,
+          "n": 3,
+          "seed": 8,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "animal",
+          "kind": "elephant",
+          "x": 0.45,
+          "s": 0.5,
+          "y": 0.86,
+          "walk": true,
+          "facing": 1,
+          "depth": 0.8,
+          "col": "#4a4440",
+          "tower": true
+         }
+        ],
+        "weather": "snow",
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "alpsart",
+      "move": "in",
+      "caption": "Hannibal crossing the Alps",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.42,
+         "n": 3,
+         "seed": 8,
+         "depth": 0.2
+        },
+        {
+         "type": "land",
+         "kind": "snow",
+         "y": 0.72,
+         "depth": 0.6
+        },
+        {
+         "type": "animal",
+         "kind": "elephant",
+         "x": 0.45,
+         "s": 0.5,
+         "y": 0.86,
+         "walk": true,
+         "facing": 1,
+         "depth": 0.8,
+         "col": "#4a4440",
+         "tower": true
+        },
+        {
+         "type": "soldiers",
+         "y": 0.9,
+         "n": 10,
+         "rows": 2,
+         "x0": 0.6,
+         "gap": 80,
+         "col": "#3d2a55",
+         "march": true,
+         "depth": 0.7
+        }
+       ],
+       "weather": "snow",
+       "fx": [
+        "fog"
+       ]
+      }
+     }
     },
     {
      "say": "Livy says the crossing took sixteen days. Exactly which pass he used is still argued about, more than two thousand two hundred years later. One recent study points to a high pass on today's border between France and Italy.",
@@ -1696,8 +3976,73 @@
       {
        "on": "pass",
        "pin": "Alps"
+      },
+      {
+       "on": "pass",
+       "scene": {
+        "shot": "photo",
+        "img": "alps",
+        "move": "left",
+        "focus": [
+         0.4,
+         0.5
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.42,
+           "n": 3,
+           "seed": 8,
+           "depth": 0.2
+          },
+          {
+           "type": "land",
+           "kind": "snow",
+           "y": 0.72,
+           "depth": 0.6
+          },
+          {
+           "type": "animal",
+           "kind": "elephant",
+           "x": 0.45,
+           "s": 0.5,
+           "y": 0.86,
+           "walk": true,
+           "facing": 1,
+           "depth": 0.8,
+           "col": "#4a4440",
+           "tower": true
+          },
+          {
+           "type": "soldiers",
+           "y": 0.9,
+           "n": 10,
+           "rows": 2,
+           "x0": 0.6,
+           "gap": 80,
+           "col": "#3d2a55",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "weather": "snow",
+         "fx": [
+          "fog"
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "16 DAYS",
+      "place": "IN THE ALPS",
+      "date": "Livy",
+      "size": 200
+     }
     },
     {
      "cam": {
@@ -1727,9 +4072,49 @@
         "HAN",
         "grim"
        ]
+      },
+      {
+       "on": "half",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 26,000",
+        "place": "MEN LEFT",
+        "date": "after the Alps",
+        "size": 180
+       }
       }
      ],
-     "pause": 0.6
+     "pause": 0.6,
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 2,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.2,
+        "gap": 90,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Now the other side. In Rome, they could hardly believe it. The war they had planned to fight in Spain and Africa was suddenly in Italy.",
@@ -1748,7 +4133,32 @@
        ],
        "color": "#c8102e"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "cam": {
@@ -1776,8 +4186,65 @@
         ],
         "dur": 4
        }
+      },
+      {
+       "on": "beat",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.55,
+          "n": 2,
+          "seed": 3,
+          "depth": 0.2
+         }
+        ],
+        "weather": "snow",
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 18,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "weather": "snow"
+     }
     },
     {
      "say": "Most of his elephants soon died. One popular account says only a single elephant survived. But the Celtic tribes of northern Italy, who hated Rome, began joining him by the thousand.",
@@ -1791,8 +4258,70 @@
        "happy": [
         "HAN"
        ]
+      },
+      {
+       "on": "Celtic",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "forest",
+          "y": 0.66,
+          "n": 40,
+          "seed": 9,
+          "h": 150,
+          "depth": 0.45
+         },
+         {
+          "type": "crowd",
+          "y": 0.98,
+          "n": 60,
+          "hats": true,
+          "depth": 0.8
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.5,
+        "s": 0.5,
+        "y": 0.88,
+        "walk": true,
+        "facing": -1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       }
+      ],
+      "weather": "snow"
+     }
     },
     {
      "say": "He had crossed the Alps to break Rome's alliance. Would Rome's friends switch sides? That was the question the whole war now hung on.",
@@ -1801,7 +4330,42 @@
        "on": "alliance",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 3,
+        "seed": 5,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.95
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
     }
    ]
   },
@@ -1831,6 +4395,47 @@
          43.15
         ],
         "dur": 8
+       }
+      },
+      {
+       "on": "fog",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.66,
+          "depth": 0.3
+         },
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 16,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
        }
       }
      ],
@@ -1876,10 +4481,77 @@
         ],
         "dur": 5
        }
+      },
+      {
+       "on": "attacked",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.48,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 20,
+          "rows": 3,
+          "x0": 0,
+          "gap": 75,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "fog",
+         "smoke"
+        ]
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 13,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 16,
+        "rows": 3,
+        "x0": 0.1,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
      }
     },
     {
@@ -1907,7 +4579,14 @@
        ]
       }
      ],
-     "pause": 1.0
+     "pause": 1.0,
+     "scene": {
+      "shot": "card",
+      "time": "15,000",
+      "place": "ROMANS KILLED AT LAKE TRASIMENE",
+      "date": "217 BC",
+      "size": 200
+     }
     },
     {
      "cam": {
@@ -1929,8 +4608,40 @@
         "FAB",
         "smug"
        ]
+      },
+      {
+       "on": "Fabius",
+       "scene": {
+        "shot": "card",
+        "time": "FABIUS MAXIMUS",
+        "place": "DICTATOR",
+        "date": "217 BC",
+        "size": 120
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ]
+     }
     },
     {
      "say": "Fabius followed Hannibal everywhere, picked off his foragers, and refused every battle. The Romans called him the Delayer, and they did not mean it as a compliment. Later they did.",
@@ -1943,8 +4654,51 @@
         "sub": "\"the Delayer\"",
         "dur": 4
        }
+      },
+      {
+       "on": "Delayer",
+       "scene": {
+        "shot": "card",
+        "time": "CUNCTATOR",
+        "place": "\"THE DELAYER\"",
+        "date": "Fabius Maximus",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 18,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 14,
+        "rows": 2,
+        "x0": 0.5,
+        "gap": 80,
+        "col": "#7a1d1d",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "talk": [
@@ -1956,7 +4710,11 @@
        "who": "FAB",
        "text": "Because he wants a battle. So he doesn't get one."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -1994,8 +4752,48 @@
       {
        "on": "Cannae",
        "pin": "Cannae"
+      },
+      {
+       "on": "Cannae",
+       "scene": {
+        "shot": "card",
+        "time": "80,000 +",
+        "place": "ROMANS AT CANNAE",
+        "date": "216 BC",
+        "size": 180
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 30,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Hannibal had fewer than fifty thousand. So he did something that generals still study today. He put his weakest troops in the centre, bulging forward, and his best African veterans hidden on both wings.",
@@ -2027,8 +4825,44 @@
         "lat": 41.24,
         "color": "#e0b45a"
        }
+      },
+      {
+       "on": "centre",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 13,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 3,
+        "x0": 0.1,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "The Roman legions pushed the centre back. It bent, but it didn't break. The Romans poured into the gap, deeper and deeper. Then the veterans on the wings turned inward. And Hannibal's cavalry came round behind them.",
@@ -2076,8 +4910,41 @@
        ],
        "color": "#7b3fa0",
        "big": 1
+      },
+      {
+       "on": "cavalry",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.9,
+        "n": 30,
+        "rows": 4,
+        "x0": 0,
+        "gap": 60,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust",
+       "smoke"
+      ]
+     }
     },
     {
      "say": "The Roman army was surrounded on every side, and packed so tightly that many men could not even raise their swords.",
@@ -2090,7 +4957,34 @@
        "on": "swords",
        "shake": 0.6
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.92,
+        "n": 34,
+        "rows": 5,
+        "x0": 0,
+        "gap": 55,
+        "col": "#7a1d1d",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust",
+       "smoke"
+      ]
+     }
     },
     {
      "say": "Nobody knows exactly how many died that afternoon. Modern estimates run from about forty four thousand to more than sixty five thousand Romans. Hannibal lost about six thousand.",
@@ -2123,9 +5017,62 @@
         "ROM",
         "sad"
        ]
+      },
+      {
+       "on": "estimates",
+       "scene": {
+        "shot": "card",
+        "time": "44,000 – 65,000",
+        "place": "ROMAN DEAD",
+        "date": "modern estimates",
+        "size": 120
+       }
+      },
+      {
+       "on": "Hannibal",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 6,000",
+        "place": "HANNIBAL'S LOSSES",
+        "date": "Cannae",
+        "size": 170
+       }
       }
      ],
-     "pause": 1.2
+     "pause": 1.2,
+     "scene": {
+      "shot": "photo",
+      "img": "cannae",
+      "move": "in",
+      "caption": "The Death of Paulus Aemilius at Cannae (Trumbull, 1773)",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.72,
+         "depth": 0.6
+        },
+        {
+         "type": "soldiers",
+         "y": 0.92,
+         "n": 34,
+         "rows": 5,
+         "x0": 0,
+         "gap": 55,
+         "col": "#7a1d1d",
+         "march": false,
+         "depth": 0.7
+        }
+       ],
+       "fx": [
+        "dust",
+        "smoke"
+       ]
+      }
+     }
     },
     {
      "say": "It was one of the bloodiest single days of fighting in history.",
@@ -2134,7 +5081,30 @@
        "on": "bloodiest",
        "dim": 0.5
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 2,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "smoke",
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -2160,8 +5130,80 @@
         "SCI",
         "angry"
        ]
+      },
+      {
+       "on": "Scipio",
+       "scene": {
+        "shot": "photo",
+        "img": "scipio",
+        "move": "in",
+        "caption": "Publius Cornelius Scipio",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "SCIPIO",
+           "Rome"
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "scipio",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 2,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.25,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.45,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "lean"
+         },
+         {
+          "x": 0.72,
+          "facing": -1,
+          "h": 0.95,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     }
    ]
   },
@@ -2189,6 +5231,31 @@
         "lon": 15.8,
         "lat": 40.5,
         "color": "#7b3fa0"
+       }
+      },
+      {
+       "on": "switched",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 12,
+          "gap": 140,
+          "h": 150,
+          "col": "#6a5844",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 80,
+          "hats": true,
+          "depth": 0.8
+         }
+        ]
        }
       }
      ],
@@ -2219,7 +5286,26 @@
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ]
      }
     },
     {
@@ -2239,8 +5325,40 @@
         "text": "200,000+ ROMANS UNDER ARMS",
         "dur": 3.4
        }
+      },
+      {
+       "on": "two",
+       "scene": {
+        "shot": "card",
+        "time": "200,000 +",
+        "place": "ROMANS UNDER ARMS",
+        "date": "213 BC",
+        "size": 180
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ]
+     }
     },
     {
      "talk": [
@@ -2252,7 +5370,11 @@
        "who": "ROM",
        "text": "Make us."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -2272,8 +5394,55 @@
         "HAN",
         "angry"
        ]
+      },
+      {
+       "on": "Carthage",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.7,
+          "night": false,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.6,
+          "candles": 0,
+          "papers": 7,
+          "w": 900,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.3,
+            "facing": 1,
+            "h": 0.9
+           },
+           {
+            "x": 0.7,
+            "facing": -1,
+            "h": 0.9
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "hannibal",
+      "move": "right"
+     }
     },
     {
      "cam": {
@@ -2305,8 +5474,50 @@
         "Roman Republic"
        ],
        "color": "#c8102e"
+      },
+      {
+       "on": "Capua",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 7,
+        "depth": 0.2
+       },
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 18,
+        "gap": 110,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       },
+       {
+        "type": "soldiers",
+        "y": 0.9,
+        "n": 16,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#3d2a55",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "cam": {
@@ -2324,7 +5535,30 @@
        ]
       }
      ],
-     "pause": 0.6
+     "pause": 0.6,
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 33,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "smoke",
+       "fog"
+      ]
+     }
     },
     {
      "say": "Nobody wanted the Spanish command. So Rome gave it to the son. He was twenty four, and not even old enough for the post. He was elected anyway.",
@@ -2344,8 +5578,40 @@
         "text": "COMMANDER AT 24",
         "dur": 3
        }
+      },
+      {
+       "on": "elected",
+       "scene": {
+        "shot": "card",
+        "time": "24",
+        "place": "YEARS OLD",
+        "date": "commander in Spain",
+        "size": 240
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "scipio",
+      "move": "in",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "SCIPIO",
+         "Rome"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "scipio",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -2380,8 +5646,56 @@
        ],
        "color": "#c8102e",
        "delay": 1.2
+      },
+      {
+       "on": "Spain",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.8,
+        "y": 0.6,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.62,
+        "n": 10,
+        "gap": 130,
+        "h": 140,
+        "col": "#5a4636",
+        "depth": 0.32
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 18,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "cam": {
@@ -2419,8 +5733,45 @@
         ],
         "dur": 3
        }
+      },
+      {
+       "on": "Metaurus",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.42,
+        "n": 3,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.7,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.9,
+        "n": 12,
+        "rows": 2,
+        "x0": 0.1,
+        "gap": 85,
+        "col": "#3d2a55",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "weather": "snow"
+     }
     },
     {
      "say": "Then they cut off his head, carried it south, and threw it into Hannibal's camp. That is how Hannibal learned his brother was dead.",
@@ -2433,7 +5784,52 @@
        ]
       }
      ],
-     "pause": 1.2
+     "pause": 1.2,
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 6,
+        "x0": 0.05,
+        "gap": 220,
+        "col": "#7a6040",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.7,
+        "y": 0.7,
+        "r": 220,
+        "depth": 0.4
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.95
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "embers"
+      ]
+     }
     },
     {
      "cam": {
@@ -2481,8 +5877,48 @@
         "text": "15 YEARS IN ITALY",
         "dur": 3
        }
+      },
+      {
+       "on": "home",
+       "scene": {
+        "shot": "photo",
+        "img": "hannibal",
+        "move": "out"
+       }
+      },
+      {
+       "on": "war",
+       "scene": {
+        "shot": "card",
+        "time": "15 YEARS",
+        "place": "IN ITALY",
+        "date": "and no victory",
+        "size": 200
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 10,
+        "x": 0.02,
+        "s": 0.45,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 190,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     }
    ]
   },
@@ -2570,7 +6006,34 @@
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.65,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -2583,7 +6046,11 @@
        "who": "SCI",
        "text": "Then let's see which way it changes today."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "Each side had around forty thousand men. But Hannibal's were mixed. Only about twelve to fifteen thousand were his old veterans. And for once, the Romans had the stronger cavalry.",
@@ -2609,8 +6076,48 @@
         "note": "Britannica, Battle of Zama",
         "dur": 7
        }
+      },
+      {
+       "on": "cavalry",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.6,
+          "n": 2,
+          "seed": 17,
+          "depth": 0.2
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 14,
+          "rows": 2,
+          "x0": 0.2,
+          "gap": 90,
+          "col": "#2a2a2a",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "≈ 40,000",
+      "place": "MEN ON EACH SIDE",
+      "date": "Zama, 202 BC",
+      "size": 170
+     }
     },
     {
      "say": "That cavalry belonged to Masinissa, a Numidian prince who had joined Scipio. Keep an eye on him. He matters later.",
@@ -2628,7 +6135,42 @@
         "smug"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 17,
+        "depth": 0.2
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.95
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "Hannibal opened with eighty war elephants. But they were badly trained, and they scattered. Some panicked and turned back onto Hannibal's own men.",
@@ -2643,8 +6185,101 @@
         "HAN",
         "shock"
        ]
+      },
+      {
+       "on": "scattered",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "animal",
+          "kind": "elephant",
+          "x": 0.5,
+          "s": 0.55,
+          "y": 0.9,
+          "walk": true,
+          "facing": -1,
+          "depth": 0.8,
+          "col": "#4a4440",
+          "tower": true
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 12,
+          "rows": 2,
+          "x0": 0.55,
+          "gap": 70,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust",
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.25,
+        "s": 0.45,
+        "y": 0.86,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.55,
+        "s": 0.45,
+        "y": 0.9,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       },
+       {
+        "type": "animal",
+        "kind": "elephant",
+        "x": 0.85,
+        "s": 0.4,
+        "y": 0.87,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8,
+        "col": "#4a4440",
+        "tower": true
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "Then Masinissa's horsemen chased off Hannibal's cavalry, and came back to hit his infantry from behind. It was Cannae, in reverse.",
@@ -2668,7 +6303,63 @@
        "on": "reverse",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "zama",
+      "move": "in",
+      "caption": "The Battle of Zama (Cornelis Cort, 1567)",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "sand",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "animal",
+         "kind": "elephant",
+         "x": 0.3,
+         "s": 0.45,
+         "y": 0.86,
+         "walk": true,
+         "facing": 1,
+         "depth": 0.8,
+         "col": "#4a4440",
+         "tower": true
+        },
+        {
+         "type": "animal",
+         "kind": "elephant",
+         "x": 0.7,
+         "s": 0.45,
+         "y": 0.88,
+         "walk": true,
+         "facing": -1,
+         "depth": 0.8,
+         "col": "#4a4440",
+         "tower": true
+        },
+        {
+         "type": "soldiers",
+         "y": 0.9,
+         "n": 16,
+         "rows": 2,
+         "x0": 0.1,
+         "gap": 80,
+         "col": "#7a1d1d",
+         "march": true,
+         "depth": 0.7
+        }
+       ],
+       "fx": [
+        "dust"
+       ]
+      }
+     }
     },
     {
      "say": "About twenty thousand Carthaginians died, and about twenty thousand more were captured. Rome lost around fifteen hundred.",
@@ -2696,7 +6387,14 @@
        }
       }
      ],
-     "pause": 1.0
+     "pause": 1.0,
+     "scene": {
+      "shot": "card",
+      "time": "20,000",
+      "place": "CARTHAGINIANS KILLED",
+      "date": "20,000 captured · ≈ 1,500 Romans killed",
+      "size": 200
+     }
     },
     {
      "say": "Hannibal escaped. He would never command a Carthaginian army again. And Carthage asked for peace.",
@@ -2715,7 +6413,43 @@
         "CAR"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.55,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust",
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -2757,8 +6491,61 @@
         "note": "Britannica, Battle of Zama",
         "dur": 7
        }
+      },
+      {
+       "on": "burned",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.66,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.1,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         },
+         {
+          "type": "fire",
+          "x": 0.3,
+          "y": 0.66,
+          "r": 260,
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.7,
+          "y": 0.68,
+          "r": 240,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Peace terms, 201 BC (summary)",
+      "lines": [
+       "Give up Spain.",
+       "Hand over the warships.",
+       "Pay 10,000 talents, over 50 years."
+      ]
+     }
     },
     {
      "say": "Fifty years. That number is important. Rome had built a timer into the treaty, and nobody yet knew what would happen when it ran out.",
@@ -2767,7 +6554,14 @@
        "on": "timer",
        "clock": 3
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "50 YEARS",
+      "place": "THE TIMER IN THE TREATY",
+      "date": "201 BC → 151 BC",
+      "size": 200
+     }
     },
     {
      "say": "Scipio went home a hero, with a new name. Africanus.",
@@ -2787,7 +6581,30 @@
         "SCI"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "scipio",
+      "move": "out",
+      "caption": "Scipio Africanus",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "SCIPIO",
+         "Rome"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "scipio",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     }
    ]
   },
@@ -2868,10 +6685,58 @@
         ],
         "dur": 5
        }
+      },
+      {
+       "on": "reforms",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Carthage treasury, 196 BC (summary)",
+        "lines": [
+         "Finances: reformed",
+         "Payment to Rome: on time"
+        ]
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.75,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 16,
+        "gap": 120,
+        "h": 170,
+        "col": "#5a4636",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.7,
+        "s": 0.45,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -2884,7 +6749,46 @@
         "angry"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.75,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 16,
+        "gap": 120,
+        "h": 170,
+        "col": "#5a4636",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.7,
+        "s": 0.45,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "talk": [
@@ -2896,7 +6800,11 @@
        "who": "CAR",
        "text": "You asked for the money!"
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -2934,8 +6842,39 @@
         "lat": 35,
         "color": "#f3e7cf"
        }
+      },
+      {
+       "on": "Antiochus",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.7,
+        "flag": "white",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "He spent the rest of his life moving from court to court, advising kings who were at war with Rome. He even commanded a fleet, and lost. Rome kept beating every king who took him in.",
@@ -2950,8 +6889,77 @@
         "HAN",
         "sad"
        ]
+      },
+      {
+       "on": "fleet",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 6,
+          "x": 0.1,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.66,
+          "gap": 250,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#2a2030"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 5,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "point"
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -2969,8 +6977,55 @@
       {
        "on": "poison",
        "dim": 0.6
+      },
+      {
+       "on": "poison",
+       "scene": {
+        "shot": "photo",
+        "img": "hannibal",
+        "move": "in",
+        "focus": [
+         0.5,
+         0.4
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.4,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#14100c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 1,
+        "papers": 1,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "Ancient writers give him one last line.",
@@ -2985,7 +7040,17 @@
        }
       }
      ],
-     "pause": 2.5
+     "pause": 2.5,
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Hannibal, as reported",
+      "lines": [
+       "Let us put an end to this life,",
+       "which has caused so much dread",
+       "to the Romans."
+      ]
+     }
     },
     {
      "cam": {
@@ -3007,8 +7072,60 @@
        "hide": [
         "SCI"
        ]
+      },
+      {
+       "on": "retirement",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "farm",
+          "x": 0.6,
+          "s": 0.8,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 26,
+          "depth": 0.2
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "scipio",
+      "move": "in",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "SCIPIO",
+         "Rome"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "scipio",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "The two greatest generals of the age. Both pushed out by their own cities. Both dead within a few years of each other.",
@@ -3018,9 +7135,39 @@
        "hide": [
         "HAN"
        ]
+      },
+      {
+       "on": "Both",
+       "scene": {
+        "shot": "photo",
+        "img": "scipio",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "SCIPIO",
+           "Rome"
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "scipio",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
-     "pause": 1.0
+     "pause": 1.0,
+     "scene": {
+      "shot": "photo",
+      "img": "hannibal",
+      "move": "out"
+     }
     },
     {
      "say": "And Carthage, without either of them, kept paying. Year after year. Until the last payment came due.",
@@ -3029,7 +7176,46 @@
        "on": "paying",
        "clock": 3
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.75,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 16,
+        "gap": 120,
+        "h": 170,
+        "col": "#5a4636",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.7,
+        "s": 0.45,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     }
    ]
   },
@@ -3059,6 +7245,51 @@
         "CAT",
         "angry"
        ]
+      },
+      {
+       "on": "alarmed",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.64,
+          "depth": 0.25
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.75,
+          "y": 0.62,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 16,
+          "gap": 120,
+          "h": 170,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 3,
+          "x": 0.7,
+          "s": 0.45,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "light"
+        ]
+       }
       }
      ],
      "scene": {
@@ -3101,10 +7332,39 @@
         "sub": "\"three days' sail from Rome\"",
         "dur": 4.5
        }
+      },
+      {
+       "on": "fig",
+       "scene": {
+        "shot": "card",
+        "time": "3 DAYS",
+        "place": "SAIL FROM ROME",
+        "date": "Cato's fig",
+        "size": 200
+       }
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ]
      }
     },
     {
@@ -3118,8 +7378,43 @@
         "who": "Cato the Elder, as told by Plutarch",
         "dur": 5
        }
+      },
+      {
+       "on": "line",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Cato the Elder, as told by Plutarch",
+        "lines": [
+         "In my opinion,",
+         "Carthage must be destroyed."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "cato",
+      "move": "in",
+      "caption": "Cato the Elder",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "CATO THE ELDER",
+         "Rome"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "roman",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "talk": [
@@ -3131,7 +7426,11 @@
        "who": "ROM",
        "text": "Cato, this is a vote about drains."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "Not everyone agreed. Another senator, Scipio Nasica, ended every vote the opposite way. Carthage must be spared. Rome argued with itself about it for years.",
@@ -3142,8 +7441,62 @@
         "ROM",
         "neutral"
        ]
+      },
+      {
+       "on": "spared",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Scipio Nasica, as reported",
+        "lines": [
+         "Carthage must be spared."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 50,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.95,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -3180,8 +7533,44 @@
         "CAR",
         "angry"
        ]
+      },
+      {
+       "on": "piece",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 19,
+        "depth": 0.2
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 12,
+        "rows": 2,
+        "x0": 0.1,
+        "gap": 90,
+        "col": "#2a2a2a",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "By 150 BC, Masinissa had taken about half the land Carthage held. So Carthage finally raised its own army, and fought him. And lost.",
@@ -3200,8 +7589,51 @@
         "CAR",
         "sad"
        ]
+      },
+      {
+       "on": "fought",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 13,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "≈ HALF",
+      "place": "OF CARTHAGE'S LAND TAKEN",
+      "date": "by 150 BC",
+      "size": 200
+     }
     },
     {
      "say": "For Rome, it was the excuse it had been waiting for. Carthage had gone to war without permission.",
@@ -3213,7 +7645,32 @@
         "CAR"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -3243,8 +7700,46 @@
         "CAR",
         "sad"
        ]
+      },
+      {
+       "on": "weapon",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 70,
+          "hats": true,
+          "depth": 0.8
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Rome's demands, 149 BC",
+      "lines": [
+       "300 noble children",
+       "every weapon in the city",
+       "..."
+      ]
+     }
     },
     {
      "say": "Then Rome made its final demand. Leave the city, and settle at least sixteen kilometres from the sea.",
@@ -3262,7 +7757,14 @@
        }
       }
      ],
-     "pause": 0.8
+     "pause": 0.8,
+     "scene": {
+      "shot": "card",
+      "time": "16 KM",
+      "place": "FROM THE SEA",
+      "date": "Rome's final demand",
+      "size": 220
+     }
     },
     {
      "say": "For a city of sailors and traders, that meant death anyway. Carthage, with no weapons left, refused.",
@@ -3273,8 +7775,75 @@
         "CAR",
         "angry"
        ]
+      },
+      {
+       "on": "refused",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 12,
+          "gap": 140,
+          "h": 160,
+          "col": "#3a2a20",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 90,
+          "hats": true,
+          "depth": 0.8
+         }
+        ],
+        "fx": [
+         "light"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.75,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 16,
+        "gap": 120,
+        "h": 170,
+        "col": "#5a4636",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.7,
+        "s": 0.45,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "And the city got ready to fight anyway. It sent fire-ships against the Roman fleet, and raided the Roman siege engines. Against an army of up to eighty thousand, Carthage held out for three years.",
@@ -3292,8 +7861,51 @@
       {
        "on": "three",
        "clock": 3
+      },
+      {
+       "on": "three",
+       "scene": {
+        "shot": "card",
+        "time": "3 YEARS",
+        "place": "CARTHAGE HOLDS OUT",
+        "date": "149 – 146 BC",
+        "size": 200
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.67,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "fire",
+        "x": 0.25,
+        "y": 0.66,
+        "r": 220,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
      "cam": {
@@ -3329,8 +7941,90 @@
         ],
         "dur": 6
        }
+      },
+      {
+       "on": "broke",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 14,
+          "gap": 120,
+          "h": 170,
+          "col": "#2a2018",
+          "depth": 0.4
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 16,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         },
+         {
+          "type": "fire",
+          "x": 0.7,
+          "y": 0.66,
+          "r": 260,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      },
+      {
+       "on": "Seven",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 160,
+          "h": 180,
+          "col": "#1d1612",
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.3,
+          "y": 0.7,
+          "r": 300,
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.8,
+          "y": 0.68,
+          "r": 260,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "SPRING 146 BC",
+      "place": "CARTHAGE",
+      "date": "day one of seven"
+     }
     },
     {
      "say": "About fifty thousand people finally came out and surrendered. All of them were sold into slavery. Hasdrubal, the last Carthaginian general, surrendered too. His wife did not. Ancient writers say she threw herself and her two children into the flames.",
@@ -3358,9 +8052,72 @@
         ],
         "dur": 6
        }
+      },
+      {
+       "on": "wife",
+       "scene": {
+        "shot": "photo",
+        "img": "hwife",
+        "move": "in",
+        "caption": "Hasdrubal's wife (Pierre Woeiriot, 16th century)"
+       }
+      },
+      {
+       "on": "flames",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "fire",
+          "x": 0.5,
+          "y": 0.7,
+          "r": 420,
+          "depth": 0.4
+         },
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 6,
+          "gap": 220,
+          "h": 150,
+          "col": "#140e0a",
+          "depth": 0.35
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
       }
      ],
-     "pause": 1.5
+     "pause": 1.5,
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 180,
+        "h": 140,
+        "col": "#1d1612",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 110,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "say": "And Scipio Aemilianus wept. The historian Polybius was standing next to him. Scipio quoted a line from Homer about the fall of Troy, and told Polybius he was afraid that one day, someone would give the same order about Rome.",
@@ -3380,8 +8137,62 @@
         "who": "Scipio Aemilianus, as told by Polybius",
         "dur": 5
        }
+      },
+      {
+       "on": "Homer",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Scipio Aemilianus, as told by Polybius",
+        "lines": [
+         "Someday this may also",
+         "be the fate of Rome."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.1
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.74,
+        "r": 400,
+        "depth": 0.35
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.95
+         },
+         {
+          "x": 0.42,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
      "say": "You may have heard that the Romans then salted the earth, so nothing would grow. That part is a later invention. They didn't need salt. They had already done enough.",
@@ -3393,8 +8204,54 @@
         "text": "MYTH",
         "dur": 3
        }
+      },
+      {
+       "on": "invention",
+       "scene": {
+        "shot": "card",
+        "time": "MYTH",
+        "place": "NO SALT",
+        "date": "a later invention",
+        "size": 220
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 2,
+        "depth": 0.2
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.4,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     }
    ]
   },
@@ -3418,6 +8275,31 @@
       {
        "on": "Utica",
        "pin": "Utica"
+      },
+      {
+       "on": "Utica",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 10,
+          "gap": 140,
+          "h": 150,
+          "col": "#6a5844",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 50,
+          "hats": true,
+          "depth": 0.8
+         }
+        ]
+       }
       }
      ],
      "scene": {
@@ -3454,7 +8336,37 @@
       }
      ],
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -3470,8 +8382,38 @@
       {
        "on": "invaded",
        "zoomhit": 1
+      },
+      {
+       "on": "invaded",
+       "scene": {
+        "shot": "photo",
+        "img": "hannibal",
+        "move": "in"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ]
+     }
     },
     {
      "say": "Carthage would say it kept every treaty, paid every talent, and was destroyed anyway. Its first war began over a town it did not own. Its last war began because it defended itself.",
@@ -3486,8 +8428,84 @@
       {
        "on": "began",
        "zoomhit": 1
+      },
+      {
+       "on": "defended",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.64,
+          "depth": 0.25
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.75,
+          "y": 0.62,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 16,
+          "gap": 120,
+          "h": 170,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 3,
+          "x": 0.7,
+          "s": 0.45,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "ruins",
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.0,
+         "x1": 0.8,
+         "y": 0.6,
+         "h": 120,
+         "depth": 0.3
+        },
+        {
+         "type": "hills",
+         "y": 0.5,
+         "n": 2,
+         "seed": 3,
+         "depth": 0.15
+        }
+       ],
+       "fx": [
+        "light"
+       ]
+      }
+     }
     },
     {
      "say": "Notice what both answers share. Each side believed it was defending itself. That belief is how most wars begin, and how this one lasted so long.",
@@ -3495,8 +8513,71 @@
       {
        "on": "defending",
        "zoomhit": 1
+      },
+      {
+       "on": "wars",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 13,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 12,
+          "rows": 3,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#3d2a55",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 12,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "And the strange thing is, we only hear Carthage's side through its enemies. Almost nothing Carthage wrote about itself survived. Almost every word we have about Hannibal was written by Greeks and Romans.",
@@ -3515,8 +8596,42 @@
       {
        "on": "wrote",
        "zoomhit": 1
+      },
+      {
+       "on": "Greeks",
+       "scene": {
+        "shot": "photo",
+        "img": "cato",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "CATO THE ELDER",
+           "Rome"
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "roman",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Carthaginian histories",
+      "lines": [
+       "Surviving:",
+       "almost nothing."
+      ]
+     }
     },
     {
      "say": "Think of the people, too. Farmers, sailors and shopkeepers on both sides paid for choices made in council chambers. The ones who fought street by street in Carthage were not senators.",
@@ -3528,8 +8643,74 @@
       {
        "on": "street",
        "zoomhit": 1
+      },
+      {
+       "on": "street",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 160,
+          "h": 170,
+          "col": "#1d1612",
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.6,
+          "y": 0.7,
+          "r": 260,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.7,
+        "y": 0.62,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.66,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 300,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Perhaps that is the real lesson of the Punic Wars. Fear drove both cities. Rome feared a rival it could not control. Carthage feared a neighbour it could not trust.",
@@ -3541,8 +8722,78 @@
       {
        "on": "Carthage",
        "zoomhit": 1
+      },
+      {
+       "on": "Carthage",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.64,
+          "depth": 0.25
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.75,
+          "y": 0.62,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.7,
+          "n": 16,
+          "gap": 120,
+          "h": 170,
+          "col": "#5a4636",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 3,
+          "x": 0.7,
+          "s": 0.45,
+          "flag": "white",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 115,
+        "h": 180,
+        "col": "#6a5844",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "Even so, the Romans could not make him a simple villain. Their own writers made him the most dangerous, and the most admired, enemy Rome ever had.",
@@ -3557,7 +8808,16 @@
        "on": "writers",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "hannibal",
+      "move": "in",
+      "focus": [
+       0.5,
+       0.4
+      ]
+     }
     },
     {
      "cam": {
@@ -3571,7 +8831,42 @@
        "on": "Tunis",
        "pin": "Tunis"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "ruins",
+      "move": "out",
+      "caption": "Carthage today, beside the sea",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.0,
+         "x1": 0.8,
+         "y": 0.6,
+         "h": 120,
+         "depth": 0.3
+        },
+        {
+         "type": "hills",
+         "y": 0.5,
+         "n": 2,
+         "seed": 3,
+         "depth": 0.15
+        }
+       ],
+       "fx": [
+        "light"
+       ]
+      }
+     }
     },
     {
      "say": "So hold on to that, as you watch other borders in other stories. Two sides. One line on a map. And each one certain that the line was drawn against it. We will keep asking, every time, who really started it.",
@@ -3583,8 +8878,49 @@
       {
        "on": "certain",
        "zoomhit": 1
+      },
+      {
+       "on": "Two",
+       "scene": {
+        "shot": "photo",
+        "img": "ports",
+        "move": "out",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.62,
+           "depth": 0.3
+          },
+          {
+           "type": "coast",
+           "x0": 0.0,
+           "x1": 0.8,
+           "y": 0.6,
+           "h": 120,
+           "depth": 0.3
+          },
+          {
+           "type": "ships",
+           "n": 3,
+           "x": 0.6,
+           "s": 0.45,
+           "flag": "white",
+           "y": 0.68,
+           "gap": 260,
+           "steam": false,
+           "depth": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "Two cities fought for a hundred and eighteen years over who would rule the sea between them. One won everything. The other is remembered mostly through the words of the people who destroyed it. That is the cost of a history written by the winner, and it is why we ask both sides.",
@@ -3610,8 +8946,87 @@
       {
        "on": "ask",
        "dim": 0.3
+      },
+      {
+       "on": "winner",
+       "scene": {
+        "shot": "photo",
+        "img": "ruins",
+        "move": "in",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.62,
+           "depth": 0.3
+          },
+          {
+           "type": "coast",
+           "x0": 0.0,
+           "x1": 0.8,
+           "y": 0.6,
+           "h": 120,
+           "depth": 0.3
+          },
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 2,
+           "seed": 3,
+           "depth": 0.15
+          }
+         ],
+         "fx": [
+          "light"
+         ]
+        }
+       }
+      },
+      {
+       "on": "both",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     }
    ]
   }
@@ -3743,5 +9158,64 @@
    "head": "THE SACRED|CHICKENS",
    "title": "He Threw the Sacred CHICKENS Overboard #shorts"
   }
- ]
+ ],
+ "film": true,
+ "photos": {
+  "alps": [
+   "Turner Snow Storm Hannibal and his Army Crossing the Alps",
+   true
+  ],
+  "dido": [
+   "Turner Dido building Carthage Rise of the Carthaginian Empire",
+   true
+  ],
+  "hannibal": [
+   "smoke/portraits/hannibal.png",
+   false
+  ],
+  "scipio": [
+   "Scipio Africanus bust Naples",
+   false
+  ],
+  "cato": [
+   "Cato the Elder bust Rome",
+   false
+  ],
+  "zama": [
+   "Battle of Zama Cornelis Cort engraving",
+   true
+  ],
+  "cannae": [
+   "Death of Paulus Aemilius at the Battle of Cannae Trumbull",
+   true
+  ],
+  "ruins": [
+   "Carthage Byrsa Punic ruins Tunisia",
+   true
+  ],
+  "ports": [
+   "Punic ports Carthage harbour",
+   true
+  ],
+  "hwife": [
+   "smoke/portraits/hwife.png",
+   false
+  ],
+  "alpsart": [
+   "Hannibal crossing the Alps Leutemann",
+   true
+  ],
+  "burning": [
+   "Destruction of Carthage painting 146 BC",
+   true
+  ],
+  "corvus": [
+   "corvus boarding bridge Roman ship drawing",
+   true
+  ],
+  "pulcher": [
+   "Claudius Pulcher sacred chickens",
+   true
+  ]
+ }
 }

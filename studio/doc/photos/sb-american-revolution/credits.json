@@ -1,0 +1,37 @@
+{
+ "bfranklin": {
+  "title": "File:Joseph Siffrein Duplessis - Benjamin Franklin - Google Art Project.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg/1280px-Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Joseph_Siffrein_Duplessis_-_Benjamin_Franklin_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Joseph-Siffred Duplessis",
+  "credit": "ZgEyj5EEKdux-g at Google Cultural Institute maximum zoom level"
+ },
+ "george3": {
+  "title": "File:Allan Ramsay - King George III in coronation robes - Google Art Project.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg/1280px-Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg",
+  "license": "Public domain",
+  "artist": "Allan Ramsay",
+  "credit": "vgGv1tsB1URdhg at Google Cultural Institute maximum zoom level"
+ },
+ "wfranklin": {
+  "from": "wfranklin.png"
+ },
+ "teaparty": {
+  "title": "File:Boston Tea Party Currier colored.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Boston_Tea_Party_Currier_colored.jpg/1280px-Boston_Tea_Party_Currier_colored.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Boston_Tea_Party_Currier_colored.jpg",
+  "license": "Public domain",
+  "artist": "Nathaniel Currier",
+  "credit": "https://springfieldmuseums.org/collections/item/the-destruction-of-tea-at-boston-harbor-nathaniel-currier/"
+ },
+ "declaration": {
+  "title": "File:Declaration of Independence (1819), by John Trumbull.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg/1280px-Declaration_of_Independence_%281819%29%2C_by_John_Trumbull.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Declaration_of_Independence_(1819),_by_John_Trumbull.jpg",
+  "license": "Public domain",
+  "artist": "John Trumbull",
+  "credit": "US Capitol"
+ }
+}

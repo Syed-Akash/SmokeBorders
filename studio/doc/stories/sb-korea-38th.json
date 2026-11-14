@@ -165,15 +165,6 @@
   "mood": "tension",
   "beats": [
    {
-    "scene": {
-     "shot": "pentagon-night",
-     "car": 1.2,
-     "push": 0.08,
-     "pan": [
-      40,
-      -10
-     ]
-    },
     "date": "FRIDAY, 10 AUGUST 1945\nTHE PENTAGON · WASHINGTON, D.C.",
     "cam": {
      "lon": 127.3,
@@ -198,7 +189,16 @@
       "on": "evening",
       "sfx": "tick4"
      }
-    ]
+    ],
+    "scene": {
+     "shot": "pentagon-night",
+     "car": 1.2,
+     "push": 0.08,
+     "pan": [
+      40,
+      -10
+     ]
+    }
    },
    {
     "say": "Japan has just offered to surrender. The war is almost over... and nobody has decided what happens to Korea.",
@@ -218,6 +218,13 @@
     ]
    },
    {
+    "say": "Inside the Pentagon, two colonels step into a quiet room next door.",
+    "do": [
+     {
+      "on": "Inside",
+      "sfx": "tick4"
+     }
+    ],
     "scene": {
      "shot": "office-night",
      "clock": [
@@ -229,16 +236,16 @@
       -30,
       10
      ]
-    },
-    "say": "Inside the Pentagon, two colonels step into a quiet room next door.",
-    "do": [
-     {
-      "on": "Inside",
-      "sfx": "tick4"
-     }
-    ]
+    }
    },
    {
+    "say": "Dean Rusk. And Charles Bonesteel. Neither of them is an expert on Korea.",
+    "do": [
+     {
+      "on": "Dean",
+      "sfx": "typewriter"
+     }
+    ],
     "scene": {
      "shot": "faces",
      "names": [
@@ -270,16 +277,16 @@
        }
       }
      ]
-    },
-    "say": "Dean Rusk. And Charles Bonesteel. Neither of them is an expert on Korea.",
-    "do": [
-     {
-      "on": "Dean",
-      "sfx": "typewriter"
-     }
-    ]
+    }
    },
    {
+    "say": "On the desk is a National Geographic map of Asia. It doesn't even show Korea's provinces.",
+    "do": [
+     {
+      "on": "desk",
+      "sfx": "paper"
+     }
+    ],
     "scene": {
      "shot": "map-desk",
      "push": 0.12,
@@ -287,14 +294,7 @@
       60,
       40
      ]
-    },
-    "say": "On the desk is a National Geographic map of Asia. It doesn't even show Korea's provinces.",
-    "do": [
-     {
-      "on": "desk",
-      "sfx": "paper"
-     }
-    ]
+    }
    },
    {
     "say": "They know one thing. Seoul, the capital, should be on the American side.",
@@ -320,15 +320,6 @@
     ]
    },
    {
-    "scene": {
-     "shot": "village",
-     "push": 0.06,
-     "pan": [
-      50,
-      0
-     ],
-     "cutY": 0.5
-    },
     "say": "Seven thousand miles away, it is already Saturday in Korea. Twenty-five million people are going about their day.",
     "do": [
      {
@@ -345,7 +336,16 @@
        "dur": 3.2
       }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "village",
+     "push": 0.06,
+     "pan": [
+      50,
+      0
+     ],
+     "cutY": 0.5
+    }
    },
    {
     "say": "Not one of them knows... that their country has just been cut in two.",
@@ -371,6 +371,16 @@
      {
       "on": "million",
       "zoomhit": 1
+     },
+     {
+      "on": "civilians",
+      "scene": {
+       "shot": "card",
+       "time": "1,500,000 – 3,000,000",
+       "place": "CIVILIANS KILLED",
+       "date": "Korean War, estimates",
+       "size": 90
+      }
      }
     ],
     "cam": {
@@ -396,8 +406,61 @@
       "show": [
        "SU"
       ]
+     },
+     {
+      "on": "exile",
+      "scene": {
+       "shot": "faces",
+       "names": [
+        [
+         "THE EXILE",
+         "Syngman Rhee"
+        ],
+        [
+         "THE GUERRILLA",
+         "Kim Il Sung"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "rhee",
+         "x": 0.3
+        },
+        {
+         "preset": "kim",
+         "x": 0.7
+        }
+       ]
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "faces",
+     "names": [
+      [
+       "THE OFFICERS",
+       "who drew the line"
+      ],
+      [
+       "THE DICTATOR'S MEN",
+       "who accepted it"
+      ]
+     ],
+     "nameAt": 0.4,
+     "push": 0.06,
+     "people": [
+      {
+       "preset": "us_officer",
+       "x": 0.3
+      },
+      {
+       "preset": "soviet_officer",
+       "x": 0.7
+      }
+     ]
+    }
    },
    {
     "say": "This is how Korea was split, in 1945: the 38th parallel, the United States, the Soviet Union, and the Koreans caught between them.",
@@ -424,6 +487,9 @@
      "lon": 127.3,
      "lat": 38.0,
      "scale": 1600
+    },
+    "scene": {
+     "shot": "off"
     }
    },
    {
@@ -439,8 +505,35 @@
      {
       "on": "Cold",
       "zoomhit": 1
+     },
+     {
+      "on": "accident",
+      "scene": {
+       "shot": "off"
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": null,
+       "window": 0.1,
+       "night": true,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.5,
+       "candles": 1,
+       "papers": 3,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    }
    },
    {
     "do": [
@@ -448,7 +541,10 @@
       "logo": 1
      }
     ],
-    "pause": 3.6
+    "pause": 3.6,
+    "scene": {
+     "shot": "off"
+    }
    }
   ]
  },
@@ -479,12 +575,83 @@
       {
        "on": "start",
        "zoomhit": 1
+      },
+      {
+       "on": "annexed",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 12,
+          "depth": 0.15
+         },
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 12,
+          "gap": 140,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "flagpole",
+          "x": 0.7,
+          "y": 0.7,
+          "flag": "jp",
+          "h": 380,
+          "depth": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "light"
+      ]
      }
     },
     {
@@ -508,12 +675,56 @@
       {
        "on": "become",
        "zoomhit": 1
+      },
+      {
+       "on": "thirty",
+       "scene": {
+        "shot": "card",
+        "time": "35 YEARS",
+        "place": "UNDER FOREIGN RULE",
+        "date": "1910 – 1945",
+        "size": 180
+       }
       }
      ],
      "cam": {
       "lon": 127.5,
       "lat": 36.5,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -534,12 +745,78 @@
       {
        "on": "they",
        "zoomhit": 1
+      },
+      {
+       "on": "China",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 14,
+          "gap": 120,
+          "h": 170,
+          "col": "#4a3c30",
+          "depth": 0.4
+         },
+         {
+          "type": "hills",
+          "y": 0.6,
+          "n": 2,
+          "seed": 9,
+          "depth": 0.15
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 121.5,
       "lat": 31.2,
       "scale": 1800
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#1a1410"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 2,
+        "papers": 5,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "point"
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -567,12 +844,52 @@
       {
        "on": "rule",
        "zoomhit": 1
+      },
+      {
+       "on": "Rhee",
+       "scene": {
+        "shot": "photo",
+        "img": "rhee",
+        "move": "in",
+        "caption": "Syngman Rhee"
+       }
       }
      ],
      "cam": {
       "lon": 121.5,
       "lat": 31.2,
       "scale": 3000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "march1",
+      "move": "in",
+      "caption": "The March First Movement, 1919",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 12,
+         "gap": 140,
+         "h": 150,
+         "col": "#3a332c",
+         "depth": 0.4
+        },
+        {
+         "type": "crowd",
+         "y": 0.95,
+         "n": 130,
+         "hats": true,
+         "depth": 0.8
+        }
+       ],
+       "fx": [
+        "dust"
+       ]
+      }
      }
     },
     {
@@ -597,7 +914,28 @@
        "on": "anyone",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     {
      "say": "Meanwhile, the great powers were already talking about Korea. In November 1943, Roosevelt, Churchill and Chiang Kai-shek met in Cairo.",
@@ -619,6 +957,56 @@
       "lon": 31.24,
       "lat": 30.04,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "cairo",
+      "move": "in",
+      "caption": "The Cairo Conference, November 1943",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.7,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 6,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.25,
+           "facing": 1,
+           "h": 0.85
+          },
+          {
+           "x": 0.5,
+           "facing": 1,
+           "h": 0.85
+          },
+          {
+           "x": 0.75,
+           "facing": -1,
+           "h": 0.85
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -646,12 +1034,31 @@
       {
        "on": "that",
        "zoomhit": 1
+      },
+      {
+       "on": "Notice",
+       "scene": {
+        "shot": "card",
+        "time": "IN DUE COURSE",
+        "place": "",
+        "date": "Cairo, 1943",
+        "size": 150
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "The Cairo Declaration, 1943",
+      "lines": [
+       "In due course Korea shall become",
+       "free and independent."
+      ]
      }
     },
     {
@@ -676,7 +1083,45 @@
        "on": "Koreans",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
     },
     {
      "say": "Roosevelt had a plan for that wait. A trusteeship, run by the great powers, until Koreans were ready to govern themselves. He raised it with Stalin. Stalin did not disagree.",
@@ -699,8 +1144,67 @@
       {
        "on": "that",
        "zoomhit": 1
+      },
+      {
+       "on": "Stalin",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "STALIN DID NOT DISAGREE",
+          "Moscow"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "soviet_officer",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 7,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.65,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "So for Koreans, the end of the war was not a clean break. It was a handover, and every great power had a plan for it, except the people who lived there.",
@@ -723,8 +1227,67 @@
       {
        "on": "clean",
        "zoomhit": 1
+      },
+      {
+       "on": "except",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     {
      "say": "It sounded sensible in a conference room. To Koreans, who had waited thirty-five years, it sounded like one more landlord.",
@@ -747,12 +1310,97 @@
       {
        "on": "conference",
        "zoomhit": 1
+      },
+      {
+       "on": "Koreans",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.9,
       "lat": 37.6,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 5,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.85
+         },
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.85
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     }
    ]
@@ -776,12 +1424,27 @@
       {
        "on": "Union",
        "zoomhit": 1
+      },
+      {
+       "on": "Soviet",
+       "scene": {
+        "shot": "card",
+        "time": "8 AUGUST 1945",
+        "place": "MOSCOW",
+        "date": "war on Japan"
+       }
       }
      ],
      "cam": {
       "lon": 132.45,
       "lat": 34.39,
       "scale": 4000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "6 AUGUST 1945",
+      "place": "HIROSHIMA",
+      "date": ""
      }
     },
     {
@@ -803,12 +1466,65 @@
        "show": [
         "SU"
        ]
+      },
+      {
+       "on": "huge",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 7,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 24,
+          "rows": 3,
+          "x0": 0,
+          "gap": 70,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 130.5,
       "lat": 43.0,
       "scale": 3500
+     },
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "THE SOVIET UNION",
+        "joins the Pacific war"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "soviet_officer",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -830,7 +1546,16 @@
        "on": "independence",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Soviet appeal to Koreans, August 1945",
+      "lines": [
+       "A banner of liberty and independence",
+       "is rising in Seoul."
+      ]
+     }
     },
     {
      "say": "On the tenth of August, Soviet troops cross into northern Korea. They meet little resistance, and they are moving fast.",
@@ -861,12 +1586,58 @@
       {
        "on": "Korea",
        "zoomhit": 1
+      },
+      {
+       "on": "resistance",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "soviets45",
+      "move": "in",
+      "caption": "Soviet troops in Korea, 1945",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 12,
+         "gap": 140,
+         "h": 150,
+         "col": "#3a332c",
+         "depth": 0.4
+        },
+        {
+         "type": "soldiers",
+         "y": 0.86,
+         "n": 16,
+         "rows": 2,
+         "x0": 0,
+         "gap": 80,
+         "col": "#3c4a34",
+         "march": true,
+         "depth": 0.7
+        },
+        {
+         "type": "flagpole",
+         "x": 0.8,
+         "y": 0.7,
+         "flag": "ru",
+         "h": 360,
+         "depth": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -898,12 +1669,48 @@
       {
        "on": "twenty",
        "zoomhit": 1
+      },
+      {
+       "on": "cities",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.45,
       "lat": 39.15,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.6,
+        "y": 0.6,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.55,
+        "s": 0.5,
+        "flag": "ru",
+        "y": 0.67,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -925,12 +1732,57 @@
        "show": [
         "US"
        ]
+      },
+      {
+       "on": "Red",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 2,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 20,
+          "rows": 3,
+          "x0": 0,
+          "gap": 75,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": -77.04,
       "lat": 38.9,
       "scale": 12000
+     },
+     "scene": {
+      "shot": "office-night",
+      "clock": [
+       10,
+       52
+      ],
+      "push": 0.1,
+      "pan": [
+       -30,
+       10
+      ]
      }
     },
     {
@@ -943,12 +1795,50 @@
       {
        "on": "officers",
        "zoomhit": 1
+      },
+      {
+       "on": "officers",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "COL. DEAN RUSK",
+          "War Department"
+         ],
+         [
+          "COL. CHARLES BONESTEEL",
+          "War Department"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "us_officer",
+          "x": 0.3,
+          "spec": {
+           "hair": "#3b2a1a"
+          }
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.7,
+          "spec": {
+           "hair": "#6b4a2a",
+           "glasses": 0
+          }
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": -77.04,
       "lat": 38.9,
       "scale": 20000
+     },
+     "scene": {
+      "shot": "off"
      }
     },
     {
@@ -976,12 +1866,75 @@
         "text": "RUSK, 36",
         "dur": 2.4
        }
+      },
+      {
+       "on": "Georgia",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "farm",
+          "x": 0.6,
+          "s": 0.9,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 4,
+          "depth": 0.15
+         }
+        ]
+       }
+      },
+      {
+       "on": "Rhodes",
+       "scene": {
+        "shot": "card",
+        "time": "RUSK, 36",
+        "place": "RHODES SCHOLAR",
+        "date": "Oxford",
+        "size": 170
+       }
       }
      ],
      "cam": {
       "lon": -77.04,
       "lat": 38.9,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "rusk",
+      "move": "in",
+      "caption": "Dean Rusk",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "DEAN RUSK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -1009,8 +1962,24 @@
         "text": "BONESTEEL, 35",
         "dur": 2.4
        }
+      },
+      {
+       "on": "Oxford",
+       "scene": {
+        "shot": "card",
+        "time": "BONESTEEL, 35",
+        "place": "RHODES SCHOLAR",
+        "date": "West Point · Oxford",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "bonesteel",
+      "move": "in",
+      "caption": "Charles H. Bonesteel III"
+     }
     },
     {
      "say": "Two Rhodes scholars, one deadline. With a general named George Lincoln, they were drafting the surrender order for Japan. The document that would tell each army where to accept the surrender.",
@@ -1026,8 +1995,33 @@
       {
        "on": "surrender",
        "dim": 0.4
+      },
+      {
+       "on": "surrender",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "War Department, August 1945 (summary)",
+        "lines": [
+         "General Order No. 1",
+         "Draft: zones for accepting",
+         "the surrender of Japanese forces"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "office-night",
+      "clock": [
+       10,
+       52
+      ],
+      "push": 0.1,
+      "pan": [
+       -30,
+       10
+      ]
+     }
     },
     {
      "say": "Neither of them was a Korea specialist. Rusk would later admit he did not know Korean history. Tonight, that did not matter. All they needed was a line.",
@@ -1046,12 +2040,55 @@
       {
        "on": "line",
        "pin": "38th parallel"
+      },
+      {
+       "on": "Tonight",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 2600
+     },
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "COL. DEAN RUSK",
+        "War Department"
+       ],
+       [
+        "COL. CHARLES BONESTEEL",
+        "War Department"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3,
+        "spec": {
+         "hair": "#3b2a1a"
+        }
+       },
+       {
+        "preset": "us_officer",
+        "x": 0.7,
+        "spec": {
+         "hair": "#6b4a2a",
+         "glasses": 0
+        }
+       }
+      ]
      }
     },
     {
@@ -1071,8 +2108,85 @@
       {
        "on": "Koreans",
        "zoomhit": 1
+      },
+      {
+       "on": "ordinary",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#14100c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 1,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.4,
+          "facing": 1,
+          "h": 0.9,
+          "pose": "lean"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "It is the tenth of August as well. They have been told to define an American zone. They have extremely short notice, and they are completely unprepared.",
@@ -1095,8 +2209,29 @@
       {
        "on": "define",
        "zoomhit": 1
+      },
+      {
+       "on": "short",
+       "scene": {
+        "shot": "office-night",
+        "clock": [
+         10,
+         52
+        ],
+        "push": 0.1,
+        "pan": [
+         -30,
+         10
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "10 AUGUST 1945",
+      "place": "WASHINGTON",
+      "date": "late evening"
+     }
     },
     {
      "say": "But the plan assumed the Soviets would stop where they were told. Nobody could be sure. And the next decision would be made very quickly.",
@@ -1113,7 +2248,40 @@
        "on": "would",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 2,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 20,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#3c4a34",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "The map is from the National Geographic. No Korea expert is asked. The Koreans are not consulted.",
@@ -1129,8 +2297,54 @@
       {
        "on": "Koreans",
        "zoomhit": 1
+      },
+      {
+       "on": "Koreans",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
+     }
     }
    ]
   },
@@ -1153,12 +2367,45 @@
       {
        "on": "country",
        "zoomhit": 1
+      },
+      {
+       "on": "Seoul",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.52,
+          "n": 3,
+          "seed": 12,
+          "depth": 0.15
+         },
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 16,
+          "gap": 125,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
      }
     },
     {
@@ -1189,12 +2436,26 @@
        ],
        "color": "#ff6a1f",
        "big": 1
+      },
+      {
+       "on": "peninsula",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3800
+     },
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
      }
     },
     {
@@ -1229,12 +2490,37 @@
         "text": "SIX DAYS",
         "dur": 2.4
        }
+      },
+      {
+       "on": "cabled",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Moscow, 16 August 1945 (summary)",
+        "lines": [
+         "Proposal received.",
+         "No objection."
+        ]
+       }
+      },
+      {
+       "on": "Six",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 1800
+     },
+     "scene": {
+      "shot": "card",
+      "time": "10 – 16 AUGUST",
+      "place": "SIX DAYS",
+      "date": "from a map to a border",
+      "size": 130
      }
     },
     {
@@ -1247,7 +2533,11 @@
        "who": "US",
        "text": "Soviet troops could enter the area before ours."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "The two men did not agree on everything, and they did not need to. Their task was small. It was not to decide the future of Korea. It was to choose a temporary line.",
@@ -1263,8 +2553,51 @@
       {
        "on": "choose",
        "zoomhit": 1
+      },
+      {
+       "on": "temporary",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "COL. DEAN RUSK",
+        "War Department"
+       ],
+       [
+        "COL. CHARLES BONESTEEL",
+        "War Department"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3,
+        "spec": {
+         "hair": "#3b2a1a"
+        }
+       },
+       {
+        "preset": "us_officer",
+        "x": 0.7,
+        "spec": {
+         "hair": "#6b4a2a",
+         "glasses": 0
+        }
+       }
+      ]
+     }
     },
     {
      "say": "That is Rusk's own explanation, years later. The line was further north than American troops could realistically reach. He worried that the Soviets would get there first.",
@@ -1283,8 +2616,63 @@
       {
        "on": "Soviets",
        "zoomhit": 1
+      },
+      {
+       "on": "worried",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 2,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 20,
+          "rows": 3,
+          "x0": 0,
+          "gap": 75,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "rusk",
+      "move": "out",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "DEAN RUSK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "And here is a twist. Forty years earlier, Japan and Russia had discussed sharing Korea along the very same parallel. The two officers did not know.",
@@ -1307,12 +2695,54 @@
       {
        "on": "sharing",
        "zoomhit": 1
+      },
+      {
+       "on": "did",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "COL. DEAN RUSK",
+          "War Department"
+         ],
+         [
+          "COL. CHARLES BONESTEEL",
+          "War Department"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "us_officer",
+          "x": 0.3,
+          "spec": {
+           "hair": "#3b2a1a"
+          }
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.7,
+          "spec": {
+           "hair": "#6b4a2a",
+           "glasses": 0
+          }
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 4500
+     },
+     "scene": {
+      "shot": "card",
+      "time": "40 YEARS EARLIER",
+      "place": "THE SAME PARALLEL",
+      "date": "Japan and Russia",
+      "size": 130
      }
     },
     {
@@ -1343,12 +2773,25 @@
       {
        "on": "million",
        "zoomhit": 1
+      },
+      {
+       "on": "nine",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "card",
+      "time": "16,000,000",
+      "place": "IN THE AMERICAN ZONE",
+      "date": "and 9,000,000 in the Soviet zone",
+      "size": 140
      }
     },
     {
@@ -1372,8 +2815,46 @@
       {
        "on": "history",
        "zoomhit": 1
+      },
+      {
+       "on": "almost",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Dean Rusk, later",
+        "lines": [
+         "…almost surely,",
+         "have chosen a different line."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "rusk",
+      "move": "in",
+      "focus": [
+       0.5,
+       0.35
+      ],
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "DEAN RUSK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "It was understood at the time that this was only temporary. A trusteeship would follow, and then independence. That is why almost nobody argued about the line at first.",
@@ -1396,8 +2877,30 @@
       {
        "on": "follow",
        "zoomhit": 1
+      },
+      {
+       "on": "argued",
+       "scene": {
+        "shot": "office-night",
+        "clock": [
+         10,
+         52
+        ],
+        "push": 0.1,
+        "pan": [
+         -30,
+         10
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "TEMPORARY",
+      "place": "TRUSTEESHIP, THEN INDEPENDENCE",
+      "date": "1945",
+      "size": 150
+     }
     },
     {
      "say": "But a line on paper is not yet a border. For that, someone has to say yes. And the person who had to say yes was in Moscow.",
@@ -1416,12 +2919,41 @@
       {
        "on": "person",
        "zoomhit": 1
+      },
+      {
+       "on": "Moscow",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 18,
+          "gap": 110,
+          "h": 170,
+          "col": "#2a2420",
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 37.6,
       "lat": 55.75,
       "scale": 7000
+     },
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
      }
     },
     {
@@ -1444,8 +2976,58 @@
       {
        "on": "remembered",
        "zoomhit": 1
+      },
+      {
+       "on": "Korea",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "office-night",
+      "clock": [
+       10,
+       52
+      ],
+      "push": 0.1,
+      "pan": [
+       -30,
+       10
+      ]
+     }
     },
     {
      "say": "Dark humour writes itself here. A country that had lasted a thousand years was divided by two officers and a magazine map. But nobody on the ground was laughing.",
@@ -1464,12 +3046,61 @@
       {
        "on": "nobody",
        "zoomhit": 1
+      },
+      {
+       "on": "ground",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.9,
       "lat": 37.6,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
      }
     }
    ]
@@ -1496,12 +3127,66 @@
       {
        "on": "could",
        "zoomhit": 1
+      },
+      {
+       "on": "marching",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 7,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 22,
+          "rows": 3,
+          "x0": 0,
+          "gap": 70,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.5,
       "lat": 38.5,
       "scale": 1800
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 110,
+        "h": 170,
+        "col": "#2a2420",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
      }
     },
     {
@@ -1526,7 +3211,16 @@
         "dur": 2.6
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Moscow, 16 August 1945 (summary)",
+      "lines": [
+       "Accepted."
+      ],
+      "stamp": "YES"
+     }
     },
     {
      "say": "In September, the Soviet administration issued its own currency. It was called the Red Army won. The north was already starting to run on its own rules.",
@@ -1546,12 +3240,45 @@
       {
        "on": "rules",
        "zoomhit": 1
+      },
+      {
+       "on": "rules",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 12,
+          "gap": 140,
+          "h": 140,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "flagpole",
+          "x": 0.75,
+          "y": 0.7,
+          "flag": "ru",
+          "h": 380,
+          "depth": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "card",
+      "time": "THE RED ARMY WON",
+      "place": "A NEW CURRENCY",
+      "date": "north Korea, 1945",
+      "size": 110
      }
     },
     {
@@ -1578,6 +3305,17 @@
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3800
+     },
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Approved 17 August 1945 (summary)",
+      "lines": [
+       "General Order No. 1",
+       "Japanese forces north of 38° N",
+       "surrender to the Soviet commander;",
+       "south of 38° N, to the American."
+      ]
      }
     },
     {
@@ -1594,8 +3332,58 @@
       {
        "on": "people",
        "zoomhit": 1
+      },
+      {
+       "on": "Few",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "office-night",
+      "clock": [
+       10,
+       52
+      ],
+      "push": 0.1,
+      "pan": [
+       -30,
+       10
+      ]
+     }
     },
     {
      "say": "On the twenty-fourth of August, Soviet troops entered Pyongyang. They found a local committee for Korean independence already working, led by a veteran nationalist named Cho Man-sik.",
@@ -1613,12 +3401,77 @@
       {
        "on": "committee",
        "zoomhit": 1
+      },
+      {
+       "on": "committee",
+       "scene": {
+        "shot": "photo",
+        "img": "cho",
+        "move": "in",
+        "caption": "Cho Man-sik",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "CHO MAN-SIK",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "korean",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "soviets45",
+      "move": "out",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 12,
+         "gap": 140,
+         "h": 150,
+         "col": "#3a332c",
+         "depth": 0.4
+        },
+        {
+         "type": "soldiers",
+         "y": 0.86,
+         "n": 16,
+         "rows": 2,
+         "x0": 0,
+         "gap": 80,
+         "col": "#3c4a34",
+         "march": true,
+         "depth": 0.7
+        },
+        {
+         "type": "flagpole",
+         "x": 0.8,
+         "y": 0.7,
+         "flag": "ru",
+         "h": 360,
+         "depth": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -1644,6 +3497,39 @@
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 180,
+        "h": 160,
+        "col": "#1d1714",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.4,
+        "y": 0.66,
+        "r": 260,
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.68,
+        "r": 220,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
      }
     },
     {
@@ -1663,8 +3549,84 @@
       {
        "on": "fought",
        "zoomhit": 1
+      },
+      {
+       "on": "welcomed",
+       "scene": {
+        "shot": "photo",
+        "img": "soviets45",
+        "move": "in",
+        "focus": [
+         0.5,
+         0.5
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "town",
+           "y": 0.74,
+           "n": 12,
+           "gap": 140,
+           "h": 150,
+           "col": "#3a332c",
+           "depth": 0.4
+          },
+          {
+           "type": "soldiers",
+           "y": 0.86,
+           "n": 16,
+           "rows": 2,
+           "x0": 0,
+           "gap": 80,
+           "col": "#3c4a34",
+           "march": true,
+           "depth": 0.7
+          },
+          {
+           "type": "flagpole",
+           "x": 0.8,
+           "y": 0.7,
+           "flag": "ru",
+           "h": 360,
+           "depth": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.7,
+        "flag": "ru",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "But the soldiers were poorly supplied. Some lacked shoes and uniforms. They lived off the land, and they looted. There were accusations of rape. These abuses faded when more disciplined units arrived.",
@@ -1683,12 +3645,74 @@
       {
        "on": "There",
        "zoomhit": 1
+      },
+      {
+       "on": "faded",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 125.8,
       "lat": 39.0,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 11,
+        "depth": 0.2
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.2,
+        "gap": 90,
+        "col": "#3c4a34",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -1708,8 +3732,47 @@
       {
        "on": "permanent",
        "zoomhit": 1
+      },
+      {
+       "on": "historians",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "NO FIRM PLAN",
+          "for a permanent division"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "soviet_officer",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#221c18",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "fog",
+       "smoke"
+      ]
+     }
     },
     {
      "say": "The Soviets also brought Koreans who had lived in the Soviet Union, some of them members of its Communist Party. Their plan was to build a socialist state.",
@@ -1728,8 +3791,50 @@
       {
        "on": "members",
        "zoomhit": 1
+      },
+      {
+       "on": "socialist",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "KOREANS FROM THE SOVIET UNION",
+          "and a plan for a socialist state"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "kim",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.3,
+        "s": 0.5,
+        "flag": "ru",
+        "y": 0.66,
+        "gap": 400,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     }
    ]
   },
@@ -1755,12 +3860,53 @@
       {
        "on": "fifteenth",
        "zoomhit": 1
+      },
+      {
+       "on": "celebrated",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.52,
+          "n": 3,
+          "seed": 12,
+          "depth": 0.15
+         },
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 130,
+          "hats": true,
+          "depth": 0.8
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "15 AUGUST 1945",
+      "place": "SEOUL",
+      "date": "Japan announces its surrender"
      }
     },
     {
@@ -1780,8 +3926,59 @@
       {
        "on": "thought",
        "zoomhit": 1
+      },
+      {
+       "on": "Song",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Song Jin-woo (in substance)",
+        "lines": [
+         "No."
+        ],
+        "stamp": "REFUSED"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "jp",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "So Abe asked a different man. Lyuh Woon-hyung accepted. He formed a committee to prepare for independence, and it began to take over security in the city.",
@@ -1797,12 +3994,63 @@
       {
        "on": "security",
        "zoomhit": 1
+      },
+      {
+       "on": "committee",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.52,
+          "n": 3,
+          "seed": 12,
+          "depth": 0.15
+         },
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 16,
+          "gap": 125,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "light"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.9,
       "lat": 37.6,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "lyuh",
+      "move": "in",
+      "caption": "Lyuh Woon-hyung",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "LYUH WOON-HYUNG",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "korean",
+         "x": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -1822,8 +4070,43 @@
       {
        "on": "Soviet",
        "zoomhit": 1
+      },
+      {
+       "on": "train",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 777,000",
+        "place": "JAPANESE IN KOREA",
+        "date": "August 1945",
+        "size": 170
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "On the sixteenth, young Japanese officers in Seoul protested their government's decisions, and warned they would punish any unrest. The city hung between joy and fear.",
@@ -1848,6 +4131,35 @@
       "lon": 126.98,
       "lat": 37.57,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 150,
+        "col": "#2e2822",
+        "depth": 0.4
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.3,
+        "gap": 80,
+        "col": "#6b6a4a",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
      }
     },
     {
@@ -1868,12 +4180,48 @@
       {
        "on": "United",
        "zoomhit": 1
+      },
+      {
+       "on": "nominated",
+       "scene": {
+        "shot": "photo",
+        "img": "rhee",
+        "move": "in"
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 7000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 60,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -1898,6 +4246,17 @@
       "lon": 139.7,
       "lat": 35.7,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "MacArthur, Proclamation No. 1, 7 September 1945",
+      "lines": [
+       "All powers of government",
+       "over the territory of Korea south of 38°",
+       "will be for the present exercised",
+       "under my authority."
+      ]
      }
     },
     {
@@ -1917,12 +4276,74 @@
       {
        "on": "trained",
        "zoomhit": 1
+      },
+      {
+       "on": "Washington",
+       "scene": {
+        "shot": "photo",
+        "img": "hodge",
+        "move": "in",
+        "caption": "General John R. Hodge",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "GEN. JOHN R. HODGE",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "us_officer",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.7,
       "lat": 37.46,
       "scale": 6000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "incheon45",
+      "move": "in",
+      "caption": "American troops land at Incheon, September 1945",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.5,
+         "x1": 1.1,
+         "y": 0.6,
+         "h": 110,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 5,
+         "x": 0.1,
+         "s": 0.5,
+         "flag": "us",
+         "y": 0.68,
+         "gap": 260,
+         "steam": true,
+         "depth": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -1946,12 +4367,66 @@
       {
        "on": "surrender",
        "zoomhit": 1
+      },
+      {
+       "on": "surrender",
+       "scene": {
+        "shot": "photo",
+        "img": "surrender45",
+        "move": "in",
+        "caption": "Japanese surrender, Seoul, 9 September 1945",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "room",
+           "flag": "jp",
+           "window": 0.7,
+           "night": false,
+           "depth": 0.3
+          },
+          {
+           "type": "table",
+           "lamp": 0.6,
+           "candles": 0,
+           "papers": 6,
+           "w": 900,
+           "depth": 0.6
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.3,
+             "facing": 1,
+             "h": 0.9
+            },
+            {
+             "x": 0.7,
+             "facing": -1,
+             "h": 0.9
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 12000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "9 SEPTEMBER 1945",
+      "place": "SEOUL",
+      "date": "the old throne room"
      }
     },
     {
@@ -1971,12 +4446,59 @@
       {
        "on": "nearly",
        "zoomhit": 1
+      },
+      {
+       "on": "eight",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 800,000",
+        "place": "JAPANESE SENT HOME",
+        "date": "by August 1946",
+        "size": 170
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 36.5,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.2,
+        "s": 0.5,
+        "flag": "jp",
+        "y": 0.68,
+        "gap": 280,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": 0.5,
+        "x1": 1.1,
+        "y": 0.6,
+        "h": 100,
+        "depth": 0.3
+       },
+       {
+        "type": "crowd",
+        "y": 0.97,
+        "n": 80,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -1996,12 +4518,71 @@
       {
        "on": "World",
        "zoomhit": 1
+      },
+      {
+       "on": "country",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": "us",
+          "window": 0.7,
+          "night": false,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.6,
+          "candles": 0,
+          "papers": 12,
+          "w": 900,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.5,
+            "facing": 1,
+            "h": 0.9
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.7,
       "lat": 37.46,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "hodge",
+      "move": "out",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "GEN. JOHN R. HODGE",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -2018,8 +4599,41 @@
       {
        "on": "supposed",
        "zoomhit": 1
+      },
+      {
+       "on": "question",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ]
+     }
     },
     {
      "say": "Prices rose sharply. The economy was disrupted. By the summer of 1946, the Americans introduced rationing and price controls. The south was free, but it was hungry.",
@@ -2042,8 +4656,43 @@
       {
        "on": "introduced",
        "zoomhit": 1
+      },
+      {
+       "on": "rationing",
+       "scene": {
+        "shot": "card",
+        "time": "1946",
+        "place": "RATIONING · PRICE CONTROLS",
+        "date": "the south",
+        "size": 200
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 60,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     }
    ]
   },
@@ -2068,12 +4717,55 @@
       {
        "on": "grown",
        "zoomhit": 1
+      },
+      {
+       "on": "China",
+       "scene": {
+        "shot": "photo",
+        "img": "kim",
+        "move": "in",
+        "caption": "Kim Il Sung",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "KIM IL SUNG",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "kim",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "KIM IL SUNG",
+        "born Kim Song Ju, 1912"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "kim",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -2093,12 +4785,76 @@
       {
        "on": "stayed",
        "zoomhit": 1
+      },
+      {
+       "on": "Soviet",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 7,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 16,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.5,
       "lat": 44.0,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 70,
+        "seed": 6,
+        "h": 200,
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.3,
+        "gap": 220,
+        "col": "#8a8270",
+        "fire": 0.4,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow"
      }
     },
     {
@@ -2118,12 +4874,67 @@
       {
        "on": "chose",
        "zoomhit": 1
+      },
+      {
+       "on": "December",
+       "scene": {
+        "shot": "photo",
+        "img": "kim",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "KIM IL SUNG",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "kim",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 125.75,
       "lat": 39.02,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 120,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.7,
+        "flag": "ru",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -2143,12 +4954,55 @@
       {
        "on": "critics",
        "zoomhit": 1
+      },
+      {
+       "on": "hero",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "A WAR HERO?",
+          "or a Soviet creation"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "kim",
+          "x": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 125.0,
       "lat": 44.0,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 230,
+        "col": "#8a8270",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow"
      }
     },
     {
@@ -2168,8 +5022,49 @@
       {
        "on": "charge",
        "zoomhit": 1
+      },
+      {
+       "on": "Moscow",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "room",
+          "flag": "ru",
+          "window": 0.1,
+          "night": true,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.5,
+          "candles": 2,
+          "papers": 8,
+          "w": 900,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "GEN. TERENTII SHTYKOV",
+        "Soviet administration, 1946"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "soviet_officer",
+        "x": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "In March 1946, the northern government began a sweeping land reform. Land from Japanese owners and collaborators was divided among poor farmers. Many poor farmers gained land.",
@@ -2188,12 +5083,89 @@
       {
        "on": "owners",
        "zoomhit": 1
+      },
+      {
+       "on": "farmers",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "farm",
+          "x": 0.5,
+          "s": 0.9,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.3,
+            "facing": 1,
+            "h": 0.8,
+            "pose": "point"
+           },
+           {
+            "x": 0.6,
+            "facing": -1,
+            "h": 0.8
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
      }
     },
     {
@@ -2217,8 +5189,43 @@
       {
        "on": "Soviet",
        "zoomhit": 1
+      },
+      {
+       "on": "designed",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "North Korea, 1946 election (summary)",
+        "lines": [
+         "Seats decided in advance."
+        ],
+        "stamp": "NO KOREAN INPUT"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 10,
+        "gap": 150,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "flagpole",
+        "x": 0.75,
+        "y": 0.7,
+        "flag": "ru",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "So in the north, Koreans gained land, jobs and pride. And they lost a free vote. Both of those things are true.",
@@ -2237,8 +5244,67 @@
       {
        "on": "things",
        "zoomhit": 1
+      },
+      {
+       "on": "lost",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "room",
+          "flag": "ru",
+          "window": 0.1,
+          "night": true,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.5,
+          "candles": 2,
+          "papers": 3,
+          "w": 900,
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     {
      "say": "In February 1946, a provisional government began to rule the north. Within two years, it had become the machinery of a state.",
@@ -2258,7 +5324,46 @@
        "on": "years",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "ru",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "Kim Il Sung would rule the north for more than forty-five years, until his death in 1994, and then his son would take over. But in 1945, he was a thirty-three-year-old whom most Koreans had not yet heard of.",
@@ -2277,12 +5382,48 @@
       {
        "on": "would",
        "zoomhit": 1
+      },
+      {
+       "on": "thirty",
+       "scene": {
+        "shot": "card",
+        "time": "33",
+        "place": "YEARS OLD",
+        "date": "Kim Il Sung, 1945",
+        "size": 240
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "kim",
+      "move": "in",
+      "focus": [
+       0.5,
+       0.35
+      ],
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "KIM IL SUNG",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "kim",
+         "x": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -2302,8 +5443,38 @@
       {
        "on": "north",
        "zoomhit": 1
+      },
+      {
+       "on": "puppet",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "NOT A PUPPET",
+          "not free either"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "kim",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Draft (summary)",
+      "lines": [
+       "Constitution of the",
+       "Democratic People's Republic of Korea",
+       "1948"
+      ]
+     }
     }
    ]
   },
@@ -2328,12 +5499,28 @@
       {
        "on": "waited",
        "zoomhit": 1
+      },
+      {
+       "on": "seventy",
+       "scene": {
+        "shot": "card",
+        "time": "70",
+        "place": "YEARS OLD",
+        "date": "Syngman Rhee, 1945",
+        "size": 240
+       }
       }
      ],
      "cam": {
       "lon": 127.2,
       "lat": 36.4,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "rhee",
+      "move": "in",
+      "caption": "Syngman Rhee"
      }
     },
     {
@@ -2350,12 +5537,75 @@
       {
        "on": "After",
        "zoomhit": 1
+      },
+      {
+       "on": "jailed",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.45,
+          "night": true,
+          "depth": 0.3,
+          "wall": "#121010"
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.5,
+            "facing": 1,
+            "h": 0.85,
+            "pose": "lean"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
+      },
+      {
+       "on": "States",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 1,
+          "x": 0.5,
+          "s": 0.7,
+          "flag": "us",
+          "y": 0.66,
+          "gap": 0,
+          "steam": true,
+          "depth": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": -77.04,
       "lat": 38.9,
       "scale": 12000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "1875",
+      "place": "BORN",
+      "date": "Syngman Rhee",
+      "size": 220
      }
     },
     {
@@ -2375,12 +5625,41 @@
       {
        "on": "president",
        "zoomhit": 1
+      },
+      {
+       "on": "impeached",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Provisional Government, 1925",
+        "lines": [
+         "Impeached."
+        ],
+        "stamp": "IMPEACHED"
+       }
       }
      ],
      "cam": {
       "lon": 121.5,
       "lat": 31.2,
       "scale": 3500
+     },
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "FIRST PRESIDENT",
+        "Provisional Government, 1919"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -2400,8 +5679,49 @@
       {
        "on": "lobbied",
        "zoomhit": 1
+      },
+      {
+       "on": "Princeton",
+       "scene": {
+        "shot": "card",
+        "time": "PhD, 1910",
+        "place": "PRINCETON",
+        "date": "Syngman Rhee",
+        "size": 160
+       }
+      },
+      {
+       "on": "lobbied",
+       "scene": {
+        "shot": "photo",
+        "img": "rhee",
+        "move": "out"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 150,
+        "h": 170,
+        "col": "#5a4a3c",
+        "depth": 0.4
+       },
+       {
+        "type": "forest",
+        "y": 0.66,
+        "n": 30,
+        "seed": 4,
+        "h": 140,
+        "depth": 0.45
+       }
+      ]
+     }
     },
     {
      "say": "When he returned in 1945, he was a fierce anti-communist. And he wanted something very specific: a separate Korean state in the south, as soon as possible.",
@@ -2420,12 +5740,54 @@
       {
        "on": "south",
        "zoomhit": 1
+      },
+      {
+       "on": "anti",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "SYNGMAN RHEE",
+          "a separate state in the south"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "rhee",
+          "x": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.7,
+        "flag": "us",
+        "y": 0.66,
+        "gap": 0,
+        "steam": true,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -2445,8 +5807,27 @@
       {
        "on": "Later",
        "zoomhit": 1
+      },
+      {
+       "on": "authoritarian",
+       "scene": {
+        "shot": "card",
+        "time": "1960",
+        "place": "FORCED TO RESIGN",
+        "date": "Syngman Rhee",
+        "size": 220
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "rhee",
+      "move": "in",
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
     },
     {
      "say": "The Americans were not sure about him. But they needed a Korean they could work with. Rhee pressed Washington to give up on trusteeship and build a government in the south.",
@@ -2465,8 +5846,45 @@
       {
        "on": "build",
        "zoomhit": 1
+      },
+      {
+       "on": "trusteeship",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Rhee to Washington (summary)",
+        "lines": [
+         "Give up on trusteeship.",
+         "Build a government in the south."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "THE AMERICANS",
+        "not sure about him"
+       ],
+       [
+        "SYNGMAN RHEE",
+        "pressing Washington"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3
+       },
+       {
+        "preset": "rhee",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Meanwhile, the American occupation was chaotic. Historians contrast it with the calm occupation of Japan. Hodge reported to MacArthur in Tokyo, not to Washington.",
@@ -2485,12 +5903,62 @@
       {
        "on": "occupation",
        "zoomhit": 1
+      },
+      {
+       "on": "Tokyo",
+       "scene": {
+        "shot": "photo",
+        "img": "hodge",
+        "move": "in",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "GEN. JOHN R. HODGE",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "us_officer",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 139.7,
       "lat": 35.7,
       "scale": 4000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -2510,12 +5978,53 @@
       {
        "on": "insurgents",
        "zoomhit": 1
+      },
+      {
+       "on": "killed",
+       "scene": {
+        "shot": "card",
+        "time": "30,000 – 100,000",
+        "place": "KILLED",
+        "date": "insurgencies in the south",
+        "size": 110
+       }
       }
      ],
      "cam": {
       "lon": 126.53,
       "lat": 33.5,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.2
+       },
+       {
+        "type": "forest",
+        "y": 0.64,
+        "n": 50,
+        "seed": 13,
+        "h": 170,
+        "depth": 0.45
+       },
+       {
+        "type": "fire",
+        "x": 0.6,
+        "y": 0.64,
+        "r": 220,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
      }
     },
     {
@@ -2538,8 +6047,44 @@
       {
        "on": "power",
        "zoomhit": 1
+      },
+      {
+       "on": "Both",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "SYNGMAN RHEE",
+        "the south"
+       ],
+       [
+        "KIM IL SUNG",
+        "the north"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.3
+       },
+       {
+        "preset": "kim",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Which brings us to the question the Americans and the Soviets now faced. Could two sides with opposite ideas build one country? And what would happen if they could not?",
@@ -2561,8 +6106,74 @@
       {
        "on": "opposite",
        "zoomhit": 1
+      },
+      {
+       "on": "happen",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "WASHINGTON",
+        ""
+       ],
+       [
+        "MOSCOW",
+        ""
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3
+       },
+       {
+        "preset": "soviet_officer",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Prices soared. In September 1946, thousands of workers and peasants rose up against the military government. It was crushed. And Koreans in the south learned that independence would not be simple either.",
@@ -2585,12 +6196,69 @@
       {
        "on": "Koreans",
        "zoomhit": 1
+      },
+      {
+       "on": "crushed",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#2e2822",
+          "depth": 0.4
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#4b5a3c",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.5,
       "lat": 36.5,
       "scale": 5000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 120,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     }
    ]
@@ -2614,12 +6282,30 @@
       {
        "on": "Korea",
        "zoomhit": 1
+      },
+      {
+       "on": "trusteeship",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Moscow Conference, December 1945 (summary)",
+        "lines": [
+         "A four-power trusteeship",
+         "for a period of up to five years."
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 37.6,
       "lat": 55.75,
       "scale": 6000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "DECEMBER 1945",
+      "place": "MOSCOW",
+      "date": "foreign ministers meet"
      }
     },
     {
@@ -2641,7 +6327,14 @@
        "on": "Korea",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "5 YEARS?",
+      "place": "US · USSR · CHINA · BRITAIN",
+      "date": "then independence",
+      "size": 170
+     }
     },
     {
      "say": "Most Koreans were furious. They had just escaped thirty-five years of foreign rule. They wanted independence now.",
@@ -2666,6 +6359,38 @@
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 10,
+        "gap": 150,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 140,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -2685,8 +6410,68 @@
       {
        "on": "trusteeship",
        "zoomhit": 1
+      },
+      {
+       "on": "Rhee",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 100,
+          "hats": true,
+          "depth": 0.8
+         },
+         {
+          "type": "fire",
+          "x": 0.8,
+          "y": 0.7,
+          "r": 180,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "THE LEFT",
+        "backed the trusteeship"
+       ],
+       [
+        "THE RIGHT",
+        "fought it"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "kim",
+        "x": 0.3
+       },
+       {
+        "preset": "rhee",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Look at one man caught inside that split. Cho Man-sik, in Pyongyang. Koreans called him the Gandhi of Korea, for his nonviolent resistance to Japan.",
@@ -2705,12 +6490,45 @@
       {
        "on": "Gandhi",
        "zoomhit": 1
+      },
+      {
+       "on": "Gandhi",
+       "scene": {
+        "shot": "card",
+        "time": "\"THE GANDHI OF KOREA\"",
+        "place": "CHO MAN-SIK",
+        "date": "Pyongyang",
+        "size": 90
+       }
       }
      ],
      "cam": {
       "lon": 125.75,
       "lat": 39.02,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "cho",
+      "move": "in",
+      "caption": "Cho Man-sik",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "CHO MAN-SIK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "korean",
+         "x": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -2727,8 +6545,59 @@
       {
        "on": "popular",
        "zoomhit": 1
+      },
+      {
+       "on": "Soviets",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "THE SOVIETS",
+          "hoped to win him over"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "soviet_officer",
+          "x": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "popular",
+       "scene": {
+        "shot": "photo",
+        "img": "cho",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "CHO MAN-SIK",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "korean",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "17 AUGUST 1945",
+      "place": "PYONGYANG",
+      "date": "a committee to keep order"
+     }
     },
     {
      "say": "Then came the trusteeship. Cho thought it would bring in foreign influence, especially communist influence. On the first of January 1946, a Soviet officer asked him to sign his support. He refused.",
@@ -2751,8 +6620,61 @@
         "text": "HE REFUSED",
         "dur": 2.4
        }
+      },
+      {
+       "on": "refused",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Pyongyang, 1 January 1946 (summary)",
+        "lines": [
+         "Support the trusteeship.",
+         "— Refused."
+        ],
+        "stamp": "HE REFUSED"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "ru",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 3,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9,
+          "pose": "point"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "Four days later, Soviet soldiers arrested him, and held him in a hotel in Pyongyang. He later disappeared into the prison system. He was probably shot in October 1950. Nobody has confirmed the date.",
@@ -2771,9 +6693,47 @@
       {
        "on": "disappeared",
        "dim": 0.5
+      },
+      {
+       "on": "disappeared",
+       "scene": {
+        "shot": "card",
+        "time": "OCTOBER 1950?",
+        "place": "NOBODY HAS CONFIRMED THE DATE",
+        "date": "Cho Man-sik",
+        "size": 120
+       }
       }
      ],
-     "pause": 1.2
+     "pause": 1.2,
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#121010"
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "lean"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "The man both Koreans and Soviets respected had no place in either future. The line left no room for the middle.",
@@ -2786,7 +6746,33 @@
        "on": "middle",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "cho",
+      "move": "in",
+      "focus": [
+       0.5,
+       0.4
+      ],
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "CHO MAN-SIK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "korean",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "The Americans suspected a trap. The Soviets suspected one too. Every proposal, from either side, was judged by what the other side would gain from it.",
@@ -2806,7 +6792,32 @@
        "on": "either",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "SUSPICION",
+        "Washington"
+       ],
+       [
+        "SUSPICION",
+        "Moscow"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3
+       },
+       {
+        "preset": "soviet_officer",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "A Soviet and American Joint Commission met in 1946 and 1947 to build a united government. It failed. It collapsed amid Cold War antagonism, and Korean opposition to the trusteeship.",
@@ -2825,12 +6836,71 @@
       {
        "on": "collapsed",
        "zoomhit": 1
+      },
+      {
+       "on": "collapsed",
+       "scene": {
+        "shot": "card",
+        "time": "1946 – 1947",
+        "place": "JOINT COMMISSION",
+        "date": "failed",
+        "size": 150
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.25,
+          "facing": 1,
+          "h": 0.85
+         },
+         {
+          "x": 0.42,
+          "facing": 1,
+          "h": 0.85
+         },
+         {
+          "x": 0.6,
+          "facing": -1,
+          "h": 0.85
+         },
+         {
+          "x": 0.77,
+          "facing": -1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -2854,8 +6924,40 @@
       {
        "on": "right",
        "zoomhit": 1
+      },
+      {
+       "on": "assassinated",
+       "scene": {
+        "shot": "card",
+        "time": "JULY 1947",
+        "place": "LYUH ASSASSINATED",
+        "date": "Seoul",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "lyuh",
+      "move": "in",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "LYUH WOON-HYUNG",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "korean",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "Meanwhile, the border hardened. By May 1946, it was illegal to cross the thirty-eighth parallel without a permit. What had been a line on a map was now a border.",
@@ -2882,12 +6984,41 @@
       {
        "on": "border",
        "zoomhit": 1
+      },
+      {
+       "on": "illegal",
+       "scene": {
+        "shot": "card",
+        "time": "MAY 1946",
+        "place": "CROSSING WITHOUT A PERMIT: ILLEGAL",
+        "date": "the 38th parallel",
+        "size": 150
+       }
+      },
+      {
+       "on": "border",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 4500
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "sign38",
+      "move": "in",
+      "caption": "The 38th parallel",
+      "fallback": {
+       "shot": "card",
+       "time": "38° N",
+       "place": "THE 38th PARALLEL",
+       "date": "",
+       "size": 220
+      }
      }
     },
     {
@@ -2907,8 +7038,45 @@
       {
        "on": "fears",
        "zoomhit": 1
+      },
+      {
+       "on": "refused",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "REFUSED",
+          "Washington"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "us_officer",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "BOTH ARMIES LEAVE",
+        "Soviet proposal, Sept. 1947"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "soviet_officer",
+        "x": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "So here is the pattern. Each side tried to unify Korea on its own terms. And each side's fear of the other made unity less likely.",
@@ -2924,8 +7092,39 @@
       {
        "on": "other",
        "zoomhit": 1
+      },
+      {
+       "on": "fear",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "UNITY",
+        "on American terms"
+       ],
+       [
+        "UNITY",
+        "on Soviet terms"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3
+       },
+       {
+        "preset": "soviet_officer",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "And so, by early 1948, the choice was no longer between division and unity. It was between two kinds of division. One that Koreans might shape, and one that would be shaped for them.",
@@ -2941,8 +7140,57 @@
       {
        "on": "would",
        "zoomhit": 1
+      },
+      {
+       "on": "shape",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "This is where the plan failed. A temporary line needs a temporary arrangement. Without a deal in Moscow, the temporary line became something else.",
@@ -2958,8 +7206,37 @@
       {
        "on": "temporary",
        "zoomhit": 1
+      },
+      {
+       "on": "Moscow",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 18,
+          "gap": 110,
+          "h": 170,
+          "col": "#2a2420",
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
+     }
     }
    ]
   },
@@ -2978,12 +7255,51 @@
       {
        "on": "foreign",
        "zoomhit": 1
+      },
+      {
+       "on": "voted",
+       "scene": {
+        "shot": "card",
+        "time": "NOVEMBER 1947",
+        "place": "UNITED NATIONS",
+        "date": "elections across Korea",
+        "size": 140
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 2600
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#2a2a30"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 50,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -3003,8 +7319,35 @@
       {
        "on": "elections",
        "zoomhit": 1
+      },
+      {
+       "on": "south",
+       "scene": {
+        "shot": "card",
+        "time": "ONLY THE SOUTH",
+        "place": "UN ELECTIONS",
+        "date": "1948",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "BOYCOTT",
+        "not binding"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "soviet_officer",
+        "x": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Many Koreans understood at once what this meant. Separate elections would lead to separate countries. Strikes began in February 1948.",
@@ -3023,12 +7366,47 @@
       {
        "on": "elections",
        "zoomhit": 1
+      },
+      {
+       "on": "Strikes",
+       "scene": {
+        "shot": "card",
+        "time": "FEBRUARY 1948",
+        "place": "STRIKES",
+        "date": "against separate elections",
+        "size": 150
+       }
       }
      ],
      "cam": {
       "lon": 127.2,
       "lat": 36.4,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 140,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 120,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -3051,6 +7429,50 @@
       "lon": 126.98,
       "lat": 37.57,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -3067,12 +7489,74 @@
       {
        "on": "country",
        "zoomhit": 1
+      },
+      {
+       "on": "troops",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 1.1,
+          "y": 0.7,
+          "h": 80,
+          "depth": 0.3
+         },
+         {
+          "type": "sea",
+          "y": 0.76,
+          "depth": 0.3
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#34465a",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.53,
       "lat": 33.5,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.8,
+        "y": 0.6,
+        "h": 130,
+        "depth": 0.3
+       },
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.15
+       }
+      ]
      }
     },
     {
@@ -3092,8 +7576,49 @@
       {
        "on": "thousand",
        "zoomhit": 1
+      },
+      {
+       "on": "dead",
+       "scene": {
+        "shot": "card",
+        "time": "14,000 – 30,000",
+        "place": "DEAD ON JEJU",
+        "date": "about a tenth of the island",
+        "size": 110
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.4,
+        "s": 0.7,
+        "y": 0.72,
+        "night": true,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.4,
+        "y": 0.66,
+        "r": 260,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "say": "Atrocities were committed by both sides. For decades, South Korea censored the story. We tell it plainly, and we leave a pause.",
@@ -3110,7 +7635,30 @@
        "on": "leave",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog",
+       "smoke"
+      ]
+     }
     },
     {
      "say": "That same April, leaders from north and south met in Pyongyang and called for a united government. Rhee and Hodge denounced the meeting. One southern leader who attended, Kim Koo, was assassinated the next year.",
@@ -3126,12 +7674,81 @@
       {
        "on": "assassinated",
        "zoomhit": 1
+      },
+      {
+       "on": "denounced",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "DENOUNCED",
+          "Syngman Rhee"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "rhee",
+          "x": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "assassinated",
+       "scene": {
+        "shot": "card",
+        "time": "1949",
+        "place": "KIM KOO ASSASSINATED",
+        "date": "",
+        "size": 150
+       }
       }
      ],
      "cam": {
       "lon": 125.75,
       "lat": 39.02,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -3155,12 +7772,58 @@
       {
        "on": "August",
        "zoomhit": 1
+      },
+      {
+       "on": "born",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.52,
+          "n": 3,
+          "seed": 12,
+          "depth": 0.15
+         },
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 10,
+          "gap": 150,
+          "h": 150,
+          "col": "#3a332c",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 130,
+          "hats": true,
+          "depth": 0.8
+         },
+         {
+          "type": "flagpole",
+          "x": 0.8,
+          "y": 0.66,
+          "flag": "white",
+          "h": 380,
+          "depth": 0.5
+         }
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "15 AUGUST 1948",
+      "place": "SEOUL",
+      "date": "the Republic of Korea"
      }
     },
     {
@@ -3180,8 +7843,23 @@
       {
        "on": "elected",
        "zoomhit": 1
+      },
+      {
+       "on": "assembly",
+       "scene": {
+        "shot": "card",
+        "time": "20 JULY 1948",
+        "place": "PRESIDENT RHEE",
+        "date": "elected by the assembly",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "rhee",
+      "move": "in"
+     }
     },
     {
      "say": "Twenty-five days later, on the ninth of September, the north proclaimed the Democratic People's Republic of Korea. Kim Il Sung was its leader.",
@@ -3204,12 +7882,43 @@
       {
        "on": "Democratic",
        "zoomhit": 1
+      },
+      {
+       "on": "Kim",
+       "scene": {
+        "shot": "photo",
+        "img": "kim",
+        "move": "in",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "KIM IL SUNG",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "kim",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "card",
+      "time": "9 SEPTEMBER 1948",
+      "place": "PYONGYANG",
+      "date": "the Democratic People's Republic"
      }
     },
     {
@@ -3226,8 +7935,39 @@
       {
        "on": "accepted",
        "zoomhit": 1
+      },
+      {
+       "on": "flags",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "SEOUL",
+        "one government"
+       ],
+       [
+        "PYONGYANG",
+        "another"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.3
+       },
+       {
+        "preset": "kim",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Both leaders now claimed to speak for all of Korea. Both said the other half was an illegitimate puppet. But only one of them was about to test that claim with an army.",
@@ -3246,8 +7986,69 @@
       {
        "on": "about",
        "zoomhit": 1
+      },
+      {
+       "on": "army",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 7,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 24,
+          "rows": 3,
+          "x0": 0,
+          "gap": 70,
+          "col": "#3f4a2a",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "ALL OF KOREA",
+        "claimed by Seoul"
+       ],
+       [
+        "ALL OF KOREA",
+        "claimed by Pyongyang"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.3
+       },
+       {
+        "preset": "kim",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Soviet troops left in December 1948. Two governments, each claiming the whole country, now faced each other across a line drawn on a magazine map.",
@@ -3266,12 +8067,53 @@
       {
        "on": "drawn",
        "zoomhit": 1
+      },
+      {
+       "on": "magazine",
+       "scene": {
+        "shot": "map-desk",
+        "push": 0.12,
+        "pan": [
+         60,
+         40
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 2600
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 2,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 18,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#3c4a34",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
      }
     }
    ]
@@ -3307,6 +8149,50 @@
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3600
+     },
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 15,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 8,
+        "rows": 1,
+        "x0": 0.1,
+        "gap": 100,
+        "col": "#3f4a2a",
+        "march": false,
+        "depth": 0.7
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 8,
+        "rows": 1,
+        "x0": 0.6,
+        "gap": 100,
+        "col": "#34465a",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
      }
     },
     {
@@ -3337,12 +8223,49 @@
       {
        "on": "approved",
        "zoomhit": 1
+      },
+      {
+       "on": "invaded",
+       "scene": {
+        "shot": "off"
+       }
+      },
+      {
+       "on": "Kim",
+       "scene": {
+        "shot": "photo",
+        "img": "kim",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "KIM IL SUNG",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "kim",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "card",
+      "time": "25 JUNE 1950",
+      "place": "THE 38th PARALLEL",
+      "date": "the invasion"
      }
     },
     {
@@ -3362,8 +8285,47 @@
       {
        "on": "Twenty",
        "zoomhit": 1
+      },
+      {
+       "on": "Twenty",
+       "scene": {
+        "shot": "card",
+        "time": "21 COUNTRIES",
+        "place": "UNITED NATIONS FORCE",
+        "date": "9 in 10 soldiers from the U.S.",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#2a2a30"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     }
     },
     {
      "say": "Seoul fell in three days. As the army retreated, the south blew up the Han River bridge. About four thousand refugees were crossing it. Hundreds were killed.",
@@ -3386,12 +8348,72 @@
       {
        "on": "River",
        "zoomhit": 1
+      },
+      {
+       "on": "bridge",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.66,
+          "depth": 0.3
+         },
+         {
+          "type": "fire",
+          "x": 0.5,
+          "y": 0.62,
+          "r": 300,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.98,
       "lat": 37.57,
       "scale": 10000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "refugees",
+      "move": "in",
+      "caption": "Refugees, Korea, 1950",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "mud",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "hills",
+         "y": 0.5,
+         "n": 3,
+         "seed": 4,
+         "depth": 0.2
+        },
+        {
+         "type": "crowd",
+         "y": 0.95,
+         "n": 110,
+         "hats": true,
+         "depth": 0.8
+        }
+       ],
+       "fx": [
+        "dust"
+       ]
+      }
      }
     },
     {
@@ -3411,12 +8433,40 @@
       {
        "on": "August",
        "zoomhit": 1
+      },
+      {
+       "on": "Busan",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 127.2,
       "lat": 36.4,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "us",
+        "y": 0.66,
+        "gap": 240,
+        "steam": true,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -3440,12 +8490,56 @@
       {
        "on": "fifth",
        "zoomhit": 1
+      },
+      {
+       "on": "tanks",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 10,
+          "rows": 2,
+          "x0": 0.3,
+          "gap": 90,
+          "col": "#4b5a3c",
+          "march": false,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke",
+         "fog"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.05,
       "lat": 37.15,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "5 JULY 1950",
+      "place": "OSAN",
+      "date": "Task Force Smith: 540 men",
+      "size": 130
      }
     },
     {
@@ -3473,12 +8567,57 @@
       {
        "on": "lines",
        "zoomhit": 1
+      },
+      {
+       "on": "Seoul",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 126.7,
       "lat": 37.46,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "incheon50",
+      "move": "in",
+      "caption": "The Incheon landing, 15 September 1950",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.6,
+         "x1": 1.1,
+         "y": 0.6,
+         "h": 120,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 7,
+         "x": 0.05,
+         "s": 0.45,
+         "flag": "us",
+         "y": 0.68,
+         "gap": 200,
+         "steam": true,
+         "depth": 0.5
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -3495,12 +8634,35 @@
       {
        "on": "unify",
        "zoomhit": 1
+      },
+      {
+       "on": "Pyongyang",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 126.5,
       "lat": 39.8,
       "scale": 4200
+     },
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "THE BORDER IS GONE",
+        "Syngman Rhee"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -3535,12 +8697,53 @@
       {
        "on": "pushed",
        "zoomhit": 1
+      },
+      {
+       "on": "pushed",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 6,
+          "depth": 0.2
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 26,
+          "rows": 3,
+          "x0": 0,
+          "gap": 65,
+          "col": "#5a5a44",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "weather": "snow"
+       }
       }
      ],
      "cam": {
       "lon": 126.0,
       "lat": 40.0,
       "scale": 4500
+     },
+     "scene": {
+      "shot": "card",
+      "time": "19 OCTOBER 1950",
+      "place": "THE YALU RIVER",
+      "date": "China enters the war",
+      "size": 130
      }
     },
     {
@@ -3564,12 +8767,49 @@
       {
        "on": "almost",
        "zoomhit": 1
+      },
+      {
+       "on": "attrition",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 15,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "cannons",
+          "y": 0.8,
+          "n": 3,
+          "x0": 0.2,
+          "gap": 300,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke",
+         "fog"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3800
+     },
+     "scene": {
+      "shot": "off"
      }
     },
     {
@@ -3586,8 +8826,77 @@
       {
        "on": "bombing",
        "zoomhit": 1
+      },
+      {
+       "on": "bombing",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 10,
+          "gap": 160,
+          "h": 160,
+          "col": "#141010",
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.3,
+          "y": 0.7,
+          "r": 260,
+          "depth": 0.4
+         },
+         {
+          "type": "fire",
+          "x": 0.7,
+          "y": 0.68,
+          "r": 260,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 180,
+        "h": 140,
+        "col": "#1a1512",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.4,
+        "y": 0.68,
+        "r": 300,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
      "say": "In July 1951, armistice talks began. They dragged on for two years. Rhee demanded the war continue until Korea was unified under his leadership. The Communist side wanted an armistice line on the thirty-eighth parallel.",
@@ -3610,12 +8919,45 @@
       {
        "on": "Korea",
        "zoomhit": 1
+      },
+      {
+       "on": "Rhee",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "FIGHT ON",
+          "until Korea is unified"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "rhee",
+          "x": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "Communist",
+       "scene": {
+        "shot": "off"
+       }
       }
      ],
      "cam": {
       "lon": 126.68,
       "lat": 37.96,
       "scale": 7000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "JULY 1951",
+      "place": "ARMISTICE TALKS BEGIN",
+      "date": "",
+      "size": 140
      }
     },
     {
@@ -3632,8 +8974,89 @@
       {
        "on": "border",
        "zoomhit": 1
+      },
+      {
+       "on": "easier",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 15,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 10,
+          "rows": 2,
+          "x0": 0.2,
+          "gap": 90,
+          "col": "#4b5a3c",
+          "march": false,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
+      },
+      {
+       "on": "fighting",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 12,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9
+         },
+         {
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "North Korea was bombed so heavily that almost all its major cities were destroyed. The war killed about a million soldiers and, by estimates, between one and a half and three million civilians.",
@@ -3663,12 +9086,48 @@
       {
        "on": "three",
        "zoomhit": 1
+      },
+      {
+       "on": "million",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 1,000,000",
+        "place": "SOLDIERS KILLED",
+        "date": "+ 1.5 – 3 million civilians (estimates)",
+        "size": 150
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 38.0,
       "scale": 3200
+     },
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 150,
+        "h": 160,
+        "col": "#141010",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.7,
+        "r": 360,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
      }
     }
    ]
@@ -3696,12 +9155,67 @@
       {
        "on": "created",
        "zoomhit": 1
+      },
+      {
+       "on": "Demilitarized",
+       "scene": {
+        "shot": "card",
+        "time": "4 KM",
+        "place": "THE DEMILITARIZED ZONE",
+        "date": "wide",
+        "size": 240
+       }
       }
      ],
      "cam": {
       "lon": 126.68,
       "lat": 37.96,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "armistice",
+      "move": "in",
+      "caption": "The Korean Armistice, 27 July 1953",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.7,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 10,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.3,
+           "facing": 1,
+           "h": 0.9
+          },
+          {
+           "x": 0.7,
+           "facing": -1,
+           "h": 0.9
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -3735,6 +9249,9 @@
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3500
+     },
+     "scene": {
+      "shot": "off"
      }
     },
     {
@@ -3754,8 +9271,35 @@
       {
        "on": "terms",
        "zoomhit": 1
+      },
+      {
+       "on": "treaty",
+       "scene": {
+        "shot": "card",
+        "time": "NO PEACE TREATY",
+        "place": "",
+        "date": "still, today",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "REFUSED",
+        "the armistice"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Talks in 1954, in Geneva, failed to produce a united Korea. Since 1953, Swiss and Swedish soldiers have served on the commission that watches the armistice.",
@@ -3771,12 +9315,47 @@
       {
        "on": "commission",
        "zoomhit": 1
+      },
+      {
+       "on": "Swiss",
+       "scene": {
+        "shot": "card",
+        "time": "SWISS · SWEDISH",
+        "place": "ARMISTICE COMMISSION",
+        "date": "since 1953",
+        "size": 140
+       }
       }
      ],
      "cam": {
       "lon": 126.68,
       "lat": 37.96,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 120,
+        "h": 170,
+        "col": "#4a4038",
+        "depth": 0.4
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 4,
+        "depth": 0.15
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
      }
     },
     {
@@ -3800,7 +9379,32 @@
        "on": "Soviet",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "IN A HURRY",
+        "to stop a Soviet sweep"
+       ],
+       [
+        "A LINE ACCEPTED",
+        "no permanent wall planned"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.3
+       },
+       {
+        "preset": "soviet_officer",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "say": "Koreans would say it was never theirs to decide. They had waited thirty-five years for freedom, and then waited decades more for a country that was whole.",
@@ -3819,12 +9423,89 @@
       {
        "on": "country",
        "zoomhit": 1
+      },
+      {
+       "on": "decades",
+       "scene": {
+        "shot": "photo",
+        "img": "dmz",
+        "move": "in",
+        "caption": "The Demilitarized Zone",
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 3,
+           "seed": 15,
+           "depth": 0.15
+          },
+          {
+           "type": "forest",
+           "y": 0.66,
+           "n": 60,
+           "seed": 3,
+           "h": 160,
+           "depth": 0.45
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.76,
+           "depth": 0.6
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 127.3,
       "lat": 37.5,
       "scale": 6000
+     },
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "light"
+      ]
      }
     },
     {
@@ -3841,8 +9522,22 @@
       {
        "on": "found",
        "zoomhit": 1
+      },
+      {
+       "on": "Cold",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
+     }
     },
     {
      "say": "So what became of the two men with the map? Start with Dean Rusk. In 1950, he became Assistant Secretary of State for Far Eastern Affairs. He played an influential part in America's decision to go to war in Korea.",
@@ -3861,8 +9556,40 @@
       {
        "on": "influential",
        "zoomhit": 1
+      },
+      {
+       "on": "war",
+       "scene": {
+        "shot": "card",
+        "time": "1950",
+        "place": "ASSISTANT SECRETARY OF STATE",
+        "date": "Far Eastern Affairs",
+        "size": 200
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "rusk",
+      "move": "in",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "DEAN RUSK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "say": "Years later, he described the bombing of the North in a few flat words. The United States, he said, bombed everything that moved in North Korea, every brick standing on top of another.",
@@ -3879,9 +9606,46 @@
       {
        "on": "brick",
        "dim": 0.4
+      },
+      {
+       "on": "everything",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Dean Rusk",
+        "lines": [
+         "Everything that moved in North Korea,",
+         "every brick standing on top of another."
+        ]
+       }
       }
      ],
-     "pause": 1.0
+     "pause": 1.0,
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 150,
+        "h": 160,
+        "col": "#141010",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.7,
+        "r": 300,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "say": "In 1961, he became Secretary of State. He held the job for eight years, under Kennedy and Johnson.",
@@ -3894,7 +9658,14 @@
        "on": "eight",
        "zoomhit": 1
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "1961 – 1969",
+      "place": "SECRETARY OF STATE",
+      "date": "Dean Rusk",
+      "size": 150
+     }
     },
     {
      "say": "Now Bonesteel. He became a general. And in 1966, he was sent to Korea, to command American forces there. Twenty-one years after he proposed the line, the man who drew it came back to guard it.",
@@ -3921,12 +9692,27 @@
       {
        "on": "guard",
        "pin": "Panmunjom"
+      },
+      {
+       "on": "Twenty",
+       "scene": {
+        "shot": "card",
+        "time": "21 YEARS LATER",
+        "place": "THE MAN WHO DREW IT",
+        "date": "came back to guard it",
+        "size": 140
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 2600
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "bonesteel",
+      "move": "in"
      }
     },
     {
@@ -3949,8 +9735,49 @@
       {
        "on": "Pueblo",
        "zoomhit": 1
+      },
+      {
+       "on": "Pueblo",
+       "scene": {
+        "shot": "card",
+        "time": "JANUARY 1968",
+        "place": "THE PUEBLO INCIDENT",
+        "date": "",
+        "size": 140
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 15,
+        "depth": 0.2
+       },
+       {
+        "type": "forest",
+        "y": 0.64,
+        "n": 40,
+        "seed": 3,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow",
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "Bonesteel retired in 1969. He died in 1977, aged sixty-eight, and is buried at Arlington. Rusk died in 1994, aged eighty-five. That was the same year as Kim Il Sung. Neither man lived to see the line erased.",
@@ -3966,9 +9793,77 @@
       {
        "on": "Kim",
        "zoomhit": 1
+      },
+      {
+       "on": "Rusk",
+       "scene": {
+        "shot": "photo",
+        "img": "rusk",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "DEAN RUSK",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "us_officer",
+           "x": 0.5
+          }
+         ]
+        }
+       }
+      },
+      {
+       "on": "erased",
+       "scene": {
+        "shot": "photo",
+        "img": "dmz",
+        "move": "out",
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 3,
+           "seed": 15,
+           "depth": 0.15
+          },
+          {
+           "type": "forest",
+           "y": 0.66,
+           "n": 60,
+           "seed": 3,
+           "h": 160,
+           "depth": 0.45
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.76,
+           "depth": 0.6
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
+       }
       }
      ],
-     "pause": 1.2
+     "pause": 1.2,
+     "scene": {
+      "shot": "photo",
+      "img": "bonesteel",
+      "move": "out"
+     }
     },
     {
      "say": "In 2018, the two leaders met at the border and signed the Panmunjom Declaration, which called for an end to hostile activities, and for reunification. The line is still there.",
@@ -3980,12 +9875,61 @@
       {
        "on": "reunification",
        "zoomhit": 1
+      },
+      {
+       "on": "still",
+       "scene": {
+        "shot": "photo",
+        "img": "dmz",
+        "move": "in",
+        "focus": [
+         0.5,
+         0.5
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 3,
+           "seed": 15,
+           "depth": 0.15
+          },
+          {
+           "type": "forest",
+           "y": 0.66,
+           "n": 60,
+           "seed": 3,
+           "h": 160,
+           "depth": 0.45
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.76,
+           "depth": 0.6
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
+       }
       }
      ],
      "cam": {
       "lon": 126.68,
       "lat": 37.96,
       "scale": 8000
+     },
+     "scene": {
+      "shot": "card",
+      "time": "2018",
+      "place": "THE PANMUNJOM DECLARATION",
+      "date": "",
+      "size": 200
      }
     },
     {
@@ -4020,12 +9964,57 @@
       {
        "on": "Yet",
        "zoomhit": 1
+      },
+      {
+       "on": "killed",
+       "scene": {
+        "shot": "card",
+        "time": "500+",
+        "place": "SOUTH KOREAN SOLDIERS KILLED",
+        "date": "1953 – 1999 · ≈ 50 Americans",
+        "size": 200
+       }
       }
      ],
      "cam": {
       "lon": 127.0,
       "lat": 38.0,
       "scale": 3600
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "dmz",
+      "move": "left",
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.5,
+         "n": 3,
+         "seed": 15,
+         "depth": 0.15
+        },
+        {
+         "type": "forest",
+         "y": 0.66,
+         "n": 60,
+         "seed": 3,
+         "h": 160,
+         "depth": 0.45
+        },
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.76,
+         "depth": 0.6
+        }
+       ],
+       "fx": [
+        "fog"
+       ]
+      }
      }
     },
     {
@@ -4042,8 +10031,49 @@
       {
        "on": "crane",
        "zoomhit": 1
+      },
+      {
+       "on": "endangered",
+       "scene": {
+        "shot": "card",
+        "time": "100+",
+        "place": "OF KOREA'S 267 ENDANGERED SPECIES",
+        "date": "live in the DMZ",
+        "size": 200
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 15,
+        "depth": 0.15
+       },
+       {
+        "type": "forest",
+        "y": 0.66,
+        "n": 60,
+        "seed": 3,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog",
+       "light"
+      ]
+     }
     },
     {
      "say": "One line, drawn on a map by two tired officers. Their zone was meant to be temporary. It has now lasted more than eighty years.",
@@ -4062,8 +10092,26 @@
       {
        "on": "lasted",
        "zoomhit": 1
+      },
+      {
+       "on": "eighty",
+       "scene": {
+        "shot": "card",
+        "time": "80+ YEARS",
+        "place": "TEMPORARY",
+        "date": "1945 – today",
+        "size": 170
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "push": 0.12,
+      "pan": [
+       60,
+       40
+      ]
+     }
     },
     {
      "say": "Rusk said he would almost surely have chosen another line, if he had known Korea's history. The people who had to live with it never got to choose at all.",
@@ -4082,12 +10130,75 @@
       {
        "on": "choose",
        "zoomhit": 1
+      },
+      {
+       "on": "people",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 27,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.7,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.72,
+          "s": 0.6,
+          "y": 0.73,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "light"
+        ]
+       }
       }
      ],
      "cam": {
       "lon": 126.9,
       "lat": 37.6,
       "scale": 9000
+     },
+     "scene": {
+      "shot": "photo",
+      "img": "rusk",
+      "move": "in",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "DEAN RUSK",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "us_officer",
+         "x": 0.5
+        }
+       ]
+      }
      }
     }
    ]
@@ -4233,5 +10344,76 @@
    "head": "6 DAYS|MAP TO BORDER",
    "title": "It Took 6 DAYS to Split Korea #shorts"
   }
- ]
+ ],
+ "film": true,
+ "photos": {
+  "surrender45": [
+   "Japanese surrender ceremony Seoul September 9 1945",
+   true
+  ],
+  "incheon45": [
+   "American troops landing Incheon September 1945",
+   true
+  ],
+  "soviets45": [
+   "Soviet troops Pyongyang 1945",
+   true
+  ],
+  "rusk": [
+   "Dean Rusk portrait",
+   false
+  ],
+  "kim": [
+   "Kim Il-sung 1946",
+   false
+  ],
+  "hodge": [
+   "John R. Hodge general portrait",
+   false
+  ],
+  "cairo": [
+   "Cairo Conference 1943 Chiang Kai-shek Roosevelt Churchill",
+   true
+  ],
+  "march1": [
+   "March 1st Movement 1919 Korea protest",
+   true
+  ],
+  "sign38": [
+   "38th parallel sign Korea 1950",
+   true
+  ],
+  "incheon50": [
+   "Battle of Inchon landing 1950 LST",
+   true
+  ],
+  "refugees": [
+   "Korean refugees 1950 road",
+   true
+  ],
+  "armistice": [
+   "Korean Armistice Agreement signing Panmunjom 1953",
+   true
+  ],
+  "dmz": [
+   "Korean Demilitarized Zone fence",
+   true
+  ],
+  "cho": [
+   "Cho Man-sik portrait",
+   false
+  ],
+  "lyuh": [
+   "Lyuh Woon-hyung portrait",
+   false
+  ],
+  "bonesteel": [
+   "smoke/portraits/bonesteel.png",
+   false
+  ],
+  "rhee": [
+   "smoke/portraits/rhee.png",
+   false
+  ]
+ }
 }

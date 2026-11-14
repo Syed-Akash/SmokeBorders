@@ -16,6 +16,7 @@
     for (const e of events) if (e.k === 'scene') {
       if (e.shot === 'photo' && e.img) { want.add(`photos/${story}/${e.img}.jpg`); want.add(`photos/${story}/${e.img}-fg.png`) }
       for (const p of (e.people || [])) if (p.photo) want.add(`photos/${story}/${p.photo}-fg.png`)
+      for (const part of (e.parts || [])) for (const q of (part.list || [])) if (q.photo) want.add(`photos/${story}/${q.photo}-fg.png`)   // photo cut-outs standing in a set
     }
     await Promise.all([...want].map(src => new Promise(ok => { const im = new Image(); im.onload = () => { IMG[src] = im; ok() }; im.onerror = () => ok(); im.src = src })));
   };
@@ -45,6 +46,7 @@
   SH['photo'] = (c, W, H, S, t, env) => {
     const u = S.u, d = S.dur || 8, k = io(clamp(u / d)), st = env.story, bg = IMG[`photos/${st}/${S.img}.jpg`], fg = IMG[`photos/${st}/${S.img}-fg.png`];
     c.fillStyle = '#0b0906'; c.fillRect(0, 0, W, H);
+    if (!bg && S.fallback && SH[S.fallback.shot]) { SH[S.fallback.shot](c, W, H, Object.assign({}, S.fallback, { u: S.u, dur: S.dur }), t, env); return }   // the archival photo could not be fetched: its stand-in shot plays instead
     if (!bg) { c.fillStyle = '#e33'; c.font = `40px ${BODY}`; c.fillText('missing photo: ' + S.img, 80, 200); return }
     const mv = S.move || 'in', z0 = mv === 'out' ? 1.16 : 1.04, z1 = mv === 'out' ? 1.04 : 1.16, z = lerp(z0, z1, k), [bw, bh] = cover(bg, W, H),
       pan = S.pan || [mv === 'left' ? 60 : mv === 'right' ? -60 : 0, 0], fx0 = S.focus ? (S.focus[0] - .5) * bw * .3 : 0, fy0 = S.focus ? (S.focus[1] - .5) * bh * .3 : 0;
@@ -144,6 +146,16 @@
       c.save(); c.translate(x, y); c.scale(s * (p.facing || 1), s); c.fillStyle = p.col || (kind === 'pig' ? '#2a1d18' : '#d6d0c2');
       if (kind === 'pig') { c.beginPath(); c.ellipse(0, -60 + b, 95, 52, 0, 0, 7); c.fill(); c.beginPath(); c.ellipse(92, -66 + b, 34, 30, 0, 0, 7); c.fill(); c.fillRect(118, -72 + b, 22, 20); c.beginPath(); c.moveTo(80, -90); c.lineTo(96, -118); c.lineTo(104, -88); c.fill();
         for (const lx of [-60, -30, 40, 66]) c.fillRect(lx, -20, 16, 28); c.strokeStyle = c.fillStyle; c.lineWidth = 4; c.beginPath(); c.arc(-100, -72, 12, 0, 5); c.stroke() }
+      else if (kind === 'elephant') {   // a war elephant in silhouette (Rome vs Carthage), the trunk swinging as it walks
+        const sw = Math.sin(u * 1.4) * .12, st = Math.sin(u * 2.2);
+        c.beginPath(); c.ellipse(0, -210 + b, 190, 120, 0, 0, 7); c.fill();                                   // body
+        c.beginPath(); c.ellipse(175, -250 + b, 78, 70, -.2, 0, 7); c.fill();                                 // head
+        c.beginPath(); c.ellipse(130, -255 + b, 52, 72, .25, 0, 7); c.fill();                                 // ear
+        c.save(); c.translate(225, -230 + b); c.rotate(sw); c.lineCap = 'round'; c.strokeStyle = c.fillStyle; c.lineWidth = 30;
+        c.beginPath(); c.moveTo(0, 0); c.quadraticCurveTo(40, 90, 10, 170); c.stroke(); c.lineWidth = 8; c.strokeStyle = '#d9cfb8'; c.beginPath(); c.moveTo(-5, 30); c.quadraticCurveTo(50, 50, 70, 20); c.stroke(); c.restore();   // trunk, tusk
+        for (const [lx, ph] of [[-120, 0], [-60, Math.PI], [70, Math.PI], [130, 0]]) { const lift = Math.max(0, Math.sin(u * 2.2 + ph)) * (p.walk ? 14 : 0); c.fillRect(lx - 24, -130 + b - lift, 48, 130) }
+        c.strokeStyle = c.fillStyle; c.lineWidth = 5; c.beginPath(); c.moveTo(-188, -220); c.quadraticCurveTo(-215, -170 + st * 6, -205, -130); c.stroke();   // tail
+        if (p.tower) { c.fillStyle = '#3a2618'; c.fillRect(-90, -370 + b, 140, 60); c.fillStyle = '#5a3a22'; c.fillRect(-100, -318 + b, 160, 14) } }
       else { c.beginPath(); c.ellipse(0, -60 + b, 70, 42, 0, 0, 7); c.fill(); c.beginPath(); c.ellipse(70, -70 + b, 24, 18, 0, 0, 7); c.fill(); c.fillStyle = '#222'; for (const lx of [-40, -15, 25, 45]) c.fillRect(lx, -25, 9, 30) }
       c.restore() },
     flagpole: (c, W, H, u, p) => { const x = W * (p.x || .5), y = H * (p.y || .7), h = p.h || 420; c.fillStyle = '#1a140f'; c.fillRect(x - 4, y - h, 8, h); flag(c, x + 4, y - h, p.w || 180, (p.w || 180) * .6, FLAGS[p.flag] || [p.flag || '#b3161c'], u) },

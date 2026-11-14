@@ -1,0 +1,15 @@
+surrender45	Japanese surrender ceremony Seoul September 9 1945	flat
+incheon45	American troops landing Incheon September 1945	flat
+soviets45	Soviet troops Pyongyang 1945	flat
+rusk	Dean Rusk portrait
+kim	Kim Il-sung 1946
+hodge	John R. Hodge general portrait
+cairo	Cairo Conference 1943 Chiang Kai-shek Roosevelt Churchill	flat
+march1	March 1st Movement 1919 Korea protest	flat
+sign38	38th parallel sign Korea 1950	flat
+incheon50	Battle of Inchon landing 1950 LST	flat
+refugees	Korean refugees 1950 road	flat
+armistice	Korean Armistice Agreement signing Panmunjom 1953	flat
+dmz	Korean Demilitarized Zone fence	flat
+cho	Cho Man-sik portrait
+lyuh	Lyuh Woon-hyung portrait

@@ -203,8 +203,47 @@
        "British American colonies"
       ],
       "color": "#c8102e"
+     },
+     {
+      "on": "Canada",
+      "scene": {
+       "shot": "off"
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.62,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 6,
+       "x": 0.15,
+       "s": 0.5,
+       "flag": "uk",
+       "y": 0.67,
+       "gap": 260,
+       "steam": false,
+       "depth": 0.5
+      },
+      {
+       "type": "coast",
+       "x0": 0.65,
+       "x1": 1.1,
+       "y": 0.6,
+       "h": 110,
+       "depth": 0.3
+      }
+     ],
+     "fx": [
+      "smoke"
+     ]
+    }
    },
    {
     "say": "Twenty years later, it had lost almost all of America.",
@@ -222,7 +261,48 @@
        "US"
       ]
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.62,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 5,
+       "x": 0.2,
+       "s": 0.5,
+       "flag": "uk",
+       "y": 0.67,
+       "gap": 280,
+       "steam": false,
+       "depth": 0.5
+      },
+      {
+       "type": "coast",
+       "x0": 0.6,
+       "x1": 1.1,
+       "y": 0.6,
+       "h": 110,
+       "depth": 0.3
+      },
+      {
+       "type": "flagpole",
+       "x": 0.82,
+       "y": 0.64,
+       "flag": "uk",
+       "h": 380,
+       "depth": 0.5
+      }
+     ],
+     "fx": [
+      "smoke"
+     ]
+    }
    },
    {
     "cam": {
@@ -250,8 +330,40 @@
        "WIL",
        "angry"
       ]
+     },
+     {
+      "on": "son",
+      "scene": {
+       "shot": "photo",
+       "img": "wfranklin",
+       "move": "right",
+       "caption": "William Franklin, his son"
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "bfranklin",
+     "move": "in",
+     "caption": "Benjamin Franklin",
+     "fallback": {
+      "shot": "faces",
+      "names": [
+       [
+        "BENJAMIN FRANKLIN",
+        ""
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "franklin",
+        "x": 0.5
+       }
+      ]
+     }
+    }
    },
    {
     "cam": {
@@ -277,8 +389,58 @@
        "US"
       ],
       "color": "#ff6a1f"
+     },
+     {
+      "on": "heard",
+      "scene": {
+       "shot": "faces",
+       "names": [
+        [
+         "BRITAIN",
+         "one side"
+        ],
+        [
+         "AMERICA",
+         "the other"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "redcoat",
+         "x": 0.3
+        },
+        {
+         "preset": "continental",
+         "x": 0.7
+        }
+       ]
+      }
+     },
+     {
+      "on": "Today",
+      "scene": {
+       "shot": "off"
+      }
      }
-    ]
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "declaration",
+     "move": "out",
+     "caption": "The American Revolution, 1775 – 1783",
+     "fallback": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Declaration of Independence",
+      "lines": [
+       "IN CONGRESS, JULY 4, 1776.",
+       "The unanimous Declaration of the",
+       "thirteen united States of America"
+      ]
+     }
+    }
    },
    {
     "do": [
@@ -286,7 +448,10 @@
       "logo": 1
      }
     ],
-    "pause": 3.6
+    "pause": 3.6,
+    "scene": {
+     "shot": "off"
+    }
    }
   ]
  },
@@ -308,7 +473,48 @@
        "on": "London",
        "pin": "London"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.15
+       },
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.25
+       },
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 18,
+        "gap": 120,
+        "h": 190,
+        "col": "#2e2a28",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.3,
+        "s": 0.45,
+        "flag": "uk",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "Britain had just won the Seven Years' War. In North America, that meant throwing France out of Canada. Wonderful news. Bells, fireworks, songs about how wonderful Britain was.",
@@ -329,7 +535,39 @@
         "dur": 3
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 120,
+        "h": 170,
+        "col": "#2a2420",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 80,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "fire",
+        "x": 0.25,
+        "y": 0.66,
+        "r": 200,
+        "depth": 0.45
+       }
+      ],
+      "fx": [
+       "embers"
+      ]
+     }
     },
     {
      "say": "Then somebody opened the accounts.",
@@ -341,7 +579,28 @@
         "shock"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.12,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     {
      "say": "The national debt had nearly doubled, to about one hundred and thirty two million pounds. Back home, landowners were already handing a quarter of their income to the government.",
@@ -363,11 +622,98 @@
         "note": "Our American Revolution, The Price of Peace",
         "dur": 7
        }
+      },
+      {
+       "on": "Back",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "farm",
+          "x": 0.7,
+          "s": 0.8,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 11,
+          "depth": 0.2
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "£132,600,000",
+      "place": "BRITAIN'S NATIONAL DEBT",
+      "date": "1763",
+      "size": 110
+     }
     },
     {
-     "say": "And now Britain had a huge new empire to guard. Keeping seven and a half thousand soldiers in America would cost about two hundred and twenty five thousand pounds a year."
+     "say": "And now Britain had a huge new empire to guard. Keeping seven and a half thousand soldiers in America would cost about two hundred and twenty five thousand pounds a year.",
+     "do": [
+      {
+       "on": "two",
+       "scene": {
+        "shot": "card",
+        "time": "£225,000",
+        "place": "A YEAR, FOR 7,500 SOLDIERS",
+        "date": "in America"
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "fort",
+        "x": 0.62,
+        "y": 0.7,
+        "w": 720,
+        "h": 100,
+        "flag": "uk",
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 90,
+        "col": "#8b1a1a",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -384,7 +730,10 @@
        ],
        "color": "#c8102e"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "talk": [
@@ -400,7 +749,11 @@
        "who": "GB",
        "text": "Nobody, actually."
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -446,7 +799,10 @@
        "color": "#ff6a1f",
        "hold": 200
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "say": "West of it, the land was reserved for Indigenous peoples. Colonists were told not to cross. From London, this looked like peace on the cheap.",
@@ -459,8 +815,84 @@
         "lat": 38,
         "color": "#f3e7cf"
        }
+      },
+      {
+       "on": "Colonists",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "forest",
+          "y": 0.6,
+          "n": 70,
+          "seed": 4,
+          "h": 200,
+          "depth": 0.4
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 2,
+        "depth": 0.15
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 60,
+        "seed": 6,
+        "h": 180,
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.8,
+          "pose": "point",
+          "hat": "wide"
+         },
+         {
+          "x": 0.42,
+          "facing": 1,
+          "h": 0.78
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
     },
     {
      "say": "Now the other side. The colonists had fought in that war too. Their men had died in it. And their reward was a new tax, and a wall of paper across the land they had hoped to settle.",
@@ -471,8 +903,55 @@
         "US",
         "angry"
        ]
+      },
+      {
+       "on": "reward",
+       "scene": {
+        "shot": "card",
+        "time": "A NEW TAX",
+        "place": "AND A LINE THEY MAY NOT CROSS",
+        "date": "1763",
+        "size": 120
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.7,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.7,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.25,
+          "facing": 1,
+          "h": 0.9,
+          "hat": "wide"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "And here's the part that really stung. They had no one in Parliament. Not one seat. People three thousand miles away were deciding what they paid, and they had no vote at all.",
@@ -484,8 +963,46 @@
         "text": "SEATS IN PARLIAMENT: 0",
         "dur": 3.4
        }
+      },
+      {
+       "on": "vote",
+       "scene": {
+        "shot": "card",
+        "time": "0",
+        "place": "COLONIAL SEATS IN PARLIAMENT",
+        "date": "1765",
+        "size": 220
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "crowd",
+        "y": 0.98,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     }
     },
     {
      "say": "Both sides were right about something. That's what makes this story hard. London was right that someone had to pay. The colonists were right that someone should have asked them.",
@@ -503,8 +1020,81 @@
         "US",
         "neutral"
        ]
+      },
+      {
+       "on": "colonists",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 12,
+          "depth": 0.2
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.6,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.6,
+            "facing": -1,
+            "h": 0.85,
+            "hat": "wide"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.7,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.1
+       }
+      ]
+     }
     }
    ]
   },
@@ -529,8 +1119,31 @@
         "text": "STAMP ACT",
         "dur": 3
        }
+      },
+      {
+       "on": "cards",
+       "scene": {
+        "shot": "card",
+        "time": "STAMP ACT",
+        "place": "NEWSPAPERS · CONTRACTS · PLAYING CARDS",
+        "date": "1765",
+        "size": 130
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "stamp",
+      "move": "in",
+      "caption": "A Stamp Act stamp, 1765",
+      "fallback": {
+       "shot": "card",
+       "time": "STAMP ACT",
+       "place": "",
+       "date": "1765",
+       "size": 170
+      }
+     }
     },
     {
      "say": "The colonies exploded. Boycotts, riots, tax collectors chased out of town. Within a year, Parliament backed down and repealed it.",
@@ -548,10 +1161,62 @@
         "sad"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 150,
+        "h": 150,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 110,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "fire",
+        "x": 0.7,
+        "y": 0.7,
+        "r": 220,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
-     "say": "Then it tried again, with new taxes on glass, paint, paper and tea. More boycotts. Most of those went too. All except one, kept on purpose, to prove a point. The tax on tea."
+     "say": "Then it tried again, with new taxes on glass, paint, paper and tea. More boycotts. Most of those went too. All except one, kept on purpose, to prove a point. The tax on tea.",
+     "do": [
+      {
+       "on": "except",
+       "scene": {
+        "shot": "card",
+        "time": "TEA",
+        "place": "THE ONE TAX THEY KEPT",
+        "date": "1770",
+        "size": 200
+       }
+      }
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "GLASS · PAINT · PAPER · TEA",
+      "place": "NEW TAXES",
+      "date": "1767",
+      "size": 80
+     }
     },
     {
      "cam": {
@@ -583,8 +1248,88 @@
       {
        "on": "died",
        "dim": 0.4
+      },
+      {
+       "on": "fired",
+       "scene": {
+        "shot": "photo",
+        "img": "massacre",
+        "move": "in",
+        "caption": "The Boston Massacre, by Paul Revere, 1770",
+        "fallback": {
+         "shot": "set",
+         "time": "night",
+         "parts": [
+          {
+           "type": "town",
+           "y": 0.7,
+           "n": 10,
+           "gap": 160,
+           "h": 170,
+           "col": "#2a2420",
+           "depth": 0.4
+          },
+          {
+           "type": "crowd",
+           "y": 0.97,
+           "n": 60,
+           "hats": true,
+           "depth": 0.8
+          },
+          {
+           "type": "soldiers",
+           "y": 0.86,
+           "n": 8,
+           "rows": 1,
+           "x0": 0.55,
+           "gap": 70,
+           "col": "#8b1a1a",
+           "march": false,
+           "depth": 0.7
+          }
+         ],
+         "weather": "snow",
+         "fx": [
+          "smoke"
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 10,
+        "gap": 160,
+        "h": 170,
+        "col": "#2a2420",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.97,
+        "n": 60,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 8,
+        "rows": 1,
+        "x0": 0.55,
+        "gap": 70,
+        "col": "#8b1a1a",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "weather": "snow"
+     }
     },
     {
      "say": "Patriots called it the Boston Massacre. And here's a detail most people don't know. The soldiers' defence lawyer at their trial was John Adams, a future President. Most of the soldiers walked free. Even the Revolution had people trying to be fair.",
@@ -601,12 +1346,160 @@
         "sub": "defended the British soldiers",
         "dur": 4
        }
+      },
+      {
+       "on": "Adams",
+       "scene": {
+        "shot": "card",
+        "time": "JOHN ADAMS",
+        "place": "DEFENDED THE BRITISH SOLDIERS",
+        "date": "Boston, 1770",
+        "size": 110
+       }
+      },
+      {
+       "on": "walked",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.1,
+          "night": false,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.6,
+          "candles": 0,
+          "papers": 6,
+          "w": 900,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.3,
+            "facing": 1,
+            "h": 0.9,
+            "pose": "point"
+           },
+           {
+            "x": 0.7,
+            "facing": -1,
+            "h": 0.85
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "massacre",
+      "move": "out",
+      "focus": [
+       0.3,
+       0.5
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.7,
+         "n": 10,
+         "gap": 160,
+         "h": 170,
+         "col": "#2a2420",
+         "depth": 0.4
+        },
+        {
+         "type": "crowd",
+         "y": 0.97,
+         "n": 60,
+         "hats": true,
+         "depth": 0.8
+        },
+        {
+         "type": "soldiers",
+         "y": 0.86,
+         "n": 8,
+         "rows": 1,
+         "x0": 0.55,
+         "gap": 70,
+         "col": "#8b1a1a",
+         "march": false,
+         "depth": 0.7
+        }
+       ],
+       "weather": "snow",
+       "fx": [
+        "smoke"
+       ]
+      }
+     }
     },
     {
      "date": "16 DECEMBER 1773",
-     "say": "Now, the tea. In 1773, Parliament passed the Tea Act. And here's the irony. It made legal British tea cheaper, cheap enough to undercut the smugglers. Colonists would pay less for tea than before, as long as they accepted Parliament's right to tax it."
+     "say": "Now, the tea. In 1773, Parliament passed the Tea Act. And here's the irony. It made legal British tea cheaper, cheap enough to undercut the smugglers. Colonists would pay less for tea than before, as long as they accepted Parliament's right to tax it.",
+     "do": [
+      {
+       "on": "accepted",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "shot": "set",
+          "time": "day",
+          "parts": [
+           {
+            "type": "sea",
+            "y": 0.64,
+            "depth": 0.25
+           },
+           {
+            "type": "ships",
+            "n": 3,
+            "x": 0.25,
+            "s": 0.5,
+            "flag": "uk",
+            "y": 0.68,
+            "gap": 320,
+            "steam": false,
+            "depth": 0.5
+           },
+           {
+            "type": "town",
+            "y": 0.72,
+            "n": 12,
+            "gap": 150,
+            "h": 150,
+            "col": "#3a3028",
+            "depth": 0.45
+           }
+          ]
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "THE TEA ACT",
+      "place": "CHEAPER TEA, IF YOU ACCEPT THE TAX",
+      "date": "1773",
+      "size": 130
+     }
     },
     {
      "say": "They did not accept.",
@@ -617,7 +1510,32 @@
         "US"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 120,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 10,
+        "gap": 150,
+        "h": 150,
+        "col": "#3a3028",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "On the night of the sixteenth of December 1773, men disguised as Mohawk warriors climbed aboard the ships, and dumped three hundred and forty two chests of tea into Boston Harbor. About ten thousand pounds' worth.",
@@ -653,8 +1571,93 @@
         "note": "Our American Revolution, 16 December 1773",
         "dur": 6
        }
+      },
+      {
+       "on": "dumped",
+       "scene": {
+        "shot": "photo",
+        "img": "teaparty",
+        "move": "in",
+        "caption": "The Boston Tea Party, 16 December 1773",
+        "fallback": {
+         "shot": "set",
+         "time": "night",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.66,
+           "depth": 0.3
+          },
+          {
+           "type": "ships",
+           "n": 3,
+           "x": 0.2,
+           "s": 0.6,
+           "flag": "uk",
+           "y": 0.7,
+           "gap": 360,
+           "steam": false,
+           "depth": 0.5
+          },
+          {
+           "type": "crowd",
+           "y": 0.97,
+           "n": 40,
+           "hats": true,
+           "depth": 0.8
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
+       }
+      },
+      {
+       "on": "pounds",
+       "scene": {
+        "shot": "card",
+        "time": "342 CHESTS",
+        "place": "OF TEA IN THE HARBOUR",
+        "date": "about £10,000",
+        "size": 120
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.2,
+        "s": 0.6,
+        "flag": "uk",
+        "y": 0.7,
+        "gap": 360,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 8,
+        "gap": 180,
+        "h": 140,
+        "col": "#1d1814",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "The most expensive tea party in history, thrown over tea that had just got cheaper.",
@@ -665,7 +1668,48 @@
         "US"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "teaparty",
+      "move": "left",
+      "focus": [
+       0.6,
+       0.55
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.66,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 3,
+         "x": 0.2,
+         "s": 0.6,
+         "flag": "uk",
+         "y": 0.7,
+         "gap": 360,
+         "steam": false,
+         "depth": 0.5
+        },
+        {
+         "type": "crowd",
+         "y": 0.97,
+         "n": 40,
+         "hats": true,
+         "depth": 0.8
+        }
+       ],
+       "fx": [
+        "fog"
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -693,8 +1737,42 @@
         ],
         "dur": 5
        }
+      },
+      {
+       "on": "closed",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Boston Port Act, 1774",
+        "lines": [
+         "The harbour is closed",
+         "until the tea is paid for."
+        ],
+        "stamp": "CLOSED"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -718,7 +1796,10 @@
         "US"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     }
    ]
   },
@@ -759,8 +1840,93 @@
         ],
         "dur": 8
        }
+      },
+      {
+       "on": "Lexington",
+       "scene": {
+        "shot": "photo",
+        "img": "lexington",
+        "move": "in",
+        "caption": "The Battle of Lexington, 1775",
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.58,
+           "n": 2,
+           "seed": 9,
+           "depth": 0.2
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.72,
+           "depth": 0.6
+          },
+          {
+           "type": "soldiers",
+           "y": 0.86,
+           "n": 18,
+           "rows": 3,
+           "x0": 0,
+           "gap": 80,
+           "col": "#8b1a1a",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "fx": [
+          "smoke",
+          "fog"
+         ]
+        }
+       }
+      },
+      {
+       "on": "end",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 9,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 18,
+          "rows": 3,
+          "x0": 0,
+          "gap": 80,
+          "col": "#8b1a1a",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "19 APRIL 1775",
+      "place": "LEXINGTON, MASSACHUSETTS",
+      "date": "dawn"
+     }
     },
     {
      "cam": {
@@ -782,8 +1948,101 @@
         "text": "WRONG HILL",
         "dur": 2.6
        }
+      },
+      {
+       "on": "wrong",
+       "scene": {
+        "shot": "card",
+        "time": "BREED'S HILL",
+        "place": "THE WRONG HILL",
+        "date": "17 June 1775",
+        "size": 130
+       }
+      },
+      {
+       "on": "Battle",
+       "scene": {
+        "shot": "photo",
+        "img": "bunkerhill",
+        "move": "out",
+        "caption": "The Battle of Bunker Hill, 1775",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 2,
+           "seed": 4,
+           "depth": 0.2
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.66,
+           "depth": 0.6
+          },
+          {
+           "type": "soldiers",
+           "y": 0.9,
+           "n": 22,
+           "rows": 3,
+           "x0": 0,
+           "gap": 75,
+           "col": "#8b1a1a",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "fx": [
+          "smoke"
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "forest",
+        "y": 0.66,
+        "n": 30,
+        "seed": 8,
+        "h": 140,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 12,
+        "rows": 2,
+        "x0": 0.3,
+        "gap": 90,
+        "col": "#1c2a44",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "British troops marched straight up the slope, into the guns. Twice they were thrown back. On the third attack, the rebels ran out of gunpowder, and the British took the hill.",
@@ -819,8 +2078,86 @@
         "GB",
         "happy"
        ]
+      },
+      {
+       "on": "third",
+       "scene": {
+        "shot": "photo",
+        "img": "bunkerhill",
+        "move": "in",
+        "focus": [
+         0.6,
+         0.4
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.5,
+           "n": 2,
+           "seed": 4,
+           "depth": 0.2
+          },
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.66,
+           "depth": 0.6
+          },
+          {
+           "type": "soldiers",
+           "y": 0.9,
+           "n": 22,
+           "rows": 3,
+           "x0": 0,
+           "gap": 75,
+           "col": "#8b1a1a",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "fx": [
+          "smoke"
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.66,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.9,
+        "n": 22,
+        "rows": 3,
+        "x0": 0,
+        "gap": 75,
+        "col": "#8b1a1a",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "say": "Britain won. And it was a disaster. More than a thousand British soldiers were killed or wounded. The Americans lost about four hundred and fifty. A few more victories like that, and Britain would have no army left.",
@@ -849,8 +2186,60 @@
         "GB",
         "shock"
        ]
+      },
+      {
+       "on": "Americans",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 450",
+        "place": "AMERICAN LOSSES",
+        "date": "Bunker Hill",
+        "size": 180
+       }
+      },
+      {
+       "on": "victories",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.55,
+          "n": 2,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.7,
+          "depth": 0.6
+         },
+         {
+          "type": "camp",
+          "y": 0.76,
+          "n": 6,
+          "x0": 0.1,
+          "gap": 220,
+          "col": "#c9bfa6",
+          "fire": 0.5,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "1,054",
+      "place": "BRITISH KILLED OR WOUNDED",
+      "date": "Bunker Hill",
+      "size": 180
+     }
     },
     {
      "cam": {
@@ -880,8 +2269,55 @@
         "US",
         "sad"
        ]
+      },
+      {
+       "on": "Olive",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "The Olive Branch Petition, July 1775",
+        "lines": [
+         "To the King's Most Excellent Majesty:",
+         "your faithful subjects…",
+         "…our Mother country."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.12,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.4,
+          "facing": 1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -905,11 +2341,73 @@
         "text": "OPEN REBELLION",
         "dur": 3
        }
+      },
+      {
+       "on": "refused",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "The King, August 1775",
+        "lines": [
+         "The colonies are in open",
+         "and avowed rebellion."
+        ],
+        "stamp": "REFUSED"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "george3",
+      "move": "in",
+      "caption": "King George III",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "KING GEORGE III",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "king_george",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
-     "say": "It was the last chance to stop the war with words. Both sides were too angry, too proud, or too far away to take it."
+     "say": "It was the last chance to stop the war with words. Both sides were too angry, too proud, or too far away to take it.",
+     "do": [],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.6,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     }
    ]
   },
@@ -934,8 +2432,76 @@
         -0.4,
         51.2
        ]
+      },
+      {
+       "on": "court",
+       "scene": {
+        "shot": "photo",
+        "img": "bfranklin",
+        "move": "in",
+        "caption": "Benjamin Franklin in London",
+        "focus": [
+         0.5,
+         0.35
+        ],
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "BENJAMIN FRANKLIN",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "franklin",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.15
+       },
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.25
+       },
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 18,
+        "gap": 120,
+        "h": 190,
+        "col": "#2e2a28",
+        "depth": 0.4
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.3,
+        "s": 0.45,
+        "flag": "uk",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Then, in front of the King's Privy Council, he was publicly humiliated. He stood in silence while a government lawyer called him, more or less, a thief and a liar, in front of a laughing room.",
@@ -946,8 +2512,110 @@
         "BEN",
         "sad"
        ]
+      },
+      {
+       "on": "government",
+       "scene": {
+        "shot": "photo",
+        "img": "privy",
+        "move": "out",
+        "focus": [
+         0.6,
+         0.4
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "room",
+           "flag": "uk",
+           "window": 0.7,
+           "night": false,
+           "depth": 0.3
+          },
+          {
+           "type": "table",
+           "lamp": 0.6,
+           "candles": 0,
+           "papers": 6,
+           "w": 900,
+           "depth": 0.6
+          },
+          {
+           "type": "crowd",
+           "y": 0.99,
+           "n": 40,
+           "hats": true,
+           "depth": 0.8
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.5,
+             "facing": 1,
+             "h": 0.9,
+             "photo": "bfranklin"
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "privy",
+      "move": "in",
+      "caption": "Franklin before the Privy Council, 1774",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "uk",
+         "window": 0.7,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 6,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "crowd",
+         "y": 0.99,
+         "n": 40,
+         "hats": true,
+         "depth": 0.8
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.5,
+           "facing": 1,
+           "h": 0.9,
+           "photo": "bfranklin"
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
+     }
     },
     {
      "say": "He went home to America. He did not come back a loyal Briton.",
@@ -967,7 +2635,37 @@
         "angry"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.55,
+        "s": 0.8,
+        "flag": "uk",
+        "y": 0.67,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": -0.2,
+        "x1": 0.3,
+        "y": 0.6,
+        "h": 90,
+        "depth": 0.3
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -987,8 +2685,60 @@
        "happy": [
         "WIL"
        ]
+      },
+      {
+       "on": "January",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": "uk",
+          "window": 0.1,
+          "night": false,
+          "depth": 0.3
+         },
+         {
+          "type": "table",
+          "lamp": 0.6,
+          "candles": 0,
+          "papers": 4,
+          "w": 900,
+          "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.5,
+            "facing": 1,
+            "h": 0.9,
+            "pose": "point",
+            "photo": "wfranklin"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         },
+         {
+          "type": "crowd",
+          "y": 0.99,
+          "n": 30,
+          "hats": true,
+          "depth": 0.8
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "wfranklin",
+      "move": "in",
+      "caption": "William Franklin, Royal Governor of New Jersey"
+     }
     },
     {
      "say": "One Franklin was becoming a rebel. The other was the King's man. Same family, same dinner table, opposite sides of the line.",
@@ -1000,7 +2750,32 @@
         "WIL"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "BENJAMIN FRANKLIN",
+        "becoming a rebel"
+       ],
+       [
+        "WILLIAM FRANKLIN",
+        "the King's man"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "franklin",
+        "x": 0.3
+       },
+       {
+        "preset": "governor",
+        "x": 0.7
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1028,8 +2803,36 @@
        "happy": [
         "US"
        ]
+      },
+      {
+       "on": "helped",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Declaration of Independence",
+        "lines": [
+         "4 July 1776",
+         "Signed: B. Franklin"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "declaration",
+      "move": "in",
+      "caption": "The Declaration of Independence, 1776",
+      "fallback": {
+       "shot": "doc",
+       "kind": "letter",
+       "header": "Declaration of Independence",
+       "lines": [
+        "IN CONGRESS, JULY 4, 1776.",
+        "The unanimous Declaration of the",
+        "thirteen united States of America"
+       ]
+      }
+     }
     },
     {
      "say": "By then, his son had already been arrested.",
@@ -1041,7 +2844,35 @@
         "shock"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#16120e"
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.8,
+          "photo": "wfranklin"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1062,8 +2893,47 @@
         -73.19,
         41.75
        ]
+      },
+      {
+       "on": "solitary",
+       "scene": {
+        "shot": "card",
+        "time": "8 MONTHS",
+        "place": "SOLITARY CONFINEMENT",
+        "date": "Litchfield, Connecticut",
+        "size": 150
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#121010"
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "lean",
+          "photo": "wfranklin"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "While he was there, his wife was dying. He asked for permission to see her. It was refused. She died while he was still in his cell.",
@@ -1079,7 +2949,32 @@
         "sad"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.5,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#0f0d0c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.4,
+        "candles": 1,
+        "papers": 1,
+        "w": 900,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
     },
     {
      "say": "His father was in France by then, working on the deal that would decide the whole war.",
@@ -1088,7 +2983,37 @@
        "on": "France",
        "dim": 0
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 120,
+        "h": 160,
+        "col": "#3b3530",
+        "depth": 0.4
+       },
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.7,
+        "flag": "fr",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1096,7 +3021,80 @@
       "lat": 45,
       "scale": 650
      },
-     "say": "From William's side, he had kept an oath to his King. From Benjamin's side, his son had chosen a tyrant over his own people. That was the American Revolution in one family. And thousands of families split exactly the same way."
+     "say": "From William's side, he had kept an oath to his King. From Benjamin's side, his son had chosen a tyrant over his own people. That was the American Revolution in one family. And thousands of families split exactly the same way.",
+     "do": [
+      {
+       "on": "Benjamin",
+       "scene": {
+        "shot": "photo",
+        "img": "bfranklin",
+        "move": "right",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "BENJAMIN FRANKLIN",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "franklin",
+           "x": 0.5
+          }
+         ]
+        }
+       }
+      },
+      {
+       "on": "thousands",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.3,
+          "s": 0.6,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "farm",
+          "x": 0.75,
+          "s": 0.6,
+          "y": 0.72,
+          "night": false,
+          "depth": 0.6
+         },
+         {
+          "type": "fire",
+          "x": 0.75,
+          "y": 0.64,
+          "r": 160,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "wfranklin",
+      "move": "left"
+     }
     }
    ]
   },
@@ -1122,8 +3120,50 @@
        "show": [
         "HE"
        ]
+      },
+      {
+       "on": "rented",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "HESSIANS",
+          "soldiers for hire"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "hessian",
+          "x": 0.5
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Six German states signed contracts with King George. Their princes got paid, and their soldiers got shipped across the ocean. About thirty thousand men in total. More than half came from Hesse-Kassel and Hesse-Hanau, so the Americans called all of them Hessians.",
@@ -1155,7 +3195,10 @@
         "dur": 3.4
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "talk": [
@@ -1167,10 +3210,50 @@
        "who": "US",
        "text": "You hired foreign soldiers to fight us?"
       }
-     ]
+     ],
+     "do": [],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
-     "say": "To London, this was ordinary. To the colonists, it was proof the King saw them as enemies, not subjects. Hiring foreign soldiers made it into the Declaration of Independence, as one of the complaints against him."
+     "say": "To London, this was ordinary. To the colonists, it was proof the King saw them as enemies, not subjects. Hiring foreign soldiers made it into the Declaration of Independence, as one of the complaints against him.",
+     "do": [
+      {
+       "on": "Declaration",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Declaration of Independence, 1776",
+        "lines": [
+         "He is at this time transporting",
+         "large Armies of foreign Mercenaries…"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "hessians",
+      "move": "out",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "HESSIANS",
+         ""
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "hessian",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1191,8 +3274,71 @@
         "US",
         "sad"
        ]
+      },
+      {
+       "on": "Washington",
+       "scene": {
+        "shot": "faces",
+        "names": [
+         [
+          "GEORGE WASHINGTON",
+          "Christmas 1776"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "washington",
+          "x": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "shrinking",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "camp",
+          "y": 0.76,
+          "n": 5,
+          "x0": 0.1,
+          "gap": 220,
+          "col": "#bdb6a6",
+          "fire": 0.5,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 8,
+          "rows": 1,
+          "x0": 0.5,
+          "gap": 90,
+          "col": "#1c2a44",
+          "march": false,
+          "depth": 0.7
+         }
+        ],
+        "weather": "snow"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "25 DECEMBER 1776",
+      "place": "THE DELAWARE RIVER",
+      "date": "night"
+     }
     },
     {
      "say": "On the night after Christmas, he crossed the icy Delaware River, and hit the Hessian garrison at Trenton by surprise. Nearly a thousand of them were captured.",
@@ -1231,8 +3377,79 @@
        "happy": [
         "US"
        ]
+      },
+      {
+       "on": "Trenton",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 6,
+          "gap": 170,
+          "h": 130,
+          "col": "#3a3028",
+          "depth": 0.4
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 14,
+          "rows": 2,
+          "x0": 0,
+          "gap": 80,
+          "col": "#1c2a44",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "weather": "snow",
+        "fx": [
+         "smoke"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "delaware",
+      "move": "in",
+      "caption": "Washington Crossing the Delaware (Leutze, 1851)",
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.66,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 2,
+         "x": 0.3,
+         "s": 0.5,
+         "flag": "us",
+         "y": 0.7,
+         "gap": 400,
+         "steam": false,
+         "depth": 0.5
+        }
+       ],
+       "weather": "snow",
+       "fx": [
+        "fog"
+       ]
+      }
+     }
     },
     {
      "say": "It wasn't a big battle. But it told everyone the rebellion was still alive.",
@@ -1241,7 +3458,42 @@
        "on": "alive",
        "snow": 0
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "delaware",
+      "move": "left",
+      "focus": [
+       0.4,
+       0.5
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.66,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 2,
+         "x": 0.3,
+         "s": 0.5,
+         "flag": "us",
+         "y": 0.7,
+         "gap": 400,
+         "steam": false,
+         "depth": 0.5
+        }
+       ],
+       "weather": "snow",
+       "fx": [
+        "fog"
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1257,8 +3509,54 @@
         "HE",
         "sad"
        ]
+      },
+      {
+       "on": "seven",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 7,500",
+        "place": "GERMAN SOLDIERS DIED",
+        "date": "most of them from disease",
+        "size": 160
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 6,
+        "x0": 0.05,
+        "gap": 210,
+        "col": "#bdb6a6",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 6,
+        "rows": 1,
+        "x0": 0.5,
+        "gap": 100,
+        "col": "#24384f",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -1266,7 +3564,80 @@
       "lat": 43,
       "scale": 1500
      },
-     "say": "And between five and six thousand chose to stay. Many settled in British Canada. Others joined German communities in Pennsylvania and nearby, and became Americans, in the country they had been sent to stop."
+     "say": "And between five and six thousand chose to stay. Many settled in British Canada. Others joined German communities in Pennsylvania and nearby, and became Americans, in the country they had been sent to stop.",
+     "do": [
+      {
+       "on": "Pennsylvania",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 8,
+          "gap": 170,
+          "h": 140,
+          "col": "#4a3a2c",
+          "depth": 0.4
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         },
+         {
+          "type": "crowd",
+          "y": 0.98,
+          "n": 30,
+          "hats": true,
+          "depth": 0.8
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "farm",
+        "x": 0.65,
+        "s": 0.8,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 21,
+        "depth": 0.2
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     }
    ]
   },
@@ -1309,7 +3680,52 @@
         "shock"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "saratoga",
+      "move": "in",
+      "caption": "The Surrender of General Burgoyne at Saratoga, 1777",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "forest",
+         "y": 0.64,
+         "n": 60,
+         "seed": 3,
+         "h": 170,
+         "depth": 0.45
+        },
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "soldiers",
+         "y": 0.88,
+         "n": 18,
+         "rows": 3,
+         "x0": 0,
+         "gap": 75,
+         "col": "#8b1a1a",
+         "march": false,
+         "depth": 0.7
+        },
+        {
+         "type": "flagpole",
+         "x": 0.8,
+         "y": 0.7,
+         "flag": "us",
+         "h": 360,
+         "depth": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1333,7 +3749,44 @@
         "FR"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 120,
+        "h": 160,
+        "col": "#3b3530",
+        "depth": 0.4
+       },
+       {
+        "type": "flagpole",
+        "x": 0.75,
+        "y": 0.7,
+        "flag": "fr",
+        "h": 360,
+        "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.8,
+          "photo": "bfranklin"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "France had lost Canada to Britain only fifteen years earlier. It had been looking for revenge ever since. Saratoga proved the Americans could actually win. So in early 1778, France signed an alliance with the United States.",
@@ -1351,8 +3804,61 @@
         "US"
        ],
        "color": "#c9a227"
+      },
+      {
+       "on": "alliance",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Paris, 1778",
+        "lines": [
+         "Treaty of Alliance",
+         "France and the United States"
+        ],
+        "stamp": "ALLIANCE"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "fr",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.85,
+          "photo": "bfranklin"
+         },
+         {
+          "x": 0.65,
+          "facing": -1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1369,7 +3875,40 @@
         "GB"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.15,
+        "s": 0.5,
+        "flag": "fr",
+        "y": 0.66,
+        "gap": 300,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.75,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.7,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     }
     },
     {
      "say": "Britain had started taxing the colonies to pay for its last war against France. Now it was fighting France again. And Spain. And the Dutch. On almost every ocean at once. The bill it had tried to send to America was getting bigger by the month.",
@@ -1390,8 +3929,44 @@
         "GB",
         "sad"
        ]
+      },
+      {
+       "on": "bill",
+       "scene": {
+        "shot": "card",
+        "time": "£",
+        "place": "THE BILL KEEPS GROWING",
+        "date": "1779",
+        "size": 220
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.2,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 280,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
      "cam": {
@@ -1411,10 +3986,75 @@
         "dur": 6
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "farm",
+        "x": 0.6,
+        "s": 0.9,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.6,
+        "y": 0.6,
+        "r": 300,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
-     "say": "And for some people, the choice of side was about freedom, in the most literal sense."
+     "say": "And for some people, the choice of side was about freedom, in the most literal sense.",
+     "do": [],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.66,
+        "n": 40,
+        "seed": 5,
+        "h": 150,
+        "depth": 0.45
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": 1,
+          "h": 0.9
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1429,7 +4069,23 @@
        "on": "Virginia",
        "pin": "Williamsburg"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "dunmore",
+      "move": "in",
+      "caption": "Lord Dunmore's Proclamation, 1775",
+      "fallback": {
+       "shot": "doc",
+       "kind": "letter",
+       "header": "Lord Dunmore's Proclamation, 1775",
+       "lines": [
+        "…all indented servants, Negroes, or others,",
+        "(appertaining to Rebels,) free that are",
+        "able and willing to bear arms…"
+       ]
+      }
+     }
     },
     {
      "say": "Over the war, British offers like that freed about twenty thousand people. Black soldiers fought on the American side too. Both armies talked about liberty. Only one of them was offering it to the people the other side held in chains, and even that offer was made to win a war, not to end slavery.",
@@ -1441,8 +4097,74 @@
         "text": "≈ 20,000 FREED",
         "dur": 3.2
        }
+      },
+      {
+       "on": "Black",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.2
+         },
+         {
+          "type": "forest",
+          "y": 0.66,
+          "n": 30,
+          "seed": 8,
+          "h": 140,
+          "depth": 0.45
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 12,
+          "rows": 2,
+          "x0": 0.3,
+          "gap": 90,
+          "col": "#1c2a44",
+          "march": false,
+          "depth": 0.7
+         }
+        ]
+       }
+      },
+      {
+       "on": "chains",
+       "scene": {
+        "shot": "photo",
+        "img": "dunmore",
+        "move": "out",
+        "fallback": {
+         "shot": "doc",
+         "kind": "letter",
+         "header": "Lord Dunmore's Proclamation, 1775",
+         "lines": [
+          "…all indented servants, Negroes, or others,",
+          "(appertaining to Rebels,) free that are",
+          "able and willing to bear arms…"
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "≈ 20,000",
+      "place": "PEOPLE FREED BY BRITISH OFFERS",
+      "date": "1775 – 1783",
+      "size": 160
+     }
     },
     {
      "cam": {
@@ -1450,7 +4172,49 @@
       "lat": 38,
       "scale": 1500
      },
-     "say": "And many of the Native nations of the west fought alongside Britain, for a simple reason. The Proclamation Line of 1763 was the only thing protecting their land from the settlers. If the Americans won, that line would disappear."
+     "say": "And many of the Native nations of the west fought alongside Britain, for a simple reason. The Proclamation Line of 1763 was the only thing protecting their land from the settlers. If the Americans won, that line would disappear.",
+     "do": [
+      {
+       "on": "line",
+       "scene": {
+        "shot": "card",
+        "time": "1763",
+        "place": "THE ONLY LINE PROTECTING THEIR LAND",
+        "date": "the Royal Proclamation",
+        "size": 200
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 70,
+        "seed": 14,
+        "h": 190,
+        "depth": 0.4
+       },
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 6,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     }
     }
    ]
   },
@@ -1475,8 +4239,71 @@
       {
        "on": "sea",
        "sfx": "waves"
+      },
+      {
+       "on": "plan",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "coast",
+          "x0": 0.0,
+          "x1": 0.7,
+          "y": 0.6,
+          "h": 100,
+          "depth": 0.3
+         },
+         {
+          "type": "town",
+          "y": 0.66,
+          "n": 8,
+          "gap": 150,
+          "h": 120,
+          "col": "#3a3028",
+          "depth": 0.35
+         },
+         {
+          "type": "fort",
+          "x": 0.4,
+          "y": 0.7,
+          "w": 600,
+          "h": 90,
+          "flag": "uk",
+          "depth": 0.6
+         }
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "cornwallis",
+      "move": "in",
+      "caption": "Lord Cornwallis",
+      "fallback": {
+       "shot": "faces",
+       "names": [
+        [
+         "LORD CORNWALLIS",
+         "British commander"
+        ]
+       ],
+       "nameAt": 0.4,
+       "push": 0.06,
+       "people": [
+        {
+         "preset": "redcoat",
+         "x": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1508,7 +4335,32 @@
         36.9
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "fr",
+        "y": 0.66,
+        "gap": 280,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
     },
     {
      "cam": {
@@ -1538,7 +4390,38 @@
         "size": 0.5
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "y": 0.8,
+        "n": 4,
+        "x0": 0.1,
+        "gap": 300,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     }
     },
     {
      "date": "19 OCTOBER 1781",
@@ -1557,11 +4440,125 @@
        "happy": [
         "US"
        ]
+      },
+      {
+       "on": "surrendered",
+       "scene": {
+        "shot": "photo",
+        "img": "yorktown",
+        "move": "in",
+        "caption": "The Surrender of Lord Cornwallis (Trumbull)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "land",
+           "kind": "grass",
+           "y": 0.74,
+           "depth": 0.6
+          },
+          {
+           "type": "soldiers",
+           "y": 0.88,
+           "n": 20,
+           "rows": 3,
+           "x0": 0,
+           "gap": 70,
+           "col": "#8b1a1a",
+           "march": true,
+           "depth": 0.7
+          },
+          {
+           "type": "flagpole",
+           "x": 0.8,
+           "y": 0.7,
+           "flag": "fr",
+           "h": 360,
+           "depth": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "19 OCTOBER 1781",
+      "place": "YORKTOWN, VIRGINIA",
+      "date": "surrender"
+     }
     },
     {
-     "say": "Legend says the British band played a song called The World Turned Upside Down, as they marched out. Nobody can prove it. But it's hard to think of a better soundtrack."
+     "say": "Legend says the British band played a song called The World Turned Upside Down, as they marched out. Nobody can prove it. But it's hard to think of a better soundtrack.",
+     "do": [
+      {
+       "on": "soundtrack",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 20,
+          "rows": 3,
+          "x0": 0,
+          "gap": 70,
+          "col": "#8b1a1a",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "yorktown",
+      "move": "right",
+      "focus": [
+       0.5,
+       0.55
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "soldiers",
+         "y": 0.88,
+         "n": 20,
+         "rows": 3,
+         "x0": 0,
+         "gap": 70,
+         "col": "#8b1a1a",
+         "march": true,
+         "depth": 0.7
+        },
+        {
+         "type": "flagpole",
+         "x": 0.8,
+         "y": 0.7,
+         "flag": "fr",
+         "h": 360,
+         "depth": 0.5
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1586,8 +4583,68 @@
        ],
        "color": "#e0b45a",
        "sfx": "waves"
+      },
+      {
+       "on": "London",
+       "scene": {
+        "shot": "card",
+        "time": "25 NOVEMBER 1781",
+        "place": "LONDON",
+        "date": "the news arrives"
+       }
+      },
+      {
+       "on": "insisting",
+       "scene": {
+        "shot": "photo",
+        "img": "lordnorth",
+        "move": "in",
+        "caption": "Lord North, Prime Minister",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "LORD NORTH",
+           "Prime Minister"
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "lord_north",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.8,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "say": "Oh God. It is all over.",
@@ -1601,7 +4658,16 @@
         "dur": 4
        }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Lord North, 25 November 1781",
+      "lines": [
+       "Oh God!",
+       "It is all over."
+      ]
+     }
     },
     {
      "say": "Four months later, he resigned. From London, it wasn't only a defeat. It was the end of an idea, that the empire could be one people, under one Parliament, on both sides of an ocean.",
@@ -1612,8 +4678,69 @@
         "GB",
         "sad"
        ]
+      },
+      {
+       "on": "empire",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.6,
+          "n": 2,
+          "seed": 5,
+          "depth": 0.15
+         },
+         {
+          "type": "sea",
+          "y": 0.66,
+          "depth": 0.25
+         },
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 18,
+          "gap": 120,
+          "h": 190,
+          "col": "#2e2a28",
+          "depth": 0.4
+         },
+         {
+          "type": "ships",
+          "n": 4,
+          "x": 0.3,
+          "s": 0.45,
+          "flag": "uk",
+          "y": 0.7,
+          "gap": 260,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "LORD NORTH",
+        "resigned, March 1782"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "lord_north",
+        "x": 0.5
+       }
+      ]
+     }
     }
    ]
   },
@@ -1643,8 +4770,66 @@
         ],
         "dur": 5
        }
+      },
+      {
+       "on": "line",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Treaty of Paris",
+        "lines": [
+         "3 September 1783",
+         "The United States are free,",
+         "sovereign and independent."
+        ]
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "treaty",
+      "move": "in",
+      "caption": "The Treaty of Paris (Benjamin West, unfinished)",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "fr",
+         "window": 0.7,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 2,
+         "papers": 8,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.3,
+           "facing": 1,
+           "h": 0.85
+          },
+          {
+           "x": 0.7,
+           "facing": -1,
+           "h": 0.85
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
+     }
     },
     {
      "cam": {
@@ -1740,7 +4925,10 @@
        "color": "#ff6a1f",
        "hold": 300
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -1754,7 +4942,10 @@
        "on": "Minnesota",
        "pin": "Lake of the Woods"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -1762,7 +4953,38 @@
       "lat": 39,
       "scale": 1400
      },
-     "say": "The old Proclamation Line was gone. The Native nations who had fought beside Britain weren't even invited to the talks. Britain simply handed over land it had promised to protect."
+     "say": "The old Proclamation Line was gone. The Native nations who had fought beside Britain weren't even invited to the talks. Britain simply handed over land it had promised to protect.",
+     "do": [],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.6,
+        "n": 70,
+        "seed": 4,
+        "h": 200,
+        "depth": 0.4
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 8,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -1822,8 +5044,61 @@
         "note": "Maya Jasanoff, Harvard Gazette",
         "dur": 6
        }
+      },
+      {
+       "on": "Canada",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 60,000",
+        "place": "LOYALISTS LEFT",
+        "date": "…and 15,000 enslaved people with them",
+        "size": 160
+       }
+      },
+      {
+       "on": "Jamaica",
+       "scene": {
+        "shot": "off"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 6,
+        "x": 0.2,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.67,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": -0.3,
+        "x1": 0.35,
+        "y": 0.6,
+        "h": 100,
+        "depth": 0.3
+       },
+       {
+        "type": "crowd",
+        "y": 0.97,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     }
     },
     {
      "cam": {
@@ -1852,7 +5127,10 @@
        "on": "Freetown",
        "pin": "Freetown"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
      "cam": {
@@ -1879,8 +5157,53 @@
         "note": "AmericanRevolution.org; History.com",
         "dur": 7
        }
+      },
+      {
+       "on": "disease",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "camp",
+          "y": 0.76,
+          "n": 6,
+          "x0": 0.05,
+          "gap": 210,
+          "col": "#a9a291",
+          "fire": 0.3,
+          "depth": 0.6
+         },
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
+      },
+      {
+       "on": "German",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 7,500",
+        "place": "GERMAN SOLDIERS DIED",
+        "date": "",
+        "size": 170
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "≈ 25,000",
+      "place": "AMERICANS DIED",
+      "date": "1775 – 1783",
+      "size": 170
+     }
     },
     {
      "cam": {
@@ -1905,8 +5228,56 @@
         -74.2,
         40.9
        ]
+      },
+      {
+       "on": "son",
+       "scene": {
+        "shot": "photo",
+        "img": "wfranklin",
+        "move": "in"
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "fr",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.85,
+          "photo": "bfranklin"
+         },
+         {
+          "x": 0.68,
+          "facing": -1,
+          "h": 0.85
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     },
     {
      "say": "William wrote to his father in 1784, hoping to make peace. He got a cold reply. They met once more, a year later, briefly, to talk about money.",
@@ -1924,8 +5295,42 @@
         "WIL",
         "sad"
        ]
+      },
+      {
+       "on": "cold",
+       "scene": {
+        "shot": "photo",
+        "img": "bfranklin",
+        "move": "out",
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "BENJAMIN FRANKLIN",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "franklin",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "William Franklin, 1784 (paraphrase)",
+      "lines": [
+       "Dear Father,",
+       "I hope we may be reconciled…"
+      ]
+     }
     },
     {
      "say": "In his will, Benjamin left his son some land in Nova Scotia that was worth almost nothing. His reasoning, more or less: if the British had won, there would have been nothing to leave anyone.",
@@ -1941,8 +5346,46 @@
         ],
         "dur": 5
        }
+      },
+      {
+       "on": "reasoning",
+       "scene": {
+        "shot": "photo",
+        "img": "bfranklin",
+        "move": "in",
+        "focus": [
+         0.5,
+         0.3
+        ],
+        "fallback": {
+         "shot": "faces",
+         "names": [
+          [
+           "BENJAMIN FRANKLIN",
+           ""
+          ]
+         ],
+         "nameAt": 0.4,
+         "push": 0.06,
+         "people": [
+          {
+           "preset": "franklin",
+           "x": 0.5
+          }
+         ]
+        }
+       }
       }
-     ]
+     ],
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Last will of B. Franklin",
+      "lines": [
+       "To my son William:",
+       "lands in Nova Scotia."
+      ]
+     }
     },
     {
      "say": "William Franklin died in London in 1813. Today, nobody knows exactly where his grave is.",
@@ -1953,7 +5396,32 @@
         "WIL"
        ]
       }
-     ]
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 18,
+        "gap": 120,
+        "h": 170,
+        "col": "#26221f",
+        "depth": 0.4
+       },
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.15
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
     },
     {
      "cam": {
@@ -1977,10 +5445,97 @@
        ],
        "color": "#c8102e"
       }
-     ]
+     ],
+     "scene": {
+      "shot": "off"
+     }
     },
     {
-     "say": "Two neighbours. Two very different memories of the same war."
+     "say": "Two neighbours. Two very different memories of the same war.",
+     "do": [
+      {
+       "on": "memories",
+       "scene": {
+        "shot": "photo",
+        "img": "treaty",
+        "move": "out",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "room",
+           "flag": "fr",
+           "window": 0.7,
+           "night": false,
+           "depth": 0.3
+          },
+          {
+           "type": "table",
+           "lamp": 0.6,
+           "candles": 2,
+           "papers": 8,
+           "w": 900,
+           "depth": 0.6
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.3,
+             "facing": 1,
+             "h": 0.85
+            },
+            {
+             "x": 0.7,
+             "facing": -1,
+             "h": 0.85
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 2,
+        "depth": 0.2
+       },
+       {
+        "type": "flagpole",
+        "x": 0.3,
+        "y": 0.72,
+        "flag": "us",
+        "h": 360,
+        "depth": 0.5
+       },
+       {
+        "type": "flagpole",
+        "x": 0.7,
+        "y": 0.72,
+        "flag": "uk",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
+     }
     }
    ]
   }
@@ -2101,5 +5656,84 @@
     "stamp": "UNTOLD STORY"
    }
   }
- ]
+ ],
+ "film": true,
+ "photos": {
+  "bfranklin": [
+   "File:Joseph Siffrein Duplessis - Benjamin Franklin - Google Art Project.jpg",
+   false
+  ],
+  "george3": [
+   "File:Allan Ramsay - King George III in coronation robes - Google Art Project.jpg",
+   false
+  ],
+  "teaparty": [
+   "File:Boston Tea Party Currier colored.jpg",
+   true
+  ],
+  "declaration": [
+   "File:Declaration of Independence (1819), by John Trumbull.jpg",
+   true
+  ],
+  "delaware": [
+   "File:Washington Crossing the Delaware by Emanuel Leutze, MMA-NYC, 1851.jpg",
+   true
+  ],
+  "yorktown": [
+   "File:Surrender of Lord Cornwallis.jpg",
+   true
+  ],
+  "saratoga": [
+   "File:Surrender of General Burgoyne.jpg",
+   true
+  ],
+  "treaty": [
+   "File:Treaty of Paris by Benjamin West 1783.jpg",
+   true
+  ],
+  "wfranklin": [
+   "smoke/portraits/wfranklin.png",
+   false
+  ],
+  "massacre": [
+   "Bloody Massacre King Street 1770 Revere engraving",
+   true
+  ],
+  "lexington": [
+   "Battle of Lexington 1775 Doolittle engraving",
+   true
+  ],
+  "bunkerhill": [
+   "Death of General Warren Battle of Bunker Hill Trumbull",
+   true
+  ],
+  "privy": [
+   "Franklin before the Privy Council Schussele",
+   true
+  ],
+  "lordnorth": [
+   "Frederick North Lord North portrait Dance",
+   false
+  ],
+  "cornwallis": [
+   "Charles Cornwallis 1st Marquess portrait Gainsborough",
+   false
+  ],
+  "stamp": [
+   "Stamp Act 1765 revenue stamp",
+   true
+  ],
+  "hessians": [
+   "Hessian soldiers American Revolution uniform illustration",
+   true
+  ],
+  "petition": [
+   "Olive Branch Petition 1775 document",
+   true
+  ],
+  "dunmore": [
+   "Lord Dunmore proclamation 1775 broadside",
+   true
+  ]
+ }
 }
