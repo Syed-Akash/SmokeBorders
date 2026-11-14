@@ -580,6 +580,7 @@ def main():
     from kokoro_onnx import Kokoro
     k = Kokoro(os.path.join(HERE, 'tts/kokoro.onnx'), os.path.join(HERE, 'tts/voices.bin'))
     tl, clips, cues, moods, chapters, total = build(story, k)
+    free_voice()
     fc = film_check(tl, chapters, total) if story.get('film') else None   # film-style episodes (owner, 14 Nov 2026)
     if '--pacing' in sys.argv: pacing(tl, chapters, total, outdir); return
     if fc and '--stills' not in sys.argv and '--force' not in sys.argv: sys.exit('NOT RENDERING: the film check failed (see above). Add scenes, then run again.')
@@ -612,11 +613,16 @@ def render_video(story, tl, vid, seg=90):
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', vid], check=True)
     for p in parts + [lst]: os.remove(p)
 
-def finish(story, sid, outdir, tl, clips, cues, moods, chapters, total, rng, vid, t0):
-    if 'turbo' in sys.modules:   # the voice model holds several GB; the mix needs that memory on an 8 GB machine
+def free_voice():
+    """The voice model holds several GB. Once every clip is made, let it go: Chromium (frames) and the mix need that memory
+    on an 8 GB machine (15 Nov 2026: a preview was killed while rendering frames with the model still loaded)."""
+    if 'turbo' in sys.modules:
         import gc, ctypes, turbo; turbo._model = None; gc.collect()
-        try: ctypes.CDLL('libc.so.6').malloc_trim(0)   # hand the freed memory back to the system
+        try: ctypes.CDLL('libc.so.6').malloc_trim(0)
         except Exception: pass
+
+def finish(story, sid, outdir, tl, clips, cues, moods, chapters, total, rng, vid, t0):
+    free_voice()
     # narration
     vo = np.zeros(int((total + 1) * SR), np.float32)
     for s0, a in clips: i = int(s0 * SR); vo[i:i + len(a)] += a[:len(vo) - i]
