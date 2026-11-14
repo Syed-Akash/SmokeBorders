@@ -1,0 +1,1 @@
+../../../smoke/brand/chars.js

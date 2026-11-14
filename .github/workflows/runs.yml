@@ -1,0 +1,48 @@
+# Free GitHub Actions jobs that keep the Smoke & Borders automation in order.
+# 1. merge: when a scheduled run pushes its own branch (claude/* or ccr-*), merge it into main.
+# 2. comments: every hour, post queued first comments for videos that have gone public, then commit the queue.
+#    Needs repository secrets YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN_SMOKE (the Smoke & Borders channel's sign-in).
+name: runs
+on:
+  push:
+    branches: ['ccr-**', 'claude/**']
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: main-writer
+  cancel-in-progress: false
+jobs:
+  merge:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0 }
+      - name: merge the run branch into main
+        run: |
+          git config user.name "runs-sync"; git config user.email "runs-sync@users.noreply.github.com"
+          git fetch -q origin "${GITHUB_REF}:refs/remotes/origin/run"
+          git merge --no-edit -X theirs origin/run -m "Merge run branch ${GITHUB_REF_NAME} into main"
+          git push origin HEAD:main
+  comments:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0 }
+      - name: post queued comments
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN_SMOKE: ${{ secrets.YT_REFRESH_TOKEN_SMOKE }}
+          YT_EXPECT_TITLE: ${{ vars.YT_EXPECT_TITLE }}
+        run: |
+          if [ -n "$YT_CLIENT_ID" ] && [ -n "$YT_REFRESH_TOKEN_SMOKE" ]; then YT_CHANNEL=smoke python3 studio/upload.py --comments || true; fi
+      - name: save the queue
+        run: |
+          git config user.name "runs-sync"; git config user.email "runs-sync@users.noreply.github.com"
+          git add studio/pending_youtube_smoke.json
+          git diff --cached --quiet || { git commit -m "Post queued comments"; git pull --no-edit -X ours origin main; git push origin HEAD:main; }

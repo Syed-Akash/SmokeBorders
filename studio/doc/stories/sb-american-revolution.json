@@ -1,0 +1,2105 @@
+{
+ "id": "sb-american-revolution",
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "GB": "bm_lewis",
+  "US": "am_michael"
+ },
+ "title": "How Britain Lost America: The American Revolution From Both Sides",
+ "era": "1715",
+ "balls": {
+  "GB": {
+   "flag": "GB1707",
+   "label": "BRITAIN",
+   "at": [
+    -4,
+    52.5
+   ],
+   "r": 58,
+   "char": {
+    "preset": "king_george",
+    "facing": -1
+   }
+  },
+  "US": {
+   "flag": "US13",
+   "label": "13 COLONIES",
+   "at": [
+    -80.5,
+    41.5
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "facing": 1
+   }
+  },
+  "FR": {
+   "flag": "FRK",
+   "label": "FRANCE",
+   "at": [
+    3,
+    46.5
+   ],
+   "r": 52,
+   "char": {
+    "preset": "french_officer",
+    "facing": -1
+   }
+  },
+  "HE": {
+   "flag": "HES",
+   "label": "HESSE",
+   "at": [
+    10.5,
+    50.5
+   ],
+   "r": 46,
+   "char": {
+    "preset": "hessian",
+    "facing": -1
+   }
+  },
+  "BEN": {
+   "flag": "US13",
+   "label": "BENJAMIN FRANKLIN",
+   "at": [
+    -78.2,
+    38.6
+   ],
+   "r": 46,
+   "char": {
+    "preset": "franklin",
+    "facing": 1
+   }
+  },
+  "WIL": {
+   "flag": "GB1707",
+   "label": "WILLIAM FRANKLIN",
+   "at": [
+    -71.6,
+    40.4
+   ],
+   "r": 46,
+   "char": {
+    "preset": "governor",
+    "facing": -1
+   }
+  }
+ },
+ "places": {
+  "London": [
+   -0.13,
+   51.51
+  ],
+  "Boston": [
+   -71.06,
+   42.36
+  ],
+  "Philadelphia": [
+   -75.16,
+   39.95
+  ],
+  "Lexington": [
+   -71.23,
+   42.45
+  ],
+  "Trenton": [
+   -74.76,
+   40.22
+  ],
+  "Saratoga": [
+   -73.64,
+   43.01
+  ],
+  "Yorktown": [
+   -76.51,
+   37.24
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Kassel": [
+   9.48,
+   51.31
+  ],
+  "New Jersey": [
+   -74.4,
+   40.2
+  ],
+  "Litchfield": [
+   -73.19,
+   41.75
+  ],
+  "Freetown": [
+   -13.23,
+   8.48
+  ],
+  "Halifax": [
+   -63.57,
+   44.65
+  ],
+  "Lake of the Woods": [
+   -94.9,
+   49.3
+  ],
+  "Jamaica": [
+   -77.3,
+   18.1
+  ],
+  "Nassau": [
+   -77.35,
+   25.05
+  ],
+  "Williamsburg": [
+   -76.7,
+   37.27
+  ]
+ },
+ "sources": [
+  "Our American Revolution, The Price of Peace: https://ouramericanrevolution.org/index.cfm/page/view/m0031",
+  "Our American Revolution, 16 December 1773: https://www.ouramericanrevolution.org/index.cfm/page/view/p0323",
+  "American Battlefield Trust, William Franklin: https://www.battlefields.org/learn/biographies/william-franklin",
+  "The Papers of Benjamin Franklin, William Franklin: https://franklinpapers.org/bio?id=25",
+  "History.com, Hessians: https://www.history.com/articles/hessians-revolutionary-war",
+  "Harvard Gazette, Fleeing America (Maya Jasanoff): https://news.harvard.edu/gazette/story/2011/04/fleeing-america/",
+  "History of Parliament, Lord North and Yorktown: https://historyofparliament.com/2013/09/04/lord-north-and-yorktown/",
+  "The Canadian Encyclopedia, Treaty of Paris 1783: https://www.thecanadianencyclopedia.ca/en/article/treaty-of-paris-1783",
+  "AmericanRevolution.org, casualties: https://www.americanrevolution.org/?p=9627",
+  "Britannica, Battle of Bunker Hill: https://www.britannica.com/event/Battle-of-Bunker-Hill",
+  "American Battlefield Trust, Petitioning the King and Parliament: https://www.battlefields.org/learn/articles/petitioning-king-and-parliament"
+ ],
+ "intro": {
+  "mood": "uneasy",
+  "beats": [
+   {
+    "cam": {
+     "lon": -55,
+     "lat": 42,
+     "scale": 700
+    },
+    "say": "In 1763, Britain won the biggest war the world had ever seen. It took Canada from France. It took Florida from Spain. It was the most powerful empire on Earth.",
+    "do": [
+     {
+      "on": "Britain",
+      "show": [
+       "GB"
+      ]
+     },
+     {
+      "on": "Canada",
+      "label": {
+       "text": "NEW FRANCE → BRITAIN",
+       "lon": -72,
+       "lat": 49,
+       "color": "#7a1010"
+      }
+     },
+     {
+      "on": "powerful",
+      "hl": [
+       "British American colonies"
+      ],
+      "color": "#c8102e"
+     }
+    ]
+   },
+   {
+    "say": "Twenty years later, it had lost almost all of America.",
+    "do": [
+     {
+      "on": "lost",
+      "mood": [
+       "GB",
+       "shock"
+      ]
+     },
+     {
+      "on": "America",
+      "show": [
+       "US"
+      ]
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -74.8,
+     "lat": 40.3,
+     "scale": 4200
+    },
+    "say": "And one of the men who helped it lose was Benjamin Franklin, while his own son fought just as hard to keep America British.",
+    "do": [
+     {
+      "on": "Benjamin",
+      "show": [
+       "BEN"
+      ]
+     },
+     {
+      "on": "son",
+      "show": [
+       "WIL"
+      ]
+     },
+     {
+      "on": "British",
+      "mood": [
+       "WIL",
+       "angry"
+      ]
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -50,
+     "lat": 42,
+     "scale": 650
+    },
+    "say": "This is the American Revolution. The Revolutionary War, 1775 to 1783. But you've probably only ever heard one side of it. Today, you get both.",
+    "do": [
+     {
+      "on": "Revolution",
+      "card": {
+       "kind": "caption",
+       "text": "The American Revolution",
+       "sub": "1775 – 1783",
+       "dur": 4.5
+      }
+     },
+     {
+      "on": "both",
+      "link": [
+       "GB",
+       "US"
+      ],
+      "color": "#ff6a1f"
+     }
+    ]
+   },
+   {
+    "do": [
+     {
+      "logo": 1
+     }
+    ],
+    "pause": 3.6
+   }
+  ]
+ },
+ "chapters": [
+  {
+   "title": "The Bill",
+   "years": "1763",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "cam": {
+      "lon": -0.5,
+      "lat": 51.4,
+      "scale": 4500
+     },
+     "say": "Let's start in London, because this story starts with a bill.",
+     "do": [
+      {
+       "on": "London",
+       "pin": "London"
+      }
+     ]
+    },
+    {
+     "say": "Britain had just won the Seven Years' War. In North America, that meant throwing France out of Canada. Wonderful news. Bells, fireworks, songs about how wonderful Britain was.",
+     "do": [
+      {
+       "on": "Bells",
+       "happy": [
+        "GB"
+       ]
+      },
+      {
+       "on": "fireworks",
+       "fire": {
+        "at": [
+         -0.13,
+         51.6
+        ],
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Then somebody opened the accounts.",
+     "do": [
+      {
+       "on": "accounts",
+       "mood": [
+        "GB",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The national debt had nearly doubled, to about one hundred and thirty two million pounds. Back home, landowners were already handing a quarter of their income to the government.",
+     "do": [
+      {
+       "on": "debt",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "National debt, 1763 (pounds)",
+          132600000
+         ],
+         [
+          "Yearly cost of 7,500 soldiers in America (pounds)",
+          225000
+         ]
+        ],
+        "note": "Our American Revolution, The Price of Peace",
+        "dur": 7
+       }
+      }
+     ]
+    },
+    {
+     "say": "And now Britain had a huge new empire to guard. Keeping seven and a half thousand soldiers in America would cost about two hundred and twenty five thousand pounds a year."
+    },
+    {
+     "cam": {
+      "lon": -38,
+      "lat": 45,
+      "scale": 650
+     },
+     "say": "So London looked across the Atlantic at its thirteen colonies, and thought something that seemed perfectly reasonable in London.",
+     "do": [
+      {
+       "on": "colonies",
+       "hl": [
+        "British American colonies"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GB",
+       "text": "We just saved you from France. Now pay up."
+      },
+      {
+       "who": "US",
+       "text": "Happy to discuss it. Who do we vote for?"
+      },
+      {
+       "who": "GB",
+       "text": "Nobody, actually."
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -79,
+      "lat": 39,
+      "scale": 1700
+     },
+     "date": "7 OCTOBER 1763",
+     "say": "There was a second thing. To stop yet another expensive war with the Native nations in the west, the King drew a line on the map along the mountains. The Royal Proclamation of 1763.",
+     "do": [
+      {
+       "on": "line",
+       "line": [
+        [
+         -73.5,
+         45.0
+        ],
+        [
+         -75.5,
+         42.5
+        ],
+        [
+         -78.5,
+         40.5
+        ],
+        [
+         -80.5,
+         38.0
+        ],
+        [
+         -82.5,
+         36.0
+        ],
+        [
+         -84.0,
+         34.5
+        ],
+        [
+         -84.5,
+         31.5
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 200
+      }
+     ]
+    },
+    {
+     "say": "West of it, the land was reserved for Indigenous peoples. Colonists were told not to cross. From London, this looked like peace on the cheap.",
+     "do": [
+      {
+       "on": "West",
+       "label": {
+        "text": "INDIGENOUS LANDS",
+        "lon": -86,
+        "lat": 38,
+        "color": "#f3e7cf"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Now the other side. The colonists had fought in that war too. Their men had died in it. And their reward was a new tax, and a wall of paper across the land they had hoped to settle.",
+     "do": [
+      {
+       "on": "other",
+       "mood": [
+        "US",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "And here's the part that really stung. They had no one in Parliament. Not one seat. People three thousand miles away were deciding what they paid, and they had no vote at all.",
+     "do": [
+      {
+       "on": "Parliament",
+       "card": {
+        "kind": "big",
+        "text": "SEATS IN PARLIAMENT: 0",
+        "dur": 3.4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Both sides were right about something. That's what makes this story hard. London was right that someone had to pay. The colonists were right that someone should have asked them.",
+     "do": [
+      {
+       "on": "London",
+       "mood": [
+        "GB",
+        "neutral"
+       ]
+      },
+      {
+       "on": "colonists",
+       "mood": [
+        "US",
+        "neutral"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cheap Tea, Expensive Tempers",
+   "years": "1765 – 1774",
+   "mood": "tension",
+   "beats": [
+    {
+     "cam": {
+      "lon": -73,
+      "lat": 41.5,
+      "scale": 2600
+     },
+     "date": "1765",
+     "say": "The first try was the Stamp Act of 1765. Newspapers, contracts, even playing cards would need a paid British stamp.",
+     "do": [
+      {
+       "on": "Stamp",
+       "card": {
+        "kind": "stamp",
+        "text": "STAMP ACT",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "The colonies exploded. Boycotts, riots, tax collectors chased out of town. Within a year, Parliament backed down and repealed it.",
+     "do": [
+      {
+       "on": "exploded",
+       "angry": [
+        "US"
+       ]
+      },
+      {
+       "on": "repealed",
+       "mood": [
+        "GB",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then it tried again, with new taxes on glass, paint, paper and tea. More boycotts. Most of those went too. All except one, kept on purpose, to prove a point. The tax on tea."
+    },
+    {
+     "cam": {
+      "lon": -71.06,
+      "lat": 42.36,
+      "scale": 9000
+     },
+     "date": "5 MARCH 1770",
+     "say": "In Boston, troops and townspeople were now living on top of each other. In March 1770, a crowd threw snowballs and worse at a group of British soldiers. The soldiers fired. Five people died.",
+     "do": [
+      {
+       "on": "Boston",
+       "pin": "Boston"
+      },
+      {
+       "on": "snowballs",
+       "snow": 1
+      },
+      {
+       "on": "fired",
+       "guns": {
+        "at": [
+         -71.06,
+         42.36
+        ],
+        "dur": 2
+       }
+      },
+      {
+       "on": "died",
+       "dim": 0.4
+      }
+     ]
+    },
+    {
+     "say": "Patriots called it the Boston Massacre. And here's a detail most people don't know. The soldiers' defence lawyer at their trial was John Adams, a future President. Most of the soldiers walked free. Even the Revolution had people trying to be fair.",
+     "do": [
+      {
+       "on": "Massacre",
+       "dim": 0
+      },
+      {
+       "on": "Adams",
+       "card": {
+        "kind": "caption",
+        "text": "John Adams",
+        "sub": "defended the British soldiers",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "date": "16 DECEMBER 1773",
+     "say": "Now, the tea. In 1773, Parliament passed the Tea Act. And here's the irony. It made legal British tea cheaper, cheap enough to undercut the smugglers. Colonists would pay less for tea than before, as long as they accepted Parliament's right to tax it."
+    },
+    {
+     "say": "They did not accept.",
+     "do": [
+      {
+       "on": "accept",
+       "angry": [
+        "US"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "On the night of the sixteenth of December 1773, men disguised as Mohawk warriors climbed aboard the ships, and dumped three hundred and forty two chests of tea into Boston Harbor. About ten thousand pounds' worth.",
+     "do": [
+      {
+       "on": "ships",
+       "sfx": "waves"
+      },
+      {
+       "on": "dumped",
+       "explode": {
+        "at": [
+         -71.05,
+         42.355
+        ],
+        "size": 0.5
+       }
+      },
+      {
+       "on": "chests",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Chests of tea in the harbour",
+          342
+         ],
+         [
+          "Value (pounds)",
+          10000
+         ]
+        ],
+        "note": "Our American Revolution, 16 December 1773",
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "say": "The most expensive tea party in history, thrown over tea that had just got cheaper.",
+     "do": [
+      {
+       "on": "expensive",
+       "happy": [
+        "US"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -0.5,
+      "lat": 51.4,
+      "scale": 4500
+     },
+     "say": "From London, this wasn't a protest. It was a crime. Private property, destroyed by a mob. So Parliament punished Boston. It closed the harbour until the tea was paid for, and took control of the colony's government.",
+     "do": [
+      {
+       "on": "crime",
+       "mood": [
+        "GB",
+        "angry"
+       ]
+      },
+      {
+       "on": "closed",
+       "card": {
+        "kind": "doc",
+        "title": "Boston Port Act, 1774",
+        "lines": [
+         "The harbour is closed",
+         "until the tea is paid for."
+        ],
+        "dur": 5
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -73,
+      "lat": 40,
+      "scale": 1500
+     },
+     "say": "London thought it was making an example of one city. Instead, it gave twelve other colonies a reason to stand next to it.",
+     "do": [
+      {
+       "on": "twelve",
+       "hl": [
+        "British American colonies"
+       ],
+       "color": "#2a5bd7"
+      },
+      {
+       "on": "stand",
+       "angry": [
+        "GB",
+        "US"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Last Chance",
+   "years": "1775",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": -71.3,
+      "lat": 42.45,
+      "scale": 9000
+     },
+     "date": "19 APRIL 1775",
+     "say": "On the nineteenth of April 1775, British troops marched out of Boston to seize colonial weapons at Concord. At Lexington, someone fired. Nobody knows who. By the end of the day, the war had started.",
+     "do": [
+      {
+       "on": "Lexington",
+       "pin": "Lexington"
+      },
+      {
+       "on": "fired",
+       "guns": {
+        "at": [
+         -71.23,
+         42.45
+        ],
+        "dur": 3
+       }
+      },
+      {
+       "on": "war",
+       "smoke": {
+        "at": [
+         -71.3,
+         42.45
+        ],
+        "dur": 8
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -71.06,
+      "lat": 42.37,
+      "scale": 12000
+     },
+     "date": "17 JUNE 1775",
+     "say": "Two months later, the rebels dug in on the hills above Boston. The plan was to fortify a place called Bunker Hill. They fortified the wrong hill. Most of the fighting happened on Breed's Hill, next door. History still calls it the Battle of Bunker Hill.",
+     "do": [
+      {
+       "on": "Bunker",
+       "pin": "Boston"
+      },
+      {
+       "on": "wrong",
+       "card": {
+        "kind": "stamp",
+        "text": "WRONG HILL",
+        "dur": 2.6
+       }
+      }
+     ]
+    },
+    {
+     "say": "British troops marched straight up the slope, into the guns. Twice they were thrown back. On the third attack, the rebels ran out of gunpowder, and the British took the hill.",
+     "do": [
+      {
+       "on": "marched",
+       "arrow": [
+        [
+         -71.04,
+         42.36
+        ],
+        [
+         -71.06,
+         42.375
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "guns",
+       "guns": {
+        "at": [
+         -71.06,
+         42.375
+        ],
+        "dur": 4
+       }
+      },
+      {
+       "on": "took",
+       "mood": [
+        "GB",
+        "happy"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Britain won. And it was a disaster. More than a thousand British soldiers were killed or wounded. The Americans lost about four hundred and fifty. A few more victories like that, and Britain would have no army left.",
+     "do": [
+      {
+       "on": "thousand",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "British killed or wounded",
+          1054
+         ],
+         [
+          "American losses",
+          450
+         ]
+        ],
+        "note": "Britannica, Battle of Bunker Hill",
+        "dur": 6
+       }
+      },
+      {
+       "on": "disaster",
+       "mood": [
+        "GB",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -75.16,
+      "lat": 39.95,
+      "scale": 6000
+     },
+     "date": "5 JULY 1775",
+     "say": "And yet, even now, most colonists did not want independence. In July 1775, Congress sent the King one last letter. The Olive Branch Petition. It called the colonists his faithful subjects, and Britain their mother country. It begged him to help them make peace.",
+     "do": [
+      {
+       "on": "Olive",
+       "card": {
+        "kind": "doc",
+        "title": "The Olive Branch Petition",
+        "lines": [
+         "To the King's Most Excellent Majesty:",
+         "your faithful subjects…",
+         "…our Mother country."
+        ],
+        "dur": 6
+       }
+      },
+      {
+       "on": "peace",
+       "mood": [
+        "US",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -0.13,
+      "lat": 51.5,
+      "scale": 6000
+     },
+     "say": "Now the other side. To London, this was a letter from people who had just killed or wounded a thousand of the King's soldiers. The King refused it. He didn't even look at it. His answer, months later, declared the colonies in open rebellion.",
+     "do": [
+      {
+       "on": "refused",
+       "mood": [
+        "GB",
+        "angry"
+       ]
+      },
+      {
+       "on": "rebellion",
+       "card": {
+        "kind": "stamp",
+        "text": "OPEN REBELLION",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "It was the last chance to stop the war with words. Both sides were too angry, too proud, or too far away to take it."
+    }
+   ]
+  },
+  {
+   "title": "Father Against Son",
+   "years": "1775 – 1776",
+   "mood": "tension",
+   "beats": [
+    {
+     "cam": {
+      "lon": -0.13,
+      "lat": 51.5,
+      "scale": 6000
+     },
+     "date": "JANUARY 1774",
+     "say": "Now rewind a little, because here's where the Franklins come in. In 1774, Benjamin Franklin wasn't a revolutionary. He was in London, the colonies' man at court, still trying to keep the empire together. He was famous, admired, and proud to be British.",
+     "do": [
+      {
+       "on": "Franklin",
+       "move": [
+        "BEN",
+        -0.4,
+        51.2
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then, in front of the King's Privy Council, he was publicly humiliated. He stood in silence while a government lawyer called him, more or less, a thief and a liar, in front of a laughing room.",
+     "do": [
+      {
+       "on": "humiliated",
+       "mood": [
+        "BEN",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "He went home to America. He did not come back a loyal Briton.",
+     "do": [
+      {
+       "on": "home",
+       "move": [
+        "BEN",
+        -75.16,
+        39.6
+       ]
+      },
+      {
+       "on": "loyal",
+       "mood": [
+        "BEN",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -74.6,
+      "lat": 40.4,
+      "scale": 5200
+     },
+     "date": "13 JANUARY 1775",
+     "say": "His son William had taken a different road. Since 1763 he had been the Royal Governor of New Jersey, appointed by the Crown. In January 1775, he stood up in front of the New Jersey assembly, and urged it to stay loyal to King George.",
+     "do": [
+      {
+       "on": "William",
+       "pin": "New Jersey"
+      },
+      {
+       "on": "loyal",
+       "happy": [
+        "WIL"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "One Franklin was becoming a rebel. The other was the King's man. Same family, same dinner table, opposite sides of the line.",
+     "do": [
+      {
+       "on": "line",
+       "angry": [
+        "BEN",
+        "WIL"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -75.16,
+      "lat": 39.95,
+      "scale": 6000
+     },
+     "date": "4 JULY 1776",
+     "say": "A year later, on the fourth of July 1776, the colonies declared independence. Benjamin Franklin helped edit the Declaration, and signed it.",
+     "do": [
+      {
+       "on": "independence",
+       "card": {
+        "kind": "doc",
+        "title": "Declaration of Independence",
+        "lines": [
+         "4 July 1776",
+         "Signed: B. Franklin"
+        ],
+        "dur": 5
+       }
+      },
+      {
+       "on": "independence",
+       "happy": [
+        "US"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "By then, his son had already been arrested.",
+     "do": [
+      {
+       "on": "arrested",
+       "mood": [
+        "WIL",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -73.19,
+      "lat": 41.75,
+      "scale": 7000
+     },
+     "say": "William Franklin was removed from office and held prisoner. After the rebels found he was still helping the Loyalist cause, he was put in solitary confinement in Litchfield, Connecticut, for eight months.",
+     "do": [
+      {
+       "on": "Litchfield",
+       "pin": "Litchfield"
+      },
+      {
+       "on": "Litchfield",
+       "move": [
+        "WIL",
+        -73.19,
+        41.75
+       ]
+      }
+     ]
+    },
+    {
+     "say": "While he was there, his wife was dying. He asked for permission to see her. It was refused. She died while he was still in his cell.",
+     "do": [
+      {
+       "on": "dying",
+       "dim": 0.45
+      },
+      {
+       "on": "died",
+       "mood": [
+        "WIL",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "His father was in France by then, working on the deal that would decide the whole war.",
+     "do": [
+      {
+       "on": "France",
+       "dim": 0
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -45,
+      "lat": 45,
+      "scale": 650
+     },
+     "say": "From William's side, he had kept an oath to his King. From Benjamin's side, his son had chosen a tyrant over his own people. That was the American Revolution in one family. And thousands of families split exactly the same way."
+    }
+   ]
+  },
+  {
+   "title": "The Rented Army",
+   "years": "1776",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": 5,
+      "lat": 51,
+      "scale": 2200
+     },
+     "say": "Britain had a problem. It had the best navy in the world, and a fairly small army, spread across a whole empire. So it did what European powers did all the time back then. It rented one.",
+     "do": [
+      {
+       "on": "navy",
+       "sfx": "waves"
+      },
+      {
+       "on": "rented",
+       "show": [
+        "HE"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Six German states signed contracts with King George. Their princes got paid, and their soldiers got shipped across the ocean. About thirty thousand men in total. More than half came from Hesse-Kassel and Hesse-Hanau, so the Americans called all of them Hessians.",
+     "do": [
+      {
+       "on": "Six",
+       "pin": "Kassel"
+      },
+      {
+       "on": "shipped",
+       "arrow": [
+        [
+         9.48,
+         51.31
+        ],
+        [
+         -74.0,
+         40.6
+        ]
+       ],
+       "color": "#d21034",
+       "big": 1
+      },
+      {
+       "on": "thirty",
+       "card": {
+        "kind": "big",
+        "text": "≈ 30,000 GERMAN SOLDIERS",
+        "dur": 3.4
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GB",
+       "text": "Perfectly normal. Everyone rents soldiers."
+      },
+      {
+       "who": "US",
+       "text": "You hired foreign soldiers to fight us?"
+      }
+     ]
+    },
+    {
+     "say": "To London, this was ordinary. To the colonists, it was proof the King saw them as enemies, not subjects. Hiring foreign soldiers made it into the Declaration of Independence, as one of the complaints against him."
+    },
+    {
+     "cam": {
+      "lon": -74.8,
+      "lat": 40.2,
+      "scale": 9000
+     },
+     "date": "26 DECEMBER 1776",
+     "say": "And now, the most famous night of the war. By Christmas 1776, the Revolution was losing badly. Washington's army had been chased out of New York, and was shrinking by the day.",
+     "do": [
+      {
+       "on": "Christmas",
+       "snow": 1
+      },
+      {
+       "on": "losing",
+       "mood": [
+        "US",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "On the night after Christmas, he crossed the icy Delaware River, and hit the Hessian garrison at Trenton by surprise. Nearly a thousand of them were captured.",
+     "do": [
+      {
+       "on": "crossed",
+       "arrow": [
+        [
+         -74.87,
+         40.3
+        ],
+        [
+         -74.76,
+         40.22
+        ]
+       ],
+       "color": "#2a5bd7",
+       "big": 1
+      },
+      {
+       "on": "Trenton",
+       "pin": "Trenton"
+      },
+      {
+       "on": "surprise",
+       "guns": {
+        "at": [
+         -74.76,
+         40.22
+        ],
+        "dur": 3
+       }
+      },
+      {
+       "on": "captured",
+       "happy": [
+        "US"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "It wasn't a big battle. But it told everyone the rebellion was still alive.",
+     "do": [
+      {
+       "on": "alive",
+       "snow": 0
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 9.48,
+      "lat": 51.0,
+      "scale": 3000
+     },
+     "say": "For the Germans, this was a war that had nothing to do with them. Roughly a quarter of them never went home. About seven and a half thousand died, most of them from disease, not bullets.",
+     "do": [
+      {
+       "on": "quarter",
+       "mood": [
+        "HE",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -72,
+      "lat": 43,
+      "scale": 1500
+     },
+     "say": "And between five and six thousand chose to stay. Many settled in British Canada. Others joined German communities in Pennsylvania and nearby, and became Americans, in the country they had been sent to stop."
+    }
+   ]
+  },
+  {
+   "title": "The World Joins In",
+   "years": "1777 – 1780",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": -73.64,
+      "lat": 43.01,
+      "scale": 6000
+     },
+     "date": "OCTOBER 1777",
+     "say": "In October 1777, a whole British army marching down from Canada was trapped, and forced to surrender at Saratoga.",
+     "do": [
+      {
+       "on": "marching",
+       "arrow": [
+        [
+         -73.4,
+         45.5
+        ],
+        [
+         -73.64,
+         43.1
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "Saratoga",
+       "pin": "Saratoga"
+      },
+      {
+       "on": "surrender",
+       "mood": [
+        "GB",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 2.35,
+      "lat": 48.86,
+      "scale": 5000
+     },
+     "say": "In Paris, Benjamin Franklin had been waiting for exactly this.",
+     "do": [
+      {
+       "on": "Paris",
+       "move": [
+        "BEN",
+        1.6,
+        48.5
+       ]
+      },
+      {
+       "on": "waiting",
+       "show": [
+        "FR"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "France had lost Canada to Britain only fifteen years earlier. It had been looking for revenge ever since. Saratoga proved the Americans could actually win. So in early 1778, France signed an alliance with the United States.",
+     "do": [
+      {
+       "on": "revenge",
+       "happy": [
+        "FR"
+       ]
+      },
+      {
+       "on": "alliance",
+       "link": [
+        "FR",
+        "US"
+       ],
+       "color": "#c9a227"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -30,
+      "lat": 30,
+      "scale": 420
+     },
+     "say": "Spain joined the war the next year. Then the Dutch. And here is the dark joke of the whole story.",
+     "do": [
+      {
+       "on": "Spain",
+       "angry": [
+        "FR",
+        "GB"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Britain had started taxing the colonies to pay for its last war against France. Now it was fighting France again. And Spain. And the Dutch. On almost every ocean at once. The bill it had tried to send to America was getting bigger by the month.",
+     "do": [
+      {
+       "on": "ocean",
+       "explode": {
+        "at": [
+         -62,
+         15
+        ],
+        "size": 0.6
+       }
+      },
+      {
+       "on": "bigger",
+       "mood": [
+        "GB",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -76,
+      "lat": 39,
+      "scale": 1500
+     },
+     "say": "Inside America, this wasn't one people against a king. It was closer to a civil war. Loyalists and Patriots burned each other's farms. Neighbours turned in neighbours.",
+     "do": [
+      {
+       "on": "burned",
+       "fire": {
+        "at": [
+         -77.5,
+         39.5
+        ],
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "say": "And for some people, the choice of side was about freedom, in the most literal sense."
+    },
+    {
+     "cam": {
+      "lon": -76.7,
+      "lat": 37.3,
+      "scale": 6000
+     },
+     "date": "NOVEMBER 1775",
+     "say": "In 1775, the British governor of Virginia, Lord Dunmore, promised freedom to enslaved people who escaped from rebel masters and joined the British.",
+     "do": [
+      {
+       "on": "Virginia",
+       "pin": "Williamsburg"
+      }
+     ]
+    },
+    {
+     "say": "Over the war, British offers like that freed about twenty thousand people. Black soldiers fought on the American side too. Both armies talked about liberty. Only one of them was offering it to the people the other side held in chains, and even that offer was made to win a war, not to end slavery.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "big",
+        "text": "≈ 20,000 FREED",
+        "dur": 3.2
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -84,
+      "lat": 38,
+      "scale": 1500
+     },
+     "say": "And many of the Native nations of the west fought alongside Britain, for a simple reason. The Proclamation Line of 1763 was the only thing protecting their land from the settlers. If the Americans won, that line would disappear."
+    }
+   ]
+  },
+  {
+   "title": "It Is All Over",
+   "years": "1781",
+   "mood": "clock",
+   "beats": [
+    {
+     "cam": {
+      "lon": -76.4,
+      "lat": 37.2,
+      "scale": 6500
+     },
+     "date": "SEPTEMBER 1781",
+     "say": "By 1781, the British commander in the south, Lord Cornwallis, had marched his army to Yorktown, on the coast of Virginia. The plan was simple. Sit by the sea, and let the Royal Navy bring supplies, or carry the army away.",
+     "do": [
+      {
+       "on": "Yorktown",
+       "pin": "Yorktown"
+      },
+      {
+       "on": "sea",
+       "sfx": "waves"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -76.0,
+      "lat": 37.0,
+      "scale": 3500
+     },
+     "say": "The Royal Navy never came. A French fleet got there first, fought the British ships off the coast, and closed the door.",
+     "do": [
+      {
+       "on": "French",
+       "arrow": [
+        [
+         -73.5,
+         35.5
+        ],
+        [
+         -75.9,
+         37.0
+        ]
+       ],
+       "color": "#c9a227",
+       "big": 1
+      },
+      {
+       "on": "fought",
+       "cannon": [
+        -75.7,
+        36.9
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -76.51,
+      "lat": 37.24,
+      "scale": 9000
+     },
+     "say": "On land, American and French armies dug in around the town, and started shelling it, day and night.",
+     "do": [
+      {
+       "on": "shelling",
+       "explode": {
+        "at": [
+         -76.51,
+         37.24
+        ],
+        "size": 0.7
+       }
+      },
+      {
+       "on": "night",
+       "explode": {
+        "at": [
+         -76.49,
+         37.25
+        ],
+        "size": 0.5
+       }
+      }
+     ]
+    },
+    {
+     "date": "19 OCTOBER 1781",
+     "say": "On the nineteenth of October 1781, Cornwallis surrendered his entire army.",
+     "do": [
+      {
+       "on": "surrendered",
+       "card": {
+        "kind": "stamp",
+        "text": "SURRENDER",
+        "dur": 3
+       }
+      },
+      {
+       "on": "army",
+       "happy": [
+        "US"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Legend says the British band played a song called The World Turned Upside Down, as they marched out. Nobody can prove it. But it's hard to think of a better soundtrack."
+    },
+    {
+     "cam": {
+      "lon": -0.13,
+      "lat": 51.5,
+      "scale": 6000
+     },
+     "date": "25 NOVEMBER 1781",
+     "say": "The news took more than a month to cross the Atlantic. It reached London on the twenty fifth of November. The Prime Minister, Lord North, had spent the whole war insisting it could still be won. When he heard, he is said to have cried out.",
+     "do": [
+      {
+       "on": "Atlantic",
+       "arrow": [
+        [
+         -76.5,
+         37.2
+        ],
+        [
+         -0.13,
+         51.5
+        ]
+       ],
+       "color": "#e0b45a",
+       "sfx": "waves"
+      }
+     ]
+    },
+    {
+     "say": "Oh God. It is all over.",
+     "do": [
+      {
+       "on": "Oh",
+       "card": {
+        "kind": "quote",
+        "text": "Oh God! It is all over.",
+        "who": "Lord North, 25 November 1781",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Four months later, he resigned. From London, it wasn't only a defeat. It was the end of an idea, that the empire could be one people, under one Parliament, on both sides of an ocean.",
+     "do": [
+      {
+       "on": "resigned",
+       "mood": [
+        "GB",
+        "sad"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The New Line",
+   "years": "1783",
+   "mood": "grief",
+   "beats": [
+    {
+     "cam": {
+      "lon": 2.35,
+      "lat": 48.86,
+      "scale": 5000
+     },
+     "date": "3 SEPTEMBER 1783",
+     "say": "On the third of September 1783, Britain signed the Treaty of Paris, and recognised the United States. And once again, men drew a line on a map.",
+     "do": [
+      {
+       "on": "Treaty",
+       "card": {
+        "kind": "doc",
+        "title": "Treaty of Paris",
+        "lines": [
+         "3 September 1783",
+         "The United States are free,",
+         "sovereign and independent."
+        ],
+        "dur": 5
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -84,
+      "lat": 44,
+      "scale": 1250
+     },
+     "say": "The new border ran through the middle of the Great Lakes, west to a place called the Lake of the Woods, and then down the Mississippi River.",
+     "do": [
+      {
+       "on": "border",
+       "era": "1783"
+      },
+      {
+       "on": "Lakes",
+       "line": [
+        [
+         -74.7,
+         45.0
+        ],
+        [
+         -77.5,
+         43.6
+        ],
+        [
+         -79.05,
+         43.1
+        ],
+        [
+         -81.5,
+         42.2
+        ],
+        [
+         -83.0,
+         42.3
+        ],
+        [
+         -82.4,
+         44.5
+        ],
+        [
+         -83.8,
+         46.1
+        ],
+        [
+         -84.4,
+         46.5
+        ],
+        [
+         -87.5,
+         47.6
+        ],
+        [
+         -89.6,
+         48.0
+        ],
+        [
+         -94.9,
+         49.3
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 300
+      },
+      {
+       "on": "Mississippi",
+       "line": [
+        [
+         -95.2,
+         47.2
+        ],
+        [
+         -93.1,
+         45.0
+        ],
+        [
+         -91.2,
+         43.0
+        ],
+        [
+         -91.0,
+         40.0
+        ],
+        [
+         -89.4,
+         37.0
+        ],
+        [
+         -91.2,
+         31.0
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 300
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -95,
+      "lat": 48.6,
+      "scale": 6000
+     },
+     "say": "There was one small problem. The negotiators thought the Mississippi started up there. It doesn't. That mistake, fixed with more lines later, is part of the reason a small piece of Minnesota is still cut off from the rest of the United States today.",
+     "do": [
+      {
+       "on": "Minnesota",
+       "pin": "Lake of the Woods"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -84,
+      "lat": 39,
+      "scale": 1400
+     },
+     "say": "The old Proclamation Line was gone. The Native nations who had fought beside Britain weren't even invited to the talks. Britain simply handed over land it had promised to protect."
+    },
+    {
+     "cam": {
+      "lon": -55,
+      "lat": 30,
+      "scale": 520
+     },
+     "say": "And the losers had to leave. About sixty thousand Loyalists left the new United States, taking about fifteen thousand enslaved people with them. Many went north, into what is now Canada. Others went to Jamaica and the Bahamas.",
+     "do": [
+      {
+       "on": "north",
+       "arrow": [
+        [
+         -74,
+         40.7
+        ],
+        [
+         -63.57,
+         44.65
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "Jamaica",
+       "arrow": [
+        [
+         -79.5,
+         32.8
+        ],
+        [
+         -77.3,
+         18.1
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "Bahamas",
+       "pin": "Nassau"
+      },
+      {
+       "on": "sixty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Loyalists who left",
+          60000
+         ],
+         [
+          "Enslaved people taken with them",
+          15000
+         ]
+        ],
+        "note": "Maya Jasanoff, Harvard Gazette",
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -35,
+      "lat": 25,
+      "scale": 420
+     },
+     "say": "Some of the Black Loyalists, who had been promised freedom, went on to Africa. In 1791, they founded Freetown, in Sierra Leone.",
+     "do": [
+      {
+       "on": "Africa",
+       "arrow": [
+        [
+         -63.57,
+         44.65
+        ],
+        [
+         -13.23,
+         8.48
+        ]
+       ],
+       "color": "#e0b45a",
+       "big": 1
+      },
+      {
+       "on": "Freetown",
+       "pin": "Freetown"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -60,
+      "lat": 40,
+      "scale": 650
+     },
+     "say": "Around twenty five thousand Americans died in the Revolution. Only about seven thousand of them in battle. Many of the rest died of disease as prisoners. Around seven and a half thousand German soldiers died. And many thousands of British soldiers never came home.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "American deaths (estimate)",
+          25000
+         ],
+         [
+          "German soldiers who died",
+          7500
+         ]
+        ],
+        "note": "AmericanRevolution.org; History.com",
+        "dur": 7
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -75,
+      "lat": 40,
+      "scale": 3000
+     },
+     "say": "And the Franklins? At the peace talks, Benjamin refused to let the British win any compensation for the Loyalists. His son was one of them.",
+     "do": [
+      {
+       "on": "Franklins",
+       "move": [
+        "BEN",
+        -75.4,
+        39.7
+       ]
+      },
+      {
+       "on": "son",
+       "move": [
+        "WIL",
+        -74.2,
+        40.9
+       ]
+      }
+     ]
+    },
+    {
+     "say": "William wrote to his father in 1784, hoping to make peace. He got a cold reply. They met once more, a year later, briefly, to talk about money.",
+     "do": [
+      {
+       "on": "cold",
+       "mood": [
+        "BEN",
+        "neutral"
+       ]
+      },
+      {
+       "on": "money",
+       "mood": [
+        "WIL",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "In his will, Benjamin left his son some land in Nova Scotia that was worth almost nothing. His reasoning, more or less: if the British had won, there would have been nothing to leave anyone.",
+     "do": [
+      {
+       "on": "will",
+       "card": {
+        "kind": "doc",
+        "title": "Last will of B. Franklin",
+        "lines": [
+         "To my son William:",
+         "lands in Nova Scotia."
+        ],
+        "dur": 5
+       }
+      }
+     ]
+    },
+    {
+     "say": "William Franklin died in London in 1813. Today, nobody knows exactly where his grave is.",
+     "do": [
+      {
+       "on": "died",
+       "hide": [
+        "WIL"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -90,
+      "lat": 48,
+      "scale": 700
+     },
+     "say": "Today, this is the longest border between two countries anywhere in the world. On one side, a country built by the people who won. On the other, a country built partly by the people who lost, and who refused to stop being British.",
+     "do": [
+      {
+       "on": "border",
+       "hl": [
+        "United States of America"
+       ],
+       "color": "#2a5bd7"
+      },
+      {
+       "on": "other",
+       "hl": [
+        "Quebec"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "say": "Two neighbours. Two very different memories of the same war."
+    }
+   ]
+  }
+ ],
+ "outro": {
+  "text": "Every border has two sides. And this one began with a father and a son who never forgave each other.",
+  "question": "Would you have been a Patriot or a Loyalist?",
+  "next": "ROME vs CARTHAGE"
+ },
+ "thumb": {
+  "scene": "relief",
+  "dread": 1,
+  "seed": 41,
+  "topic": "AMERICA · 1776",
+  "map": {
+   "era": "1783",
+   "center": [
+    -74,
+    41
+   ],
+   "scale": 1700,
+   "cx": 0.42,
+   "cy": 0.45,
+   "hl": [
+    {
+     "names": [
+      "United States of America"
+     ],
+     "color": "#e8141c"
+    }
+   ]
+  },
+  "layout": "spotlight",
+  "anchor": {
+   "portrait": "smoke/portraits/bfranklin.png"
+  },
+  "hidden": {
+   "portrait": "smoke/portraits/wfranklin.png"
+  },
+  "hook": [
+   "HIS OWN SON",
+   "FOUGHT HIM"
+  ],
+  "hi": "OWN SON"
+ },
+ "hook": "In 1763, Britain won the biggest war the world had ever seen. Twenty years later, it had lost America.",
+ "about": "The American Revolution (1775–1783), told from both sides: the war debt that started it, the Stamp Act and the Boston Tea Party, Bunker Hill, Benjamin Franklin and his Loyalist son William, the 30,000 German soldiers Britain hired, Yorktown, and the Treaty of Paris that drew the border between the United States and Canada.",
+ "tags": [
+  "american revolution",
+  "revolutionary war",
+  "1776",
+  "american revolution explained",
+  "benjamin franklin",
+  "william franklin",
+  "king george iii",
+  "boston tea party",
+  "bunker hill",
+  "hessians",
+  "loyalists",
+  "yorktown",
+  "treaty of paris 1783",
+  "us history",
+  "british history"
+ ],
+ "localizations": {
+  "de": {
+   "title": "Wie Großbritannien Amerika verlor: Die Amerikanische Revolution von beiden Seiten",
+   "description": "1763 gewann Großbritannien den größten Krieg, den die Welt je gesehen hatte. Zwanzig Jahre später hatte es Amerika verloren.\n\nDie Amerikanische Revolution (1775–1783), erzählt von beiden Seiten: die Kriegsschulden, die alles auslösten, die Boston Tea Party, Bunker Hill, Benjamin Franklin und sein königstreuer Sohn William, die 30.000 deutschen Soldaten, die Großbritannien anheuerte, Yorktown und der Frieden von Paris, der die Grenze zwischen den USA und Kanada zog."
+  },
+  "es": {
+   "title": "Cómo Gran Bretaña perdió América: la Revolución Americana desde ambos lados",
+   "description": "En 1763, Gran Bretaña ganó la guerra más grande que el mundo había visto. Veinte años después, había perdido América.\n\nLa Revolución Americana (1775–1783) contada desde ambos lados: la deuda de guerra que lo empezó todo, el Motín del Té de Boston, Bunker Hill, Benjamin Franklin y su hijo leal a la Corona, William, los 30.000 soldados alemanes contratados por Gran Bretaña, Yorktown y el Tratado de París que trazó la frontera entre Estados Unidos y Canadá."
+  },
+  "fr": {
+   "title": "Comment la Grande-Bretagne a perdu l'Amérique : la Révolution américaine des deux côtés",
+   "description": "En 1763, la Grande-Bretagne a gagné la plus grande guerre que le monde ait connue. Vingt ans plus tard, elle avait perdu l'Amérique.\n\nLa Révolution américaine (1775–1783) racontée des deux côtés : la dette de guerre à l'origine de tout, la Boston Tea Party, Bunker Hill, Benjamin Franklin et son fils loyaliste William, les 30 000 soldats allemands engagés par la Grande-Bretagne, Yorktown et le traité de Paris qui a tracé la frontière entre les États-Unis et le Canada."
+  },
+  "pt": {
+   "title": "Como a Grã-Bretanha perdeu a América: a Revolução Americana dos dois lados",
+   "description": "Em 1763, a Grã-Bretanha venceu a maior guerra que o mundo já tinha visto. Vinte anos depois, tinha perdido a América.\n\nA Revolução Americana (1775–1783) contada dos dois lados: a dívida de guerra que começou tudo, a Festa do Chá de Boston, Bunker Hill, Benjamin Franklin e seu filho legalista William, os 30.000 soldados alemães contratados pela Grã-Bretanha, Yorktown e o Tratado de Paris que traçou a fronteira entre os Estados Unidos e o Canadá."
+  }
+ },
+ "musicEra": "1700s",
+ "abTest": [
+  {
+   "title": "How Britain Lost America — Minute by Minute",
+   "thumb": {}
+  },
+  {
+   "title": "The 20 Years That Made America",
+   "thumb": {
+    "layout": "circled",
+    "anchor": {
+     "portrait": "smoke/portraits/bfranklin.png"
+    },
+    "hidden": {
+     "portrait": "smoke/portraits/wfranklin.png"
+    },
+    "hook": [
+     "HIS SON CHOSE THE KING"
+    ],
+    "hi": "KING"
+   }
+  },
+  {
+   "title": "How Britain Lost America — Minute by Minute",
+   "thumb": {
+    "layout": "dossier",
+    "hidden": {
+     "portrait": "smoke/portraits/wfranklin.png"
+    },
+    "hook": [
+     "FATHER",
+     "VS SON"
+    ],
+    "hi": "SON",
+    "caption": "William Franklin",
+    "stamp": "UNTOLD STORY"
+   }
+  }
+ ]
+}

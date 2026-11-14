@@ -1,0 +1,217 @@
+{
+ "id": "sb-american-revolution-short2",
+ "brand": "smoke",
+ "short": true,
+ "narrator": "bm_george",
+ "voices": {
+  "GB": "bm_lewis",
+  "US": "am_michael"
+ },
+ "title": "America Begged the King for Peace in 1775. He Never Even READ It #shorts",
+ "era": "1783",
+ "musicEra": "1700s",
+ "balls": {
+  "GB": {
+   "flag": "GB1707",
+   "label": "BRITAIN",
+   "at": [
+    -70.1,
+    42.2
+   ],
+   "r": 58,
+   "char": {
+    "preset": "king_george",
+    "facing": -1
+   }
+  },
+  "US": {
+   "flag": "US13",
+   "label": "13 COLONIES",
+   "at": [
+    -72.0,
+    42.45
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "Philadelphia": [
+   -75.16,
+   39.95
+  ],
+  "London": [
+   -0.12,
+   51.5
+  ]
+ },
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "cam": {
+     "lon": -75.16,
+     "lat": 39.95,
+     "scale": 12000
+    },
+    "date": "JULY 1775",
+    "say": "In July 1775, America sent King George a peace offer. He never read it.",
+    "do": [
+     {
+      "show": [
+       "US",
+       "GB"
+      ]
+     },
+     {
+      "on": "July",
+      "pin": "Philadelphia"
+     },
+     {
+      "on": "never",
+      "card": {
+       "kind": "big",
+       "text": "NEVER READ",
+       "dur": 2.4
+      }
+     }
+    ]
+   },
+   {
+    "say": "Congress was already at war. But a lawyer named John Dickinson wrote a humble petition anyway, begging the King to stop it. Twelve colonies signed.",
+    "do": [
+     {
+      "on": "Dickinson",
+      "zoomhit": 1
+     },
+     {
+      "on": "humble",
+      "mood": [
+       "US",
+       "sad"
+      ]
+     },
+     {
+      "on": "Twelve",
+      "card": {
+       "kind": "big",
+       "text": "PLEASE, SIRE",
+       "dur": 2.4
+      }
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -30,
+     "lat": 46,
+     "scale": 1100
+    },
+    "say": "It sailed to London. But news of the battle at Bunker Hill had sailed first.",
+    "do": [
+     {
+      "on": "London",
+      "pin": "London"
+     },
+     {
+      "on": "Bunker",
+      "guns": {
+       "at": [
+        -0.12,
+        51.5
+       ],
+       "dur": 1.6
+      }
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -0.12,
+     "lat": 51.5,
+     "scale": 14000
+    },
+    "say": "On August twenty-third, the King declared the colonies in open rebellion.",
+    "do": [
+     {
+      "on": "declared",
+      "card": {
+       "kind": "stamp",
+       "text": "REBELLION",
+       "dur": 2.6
+      }
+     },
+     {
+      "on": "rebellion",
+      "angry": [
+       "GB"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "Then a letter from John Adams was intercepted. It called the petition pointless. Hawks in London said the peace offer was a trick.",
+    "do": [
+     {
+      "on": "Adams",
+      "zoomhit": 1
+     },
+     {
+      "on": "trick",
+      "mood": [
+       "GB",
+       "angry"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "The messengers were told: since His Majesty had not received it on the throne, no answer would be given.",
+    "do": [
+     {
+      "on": "answer",
+      "dim": 0.4
+     },
+     {
+      "on": "throne",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -40,
+     "lat": 44,
+     "scale": 2500
+    },
+    "say": "Adams got what he wanted. Colonists saw only two choices: independence, or submission. The full story, from both sides, is on Smoke and Borders.",
+    "do": [
+     {
+      "on": "independence",
+      "mood": [
+       "US",
+       "happy"
+      ]
+     },
+     {
+      "on": "submission",
+      "mood": [
+       "GB",
+       "smug"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Olive Branch Petition: https://en.wikipedia.org/wiki/Olive_Branch_Petition"
+ ],
+ "playlists": [
+  "sb-shorts"
+ ]
+}

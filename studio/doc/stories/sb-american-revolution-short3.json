@@ -1,0 +1,203 @@
+{
+ "id": "sb-american-revolution-short3",
+ "brand": "smoke",
+ "short": true,
+ "narrator": "bm_george",
+ "voices": {
+  "GB": "bm_lewis",
+  "US": "am_michael"
+ },
+ "title": "The Boston Tea Party Was a Protest Against CHEAPER Tea #shorts",
+ "era": "1783",
+ "musicEra": "1700s",
+ "balls": {
+  "GB": {
+   "flag": "GB1707",
+   "label": "BRITAIN",
+   "at": [
+    -70.1,
+    42.2
+   ],
+   "r": 58,
+   "char": {
+    "preset": "king_george",
+    "facing": -1
+   }
+  },
+  "US": {
+   "flag": "US13",
+   "label": "13 COLONIES",
+   "at": [
+    -72.0,
+    42.45
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "Boston": [
+   -71.06,
+   42.36
+  ],
+  "London": [
+   -0.12,
+   51.5
+  ]
+ },
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.36,
+     "scale": 15000
+    },
+    "date": "1773",
+    "say": "In 1773, Americans dumped a ship's worth of tea into Boston Harbor. The tea was getting cheaper.",
+    "do": [
+     {
+      "show": [
+       "US",
+       "GB"
+      ]
+     },
+     {
+      "on": "Boston",
+      "pin": "Boston"
+     },
+     {
+      "on": "cheaper",
+      "card": {
+       "kind": "big",
+       "text": "CHEAPER?!",
+       "dur": 2.4
+      }
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -30,
+     "lat": 46,
+     "scale": 1100
+    },
+    "say": "Parliament's Tea Act let the East India Company sell tea for about two shillings a pound. Smugglers charged two shillings and a penny. Legal tea had cost three.",
+    "do": [
+     {
+      "on": "Parliament",
+      "pin": "London"
+     },
+     {
+      "on": "two",
+      "zoomhit": 1
+     },
+     {
+      "on": "three",
+      "mood": [
+       "US",
+       "shock"
+      ]
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.36,
+     "scale": 20000
+    },
+    "say": "But the tea still carried a small British tax. The company tried to hide it. It failed.",
+    "do": [
+     {
+      "on": "tax",
+      "card": {
+       "kind": "stamp",
+       "text": "STILL TAXED",
+       "dur": 2.6
+      }
+     },
+     {
+      "on": "failed",
+      "mood": [
+       "GB",
+       "shock"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "On the night of December sixteenth, men dressed as Mohawk warriors boarded three ships. In three hours, they threw about three hundred and forty chests into the water.",
+    "do": [
+     {
+      "on": "December",
+      "zoomhit": 1
+     },
+     {
+      "on": "boarded",
+      "angry": [
+       "US"
+      ]
+     },
+     {
+      "on": "water",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "say": "The tea was worth nearly ten thousand pounds to the company.",
+    "do": [
+     {
+      "on": "pounds",
+      "card": {
+       "kind": "big",
+       "text": "£9,659",
+       "dur": 2.4
+      }
+     },
+     {
+      "on": "company",
+      "mood": [
+       "GB",
+       "angry"
+      ]
+     }
+    ]
+   },
+   {
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.3,
+     "scale": 12000
+    },
+    "say": "And the name? Nobody called it the Boston Tea Party until 1834. Before that, it was just: the destruction of the tea. The full story, from both sides, is on Smoke and Borders.",
+    "do": [
+     {
+      "on": "1834",
+      "card": {
+       "kind": "stamp",
+       "text": "NAMED IN 1834",
+       "dur": 2.6
+      }
+     },
+     {
+      "on": "Before",
+      "dim": 0.4
+     }
+    ]
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Boston Tea Party: https://en.wikipedia.org/wiki/Boston_Tea_Party"
+ ],
+ "playlists": [
+  "sb-shorts"
+ ]
+}

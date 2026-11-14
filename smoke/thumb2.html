@@ -1,0 +1,198 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Smoke & Borders thumbnails v2 (owner review 9 Nov 2026): the topic people know + the hidden person's role, with suspense.
+     window.SPEC = {layout, scene, topic, hook:[line1, line2], hi (word to colour), hidden:{preset,mood,...}, anchor:{preset,mood,...},
+                    map:{era, center:[lon,lat], scale, hl:[{names,color}]}, mark:"?" , stamp:"UNTOLD STORY", year:"146 BC"} -->
+<style>
+@font-face{font-family:ANTON;src:url(brand/fonts/anton.woff2)}
+@font-face{font-family:OSW;src:url(brand/fonts/oswald-700.woff2)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style>
+<script src="../studio/doc/vendor/d3-array.min.js"></script>
+<script src="../studio/doc/vendor/d3-geo.min.js"></script>
+<script src="../studio/doc/vendor/topojson-client.min.js"></script>
+<script src="brand/chars.js"></script>
+<script src="../studio/doc/vendor/gameflags.js"></script>
+</head><body><canvas id="c" width="1280" height="720"></canvas>
+<script>
+const W=1280,H=720,INK='#0d0907',YEL='#ffd21f',RED='#e3242b',EMBER='#ff6a1f';const x=document.getElementById('c').getContext('2d');
+let seed=7;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+
+// ---------- scenes ----------
+function sceneFire(){ // a city burning at night: orange sky, black skyline, flame tongues, smoke columns
+  let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#1a0705');g.addColorStop(.35,'#6b1a0b');g.addColorStop(.62,'#e2571c');g.addColorStop(.75,'#ffb347');g.addColorStop(1,'#3a0d06');x.fillStyle=g;x.fillRect(0,0,W,H);
+  x.save();x.filter='blur(14px)';for(let i=0;i<9;i++){let cx=W*(.08+i*.11+rnd()*.04),cy=H*.55;for(let k=0;k<14;k++){cy-=30+rnd()*20;cx+=(rnd()-.4)*30;x.fillStyle=`rgba(25,12,10,${.55-k*.03})`;x.beginPath();x.arc(cx,cy,40+k*9,0,7);x.fill()}}x.restore();
+  const base=H*.66;x.fillStyle='#0c0605';x.beginPath();x.moveTo(0,H);let px=0;while(px<W){const w=26+rnd()*60,h=70+rnd()*120;x.lineTo(px,base-h);if(rnd()<.3){x.lineTo(px+w*.5,base-h-25-rnd()*35)}x.lineTo(px+w,base-h);px+=w}x.lineTo(W,H);x.closePath();x.fill();
+  const tx=W*.5,ty=base-150;x.beginPath();x.moveTo(tx-150,ty);x.lineTo(tx,ty-70);x.lineTo(tx+150,ty);x.closePath();x.fill();x.fillRect(tx-140,ty,280,16);for(let i=0;i<7;i++)x.fillRect(tx-128+i*40,ty+16,15,150);
+  x.save();x.globalCompositeOperation='lighter';for(let i=0;i<70;i++){const fx=rnd()*W,fy=base-40-rnd()*110,h=60+rnd()*170,w=18+rnd()*34,gr=x.createLinearGradient(0,fy,0,fy-h);gr.addColorStop(0,'rgba(255,230,140,.9)');gr.addColorStop(.4,'rgba(255,120,20,.65)');gr.addColorStop(1,'rgba(180,30,0,0)');
+    x.fillStyle=gr;x.beginPath();x.moveTo(fx-w,fy);x.bezierCurveTo(fx-w,fy-h*.4,fx-w*.2,fy-h*.6,fx+(rnd()-.5)*w,fy-h);x.bezierCurveTo(fx+w*.3,fy-h*.6,fx+w,fy-h*.4,fx+w,fy);x.closePath();x.fill()}x.restore();
+  for(let i=0;i<180;i++){x.fillStyle=`rgba(255,${150+rnd()*90|0},60,${rnd()})`;x.fillRect(rnd()*W,rnd()*H*.8,2+rnd()*3,2+rnd()*3)}}
+function sceneSea(){ // warships at dusk, searchlights
+  let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0b1a33');g.addColorStop(.55,'#2d4f7a');g.addColorStop(.62,'#d98b4a');g.addColorStop(.64,'#1a2b44');g.addColorStop(1,'#08111f');x.fillStyle=g;x.fillRect(0,0,W,H);
+  x.save();x.globalCompositeOperation='lighter';for(const [sx,a] of [[W*.2,-.5],[W*.75,.35]]){x.save();x.translate(sx,H*.6);x.rotate(a);const gr=x.createLinearGradient(0,0,0,-H);gr.addColorStop(0,'rgba(255,255,220,.35)');gr.addColorStop(1,'rgba(255,255,220,0)');x.fillStyle=gr;x.beginPath();x.moveTo(-8,0);x.lineTo(-90,-H);x.lineTo(90,-H);x.lineTo(8,0);x.fill();x.restore()}x.restore();
+  for(const [sx,s] of [[W*.18,1],[W*.62,1.4],[W*.9,.8]]){x.save();x.translate(sx,H*.63);x.scale(s,s);x.fillStyle='#0a0f18';x.beginPath();x.moveTo(-170,0);x.lineTo(170,0);x.lineTo(140,30);x.lineTo(-150,30);x.closePath();x.fill();x.fillRect(-60,-40,90,40);x.fillRect(-20,-80,22,40);x.fillRect(40,-28,60,28);x.fillRect(-120,-20,50,20);x.fillRect(-150,-14,60,5);x.fillRect(100,-18,70,5);x.restore()}
+  x.strokeStyle='rgba(180,210,255,.18)';x.lineWidth=2;for(let i=0;i<60;i++){const wy=H*.66+rnd()*H*.34,wx=rnd()*W;x.beginPath();x.moveTo(wx,wy);x.quadraticCurveTo(wx+20,wy-6,wx+40,wy);x.stroke()}}
+let LAND;async function sceneMap(M){if(!LAND){const l=await(await fetch('../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land)}
+  const gj=await(await fetch('../studio/doc/data/world_'+M.era+'.geojson')).json();gj.features=gj.features.filter(f=>f.geometry&&d3.geoArea(f)<6);
+  const pr=d3.geoMercator().center(M.center).scale(M.scale).translate([W*(M.cx||.5),H*.55]),p=d3.geoPath(pr,x);
+  x.fillStyle='#1d3d5c';x.fillRect(0,0,W,H);x.beginPath();p(LAND);x.fillStyle='#d8c08a';x.fill();
+  const hl=Object.fromEntries((M.hl||[]).flatMap(h=>h.names.map(n=>[n,h.color])));
+  for(const f of gj.features){const n=f.properties.NAME;if(hl[n]){x.beginPath();p(f);x.fillStyle=hl[n];x.fill()}}
+  x.beginPath();p(LAND);x.strokeStyle='rgba(40,25,10,.7)';x.lineWidth=2;x.stroke()}
+// satellite-style relief map (Ziro History look, owner 11 Nov 2026): deep blue sea with a lighter shelf, land in greens, yellows and
+// browns with hill shading from layered noise, the subject country solid red with a white glow. M = {era, center, scale, cx, cy, hl:[{names,color}]}
+function noiseCanvas(w,h,seedN){const c=document.createElement('canvas');c.width=w;c.height=h;const g=c.getContext('2d');const img=g.createImageData(w,h);let sd=seedN||3;const r=()=>(sd=(sd*16807)%2147483647)/2147483647;
+  const oct=[];for(const n of[8,16,32,64,128,256]){const a=new Float32Array((n+1)*(n+1));for(let i=0;i<a.length;i++)a[i]=r();oct.push([n,a])}
+  const val=(fx,fy)=>{let v=0,amp=.5,tot=0;for(const [n,a] of oct){const X=fx*n,Y=fy*n,i=Math.floor(X),j=Math.floor(Y),u=X-i,t=Y-j,s_=q=>q*q*(3-2*q),A=a[j*(n+1)+i],B=a[j*(n+1)+i+1],C=a[(j+1)*(n+1)+i],D=a[(j+1)*(n+1)+i+1];
+    v+=amp*((A*(1-s_(u))+B*s_(u))*(1-s_(t))+(C*(1-s_(u))+D*s_(u))*s_(t));tot+=amp;amp*=.6}return v/tot};
+  // colour ramp like a satellite mosaic: forest green -> grass -> dry yellow -> ochre -> mountain brown
+  const ramp=[[0,[52,110,48]],[.38,[88,142,60]],[.5,[150,170,82]],[.6,[214,190,110]],[.7,[188,140,82]],[.82,[140,104,72]],[1,[220,214,206]]];
+  const col=v=>{for(let k=1;k<ramp.length;k++)if(v<=ramp[k][0]){const [a0,c0]=ramp[k-1],[a1,c1]=ramp[k],t=(v-a0)/(a1-a0);return c0.map((q,m)=>q+(c1[m]-q)*t)}return ramp[ramp.length-1][1]};
+  for(let y=0;y<h;y++)for(let x_=0;x_<w;x_++){const fx=x_/w*.998,fy=y/h*.998,v=val(fx,fy),dv=val(Math.min(.998,fx+1/w),Math.min(.998,fy+1/h))-v,shade=1+dv*9;
+    const c_=col(Math.max(0,Math.min(1,(v-.3)*1.7)));const k=(y*w+x_)*4;img.data[k]=Math.min(255,c_[0]*shade);img.data[k+1]=Math.min(255,c_[1]*shade);img.data[k+2]=Math.min(255,c_[2]*shade);img.data[k+3]=255}
+  g.putImageData(img,0,0);return c}
+let NOISE;async function sceneRelief(M){if(!LAND){const l=await(await fetch('../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land)}
+  const gj=await(await fetch('../studio/doc/data/world_'+(M.era||'1994')+'.geojson')).json();gj.features=gj.features.filter(f=>f.geometry&&d3.geoArea(f)<6);
+  const pr=d3.geoMercator().center(M.center).scale(M.scale).translate([W*(M.cx||.5),H*(M.cy||.55)]),p=d3.geoPath(pr,x);
+  let g=x.createRadialGradient(W*.5,H*.5,50,W*.5,H*.5,W*.8);g.addColorStop(0,'#1f6fd1');g.addColorStop(1,'#0a2f7a');x.fillStyle=g;x.fillRect(0,0,W,H);
+  x.save();x.beginPath();p(LAND);x.strokeStyle='rgba(120,220,255,.55)';x.lineWidth=26;x.filter='blur(10px)';x.stroke();x.restore();
+  NOISE=NOISE||noiseCanvas(640,360,M.seed||5);x.save();x.beginPath();p(LAND);x.clip();x.imageSmoothingEnabled=true;x.drawImage(NOISE,0,0,W,H);x.restore();
+  x.beginPath();for(const f of gj.features)p(f);x.strokeStyle='rgba(60,40,25,.35)';x.lineWidth=1.2;x.stroke();
+  const hl=(M.hl||[]);for(const h of hl){x.save();x.beginPath();for(const f of gj.features)if(h.names.includes(f.properties.NAME))p(f);
+    x.shadowColor=h.glow||'rgba(255,255,255,.95)';x.shadowBlur=22;x.fillStyle=h.color||'#e8141c';x.fill();x.shadowBlur=0;x.lineJoin='round';x.strokeStyle='rgba(255,255,255,.9)';x.lineWidth=4;x.stroke();x.strokeStyle=h.edge||'#8a0a0e';x.lineWidth=1.5;x.stroke();x.restore()}
+  x.beginPath();p(LAND);x.strokeStyle='rgba(30,40,60,.55)';x.lineWidth=1.5;x.stroke()}
+// ---------- no text over a person (owner, 12 Nov 2026: "make sure no image is covered with text") ----------
+// Every text box and every person is recorded while a layout draws; draw() then shrinks any person that touches text
+// (feet stay where they are, so the head moves down and away from a hook above) and draws again, up to 12 times.
+let TXT=[],PPL=[],ADJ={},PI=0;const BOX={};
+function cbox(im){if(BOX[im.src])return BOX[im.src];const c=document.createElement('canvas'),k=c.getContext('2d'),s=Math.min(1,200/im.height);c.width=Math.ceil(im.width*s);c.height=Math.ceil(im.height*s);k.drawImage(im,0,0,c.width,c.height);
+  const d=k.getImageData(0,0,c.width,c.height).data;let x0=c.width,y0=c.height,x1=0,y1=0;for(let j=0;j<c.height;j++)for(let i=0;i<c.width;i++)if(d[(j*c.width+i)*4+3]>60){if(i<x0)x0=i;if(i>x1)x1=i;if(j<y0)y0=j;if(j>y1)y1=j}
+  return BOX[im.src]=[x0/c.width,y0/c.height,(x1+1)/c.width,(y1+1)/c.height]}
+function addP(im,X,Y,w,h){const b=im?cbox(im):[.1,0,.9,1];PPL.push({i:PI-1,r:[X+b[0]*w,Y+b[1]*h,X+b[2]*w,Y+b[3]*h]})}
+function adj(){return ADJ[PI++]||1}
+function hits(){const out=new Set();for(const p of PPL)for(const t of TXT)if(p.r[0]<t[2]-4&&p.r[2]>t[0]+4&&p.r[1]<t[3]-4&&p.r[3]>t[1]+4)out.add(p.i);return [...out]}
+function labelBox(t,X,Y,size,bg='#0b0b0b',fg='#fff'){x.font=size+'px ANTON';const w=x.measureText(t).width+size*.5;TXT.push([X,Y,X+w,Y+size*1.22]);x.save();x.shadowColor='rgba(0,0,0,.45)';x.shadowBlur=10;x.fillStyle=bg;x.fillRect(X,Y,w,size*1.22);x.restore();x.fillStyle=fg;x.textAlign='left';x.textBaseline='middle';x.fillText(t,X+size*.25,Y+size*.64);return w}
+function grade(dark){const v=x.createRadialGradient(W*.5,H*.45,H*.2,W*.5,H*.5,W*.75);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,`rgba(0,0,0,${dark||.6})`);x.fillStyle=v;x.fillRect(0,0,W,H)}
+
+function sceneStreet(){ // an old town street at dusk, 1910s: facades, windows, cobbles, a motorcar
+  let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#2b2440');g.addColorStop(.5,'#b06a48');g.addColorStop(.7,'#e8b27a');g.addColorStop(1,'#3a2a22');x.fillStyle=g;x.fillRect(0,0,W,H);
+  let px=-20;while(px<W){const w=120+rnd()*120,h=H*(.45+rnd()*.25),y=H*.78-h;x.fillStyle=`rgb(${40+rnd()*20|0},${30+rnd()*15|0},${35+rnd()*15|0})`;x.fillRect(px,y,w,h);x.fillRect(px-6,y-14,w+12,16);
+    for(let r=0;r<4;r++)for(let c=0;c<3;c++){const lit=rnd()<.4;x.fillStyle=lit?'rgba(255,200,120,.85)':'rgba(15,12,20,.8)';x.fillRect(px+16+c*(w-32)/3,y+24+r*h/5,(w-32)/3-14,h/5-26)}px+=w+4}
+  x.fillStyle='#2a201b';x.fillRect(0,H*.78,W,H*.22);x.strokeStyle='rgba(255,220,180,.08)';x.lineWidth=2;for(let i=0;i<40;i++){x.beginPath();x.moveTo(rnd()*W,H*.8+rnd()*H*.2);x.lineTo(rnd()*W,H*.8+rnd()*H*.2);x.stroke()}
+  x.save();x.translate(W*.5,H*.8);x.fillStyle='#0e0b0a';x.beginPath();x.moveTo(-170,0);x.lineTo(-160,-55);x.lineTo(-60,-60);x.lineTo(-40,-110);x.lineTo(60,-110);x.lineTo(80,-60);x.lineTo(170,-55);x.lineTo(175,0);x.closePath();x.fill();
+  for(const wx of[-110,110]){x.beginPath();x.arc(wx,0,34,0,7);x.fill()}x.restore()}
+// a countryball for FlagBomb (flag: a game code like "GER", or {"h":[...colours]} / {"v":[...]} stripes)
+function ball(spec,cx,cy,r,opt={}){x.save();x.translate(cx,cy);if(opt.glow){x.shadowColor=opt.glow;x.shadowBlur=60}else{x.shadowColor='rgba(0,0,0,.7)';x.shadowBlur=28}
+  x.beginPath();x.arc(0,0,r,0,7);x.fillStyle='#fff';x.fill();x.shadowBlur=0;x.save();x.beginPath();x.arc(0,0,r,0,7);x.clip();const F=spec.flag;
+  if(typeof F==='string'&&window.GFLAGS&&GFLAGS[F])GFLAGS[F](x,-r*1.15,-r,r*2.3,r*2);else if(F&&(F.h||F.v)){const c=F.h||F.v;c.forEach((col,i)=>{x.fillStyle=col;F.h?x.fillRect(-r,-r+2*r*i/c.length,2*r,2*r/c.length+1):x.fillRect(-r+2*r*i/c.length,-r,2*r/c.length+1,2*r)})}
+  const g=x.createRadialGradient(-r*.4,-r*.45,r*.1,0,0,r*1.05);g.addColorStop(0,'rgba(255,255,255,.35)');g.addColorStop(.6,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(0,0,30,.4)');x.fillStyle=g;x.fillRect(-r,-r,2*r,2*r);x.restore();
+  x.lineWidth=r*.07;x.strokeStyle=INK;x.beginPath();x.arc(0,0,r,0,7);x.stroke();if(opt.dim){x.fillStyle='rgba(0,0,0,.45)';x.beginPath();x.arc(0,0,r,0,7);x.fill()}
+  const m=spec.mood||'neutral',f=spec.facing||1;for(const s of[-1,1]){x.save();x.translate(s*r*.32+f*r*.08,-r*.08);const big=m==='shock'?1.3:1;x.fillStyle='#fff';x.strokeStyle=INK;x.lineWidth=r*.05;x.beginPath();x.ellipse(0,0,r*.2*big,(m==='smug'?.14:.24)*r*big,0,0,7);x.fill();x.stroke();
+    x.fillStyle=INK;x.beginPath();x.arc(f*r*.05,r*.02,r*(m==='shock'?.06:.09),0,7);x.fill();
+    if(m==='angry'||m==='sad'){x.lineWidth=r*.07;x.beginPath();const t=(m==='angry'?-1:1)*s;x.moveTo(-r*.2,-r*.3-t*r*.07);x.lineTo(r*.2,-r*.3+t*r*.07);x.stroke()}x.restore()}
+  if(spec.sweat){x.fillStyle='#8fd3ff';x.strokeStyle=INK;x.lineWidth=r*.03;x.beginPath();x.moveTo(r*.75,-r*.6);x.quadraticCurveTo(r*.9,-r*.3,r*.75,-r*.25);x.quadraticCurveTo(r*.6,-r*.3,r*.75,-r*.6);x.fill();x.stroke()}
+  const hat=spec.hat;x.fillStyle=spec.hatCol||'#111';x.strokeStyle=INK;x.lineWidth=r*.05;
+  if(hat==='crown'){x.fillStyle='#e8b923';x.beginPath();x.moveTo(-r*.55,-r*.85);for(let i=0;i<=4;i++){x.lineTo(-r*.55+i*r*.275,-r*(i%2?1.05:1.35))}x.lineTo(r*.55,-r*.85);x.closePath();x.fill();x.stroke()}
+  if(hat==='cap'){x.beginPath();x.moveTo(-r*.62,-r*.78);x.lineTo(-r*.7,-r*1.18);x.quadraticCurveTo(0,-r*1.42,r*.7,-r*1.18);x.lineTo(r*.62,-r*.78);x.closePath();x.fill();x.stroke();x.fillStyle=spec.bandCol||'#c9a227';x.fillRect(-r*.63,-r*.92,r*1.26,r*.12);x.strokeRect(-r*.63,-r*.92,r*1.26,r*.12);x.fillStyle=spec.hatCol||'#111';x.beginPath();x.ellipse(f*r*.35,-r*.78,r*.5,r*.11,f*.15,0,7);x.fill();x.stroke()}
+  if(hat==='plume'){x.beginPath();x.ellipse(0,-r*.92,r*.5,r*.2,0,Math.PI,0);x.fill();x.stroke();x.fillStyle='#2e8b57';x.beginPath();x.ellipse(r*.25,-r*1.25,r*.12,r*.35,.4,0,7);x.fill();x.stroke()}
+  if(hat==='helmet'){x.fillStyle=spec.hatCol||'#4a4f3a';x.beginPath();x.arc(0,-r*.55,r*.72,Math.PI,0);x.closePath();x.fill();x.stroke();x.beginPath();x.moveTo(0,-r*1.27);x.lineTo(0,-r*1.5);x.lineWidth=r*.1;x.stroke()}
+  if(spec.mustache){x.fillStyle=INK;x.beginPath();x.ellipse(f*r*.06,r*.35,r*.3,r*.07,0,0,7);x.fill()}
+  if(spec.label){x.font=Math.round(r*.32)+'px ANTON';x.textAlign='center';x.textBaseline='top';x.lineWidth=r*.09;x.strokeStyle=INK;x.lineJoin='round';x.strokeText(spec.label,0,r*1.08);x.fillStyle='#fff';x.fillText(spec.label,0,r*1.08)}
+  x.restore()}
+// ---------- pieces ----------
+const PORT={};async function loadPortraits(S){for(const k of['hidden','anchor','left','right','hero'])if(S[k]&&S[k].portrait&&!PORT[S[k].portrait]){const im=new Image();im.src='../'+S[k].portrait;await im.decode();PORT[S[k].portrait]=im}}
+let DREAD=0;   // set by draw(): in the dread look every real portrait is fire-graded, not only red-eyed ones
+function person(spec,cx,base,h,opt={}){if((spec.eyes||DREAD)&&spec.portrait&&PORT[spec.portrait]&&!opt.dim){const hh=h*(spec.zoom||1.15);dreadHero(Object.assign({},spec,{cx:cx/W,scale:hh/H,top:(Math.min(base,H+40)-hh)/H}));return}   // red-eyed, fire-lit (the dread look)
+  const a_=adj();h*=a_;if(spec.portrait&&PORT[spec.portrait]){const im=PORT[spec.portrait],s_=h/im.height*(spec.zoom||1.15),w=im.width*s_;addP(im,cx-w/2,Math.min(base,H+40)-im.height*s_,w,im.height*s_);x.save();if(spec.facing===1&&spec.flipped){x.translate(cx*2,0);x.scale(-1,1)}
+  if(opt.dim)x.filter='brightness(.55) saturate(.7)';x.drawImage(im,cx-w/2,Math.min(base,H+40)-im.height*s_,w,im.height*s_);x.restore();return}
+  if(spec.flag){const r=Math.min(h*.3,200);return ball(spec,cx,Math.max(r*1.55+10,Math.min(base-r*1.3,H-r*.9)),r,opt)}const P=Object.assign({},CHAR_PRESETS[spec.preset]||{},spec);addP(null,cx-h*.45,base-h*1.05,h*.9,h*1.05);const c=document.createElement('canvas');c.width=W;c.height=H+400;const cc=c.getContext('2d');
+  drawChar(cc,cx,base,h,P,1.3);x.save();if(opt.glow){x.shadowColor=opt.glow;x.shadowBlur=60}else{x.shadowColor='rgba(0,0,0,.75)';x.shadowBlur=30}
+  if(opt.dim){x.filter='brightness(.55) saturate(.7)'}x.drawImage(c,0,0);x.restore()}
+function T(s,X,Y,size,fill,al='left',stroke=14){x.font=size+'px ANTON';if(s&&s.trim()){const w=x.measureText(s).width,x0=al==='center'?X-w/2:al==='right'?X-w:X;TXT.push([x0-stroke/2,Y-size*.8,x0+w+stroke/2,Y+size*.08])}x.textAlign=al;x.textBaseline='alphabetic';x.lineJoin='round';x.lineWidth=stroke;x.strokeStyle=INK;x.shadowColor='rgba(0,0,0,.6)';x.shadowBlur=18;x.strokeText(s,X,Y);x.shadowBlur=0;x.fillStyle=fill;x.fillText(s,X,Y)}
+function fit(t,maxW,start){let z=start;x.font=z+'px ANTON';while(x.measureText(t).width>maxW&&z>24){z-=2;x.font=z+'px ANTON'}return z}
+function hookLine(s,X,Y,maxW,start,hi,al='left'){const z=fit(s,maxW,start);x.font=z+'px ANTON';
+  if(!hi||!s.includes(hi)){T(s,X,Y,z,'#fff',al,z*.16);return z}
+  const [a,b]=s.split(hi);const wa=x.measureText(a).width,wh=x.measureText(hi).width,wt=x.measureText(s).width;let sx=al==='center'?X-wt/2:al==='right'?X-wt:X;
+  T(a,sx,Y,z,'#fff','left',z*.16);T(hi,sx+wa,Y,z,YEL,'left',z*.16);T(b,sx+wa+wh,Y,z,'#fff','left',z*.16);return z}
+function topicBar(s,X,Y,al='left',col=RED){x.font='44px ANTON';const w=x.measureText(s).width+36,bx=al==='center'?X-w/2:al==='right'?X-w:X;x.save();x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=14;x.fillStyle=col;x.fillRect(bx,Y,w,62);TXT.push([bx,Y,bx+w,Y+62]);x.restore();
+  x.fillStyle='#fff';x.textAlign='left';x.textBaseline='middle';x.fillText(s,bx+18,Y+33)}
+function stamp(s,X,Y,rot=-.12){x.save();x.translate(X,Y);x.rotate(rot);x.font='54px ANTON';const w=x.measureText(s).width+40;TXT.push([X-w/2-8,Y-52,X+w/2+8,Y+52]);x.strokeStyle=RED;x.lineWidth=7;x.strokeRect(-w/2,-42,w,84);x.fillStyle=RED;x.textAlign='center';x.textBaseline='middle';x.fillText(s,0,4);x.restore()}
+function circleArrow(cx,cy,r,fromX,fromY){x.save();x.strokeStyle=RED;x.lineWidth=12;x.shadowColor='rgba(0,0,0,.6)';x.shadowBlur=12;x.beginPath();x.ellipse(cx,cy,r,r*1.08,-.1,0,Math.PI*1.93);x.stroke();
+  const ang=Math.atan2(cy-fromY,cx-fromX),ex=cx-Math.cos(ang)*r*1.15,ey=cy-Math.sin(ang)*r*1.15;x.beginPath();x.moveTo(fromX,fromY);x.quadraticCurveTo((fromX+ex)/2,fromY-60,ex,ey);x.stroke();
+  x.beginPath();x.moveTo(ex,ey);x.lineTo(ex-Math.cos(ang-.5)*44,ey-Math.sin(ang-.5)*44);x.moveTo(ex,ey);x.lineTo(ex-Math.cos(ang+.5)*44,ey-Math.sin(ang+.5)*44);x.stroke();x.restore()}
+function qmark(X,Y,s){T('?',X,Y,s,YEL,'center',s*.12)}
+
+// the dread look (owner, 11 Nov 2026): fire grade over the map, a field of pale grave crosses fading into smoke, embers.
+// X0..X1 limits it to part of the frame (atlassplit uses one half). Graves and smoke instead of bodies and blood (YouTube's thumbnail policy).
+function dreadBG(S,X0=0,X1=W){x.save();x.beginPath();x.rect(X0,0,X1-X0,H);x.clip();
+    x.save();x.globalCompositeOperation='multiply';x.fillStyle='#c27650';x.fillRect(0,0,W,H);x.restore();
+    let g=x.createLinearGradient(0,H,0,0);g.addColorStop(0,'rgba(255,90,20,.75)');g.addColorStop(.45,'rgba(255,60,10,.18)');g.addColorStop(1,'rgba(20,0,0,.5)');x.save();x.globalCompositeOperation='overlay';x.fillStyle=g;x.fillRect(0,0,W,H);x.restore();
+    // the field of graves, row after row into the smoke
+    const hz=H*(S.horizon||.6);
+    // fire burning along the horizon, so the graves stand out black against it
+    x.save();x.globalCompositeOperation='lighter';for(const [fx,fr,fa] of [[.18,.42,.55],[.42,.35,.45],[.05,.25,.4]]){const fg=x.createRadialGradient(W*fx,hz,0,W*fx,hz,W*fr);fg.addColorStop(0,`rgba(255,150,50,${fa})`);fg.addColorStop(.4,`rgba(230,70,20,${fa*.45})`);fg.addColorStop(1,'rgba(200,40,10,0)');x.fillStyle=fg;x.save();x.translate(0,hz);x.scale(1,.45);x.translate(0,-hz);x.fillRect(0,hz-W*fr,W,W*fr*2);x.restore()}x.restore();
+    let gg=x.createLinearGradient(0,hz,0,H);gg.addColorStop(0,'rgba(25,8,4,0)');gg.addColorStop(.25,'rgba(25,8,4,.75)');gg.addColorStop(1,'#0b0302');x.fillStyle=gg;x.fillRect(0,hz-40,W,H);
+    // graves only for stories with deaths ("graves": 0 turns them off)
+    if(S.graves!==0)for(let r=26;r>=0;r--){const f=r/26,y=hz+Math.pow(1-f,2.1)*(H-hz)*1.05,sc=.1+Math.pow(1-f,2.2)*1.35,gap=150*sc+14,fog=Math.pow(f,.8);
+      for(let i=-1;i*gap<(X1-X0)*(S.graveW||.66);i++){const cx=X0+i*gap+(r%2)*gap*.5+Math.sin(r*7.3+i)*gap*.08,ch=120*sc,cw=10*sc+2;// pale stone crosses lit by the fire, fading into the smoke row by row
+        x.fillStyle=`rgba(${232-fog*110|0},${206-fog*140|0},${178-fog*140|0},${.95-fog*.55})`;x.fillRect(cx-cw/2,y-ch,cw,ch);x.fillRect(cx-ch*.32,y-ch*.74,ch*.64,cw*.9);
+        x.fillStyle=`rgba(40,12,6,${.45-fog*.3})`;x.fillRect(cx,y-ch,cw/2,ch);x.fillRect(cx-ch*.32,y-ch*.74+cw*.5,ch*.64,cw*.4);x.fillStyle='rgba(0,0,0,.35)';x.fillRect(cx-cw*.5,y-2,cw*2.6,3*sc+1)}}
+    // smoke rolling over the far rows, embers in the air
+    for(let i=0;i<14;i++){const sx=X0+rnd()*(X1-X0)*.8,sy=hz-60+rnd()*160,sr=180+rnd()*260,sg=x.createRadialGradient(sx,sy,0,sx,sy,sr);sg.addColorStop(0,'rgba(70,40,30,.38)');sg.addColorStop(1,'rgba(70,40,30,0)');x.fillStyle=sg;x.fillRect(sx-sr,sy-sr,sr*2,sr*2)}
+    x.save();x.globalCompositeOperation='lighter';for(let i=0;i<160;i++){const ex=rnd()*W,ey=rnd()*H,er=1+rnd()*3.5;x.fillStyle=`rgba(255,${120+rnd()*100|0},40,${.25+rnd()*.6})`;x.beginPath();x.arc(ex,ey,er,0,7);x.fill()}x.restore();
+  x.restore()}
+// the real portrait, darkened from the top, lit by fire from below, glowing red eyes (R.eyes = eye centres as fractions of the PNG)
+function dreadHero(R){
+    const a_=adj(),im=PORT[R.portrait],hh0=H*(R.scale||1.32),hh=hh0*a_,sc=hh/im.height,w=im.width*sc,X0=W*(R.cx||.74)-w/2,Y0=H*(R.top!=null?R.top:-.06)+hh0-hh;addP(im,X0,Y0,w,hh);
+    const c=document.createElement('canvas');c.width=W;c.height=H;const k=c.getContext('2d');k.drawImage(im,X0,Y0,w,hh);k.globalCompositeOperation='source-atop';
+    let d=k.createLinearGradient(0,0,0,H);d.addColorStop(0,'rgba(10,2,0,.55)');d.addColorStop(.45,'rgba(10,2,0,.2)');d.addColorStop(1,'rgba(10,2,0,.6)');k.fillStyle=d;k.fillRect(0,0,W,H);
+    k.globalCompositeOperation='multiply';k.fillStyle='#ffc4a0';k.fillRect(0,0,W,H);k.globalCompositeOperation='source-atop';
+    let u=k.createRadialGradient(X0+w*.3,H*1.1,50,X0+w*.3,H*1.1,H*.95);u.addColorStop(0,'rgba(255,110,30,.55)');u.addColorStop(1,'rgba(255,110,30,0)');k.fillStyle=u;k.fillRect(0,0,W,H);k.globalCompositeOperation='destination-in';k.drawImage(im,X0,Y0,w,hh);   // multiply painted the empty area too: keep only the person
+    x.save();x.shadowColor='rgba(0,0,0,.9)';x.shadowBlur=50;x.drawImage(c,0,0);x.restore();
+    x.save();x.globalCompositeOperation='lighter';for(const [ex,ey] of (R.eyes||[])){const px=X0+ex*w,py=Y0+ey*hh,z=hh/1100;
+      for(const [rr,a] of [[60,.28],[22,.75],[8,.95]]){const eg=x.createRadialGradient(px,py,0,px,py,rr*z);eg.addColorStop(0,`rgba(255,${rr<20?150:30},${rr<20?120:20},${a})`);eg.addColorStop(1,'rgba(255,0,0,0)');x.fillStyle=eg;x.fillRect(px-rr*z,py-rr*z,rr*2*z,rr*2*z)}
+}x.restore();
+}
+// ---------- layouts ----------
+const L={
+  // 6. atlas (Ziro History look): relief map, red country, NAME box + date-range box top left, the known face big on the right
+  atlas:S=>{if(S.word){x.font='96px ANTON'}const P_=S.hidden||S.anchor;if(S.dread)dreadBG(Object.assign({horizon:.62},S));
+    if(P_.eyes)dreadHero(Object.assign({cx:.76,scale:1.3,top:-.12},P_));else person(P_,W*.76,H+60,S.size||690);labelBox(S.name,26,26,S.nameSize||82);labelBox(S.span,26,26+(S.nameSize||82)*1.22+10,40);
+    if(S.word){const z=fit(S.word,W*.5,130);T(S.word,40,H-48,z,'#fff','left',z*.16)}if(S.arrow)circleArrow(S.arrow[0],S.arrow[1],0,S.arrow[2],S.arrow[3])},
+  // 7. atlassplit: then (left) and now (right) on the same relief map, year boxes at the top, two faces, one word at the bottom
+  atlassplit:async S=>{for(const [side,M] of [[0,S.then],[1,S.now]]){x.save();x.beginPath();x.rect(side?W/2:0,0,W/2,H);x.clip();await sceneRelief(Object.assign({cx:side?.75:.25},M));if(!side&&!M.dread){x.fillStyle='rgba(214,178,110,.28)';x.fillRect(0,0,W/2,H)}if(M.dread)dreadBG(Object.assign({graveW:1,horizon:.6},M),side?W/2:0,side?W:W/2);x.restore()}
+    for(const [side,P_,cx] of [[0,S.left,.22],[1,S.right,.78]]){if(!P_)continue;x.save();x.beginPath();x.rect(side?W/2:0,0,W/2,H);x.clip();if(P_.eyes)dreadHero(Object.assign({cx,scale:1.1,top:.02},P_));else person(Object.assign({facing:side?-1:1},P_),W*cx,H+70,S.size||600);x.restore()}
+    x.fillStyle='#fff';x.fillRect(W/2-3,0,6,H);
+    x.font='62px ANTON';const w1=x.measureText(S.years[0]).width+31;labelBox(S.years[0],W/2-24-w1,24,62);labelBox(S.years[1],W/2+24,24,62);
+    if(S.word){const z=fit(S.word,W*.62,150);(S.left||S.right)?T(S.word,W/2,24+76+30+z*.8,z,'#fff','center',z*.16):T(S.word,W/2,H-40,z,'#fff','center',z*.16)}},   // with faces at the bottom, the word goes up under the years
+  // 1. spotlight: hidden person huge on the right, the famous one faded behind; topic bar + two-line hook on the left
+  spotlight:S=>{if(1){grade(.55);if(S.anchor)person(S.anchor,W*.5,H+30,500)}   // final template (12 Nov 2026): the famous face stands between the hook and the hidden person   // the red-eyed face sits under the hook, never behind it (owner, 12 Nov 2026)
+    else{person(S.anchor,W*.36,H+40,520,{dim:1});grade(.55)}person(S.hidden,W*.78,H+120,760,{glow:'rgba(255,200,80,.55)'});
+    const hz_=118;topicBar(S.topic,48,52);hookLine(S.hook[0],48,128+hz_*.85,W*.5,hz_,S.hi);hookLine(S.hook[1]||'',48,128+hz_*1.85,W*.5,hz_,S.hi);if(S.mark)qmark(W*.6,H*.92,200)},
+  // 2. circled: the famous one big, the hidden person small at the edge, circled with an arrow; question + topic
+  circled:S=>{grade(.45);person(S.anchor,W*.32,H+60,700);person(S.hidden,W*.82,H-30,330);circleArrow(W*.82,H*.62,175,W*.55,H*.2);
+    if(1){topicBar(S.topic,W*.03,24);hookLine(S.hook[0],W*.03,H*.29,W*.58,110,S.hi)}else{hookLine(S.hook[0],W*.03,H*.2,W*.58,120,S.hi);topicBar(S.topic,W*.03,H-110)}},
+  // 3. versus: famous vs hidden, face to face, hook across the top, topic bar at the bottom
+  versus:S=>{grade(.5);person(Object.assign({facing:1},S.anchor),W*.22,H+90,640);person(Object.assign({facing:-1},S.hidden),W*.78,H+90,640,{glow:'rgba(255,210,80,.45)'});
+    hookLine(S.hook[0],W/2,150,W*.95,140,S.hi,'center');if(S.hook[1])hookLine(S.hook[1],W/2,290,W*.6,110,S.hi,'center');topicBar(S.topic,W/2,H-92,'center')},
+  // 4. dossier: a pinned photo of the hidden person on a dark board, a red stamp, typed topic
+  dossier:S=>{x.fillStyle='rgba(10,8,6,.55)';x.fillRect(0,0,W,H);x.save();x.translate(W*.7,H*.5);x.rotate(.05);x.shadowColor='rgba(0,0,0,.8)';x.shadowBlur=30;x.fillStyle='#f3ead8';x.fillRect(-230,-300,460,560);x.restore();
+    x.save();x.beginPath();x.rect(W*.7-200,H*.5-270,400,430);x.clip();x.fillStyle='#3b2f25';x.fillRect(0,0,W,H);person(S.hidden,W*.7,H*.5+300,560);x.restore();
+    x.fillStyle='#b3202a';x.beginPath();x.arc(W*.7,H*.5-285,14,0,7);x.fill();x.font='38px OSW';x.fillStyle='#2b2016';x.textAlign='center';x.fillText(S.caption||'',W*.7+10,H*.5+225);
+    stamp(S.stamp||'UNTOLD STORY',W*.73,H*.2);topicBar(S.topic,48,52,'left','#111');hookLine(S.hook[0],48,260,W*.5,140,S.hi);hookLine(S.hook[1]||'',48,400,W*.5,140,S.hi)},
+  // 8. dread (owner, 11 Nov 2026: "realistic Hitler, red eyes... dead bodies on the other side, the map behind"): the burning map,
+  // a field of grave crosses fading into smoke on the left, the real portrait huge on the right, lit by fire from below,
+  // with glowing red eyes. Graves and smoke instead of bodies and blood, which YouTube's thumbnail policy removes or age-restricts.
+  dread:async S=>{dreadBG(S);dreadHero(S.hero);
+    grade(.35);
+    if(S.topic)topicBar(S.topic,44,36);let ty=S.topic?120:40;if(S.sub){labelBox(S.sub,44,ty,52,RED);ty+=78}if(S.word){const z=fit(S.word,W*.55,150);T(S.word,44,ty+z*.95,z,S.wordColor||'#fff','left',z*.16)}},
+  // 5. map + person: the map shows the topic, the hidden person stands over it
+  mapperson:S=>{grade(.5);person(S.hidden,W*.8,H+110,720,{glow:'rgba(255,210,80,.4)'});topicBar(S.topic,48,52);hookLine(S.hook[0],48,250,W*.6,140,S.hi);hookLine(S.hook[1]||'',48,390,W*.6,140,S.hi);if(S.year){x.font='60px ANTON';const w=x.measureText(S.year).width+30;x.fillStyle='#0b0b0b';x.fillRect(48,H-120,w,80);T(S.year,63,H-56,60,'#fff','left',0)}}};
+
+window.draw=async()=>{const S=window.SPEC;await document.fonts.load('80px ANTON');await document.fonts.load('30px OSW');await loadPortraits(S);ADJ={};DREAD=S.dread?1:0;
+  for(let it=0;it<12;it++){seed=S.seed||7;TXT=[];PPL=[];PI=0;x.setTransform(1,0,0,1,0,0);x.globalAlpha=1;x.globalCompositeOperation='source-over';x.filter='none';x.clearRect(0,0,W,H);
+  if(S.scene==='relief')await sceneRelief(S.map);else if(S.scene==='fire')sceneFire();else if(S.scene==='sea')sceneSea();else if(S.scene==='street')sceneStreet();else if(S.scene==='map')await sceneMap(S.map);else{x.fillStyle='#222';x.fillRect(0,0,W,H)}
+  if(S.dread&&!['dread','atlas','atlassplit'].includes(S.layout))dreadBG(Object.assign({horizon:.66,graveW:.6},S));   // any v2 layout can take the dread look (owner, 12 Nov 2026)
+  await L[S.layout||'spotlight'](S);const bad=hits();window.OVERLAP=bad.length;if(!bad.length)break;for(const i of bad)ADJ[i]=(ADJ[i]||1)*.88}
+  window.done=true};
+</script></body></html>

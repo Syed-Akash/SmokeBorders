@@ -1,0 +1,127 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Smoke & Borders branding concepts. ?c=1..5&k=avatar|banner. Served from the repo root (see concepts.py). -->
+<style>
+@font-face{font-family:ANTON;src:url(fonts/anton.woff2)}
+@font-face{font-family:BEBAS;src:url(fonts/bebas.woff2)}
+@font-face{font-family:ARCH;src:url(fonts/archivo-black.woff2)}
+@font-face{font-family:DMS;src:url(fonts/dm-serif.woff2)}
+@font-face{font-family:OSW;src:url(fonts/oswald-700.woff2)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style>
+<script src="../../studio/doc/vendor/d3-array.min.js"></script>
+<script src="../../studio/doc/vendor/d3-geo.min.js"></script>
+<script src="../../studio/doc/vendor/topojson-client.min.js"></script>
+</head><body><canvas id="c"></canvas>
+<script>
+const Q=new URLSearchParams(location.search),C=+Q.get('c')||1,K=Q.get('k')||'avatar';
+const W=K==='banner'?2560:800,H=K==='banner'?1440:800,cv=document.getElementById('c');cv.width=W;cv.height=H;let x=cv.getContext('2d');
+let seed=11;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const EMBER='#ff6a1f',BONE='#f3e7cf',INK='#141110';
+// ---------- helpers ----------
+function bgGrad(c0,c1,r=Math.max(W,H)*.75){const g=x.createRadialGradient(W/2,H/2,0,W/2,H/2,r);g.addColorStop(0,c0);g.addColorStop(1,c1);x.fillStyle=g;x.fillRect(0,0,W,H)}
+function grain(a=10){const im=x.getImageData(0,0,W,H),d=im.data;for(let i=0;i<d.length;i+=4){const n=(rnd()-.5)*a;d[i]+=n;d[i+1]+=n;d[i+2]+=n}x.putImageData(im,0,0)}
+function smoke(pts,n,h,col='170,160,150',a=.06,blur=6){const L=document.createElement('canvas');L.width=W;L.height=H;const o=x;x=L.getContext('2d');
+  for(let i=0;i<n;i++){const s=pts[(rnd()*pts.length)|0],up=rnd()**1.5*h,r=10+up*.4+rnd()*20,cx=s[0]+Math.sin(up/40+i)*up*.25,cy=s[1]-up;
+    const g=x.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,`rgba(${col},${a*(1-up/h)+.01})`);g.addColorStop(1,`rgba(${col},0)`);x.fillStyle=g;x.fillRect(cx-r,cy-r,r*2,r*2)}
+  x=o;x.save();x.filter=`blur(${blur}px)`;x.drawImage(L,0,0);x.restore()}
+function glowLine(pts,w,core='#ffe2b8'){x.save();x.lineJoin=x.lineCap='round';
+  for(const [lw,col,b] of [[w*4,'rgba(255,90,20,.25)',w*6],[w*1.8,'rgba(255,110,30,.7)',w*3],[w,EMBER,w],[w*.35,core,0]]){x.shadowColor=EMBER;x.shadowBlur=b;x.strokeStyle=col;x.lineWidth=lw;x.beginPath();pts.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.stroke()}x.restore()}
+function jag(x0,y0,x1,y1,n,amp){const p=[];for(let i=0;i<=n;i++){const t=i/n;p.push([x0+(x1-x0)*t+(i%n?(rnd()-.5)*amp:0),y0+(y1-y0)*t+(i%n?(rnd()-.5)*amp*.3:0)])}return p}
+function dense(p){const o=[];for(let i=0;i<p.length-1;i++)for(let t=0;t<1;t+=.08)o.push([p[i][0]+(p[i+1][0]-p[i][0])*t,p[i][1]+(p[i+1][1]-p[i][1])*t]);return o}
+function T(s,X,Y,font,fill,al='center',stroke=0,sc=INK){x.font=font;x.textAlign=al;x.textBaseline='alphabetic';if(stroke){x.lineJoin='round';x.lineWidth=stroke;x.strokeStyle=sc;x.strokeText(s,X,Y)}x.fillStyle=fill;x.fillText(s,X,Y)}
+function fit(t,fam,maxW,start){let z=start;x.font=z+'px '+fam;while(x.measureText(t).width>maxW&&z>20){z-=2;x.font=z+'px '+fam}return z+'px '+fam}
+function shadowed(f){x.save();x.shadowColor='rgba(0,0,0,.45)';x.shadowBlur=30;x.shadowOffsetY=14;f();x.restore()}
+let LAND=null,WORLD=null;async function geo(){if(LAND)return;const l=await (await fetch('../../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land);WORLD=await (await fetch('../../studio/doc/data/world_1994.geojson')).json();WORLD.features=WORLD.features.filter(f=>d3.geoArea(f)<6)}
+function mapOutline(proj,col,lw){const p=d3.geoPath(proj,x);x.beginPath();p(WORLD);x.strokeStyle=col;x.lineWidth=lw;x.stroke()}
+// a countryball split down the middle: two sides, two moods
+function splitBall(cx,cy,r){x.save();x.translate(cx,cy);
+  x.fillStyle='rgba(0,0,0,.28)';x.beginPath();x.ellipse(0,r*1.02,r*.85,r*.13,0,0,7);x.fill();
+  x.save();x.beginPath();x.arc(0,0,r,0,7);x.clip();
+  const seam=[[0,-r*1.1],[r*.06,-r*.6],[-r*.07,-r*.25],[r*.07,r*.1],[-r*.05,r*.45],[r*.04,r*1.1]];
+  x.fillStyle=BONE;x.fillRect(-r,-r,2*r,2*r);x.fillStyle='#1e2a44';x.beginPath();x.moveTo(r,-r*1.1);seam.forEach(p=>x.lineTo(...p));x.lineTo(r,r*1.1);x.fill();
+  x.fillStyle='rgba(255,255,255,.18)';x.beginPath();x.ellipse(-r*.35,-r*.5,r*.35,r*.18,-.5,0,7);x.fill();
+  x.restore();glowLine(seam.slice(1,-1).map(p=>[p[0],p[1]]),r*.05);
+  x.lineWidth=r*.07;x.strokeStyle=INK;x.beginPath();x.arc(0,0,r,0,7);x.stroke();
+  // left eye: angry; right eye: grieving
+  const eye=(ex,ey,s,mood)=>{x.fillStyle='#fff';x.strokeStyle=INK;x.lineWidth=r*.035;x.beginPath();x.ellipse(ex,ey,s,s*1.15,0,0,7);x.fill();x.stroke();
+    x.fillStyle=INK;x.beginPath();x.arc(ex+(mood==='angry'?s*.25:-s*.15),ey+s*.15,s*.45,0,7);x.fill();
+    x.lineWidth=r*.06;x.lineCap='round';x.strokeStyle=mood==='angry'?INK:'#fff';x.beginPath();
+    if(mood==='angry'){x.moveTo(ex-s*1.1,ey-s*1.5);x.lineTo(ex+s*.9,ey-s*.9)}else{x.moveTo(ex-s*.8,ey-s*1.0);x.lineTo(ex+s*1.1,ey-s*1.5)}x.stroke();
+    if(mood==='sad'){x.fillStyle='#7fd3ff';x.beginPath();x.moveTo(ex-s*.3,ey+s*1.2);x.quadraticCurveTo(ex-s*.65,ey+s*1.8,ex-s*.3,ey+s*1.9);x.quadraticCurveTo(ex+s*.05,ey+s*1.8,ex-s*.3,ey+s*1.2);x.fill()}};
+  eye(-r*.42,-r*.05,r*.2,'angry');eye(r*.42,-r*.05,r*.2,'sad');x.restore()}
+// a human profile facing right, unit height 1.4 (forehead to neck)
+function profile(sx,sy,s,flip,fill){x.save();x.translate(sx,sy);x.scale(flip?-s:s,s);x.beginPath();
+  x.moveTo(0,1.45);x.bezierCurveTo(-.05,1.1,-.12,.75,-.05,.45);x.bezierCurveTo(.02,.1,.3,-.02,.5,0);x.bezierCurveTo(.72,.02,.86,.18,.88,.36);
+  x.quadraticCurveTo(.9,.46,.87,.5);x.quadraticCurveTo(.98,.6,1.05,.7);x.quadraticCurveTo(1.02,.76,.92,.76);x.quadraticCurveTo(.96,.8,.95,.83);x.quadraticCurveTo(.9,.85,.92,.88);
+  x.quadraticCurveTo(.95,.93,.9,.97);x.quadraticCurveTo(.9,1.05,.78,1.08);x.quadraticCurveTo(.66,1.1,.62,1.18);x.lineTo(.64,1.45);x.closePath();x.fillStyle=fill;x.fill();x.restore()}
+function pin(cx,cy,r,fill){x.save();x.translate(cx,cy);x.beginPath();x.arc(0,0,r,Math.PI*.82,Math.PI*.18);x.quadraticCurveTo(r*.45,r*1.15,0,r*2.05);x.quadraticCurveTo(-r*.45,r*1.15,-r*Math.cos(Math.PI*.18),r*Math.sin(Math.PI*.18));x.closePath();x.fillStyle=fill;x.fill();x.lineWidth=r*.07;x.strokeStyle=INK;x.stroke();x.restore()}
+function flame(cx,cy,s){x.save();x.translate(cx,cy);for(const [k,col] of [[1,'#ff3d14'],[.78,'#ff7a1a'],[.55,'#ffc23a'],[.32,'#fff0b8']]){x.beginPath();x.moveTo(0,0);
+  x.bezierCurveTo(-s*.55*k,-s*.05*k,-s*.6*k,-s*.55*k,-s*.18*k,-s*.95*k);x.bezierCurveTo(-s*.1*k,-s*.6*k,s*.05*k,-s*.75*k,s*.02*k,-s*1.25*k);
+  x.bezierCurveTo(s*.45*k,-s*.85*k,s*.6*k,-s*.35*k,s*.5*k,-s*.15*k);x.bezierCurveTo(s*.45*k,-s*.02*k,s*.2*k,0,0,0);x.fillStyle=col;x.shadowColor='#ff6a1f';x.shadowBlur=s*.25;x.fill()}x.restore()}
+function stamp(cx,cy,R,col,top,bottom,center,rot=-.12){x.save();x.translate(cx,cy);x.rotate(rot);x.strokeStyle=col;x.fillStyle=col;
+  x.lineWidth=R*.06;x.beginPath();x.arc(0,0,R,0,7);x.stroke();x.lineWidth=R*.025;x.beginPath();x.arc(0,0,R*.78,0,7);x.stroke();
+  const arcText=(s,rad,start,dir)=>{x.font=`${R*.15}px OSW`;x.textAlign='center';x.textBaseline='middle';const tot=x.measureText(s).width/rad;let a=start-dir*tot/2;
+    for(const ch of s){const w=x.measureText(ch).width/rad;x.save();x.rotate(a+dir*w/2);x.translate(0,-rad);if(dir<0)x.rotate(Math.PI);x.fillText(ch,0,0);x.restore();a+=dir*w}};
+  arcText(top,R*.89,0,1);arcText(bottom,R*.89,Math.PI,-1);
+  x.font=`${R*.62}px ANTON`;x.textAlign='center';x.textBaseline='middle';x.fillText(center,0,R*.04);
+  x.fillRect(-R*.62,-R*.36,R*1.24,R*.04);x.fillRect(-R*.62,R*.34,R*1.24,R*.04);x.restore()}
+function distress(amount){x.save();x.globalCompositeOperation='destination-out';for(let i=0;i<amount;i++){x.fillStyle=`rgba(0,0,0,${rnd()*.7})`;x.beginPath();x.arc(rnd()*W,rnd()*H,rnd()*2.5+.3,0,7);x.fill()}x.restore()}
+// layer helper: draw f on its own canvas, distress it, then composite (so the paper isn't scratched)
+function layer(f,dist=0){const L=document.createElement('canvas');L.width=W;L.height=H;const o=x;x=L.getContext('2d');f();if(dist)distress(dist);x=o;x.drawImage(L,0,0)}
+// ---------- the five concepts ----------
+const SAFE={x:507,y:508,w:1546,h:423},MID=H/2;
+const concepts={
+1:{name:'Split Ball',async avatar(){bgGrad('#ff7a2e','#b81d10');grain(8);
+    smoke(dense([[330,140],[400,100],[470,140]]),300,140,'255,235,215',.05,8);splitBall(400,415,268)},
+  async banner(){bgGrad('#ff7a2e','#a3170c',1500);await geo();const pr=d3.geoMercator().center([40,40]).scale(900).translate([W/2,H/2]);mapOutline(pr,'rgba(80,10,0,.35)',2);grain(8);
+    const ln=jag(0,H/2+250,W,H/2+250,26,40);smoke(dense(ln),1400,260,'255,225,200',.04,8);glowLine(ln,7);
+    shadowed(()=>splitBall(SAFE.x+200,MID-10,175));
+    const f1=fit('SMOKE & BORDERS','ANTON',SAFE.w-450,190);shadowed(()=>T('SMOKE & BORDERS',SAFE.x+420,MID+40,f1,BONE,'left',18));
+    T('EVERY BORDER HAS TWO SIDES. WE TELL BOTH.',SAFE.x+424,MID+120,fit('EVERY BORDER HAS TWO SIDES. WE TELL BOTH.','OSW',SAFE.w-460,52),'#ffe3c9','left');
+    T('NEW STORY EVERY SATURDAY',SAFE.x+424,MID+178,'40px BEBAS','rgba(30,8,0,.8)','left')}},
+2:{name:'Torn Globe',async avatar(){bgGrad('#ffd23f','#f0a400');await geo();grain(6);tornGlobe(400,420,250,22)},
+  async banner(){bgGrad('#ffd23f','#eb9d00',1500);grain(6);await geo();
+    tornGlobe(W/2,MID-10,170,46);const half=(SAFE.w-480)/2,f2=fit('BORDERS','ARCH',half,150);
+    shadowed(()=>{T('SMOKE',W/2-235,MID+30,f2,INK,'right');T('BORDERS',W/2+235,MID+30,f2,INK,'left')});
+    T('EVERY BORDER HAS TWO SIDES',W/2-235,MID+95,fit('EVERY BORDER HAS TWO SIDES','OSW',half,44),'#5a3a00','right');T('WE TELL BOTH · EVERY SATURDAY',W/2+235,MID+95,fit('WE TELL BOTH · EVERY SATURDAY','OSW',half,44),'#5a3a00','left')}},
+3:{name:'Two Faces',async avatar(){posterBg(400,400);facesPair(400,420,300,20)},
+  async banner(){posterBg(W/2,MID);facesPair(W/2,MID+10,190,46);const e=W/2-46/2-190*1.08-24,half=e-SAFE.x,f3=fit('BORDERS','DMS',half,150);
+    shadowed(()=>{T('SMOKE',e,MID+20,f3,INK,'right');T('BORDERS',W-e,MID+20,f3,INK,'left')});
+    T('TWO SIDES.',e,MID+85,fit('EVERY BORDER HAS','OSW',half,46),'#b3121b','right');T('WE TELL BOTH.',W-e,MID+85,fit('EVERY BORDER HAS','OSW',half,46),'#b3121b','left')}},
+4:{name:'Burning Pin',async avatar(){bgGrad('#26324f','#0b0f1a');await geo();const pr=d3.geoOrthographic().rotate([-60,-25]).scale(520).translate([400,520]);mapOutline(pr,'rgba(120,150,210,.25)',1.5);grain(6);
+    smoke(dense([[380,150],[420,120]]),400,150,'200,200,210',.07,8);pin(400,300,190,EMBER);x.fillStyle=INK;x.beginPath();x.arc(400,300,82,0,7);x.fill();
+    x.save();x.beginPath();x.arc(400,300,66,0,7);x.clip();x.fillStyle=BONE;x.fillRect(334,234,66,132);x.fillStyle='#4f7bd9';x.fillRect(400,234,66,132);x.restore();flame(400,112,190)},
+  async banner(){bgGrad('#1f2944','#080b14',1600);await geo();const pr=d3.geoMercator().center([30,30]).scale(560).translate([W/2,H/2+60]);const p=d3.geoPath(pr,x);
+    x.beginPath();p(WORLD);x.fillStyle='#1b2338';x.fill();x.strokeStyle='rgba(120,150,210,.3)';x.lineWidth=1.5;x.stroke();grain(6);
+    const spots=[[7.5,48.5],[74,31.5],[127,38],[13.4,52.5],[34.8,31.8],[29,41],[-80,25],[30,-25],[100,15],[-60,-30],[45,15],[-100,32]];
+    for(const s of spots){const q=pr(s);smoke([[q[0],q[1]-36]],40,70,'200,200,210',.06,4);pin(q[0],q[1]-42,18,EMBER);flame(q[0],q[1]-58,26)}
+    x.fillStyle='rgba(8,11,20,.72)';x.fillRect(SAFE.x-40,SAFE.y+40,SAFE.w+80,SAFE.h-80);
+    x.font='230px BEBAS';const a4=x.measureText('SMOKE '),b4=x.measureText('&'),c4=x.measureText(' BORDERS'),x4=W/2-(a4.width+b4.width+c4.width)/2;
+    shadowed(()=>{T('SMOKE ',x4,MID+60,'230px BEBAS',BONE,'left');T('&',x4+a4.width,MID+60,'230px BEBAS',EMBER,'left');T(' BORDERS',x4+a4.width+b4.width,MID+60,'230px BEBAS',BONE,'left')});
+    T('EVERY BORDER HAS TWO SIDES.  WE TELL BOTH.',W/2,MID+130,'46px OSW','#9fb3db')}},
+5:{name:'Passport Stamp',async avatar(){passport();layer(()=>stamp(400,400,330,'#c8102e','SMOKE & BORDERS','· TWO SIDES ·','S&B',-.1),2600)},
+  async banner(){passport();
+    layer(()=>{stamp(330,MID+30,165,'#1f4fa8','ENTRY  ·  1947','· LAHORE ·','IN',.2);stamp(W-330,MID-20,160,'#2e7d32','EXIT  ·  1989','· BERLIN ·','OUT',-.25);
+      stamp(150,MID-330,140,'rgba(120,40,140,.8)','38TH PARALLEL','· 1945 ·','KR',.3);stamp(W-200,MID+330,150,'rgba(200,120,0,.85)','ROME  ·  CARTHAGE','· 146 BC ·','SPQR',-.15)},1800);
+    layer(()=>{x.save();x.translate(W/2,MID+15);x.rotate(-.04);x.strokeStyle='#c8102e';x.fillStyle='#c8102e';x.lineWidth=16;x.strokeRect(-560,-150,1120,300);x.lineWidth=5;x.strokeRect(-535,-125,1070,250);
+      T('SMOKE & BORDERS',0,55,fit('SMOKE & BORDERS','ANTON',980,170),'#c8102e');T('EVERY BORDER HAS TWO SIDES  ·  WE TELL BOTH',0,105,'36px OSW','#c8102e');T('NEW STORY EVERY SATURDAY',0,-88,'34px OSW','#c8102e');x.restore()},4200)}}};
+function tornGlobe(cx,cy,r,gap){const pr=d3.geoOrthographic().rotate([-45,-28]).scale(r).translate([0,0]),p=d3.geoPath(pr,x);
+  const tear=jag(0,-r*1.2,0,r*1.2,14,r*.22).map(([a,b])=>[a,b]);
+  for(const side of [-1,1]){x.save();x.translate(cx+side*gap/2,cy);x.rotate(side*.05);
+    x.beginPath();x.moveTo(side*r*1.3,-r*1.3);tear.forEach(q=>x.lineTo(...q));x.lineTo(side*r*1.3,r*1.3);x.closePath();x.clip();
+    x.fillStyle='rgba(0,0,0,.25)';x.beginPath();x.arc(10,16,r,0,7);x.fill();
+    x.fillStyle='#163a6b';x.beginPath();x.arc(0,0,r,0,7);x.fill();
+    x.beginPath();p(LAND);x.fillStyle=BONE;x.fill();x.beginPath();p(WORLD);x.strokeStyle='rgba(22,58,107,.45)';x.lineWidth=Math.max(1,r/180);x.stroke();
+    x.beginPath();p(d3.geoGraticule10());x.strokeStyle='rgba(255,255,255,.12)';x.lineWidth=1;x.stroke();
+    const sh=x.createRadialGradient(-r*.35,-r*.35,r*.1,0,0,r);sh.addColorStop(0,'rgba(255,255,255,.18)');sh.addColorStop(1,'rgba(0,0,0,.35)');x.fillStyle=sh;x.beginPath();x.arc(0,0,r,0,7);x.fill();
+    x.lineWidth=Math.max(6,r*.045);x.strokeStyle=INK;x.beginPath();x.arc(0,0,r,0,7);x.stroke();
+    x.beginPath();tear.forEach((q,i)=>i?x.lineTo(...q):x.moveTo(...q));x.stroke();x.restore()}
+  const mid=tear.map(([a,b])=>[cx+a,cy+b]).filter(q=>Math.abs(q[1]-cy)<r*.95);smoke(dense(mid),900,r*1.1,'90,80,70',.08,7);glowLine(mid,Math.max(4,r*.03))}
+function posterBg(cx,cy){x.fillStyle='#f1e4c8';x.fillRect(0,0,W,H);x.save();x.translate(cx,cy);for(let i=0;i<36;i++){x.rotate(Math.PI/18);if(i%2){x.fillStyle='rgba(200,40,30,.10)';x.beginPath();x.moveTo(0,0);x.lineTo(Math.max(W,H),-Math.max(W,H)*.09);x.lineTo(Math.max(W,H),Math.max(W,H)*.09);x.fill()}}x.restore();grain(10)}
+function facesPair(cx,cy,s,gap){const top=cy-s*.75;profile(cx-gap/2-s*1.05,top,s,false,'#b3121b');profile(cx+gap/2+s*1.05,top,s,true,'#1d2b4f');
+  const ln=jag(cx,top-s*.1,cx,top+s*1.5,10,gap*.3);smoke(dense(ln),500,s*.8,'90,80,70',.06,5);glowLine(ln,Math.max(4,s*.035))}
+function passport(){x.fillStyle='#e9e1cc';x.fillRect(0,0,W,H);x.strokeStyle='rgba(60,110,120,.13)';x.lineWidth=1.2;
+  for(let k=0;k<26;k++){x.beginPath();for(let i=0;i<=W;i+=6){const y=(k/25)*H+Math.sin(i/90+k)*18+Math.sin(i/37+k*1.7)*6;i?x.lineTo(i,y):x.moveTo(i,y)}x.stroke()}grain(12)}
+document.fonts.load('100px ANTON').then(()=>Promise.all(['BEBAS','ARCH','DMS','OSW'].map(f=>document.fonts.load('40px '+f)))).then(()=>concepts[C][K]()).then(()=>{window.done=true});
+</script></body></html>

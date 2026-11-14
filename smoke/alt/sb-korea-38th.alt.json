@@ -1,0 +1,3102 @@
+{
+ "id": "sb-korea-38th",
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "RSK": "am_michael",
+  "BON": "am_adam",
+  "RUS": "bm_lewis",
+  "KIM": "bm_daniel",
+  "YO": "bm_fable"
+ },
+ "title": "Korea Split in Two: The ENTIRE Story From Both Sides",
+ "era": "1945",
+ "musicEra": "1900s",
+ "balls": {
+  "USA": {
+   "flag": "US48",
+   "label": "UNITED STATES",
+   "at": [
+    124.2,
+    35.2
+   ],
+   "r": 56,
+   "char": {
+    "preset": "us_sailor",
+    "coat": "#6b6a3a",
+    "coat2": "#c8b98a",
+    "hat": "none",
+    "facing": 1
+   }
+  },
+  "SOV": {
+   "flag": "SUN",
+   "label": "SOVIET UNION",
+   "at": [
+    128.8,
+    41.6
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "coat": "#7a2a22",
+    "coat2": "#c9a227",
+    "hat": "fur",
+    "hatCol": "#4a3a2a",
+    "facing": -1
+   }
+  },
+  "JPN": {
+   "flag": "JPN1",
+   "label": "JAPAN",
+   "at": [
+    132.6,
+    35.6
+   ],
+   "r": 52,
+   "char": {
+    "preset": "governor",
+    "coat": "#1d2f5a",
+    "coat2": "#d8d3c0",
+    "hat": "none",
+    "facing": -1
+   }
+  },
+  "RSK": {
+   "flag": "US48",
+   "label": "DEAN RUSK",
+   "at": [
+    124.0,
+    38.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "us_sailor",
+    "coat": "#6b6a3a",
+    "coat2": "#c8b98a",
+    "hat": "none",
+    "hair": "#3b2a1a",
+    "facing": 1
+   }
+  },
+  "BON": {
+   "flag": "US48",
+   "label": "CHARLES BONESTEEL",
+   "at": [
+    124.0,
+    36.2
+   ],
+   "r": 48,
+   "char": {
+    "preset": "us_sailor",
+    "coat": "#6b6a3a",
+    "coat2": "#c8b98a",
+    "hat": "none",
+    "hair": "#5a4a30",
+    "glasses": 1,
+    "facing": 1
+   }
+  },
+  "KOR": {
+   "flag": "KR",
+   "label": "KOREANS",
+   "at": [
+    127.6,
+    37.0
+   ],
+   "r": 54,
+   "char": {
+    "preset": "continental",
+    "coat": "#f3efe6",
+    "coat2": "#2b4a9a",
+    "hat": "none",
+    "hairStyle": "short",
+    "hair": "#1c1c1c",
+    "skin": "#efc6a0",
+    "facing": 1
+   }
+  },
+  "YO": {
+   "flag": "KR",
+   "label": "YO UN-HYUNG",
+   "at": [
+    127.2,
+    37.2
+   ],
+   "r": 46,
+   "char": {
+    "preset": "continental",
+    "coat": "#e9e2d0",
+    "coat2": "#4a4a4a",
+    "hat": "none",
+    "hairStyle": "short",
+    "hair": "#1c1c1c",
+    "glasses": 1,
+    "facing": 1
+   }
+  },
+  "KIM": {
+   "flag": "KP",
+   "label": "KIM IL SUNG",
+   "at": [
+    126.3,
+    39.6
+   ],
+   "r": 48,
+   "char": {
+    "preset": "continental",
+    "coat": "#4a5a3a",
+    "coat2": "#2f3a28",
+    "hat": "none",
+    "hairStyle": "short",
+    "hair": "#1c1c1c",
+    "facing": 1
+   }
+  },
+  "RHE": {
+   "flag": "KR",
+   "label": "SYNGMAN RHEE",
+   "at": [
+    127.8,
+    36.4
+   ],
+   "r": 48,
+   "char": {
+    "preset": "continental",
+    "coat": "#2b2b2b",
+    "coat2": "#e9e2d0",
+    "hat": "none",
+    "hairStyle": "bald",
+    "hair": "#d8d3cb",
+    "glasses": 1,
+    "facing": -1
+   }
+  }
+ },
+ "places": {
+  "Seoul": [
+   126.98,
+   37.57
+  ],
+  "Pyongyang": [
+   125.75,
+   39.02
+  ],
+  "Incheon": [
+   126.7,
+   37.46
+  ],
+  "Wonsan": [
+   127.44,
+   39.15
+  ],
+  "Pusan": [
+   129.04,
+   35.18
+  ],
+  "Panmunjom": [
+   126.68,
+   37.96
+  ],
+  "Jeju": [
+   126.53,
+   33.5
+  ],
+  "Yalu": [
+   124.4,
+   40.0
+  ],
+  "Washington": [
+   -77.04,
+   38.9
+  ],
+  "Moscow": [
+   37.6,
+   55.75
+  ],
+  "Hiroshima": [
+   132.46,
+   34.39
+  ],
+  "Tokyo": [
+   139.7,
+   35.7
+  ]
+ },
+ "sources": [
+  "Wikipedia, Division of Korea: https://en.wikipedia.org/wiki/Division_of_Korea",
+  "Wikipedia, Charles H. Bonesteel III: https://en.wikipedia.org/wiki/Charles_H._Bonesteel_III",
+  "Wikipedia, Dean Rusk: https://en.wikipedia.org/wiki/Dean_Rusk",
+  "Wikipedia, Korea under Japanese rule: https://en.wikipedia.org/wiki/Korea_under_Japanese_rule",
+  "Wikipedia, Yo Un-hyung: https://en.wikipedia.org/wiki/Yo_Un-hyung",
+  "Wikipedia, Syngman Rhee: https://en.wikipedia.org/wiki/Syngman_Rhee",
+  "Wikipedia, Kim Il Sung: https://en.wikipedia.org/wiki/Kim_Il_Sung",
+  "Wikipedia, Jeju uprising: https://en.wikipedia.org/wiki/Jeju_uprising",
+  "Wikipedia, Korean War: https://en.wikipedia.org/wiki/Korean_War",
+  "Wikipedia, Korean Demilitarized Zone: https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone"
+ ],
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "August 1945. The Second World War is ending, and two American officers are standing over a map. They have almost no time. And they are about to draw a line through the middle of a country.",
+    "do": [
+     {
+      "on": "map",
+      "pin": "Washington"
+     },
+     {
+      "on": "officers",
+      "show": [
+       "RSK",
+       "BON"
+      ]
+     },
+     {
+      "on": "line",
+      "mood": [
+       "RSK",
+       "grim"
+      ]
+     }
+    ],
+    "cam": {
+     "lon": -77.04,
+     "lat": 38.9,
+     "scale": 9000
+    },
+    "date": "AUGUST 1945"
+   },
+   {
+    "say": "The map is not a military map. It comes from National Geographic. Neither man has ever studied Korea. And nobody who has is in the room.",
+    "do": [
+     {
+      "on": "National",
+      "card": {
+       "kind": "caption",
+       "text": "National Geographic map",
+       "dur": 4.5,
+       "sub": "no Korea experts"
+      }
+     },
+     {
+      "on": "nobody",
+      "mood": [
+       "BON",
+       "shock"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "They choose the thirty-eighth parallel. A line of latitude, straight across the peninsula. It puts the capital, Seoul, on the American side.",
+    "do": [
+     {
+      "on": "thirty-eighth",
+      "line": [
+       [
+        123.5,
+        38
+       ],
+       [
+        131,
+        38
+       ]
+      ],
+      "color": "#ff6a1f",
+      "hold": 90
+     },
+     {
+      "on": "Seoul",
+      "pin": "Seoul"
+     },
+     {
+      "on": "thirty-eighth",
+      "card": {
+       "kind": "big",
+       "text": "THE 38TH PARALLEL",
+       "dur": 3
+      }
+     }
+    ],
+    "cam": {
+     "lon": 127.5,
+     "lat": 37.5,
+     "scale": 5200
+    }
+   },
+   {
+    "say": "This was meant to last a few weeks. A temporary line, for taking the surrender of Japanese soldiers. It is still there. It has divided Korea for more than eighty years.",
+    "do": [
+     {
+      "on": "weeks",
+      "card": {
+       "kind": "big",
+       "text": "\"TEMPORARY\"",
+       "dur": 3
+      }
+     },
+     {
+      "on": "divided",
+      "shake": 0.5
+     }
+    ],
+    "pause": 0.6
+   },
+   {
+    "say": "This is the story of Korea, the thirty-eighth parallel, and 1945. How it was drawn. Who it hurt. And how it became one of the most guarded borders on Earth.",
+    "do": [
+     {
+      "on": "Korea",
+      "hl": [
+       "Korea (USSR)"
+      ],
+      "color": "#c8102e"
+     },
+     {
+      "on": "parallel",
+      "hl": [
+       "Korea (USA)"
+      ],
+      "color": "#2b6cb0"
+     }
+    ]
+   },
+   {
+    "say": "We tell it from both sides, and we follow the people history forgot. Two officers in Washington. A Korean who tried to hold his country together. And one question. Did anybody ever mean for the line to stay?",
+    "do": [
+     {
+      "on": "both",
+      "link": [
+       "USA",
+       "SOV"
+      ],
+      "color": "#ff6a1f"
+     },
+     {
+      "on": "officers",
+      "show": [
+       "RSK",
+       "BON"
+      ]
+     },
+     {
+      "on": "Korean",
+      "show": [
+       "YO"
+      ]
+     }
+    ]
+   },
+   {
+    "do": [
+     {
+      "logo": 1
+     }
+    ],
+    "pause": 3.6
+   }
+  ]
+ },
+ "chapters": [
+  {
+   "title": "A Country Under Someone Else’s Flag",
+   "years": "1905 – 1945",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "say": "To understand the line, start with what Korea was before it. For thousands of years, Korea was one country. One language, one culture, one kingdom after another. Then, in the twentieth century, it lost its freedom.",
+     "do": [
+      {
+       "on": "Korea",
+       "hl": [
+        "Korea (USA)",
+        "Korea (USSR)"
+       ],
+       "color": "#d9c9a0"
+      },
+      {
+       "on": "language",
+       "mood": [
+        "KOR",
+        "neutral"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "1905"
+    },
+    {
+     "say": "After the Russo-Japanese War in 1905, Japan made Korea a protectorate. In 1910, it annexed the country completely. For thirty-five years, Korea was a Japanese colony.",
+     "do": [
+      {
+       "on": "Japan",
+       "show": [
+        "JPN"
+       ]
+      },
+      {
+       "on": "protectorate",
+       "arrow": [
+        "JPN",
+        [
+         127.5,
+         37.5
+        ]
+       ],
+       "color": "#bc002d",
+       "big": 1
+      },
+      {
+       "on": "1910",
+       "card": {
+        "kind": "stamp",
+        "text": "ANNEXED 1910",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Japan ran the country for its own benefit. And in the war years, it pushed harder. In 1939, an order banned Korean names and the Korean language, in practice. Families were told to take Japanese names.",
+     "do": [
+      {
+       "on": "harder",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      },
+      {
+       "on": "1939",
+       "card": {
+        "kind": "doc",
+        "text": "Order of 10 November 1939",
+        "dur": 6,
+        "lines": [
+         "Korean names replaced",
+         "Korean language banned in practice"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "And from 1939, about five point four million Koreans were mobilised for the war effort. Many of them were moved by force. Factories, mines, and armies a long way from home.",
+     "do": [
+      {
+       "on": "five",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Koreans mobilised for the war effort (approx.)",
+          5400000
+         ]
+        ],
+        "note": "Wikipedia, Korea under Japanese rule"
+       }
+      },
+      {
+       "on": "force",
+       "dim": 0.4
+      }
+     ]
+    },
+    {
+     "say": "Now the Japanese side, fairly. Japan's government presented its rule as modernisation. Millions of Koreans did not agree. And they never stopped asking for independence.",
+     "do": [
+      {
+       "on": "Japanese",
+       "mood": [
+        "JPN",
+        "smug"
+       ]
+      },
+      {
+       "on": "agree",
+       "mood": [
+        "KOR",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "In November 1943, the Allies met in Cairo, and promised that Korea would become free and independent, quote, in due course. Those three words matter. Remember them.",
+     "do": [
+      {
+       "on": "Cairo",
+       "cam": {
+        "lon": 31.2,
+        "lat": 30,
+        "scale": 2500
+       }
+      },
+      {
+       "on": "due",
+       "card": {
+        "kind": "quote",
+        "text": "In due course.",
+        "dur": 4,
+        "who": "The Cairo Declaration, 1943"
+       }
+      }
+     ],
+     "date": "NOVEMBER 1943"
+    },
+    {
+     "say": "What did that mean? Nobody said. President Roosevelt floated a trusteeship, the big powers guiding Korea toward independence. Stalin agreed in principle, but wanted it kept short.",
+     "do": [
+      {
+       "on": "Roosevelt",
+       "show": [
+        "USA"
+       ]
+      },
+      {
+       "on": "Stalin",
+       "show": [
+        "SOV"
+       ]
+      },
+      {
+       "on": "short",
+       "mood": [
+        "SOV",
+        "neutral"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "Japan formally surrendered on the second of September 1945, and the colonial government was wound up on the eighth. For the first time in thirty-five years, Korea was nobody's colony. For about a week, it was nobody's anything.",
+     "do": [
+      {
+       "on": "second",
+       "card": {
+        "kind": "stamp",
+        "text": "JAPAN SURRENDERS · 2 SEPT 1945",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "So Korea was promised freedom, but with no date and no plan. And then, much faster than anyone expected, the war ended.",
+     "do": [
+      {
+       "on": "faster",
+       "shake": 0.4
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "title": "Ten Days in August",
+   "years": "6 – 15 August 1945",
+   "mood": "clock",
+   "beats": [
+    {
+     "say": "On the sixth of August 1945, an American bomb hit Hiroshima. Two days later, on the eighth, the Soviet Union declared war on Japan.",
+     "do": [
+      {
+       "on": "Hiroshima",
+       "pin": "Hiroshima"
+      },
+      {
+       "on": "Hiroshima",
+       "explode": {
+        "at": [
+         132.46,
+         34.39
+        ],
+        "size": 1
+       }
+      },
+      {
+       "on": "Soviet",
+       "show": [
+        "SOV"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 130,
+      "lat": 36,
+      "scale": 2600
+     },
+     "date": "6 AUGUST 1945"
+    },
+    {
+     "say": "The Red Army moved fast. By the tenth of August, Soviet troops were entering the north of Korea. And in Washington, the same day, officials realised something. The Americans were nowhere near Korea at all.",
+     "do": [
+      {
+       "on": "Red",
+       "arrow": [
+        "SOV",
+        [
+         127.5,
+         41.0
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "nowhere",
+       "arrow": [
+        "USA",
+        [
+         126,
+         35
+        ]
+       ],
+       "color": "#2b6cb0"
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "10 AUGUST 1945"
+    },
+    {
+     "say": "The Soviets were already in Korea, and the Americans were not. If the Soviets kept going, they could have all of Korea before an American soldier landed.",
+     "do": [
+      {
+       "on": "Americans",
+       "mood": [
+        "USA",
+        "shock"
+       ]
+      },
+      {
+       "on": "all",
+       "hl": [
+        "Korea (USA)",
+        "Korea (USSR)"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "say": "So that day, two American officers were asked to do something simple. Draw the zone where American troops would accept the Japanese surrender. The Soviets would take the rest.",
+     "do": [
+      {
+       "on": "officers",
+       "show": [
+        "RSK",
+        "BON"
+       ]
+      },
+      {
+       "on": "zone",
+       "card": {
+        "kind": "caption",
+        "text": "Draw a zone",
+        "dur": 4.5,
+        "sub": "for the surrender of Japanese troops"
+       }
+      }
+     ],
+     "cam": {
+      "lon": -77.04,
+      "lat": 38.9,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "Their names were Dean Rusk and Charles Bonesteel. Both were born in 1909, so both were thirty-six years old. Both had been Rhodes Scholars at Oxford. And neither was a Korea expert.",
+     "do": [
+      {
+       "on": "names",
+       "card": {
+        "kind": "big",
+        "text": "BORN 1909 · RHODES SCHOLARS",
+        "dur": 3.4
+       }
+      },
+      {
+       "on": "neither",
+       "mood": [
+        "RSK",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Rusk was a colonel from Georgia, who had spent the war as a staff officer in China, Burma and India. Bonesteel was a West Point graduate, nicknamed Tick. Together with a general, they were drafting a document called General Order Number One.",
+     "do": [
+      {
+       "on": "Tick",
+       "card": {
+        "kind": "caption",
+        "text": "Charles \"Tick\" Bonesteel",
+        "sub": "West Point, 1931",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Rusk had studied at Davidson College in Georgia, and then at Oxford. Bonesteel had been an Eagle Scout, and later wore a patch behind his glasses after eye surgery. Both had proved themselves in the war. Bonesteel had earned the Legion of Merit for his service in Sicily and Europe.",
+     "do": [
+      {
+       "on": "Legion",
+       "card": {
+        "kind": "caption",
+        "text": "Charles Bonesteel",
+        "dur": 4.5,
+        "sub": "Legion of Merit · Sicily and Europe"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Rusk had joined the State Department only in February 1945, six months before. Before that, he was a soldier. And now two soldiers were deciding the fate of a country they had never visited.",
+     "do": [
+      {
+       "on": "soldiers",
+       "mood": [
+        "RSK",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "It would tell every Japanese army, in every country, who they should surrender to. And for Korea, the two men had to pick a line.",
+     "do": [
+      {
+       "on": "line",
+       "mood": [
+        "BON",
+        "grim"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "Who exactly chose the line? The records credit each man. Bonesteel's biography says he proposed the thirty-eighth parallel. Rusk's says he suggested the split. They may both be right. It was a small room, and a short night.",
+     "do": [
+      {
+       "on": "proposed",
+       "mood": [
+        "BON",
+        "neutral"
+       ]
+      },
+      {
+       "on": "suggested",
+       "mood": [
+        "RSK",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "They had a map from National Geographic, and very little time. Some versions of the story say half an hour. The records only say, short notice. Either way, it was almost no time at all.",
+     "do": [
+      {
+       "on": "half",
+       "card": {
+        "kind": "big",
+        "text": "ALMOST NO TIME",
+        "dur": 3
+       }
+      },
+      {
+       "on": "National",
+       "card": {
+        "kind": "caption",
+        "text": "National Geographic map",
+        "dur": 4,
+        "sub": "no Korea experts consulted"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "The Americans wanted a line that split the country roughly in half, but kept the capital, Seoul, in the American zone. The thirty-eighth parallel did exactly that.",
+     "do": [
+      {
+       "on": "half",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 120
+      },
+      {
+       "on": "Seoul",
+       "pin": "Seoul"
+      }
+     ]
+    },
+    {
+     "say": "There was no river there. No mountain range. No old border. It was a number on a map. Rusk would say later that if he had known more Korean history, he, quote, almost surely, would have chosen a different line.",
+     "do": [
+      {
+       "on": "number",
+       "card": {
+        "kind": "big",
+        "text": "A NUMBER ON A MAP",
+        "dur": 3
+       }
+      },
+      {
+       "on": "almost",
+       "card": {
+        "kind": "quote",
+        "text": "Almost surely, a different line.",
+        "dur": 4.5,
+        "who": "Dean Rusk, looking back"
+       }
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "The line was drawn. But one question remained, and it was the one that kept the officers awake. What would Moscow say?",
+     "do": [
+      {
+       "on": "Moscow",
+       "pin": "Moscow"
+      }
+     ],
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "title": "The Soviets Say Yes",
+   "years": "15 – 16 August 1945",
+   "mood": "tension",
+   "beats": [
+    {
+     "say": "Then came the real worry. Would Moscow accept it? The Soviet army was already in Korea, and it was far north of the line. It could have kept going.",
+     "do": [
+      {
+       "on": "Moscow",
+       "pin": "Moscow"
+      },
+      {
+       "on": "kept",
+       "arrow": [
+        "SOV",
+        [
+         127.5,
+         36.5
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      }
+     ],
+     "cam": {
+      "lon": 37.6,
+      "lat": 55.75,
+      "scale": 2500
+     },
+     "date": "15 AUGUST 1945"
+    },
+    {
+     "say": "The draft was cabled to the Soviets on the fifteenth of August. And the Soviets accepted it the next day. At once. The Americans were surprised. Some of them had expected an argument.",
+     "do": [
+      {
+       "on": "cabled",
+       "telegraph": [
+        "USA",
+        "SOV"
+       ]
+      },
+      {
+       "on": "accepted",
+       "mood": [
+        "SOV",
+        "neutral"
+       ]
+      },
+      {
+       "on": "surprised",
+       "mood": [
+        "USA",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "USA",
+       "text": "We propose the thirty-eighth parallel."
+      },
+      {
+       "who": "SOV",
+       "text": "Agreed."
+      }
+     ]
+    },
+    {
+     "say": "Why did Stalin say yes? Historians give different answers, and the Soviet motives are still argued about. What we know is that Moscow did not haggle.",
+     "do": [
+      {
+       "on": "different",
+       "card": {
+        "kind": "caption",
+        "text": "Why did Moscow agree?",
+        "dur": 4.5,
+        "sub": "historians still argue"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "Either way, the thing was done. About sixteen million Koreans were now in the American zone, in the south. About nine million were in the Soviet zone, in the north.",
+     "do": [
+      {
+       "on": "sixteen",
+       "hl": [
+        "Korea (USA)"
+       ],
+       "color": "#2b6cb0"
+      },
+      {
+       "on": "nine",
+       "hl": [
+        "Korea (USSR)"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "sixteen",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Koreans in the American zone (approx.)",
+          16000000
+         ],
+         [
+          "Koreans in the Soviet zone (approx.)",
+          9000000
+         ]
+        ],
+        "note": "Wikipedia, Division of Korea"
+       }
+      }
+     ]
+    },
+    {
+     "say": "And nobody had asked a single Korean. Not the people who had spent thirty-five years under Japanese rule. Not their leaders. Not the exiles who had fought for independence.",
+     "do": [
+      {
+       "on": "nobody",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      },
+      {
+       "on": "asked",
+       "dim": 0.4
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "But Korea was not waiting for permission. In Seoul, the war's end felt like freedom. And a Korean politician was already building a new country.",
+     "do": [
+      {
+       "on": "politician",
+       "show": [
+        "YO"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Man Who Tried to Hold It Together",
+   "years": "August 1945 – 1947",
+   "mood": "hope",
+   "beats": [
+    {
+     "say": "His name was Yo Un-hyung. Born in 1886, he had helped found Korea's government in exile in 1919. He had been arrested and sent to prison for his activism. And he believed Korea could be one country again.",
+     "do": [
+      {
+       "on": "Yo",
+       "show": [
+        "YO"
+       ]
+      },
+      {
+       "on": "1886",
+       "card": {
+        "kind": "caption",
+        "text": "Yo Un-hyung",
+        "dur": 4,
+        "sub": "born 1886"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127,
+      "lat": 37.5,
+      "scale": 9000
+     },
+     "date": "17 AUGUST 1945"
+    },
+    {
+     "say": "On the seventeenth of August, two days after Japan's surrender, he formed the Committee for Preparation of Korean Independence. Within weeks, it had more than a hundred and forty branches, across the north and the south.",
+     "do": [
+      {
+       "on": "seventeenth",
+       "card": {
+        "kind": "big",
+        "text": "140+ LOCAL COMMITTEES",
+        "dur": 3
+       }
+      },
+      {
+       "on": "branches",
+       "link": [
+        "YO",
+        "KOR"
+       ],
+       "color": "#4a9a5a"
+      }
+     ]
+    },
+    {
+     "say": "In September, he went further. He proclaimed the People's Republic of Korea. A government, ready to go, run by Koreans, for Korea.",
+     "do": [
+      {
+       "on": "proclaimed",
+       "card": {
+        "kind": "stamp",
+        "text": "PEOPLE’S REPUBLIC",
+        "dur": 3
+       }
+      },
+      {
+       "on": "ready",
+       "mood": [
+        "YO",
+        "happy"
+       ]
+      }
+     ],
+     "date": "6 SEPTEMBER 1945"
+    },
+    {
+     "say": "But the American occupation did not recognise it. By October, he had stepped down under pressure. And the Americans, who had never been to Korea, had decided to rule it themselves.",
+     "do": [
+      {
+       "on": "Americans",
+       "show": [
+        "USA"
+       ]
+      },
+      {
+       "on": "stepped",
+       "mood": [
+        "YO",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The Americans landed at Incheon on the eighth of September. In the south, they set up a military government. In the north, the Soviets did the same.",
+     "do": [
+      {
+       "on": "Incheon",
+       "pin": "Incheon"
+      },
+      {
+       "on": "north",
+       "arrow": [
+        "SOV",
+        [
+         126,
+         39
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "south",
+       "arrow": [
+        "USA",
+        [
+         126.9,
+         37.4
+        ]
+       ],
+       "color": "#2b6cb0"
+      }
+     ],
+     "date": "8 SEPTEMBER 1945"
+    },
+    {
+     "say": "Soon, the line was not just a line. Within a few years it was behaving like a border, before anyone had announced one.",
+     "do": [
+      {
+       "on": "line",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 200
+      },
+      {
+       "on": "border",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "Yo's centrist politics were hard to sustain. Both the far right and the far left attacked him. In a country splitting in two, that left him with very few friends.",
+     "do": [
+      {
+       "on": "far",
+       "mood": [
+        "YO",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Yo kept working. In May 1946, he led a movement to unite the left and the right. He was a centrist, and that made him a target for both sides.",
+     "do": [
+      {
+       "on": "unite",
+       "link": [
+        "YO",
+        "RHE"
+       ],
+       "color": "#4a9a5a"
+      },
+      {
+       "on": "target",
+       "mood": [
+        "YO",
+        "grim"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "On the nineteenth of July 1947, he was shot in Seoul. The killer was nineteen years old, a member of a right-wing group called the White Shirts Society.",
+     "do": [
+      {
+       "on": "shot",
+       "shot": 1
+      },
+      {
+       "on": "nineteenth",
+       "card": {
+        "kind": "stamp",
+        "text": "19 JULY 1947",
+        "dur": 3
+       }
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "say": "Today, Yo is one of the very few Korean politicians remembered with respect in both the south and the north. A man who wanted one Korea, killed in a country already becoming two.",
+     "do": [
+      {
+       "on": "both",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      },
+      {
+       "on": "one",
+       "card": {
+        "kind": "quote",
+        "text": "Respected in both Koreas.",
+        "who": "Wikipedia, Yo Un-hyung",
+        "dur": 4.5
+       }
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "title": "Two Men Come Home",
+   "years": "September – December 1945",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "say": "Now the other side of the line. In the north, the Soviets needed a Korean leader. In September 1945, a man stepped off a ship at Wonsan. He was thirty-three years old. His name was Kim Il Sung.",
+     "do": [
+      {
+       "on": "Kim",
+       "show": [
+        "KIM"
+       ]
+      },
+      {
+       "on": "Wonsan",
+       "pin": "Wonsan"
+      }
+     ],
+     "cam": {
+      "lon": 127,
+      "lat": 39.2,
+      "scale": 8000
+     },
+     "date": "19 SEPTEMBER 1945"
+    },
+    {
+     "say": "He had been born near Pyongyang in 1912, and had left Korea as a boy. He had been away for about twenty-six years. In between, he had fought the Japanese as a guerrilla in Manchuria in the nineteen thirties. In 1940, he crossed into the Soviet Union, and in 1942, he became a captain in the Red Army.",
+     "do": [
+      {
+       "on": "guerrilla",
+       "card": {
+        "kind": "caption",
+        "text": "Kim Il Sung",
+        "dur": 4,
+        "sub": "born 1912 · Red Army captain"
+       }
+      },
+      {
+       "on": "captain",
+       "mood": [
+        "KIM",
+        "grim"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The Soviets did not choose him at first. An early list of possible leaders did not include his name. But over the autumn, several Soviet officers recommended him, and Stalin approved.",
+     "do": [
+      {
+       "on": "list",
+       "dim": 0.4
+      },
+      {
+       "on": "Stalin",
+       "mood": [
+        "SOV",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "One Soviet adviser said he needed coaching to read his first speech. His Korean was weak, and the adviser described him as, quote, created from zero. Historians still debate how much of this was Soviet choice, and how much was his own skill.",
+     "do": [
+      {
+       "on": "zero",
+       "card": {
+        "kind": "quote",
+        "text": "Created from zero.",
+        "dur": 4.5,
+        "who": "Soviet adviser Leonid Vassin, as reported"
+       }
+      }
+     ]
+    },
+    {
+     "say": "The south was getting its own leader too. In October 1945, Syngman Rhee was flown to Seoul on General MacArthur's plane. He was seventy years old. He held a doctorate from Princeton. And he had lived outside Korea for most of forty years.",
+     "do": [
+      {
+       "on": "Rhee",
+       "show": [
+        "RHE"
+       ]
+      },
+      {
+       "on": "seventy",
+       "card": {
+        "kind": "caption",
+        "text": "Syngman Rhee",
+        "dur": 4,
+        "sub": "born 1875 · Princeton PhD"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127,
+      "lat": 37.2,
+      "scale": 8000
+     },
+     "date": "OCTOBER 1945"
+    },
+    {
+     "say": "Rhee had left Korea in 1904, and spent decades in Hawaii and in Washington. He came home to a country he had hardly seen for forty years.",
+     "do": [
+      {
+       "on": "Hawaii",
+       "mood": [
+        "RHE",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Both men were very sure about one thing. Korea should be one country. And each of them believed he should rule all of it.",
+     "do": [
+      {
+       "on": "both",
+       "link": [
+        "KIM",
+        "RHE"
+       ],
+       "color": "#ff6a1f"
+      },
+      {
+       "on": "rule",
+       "mood": [
+        "KIM",
+        "angry"
+       ]
+      },
+      {
+       "on": "rule",
+       "mood": [
+        "RHE",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "In December 1945, the big powers met in Moscow, and agreed on a trusteeship for Korea, up to five years. Many Koreans were furious. They had just got rid of one master. Now four countries wanted to guide them.",
+     "do": [
+      {
+       "on": "trusteeship",
+       "card": {
+        "kind": "caption",
+        "text": "Moscow Conference, December 1945",
+        "dur": 5,
+        "sub": "a trusteeship of up to five years"
+       }
+      },
+      {
+       "on": "furious",
+       "mood": [
+        "KOR",
+        "angry"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "The Americans and the Soviets then tried to form a joint government, and failed. Their talks went on for two years. And the line they had called temporary got harder every month.",
+     "do": [
+      {
+       "on": "failed",
+       "link": [
+        "USA",
+        "SOV"
+       ],
+       "color": "#888888"
+      },
+      {
+       "on": "harder",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 200
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Two Occupations",
+   "years": "1945 – 1946",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "say": "Neither occupation was prepared. The American commander, Lieutenant General John Hodge, landed at Incheon on the eighth of September. Four days earlier, he reportedly told his officers that Korea was, quote, an enemy of the United States, simply because it had been Japanese territory.",
+     "do": [
+      {
+       "on": "Hodge",
+       "show": [
+        "USA"
+       ]
+      },
+      {
+       "on": "Incheon",
+       "pin": "Incheon"
+      },
+      {
+       "on": "enemy",
+       "card": {
+        "kind": "quote",
+        "text": "An enemy of the United States.",
+        "dur": 4.5,
+        "who": "Hodge, as reported"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127,
+      "lat": 37.2,
+      "scale": 8000
+     },
+     "date": "SEPTEMBER 1945"
+    },
+    {
+     "say": "At the surrender ceremony the next day, he said the Japanese colonial government would stay in place, with its officials and its governor-general. Koreans were stunned. They had just been freed from those very people.",
+     "do": [
+      {
+       "on": "stunned",
+       "mood": [
+        "KOR",
+        "shock"
+       ]
+      },
+      {
+       "on": "colonial",
+       "dim": 0.4
+      }
+     ]
+    },
+    {
+     "say": "After a big outcry, Hodge replaced the governor-general with an American, and removed the Japanese bureau chiefs. But he kept former Japanese officials on as advisors. And that anger did not fade.",
+     "do": [
+      {
+       "on": "outcry",
+       "mood": [
+        "KOR",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "In October, he created a Korean Advisory Council. Most of its seats went to the Korean Democratic Party, whose members were largely landowners, businessmen and former colonial officials. The People's Republic refused to join, and the American military government outlawed it in the south.",
+     "do": [
+      {
+       "on": "landowners",
+       "card": {
+        "kind": "caption",
+        "text": "Korean Advisory Council",
+        "dur": 5,
+        "sub": "mostly landowners and former officials"
+       }
+      }
+     ]
+    },
+    {
+     "say": "The Americans also refused to recognise the exiled Provisional Government, led by Kim Ku. Its members had to enter Korea as private citizens. Men who had fought for independence for decades, treated like tourists.",
+     "do": [
+      {
+       "on": "refused",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "And by 1946, there was hunger. The occupation had removed controls on rice, and prices rose sharply, despite a good harvest the year before. In one telling, a bushel of rice went from nine yen to twenty-eight hundred.",
+     "do": [
+      {
+       "on": "rice",
+       "card": {
+        "kind": "big",
+        "text": "RICE: 9 YEN → 2,800 YEN",
+        "dur": 3.4
+       }
+      }
+     ]
+    },
+    {
+     "say": "In September 1946, a general strike began with railway workers in Busan. More than two hundred and fifty thousand workers joined. On the first of October, police fired on a protest in Daegu and killed a worker. The Autumn Uprising followed. The Americans declared martial law.",
+     "do": [
+      {
+       "on": "strike",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Workers in the September 1946 general strike (more than)",
+          250000
+         ]
+        ],
+        "note": "Wikipedia, US Army Military Government in Korea"
+       }
+      },
+      {
+       "on": "martial",
+       "shake": 0.5
+      }
+     ],
+     "date": "1 OCTOBER 1946"
+    },
+    {
+     "say": "Now the other zone. In the north, the Soviet Civil Administration ruled from the twenty-fourth of August 1945. General Chistyakov chose Pyongyang as the capital. And a general named Shtykov, edited the draft constitution, and formed the first cabinet.",
+     "do": [
+      {
+       "on": "Soviet",
+       "show": [
+        "SOV"
+       ]
+      },
+      {
+       "on": "Pyongyang",
+       "pin": "Pyongyang"
+      },
+      {
+       "on": "Shtykov",
+       "mood": [
+        "SOV",
+        "neutral"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 126,
+      "lat": 39.5,
+      "scale": 8000
+     }
+    },
+    {
+     "say": "The Soviets absorbed the local people's committees in February 1946, and the Korean communists took over from there. The American State Department later said the Soviets often cut electricity and fertiliser to the south. Both sides blamed each other for just about everything.",
+     "do": [
+      {
+       "on": "absorbed",
+       "link": [
+        "SOV",
+        "KIM"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "blamed",
+       "link": [
+        "USA",
+        "SOV"
+       ],
+       "color": "#888888"
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "From the Korean side, either way, it looked the same. Two foreign armies, with different flags, each building a government in its own image. And the line between them hardening, month by month.",
+     "do": [
+      {
+       "on": "flags",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 200
+      },
+      {
+       "on": "foreign",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    }
+   ]
+  },
+  {
+   "title": "The Gandhi of Korea",
+   "years": "1883 – 1950",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "There is one more person who vanished into this story. His name was Cho Man-sik. He was born in 1883, in what is now North Korea. He studied law in Tokyo, where he learned about the ideas of Gandhi. And back home, he fought Japanese rule without violence.",
+     "do": [
+      {
+       "on": "Cho",
+       "show": [
+        "KOR"
+       ]
+      },
+      {
+       "on": "1883",
+       "card": {
+        "kind": "caption",
+        "text": "Cho Man-sik",
+        "dur": 4.5,
+        "sub": "\"the Gandhi of Korea\""
+       }
+      }
+     ],
+     "cam": {
+      "lon": 126,
+      "lat": 39.5,
+      "scale": 8000
+     }
+    },
+    {
+     "say": "After Japan surrendered, Soviet officers kept asking him to lead the new northern administration. He did not like communism, and he did not trust any foreign army. He would help, he said, only on his own terms, with real freedom to rule.",
+     "do": [
+      {
+       "on": "communism",
+       "mood": [
+        "KOR",
+        "neutral"
+       ]
+      },
+      {
+       "on": "foreign",
+       "link": [
+        "KOR",
+        "SOV"
+       ],
+       "color": "#888888"
+      }
+     ]
+    },
+    {
+     "say": "The Soviets said no to those terms. And then came the trusteeship. On the first of January 1946, a Soviet official asked Cho to sign his support for the five-year plan. He refused.",
+     "do": [
+      {
+       "on": "refused",
+       "card": {
+        "kind": "stamp",
+        "text": "CHO REFUSES",
+        "dur": 3
+       }
+      },
+      {
+       "on": "refused",
+       "mood": [
+        "KOR",
+        "angry"
+       ]
+      }
+     ],
+     "date": "1 JANUARY 1946"
+    },
+    {
+     "say": "On the fifth, Soviet soldiers arrested him. He was held at the Koryo Hotel in Pyongyang, in comfortable conditions. But the Soviet administration spread a rumour that he had collaborated with Japan.",
+     "do": [
+      {
+       "on": "fifth",
+       "card": {
+        "kind": "stamp",
+        "text": "ARRESTED 5 JAN 1946",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Later he was moved to a prison, and the confirmed reports end. He is generally believed to have been killed early in the Korean War, perhaps in October 1950. But the sources disagree. Nobody knows exactly how, or when, or by whom.",
+     "do": [
+      {
+       "on": "sources",
+       "dim": 0.4
+      }
+     ],
+     "pause": 1.4
+    },
+    {
+     "say": "Notice what the Soviets did here. They did not choose the most popular northern leader. They chose the one who would take instruction. And the man who would not, disappeared. It was a pattern both of the new halves would repeat.",
+     "do": [
+      {
+       "on": "instruction",
+       "mood": [
+        "KIM",
+        "smug"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Two Elections, Two Countries",
+   "years": "1948",
+   "mood": "tension",
+   "beats": [
+    {
+     "say": "By 1948, the talks had failed, and the United Nations got involved. It wanted elections across all of Korea. But the north would not take part. So the vote would be held only in the south.",
+     "do": [
+      {
+       "on": "United",
+       "card": {
+        "kind": "caption",
+        "text": "UN-supervised elections, 1948",
+        "dur": 5,
+        "sub": "held in the south only"
+       }
+      },
+      {
+       "on": "north",
+       "dim": 0.4
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "1948"
+    },
+    {
+     "say": "Many Koreans, on the left and the right, feared the same thing. A vote in the south alone would make the division permanent. And on the island of Jeju, that fear turned into a rebellion.",
+     "do": [
+      {
+       "on": "Jeju",
+       "pin": "Jeju"
+      },
+      {
+       "on": "feared",
+       "mood": [
+        "KOR",
+        "shock"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": 126.5,
+      "lat": 34,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "On the third of April 1948, an armed uprising began on Jeju. Its leaders opposed the separate election. The government answered with force. And the island paid for it.",
+     "do": [
+      {
+       "on": "third",
+       "card": {
+        "kind": "stamp",
+        "text": "3 APRIL 1948",
+        "dur": 3
+       }
+      },
+      {
+       "on": "force",
+       "guns": {
+        "at": [
+         126.53,
+         33.5
+        ],
+        "dur": 4
+       }
+      }
+     ],
+     "date": "3 APRIL 1948"
+    },
+    {
+     "say": "A government commission, in 2003, counted more than fourteen thousand civilian deaths. It said most of them, about eighty six percent, were caused by the security forces. It estimated the full toll at up to thirty thousand. Other estimates run higher.",
+     "do": [
+      {
+       "on": "fourteen",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Civilian deaths counted by the 2003 commission",
+          14373
+         ],
+         [
+          "Share caused by security forces (%)",
+          86
+         ]
+        ],
+        "note": "Wikipedia, Jeju uprising"
+       }
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "About two hundred and thirty of the island's four hundred villages were burned. The uprising was crushed by May 1949. And in 2003, the South Korean president, Roh Moo-hyun, apologised for the, quote, wrongful decisions of the government.",
+     "do": [
+      {
+       "on": "burned",
+       "fire": {
+        "at": [
+         126.53,
+         33.5
+        ],
+        "dur": 5
+       }
+      },
+      {
+       "on": "apologised",
+       "card": {
+        "kind": "quote",
+        "text": "Many innocent people suffered.",
+        "dur": 5,
+        "who": "President Roh Moo-hyun, 31 October 2003"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Rhee's government declared martial law that November, and in March 1949 began a final campaign against the rebels on Jeju. It was over in about two months. The island's restricted zone around its mountain stayed closed until 1954.",
+     "do": [
+      {
+       "on": "martial",
+       "shake": 0.4
+      }
+     ]
+    },
+    {
+     "say": "The vote went ahead on the tenth of May 1948. Jeju's turnout was the lowest in the south. Its two seats in the new assembly stayed empty.",
+     "do": [
+      {
+       "on": "seats",
+       "dim": 0.4
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "In July, the assembly chose Syngman Rhee as president, with about ninety two percent of the vote. On the fifteenth of August 1948, three years to the day after Japan's surrender, he declared the Republic of Korea.",
+     "do": [
+      {
+       "on": "ninety",
+       "card": {
+        "kind": "big",
+        "text": "92.3% OF THE VOTE",
+        "dur": 3
+       }
+      },
+      {
+       "on": "declared",
+       "hl": [
+        "Korea (USA)"
+       ],
+       "color": "#2b6cb0"
+      },
+      {
+       "on": "Rhee",
+       "mood": [
+        "RHE",
+        "happy"
+       ]
+      }
+     ],
+     "date": "15 AUGUST 1948"
+    },
+    {
+     "say": "The north answered within weeks. On the ninth of September, it proclaimed the Democratic People's Republic of Korea, with Kim Il Sung at its head. The Soviet Union recognised it in October.",
+     "do": [
+      {
+       "on": "ninth",
+       "hl": [
+        "Korea (USSR)"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "Kim",
+       "mood": [
+        "KIM",
+        "smug"
+       ]
+      },
+      {
+       "on": "Democratic",
+       "card": {
+        "kind": "stamp",
+        "text": "DPRK · 9 SEPT 1948",
+        "dur": 3
+       }
+      }
+     ],
+     "date": "9 SEPTEMBER 1948"
+    },
+    {
+     "say": "In December 1948, Soviet forces left the north. Both superpowers had set up the two states. Both now hoped to step back from them. Neither Korean government was ready to settle for half.",
+     "do": [
+      {
+       "on": "left",
+       "arrow": [
+        "SOV",
+        [
+         131,
+         43
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "settle",
+       "mood": [
+        "KIM",
+        "angry"
+       ]
+      },
+      {
+       "on": "settle",
+       "mood": [
+        "RHE",
+        "angry"
+       ]
+      }
+     ],
+     "date": "DECEMBER 1948"
+    },
+    {
+     "say": "Now here is the strangest part. Each new government claimed to rule the entire peninsula. Both capitals said the other half was theirs. Two countries, one map, and one stubborn idea. That the line was temporary.",
+     "do": [
+      {
+       "on": "both",
+       "link": [
+        "RHE",
+        "KIM"
+       ],
+       "color": "#ff6a1f"
+      },
+      {
+       "on": "line",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 300
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "title": "The War Nobody Finished",
+   "years": "1950 – 1953",
+   "mood": "war",
+   "beats": [
+    {
+     "say": "On the twenty-fifth of June 1950, North Korean forces crossed the parallel and invaded the south. Seoul fell in three days. Archives opened since the Cold War suggest the decision to invade was Kim Il Sung's own initiative, rather than Moscow's.",
+     "do": [
+      {
+       "on": "crossed",
+       "arrow": [
+        "KIM",
+        [
+         127,
+         37.5
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "invaded",
+       "guns": {
+        "at": [
+         126.98,
+         38.0
+        ],
+        "dur": 5
+       }
+      },
+      {
+       "on": "Seoul",
+       "pin": "Seoul"
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "25 JUNE 1950"
+    },
+    {
+     "say": "President Truman ordered American air and sea forces to help the south. The Soviet representative was absent from the United Nations Security Council. So it condemned the invasion. In the end, twenty-one countries sent forces. About nine in ten of the troops were American.",
+     "do": [
+      {
+       "on": "Truman",
+       "show": [
+        "USA"
+       ]
+      },
+      {
+       "on": "twenty-one",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Countries in the UN force",
+          21
+         ],
+         [
+          "American share of personnel (%)",
+          90
+         ]
+        ],
+        "note": "Wikipedia, Korean War"
+       }
+      }
+     ]
+    },
+    {
+     "say": "For six weeks, from the fourth of August to the eighteenth of September, the south hung on to a pocket around the port of Busan. The perimeter was only about two hundred and thirty kilometres long. UN forces were pushed back, in the words of one account, to the brink of defeat.",
+     "do": [
+      {
+       "on": "Busan",
+       "pin": "Pusan"
+      },
+      {
+       "on": "perimeter",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Busan Perimeter length (km)",
+          230
+         ],
+         [
+          "Weeks it was held",
+          6
+         ]
+        ],
+        "note": "Wikipedia, Battle of Pusan Perimeter"
+       }
+      },
+      {
+       "on": "brink",
+       "shake": 0.5
+      }
+     ],
+     "cam": {
+      "lon": 128.5,
+      "lat": 35.8,
+      "scale": 9000
+     },
+     "date": "AUGUST 1950"
+    },
+    {
+     "say": "Then, on the fifteenth of September, a landing at Incheon changed everything. UN forces pushed north, all the way toward the Yalu River, on the Chinese border.",
+     "do": [
+      {
+       "on": "Incheon",
+       "pin": "Incheon"
+      },
+      {
+       "on": "landing",
+       "explode": {
+        "at": [
+         126.7,
+         37.46
+        ],
+        "size": 1
+       }
+      },
+      {
+       "on": "north",
+       "arrow": [
+        "USA",
+        [
+         125.5,
+         40.0
+        ]
+       ],
+       "color": "#2b6cb0",
+       "big": 1
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "15 SEPTEMBER 1950"
+    },
+    {
+     "say": "On the nineteenth of October, Chinese troops crossed the Yalu. They pushed back. The war swung south again, and the front line ran back and forth across the peninsula, over and over.",
+     "do": [
+      {
+       "on": "Yalu",
+       "pin": "Yalu"
+      },
+      {
+       "on": "Chinese",
+       "arrow": [
+        [
+         124.4,
+         40.2
+        ],
+        [
+         126,
+         38.5
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "back",
+       "shake": 0.5
+      }
+     ]
+    },
+    {
+     "say": "The fighting that followed was brutal. At the Chosin Reservoir, from the twenty-seventh of November to the thirteenth of December, about thirty thousand UN troops faced a Chinese force usually estimated at a hundred and twenty thousand. A cold front brought temperatures down to about thirty-six degrees below zero.",
+     "do": [
+      {
+       "on": "Chosin",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "UN troops at Chosin (approx.)",
+          30000
+         ],
+         [
+          "Chinese troops (usual estimate)",
+          120000
+         ]
+        ],
+        "note": "Wikipedia, Battle of Chosin Reservoir"
+       }
+      },
+      {
+       "on": "cold",
+       "snow": 1
+      }
+     ],
+     "date": "27 NOVEMBER 1950"
+    },
+    {
+     "say": "The UN force fought its way out along a single road, and was evacuated by sea from Hungnam. American historians call it the greatest evacuation movement by sea in their military's history.",
+     "do": [
+      {
+       "on": "sea",
+       "arrow": [
+        [
+         127.6,
+         39.8
+        ],
+        [
+         129.5,
+         38.5
+        ]
+       ],
+       "color": "#2b6cb0"
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "Now the south's side, and the north's. Syngman Rhee wanted to push on and unite the country. He called it marching north. Kim Il Sung wanted the same, from the other direction. Both men saw the line as a mistake they would correct, with force.",
+     "do": [
+      {
+       "on": "marching",
+       "mood": [
+        "RHE",
+        "angry"
+       ]
+      },
+      {
+       "on": "direction",
+       "mood": [
+        "KIM",
+        "angry"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "There is a darker side to this story, and it belongs to both halves. By early 1950, about three hundred thousand people in the south had been enrolled in a government re-education programme, as suspected communist sympathisers. When the north attacked, retreating southern forces executed prisoners, and tens of thousands of those enrolled.",
+     "do": [
+      {
+       "on": "three",
+       "card": {
+        "kind": "big",
+        "text": "~300,000 ENROLLED",
+        "dur": 3
+       }
+      },
+      {
+       "on": "executed",
+       "dim": 0.5
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "say": "And in the north, as we saw with Cho Man-sik, opponents of the new order simply disappeared. Neither side has a clean record. Both built their states on the fear of the other one.",
+     "do": [
+      {
+       "on": "disappeared",
+       "mood": [
+        "KIM",
+        "grim"
+       ]
+      },
+      {
+       "on": "fear",
+       "mood": [
+        "RHE",
+        "grim"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Peace talks began in July 1951, at Kaesong, and later moved to Panmunjom. They dragged on for two years. One of the hardest questions was what to do with prisoners of war. More than twenty-two thousand communist soldiers refused to go home. So did hundreds of others, including twenty-one Americans.",
+     "do": [
+      {
+       "on": "Panmunjom",
+       "pin": "Panmunjom"
+      },
+      {
+       "on": "twenty-two",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Communist POWs who refused repatriation (more than)",
+          22000
+         ]
+        ],
+        "note": "Wikipedia, Korean Armistice Agreement"
+       }
+      }
+     ],
+     "date": "JULY 1951"
+    },
+    {
+     "say": "And now we come to the day the guns stopped. It was quieter than you might think.",
+     "do": [
+      {
+       "on": "quieter",
+       "dim": 0.3
+      }
+     ],
+     "pause": 0.5
+    },
+    {
+     "say": "On the twenty-seventh of July 1953, at ten in the morning, an armistice was signed at Panmunjom. Not a peace treaty. An armistice. South Korea never signed. Rhee refused to accept ending a war without unifying the country. And to this day, no peace treaty has ever been signed.",
+     "do": [
+      {
+       "on": "armistice",
+       "card": {
+        "kind": "stamp",
+        "text": "ARMISTICE 27 JULY 1953",
+        "dur": 3.4
+       }
+      },
+      {
+       "on": "treaty",
+       "mood": [
+        "RHE",
+        "angry"
+       ]
+      }
+     ],
+     "date": "27 JULY 1953"
+    },
+    {
+     "say": "Nearly everyone paid. Historians estimate between one point six and three million civilians died. Military deaths were about a million. South Korea counts nearly a hundred and forty thousand dead. North Korea, close to three hundred thousand. And the United States lost over thirty-six thousand.",
+     "do": [
+      {
+       "on": "million",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 7,
+        "rows": [
+         [
+          "Civilian deaths (low estimate)",
+          1600000
+         ],
+         [
+          "Civilian deaths (high estimate)",
+          3000000
+         ],
+         [
+          "US dead or missing",
+          36515
+         ]
+        ],
+        "note": "Wikipedia, Korean War"
+       }
+      }
+     ],
+     "pause": 1.4
+    },
+    {
+     "say": "And after all of it, after three years and millions of lives, the line barely moved. Across the whole war, a net of about thirty-nine hundred square kilometres changed hands, from north to south.",
+     "do": [
+      {
+       "on": "barely",
+       "card": {
+        "kind": "big",
+        "text": "THE LINE BARELY MOVED",
+        "dur": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Line That Isn’t the Line",
+   "years": "1953 – today",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "Here is a twist. The thirty-eighth parallel is not Korea's border today. The armistice drew a new line, where the fighting had stopped. It's called the Military Demarcation Line.",
+     "do": [
+      {
+       "on": "new",
+       "line": [
+        [
+         124.7,
+         37.65
+        ],
+        [
+         126.7,
+         37.95
+        ],
+        [
+         128.4,
+         38.55
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 400
+      },
+      {
+       "on": "twist",
+       "card": {
+        "kind": "big",
+        "text": "NOT THE 38TH ANYMORE",
+        "dur": 3
+       }
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     },
+     "date": "1953"
+    },
+    {
+     "say": "Around it, there is a buffer called the Demilitarized Zone. It is about two hundred and fifty kilometres long, and four kilometres wide. And it crosses the thirty-eighth parallel at an angle. In the west, it lies south of the parallel. In the east, it lies north.",
+     "do": [
+      {
+       "on": "buffer",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "DMZ length (km)",
+          250
+         ],
+         [
+          "DMZ width (km)",
+          4
+         ]
+        ],
+        "note": "Wikipedia, Korean Demilitarized Zone"
+       }
+      }
+     ]
+    },
+    {
+     "say": "On the northern side of the zone stands a village called Kijong-dong, the so-called Peace Village. It has brightly painted, multi-storey buildings. But modern telescopes suggest that some of them are concrete shells, with no glass in the windows, and no rooms inside.",
+     "do": [
+      {
+       "on": "Kijong-dong",
+       "card": {
+        "kind": "caption",
+        "text": "Kijong-dong",
+        "dur": 4.5,
+        "sub": "\"Peace Village\""
+       }
+      }
+     ]
+    },
+    {
+     "say": "At Panmunjom, the armistice talks happened in a few huts. The Military Demarcation Line still runs right through the middle of the conference rooms. Every negotiation since 1953 has taken place there.",
+     "do": [
+      {
+       "on": "Panmunjom",
+       "pin": "Panmunjom"
+      },
+      {
+       "on": "huts",
+       "mood": [
+        "KOR",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "It is also one of the most heavily armed places on Earth. Large numbers of troops stand on both sides. Experts believe about sixty percent of North Korea's artillery sits within a few kilometres of it.",
+     "do": [
+      {
+       "on": "armed",
+       "dim": 0.3
+      },
+      {
+       "on": "sides",
+       "mood": [
+        "KIM",
+        "grim"
+       ]
+      },
+      {
+       "on": "sides",
+       "mood": [
+        "RHE",
+        "grim"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "That tension has not gone away. Over the decades, the zone has seen shootings and standoffs. And one of the deadliest happened over a tree.",
+     "do": [
+      {
+       "on": "tree",
+       "mood": [
+        "KIM",
+        "grim"
+       ]
+      }
+     ],
+     "pause": 0.5
+    },
+    {
+     "say": "In August 1976, two American officers, Captain Arthur Bonifas and First Lieutenant Mark Barrett, were killed there, in a dispute over trimming a tree.",
+     "do": [
+      {
+       "on": "Bonifas",
+       "card": {
+        "kind": "caption",
+        "text": "August 1976",
+        "dur": 5,
+        "sub": "Capt. Arthur Bonifas · 1st Lt. Mark Barrett"
+       }
+      }
+     ],
+     "pause": 1.0
+    },
+    {
+     "say": "And yet something else happened in that empty land. Because nobody could farm it, or build on it, nature took over. The zone now holds more than six thousand species of plants and animals, including more than a hundred endangered ones.",
+     "do": [
+      {
+       "on": "six",
+       "card": {
+        "kind": "big",
+        "text": "6,000+ SPECIES",
+        "dur": 3
+       }
+      },
+      {
+       "on": "nature",
+       "mood": [
+        "KOR",
+        "happy"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "A strip of land, made by a failed war, shaped by a number on a National Geographic map. A line that nobody meant to keep. And one of the best-preserved habitats in the temperate world.",
+     "do": [
+      {
+       "on": "National",
+       "card": {
+        "kind": "caption",
+        "text": "A map, a war, a wildlife refuge",
+        "sub": "the DMZ today",
+        "dur": 4.5
+       }
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "title": "The Men Who Drew It",
+   "years": "1953 – 1994",
+   "mood": "hope",
+   "beats": [
+    {
+     "say": "So what happened to the two officers? Their lives are the strangest part of the story. Dean Rusk went on to become America's Secretary of State, under Presidents Kennedy and Johnson. He held the job for eight years, from 1961 to 1969.",
+     "do": [
+      {
+       "on": "Rusk",
+       "show": [
+        "RSK"
+       ]
+      },
+      {
+       "on": "eight",
+       "card": {
+        "kind": "caption",
+        "text": "Dean Rusk, Secretary of State",
+        "dur": 4.5,
+        "sub": "1961 – 1969"
+       }
+      }
+     ],
+     "cam": {
+      "lon": -77.04,
+      "lat": 38.9,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "And Charles Bonesteel? He rose through the army. And in 1966, he was given a new command. He was put in charge of all American forces in Korea, and of the United Nations Command, and of the Eighth Army.",
+     "do": [
+      {
+       "on": "Bonesteel",
+       "show": [
+        "BON"
+       ]
+      },
+      {
+       "on": "1966",
+       "card": {
+        "kind": "caption",
+        "text": "Charles Bonesteel",
+        "dur": 4.5,
+        "sub": "US Forces Korea · 1966 – 1969"
+       }
+      }
+     ],
+     "date": "1966"
+    },
+    {
+     "say": "In other words, he went back to the line. And he spent three years defending it. In those years, North Korean units were infiltrating across the zone. And in January 1968, North Korea seized an American ship, the Pueblo.",
+     "do": [
+      {
+       "on": "back",
+       "cam": {
+        "lon": 127,
+        "lat": 38,
+        "scale": 7000
+       }
+      },
+      {
+       "on": "Pueblo",
+       "card": {
+        "kind": "stamp",
+        "text": "THE PUEBLO · JAN 1968",
+        "dur": 3
+       }
+      }
+     ],
+     "date": "1968"
+    },
+    {
+     "say": "The Pueblo was a United States Navy ship. On the twenty-third of January 1968, North Korean forces captured it in the Sea of Japan. One of the eighty-three men aboard was killed. The rest were held for eleven months.",
+     "do": [
+      {
+       "on": "Pueblo",
+       "card": {
+        "kind": "stat",
+        "text": null,
+        "dur": 6,
+        "rows": [
+         [
+          "Crew aboard",
+          83
+         ],
+         [
+          "Months held",
+          11
+         ]
+        ],
+        "note": "Wikipedia, Pueblo incident"
+       }
+      }
+     ]
+    },
+    {
+     "say": "They were freed on the twenty-third of December, and walked across the Bridge of No Return, at the DMZ. The United States signed a document admitting the ship had entered North Korean waters, and promising to stay out. It said it had signed only to bring the crew home. North Korea still holds the ship. It has been on display in Pyongyang since 2013.",
+     "do": [
+      {
+       "on": "Bridge",
+       "pin": "Panmunjom"
+      }
+     ],
+     "date": "23 DECEMBER 1968"
+    },
+    {
+     "say": "Now remember where this episode started. A map from a magazine. A hurry. Two men. Keep that in your head for what comes next.",
+     "do": [
+      {
+       "on": "two",
+       "show": [
+        "RSK",
+        "BON"
+       ]
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "Think about that. The man who helped pick the thirty-eighth parallel, on a map, in an office, in 1945, spent the end of his career commanding soldiers on it. He retired in 1969. And he died in 1977, at sixty-eight.",
+     "do": [
+      {
+       "on": "Think",
+       "mood": [
+        "BON",
+        "grim"
+       ]
+      },
+      {
+       "on": "sixty-eight",
+       "card": {
+        "kind": "big",
+        "text": "HE DEFENDED HIS OWN LINE",
+        "dur": 3
+       }
+      }
+     ],
+     "pause": 1.0
+    },
+    {
+     "say": "What about the Korean leaders? Syngman Rhee ruled the south until April 1960. Then, after police shot protesters, he resigned. A month later, he left for Hawaii. He died there, in 1965, at the age of ninety.",
+     "do": [
+      {
+       "on": "Rhee",
+       "show": [
+        "RHE"
+       ]
+      },
+      {
+       "on": "April",
+       "card": {
+        "kind": "caption",
+        "text": "The April Revolution, 1960",
+        "dur": 4.5,
+        "sub": "Rhee resigns 26 April"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Rhee's fall came in 1960. Police fired on protesters in the city of Masan. Anger spread, and it became known as the April Revolution. On the twenty-sixth of April, Rhee resigned.",
+     "do": [
+      {
+       "on": "fired",
+       "guns": {
+        "at": [
+         128.58,
+         35.21
+        ],
+        "dur": 4
+       }
+      },
+      {
+       "on": "April",
+       "card": {
+        "kind": "stamp",
+        "text": "APRIL REVOLUTION · 1960",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Kim Il Sung ruled the north for the rest of his life. He died in July 1994, aged eighty two. His country has never changed hands. Neither has the line.",
+     "do": [
+      {
+       "on": "Kim",
+       "show": [
+        "KIM"
+       ]
+      },
+      {
+       "on": "1994",
+       "card": {
+        "kind": "stamp",
+        "text": "KIM IL SUNG · 1994",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "And Dean Rusk lived to see the Cold War end. He died in 1994, aged eighty five. The line he had helped to draw was still there. As it still is today.",
+     "do": [
+      {
+       "on": "lived",
+       "mood": [
+        "RSK",
+        "neutral"
+       ]
+      }
+     ],
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "title": "What the Line Remembers",
+   "years": "1945 – today",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "So, who was right? That is a hard question, and the honest answer is, it depends who you ask. Let's hear both sides.",
+     "pause": 0.5
+    },
+    {
+     "say": "From the south's side, the line protected a country that wanted to choose its own government, and was invaded. That is how South Korea remembers it.",
+     "do": [
+      {
+       "on": "south",
+       "mood": [
+        "RHE",
+        "neutral"
+       ]
+      },
+      {
+       "on": "invaded",
+       "hl": [
+        "Korea (USA)"
+       ],
+       "color": "#2b6cb0"
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    },
+    {
+     "say": "From the north's side, the line was drawn by foreigners, for foreigners. It was made by a faraway power, one that did not ask Koreans. And it was kept in place, they say, by a foreign army. That is how North Korea remembers it.",
+     "do": [
+      {
+       "on": "north",
+       "mood": [
+        "KIM",
+        "neutral"
+       ]
+      },
+      {
+       "on": "foreigners",
+       "hl": [
+        "Korea (USSR)"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "say": "Historians say both things are partly true. The line was drawn in a hurry by outsiders. And the two Korean governments that grew behind it each wanted the entire country, and each tried to get it.",
+     "do": [
+      {
+       "on": "both",
+       "link": [
+        "RHE",
+        "KIM"
+       ],
+       "color": "#ff6a1f"
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "And you can find the one question that hangs over all of it in a single phrase from the Cairo Declaration. In due course. Korea was promised freedom in due course. Nobody ever said when. And nobody ever asked the Koreans.",
+     "do": [
+      {
+       "on": "due",
+       "card": {
+        "kind": "quote",
+        "text": "In due course.",
+        "who": "Cairo, 1943",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Think of Yo Un-hyung, who tried to hold it together. Think of the island of Jeju. Think of the families on both sides who have not seen each other since 1945. They are the ones who live with the line.",
+     "do": [
+      {
+       "on": "Yo",
+       "show": [
+        "YO"
+       ]
+      },
+      {
+       "on": "Jeju",
+       "pin": "Jeju"
+      },
+      {
+       "on": "families",
+       "mood": [
+        "KOR",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "And think of two men in an office in Washington, thirty-six years old, with a map from a magazine. They were not villains. They were in a hurry. And they never imagined that their afternoon would last for more than eighty years.",
+     "do": [
+      {
+       "on": "two",
+       "show": [
+        "RSK",
+        "BON"
+       ]
+      },
+      {
+       "on": "hurry",
+       "mood": [
+        "RSK",
+        "sad"
+       ]
+      }
+     ],
+     "cam": {
+      "lon": -77.04,
+      "lat": 38.9,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "Today, the line still runs across the peninsula, about two hundred and fifty kilometres long. One people, two countries. And one number on a map that nobody ever got around to changing.",
+     "do": [
+      {
+       "on": "line",
+       "line": [
+        [
+         123.5,
+         38
+        ],
+        [
+         131,
+         38
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 200
+      }
+     ],
+     "cam": {
+      "lon": 127.5,
+      "lat": 37.5,
+      "scale": 5200
+     }
+    }
+   ]
+  }
+ ],
+ "outro": {
+  "text": "Every border has two sides. This one was drawn by two men who never saw it, and lived on by millions who never chose it.",
+  "question": "Would a different line have changed Korea, or was the division coming anyway?",
+  "next": "THE PIG WAR"
+ },
+ "hook": "In August 1945, two American officers drew a line through the middle of Korea using a National Geographic map. It was supposed to be temporary.",
+ "about": "Korea split in two, the 38th parallel, told from both sides: Japanese rule, Dean Rusk and Charles Bonesteel and the map, the Soviet and American zones, Yo Un-hyung, Syngman Rhee and Kim Il Sung, the Jeju uprising, the Korean War, the DMZ, and what happened to the men who drew the line.",
+ "tags": [
+  "korea",
+  "38th parallel",
+  "division of korea",
+  "north korea vs south korea",
+  "korean war",
+  "dean rusk",
+  "charles bonesteel",
+  "kim il sung",
+  "syngman rhee",
+  "dmz",
+  "korean history",
+  "1945",
+  "cold war"
+ ],
+ "thumb": {
+  "layout": "versus",
+  "scene": "map",
+  "topic": "THE 38TH PARALLEL",
+  "hook": [
+   "TWO MEN.",
+   "ONE MAP."
+  ],
+  "hi": "ONE MAP.",
+  "hidden": {
+   "preset": "us_sailor",
+   "mood": "grim",
+   "facing": 1,
+   "coat": "#6b6a3a",
+   "coat2": "#c8b98a",
+   "hat": "none"
+  },
+  "anchor": {
+   "preset": "us_sailor",
+   "mood": "shock",
+   "facing": -1,
+   "coat": "#6b6a3a",
+   "coat2": "#c8b98a",
+   "hat": "none",
+   "glasses": 1
+  }
+ },
+ "abTest": [
+  {
+   "title": "Korea Split in Two: The ENTIRE Story From Both Sides",
+   "thumb": {}
+  },
+  {
+   "title": "Korea Split in Two: The ENTIRE Story From Both Sides",
+   "thumb": {
+    "layout": "mapperson",
+    "hook": [
+     "HE DREW",
+     "THE LINE."
+    ]
+   }
+  },
+  {
+   "title": "Korea Split in Two: The ENTIRE Story From Both Sides",
+   "thumb": {
+    "layout": "spotlight",
+    "hook": [
+     "2 OFFICERS.",
+     "1 MAGAZINE MAP."
+    ],
+    "hi": "1 MAGAZINE MAP."
+   }
+  }
+ ],
+ "abTitlesLater": [
+  "How Two Officers and a Map Split Korea",
+  "The Two Men Who Drew the Line Through Korea | The 38th Parallel"
+ ],
+ "localizations": {
+  "de": {
+   "title": "Korea geteilt: Die GESAMTE Geschichte von beiden Seiten",
+   "description": "Im August 1945 zogen zwei amerikanische Offiziere mit einer Karte von National Geographic eine Linie mitten durch Korea. Sie sollte nur vorübergehend sein.\n\nDer 38. Breitengrad, erzählt von beiden Seiten: Dean Rusk und Charles Bonesteel, Yo Un-hyung, Syngman Rhee und Kim Il Sung, der Koreakrieg und die entmilitarisierte Zone."
+  },
+  "es": {
+   "title": "Corea dividida: La historia COMPLETA desde ambos lados",
+   "description": "En agosto de 1945, dos oficiales estadounidenses trazaron una línea por el centro de Corea con un mapa de National Geographic. Debía ser temporal.\n\nEl paralelo 38, contado desde ambos lados: Dean Rusk y Charles Bonesteel, Yo Un-hyung, Syngman Rhee y Kim Il Sung, la guerra de Corea y la zona desmilitarizada."
+  },
+  "fr": {
+   "title": "La Corée coupée en deux : toute l’histoire des deux côtés",
+   "description": "En août 1945, deux officiers américains tracent une ligne au milieu de la Corée à l’aide d’une carte du National Geographic. Elle devait être temporaire.\n\nLe 38e parallèle raconté des deux côtés : Dean Rusk et Charles Bonesteel, Yo Un-hyung, Syngman Rhee et Kim Il Sung, la guerre de Corée et la zone démilitarisée."
+  },
+  "pt": {
+   "title": "Coreia dividida: A história COMPLETA dos dois lados",
+   "description": "Em agosto de 1945, dois oficiais americanos traçaram uma linha no meio da Coreia com um mapa da National Geographic. Devia ser temporária.\n\nO paralelo 38, contado dos dois lados: Dean Rusk e Charles Bonesteel, Yo Un-hyung, Syngman Rhee e Kim Il Sung, a Guerra da Coreia e a zona desmilitarizada."
+  }
+ }
+}

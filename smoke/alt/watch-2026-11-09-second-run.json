@@ -1,0 +1,19 @@
+{"date":"2026-11-09","source":"NexLev youtube_channel_videos / youtube_search (free tools)",
+"note":"Channel listings returned the 25/21 newest videos, not just 14 days; Historically's dates are month-rounded. Only Historically and Animated History checked this week; other competitors next Monday.",
+"channels":{
+ "Historically (1.64M subs)":{"recent":[
+  {"title":"My Favorite Greek Myths [No AI]","views":2400000,"len":"21:38","age":"1 month"},
+  {"title":"The ENTIRE History of CHINA [No AI]","views":8700000,"len":"32:02","age":"2 months"},
+  {"title":"How WW2 Began [No AI]","views":4200000,"len":"18:57","age":"4 months"},
+  {"title":"The ENTIRE History of ROME [No AI]","views":10000000,"len":"38:30","age":"6 months"}],
+  "outliers":"ENTIRE History of ROME (10M) and CHINA (8.7M): plain 'The ENTIRE History of X', 32-38 minutes, each about 3-4x the channel's usual 2-3M. Members-only shorts get 0 public views."},
+ "Animated History (101K subs)":{"recent":[
+  {"title":"The ENTIRE History of Rome [NO AI]","views":41000,"len":"33:25","age":"9 days"},
+  {"title":"6000 Years of Iranian History in 25 Minutes","views":75000,"len":"25:00","age":"2 weeks"},
+  {"title":"The ENTIRE History of Germany in 32 Minutes","views":828000,"len":"32:13","age":"1 month"},
+  {"title":"4000 Years of Chinese History in 25 Minutes","views":1100000,"len":"25:56","age":"2 months"},
+  {"title":"2000 Years of Israel History in 35 Minutes","views":1400000,"len":"35:59","age":"3 months"}],
+  "outliers":"China, Israel, Russia (1.1-1.4M) and Germany (828K): 'N Years of X History in M Minutes' or 'The ENTIRE History of X in M Minutes', all 25-36 minutes. Their own Rome (41K in 9 days) and Iran (75K) are far below: topic size matters, a country people already search for beats a niche one."}},
+"our_next_topics":{
+ "Rome vs Carthage":"Historically's ENTIRE History of ROME is 10M; Animated History's Rome is only 41K, so the Rome topic is proven but depends on the channel. Our angle (Hasdrubal's wife) is unique.",
+ "Korea 38th":"youtube_search (by views): Captivating History 'Why Did Korea Split Into Two' 2.18M (13:48); Wendover 'How the Korean DMZ Works' 2.8M; Shorts 'Why and How Korea Was Divided' 129K, 'Why Korea Split in Two? The Story of the 38th Parallel' 55K, 'This Line Split Korea in 30 Minutes' 20K. Several small channels uploaded the same 'two American officers, a National Geographic map, 30 minutes' story in the last 2 weeks (Cartogossip, Atlas of Empires 41-min, One Line Later), so the hook is getting crowded: our hidden-person angle (Rusk and Bonesteel, their own words, what happened to them afterwards) must be the lead, not the map."}}

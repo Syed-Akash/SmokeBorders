@@ -1,0 +1,2 @@
+- Playfair Display (playfair-display-*.woff2): SIL Open Font License 1.1, via @fontsource/playfair-display.
+- Bungee, Barlow Semi Condensed: SIL Open Font License 1.1.

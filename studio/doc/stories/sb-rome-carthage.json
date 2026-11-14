@@ -1,0 +1,3747 @@
+{
+ "id": "sb-rome-carthage",
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "ROM": "bm_lewis",
+  "CAR": "bm_daniel",
+  "HAN": "bm_fable",
+  "SCI": "am_michael",
+  "FAB": "bm_lewis",
+  "CAT": "bm_daniel"
+ },
+ "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
+ "era": "bc300",
+ "musicEra": "ancient",
+ "balls": {
+  "ROM": {
+   "flag": "ROMA",
+   "label": "ROME",
+   "at": [
+    13.5,
+    43.3
+   ],
+   "r": 58,
+   "char": {
+    "preset": "roman",
+    "facing": -1
+   }
+  },
+  "CAR": {
+   "flag": "CART",
+   "label": "CARTHAGE",
+   "at": [
+    8.0,
+    34.4
+   ],
+   "r": 58,
+   "char": {
+    "preset": "carthaginian",
+    "facing": 1
+   }
+  },
+  "HAM": {
+   "flag": "CART",
+   "label": "HAMILCAR BARCA",
+   "at": [
+    11.0,
+    39.2
+   ],
+   "r": 46,
+   "char": {
+    "preset": "carthaginian",
+    "facing": 1,
+    "beard": "full",
+    "hair": "#4a4a4a",
+    "mood": "grim"
+   }
+  },
+  "HAN": {
+   "flag": "CART",
+   "label": "HANNIBAL",
+   "at": [
+    5.5,
+    37.8
+   ],
+   "r": 50,
+   "char": {
+    "preset": "carthaginian",
+    "facing": 1,
+    "coat": "#3c1f52",
+    "hatCol": "#c9a227",
+    "beard": "stubble"
+   }
+  },
+  "SCI": {
+   "flag": "ROMA",
+   "label": "SCIPIO",
+   "at": [
+    17.5,
+    42.6
+   ],
+   "r": 50,
+   "char": {
+    "preset": "roman",
+    "facing": -1,
+    "coat": "#b02434",
+    "hair": "#2b1d12"
+   }
+  },
+  "FAB": {
+   "flag": "ROMA",
+   "label": "FABIUS",
+   "at": [
+    11.0,
+    42.6
+   ],
+   "r": 44,
+   "char": {
+    "preset": "roman",
+    "facing": 1,
+    "hat": "none",
+    "hairStyle": "bald",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a"
+   }
+  },
+  "MAS": {
+   "flag": "NUMI",
+   "label": "MASINISSA",
+   "at": [
+    6.2,
+    35.2
+   ],
+   "r": 44,
+   "char": {
+    "preset": "carthaginian",
+    "facing": 1,
+    "coat": "#c9a85a",
+    "coat2": "#7a1010",
+    "hat": "turban",
+    "hatCol": "#efeae0",
+    "skin": "#a87250"
+   }
+  },
+  "CAT": {
+   "flag": "ROMA",
+   "label": "CATO THE ELDER",
+   "at": [
+    14.5,
+    42.8
+   ],
+   "r": 46,
+   "char": {
+    "preset": "roman",
+    "facing": -1,
+    "hat": "none",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a"
+   }
+  },
+  "AEM": {
+   "flag": "ROMA",
+   "label": "SCIPIO AEMILIANUS",
+   "at": [
+    11.6,
+    37.6
+   ],
+   "r": 48,
+   "char": {
+    "preset": "roman",
+    "facing": -1
+   }
+  }
+ },
+ "places": {
+  "Rome": [
+   12.5,
+   41.9
+  ],
+  "Carthage": [
+   10.32,
+   36.85
+  ],
+  "Messana": [
+   15.55,
+   38.19
+  ],
+  "Syracuse": [
+   15.29,
+   37.08
+  ],
+  "Mylae": [
+   15.24,
+   38.22
+  ],
+  "Ecnomus": [
+   13.95,
+   37.1
+  ],
+  "Tunis": [
+   10.18,
+   36.8
+  ],
+  "Drepana": [
+   12.51,
+   38.02
+  ],
+  "Aegates Islands": [
+   12.25,
+   37.97
+  ],
+  "Eryx": [
+   12.59,
+   38.04
+  ],
+  "Sardinia": [
+   9.0,
+   40.0
+  ],
+  "Tyre": [
+   35.2,
+   33.27
+  ],
+  "New Carthage": [
+   -0.98,
+   37.6
+  ],
+  "Saguntum": [
+   -0.27,
+   39.68
+  ],
+  "Ebro": [
+   0.8,
+   40.7
+  ],
+  "Pyrenees": [
+   1.0,
+   42.6
+  ],
+  "Rhone": [
+   4.8,
+   43.7
+  ],
+  "Alps": [
+   7.07,
+   44.7
+  ],
+  "Trebia": [
+   9.6,
+   45.0
+  ],
+  "Lake Trasimene": [
+   12.1,
+   43.13
+  ],
+  "Cannae": [
+   16.13,
+   41.3
+  ],
+  "Canusium": [
+   16.07,
+   41.22
+  ],
+  "Capua": [
+   14.25,
+   41.1
+  ],
+  "Metaurus": [
+   12.9,
+   43.73
+  ],
+  "Utica": [
+   10.06,
+   37.06
+  ],
+  "Zama": [
+   8.36,
+   36.22
+  ],
+  "Crete": [
+   24.8,
+   35.2
+  ],
+  "Libyssa": [
+   29.4,
+   40.75
+  ]
+ },
+ "sources": [
+  "Britannica, Punic Wars: https://www.britannica.com/topic/Punic-Wars",
+  "World History Encyclopedia, First Punic War: https://www.worldhistory.org/First_Punic_War/",
+  "World History Encyclopedia, Hannibal: https://www.worldhistory.org/Hannibal/",
+  "World History Encyclopedia, Third Punic War: https://worldhistory.org/Third_Punic_War",
+  "World History Encyclopedia, Carthage: https://www.worldhistory.org/Carthage/",
+  "Britannica, Battle of Cannae (summary): https://www.britannica.com/summary/Battle-of-Cannae",
+  "Britannica, Battle of Zama: https://www.britannica.com/print/article/655514",
+  "Livius.org, Lake Trasimene (217 BCE): https://www.livius.org/articles/battle/lake-trasimene/",
+  "Livius.org, Carthage: the Roman wars: https://livius.org/articles/place/carthage/roman-wars",
+  "History.com, Hannibal crosses the Alps: https://www.history.com/articles/hannibal-crosses-alps",
+  "History Revealed, How many elephants did Hannibal take over the Alps?: https://www.historyrevealed.com/eras/ancient-rome/how-many-elephants-did-hannibal-take-over-the-alps/",
+  "HistoryNet, Scipio Africanus: https://www.historynet.com/romes-craftiest-general-scipio-africanus.htm",
+  "Dickinson College Commentaries, Chronology of Hannibal's life: https://dcc.dickinson.edu/node/240",
+  "Plutarch, Life of Cato the Elder 26-27 (Perseus): https://cts.perseids.org/read/greekLit/tlg0007/tlg025/perseus-eng2/25.1-27.2",
+  "The Death of Carthage, Scipio Aemilianus destroys Carthage (Polybius XXXIX): https://thedeathofcarthage.com/1752/publius-cornelius-scipio-aemilianus-destroys-carthage/"
+ ],
+ "intro": {
+  "mood": "grief",
+  "beats": [
+   {
+    "cam": {
+     "lon": 10.32,
+     "lat": 36.85,
+     "scale": 9000
+    },
+    "date": "SPRING 146 BC",
+    "say": "Spring, 146 BC. The greatest city in Africa is burning, and it has been burning for days.",
+    "do": [
+     {
+      "on": "burning",
+      "fire": {
+       "at": [
+        10.32,
+        36.85
+       ],
+       "dur": 9
+      }
+     },
+     {
+      "on": "Africa",
+      "pin": "Carthage"
+     }
+    ]
+   },
+   {
+    "say": "Its people fought the Romans street by street, for seven days. Now about fifty thousand survivors walk out of the ruins. Every one of them will be sold as a slave.",
+    "do": [
+     {
+      "on": "seven",
+      "smoke": {
+       "at": [
+        10.32,
+        36.85
+       ],
+       "dur": 8
+      }
+     },
+     {
+      "on": "fifty",
+      "card": {
+       "kind": "big",
+       "text": "≈ 50,000 SURVIVORS",
+       "dur": 3.4
+      }
+     },
+     {
+      "on": "survivors",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "say": "And the Roman general who ordered all of it is standing on a hill, watching. And he is crying.",
+    "do": [
+     {
+      "on": "Roman",
+      "show": [
+       "AEM"
+      ]
+     },
+     {
+      "on": "crying",
+      "mood": [
+       "AEM",
+       "sad"
+      ]
+     }
+    ],
+    "pause": 0.8,
+    "scene": {
+     "shot": "faces",
+     "names": [
+      [
+       "SCIPIO AEMILIANUS",
+       "Roman general"
+      ],
+      [
+       "CARTHAGE",
+       "146 BC"
+      ]
+     ],
+     "nameAt": 0.6,
+     "push": 0.06,
+     "people": [
+      {
+       "preset": "roman",
+       "x": 0.3
+      },
+      {
+       "preset": "carthaginian",
+       "x": 0.7
+      }
+     ]
+    }
+   },
+   {
+    "cam": {
+     "lon": 12,
+     "lat": 39,
+     "scale": 1500
+    },
+    "say": "This is the end of Rome versus Carthage. The Punic Wars, 264 to 146 BC. Three wars, one hundred and eighteen years, and two of the most powerful cities in the ancient world.",
+    "do": [
+     {
+      "on": "Rome",
+      "show": [
+       "ROM"
+      ]
+     },
+     {
+      "on": "Carthage",
+      "show": [
+       "CAR"
+      ]
+     },
+     {
+      "on": "Punic",
+      "card": {
+       "kind": "caption",
+       "text": "Rome vs Carthage: the Punic Wars",
+       "sub": "264 – 146 BC",
+       "dur": 4.5
+      }
+     },
+     {
+      "on": "Three",
+      "war": [
+       "ROM",
+       "CAR"
+      ]
+     },
+     {
+      "on": "hundred",
+      "zoomhit": 1
+     },
+     {
+      "on": "versus",
+      "zoomhit": 1
+     }
+    ],
+    "scene": {
+     "shot": "off"
+    }
+   },
+   {
+    "say": "The Romans wrote almost everything we know about it. So today we tell it from both sides, and we ask a hard question. Did Carthage have to die?",
+    "do": [
+     {
+      "on": "both",
+      "link": [
+       "ROM",
+       "CAR"
+      ],
+      "color": "#ff6a1f"
+     },
+     {
+      "on": "die",
+      "mood": [
+       "CAR",
+       "shock"
+      ]
+     },
+     {
+      "on": "sides",
+      "zoomhit": 1
+     },
+     {
+      "on": "about",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "do": [
+     {
+      "logo": 1
+     }
+    ],
+    "pause": 3.6
+   }
+  ]
+ },
+ "chapters": [
+  {
+   "title": "Rome vs Carthage: A Fight Over Sicily",
+   "years": "264 BC",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 5000
+     },
+     "say": "Let's start with the side that lost, because that's the side you rarely hear. Carthage sat on the coast of North Africa, in what is now Tunisia.",
+     "do": [
+      {
+       "on": "Carthage",
+       "pin": "Carthage"
+      },
+      {
+       "on": "Tunisia",
+       "hl": [
+        "Carthaginian Empire"
+       ],
+       "color": "#7b3fa0"
+      },
+      {
+       "on": "Carthage",
+       "zoomhit": 1
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       12.5,
+       38.2
+      ],
+      "scale": 3000,
+      "lat": 38.2,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "cam": {
+      "lon": 22,
+      "lat": 36,
+      "scale": 900
+     },
+     "say": "It was founded around 814 BC by settlers from Tyre, a Phoenician city on the coast of what is now Lebanon. Legend says its founder was a queen called Dido.",
+     "do": [
+      {
+       "on": "Tyre",
+       "pin": "Tyre"
+      },
+      {
+       "on": "settlers",
+       "arrow": [
+        [
+         35.2,
+         33.27
+        ],
+        [
+         10.32,
+         36.85
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "coast",
+       "zoomhit": 1
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "The legend also says the locals offered her as much land as an ox hide could cover. So she cut the hide into thin strips, and claimed an entire hill. Carthage started the way it would live. As a city of very clever traders.",
+     "do": [
+      {
+       "on": "hide",
+       "card": {
+        "kind": "caption",
+        "text": "The ox-hide legend",
+        "sub": "Dido claims the Byrsa hill",
+        "dur": 4
+       }
+      },
+      {
+       "on": "traders",
+       "happy": [
+        "CAR"
+       ]
+      },
+      {
+       "on": "strips",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 5,
+      "lat": 38,
+      "scale": 1100
+     },
+     "say": "By the 200s BC, Carthage was the richest power in the western Mediterranean. It had colonies along the African coast, in Spain, on Sardinia, and on the western half of Sicily. And it had the best navy around.",
+     "do": [
+      {
+       "on": "Spain",
+       "label": {
+        "text": "CARTHAGINIAN",
+        "lon": -3,
+        "lat": 37.5,
+        "color": "#f3e7cf"
+       }
+      },
+      {
+       "on": "Sicily",
+       "hl": [
+        "Carthaginian Empire"
+       ],
+       "color": "#7b3fa0"
+      },
+      {
+       "on": "navy",
+       "sfx": "waves"
+      },
+      {
+       "on": "coast",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 13,
+      "lat": 41.5,
+      "scale": 2000
+     },
+     "say": "Now the other side. Rome was a farming republic in Italy. By about 275 BC, it had made itself master of almost the whole peninsula. It had a huge army of citizen farmers. What it did not have was a single serious warship.",
+     "do": [
+      {
+       "on": "Rome",
+       "pin": "Rome"
+      },
+      {
+       "on": "peninsula",
+       "hl": [
+        "Roman Republic"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "warship",
+       "mood": [
+        "ROM",
+        "neutral"
+       ]
+      },
+      {
+       "on": "whole",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CAR",
+       "text": "You stay on land. We keep the sea."
+      },
+      {
+       "who": "ROM",
+       "text": "Fine by us. For now."
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 15.4,
+      "lat": 38.0,
+      "scale": 9000
+     },
+     "date": "264 BC",
+     "say": "Between them lay Sicily, and on its northeastern tip, a town called Messana. And in Messana lived the Mamertines.",
+     "do": [
+      {
+       "on": "Messana",
+       "pin": "Messana"
+      },
+      {
+       "on": "northeastern",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "The Mamertines were mercenaries from southern Italy who had seized the town for themselves. When the king of Syracuse came to crush them, they called for help. First from Carthage. Then from Rome.",
+     "do": [
+      {
+       "on": "Syracuse",
+       "pin": "Syracuse"
+      },
+      {
+       "on": "Carthage",
+       "arrow": [
+        [
+         10.32,
+         36.85
+        ],
+        [
+         15.55,
+         38.19
+        ]
+       ],
+       "color": "#7b3fa0"
+      },
+      {
+       "on": "Rome",
+       "arrow": [
+        [
+         12.5,
+         41.9
+        ],
+        [
+         15.55,
+         38.19
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "Syracuse",
+       "zoomhit": 1
+      },
+      {
+       "on": "seized",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "This was a terrible idea. Two great powers, both invited into the same small town, by the same people, who were loyal to nobody.",
+     "do": [
+      {
+       "on": "terrible",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      },
+      {
+       "on": "nobody",
+       "mood": [
+        "ROM",
+        "angry"
+       ]
+      },
+      {
+       "on": "great",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Rome sent a consul with two legions, about sixteen thousand men. He crossed the narrow strait and took Messana. Carthage saw an Italian army standing on its doorstep. Rome saw a Carthaginian empire one short crossing from Italy.",
+     "do": [
+      {
+       "on": "sixteen",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Roman legions sent to Messana",
+          2
+         ],
+         [
+          "Roman soldiers (approx.)",
+          16000
+         ]
+        ],
+        "note": "World History Encyclopedia, First Punic War",
+        "dur": 6
+       }
+      },
+      {
+       "on": "strait",
+       "troops": [
+        "ROM",
+        15.55,
+        38.19
+       ]
+      },
+      {
+       "on": "Carthage",
+       "zoomhit": 1
+      },
+      {
+       "on": "thousand",
+       "zoomhit": 1
+      },
+      {
+       "on": "Carthaginian",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Both sides believed they were defending themselves. Both sides were partly right. And so began a war over a town that neither of them had owned.",
+     "do": [
+      {
+       "on": "war",
+       "war": [
+        "ROM",
+        "CAR"
+       ]
+      },
+      {
+       "on": "neither",
+       "shake": 0.4
+      },
+      {
+       "on": "themselves",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Nobody expected it to last a generation. It would last twenty three years.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "big",
+        "text": "23 YEARS",
+        "dur": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Rome Learns to Swim",
+   "years": "264 – 241 BC",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": 13.5,
+      "lat": 38.5,
+      "scale": 3000
+     },
+     "say": "On land, Rome won quickly. But Sicily is an island, and Carthage ruled the sea around it. Every town Rome took could be supplied by Carthaginian ships. Rome needed a navy. It had none.",
+     "do": [
+      {
+       "on": "sea",
+       "sfx": "waves"
+      },
+      {
+       "on": "none",
+       "mood": [
+        "ROM",
+        "shock"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       13.5,
+       38.5
+      ],
+      "scale": 3000,
+      "lat": 38.5,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "say": "So in 260 BC, Rome did something wild. It built a fleet of about a hundred and twenty warships, in sixty days.",
+     "do": [
+      {
+       "on": "fleet",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Warships built",
+          120
+         ],
+         [
+          "Days it took",
+          60
+         ]
+        ],
+        "note": "World History Encyclopedia, First Punic War",
+        "dur": 6
+       }
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "They probably copied Carthaginian ships they had captured. And while the ships were still being built, the rowers practised on wooden benches, on dry land.",
+     "do": [
+      {
+       "on": "copied",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      },
+      {
+       "on": "rowers",
+       "sfx": "boots"
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CAR",
+       "text": "Is that our ship design?"
+      },
+      {
+       "who": "ROM",
+       "text": "It's a Roman ship now."
+      }
+     ]
+    },
+    {
+     "say": "Then they added a trick. A long boarding bridge, about eleven metres, with an iron spike on the end. The Romans called it the corvus, the raven. Drop it onto an enemy deck, and the spike holds it there. Now a sea battle becomes a land battle. And land battles were what Rome did best.",
+     "do": [
+      {
+       "on": "corvus",
+       "card": {
+        "kind": "caption",
+        "text": "The corvus",
+        "sub": "an 11-metre boarding bridge",
+        "dur": 4
+       }
+      },
+      {
+       "on": "spike",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 15.24,
+      "lat": 38.25,
+      "scale": 9000
+     },
+     "date": "260 BC",
+     "say": "At Mylae, off the north coast of Sicily, the brand new Roman navy met the Carthaginians, and won.",
+     "do": [
+      {
+       "on": "Mylae",
+       "pin": "Mylae"
+      },
+      {
+       "on": "won",
+       "boom": 0.7
+      },
+      {
+       "on": "navy",
+       "happy": [
+        "ROM"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 12.5,
+      "lat": 37.5,
+      "scale": 2600
+     },
+     "say": "Rome got bold. In 256 BC, it beat Carthage again at sea, at Ecnomus, and landed an army in Africa itself, under a consul called Regulus. Carthage had never been so close to losing.",
+     "do": [
+      {
+       "on": "Ecnomus",
+       "pin": "Ecnomus"
+      },
+      {
+       "on": "Africa",
+       "arrow": [
+        [
+         13.95,
+         37.1
+        ],
+        [
+         10.9,
+         36.9
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      }
+     ]
+    },
+    {
+     "say": "So Carthage hired a Greek soldier called Xanthippus. He used cavalry and a hundred war elephants, and in 255 BC he crushed Regulus near Tunis. About twelve thousand Romans died.",
+     "do": [
+      {
+       "on": "elephants",
+       "sfx": "boots"
+      },
+      {
+       "on": "Tunis",
+       "pin": "Tunis"
+      },
+      {
+       "on": "twelve",
+       "mood": [
+        "ROM",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then the sea itself joined the war. The Roman fleet that rescued the survivors sailed into a storm. Ancient writers say as many as a hundred thousand men drowned. More storms followed. Rome lost whole fleets to the weather, without a single enemy in sight.",
+     "do": [
+      {
+       "on": "storm",
+       "shake": 0.6
+      },
+      {
+       "on": "hundred",
+       "card": {
+        "kind": "big",
+        "text": "UP TO 100,000 DROWNED",
+        "dur": 3.4
+       }
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "cam": {
+      "lon": 12.4,
+      "lat": 38.0,
+      "scale": 7000
+     },
+     "date": "249 BC",
+     "say": "And then there is the admiral Claudius Pulcher. Before his attack at Drepana, the priests reported that the sacred chickens would not eat. A very bad omen. So, the story goes, Pulcher threw the chickens into the sea, and said that if they would not eat, they could drink.",
+     "do": [
+      {
+       "on": "Drepana",
+       "pin": "Drepana"
+      },
+      {
+       "on": "chickens",
+       "card": {
+        "kind": "quote",
+        "text": "If they won't eat, let them drink.",
+        "who": "Claudius Pulcher (as reported)",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "He lost ninety three of his hundred and twenty ships.",
+     "do": [
+      {
+       "on": "ninety",
+       "boom": 0.6
+      },
+      {
+       "on": "ships",
+       "mood": [
+        "ROM",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 12.6,
+      "lat": 38.05,
+      "scale": 6000
+     },
+     "say": "Meanwhile, Carthage found a real commander. Hamilcar, nicknamed Barca, which probably means lightning. From a mountain base at Eryx, he fought a raiding war in Sicily that Rome could never quite finish.",
+     "do": [
+      {
+       "on": "Hamilcar",
+       "show": [
+        "HAM"
+       ]
+      },
+      {
+       "on": "Eryx",
+       "pin": "Eryx"
+      },
+      {
+       "on": "lightning",
+       "flash": 0.4
+      }
+     ]
+    },
+    {
+     "say": "But a war at sea eats money, and ships, and men. After twenty years, both cities were exhausted. Rome built one more fleet, of about two hundred warships.",
+     "do": [
+      {
+       "on": "two",
+       "card": {
+        "kind": "big",
+        "text": "≈ 200 WARSHIPS",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 12.25,
+      "lat": 37.97,
+      "scale": 7000
+     },
+     "date": "10 MARCH 241 BC",
+     "say": "On the tenth of March, 241 BC, off the Aegates Islands, that last Roman fleet caught a Carthaginian supply fleet. About fifty Carthaginian ships were sunk, seventy captured, and ten thousand men taken prisoner.",
+     "do": [
+      {
+       "on": "Aegates",
+       "pin": "Aegates Islands"
+      },
+      {
+       "on": "sunk",
+       "explode": {
+        "at": [
+         12.25,
+         37.97
+        ],
+        "size": 1
+       }
+      },
+      {
+       "on": "fifty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Carthaginian ships sunk",
+          50
+         ],
+         [
+          "Ships captured",
+          70
+         ],
+         [
+          "Prisoners",
+          10000
+         ]
+        ],
+        "note": "World History Encyclopedia, First Punic War",
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "say": "Hamilcar's men were still holding out on their mountain. But Carthage told him to make peace.",
+     "do": [
+      {
+       "on": "peace",
+       "mood": [
+        "HAM",
+        "angry"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Boy at the Altar",
+   "years": "241 – 219 BC",
+   "mood": "tension",
+   "beats": [
+    {
+     "cam": {
+      "lon": 12,
+      "lat": 38,
+      "scale": 2000
+     },
+     "say": "The price of peace was high. Carthage left Sicily, and paid three thousand two hundred talents of silver over ten years. Sicily became Rome's first province outside Italy.",
+     "do": [
+      {
+       "on": "Sicily",
+       "hl": [
+        "Roman Republic"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "talents",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Indemnity (talents of silver)",
+          3200
+         ],
+         [
+          "Years to pay",
+          10
+         ]
+        ],
+        "note": "Britannica; World History Encyclopedia",
+        "dur": 6
+       }
+      }
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "HAMILCAR BARCA",
+        "Carthaginian general"
+       ],
+       [
+        "HANNIBAL",
+        "His son"
+       ]
+      ],
+      "nameAt": 0.6,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "carthaginian",
+        "x": 0.3,
+        "spec": {
+         "beard": "full",
+         "hair": "#4a4a4a"
+        }
+       },
+       {
+        "preset": "carthaginian",
+        "x": 0.7,
+        "spec": {
+         "beard": "stubble"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "say": "Then Carthage could not pay its own mercenaries. They rebelled, and Carthage spent years fighting its own army in Africa. Hamilcar led the side that saved the city.",
+     "do": [
+      {
+       "on": "rebelled",
+       "mood": [
+        "CAR",
+        "shock"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "cam": {
+      "lon": 9,
+      "lat": 40.5,
+      "scale": 3500
+     },
+     "date": "238 BC",
+     "say": "And while Carthage was busy, the mercenaries on Sardinia offered the island to Rome. Rome took it. When Carthage protested, Rome declared war, and only stopped when Carthage handed over Sardinia and Corsica, and paid even more silver.",
+     "do": [
+      {
+       "on": "Sardinia",
+       "pin": "Sardinia"
+      },
+      {
+       "on": "took",
+       "arrow": [
+        [
+         12.5,
+         41.9
+        ],
+        [
+         9.0,
+         40.0
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "protested",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CAR",
+       "text": "That island wasn't in the treaty!"
+      },
+      {
+       "who": "ROM",
+       "text": "Neither is our patience."
+      }
+     ]
+    },
+    {
+     "say": "From the Carthaginian side, it proved something. A treaty with Rome only lasted as long as Rome wanted it to.",
+     "do": [
+      {
+       "on": "treaty",
+       "mood": [
+        "ROM",
+        "smug"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -2,
+      "lat": 39,
+      "scale": 2400
+     },
+     "date": "237 BC",
+     "say": "So Hamilcar looked west, to Spain. Spain had silver mines, and men to recruit. If Carthage could not have Sicily, it would build a new empire there.",
+     "do": [
+      {
+       "on": "Spain",
+       "arrow": [
+        [
+         10.32,
+         36.85
+        ],
+        [
+         -0.98,
+         37.6
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "silver",
+       "label": {
+        "text": "SILVER MINES",
+        "lon": -4,
+        "lat": 38.2,
+        "color": "#e0b45a"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Before he sailed, he made a sacrifice at the altar. The Greek historian Polybius tells what happened next. Hamilcar's son, about nine years old, begged to come along.",
+     "do": [
+      {
+       "on": "son",
+       "show": [
+        "HAN"
+       ]
+      },
+      {
+       "on": "nine",
+       "mood": [
+        "HAN",
+        "happy"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "His father agreed, on one condition. The boy put his hand on the altar, and swore that he would never be a friend to Rome. The boy's name was Hannibal.",
+     "do": [
+      {
+       "on": "swore",
+       "card": {
+        "kind": "quote",
+        "text": "Never be a friend to Rome.",
+        "who": "Hannibal's oath, as told by Polybius",
+        "dur": 4.5
+       }
+      },
+      {
+       "on": "Hannibal",
+       "mood": [
+        "HAN",
+        "angry"
+       ]
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "Hamilcar died in Spain in 229 BC. His son-in-law, Hasdrubal, took over, and signed a deal with Rome. Carthage would stay south of the river Ebro.",
+     "do": [
+      {
+       "on": "died",
+       "hide": [
+        "HAM"
+       ]
+      },
+      {
+       "on": "Ebro",
+       "line": [
+        [
+         -1.8,
+         43.0
+        ],
+        [
+         -0.9,
+         41.65
+        ],
+        [
+         0.8,
+         40.7
+        ]
+       ],
+       "color": "#ff6a1f",
+       "hold": 60
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -0.6,
+      "lat": 39.2,
+      "scale": 6000
+     },
+     "date": "219 BC",
+     "say": "In 221 BC, Hasdrubal was murdered, and the army chose Hannibal as its general. He was about twenty five. Two years later, he attacked Saguntum, a town south of the Ebro, but a friend of Rome.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "big",
+        "text": "GENERAL AT 25",
+        "dur": 3
+       }
+      },
+      {
+       "on": "Saguntum",
+       "pin": "Saguntum"
+      },
+      {
+       "on": "attacked",
+       "guns": {
+        "at": [
+         -0.27,
+         39.68
+        ],
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Was this an attack on Rome? Carthage said no. Saguntum was on Carthage's side of the line. Rome said yes. Saguntum was Rome's friend. Historians still argue about it.",
+     "do": [
+      {
+       "on": "no",
+       "mood": [
+        "CAR",
+        "neutral"
+       ]
+      },
+      {
+       "on": "yes",
+       "mood": [
+        "ROM",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Rome sent envoys to Carthage, and demanded that Hannibal be handed over. The Carthaginian council refused. And so Rome declared war again. This time, Hannibal would not wait for Rome to come to him.",
+     "do": [
+      {
+       "on": "refused",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      },
+      {
+       "on": "war",
+       "war": [
+        "ROM",
+        "CAR"
+       ]
+      },
+      {
+       "on": "wait",
+       "shake": 0.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Over the Alps",
+   "years": "218 BC",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": 3,
+      "lat": 42,
+      "scale": 1500
+     },
+     "say": "Rome planned a normal war. One army to Spain, one army to Africa. It owned the sea now, so it assumed the fighting would happen far away from Italy.",
+     "do": [
+      {
+       "on": "Spain",
+       "arrow": [
+        [
+         12.5,
+         41.9
+        ],
+        [
+         2.0,
+         41.5
+        ]
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "Africa",
+       "arrow": [
+        [
+         12.5,
+         41.9
+        ],
+        [
+         11.0,
+         37.5
+        ]
+       ],
+       "color": "#c8102e"
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       7,
+       44.8
+      ],
+      "scale": 2500,
+      "lat": 44.8,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "say": "Hannibal planned something else. If he could not cross the sea, he would walk. Out of Spain, over the Pyrenees, across Gaul, over the Alps, and into Italy from the north.",
+     "do": [
+      {
+       "on": "Pyrenees",
+       "arrow": [
+        [
+         -0.98,
+         37.6
+        ],
+        [
+         -0.27,
+         39.68
+        ],
+        [
+         0.8,
+         40.7
+        ],
+        [
+         1.0,
+         42.6
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "Gaul",
+       "arrow": [
+        [
+         1.0,
+         42.6
+        ],
+        [
+         4.8,
+         43.7
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "Alps",
+       "arrow": [
+        [
+         4.8,
+         43.7
+        ],
+        [
+         7.07,
+         44.7
+        ],
+        [
+         9.6,
+         45.0
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "HAN",
+       "text": "They're guarding the sea. So we take the mountains."
+      },
+      {
+       "who": "ROM",
+       "text": "Nobody marches an army over the Alps."
+      }
+     ]
+    },
+    {
+     "say": "He did not go light. Writers give his army on the road as tens of thousands of men, thousands of horses, and about thirty seven war elephants. When he reached the Alps, he had about fifty thousand foot soldiers and nine thousand cavalry.",
+     "do": [
+      {
+       "on": "elephants",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "War elephants",
+          37
+         ],
+         [
+          "Infantry at the Alps",
+          50000
+         ],
+         [
+          "Cavalry at the Alps",
+          9000
+         ]
+        ],
+        "note": "History.com; World History Encyclopedia",
+        "dur": 7
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 6.9,
+      "lat": 44.8,
+      "scale": 7000
+     },
+     "date": "AUTUMN 218 BC",
+     "say": "He reached the mountains in late September or early October. Far too late in the year. Snow was already falling on the high passes.",
+     "do": [
+      {
+       "on": "Snow",
+       "snow": 1
+      }
+     ]
+    },
+    {
+     "say": "Mountain tribes rolled rocks down onto the column. Horses and pack animals slipped off the narrow paths and fell. And the elephants, animals from the warm south, had to be walked through ice.",
+     "do": [
+      {
+       "on": "rocks",
+       "shake": 0.5
+      },
+      {
+       "on": "fell",
+       "mood": [
+        "HAN",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Livy says the crossing took sixteen days. Exactly which pass he used is still argued about, more than two thousand two hundred years later. One recent study points to a high pass on today's border between France and Italy.",
+     "do": [
+      {
+       "on": "sixteen",
+       "card": {
+        "kind": "big",
+        "text": "16 DAYS IN THE ALPS",
+        "dur": 3.4
+       }
+      },
+      {
+       "on": "pass",
+       "pin": "Alps"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 8.5,
+      "lat": 45,
+      "scale": 3500
+     },
+     "say": "When he came down into the plains of northern Italy, he had about twenty six thousand men left. He had lost more than half his army, before fighting a single Roman battle.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Men left after the Alps",
+          26000
+         ]
+        ],
+        "note": "World History Encyclopedia, Hannibal",
+        "dur": 5
+       }
+      },
+      {
+       "on": "half",
+       "mood": [
+        "HAN",
+        "grim"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "Now the other side. In Rome, they could hardly believe it. The war they had planned to fight in Spain and Africa was suddenly in Italy.",
+     "do": [
+      {
+       "on": "believe",
+       "mood": [
+        "ROM",
+        "shock"
+       ]
+      },
+      {
+       "on": "Italy",
+       "hl": [
+        "Roman Republic"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 9.6,
+      "lat": 45.0,
+      "scale": 6000
+     },
+     "date": "DECEMBER 218 BC",
+     "say": "A Roman army rushed north to meet him. At the river Trebia, in December, Hannibal beat it.",
+     "do": [
+      {
+       "on": "Trebia",
+       "pin": "Trebia"
+      },
+      {
+       "on": "December",
+       "snow": 1
+      },
+      {
+       "on": "beat",
+       "guns": {
+        "at": [
+         9.6,
+         45.0
+        ],
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Most of his elephants soon died. One popular account says only a single elephant survived. But the Celtic tribes of northern Italy, who hated Rome, began joining him by the thousand.",
+     "do": [
+      {
+       "on": "survived",
+       "snow": 0
+      },
+      {
+       "on": "Celtic",
+       "happy": [
+        "HAN"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "He had crossed the Alps to break Rome's alliance. Would Rome's friends switch sides? That was the question the whole war now hung on.",
+     "do": [
+      {
+       "on": "alliance",
+       "zoomhit": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Worst Day in Roman History",
+   "years": "217 – 216 BC",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": 12.1,
+      "lat": 43.15,
+      "scale": 9000
+     },
+     "date": "24 JUNE 217 BC",
+     "say": "Summer, 217 BC. The consul Flaminius chased Hannibal south, along the shore of Lake Trasimene. Early in the morning, a thick fog rose off the water.",
+     "do": [
+      {
+       "on": "Trasimene",
+       "pin": "Lake Trasimene"
+      },
+      {
+       "on": "fog",
+       "smoke": {
+        "at": [
+         12.1,
+         43.15
+        ],
+        "dur": 8
+       }
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       12.1,
+       43.15
+      ],
+      "scale": 6000,
+      "lat": 43.15,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "say": "Hannibal's whole army was waiting in the hills above the road. The Romans marched into the fog, between the hills and the lake. And the hills attacked.",
+     "do": [
+      {
+       "on": "hills",
+       "arrow": [
+        [
+         12.05,
+         43.25
+        ],
+        [
+         12.1,
+         43.16
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "attacked",
+       "guns": {
+        "at": [
+         12.1,
+         43.15
+        ],
+        "dur": 5
+       }
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "At least fifteen thousand Romans were killed. Flaminius died with them.",
+     "do": [
+      {
+       "on": "fifteen",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Romans killed at Trasimene (at least)",
+          15000
+         ]
+        ],
+        "note": "Livius.org, Lake Trasimene",
+        "dur": 5
+       }
+      },
+      {
+       "on": "died",
+       "mood": [
+        "ROM",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 1.0
+    },
+    {
+     "cam": {
+      "lon": 12.5,
+      "lat": 42,
+      "scale": 3500
+     },
+     "say": "Rome panicked, and did something it did only in emergencies. It appointed a dictator, an old senator called Fabius Maximus. His plan was simple, and very unpopular. Don't fight.",
+     "do": [
+      {
+       "on": "dictator",
+       "show": [
+        "FAB"
+       ]
+      },
+      {
+       "on": "fight",
+       "mood": [
+        "FAB",
+        "smug"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Fabius followed Hannibal everywhere, picked off his foragers, and refused every battle. The Romans called him the Delayer, and they did not mean it as a compliment. Later they did.",
+     "do": [
+      {
+       "on": "Delayer",
+       "card": {
+        "kind": "caption",
+        "text": "Fabius Cunctator",
+        "sub": "\"the Delayer\"",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "ROM",
+       "text": "We have the biggest army in Italy. Why are we hiding?"
+      },
+      {
+       "who": "FAB",
+       "text": "Because he wants a battle. So he doesn't get one."
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 16.13,
+      "lat": 41.3,
+      "scale": 9000
+     },
+     "date": "2 AUGUST 216 BC",
+     "say": "The next year, Rome lost patience, and raised a huge army. More than eighty thousand men, under two consuls, Paullus and Varro. They found Hannibal at Cannae, in the south east of Italy.",
+     "do": [
+      {
+       "on": "patience",
+       "hide": [
+        "FAB"
+       ]
+      },
+      {
+       "on": "eighty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Roman army at Cannae",
+          80000
+         ],
+         [
+          "Hannibal's army (under)",
+          50000
+         ]
+        ],
+        "note": "Britannica; World History Encyclopedia",
+        "dur": 6
+       }
+      },
+      {
+       "on": "Cannae",
+       "pin": "Cannae"
+      }
+     ]
+    },
+    {
+     "say": "Hannibal had fewer than fifty thousand. So he did something that generals still study today. He put his weakest troops in the centre, bulging forward, and his best African veterans hidden on both wings.",
+     "do": [
+      {
+       "on": "centre",
+       "line": [
+        [
+         16.08,
+         41.33
+        ],
+        [
+         16.13,
+         41.35
+        ],
+        [
+         16.18,
+         41.33
+        ]
+       ],
+       "color": "#7b3fa0",
+       "hold": 40
+      },
+      {
+       "on": "wings",
+       "label": {
+        "text": "AFRICAN VETERANS",
+        "lon": 16.13,
+        "lat": 41.24,
+        "color": "#e0b45a"
+       }
+      }
+     ]
+    },
+    {
+     "say": "The Roman legions pushed the centre back. It bent, but it didn't break. The Romans poured into the gap, deeper and deeper. Then the veterans on the wings turned inward. And Hannibal's cavalry came round behind them.",
+     "do": [
+      {
+       "on": "pushed",
+       "arrow": [
+        [
+         16.13,
+         41.25
+        ],
+        [
+         16.13,
+         41.33
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "inward",
+       "arrow": [
+        [
+         16.06,
+         41.33
+        ],
+        [
+         16.12,
+         41.3
+        ]
+       ],
+       "color": "#7b3fa0"
+      },
+      {
+       "on": "behind",
+       "arrow": [
+        [
+         16.22,
+         41.36
+        ],
+        [
+         16.13,
+         41.24
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      }
+     ]
+    },
+    {
+     "say": "The Roman army was surrounded on every side, and packed so tightly that many men could not even raise their swords.",
+     "do": [
+      {
+       "on": "surrounded",
+       "zoomhit": 1
+      },
+      {
+       "on": "swords",
+       "shake": 0.6
+      }
+     ]
+    },
+    {
+     "say": "Nobody knows exactly how many died that afternoon. Modern estimates run from about forty four thousand to more than sixty five thousand Romans. Hannibal lost about six thousand.",
+     "do": [
+      {
+       "on": "forty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Roman dead (low estimate)",
+          44000
+         ],
+         [
+          "Roman dead (high estimate)",
+          65000
+         ],
+         [
+          "Carthaginian dead",
+          6000
+         ]
+        ],
+        "note": "World History Encyclopedia; Britannica",
+        "dur": 8
+       }
+      },
+      {
+       "on": "six",
+       "mood": [
+        "ROM",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "say": "It was one of the bloodiest single days of fighting in history.",
+     "do": [
+      {
+       "on": "bloodiest",
+       "dim": 0.5
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 16.07,
+      "lat": 41.22,
+      "scale": 12000
+     },
+     "say": "At a nearby town called Canusium, some young Roman officers who had survived talked about giving up, and leaving Italy. One of them, a twenty year old, burst into the room, and made them all swear an oath to stay and fight. His name was Scipio. Remember him.",
+     "do": [
+      {
+       "on": "Canusium",
+       "pin": "Canusium"
+      },
+      {
+       "on": "Scipio",
+       "show": [
+        "SCI"
+       ]
+      },
+      {
+       "on": "Remember",
+       "mood": [
+        "SCI",
+        "angry"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Rome Refuses to Lose",
+   "years": "216 – 203 BC",
+   "mood": "clock",
+   "beats": [
+    {
+     "cam": {
+      "lon": 14,
+      "lat": 41,
+      "scale": 3000
+     },
+     "say": "After Cannae, the plan seemed to work. Capua, a great city in the south, opened its gates to Hannibal. Much of southern Italy switched sides.",
+     "do": [
+      {
+       "on": "Capua",
+       "pin": "Capua"
+      },
+      {
+       "on": "switched",
+       "label": {
+        "text": "JOINS HANNIBAL",
+        "lon": 15.8,
+        "lat": 40.5,
+        "color": "#7b3fa0"
+       }
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       14,
+       41
+      ],
+      "scale": 3000,
+      "lat": 41,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "say": "By any normal rule of war, Rome should now ask for terms. Every other state Hannibal had ever heard of would have.",
+     "do": [
+      {
+       "on": "terms",
+       "mood": [
+        "HAN",
+        "smug"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "Rome did not ask. It kept raising new legions. By 213 BC it had over two hundred thousand men under arms.",
+     "do": [
+      {
+       "on": "ask",
+       "mood": [
+        "ROM",
+        "angry"
+       ]
+      },
+      {
+       "on": "two",
+       "card": {
+        "kind": "big",
+        "text": "200,000+ ROMANS UNDER ARMS",
+        "dur": 3.4
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "HAN",
+       "text": "I've beaten you three times. Make peace."
+      },
+      {
+       "who": "ROM",
+       "text": "Make us."
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 3000
+     },
+     "say": "Now the other side. Hannibal needed siege engines, and fresh men. He asked Carthage for help. Carthage refused to send what he asked for. Historians still argue why.",
+     "do": [
+      {
+       "on": "Carthage",
+       "pin": "Carthage"
+      },
+      {
+       "on": "refused",
+       "mood": [
+        "HAN",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 12.5,
+      "lat": 41.9,
+      "scale": 5000
+     },
+     "date": "211 BC",
+     "say": "In 211 BC, Hannibal marched right up to the walls of Rome itself, hoping to pull the Romans away from Capua. Rome barely moved. He could not take the city, and Capua fell.",
+     "do": [
+      {
+       "on": "walls",
+       "arrow": [
+        [
+         14.25,
+         41.1
+        ],
+        [
+         12.6,
+         41.95
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "fell",
+       "hl": [
+        "Roman Republic"
+       ],
+       "color": "#c8102e"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -3,
+      "lat": 39,
+      "scale": 2400
+     },
+     "say": "That same year, in Spain, two Roman generals were killed. They were Scipio's father, and Scipio's uncle. Rome's whole Spanish war collapsed.",
+     "do": [
+      {
+       "on": "killed",
+       "mood": [
+        "SCI",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 0.6
+    },
+    {
+     "say": "Nobody wanted the Spanish command. So Rome gave it to the son. He was twenty four, and not even old enough for the post. He was elected anyway.",
+     "do": [
+      {
+       "on": "son",
+       "move": [
+        "SCI",
+        -2.5,
+        40.0
+       ]
+      },
+      {
+       "on": "elected",
+       "card": {
+        "kind": "big",
+        "text": "COMMANDER AT 24",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": -0.98,
+      "lat": 37.6,
+      "scale": 7000
+     },
+     "say": "Scipio had studied Hannibal. In his very first campaign, he struck straight at New Carthage, Carthage's main base in Spain, and took it in a week. Then he drove Carthage out of Spain altogether.",
+     "do": [
+      {
+       "on": "New",
+       "pin": "New Carthage"
+      },
+      {
+       "on": "took",
+       "explode": {
+        "at": [
+         -0.98,
+         37.6
+        ],
+        "size": 0.8
+       }
+      },
+      {
+       "on": "altogether",
+       "era": "bc200"
+      },
+      {
+       "on": "altogether",
+       "hl": [
+        "Rome"
+       ],
+       "color": "#c8102e",
+       "delay": 1.2
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 12.9,
+      "lat": 43.7,
+      "scale": 5000
+     },
+     "date": "207 BC",
+     "say": "One Carthaginian army did escape. Hannibal's brother Hasdrubal crossed the Alps too, bringing reinforcements. But at the river Metaurus, the Romans caught him, and killed him.",
+     "do": [
+      {
+       "on": "Hasdrubal",
+       "arrow": [
+        [
+         7.07,
+         44.7
+        ],
+        [
+         12.9,
+         43.73
+        ]
+       ],
+       "color": "#7b3fa0"
+      },
+      {
+       "on": "Metaurus",
+       "pin": "Metaurus"
+      },
+      {
+       "on": "killed",
+       "guns": {
+        "at": [
+         12.9,
+         43.73
+        ],
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Then they cut off his head, carried it south, and threw it into Hannibal's camp. That is how Hannibal learned his brother was dead.",
+     "do": [
+      {
+       "on": "camp",
+       "mood": [
+        "HAN",
+        "sad"
+       ]
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "cam": {
+      "lon": 11,
+      "lat": 37.5,
+      "scale": 2000
+     },
+     "date": "204 BC",
+     "say": "In 204 BC, Scipio did what Regulus had tried fifty years earlier. He landed in Africa. And Carthage called Hannibal home. He had fought in Italy for fifteen years. He had won battle after battle. And he had not won the war.",
+     "do": [
+      {
+       "on": "Africa",
+       "arrow": [
+        [
+         15.0,
+         37.5
+        ],
+        [
+         10.06,
+         37.06
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "home",
+       "arrow": [
+        [
+         16.6,
+         39.1
+        ],
+        [
+         10.32,
+         36.85
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "fifteen",
+       "card": {
+        "kind": "big",
+        "text": "15 YEARS IN ITALY",
+        "dur": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Zama",
+   "years": "202 – 201 BC",
+   "mood": "war",
+   "beats": [
+    {
+     "cam": {
+      "lon": 9.3,
+      "lat": 36.5,
+      "scale": 4500
+     },
+     "date": "202 BC",
+     "say": "Two armies, deep in North Africa, south west of Carthage. On one side, Hannibal. On the other, the young man who swore an oath after Cannae. Scipio.",
+     "do": [
+      {
+       "on": "Hannibal",
+       "move": [
+        "HAN",
+        8.8,
+        35.4
+       ]
+      },
+      {
+       "on": "Scipio",
+       "move": [
+        "SCI",
+        7.4,
+        37.0
+       ]
+      },
+      {
+       "on": "Africa",
+       "pin": "Zama"
+      }
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "HANNIBAL",
+        "Carthage"
+       ],
+       [
+        "SCIPIO",
+        "Rome"
+       ]
+      ],
+      "nameAt": 0.6,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "carthaginian",
+        "x": 0.3,
+        "spec": {
+         "beard": "stubble"
+        }
+       },
+       {
+        "preset": "roman",
+        "x": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "say": "Before the battle, the two generals met face to face. Hannibal offered peace. Scipio said no.",
+     "do": [
+      {
+       "on": "met",
+       "link": [
+        "HAN",
+        "SCI"
+       ],
+       "color": "#e0b45a"
+      },
+      {
+       "on": "no",
+       "unlink": [
+        "HAN",
+        "SCI"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "HAN",
+       "text": "Fortune changes. I've seen it change on me."
+      },
+      {
+       "who": "SCI",
+       "text": "Then let's see which way it changes today."
+      }
+     ]
+    },
+    {
+     "say": "Each side had around forty thousand men. But Hannibal's were mixed. Only about twelve to fifteen thousand were his old veterans. And for once, the Romans had the stronger cavalry.",
+     "do": [
+      {
+       "on": "forty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Roman army",
+          40000
+         ],
+         [
+          "Carthaginian army",
+          37000
+         ],
+         [
+          "Hannibal's war elephants",
+          80
+         ]
+        ],
+        "note": "Britannica, Battle of Zama",
+        "dur": 7
+       }
+      }
+     ]
+    },
+    {
+     "say": "That cavalry belonged to Masinissa, a Numidian prince who had joined Scipio. Keep an eye on him. He matters later.",
+     "do": [
+      {
+       "on": "Masinissa",
+       "show": [
+        "MAS"
+       ]
+      },
+      {
+       "on": "later",
+       "mood": [
+        "MAS",
+        "smug"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Hannibal opened with eighty war elephants. But they were badly trained, and they scattered. Some panicked and turned back onto Hannibal's own men.",
+     "do": [
+      {
+       "on": "elephants",
+       "sfx": "boots"
+      },
+      {
+       "on": "panicked",
+       "mood": [
+        "HAN",
+        "shock"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then Masinissa's horsemen chased off Hannibal's cavalry, and came back to hit his infantry from behind. It was Cannae, in reverse.",
+     "do": [
+      {
+       "on": "behind",
+       "arrow": [
+        [
+         9.0,
+         35.0
+        ],
+        [
+         8.5,
+         35.6
+        ]
+       ],
+       "color": "#c8102e",
+       "big": 1
+      },
+      {
+       "on": "reverse",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "About twenty thousand Carthaginians died, and about twenty thousand more were captured. Rome lost around fifteen hundred.",
+     "do": [
+      {
+       "on": "twenty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Carthaginians killed",
+          20000
+         ],
+         [
+          "Carthaginians captured",
+          20000
+         ],
+         [
+          "Romans killed",
+          1500
+         ]
+        ],
+        "note": "Britannica, Battle of Zama",
+        "dur": 7
+       }
+      }
+     ],
+     "pause": 1.0
+    },
+    {
+     "say": "Hannibal escaped. He would never command a Carthaginian army again. And Carthage asked for peace.",
+     "do": [
+      {
+       "on": "never",
+       "mood": [
+        "HAN",
+        "sad"
+       ]
+      },
+      {
+       "on": "peace",
+       "unwar": [
+        "ROM",
+        "CAR"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 4000
+     },
+     "date": "201 BC",
+     "say": "The terms were brutal. Carthage gave up Spain. It handed over almost all its warships, and at least a hundred of them were burned in the harbour. And it would pay ten thousand talents of silver, spread over fifty years.",
+     "do": [
+      {
+       "on": "burned",
+       "fire": {
+        "at": [
+         10.33,
+         36.8
+        ],
+        "dur": 5
+       }
+      },
+      {
+       "on": "ten",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Indemnity (talents of silver)",
+          10000
+         ],
+         [
+          "Years to pay",
+          50
+         ],
+         [
+          "Warships burned (at least)",
+          100
+         ]
+        ],
+        "note": "Britannica, Battle of Zama",
+        "dur": 7
+       }
+      }
+     ]
+    },
+    {
+     "say": "Fifty years. That number is important. Rome had built a timer into the treaty, and nobody yet knew what would happen when it ran out.",
+     "do": [
+      {
+       "on": "timer",
+       "clock": 3
+      }
+     ]
+    },
+    {
+     "say": "Scipio went home a hero, with a new name. Africanus.",
+     "do": [
+      {
+       "on": "Africanus",
+       "card": {
+        "kind": "caption",
+        "text": "Scipio Africanus",
+        "sub": "conqueror of Africa",
+        "dur": 4
+       }
+      },
+      {
+       "on": "hero",
+       "happy": [
+        "SCI"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Two Old Men in Exile",
+   "years": "201 – 183 BC",
+   "mood": "grief",
+   "beats": [
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 6000
+     },
+     "say": "You might expect Hannibal's story to end at Zama. It doesn't. In 196 BC, Carthage elected him to its highest office, one of its two chief magistrates.",
+     "do": [
+      {
+       "on": "elected",
+       "mood": [
+        "HAN",
+        "neutral"
+       ]
+      },
+      {
+       "on": "magistrates",
+       "card": {
+        "kind": "caption",
+        "text": "Suffete of Carthage",
+        "sub": "196 BC",
+        "dur": 4
+       }
+      }
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "HANNIBAL",
+        "In exile"
+       ],
+       [
+        "SCIPIO AFRICANUS",
+        "Out of favour"
+       ]
+      ],
+      "nameAt": 0.6,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "carthaginian",
+        "x": 0.3,
+        "spec": {
+         "beard": "stubble",
+         "hair": "#8a8a8a"
+        }
+       },
+       {
+        "preset": "roman",
+        "x": 0.7,
+        "spec": {
+         "hair": "#8a8a8a"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "say": "And the general turned out to be a very good accountant. His reforms put the city's money in order, and made the huge payments to Rome easy to afford.",
+     "do": [
+      {
+       "on": "accountant",
+       "card": {
+        "kind": "doc",
+        "title": "Carthage treasury, 196 BC",
+        "lines": [
+         "Finances: reformed",
+         "Payment to Rome: on time"
+        ],
+        "dur": 5
+       }
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "This was good news for Carthage. And it worried people in Rome a great deal. A defeated city that pays its bills on time is a city that is recovering.",
+     "do": [
+      {
+       "on": "worried",
+       "mood": [
+        "ROM",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "ROM",
+       "text": "They're paying early? That's suspicious."
+      },
+      {
+       "who": "CAR",
+       "text": "You asked for the money!"
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 25,
+      "lat": 37,
+      "scale": 1100
+     },
+     "date": "195 BC",
+     "say": "Rome grew suspicious. And in 195 BC, Hannibal ran. First to Tyre, the city Carthage had come from. Then to the court of Antiochus, the great king of the east.",
+     "do": [
+      {
+       "on": "ran",
+       "arrow": [
+        [
+         10.32,
+         36.85
+        ],
+        [
+         35.2,
+         33.27
+        ]
+       ],
+       "color": "#7b3fa0",
+       "big": 1
+      },
+      {
+       "on": "Tyre",
+       "pin": "Tyre"
+      },
+      {
+       "on": "Antiochus",
+       "label": {
+        "text": "SELEUCID KINGDOM",
+        "lon": 38,
+        "lat": 35,
+        "color": "#f3e7cf"
+       }
+      }
+     ]
+    },
+    {
+     "say": "He spent the rest of his life moving from court to court, advising kings who were at war with Rome. He even commanded a fleet, and lost. Rome kept beating every king who took him in.",
+     "do": [
+      {
+       "on": "fleet",
+       "sfx": "waves"
+      },
+      {
+       "on": "lost",
+       "mood": [
+        "HAN",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 29.4,
+      "lat": 40.75,
+      "scale": 7000
+     },
+     "date": "ABOUT 183 BC",
+     "say": "Finally, in Bithynia, in what is now Turkey, the Romans closed in. Rather than be captured, Hannibal took poison. He was about sixty five.",
+     "do": [
+      {
+       "on": "Bithynia",
+       "pin": "Libyssa"
+      },
+      {
+       "on": "poison",
+       "dim": 0.6
+      }
+     ]
+    },
+    {
+     "say": "Ancient writers give him one last line.",
+     "do": [
+      {
+       "on": "last",
+       "card": {
+        "kind": "quote",
+        "text": "Let us put an end to this life, which has caused so much dread to the Romans.",
+        "who": "Hannibal, as reported",
+        "dur": 6
+       }
+      }
+     ],
+     "pause": 2.5
+    },
+    {
+     "cam": {
+      "lon": 13,
+      "lat": 41,
+      "scale": 3000
+     },
+     "say": "And Scipio Africanus? The man who saved Rome never held real power there again. His rivals attacked him with lawsuits, and he went into bitter retirement. He died around the same time as Hannibal.",
+     "do": [
+      {
+       "on": "lawsuits",
+       "mood": [
+        "SCI",
+        "sad"
+       ]
+      },
+      {
+       "on": "died",
+       "hide": [
+        "SCI"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "The two greatest generals of the age. Both pushed out by their own cities. Both dead within a few years of each other.",
+     "do": [
+      {
+       "on": "Both",
+       "hide": [
+        "HAN"
+       ]
+      }
+     ],
+     "pause": 1.0
+    },
+    {
+     "say": "And Carthage, without either of them, kept paying. Year after year. Until the last payment came due.",
+     "do": [
+      {
+       "on": "paying",
+       "clock": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Carthage Must Be Destroyed",
+   "years": "153 – 146 BC",
+   "mood": "grief",
+   "beats": [
+    {
+     "cam": {
+      "lon": 12.5,
+      "lat": 41.9,
+      "scale": 5000
+     },
+     "date": "153 BC",
+     "say": "In 153 BC, an old Roman senator called Cato visited Carthage. What he saw alarmed him. Carthage was paying Rome regularly, and it had recovered.",
+     "do": [
+      {
+       "on": "Cato",
+       "show": [
+        "CAT"
+       ]
+      },
+      {
+       "on": "alarmed",
+       "mood": [
+        "CAT",
+        "angry"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "faces",
+      "names": [
+       [
+        "CATO",
+        "Destroy Carthage"
+       ],
+       [
+        "SCIPIO NASICA",
+        "Spare Carthage"
+       ]
+      ],
+      "nameAt": 0.6,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "roman",
+        "x": 0.3,
+        "spec": {
+         "hair": "#bbbbbb"
+        }
+       },
+       {
+        "preset": "roman",
+        "x": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "say": "Back in the Senate, Plutarch says, Cato dropped a fresh fig from Africa onto the floor. Then he reminded the senators that the land where it grew was only three days' sail from Rome.",
+     "do": [
+      {
+       "on": "fig",
+       "card": {
+        "kind": "caption",
+        "text": "Cato's fig",
+        "sub": "\"three days' sail from Rome\"",
+        "dur": 4.5
+       }
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "And after that, whatever the Senate was voting on, Cato added the same line at the end.",
+     "do": [
+      {
+       "on": "same",
+       "card": {
+        "kind": "quote",
+        "text": "In my opinion, Carthage must be destroyed.",
+        "who": "Cato the Elder, as told by Plutarch",
+        "dur": 5
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CAT",
+       "text": "Also, Carthage must be destroyed."
+      },
+      {
+       "who": "ROM",
+       "text": "Cato, this is a vote about drains."
+      }
+     ]
+    },
+    {
+     "say": "Not everyone agreed. Another senator, Scipio Nasica, ended every vote the opposite way. Carthage must be spared. Rome argued with itself about it for years.",
+     "do": [
+      {
+       "on": "spared",
+       "mood": [
+        "ROM",
+        "neutral"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 9,
+      "lat": 36,
+      "scale": 3000
+     },
+     "say": "Meanwhile, remember Masinissa, the Numidian horseman from Zama? He was now an old king, and Rome's friend. He kept taking Carthaginian land, piece by piece. And since the last war, Carthage was not free to fight its own wars.",
+     "do": [
+      {
+       "on": "Masinissa",
+       "show": [
+        "MAS"
+       ]
+      },
+      {
+       "on": "taking",
+       "arrow": [
+        [
+         7.5,
+         35.5
+        ],
+        [
+         9.5,
+         36.0
+        ]
+       ],
+       "color": "#e0b45a",
+       "big": 1
+      },
+      {
+       "on": "free",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "By 150 BC, Masinissa had taken about half the land Carthage held. So Carthage finally raised its own army, and fought him. And lost.",
+     "do": [
+      {
+       "on": "half",
+       "card": {
+        "kind": "big",
+        "text": "≈ HALF ITS LAND GONE",
+        "dur": 3
+       }
+      },
+      {
+       "on": "lost",
+       "mood": [
+        "CAR",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "For Rome, it was the excuse it had been waiting for. Carthage had gone to war without permission.",
+     "do": [
+      {
+       "on": "excuse",
+       "war": [
+        "ROM",
+        "CAR"
+       ]
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 6000
+     },
+     "date": "149 BC",
+     "say": "Carthage begged for peace and offered to obey. Rome asked for three hundred noble children as hostages. Carthage sent them. Rome asked for every weapon in the city. Carthage handed them over.",
+     "do": [
+      {
+       "on": "three",
+       "card": {
+        "kind": "doc",
+        "title": "Rome's demands, 149 BC",
+        "lines": [
+         "300 noble children",
+         "every weapon",
+         "..."
+        ],
+        "dur": 6
+       }
+      },
+      {
+       "on": "handed",
+       "mood": [
+        "CAR",
+        "sad"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "Then Rome made its final demand. Leave the city, and settle at least sixteen kilometres from the sea.",
+     "do": [
+      {
+       "on": "final",
+       "shake": 0.5
+      },
+      {
+       "on": "sixteen",
+       "card": {
+        "kind": "big",
+        "text": "MOVE 16 KM INLAND",
+        "dur": 3.4
+       }
+      }
+     ],
+     "pause": 0.8
+    },
+    {
+     "say": "For a city of sailors and traders, that meant death anyway. Carthage, with no weapons left, refused.",
+     "do": [
+      {
+       "on": "refused",
+       "mood": [
+        "CAR",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "say": "And the city got ready to fight anyway. It sent fire-ships against the Roman fleet, and raided the Roman siege engines. Against an army of up to eighty thousand, Carthage held out for three years.",
+     "do": [
+      {
+       "on": "fire",
+       "fire": {
+        "at": [
+         10.36,
+         36.8
+        ],
+        "dur": 4
+       }
+      },
+      {
+       "on": "three",
+       "clock": 3
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 9000
+     },
+     "date": "146 BC",
+     "say": "In 147 BC, Rome sent a new commander. Scipio Aemilianus. In the spring of 146 BC, his men broke into the city. Seven days of street fighting followed, house by house.",
+     "do": [
+      {
+       "on": "Aemilianus",
+       "show": [
+        "AEM"
+       ]
+      },
+      {
+       "on": "broke",
+       "explode": {
+        "at": [
+         10.33,
+         36.84
+        ],
+        "size": 1
+       }
+      },
+      {
+       "on": "Seven",
+       "guns": {
+        "at": [
+         10.32,
+         36.85
+        ],
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "say": "About fifty thousand people finally came out and surrendered. All of them were sold into slavery. Hasdrubal, the last Carthaginian general, surrendered too. His wife did not. Ancient writers say she threw herself and her two children into the flames.",
+     "do": [
+      {
+       "on": "fifty",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Survivors sold into slavery (approx.)",
+          50000
+         ]
+        ],
+        "note": "Third Punic War accounts (Appian, Polybius)",
+        "dur": 6
+       }
+      },
+      {
+       "on": "flames",
+       "fire": {
+        "at": [
+         10.32,
+         36.85
+        ],
+        "dur": 6
+       }
+      }
+     ],
+     "pause": 1.5
+    },
+    {
+     "say": "And Scipio Aemilianus wept. The historian Polybius was standing next to him. Scipio quoted a line from Homer about the fall of Troy, and told Polybius he was afraid that one day, someone would give the same order about Rome.",
+     "do": [
+      {
+       "on": "wept",
+       "mood": [
+        "AEM",
+        "sad"
+       ]
+      },
+      {
+       "on": "Rome",
+       "card": {
+        "kind": "quote",
+        "text": "Someday this may also be the fate of Rome.",
+        "who": "Scipio Aemilianus, as told by Polybius",
+        "dur": 5
+       }
+      }
+     ]
+    },
+    {
+     "say": "You may have heard that the Romans then salted the earth, so nothing would grow. That part is a later invention. They didn't need salt. They had already done enough.",
+     "do": [
+      {
+       "on": "salted",
+       "card": {
+        "kind": "stamp",
+        "text": "MYTH",
+        "dur": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "What the Line Remembers",
+   "years": "146 BC – today",
+   "mood": "hope",
+   "beats": [
+    {
+     "cam": {
+      "lon": 10,
+      "lat": 38,
+      "scale": 1200
+     },
+     "say": "Carthage's land became a Roman province, called Africa. Towns that had sided with Rome, like Utica, were rewarded and freed from tax.",
+     "do": [
+      {
+       "on": "province",
+       "era": "bc100"
+      },
+      {
+       "on": "Utica",
+       "pin": "Utica"
+      }
+     ],
+     "scene": {
+      "shot": "map-desk",
+      "center": [
+       10.3,
+       36.85
+      ],
+      "scale": 5000,
+      "lat": 36.85,
+      "push": 0.12,
+      "pan": [
+       40,
+       20
+      ]
+     }
+    },
+    {
+     "say": "Rome had begun the Punic Wars as a power in Italy. It ended them as the master of the western Mediterranean.",
+     "do": [
+      {
+       "on": "Mediterranean",
+       "hl": [
+        "Roman Republic"
+       ],
+       "color": "#c8102e"
+      },
+      {
+       "on": "master",
+       "mood": [
+        "ROM",
+        "smug"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "off"
+     }
+    },
+    {
+     "say": "So which side was right? Rome would say it fought for its own survival. It had been invaded, and nearly destroyed, by a man who swore as a boy to be its enemy.",
+     "do": [
+      {
+       "on": "Rome",
+       "mood": [
+        "ROM",
+        "neutral"
+       ]
+      },
+      {
+       "on": "invaded",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Carthage would say it kept every treaty, paid every talent, and was destroyed anyway. Its first war began over a town it did not own. Its last war began because it defended itself.",
+     "do": [
+      {
+       "on": "Carthage",
+       "mood": [
+        "CAR",
+        "sad"
+       ]
+      },
+      {
+       "on": "began",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Notice what both answers share. Each side believed it was defending itself. That belief is how most wars begin, and how this one lasted so long.",
+     "do": [
+      {
+       "on": "defending",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "And the strange thing is, we only hear Carthage's side through its enemies. Almost nothing Carthage wrote about itself survived. Almost every word we have about Hannibal was written by Greeks and Romans.",
+     "do": [
+      {
+       "on": "nothing",
+       "card": {
+        "kind": "doc",
+        "title": "Carthaginian histories",
+        "lines": [
+         "Surviving: almost nothing"
+        ],
+        "dur": 4
+       }
+      },
+      {
+       "on": "wrote",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Think of the people, too. Farmers, sailors and shopkeepers on both sides paid for choices made in council chambers. The ones who fought street by street in Carthage were not senators.",
+     "do": [
+      {
+       "on": "sailors",
+       "zoomhit": 1
+      },
+      {
+       "on": "street",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Perhaps that is the real lesson of the Punic Wars. Fear drove both cities. Rome feared a rival it could not control. Carthage feared a neighbour it could not trust.",
+     "do": [
+      {
+       "on": "Rome",
+       "zoomhit": 1
+      },
+      {
+       "on": "Carthage",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Even so, the Romans could not make him a simple villain. Their own writers made him the most dangerous, and the most admired, enemy Rome ever had.",
+     "do": [
+      {
+       "on": "admired",
+       "show": [
+        "HAN"
+       ]
+      },
+      {
+       "on": "writers",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "cam": {
+      "lon": 10.32,
+      "lat": 36.85,
+      "scale": 5000
+     },
+     "say": "Today, the ruins of Carthage lie beside the sea, next to Tunis.",
+     "do": [
+      {
+       "on": "Tunis",
+       "pin": "Tunis"
+      }
+     ]
+    },
+    {
+     "say": "So hold on to that, as you watch other borders in other stories. Two sides. One line on a map. And each one certain that the line was drawn against it. We will keep asking, every time, who really started it.",
+     "do": [
+      {
+       "on": "borders",
+       "zoomhit": 1
+      },
+      {
+       "on": "certain",
+       "zoomhit": 1
+      }
+     ]
+    },
+    {
+     "say": "Two cities fought for a hundred and eighteen years over who would rule the sea between them. One won everything. The other is remembered mostly through the words of the people who destroyed it. That is the cost of a history written by the winner, and it is why we ask both sides.",
+     "do": [
+      {
+       "on": "won",
+       "mood": [
+        "ROM",
+        "smug"
+       ]
+      },
+      {
+       "on": "destroyed",
+       "mood": [
+        "CAR",
+        "sad"
+       ]
+      },
+      {
+       "on": "cost",
+       "zoomhit": 1
+      },
+      {
+       "on": "ask",
+       "dim": 0.3
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "outro": {
+  "text": "Every border has two sides. Carthage lost the war, and then lost the right to tell its own story.",
+  "question": "Was Rome defending itself, or was Carthage already beaten?",
+  "next": "THE 38TH PARALLEL"
+ },
+ "thumb": {
+  "scene": "relief",
+  "dread": 1,
+  "seed": 51,
+  "topic": "CARTHAGE · 146 BC",
+  "map": {
+   "era": "bc200",
+   "center": [
+    12,
+    37
+   ],
+   "scale": 1500,
+   "cx": 0.42,
+   "cy": 0.45,
+   "hl": [
+    {
+     "names": [
+      "Carthage"
+     ],
+     "color": "#e8141c"
+    }
+   ]
+  },
+  "layout": "spotlight",
+  "hidden": {
+   "portrait": "smoke/portraits/hwife.png"
+  },
+  "hook": [
+   "HE SURRENDERED.",
+   "SHE DIDN'T."
+  ],
+  "hi": "DIDN'T."
+ },
+ "hook": "In 146 BC, Rome burned Carthage to the ground. It had taken three wars and 118 years.",
+ "about": "Rome vs Carthage, the Punic Wars (264–146 BC), told from both sides: the fight over Sicily, Rome building a navy in sixty days, Hamilcar and the boy who swore never to be Rome's friend, Hannibal crossing the Alps, Trasimene and Cannae, Scipio and Zama, Hannibal's exile, Cato's fig, and the destruction of Carthage.",
+ "tags": [
+  "rome vs carthage",
+  "punic wars",
+  "hannibal",
+  "hannibal barca",
+  "scipio africanus",
+  "battle of cannae",
+  "battle of zama",
+  "hannibal crossing the alps",
+  "carthage",
+  "ancient rome",
+  "first punic war",
+  "second punic war",
+  "third punic war",
+  "carthago delenda est",
+  "ancient history"
+ ],
+ "localizations": {
+  "de": {
+   "title": "Rom gegen Karthago: Der GESAMTE Krieg von beiden Seiten",
+   "description": "146 v. Chr. brannte Rom Karthago nieder. Es hatte drei Kriege und 118 Jahre gedauert.\n\nDie Punischen Kriege (264–146 v. Chr.), erzählt von beiden Seiten: der Streit um Sizilien, Roms Flotte in sechzig Tagen, Hamilkar und der Junge, der schwor, niemals Roms Freund zu sein, Hannibals Zug über die Alpen, Trasimener See und Cannae, Scipio und Zama, Hannibals Exil, Catos Feige und die Zerstörung Karthagos."
+  },
+  "es": {
+   "title": "Roma contra Cartago: TODA la guerra desde ambos lados",
+   "description": "En el 146 a. C., Roma arrasó Cartago. Le había costado tres guerras y 118 años.\n\nLas guerras púnicas (264–146 a. C.) contadas desde ambos lados: la lucha por Sicilia, la flota romana construida en sesenta días, Amílcar y el niño que juró no ser nunca amigo de Roma, Aníbal cruzando los Alpes, Trasimeno y Cannas, Escipión y Zama, el exilio de Aníbal, el higo de Catón y la destrucción de Cartago."
+  },
+  "fr": {
+   "title": "Rome contre Carthage : TOUTE la guerre des deux côtés",
+   "description": "En 146 av. J.-C., Rome rasa Carthage. Il lui avait fallu trois guerres et 118 ans.\n\nLes guerres puniques (264–146 av. J.-C.) racontées des deux côtés : la lutte pour la Sicile, la flotte romaine construite en soixante jours, Hamilcar et l'enfant qui jura de ne jamais être l'ami de Rome, Hannibal franchissant les Alpes, Trasimène et Cannes, Scipion et Zama, l'exil d'Hannibal, la figue de Caton et la destruction de Carthage."
+  },
+  "pt": {
+   "title": "Roma contra Cartago: a guerra INTEIRA dos dois lados",
+   "description": "Em 146 a.C., Roma arrasou Cartago. Foram precisas três guerras e 118 anos.\n\nAs Guerras Púnicas (264–146 a.C.) contadas dos dois lados: a disputa pela Sicília, a frota romana construída em sessenta dias, Amílcar e o menino que jurou nunca ser amigo de Roma, Aníbal atravessando os Alpes, Trasimeno e Canas, Cipião e Zama, o exílio de Aníbal, o figo de Catão e a destruição de Cartago."
+  }
+ },
+ "abTest": [
+  {
+   "title": "How Rome Destroyed Carthage — Minute by Minute",
+   "thumb": {}
+  },
+  {
+   "title": "The 118 Years That Made Rome",
+   "thumb": {
+    "layout": "circled",
+    "anchor": {
+     "portrait": "smoke/portraits/hannibal.png"
+    },
+    "hidden": {
+     "portrait": "smoke/portraits/hwife.png"
+    },
+    "hook": [
+     "SHE CHOSE THE FIRE"
+    ],
+    "hi": "FIRE"
+   }
+  },
+  {
+   "title": "How Rome Destroyed Carthage — Minute by Minute",
+   "thumb": {
+    "layout": "dossier",
+    "hidden": {
+     "portrait": "smoke/portraits/hwife.png"
+    },
+    "hook": [
+     "7 DAYS",
+     "OF FIRE"
+    ],
+    "hi": "7 DAYS",
+    "caption": "Hasdrubal's wife, 146 BC",
+    "stamp": "UNTOLD STORY"
+   }
+  }
+ ],
+ "abTitlesLater": [
+  "He Surrendered. She Didn't. The Last Day of Carthage",
+  "The Woman Who Cursed Her Husband as Carthage Burned | Rome vs Carthage"
+ ],
+ "shorts": [
+  {
+   "head": "CARTHAGE|IS BURNING",
+   "title": "Rome Burned Carthage After 118 YEARS #shorts"
+  },
+  {
+   "from": "And then there is the admiral Claudius Pulcher",
+   "head": "THE SACRED|CHICKENS",
+   "title": "He Threw the Sacred CHICKENS Overboard #shorts"
+  }
+ ]
+}

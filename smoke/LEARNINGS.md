@@ -1,0 +1,51 @@
+# Smoke & Borders: what the numbers taught us
+
+The weekly review (RUNBOOK step 6) adds one dated entry here: what competitors did that worked, what our own numbers said, and what we changed because of it. Changes to STYLE.md or plan.json must point to an entry here.
+
+## 2026-11-06: starting point (competitor research)
+- Story-led long videos average 100K–600K views even on new channels. Short map clips with no narrator stay at a few hundred.
+- Fastest grower: Animated History, 100K subscribers with 21 videos of about 25 minutes, at less than one a week. The channels posting 2.5 a week average under 10K views.
+- Winning title patterns: "The ENTIRE History of X", superlatives ("The Shortest War EVER"), curiosity gaps ("This Country Disappeared 8 TIMES"), "POV / Your Life as".
+- Plain book summaries flop; one idea applied to life works.
+- Full research: https://claude.ai/artifact/21Dtv8pgh6QkJDkgRM82NX
+
+## 2026-11-06: thumbnails, characters, length, Shorts (owner review + competitor data)
+- **Thumbnails.** The owner's screenshots of the top performers: Animated History's Russia (1.2M), Israel (1.4M) and Japan (401K) all use the same layout. Then and now maps split down the middle, a big illustrated character per side, year boxes on top, one huge word at the bottom (HOW? STOLEN?). Historically and Unknown Frequencies also lead with big illustrated characters. **Change:** make_thumb_sb.py now builds that layout with our burning border and the "BOTH SIDES" ribbon.
+- **No countryballs** on this channel; they're FlagBomb's identity. **Change:** illustrated characters (brand/chars.js) in the videos and the thumbnails.
+- **Length.** Animated History: 21 videos, mostly 23–36 minutes, 0.5–1.4M views on hits. Unknown Frequencies: 9–18 minutes. **Change:** target 22–30 minutes. Episode 1 grew from about 18 to about 20 minutes with a 1775 chapter (Bunker Hill, the Olive Branch Petition).
+- **Shorts.** Animated History and Unknown Frequencies post none. Historically posts many standalone 45–60 second stories, 1–28M views each. **Change:** our Shorts become standalone mini-stories, not clips.
+
+## 2026-11-07: the first thumbnail didn't spark curiosity (owner review)
+- Episode 1's "LOST?" thumbnail had the competitor layout but none of its pull. At phone size it read as beige maps and two faces, and the colonies' small red patch was hidden behind King George.
+- The competitors' hits work because the change is visible at a glance: the same land in both halves, one bright shape that grew or shrank, and a word that asks "how?" about it.
+- **Change:** a new episode 1 thumbnail (the red 1763 empire vs the blue bite of 1783, "HOW?"), the thumbnail rules added to STYLE.md section 4, and `plain`/`outline` options added to thumb.html.
+
+## 2026-11-07: episode 1 title + thumbnail test (YouTube Studio "Test & Compare", set by the owner)
+- A: "Britain Lost America Over Tea? The American Revolution From Both Sides" + thumbnail "OVER TEA?"
+- B: "How Farmers Beat the World's Strongest Empire | The American Revolution" + thumbnail "TO FARMERS?"
+- C: "How Britain Lost America: The American Revolution From Both Sides" + thumbnail "HOW BRITAIN LOST AMERICA"
+- YouTube picks the winner by watch time per impression after up to 14 days (about 21 Nov). The Monday review records the winner here and uses its hook style for the next thumbnails.
+
+## 2026-11-07: packaging + editing research (owner asked for deep research on titles, thumbnails, editing)
+- **Titles.** The current outliers in our niche are plain, big promises, not questions: "The ENTIRE History of WW2 Explained" (2.1M, 4x that channel's median), "2000 Years of Israel History in 35 Minutes" (1.4M, 2.3x). 1of10's study of 300,000 videos: about 5 words is best, 10+ underperform, and dramatic/negative emotion beats neutral by about 22%. **Change:** STYLE.md 4b; A/B pair A always uses the proven plain pattern.
+- **Thumbnails.** Same study: no text or under 10 characters does best, heavy text gets about 19% fewer views, dark thumbnails underperform, several faces beat one. The owner's Dhruv Rathee example (8–27M views): one big emotional subject, 2–3 words, a then-vs-now with year boxes. **Change:** thumbnail text is 1–3 concrete words; the kicker line only in one A/B pair.
+- **Editing.** Pace means new information every 10–15 s (Mario Joos). A teasing line before each payoff took one creator's 20-minute video from 8–10 to 12+ minutes average watch time. **Change:** STYLE.md section 3 rules and the new `--pacing` check.
+- **Episode 1, checked after release:** 19.2 minutes (under our 22-minute target) and 6 stretches of 11–24 s with nothing new inside the first 3 minutes, which is exactly where most viewers decide to leave. Expect a dip there on the retention curve; Rome vs Carthage must pass `--pacing` before it renders.
+- **Tools looked at:** Remotion and the Claude video-editing skill collections (built for talking-head and Shorts editing; our map renderer already covers what they do), video-editor-skills (CC BY-NC, so not allowed on a monetized channel), NexLev frame capture (paid plan, so not used). Scraping: YouTube Data API through our own sign-in, scrapetube (MIT) as the fallback; YouTube itself can't be reached from the owner's chat sessions, only from the scheduled runs.
+
+## 2026-11-07: cadence and length (owner)
+- **Change:** a long episode every 4 days (16:00 UTC) with one standalone Short on each day in between, as a 4-week trial reviewed on 5 Dec 2026. Keep it if views per video and average watch time hold up against episode 1; otherwise go back to weekly. (Our own research warned that channels posting 2-3 times a week averaged under 10K views, so quality gates stay: 25+ minutes, pacing passed, every source opened, or the episode waits a day.)
+- **Change:** length 25-35 minutes, where Animated History's hits sit. Rome vs Carthage (about 23 minutes as written) must be expanded before its render.
+- Episode 1's Shorts are now standalone stories rendered in short mode (`"short": true`); Short 1 (John Adams defending the Boston Massacre soldiers) is written and checked.
+
+## 2026-11-09 (Monday review; no web page access this run, so thumbnails could not be viewed)
+- **Our numbers (YouTube Data API, 3 days in).** Episode 1 "How Britain Lost America" has 101 views, the Franklin-vs-son Short 40, the "Britain Won the World" Short 279, the Hessians Short 0. Analytics (retention, % viewed) are not available to our sign-in (`?`), so nothing can be said about drop-off yet. **Change:** none yet; the owner can paste Studio retention numbers, or we add the analytics scope to the token.
+- **Titles.** 57 outliers vs 116 below median in the scout. Outliers use "ENTIRE" 15% vs 5%, "years in minutes" 8% vs 3%, a CAPS word 36% vs 25%; questions are 12% vs 24% (fewer). Geo History's "... Explained on a Map" (7.0x, 6.8x, 25-33 min) is the strongest repeat pattern. **Change:** Korea (and later map-heavy episodes) get an "on a Map" title in the A/B test (pair B or C).
+- **Thumbnails.** The scout's contact sheets showed "thumbnail not reachable" for every image (image hosts blocked in this session), so no thumbnail finding was made. Not repeated from a guess.
+- **What already ranks for our next topics.** Rome vs Carthage: OverSimplified Punic War videos at 37.5M and 20.7M views (27-28 min); Knowledgia's full Punic Wars at 32 min has 473K. A 25-minute map-led telling fits the length that wins. Korea 38th parallel: the Shorts "Korea Isn't Split at the 38th Parallel... The Real Border Crosses It" has 517K and "Who Decided to Split Korea at the 38th Parallel and Why?" 215K, but the long videos in the niche are mostly under 1K views except Captivating History (2.2M, 14 min). **Change:** the Korea Shorts should use the "the line was not what you think" angle (once sourced), and a 30-minute decision hook is already used by others ("The 30-Minute Decision That Divided Korea"), so differentiate with the two men, not the number.
+- **Production.** Rome vs Carthage was 24.1 min with 5 pacing gaps; fixed gaps with added visual beats and extended the close with reflection (no new facts) to 25.0 min. Voice synthesis with Turbo takes about 35-40 min for the first pacing pass in a fresh session. **Change:** the pacing step on a new episode should run in the background right after the script is saved.
+
+## 2026-11-11 (daily run, production notes)
+- **Web access.** Only en.wikipedia.org could be opened this run (Britannica, World History Encyclopedia, NPS, Perseus and Livius were all blocked). The Cato Short and the Pig War script are sourced from Wikipedia pages only, with Wikipedia's own warnings respected (the "potatoes out of my pig" line is told as probably invented; "54-40 or fight" is told as not Polk's slogan; the NPS Union Jack claim, tagged "failed verification", is left out). **Change:** none to the rules; a later run with wider access can add primary sources (NPS, HistoryLink) to the Pig War sources.
+- **Memory.** A 30-minute render, a Short render and a voice-only pacing pass at once ran out of memory twice (Chromium crashed). Two at a time works. **Change:** run the long render plus one other job, never three.
+- **Background limit.** A background job is stopped after 2 hours, so a long render must be saved with `wip.py save` before then and continued by the next run (Korea: 11 of 21 pieces saved).

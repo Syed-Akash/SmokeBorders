@@ -1,0 +1,1 @@
+Anton, Bebas Neue, Archivo Black, DM Serif Display, Oswald: SIL Open Font License 1.1, from the @fontsource npm packages.

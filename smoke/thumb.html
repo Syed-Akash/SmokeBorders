@@ -1,0 +1,61 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Smoke & Borders thumbnail (1280x720). The spec is passed in window.SPEC before window.draw() runs (see make_thumb_sb.py). -->
+<style>
+@font-face{font-family:ANTON;src:url(brand/fonts/anton.woff2)}
+@font-face{font-family:OSW;src:url(brand/fonts/oswald-700.woff2)}
+html,body{margin:0;background:#000}canvas{display:block}
+</style>
+<script src="../studio/doc/vendor/d3-array.min.js"></script>
+<script src="../studio/doc/vendor/d3-geo.min.js"></script>
+<script src="../studio/doc/vendor/topojson-client.min.js"></script>
+<script src="brand/chars.js"></script>
+</head><body><canvas id="c" width="1280" height="720"></canvas>
+<script>
+const W=1280,H=720,EMBER='#ff6a1f',INK='#110b07';let x=document.getElementById('c').getContext('2d');
+let seed=9;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const hash=s=>{let h=0;for(const ch of s||'?')h=(h*31+ch.charCodeAt(0))|0;return Math.abs(h)};
+const PARCH=['#d9bf8a','#c9a66b','#e2cb98','#b98d5a','#d1b37a'],VIVID=['#e4572e','#f3a712','#3a86c8','#7bb661','#d7263d','#ffc857','#8e5ccf','#2ec4b6'];
+let LAND;const G={};
+async function load(k){if(!LAND){const l=await (await fetch('../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land)}
+  if(!G[k]){const g=await (await fetch('../studio/doc/data/world_'+k+'.geojson')).json();g.features=g.features.filter(f=>f.geometry&&d3.geoArea(f)<6);G[k]=g}return G[k]}
+function mapSide(g,proj,style,hl){const p=d3.geoPath(proj,x);
+  x.fillStyle=style==='parch'?'#8f7650':'#2b6cb3';x.fillRect(0,0,W,H);
+  if(style!=='parch'){const gr=x.createRadialGradient(W*.6,H*.4,50,W*.6,H*.5,W*.8);gr.addColorStop(0,'#4a93d6');gr.addColorStop(1,'#1d4f8c');x.fillStyle=gr;x.fillRect(0,0,W,H)}
+  x.beginPath();p(LAND);x.fillStyle=style==='parch'?'#e3cd9b':'#e9e1c8';x.fill();
+  const pal=style==='parch'?PARCH:VIVID,H_=Object.fromEntries((hl||[]).flatMap(h=>h.names.map(n=>[n,h.color])));
+  for(const f of g.features){const n=f.properties.NAME;if(!n)continue;x.beginPath();p(f);x.fillStyle=H_[n]||(style==='parch'?(window.SPEC.plain?'#dcc493':pal[hash(n)%pal.length]):'#efe6cc');x.fill()}
+  for(const h of hl||[])if(h.outline)for(const f of g.features)if(h.names.includes(f.properties.NAME)){x.beginPath();p(f);x.save();x.lineJoin='round';x.strokeStyle=h.outline;x.lineWidth=h.lw||5;x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=10;x.stroke();x.restore()}
+  x.beginPath();p(g);x.strokeStyle=style==='parch'?'rgba(70,45,20,.6)':'rgba(255,255,255,.75)';x.lineWidth=style==='parch'?1.2:1.6;x.stroke();
+  x.beginPath();p(LAND);x.strokeStyle=style==='parch'?'rgba(60,38,15,.75)':'rgba(15,40,80,.5)';x.lineWidth=1.6;x.stroke();
+  if(style==='parch'){const im=x.getImageData(0,0,W,H),d=im.data;for(let i=0;i<d.length;i+=4){const n=(rnd()-.5)*22;d[i]+=n;d[i+1]+=n;d[i+2]+=n}x.putImageData(im,0,0);
+    const v=x.createRadialGradient(W/2,H/2,H*.3,W/2,H/2,W*.75);v.addColorStop(0,'rgba(60,35,10,0)');v.addColorStop(1,'rgba(60,35,10,.45)');x.fillStyle=v;x.fillRect(0,0,W,H)}}
+function glowLine(pts,w){x.save();x.lineJoin=x.lineCap='round';for(const [lw,col,b] of [[w*4,'rgba(255,90,20,.3)',w*6],[w*1.8,'rgba(255,110,30,.8)',w*3],[w,EMBER,w],[w*.35,'#ffe2b8',0]]){x.shadowColor=EMBER;x.shadowBlur=b;x.strokeStyle=col;x.lineWidth=lw;x.beginPath();pts.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.stroke()}x.restore()}
+function smoke(pts,n,h){x.save();x.filter='blur(6px)';for(let i=0;i<n;i++){const s=pts[(rnd()*pts.length)|0],up=rnd()**1.5*h,r=10+up*.4+rnd()*18,cx=s[0]+Math.sin(up/40+i)*up*.25,cy=s[1]-up,g=x.createRadialGradient(cx,cy,0,cx,cy,r);
+  g.addColorStop(0,`rgba(70,60,52,${.08*(1-up/h)+.02})`);g.addColorStop(1,'rgba(70,60,52,0)');x.fillStyle=g;x.fillRect(cx-r,cy-r,2*r,2*r)}x.restore()}
+function T(s,X,Y,font,fill,al='center',stroke=0){x.font=font;x.textAlign=al;x.textBaseline='alphabetic';if(stroke){x.lineJoin='round';x.lineWidth=stroke;x.strokeStyle=INK;x.strokeText(s,X,Y)}x.fillStyle=fill;x.fillText(s,X,Y)}
+function fit(t,fam,maxW,start){let z=start;x.font=z+'px '+fam;while(x.measureText(t).width>maxW&&z>20){z-=2;x.font=z+'px '+fam}return z}
+function yearBox(t,cx,y){const z=78;x.font=z+'px ANTON';const w=x.measureText(t).width+34;x.fillStyle='#0b0b0b';x.fillRect(cx-w/2,y,w,z+18);T(t,cx,y+z+4,z+'px ANTON','#fff')}
+window.draw=async()=>{const S=window.SPEC;await document.fonts.load('80px ANTON');await document.fonts.load('30px OSW');
+  const g0=await load(S.then),g1=await load(S.now);const pj=(c,sc,tx)=>d3.geoMercator().center(c).scale(sc).translate([tx,H*.55]);
+  const projL=pj(S.centerThen||S.center,S.scale,W*.3),projR=pj(S.centerNow||S.center,S.scale,W*.72);
+  // the seam: a rough burning border down the middle
+  const sx=S.seam||W/2,seam=[];for(let i=0;i<=14;i++){const t=i/14;seam.push([sx+(i%14?(rnd()-.5)*34:0)+(t-.5)*-40,t*H])}
+  const L=document.createElement('canvas');L.width=W;L.height=H;const R2=document.createElement('canvas');R2.width=W;R2.height=H;const o=x;
+  x=L.getContext('2d');mapSide(g0,projL,'parch',S.hlThen);x=R2.getContext('2d');mapSide(g1,projR,'vivid',S.hlNow);x=o;
+  x.drawImage(R2,0,0);x.save();x.beginPath();x.moveTo(0,0);seam.forEach(p=>x.lineTo(...p));x.lineTo(0,H);x.closePath();x.clip();x.drawImage(L,0,0);x.restore();
+  smoke(seam,700,260);glowLine(seam,6);
+  // name labels on the map, so a stranger knows who is who (e.g. BRITAIN on the red, USA on the blue)
+  for(const l of S.labels||[]){const pr=l.side==='R'?projR:projL,[lx,ly]=pr(l.at);const z=l.size||54;x.save();x.font=z+'px ANTON';x.textAlign='center';x.lineJoin='round';x.lineWidth=z*.22;x.strokeStyle=INK;x.strokeText(l.text,lx,ly);x.fillStyle=l.color||'#fff';x.fillText(l.text,lx,ly);x.restore()}
+  // the two sides: big characters at the bottom corners, looking at each other
+  const A=Object.assign({},CHAR_PRESETS[S.left.preset]||{},S.left,{facing:1}),B=Object.assign({},CHAR_PRESETS[S.right.preset]||{},S.right,{facing:-1});
+  for(const [spec,cx,h] of [[A,S.left.x||175,S.left.h||560],[B,S.right.x||W-175,S.right.h||560]]){const C=document.createElement('canvas');C.width=W;C.height=H+80;drawChar(C.getContext('2d'),cx,H+40,h,spec);
+    x.save();x.shadowColor='rgba(0,0,0,.6)';x.shadowBlur=28;x.shadowOffsetY=8;x.drawImage(C,0,0);x.restore()}
+  // year boxes either side of the seam, the one big word at the bottom
+  if(S.years){const yy=S.yearsY||24;yearBox(S.years[0],sx-150,yy);yearBox(S.years[1],sx+150,yy)}
+  if(S.kicker){const kz=fit(S.kicker,'ANTON',W*.6,S.kickerSize||72);x.save();x.font=kz+'px ANTON';const kw=x.measureText(S.kicker).width+30;x.fillStyle=EMBER;x.fillRect(W/2-kw/2,(S.textY||H-34)-(S.wordSize||150)-kz-8,kw,kz+14);x.restore();T(S.kicker,W/2,(S.textY||H-34)-(S.wordSize||150)-2,kz+'px ANTON','#160d05')}
+  if(S.word){const z=fit(S.word,'ANTON',W*.62,S.wordSize||170);T(S.word,W/2,S.textY||H-34,z+'px ANTON',S.wordColor||'#ffffff','center',22);if(S.hi){T(S.word,W/2,S.textY||H-34,z+'px ANTON',EMBER,'center',0)}}
+  // our corner ribbon (theirs says NO AI; ours says what the channel does)
+  x.save();x.translate(W,0);x.rotate(Math.PI/4);x.fillStyle=EMBER;x.fillRect(-150,58,300,52);x.font='30px ANTON';x.textAlign='center';x.fillStyle='#160d05';x.fillText('BOTH SIDES',0,96);x.restore();
+  window.done=true};
+</script></body></html>

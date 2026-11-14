@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#e9dcc0}</style><script src="chars.js"></script></head><body><canvas id="c" width="1800" height="1000"></canvas>
+<script>
+const c=document.getElementById('c').getContext('2d');c.fillStyle='#e9dcc0';c.fillRect(0,0,1800,1000);
+const P=CHAR_PRESETS,list=[['king_george','angry'],['franklin','smug'],['governor','sad'],['redcoat','shock'],['continental','angry'],['hessian','grim'],['french_officer','happy'],['washington','neutral'],['lord_north','shock'],['roman','angry'],['carthaginian','smug']];
+list.forEach(([k,m],i)=>{const x=150+(i%6)*300,y=i<6?470:950;drawChar(c,x,y,400,Object.assign({},P[k],{mood:m,facing:i%2?-1:1}));c.font='22px sans-serif';c.fillStyle='#000';c.textAlign='center';c.fillText(k+' / '+m,x,y+0)});
+window.done=true;
+</script></body></html>

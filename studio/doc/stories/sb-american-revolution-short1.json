@@ -1,0 +1,196 @@
+{
+ "id": "sb-american-revolution-short1",
+ "brand": "smoke",
+ "short": true,
+ "narrator": "bm_george",
+ "voices": {
+  "GB": "bm_lewis",
+  "US": "am_michael"
+ },
+ "title": "The Soldiers Who Shot Five Americans Had a SURPRISING Lawyer #shorts",
+ "era": "1715",
+ "musicEra": "1700s",
+ "balls": {
+  "GB": {
+   "flag": "GB1707",
+   "label": "BRITAIN",
+   "at": [
+    -70.1,
+    42.2
+   ],
+   "r": 58,
+   "char": {
+    "preset": "king_george",
+    "facing": -1
+   }
+  },
+  "US": {
+   "flag": "US13",
+   "label": "13 COLONIES",
+   "at": [
+    -72.0,
+    42.45
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "Boston": [
+   -71.06,
+   42.36
+  ]
+ },
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.3,
+     "scale": 15000
+    },
+    "date": "5 MARCH 1770",
+    "say": "In 1770, British soldiers shot five people in Boston. Their lawyer? A future American President.",
+    "do": [
+     {
+      "show": [
+       "US",
+       "GB"
+      ]
+     },
+     {
+      "on": "Boston",
+      "pin": "Boston"
+     },
+     {
+      "on": "shot",
+      "shot": 1
+     },
+     {
+      "on": "President",
+      "card": {
+       "kind": "big",
+       "text": "THEIR LAWYER?",
+       "dur": 2.4
+      }
+     }
+    ]
+   },
+   {
+    "say": "It started with snowballs. A crowd surrounded a group of redcoats, throwing snow, ice and insults. In the chaos, someone shouted. The soldiers fired.",
+    "do": [
+     {
+      "on": "snowballs",
+      "snow": 1
+     },
+     {
+      "on": "redcoats",
+      "angry": [
+       "US"
+      ]
+     },
+     {
+      "on": "fired",
+      "guns": {
+       "at": [
+        -71.06,
+        42.36
+       ],
+       "dur": 2
+      }
+     }
+    ]
+   },
+   {
+    "say": "Five colonists died. Patriots called it the Boston Massacre.",
+    "do": [
+     {
+      "on": "died",
+      "dim": 0.4
+     },
+     {
+      "on": "Massacre",
+      "card": {
+       "kind": "stamp",
+       "text": "BOSTON MASSACRE",
+       "dur": 2.6
+      }
+     }
+    ]
+   },
+   {
+    "say": "Few lawyers would touch the case. One who did... was a Patriot. John Adams.",
+    "do": [
+     {
+      "on": "Massacre",
+      "dim": 0
+     },
+     {
+      "on": "Adams",
+      "card": {
+       "kind": "big",
+       "text": "JOHN ADAMS",
+       "dur": 2.6
+      }
+     }
+    ],
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.36,
+     "scale": 26000
+    }
+   },
+   {
+    "say": "He argued they were frightened men facing a mob. Six of the eight soldiers walked free. The other two were branded on the thumb.",
+    "do": [
+     {
+      "on": "free",
+      "mood": [
+       "GB",
+       "happy"
+      ]
+     },
+     {
+      "on": "thumb",
+      "mood": [
+       "GB",
+       "shock"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "Six years later, Adams helped declare independence from the very King those soldiers served. The full story, from both sides, is on Smoke and Borders.",
+    "do": [
+     {
+      "on": "independence",
+      "mood": [
+       "GB",
+       "shock"
+      ]
+     },
+     {
+      "on": "King",
+      "zoomhit": 1
+     }
+    ],
+    "cam": {
+     "lon": -71.06,
+     "lat": 42.3,
+     "scale": 12000
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Bill of Rights Institute, John Adams and the Boston Massacre Trial: https://billofrightsinstitute.org/activities/john-adams-and-the-boston-massacre-trial-handout-a-narrative/"
+ ],
+ "playlists": [
+  "sb-shorts"
+ ]
+}

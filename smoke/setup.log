@@ -1,0 +1,12 @@
+built /home/user/Flagbomb/dist/FlagBomb/index.html
+browser ok
+setup ok with /usr/bin/python3
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import fluidsynth; print('score ok')
+    ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/fluidsynth.py", line 85, in <module>
+    lib = find_libfluidsynth()
+  File "/usr/local/lib/python3.13/dist-packages/fluidsynth.py", line 83, in find_libfluidsynth
+    raise ImportError("Couldn't find the FluidSynth library.")
+ImportError: Couldn't find the FluidSynth library.

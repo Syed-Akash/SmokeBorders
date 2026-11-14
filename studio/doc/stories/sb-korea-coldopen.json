@@ -1,0 +1,333 @@
+{
+ "id": "sb-korea-coldopen",
+ "demo": 1,
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "US": "am_michael",
+  "SU": "bm_daniel",
+  "RHEE": "bm_fable",
+  "KIM": "bm_lewis",
+  "KOR": "bm_fable"
+ },
+ "title": "Style demo: Korea cold open",
+ "era": "1945",
+ "musicEra": "1940s",
+ "balls": {
+  "US": {
+   "flag": "US",
+   "label": "AMERICA",
+   "at": [
+    130.8,
+    36.0
+   ],
+   "r": 56,
+   "char": {
+    "preset": "us_officer",
+    "facing": -1
+   }
+  },
+  "SU": {
+   "flag": "SUN",
+   "label": "SOVIET UNION",
+   "at": [
+    129.8,
+    42.6
+   ],
+   "r": 56,
+   "char": {
+    "preset": "soviet_officer",
+    "facing": 1
+   }
+  },
+  "RHEE": {
+   "flag": "KR",
+   "label": "SYNGMAN RHEE",
+   "at": [
+    126.7,
+    37.2
+   ],
+   "r": 48,
+   "char": {
+    "preset": "rhee",
+    "facing": 1
+   }
+  },
+  "KIM": {
+   "flag": "KP",
+   "label": "KIM IL SUNG",
+   "at": [
+    126.3,
+    40.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "kim",
+    "facing": -1
+   }
+  },
+  "KOR": {
+   "flag": "KR",
+   "label": "KOREANS",
+   "at": [
+    128.4,
+    35.4
+   ],
+   "r": 50,
+   "char": {
+    "preset": "korean",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "Seoul": [
+   126.98,
+   37.57
+  ],
+  "Pyongyang": [
+   125.75,
+   39.02
+  ],
+  "Incheon": [
+   126.7,
+   37.46
+  ],
+  "Wonsan": [
+   127.45,
+   39.15
+  ],
+  "Busan": [
+   129.08,
+   35.18
+  ],
+  "Jeju": [
+   126.53,
+   33.5
+  ],
+  "Panmunjom": [
+   126.68,
+   37.96
+  ],
+  "Tokyo": [
+   139.7,
+   35.7
+  ],
+  "Moscow": [
+   37.6,
+   55.75
+  ],
+  "Washington": [
+   -77.04,
+   38.9
+  ],
+  "Hiroshima": [
+   132.45,
+   34.39
+  ],
+  "Yalu": [
+   126.0,
+   40.0
+  ],
+  "Cairo": [
+   31.24,
+   30.04
+  ],
+  "Vladivostok": [
+   131.9,
+   43.1
+  ],
+  "Manchuria": [
+   125.0,
+   44.0
+  ],
+  "38th parallel": [
+   127.0,
+   38.0
+  ]
+ },
+ "sources": [
+  "National Interest, 'How 2 Colonels and a National Geographic Map Divided Korea': https://nationalinterest.org/node/10222 (evening of 10 Aug 1945, an office in the Pentagon, Rusk and Bonesteel, the National Geographic map without provincial borders, Rusk's 'Neither Tic nor I was a Korea expert' and 'Seoul, the capital, should be in the American sector')",
+  "Japan's surrender offer of 10 August 1945 and the 16 million / 9 million split: see sb-korea-38th.json sources"
+ ],
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "scene": {
+     "shot": "pentagon-night",
+     "car": 1.2,
+     "push": 0.08,
+     "pan": [
+      40,
+      -10
+     ]
+    },
+    "date": "FRIDAY, 10 AUGUST 1945\nTHE PENTAGON · WASHINGTON, D.C.",
+    "cam": {
+     "lon": 127.3,
+     "lat": 38.0,
+     "scale": 2600
+    },
+    "say": "Friday, the tenth of August, 1945. Washington, late in the evening.",
+    "do": [
+     {
+      "on": "Washington",
+      "sfx": {
+       "wind": 5
+      }
+     },
+     {
+      "on": "Friday",
+      "sfx": {
+       "car": 5
+      }
+     }
+    ]
+   },
+   {
+    "say": "Japan has just offered to surrender. The war is almost over... and nobody has decided what happens to Korea.",
+    "do": [
+     {
+      "on": "Korea",
+      "boom": 0.25
+     }
+    ]
+   },
+   {
+    "scene": {
+     "shot": "office-night",
+     "clock": [
+      10,
+      52
+     ],
+     "push": 0.1,
+     "pan": [
+      -30,
+      10
+     ]
+    },
+    "say": "Inside the Pentagon, two colonels step into a quiet room next door.",
+    "do": [
+     {
+      "on": "Inside",
+      "sfx": "tick4"
+     }
+    ]
+   },
+   {
+    "scene": {
+     "shot": "faces",
+     "names": [
+      [
+       "COL. DEAN RUSK",
+       "War Department"
+      ],
+      [
+       "COL. CHARLES BONESTEEL",
+       "War Department"
+      ]
+     ],
+     "nameAt": 0.4,
+     "push": 0.06,
+     "people": [
+      {
+       "preset": "us_officer",
+       "x": 0.3,
+       "spec": {
+        "hair": "#3b2a1a"
+       }
+      },
+      {
+       "preset": "us_officer",
+       "x": 0.7,
+       "spec": {
+        "hair": "#6b4a2a",
+        "glasses": 0
+       }
+      }
+     ]
+    },
+    "say": "Dean Rusk. And Charles Bonesteel. Neither of them is an expert on Korea.",
+    "do": [
+     {
+      "on": "Dean",
+      "sfx": "typewriter"
+     }
+    ]
+   },
+   {
+    "scene": {
+     "shot": "map-desk",
+     "push": 0.12,
+     "pan": [
+      60,
+      40
+     ]
+    },
+    "say": "On the desk is a National Geographic map of Asia. It doesn't even show Korea's provinces.",
+    "do": [
+     {
+      "on": "desk",
+      "sfx": "paper"
+     }
+    ]
+   },
+   {
+    "say": "They know one thing. Seoul, the capital, should be on the American side.",
+    "do": [
+     {
+      "on": "Seoul",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "say": "So a red pencil goes across the map... just north of Seoul. The thirty-eighth parallel.",
+    "do": [
+     {
+      "on": "red",
+      "cue": "draw",
+      "sfx": "pen"
+     },
+     {
+      "on": "thirty",
+      "sfx": "hit"
+     }
+    ]
+   },
+   {
+    "scene": {
+     "shot": "village",
+     "push": 0.06,
+     "pan": [
+      50,
+      0
+     ],
+     "cutY": 0.5
+    },
+    "say": "Seven thousand miles away, it is already Saturday in Korea. Twenty-five million people are going about their day.",
+    "do": [
+     {
+      "on": "Seven",
+      "sfx": {
+       "wind": 6
+      }
+     }
+    ]
+   },
+   {
+    "say": "Not one of them knows... that their country has just been cut in two.",
+    "do": [
+     {
+      "on": "cut",
+      "cue": "cut",
+      "boom": 0.6,
+      "shake": 0.5
+     }
+    ]
+   }
+  ]
+ },
+ "chapters": []
+}

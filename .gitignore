@@ -1,0 +1,11 @@
+studio/tts
+studio/out/
+studio/py
+studio/.chromium
+studio/music/
+__pycache__/
+*.mp4
+*.webm
+smoke/render-*.log
+smoke/pacing-*.log
+smoke/brand/fonts/anton.ttf

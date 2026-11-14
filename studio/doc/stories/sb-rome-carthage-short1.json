@@ -1,0 +1,263 @@
+{
+ "id": "sb-rome-carthage-short1",
+ "brand": "smoke",
+ "short": true,
+ "narrator": "bm_george",
+ "voices": {
+  "CAT": "bm_daniel",
+  "NAS": "bm_lewis"
+ },
+ "title": "This Roman Ended EVERY Speech the Same Way #shorts",
+ "era": "bc300",
+ "musicEra": "ancient",
+ "balls": {
+  "CAT": {
+   "flag": "ROMA",
+   "label": "CATO",
+   "at": [
+    11.7,
+    41.95
+   ],
+   "r": 58,
+   "char": {
+    "preset": "roman",
+    "facing": 1,
+    "hat": "none",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a"
+   }
+  },
+  "NAS": {
+   "flag": "ROMA",
+   "label": "SCIPIO NASICA",
+   "at": [
+    13.3,
+    41.95
+   ],
+   "r": 56,
+   "char": {
+    "preset": "roman",
+    "facing": -1,
+    "coat": "#b02434",
+    "hair": "#2b1d12"
+   }
+  },
+  "CAR": {
+   "flag": "CART",
+   "label": "CARTHAGE",
+   "at": [
+    10.32,
+    36.95
+   ],
+   "r": 58,
+   "char": {
+    "preset": "carthaginian",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "Rome": [
+   12.5,
+   41.9
+  ],
+  "Carthage": [
+   10.32,
+   36.85
+  ]
+ },
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "cam": {
+     "lon": 12.5,
+     "lat": 41.85,
+     "scale": 14000
+    },
+    "date": "ROME, 150s BC",
+    "say": "One Roman senator ended every speech, on any subject, with the same words. Carthage must be destroyed.",
+    "do": [
+     {
+      "show": [
+       "CAT",
+       "NAS"
+      ]
+     },
+     {
+      "on": "senator",
+      "pin": "Rome"
+     },
+     {
+      "on": "every",
+      "card": {
+       "kind": "stamp",
+       "text": "EVERY SPEECH",
+       "dur": 2.2
+      }
+     },
+     {
+      "on": "destroyed",
+      "angry": [
+       "CAT"
+      ]
+     }
+    ]
+   },
+   {
+    "say": "His name was Cato. He had fought Hannibal as a young man. Now he was old, and he had just visited Carthage.",
+    "do": [
+     {
+      "on": "Cato",
+      "card": {
+       "kind": "big",
+       "text": "CATO",
+       "dur": 2.0
+      }
+     },
+     {
+      "on": "Carthage",
+      "pin": "Carthage"
+     }
+    ],
+    "cam": {
+     "lon": 11.4,
+     "lat": 39.4,
+     "scale": 2600
+    }
+   },
+   {
+    "say": "He came home shocked. The old enemy was rich again. But Carthage had paid Rome every coin it owed, and it was no military threat.",
+    "do": [
+     {
+      "show": [
+       "CAR"
+      ]
+     },
+     {
+      "on": "rich",
+      "mood": [
+       "CAR",
+       "happy"
+      ]
+     },
+     {
+      "on": "shocked",
+      "mood": [
+       "CAT",
+       "shock"
+      ]
+     },
+     {
+      "on": "threat",
+      "zoomhit": 1
+     }
+    ]
+   },
+   {
+    "say": "Another senator, Scipio Nasica, ended his speeches the other way. Carthage must be saved. Rome, he said, needed an enemy to stay united.",
+    "do": [
+     {
+      "on": "Nasica",
+      "card": {
+       "kind": "stamp",
+       "text": "“MUST BE SAVED”",
+       "dur": 2.4
+      }
+     },
+     {
+      "on": "united",
+      "mood": [
+       "NAS",
+       "smug"
+      ]
+     }
+    ],
+    "cam": {
+     "lon": 12.5,
+     "lat": 41.8,
+     "scale": 16000
+    }
+   },
+   {
+    "say": "Cato won. In 149 BC, Rome went to war. Three years later, Carthage burned, and fifty thousand survivors were sold into slavery.",
+    "do": [
+     {
+      "on": "won",
+      "mood": [
+       "CAT",
+       "smug"
+      ]
+     },
+     {
+      "on": "burned",
+      "fire": {
+       "at": [
+        10.32,
+        36.85
+       ],
+       "dur": 3
+      }
+     },
+     {
+      "on": "fifty",
+      "dim": 0.4
+     },
+     {
+      "on": "slavery",
+      "card": {
+       "kind": "stamp",
+       "text": "146 BC",
+       "dur": 2.4
+      }
+     }
+    ],
+    "cam": {
+     "lon": 10.32,
+     "lat": 36.9,
+     "scale": 9000
+    }
+   },
+   {
+    "say": "And Cato? He died in 149 BC, aged eighty-five, the year the war began. He never saw Carthage fall. The full story, from both sides, is on Smoke and Borders.",
+    "do": [
+     {
+      "on": "Cato",
+      "dim": 0
+     },
+     {
+      "on": "died",
+      "mood": [
+       "CAT",
+       "sad"
+      ]
+     },
+     {
+      "on": "never",
+      "card": {
+       "kind": "stamp",
+       "text": "NEVER SAW IT",
+       "dur": 2.4
+      }
+     }
+    ],
+    "cam": {
+     "lon": 12.5,
+     "lat": 41.85,
+     "scale": 14000
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Carthago delenda est (Cato's speeches, his visit to Carthage, Scipio Nasica's 'Carthage must be saved', 146 BC): https://en.wikipedia.org/wiki/Carthago_delenda_est",
+  "Wikipedia, Third Punic War (149-146 BC, Carthage paid off its indemnity and was no military threat, 50,000 sold into slavery): https://en.wikipedia.org/wiki/Third_Punic_War",
+  "Wikipedia, Cato the Elder (234-149 BC, died aged 85, veteran of the Second Punic War): https://en.wikipedia.org/wiki/Cato_the_Elder"
+ ],
+ "playlists": [
+  "sb-shorts"
+ ]
+}

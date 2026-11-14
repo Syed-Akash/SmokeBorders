@@ -1,0 +1,33 @@
+{
+ "note": "FINAL thumbnail templates (owner, 12 Nov 2026): ONLY spotlight, circled and dossier, always in the dark style (\"dread\": 1 over a \"relief\" map: red topic bar with place and date, a big 1-3 word hook with one yellow word, real photos, fire grade, embers, grave crosses when people died, red glowing eyes only on the villain). Every episode's 3 Test & Compare pairs (Title and thumbnail) use these three: A = spotlight + 'How X Happened — Minute by Minute', B = circled + 'The N Days That Made X', C = dossier + A's title. Never atlas, atlassplit, versus, mapperson, cartoon characters or the plain dread layout again. Record results in LEARNINGS.md.",
+ "layouts": [
+  "spotlight",
+  "circled",
+  "dossier"
+ ],
+ "tests": [
+  {
+   "episode": "sb-rome-carthage",
+   "pairs": [
+    "spotlight",
+    "circled",
+    "dossier"
+   ],
+   "winner": null
+  },
+  {
+   "episode": "sb-pig-war",
+   "pairs": [
+    "versus",
+    "mapperson",
+    "spotlight"
+   ],
+   "winner": null
+  }
+ ],
+ "next": [
+  "circled",
+  "dossier",
+  "mapperson"
+ ]
+}

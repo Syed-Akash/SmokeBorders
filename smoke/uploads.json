@@ -1,0 +1,67 @@
+{
+ "sb-american-revolution": {
+  "episode": {
+   "videoId": "y2nbDhzbAN8",
+   "publishAt": "2026-11-06T18:40:00Z",
+   "note": "requested 18:00Z; moved to 15 min after upload"
+  },
+  "shorts": [
+   "PIdlAX-TM60",
+   "ijja-RAlRoM",
+   "AP-xnyelEOk",
+   {
+    "n": 1,
+    "videoId": "AP-xnyelEOk",
+    "publishAt": "2026-11-10T23:00:00Z"
+   },
+   {
+    "n": 2,
+    "videoId": "ijja-RAlRoM",
+    "publishAt": "2026-11-12T23:00:00Z"
+   },
+   {
+    "n": 3,
+    "videoId": "PIdlAX-TM60",
+    "publishAt": "2026-11-15T23:00:00Z"
+   }
+  ],
+  "video": "y2nbDhzbAN8",
+  "published": "2026-11-06T18:40:08Z",
+  "ab_test_set_by_owner": true
+ },
+ "sb-american-revolution-short2": {
+  "videoId": "vq2j-eKW3-A",
+  "publishAt": "2026-11-09T16:00:00Z"
+ },
+ "sb-american-revolution-short3": {
+  "videoId": "ei-u0euOTko",
+  "publishAt": "2026-11-10T16:00:00Z"
+ },
+ "sb-rome-carthage": {
+  "videoId": "dfkC_dDN5M8",
+  "publishAt": "2026-11-11T16:00:00Z",
+  "abTestSetUp": false
+ },
+ "sb-rome-carthage-short1": {
+  "videoId": "OByYa34zlYo",
+  "publishAt": "2026-11-12T16:00:00Z"
+ },
+ "sb-korea-38th": {
+  "videoId": "bWtNC0Mk7hg",
+  "publishAt": "2026-11-15T16:00:00Z",
+  "replaced": "o6vPJ6TSsAk",
+  "abTestSetUp": false,
+  "shorts": [
+   {
+    "n": 1,
+    "videoId": "JFMZOplgINg",
+    "publishAt": "2026-11-16T16:00:00Z"
+   },
+   {
+    "n": 2,
+    "videoId": "qo7pp1fqbzg",
+    "publishAt": "2026-11-17T16:00:00Z"
+   }
+  ]
+ }
+}

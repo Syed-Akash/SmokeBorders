@@ -1,0 +1,15 @@
+{
+ "note": "Channels to watch every Monday (newest uploads + most popular). channel_id from the 6 Nov 2026 research. Add a channel when one of theirs shows up as an outlier in search.",
+ "channels": [
+  {"name": "Historically", "id": "UCoZd78hRUdxxsuGiABuHF_A", "why": "ENTIRE History of..., [No AI], 2-10M per hit"},
+  {"name": "Unknown Frequencies", "id": "UCm1yxl_4qMbStLHpHQu6xWg", "why": "ENTIRE ... Explained, POV / Your Life as"},
+  {"name": "Animated History", "id": "UCLuIudjbquBATgqkIJxQi6A", "why": "fastest grower: 100K subs with 21 videos"},
+  {"name": "Epic History", "id": "UCvPXiKxH-eH9xq-80vpgmKQ", "why": "3D battle maps"},
+  {"name": "The Operations Room", "id": "UCnZJt7yQw5IztVwe-Dscd-Q", "why": "45-min multi-part battles"},
+  {"name": "Geo History", "id": "UC2Cl2g2xFTZoAEldxYVzQFg", "why": "... Explained on a Map"},
+  {"name": "History Matters", "id": "UC22BdTgxefuvUivrjesETjg", "why": "short animated documentaries"},
+  {"name": "Simple History", "id": "UC510QYlOlKNyhy_zdQxnGYw", "why": "big animated history channel"},
+  {"name": "The Armchair Historian", "id": "UCeUJFQ0D9qs6aVNyUt9fkeQ", "why": "animated history, US audience"},
+  {"name": "OverSimplified", "id": "UCNIuvl7V8zACPpTmmNIqP2A", "why": "the benchmark for humour in history"}
+ ]
+}

@@ -1,0 +1,9 @@
+cpus: 2
+B-chatterbox-calm: 22 s of audio in 173 s
+C-chatterbox-dramatic: 22 s of audio in 168 s
+D-chatterbox-turbo-tags: 27 s of audio in 86 s
+Notes (retry, 2026-11-07):
+- download.pytorch.org still blocked, so torch 2.6.0 came from PyPI (CUDA build, runs on CPU). Fine.
+- Turbo first failed: "RuntimeError: expected scalar type Double but found Float" in s3tokenizer
+  (loudness normalising of the reference returns float64). Fixed by norm_loudness=False in generate().
+- Speed is on a 2-CPU cloud box: Chatterbox ~8x slower than real time, Turbo ~3x.
