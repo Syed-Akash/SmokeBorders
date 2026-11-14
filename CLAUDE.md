@@ -51,7 +51,7 @@ RENDER then UPLOAD in the same run, LATE, REDO, Monday REVIEW). Film episodes st
 take two runs.
 
 ## How the daily run works (smoke/RUNBOOK.md is the source of truth)
-- A scheduled task runs daily at 3:30 pm Pakistan. Its instructions are in `tools/prompts/smoke-daily.md`.
+- A scheduled task ("Smoke Borders Daily") runs daily at 8:30 am Pakistan. Its instructions are in `tools/prompts/smoke-daily.md`.
 - Step 0: `tools/sync_runs.sh` merges recent run branches (only branches that moved in the last 36 h; never "theirs").
   Twice (12 and 13 Nov) a stale branch rolled the plan back; this is why.
 - Renders run in the background in 90-second pieces; `studio/wip.py save/restore/clear <id>` keeps pieces and voice clips
