@@ -53,6 +53,7 @@ Standing rules, never broken:
   2. Start `./py make_doc.py <id> --resume > ../smoke/render-<id>.log 2>&1` with `run_in_background` and the longest timeout.
   3. **Do not end the run while it renders.** Do the other jobs, then wait in the foreground: check the log every ~10 minutes (a Monitor or an `until` loop), and every ~15 minutes run `./py wip.py save <id>`.
   4. If the run must stop before the render finishes, run `./py wip.py save <id>` first and say in the summary how many pieces are done; the next run restores and continues.
+  4b. If the upload can't happen in this run (no token, wrong channel), run `./py wip.py save <id>` after the render: it saves the FINISHED files (video, Shorts, meta.json, thumb), and the next run's `wip.py restore` brings them back ready to upload, no re-render.
   5. After the upload succeeds: `./py wip.py clear <id>`.
 - When `out/<date>-doc-<id>/<id>.mp4` and `summary.json` exist, watch three spots (start, middle, end) as stills (`ffmpeg -ss T -i file -frames:v 1`).
 - Read `studio/tts/engine.txt` after the render starts: it says `turbo` (the owner's chosen narrator) or `kokoro (Turbo failed: …)`. If it fell back, say so in the summary. Turbo adds about an hour of voice work per episode, so start the render early.
