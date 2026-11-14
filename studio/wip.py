@@ -2,7 +2,8 @@
 voice clips (the expensive part with Chatterbox Turbo) are saved to a throwaway git branch `wip/<story-id>` and restored by the next run.
 
 usage (from studio/):
-  ./py wip.py restore <story-id>   before rendering: brings back saved pieces + voice clips (does nothing if there are none)
+  ./py wip.py restore <story-id>   before rendering: brings back saved pieces + voice clips (does nothing if there are none);
+                                   a finished render (video, Shorts, meta.json) comes back ready to upload
   ./py wip.py save <story-id>      while rendering (every ~15 minutes) and when stopping: saves what is finished so far
   ./py wip.py clear <story-id>     after the video is uploaded: deletes the branch
 The branch always holds a single commit (force-pushed), so it never grows the repository's history."""
@@ -38,18 +39,23 @@ def save(sid):
     d = outdir(sid)
     segs = sorted(os.path.basename(p) for p in glob.glob(os.path.join(d, 'seg-*.mp4')) if '.part.' not in p) if d else []
     cache = os.path.join(HERE, 'tts', 'cache'); clips = sorted(os.listdir(cache)) if os.path.isdir(cache) else []
-    if not segs and not clips: print('nothing to save'); return
+    # a finished render merges and deletes its pieces: then save the finished files (video, Shorts, meta, thumb) instead,
+    # so the next run can upload without rendering again (14 Nov 2026: a save after the render emptied the branch)
+    fin = sorted(f for f in os.listdir(d) if not f.startswith('seg-') and '.part.' not in f and os.path.isfile(os.path.join(d, f))) if d else []
+    if not any(f.endswith('.mp4') for f in fin): fin = []
+    if not segs and not clips and not fin: print('nothing to save'); return
     w = tempfile.mkdtemp(prefix='wip-'); br = 'wip/' + sid
     try:
         git('worktree', 'add', '--detach', w); git('checkout', '--orphan', br + '-new', cwd=w); git('rm', '-rfq', '.', cwd=w, check=False)
         for f in os.listdir(w):
             if f != '.git': (shutil.rmtree if os.path.isdir(os.path.join(w, f)) else os.remove)(os.path.join(w, f))
         a = pack(segs, d, w, 'pieces') if segs else 0; b = pack(clips, cache, w, 'voice') if clips else 0
-        open(os.path.join(w, 'README.md'), 'w').write('Render in progress for %s: %d pieces, %d voice clips (%s). Restore with `./py wip.py restore %s`; deleted after upload.\n'
-                                                     % (sid, len(segs), len(clips), datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC'), sid))
+        c = pack(fin, d, w, 'final') if fin else 0
+        open(os.path.join(w, 'README.md'), 'w').write('Render in progress for %s: %d pieces, %d voice clips, %d finished files (%s). Restore with `./py wip.py restore %s`; deleted after upload.\n'
+                                                     % (sid, len(segs), len(clips), len(fin), datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d %H:%M UTC'), sid))
         git('add', '-A', cwd=w); git('-c', 'user.name=render', '-c', 'user.email=render@localhost', 'commit', '-qm', 'Render in progress: %s (%d pieces)' % (sid, len(segs)), cwd=w)
         git('push', '-qf', 'origin', 'HEAD:refs/heads/' + br, cwd=w)
-        print('saved %d pieces (%.0f MB) and %d voice clips (%.0f MB) to %s' % (len(segs), a / 1e6, len(clips), b / 1e6, br))
+        print('saved %d pieces (%.0f MB), %d voice clips (%.0f MB) and %d finished files (%.0f MB) to %s' % (len(segs), a / 1e6, len(clips), b / 1e6, len(fin), c / 1e6, br))
     finally:
         git('worktree', 'remove', '--force', w, check=False); git('branch', '-D', br + '-new', check=False); shutil.rmtree(w, ignore_errors=True)
 
@@ -61,8 +67,9 @@ def restore(sid):
     try:
         git('worktree', 'add', '--detach', w, 'origin/' + br)
         cache = os.path.join(HERE, 'tts', 'cache'); os.makedirs(cache, exist_ok=True)
-        b = unpack(w, 'voice', cache); a = unpack(w, 'pieces', outdir(sid, make=True))
-        print('restored %.0f MB of pieces and %.0f MB of voice clips; continue with: ./py make_doc.py %s --resume' % (a / 1e6, b / 1e6, sid))
+        b = unpack(w, 'voice', cache); a = unpack(w, 'pieces', outdir(sid, make=True)); c = unpack(w, 'final', outdir(sid))
+        if c: print('restored the FINISHED render (%.0f MB) to %s: no render needed, go straight to UPLOAD' % (c / 1e6, outdir(sid)))
+        else: print('restored %.0f MB of pieces and %.0f MB of voice clips; continue with: ./py make_doc.py %s --resume' % (a / 1e6, b / 1e6, sid))
     finally:
         git('worktree', 'remove', '--force', w, check=False); shutil.rmtree(w, ignore_errors=True)
 

@@ -70,7 +70,7 @@
    "id": "sb-pig-war",
    "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
    "publish": "2026-11-18T16:00:00Z",
-   "status": "scripted",
+   "status": "rendered",
    "audience": "US CA UK",
    "shorts": [
     {
@@ -84,9 +84,9 @@
   },
   {
    "id": "sb-ww2-both-sides",
-   "title": "The ENTIRE History of WW2, From Both Sides",
+   "title": "How World War II Happened — Minute by Minute",
    "publish": "2026-11-21T16:00:00Z",
-   "status": "idea",
+   "status": "scripted",
    "audience": "US UK DE",
    "shorts": [
     {
