@@ -20,7 +20,8 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
 - Commit and push every change; end commit messages with the attribution lines the session gives you.
 
 ## What a video is (read smoke/STYLE.md for the full rules)
-- **Long episode:** 30–45 minutes (aim 30–35), 10–14 chapters, built around a **hidden person** nobody has heard of.
+- **Long episode:** 25–45 minutes (aim 30–35 when the story has that much; owner, 15 Nov 2026: 25 is the minimum when the
+  topic is fully covered, never pad to reach a length), 10–14 chapters, built around a **hidden person** nobody has heard of.
   Present-tense story, minute by minute: date, place, a person, small details, the turn.
 - **Film, not a map (owner, 14 Nov 2026):** every spoken beat has its own shot, a new shot every 5–15 s, never one over
   20 s; the map only where geography explains something (at most 30%). Shot types (studio/doc/scenes.js + scenes2.js):
@@ -33,7 +34,7 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
 - **Acted, fast, concrete (owner, 15 Nov 2026, smoke/STYLE.md 2c):** characters act out short exchanges about once a minute
   (`talk` beats + the story's `cast`; dramatized from the record, jokes only for unnamed roles, `talkNote` in the description);
   a cut every 3-4 s (automatic angle cuts inside long shots); every big number made concrete; callbacks; hooks on famous names and the
-  news. Length stays 30-45 minutes and thumbnails stay the three templates (owner kept those).
+  news. Length 25-45 minutes and thumbnails stay the three templates (owner kept those).
 - **Titles (owner, 12 Nov 2026): only two formulas.** A = "How X Happened — Minute by Minute"; B = "The N Days That Made
   X" (Days → Hours/Years when that is the real span; N stated in the script and sourced). Never Ziro's "in N Minutes".
 - **Thumbnails (owner, 12 Nov 2026): only three templates**, always in the dark style over a burning relief map with

@@ -47,7 +47,7 @@ Every episode is storyboarded like a film before it is rendered. **No episode re
 - **The film check** (make_doc.py, on stories with `"film": true`): scenes at least 70% of the runtime, the map at most 30%, no shot over 20 s, every chapter opens on a scene. If it fails, the render does not start. Look at one contact sheet of 16 shots before the long render.
 - `sb-pig-war.json` is the worked example (182 beats, 15 archival photos, documents, cards, sets).
 
-## 2c. Acted, fast and concrete (owner, 15 Nov 2026, after studying Paper Billions: "go with" points 1, 2, 3, 5; length stays 30-45 min, thumbnails stay the three templates)
+## 2c. Acted, fast and concrete (owner, 15 Nov 2026, after studying Paper Billions: "go with" points 1, 2, 3, 5; length 25-45 min, thumbnails stay the three templates)
 Paper Billions (@PaperBillionsTV) got millions of views with money stories drawn on paper. What we copy:
 - **Characters talk.** About once a minute (25-35 exchanges an episode) a short acted exchange: 1-5 lines, each under ~12 words, in the
   characters' own voices. Write it as a `talk` beat: `{"talk": [{"who": "CUT", "text": "...", "mood": "angry"}], "bg": <set shot>}`. Every
@@ -119,7 +119,7 @@ Paper Billions (@PaperBillionsTV) got millions of views with money stories drawn
 - **Plain spoken words, one CAPS word at most** (ENTIRE, EVER). Negative or dramatic emotion beats neutral (+22%), but no clickbait the video doesn't deliver.
 - **Every episode gets 3 title + thumbnail pairs** (`abTest`): A = "How X Happened — Minute by Minute", B = "The N Days That Made X", C = A's title with a third layout (see above). The Monday review records winners in LEARNINGS.md.
 - **The scout** (`smoke/scout.py`) collects every competitor's latest videos with their outlier scores, makes contact sheets of the best thumbnails and a table of title patterns (winners vs the rest). Look at the sheets before writing an episode's packaging.
-- **Length: 30–45 minutes, aiming for 30–35** (owner, 9 Nov 2026). That is about 4,300–6,400 spoken words in 10–14 chapters, filled with specific people and details, never padding. A topic that can't fill 25 minutes honestly gets widened (the Shortest War becomes the Scramble for Africa through Zanzibar), never padded.
+- **Length: 25–45 minutes, aiming for 30–35 when the story has that much** (owner, 9 Nov 2026; minimum lowered to 25 on 15 Nov 2026: "if the topic can be covered completely... set 25 min as the minimum". Never pad a story to reach a length: no repeated points, no filler chapters, no stretched pauses). That is about 4,300–6,400 spoken words in 10–14 chapters, filled with specific people and details, never padding. A topic that can't fill 25 minutes honestly gets widened (the Shortest War becomes the Scramble for Africa through Zanzibar), never padded.
 - **Shorts are cut from the episode** (owner, 11 Nov 2026, replacing standalone Short stories to save effort): Short 1 is the cold open, Short 2 a special moment from the middle that works without context (a twist, a shocking number, a reveal). Write both in the story's `"shorts"` (RUNBOOK 1.3c). That's why the cold open must hook on its own in under 58 seconds and end on a sentence that makes people want the rest.
 
 ## 5. Voice and music (researched 6 Nov 2026)
@@ -140,7 +140,7 @@ Paper Billions (@PaperBillionsTV) got millions of views with money stories drawn
 - Sources: https://fluxnote.io/guides/best-ai-voice-for-history-documentary · https://syllaby.io/blog/voiceover-pacing-silence-trimming-retention-editing/ · https://sonilo.com/blog/guides/good-music-for-history-videos · https://www.overseeros.com/blog/background-music-volume-under-voiceover
 
 ## 6. Format checks before rendering
-- Length 30–45 minutes, aiming for 30–35 (about 4,300–6,400 spoken words); 10–14 chapters of 5–9 beats. `--pacing` warns when it's outside.
+- Length 25–45 minutes, aiming for 30–35 when the story supports it (about 3,600–6,400 spoken words); never padded; 10–14 chapters of 5–9 beats. `--pacing` warns when it's outside.
 - Every number is in `sources`, with a page that was actually opened.
 - Search words are in the title, the first 30 seconds and the first chapter name.
 - The episode's thumbnail block uses the "Then and Now" split (parchment on one side, colour on the other, burning seam, one character per side, 0–3 words).

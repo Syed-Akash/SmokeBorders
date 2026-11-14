@@ -565,7 +565,7 @@ def pacing(tl, chapters, total, outdir):
     rep = {'total_min': round(total / 60, 1), 'gaps': gaps, 'chapters': per}
     json.dump(rep, open(os.path.join(outdir, 'pacing.json'), 'w'), indent=1)
     print('length %.1f min, %d gaps over the limit' % (total / 60, len(gaps)))
-    lo, hi = (30, 45) if tl.get('brand') == 'smoke' else (10, 20)
+    lo, hi = (25, 45) if tl.get('brand') == 'smoke' else (10, 20)   # owner, 15 Nov 2026: 25 minimum when the story is fully told
     if not tl.get('short') and not lo <= total / 60 <= hi: print('  LENGTH: %.1f min is outside the %d-%d minute target; expand or tighten the story before rendering' % (total / 60, lo, hi))
     for g in gaps: print('  %6.1f-%6.1f s: %4.1f s with nothing new (limit %d s)' % (g['from'], g['to'], g['gap'], g['limit']))
     for c in per: print('  %-34s at %5.0f s: %.1f min, %.1f events/min' % (c['title'][:34], c['start'], c['minutes'], c['events_per_min']))

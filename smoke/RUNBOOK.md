@@ -1,7 +1,7 @@
 # Smoke & Borders: daily run
 
 The channel runs fully automatically. Cadence (owner, 11 Nov 2026; trial review on 5 Dec): **one video a day at most**, all at 16:00 UTC (11:00 New York, 16:00 London, 21:00 Pakistan), in a 3-day cycle:
-- day 1: the long episode, 30-45 minutes (aim 30-35);
+- day 1: the long episode, 25-45 minutes (aim 30-35 when the story has it; never pad);
 - day 2: Short 1, the story's opening (the cold open), cut from the episode;
 - day 3: Short 2, a special moment from the middle, cut from the episode;
 - day 4: the next episode.
@@ -44,7 +44,7 @@ Standing rules, never broken:
 3c. Add `"shorts"`: the two Shorts cut from this episode (owner, 11 Nov 2026). Short 1 starts at the very beginning (the cold open); Short 2 starts at a special moment in the middle (a twist, a shocking number, a reveal) that works without context. `[{"head": "LINE 1|LINE 2", "title": "..."}, {"from": "<first words of that beat's say>", "head": "...", "title": "..."}]`. Heads are 1-3 words per line; titles are the hook plus one CAPS word plus #shorts. make_doc.py turns them into `shortCuts` (start and length, ending on a full sentence, under 58 s) in summary.json.
 3b. Add `abTest` (during the layout test, see `smoke/layout_tests.json`: one title, three thumb2 layouts from its "next" list; update "next" and add the episode to "tests"): three title + thumbnail pairs for YouTube's Test & Compare (STYLE.md section 4 thumbnail rules). A is the best guess and is what gets uploaded; B and C try a different hook (the absurd cause, the underdog, the plain topic). Each pair is `{"title": "...", "thumb": {"kicker": "...", "word": "..."}}`; every title keeps the search words.
 4a. Pacing: `cd studio && ./py make_doc.py <id> --pacing` and fix every gap it lists (STYLE.md section 3).
-4. Check it: every `on` word appears in its beat's `say`, every `pin` is in `places`, and the word count is 4,300–6,400 (about 30–45 minutes, aiming for 30–35).
+4. Check it: every `on` word appears in its beat's `say`, every `pin` is in `places`, and the word count is 3,600–6,400 (about 25–45 minutes, aiming for 30–35).
 5. Render stills and look at them: `cd studio && ./py make_doc.py <id> --stills 3,40,120,300,600` (background; voice synthesis takes a few minutes). Fix what looks wrong.
 6. `python3 smoke/sbplan.py set <id> scripted`; commit.
 
