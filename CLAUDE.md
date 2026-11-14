@@ -40,6 +40,13 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
   A + title A, B + title B, C + title A. `smoke/ab/<id>/` holds the images and the instructions.
 - **Voice:** Chatterbox Turbo (MIT), timbre cloned from the Kokoro voice bm_george (`studio/turbo.py`); Kokoro is the
   fallback and measures timings. About 3x slower than real time on 2 CPUs.
+- **Sound (owner, 14 Nov 2026: "not enough sound effects"):** every film shot gets sound automatically (make_doc.py
+  `film_sound`): a soft whoosh on each cut, a quiet bed under the shot (waves for sea/ships, fire, wind outdoors, rain,
+  crowd for towns, the film projector under archival photos, a ticking clock under time cards), paper on documents; a
+  riser and sub drop on chapter cards; impacts on booms. Real recordings live in `studio/sfx/<kind>/` (51 picked from the
+  owner's pack; `sfx/sources.json` says where each came from), with the old generated sounds as fallback. Beds are
+  ducked under the voice. Stories can also call `"sfx": "braam" | "tension" | "riser" | "bells" | ...` on a beat.
+  Never use the pack's meme/anime/game clips (copyright claims) or its BLASTWAVEFX files (a paid library).
 - **Subscribe/like animation** mid-video and a warm closing call to action; playlist links in descriptions.
 - **Shorts:** two per episode, CUT from the finished episode (Short 1 = the cold open, Short 2 = a special moment), listed
   in the story's `"shorts"`; `smoke/cut_shorts.py <id> auto`.

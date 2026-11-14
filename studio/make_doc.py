@@ -233,6 +233,7 @@ def build(story, k):
     sc = sorted([e for e in ev if e['k'] == 'scene'], key=lambda e: e['t'])   # each shot lasts until the next cut (its camera move spans the shot)
     for i, e in enumerate(sc):
         if 'dur' not in e: e['dur'] = round(((sc[i + 1]['t'] if i + 1 < len(sc) else t) - e['t']), 2)
+    if story.get('film'): film_sound(sc, cues)
     if story.get('short') or story.get('demo'):   # a standalone Short (or a style demo): just the story, no outro, reminder or end card (cut_shorts.py makes it vertical)
         start = next(b['cam'] for c in ([story['intro']] if story.get('intro') else []) + story['chapters'] for b in c['beats'] if 'cam' in b)
         total = t + 1.0
@@ -297,14 +298,92 @@ def mood_music(mood, dur, rng):
     else: pad([[48, 55, 60, 64], [43, 50, 59, 62], [45, 52, 57, 60], [41, 48, 57, 60]], 4.5, .015); piano([72, 74, 76, 79, 81, 84], [1.0, 1.5, 2.0], .1)
     out = lp(out, 16); return out / (np.abs(out).max() or 1)
 
+# ---------- the sound library (studio/sfx/<kind>/NN.flac, 48 kHz mono, picked from the owner's pack; see sfx/sources.json) ----------
+SFXDIR = os.path.join(HERE, 'sfx'); _LIB = {}; _LAST = {}
+def lib(kind):
+    if kind not in _LIB: _LIB[kind] = [sf.read(f, dtype='float32')[0] for f in sorted(glob.glob(os.path.join(SFXDIR, kind, '*.flac')))]
+    return _LIB[kind]
+def lib_pick(kind, rng):
+    L = lib(kind)
+    if not L: return None
+    i = int(rng.integers(len(L)))
+    if len(L) > 1 and i == _LAST.get(kind): i = (i + 1) % len(L)   # never the same sound twice in a row
+    _LAST[kind] = i; return L[i]
+def fit(s, dur, fin=.5, fout=.8):
+    """Loops (with a half-second crossfade) or trims a sound to dur seconds, with a fade in and out: background beds under a shot."""
+    n = int(dur * MSR); xf = int(.5 * MSR)
+    if len(s) < n:
+        out = np.zeros(n + len(s), np.float32); pos = 0; ramp = np.linspace(0, 1, xf, dtype=np.float32)
+        while pos < n:
+            seg = s.copy()
+            if pos: seg[:xf] *= ramp
+            seg[-xf:] *= ramp[::-1]
+            out[pos:pos + len(seg)] += seg; pos += len(s) - xf
+        s = out
+    s = s[:n].copy(); a, b = int(fin * MSR), int(fout * MSR)
+    if a: s[:a] *= np.linspace(0, 1, a)
+    if b and len(s) > b: s[-b:] *= np.linspace(1, 0, b)
+    return s
+
+OUTDOOR = {'hills', 'land', 'forest', 'farm', 'camp', 'fort', 'flagpole', 'animal', 'soldiers', 'cannons'}
+def film_sound(sc, cues):
+    """Owner, 14 Nov 2026 ("the videos don't have enough sound effects"): every film shot gets its own sound.
+    A soft whoosh on each cut (not where a chapter card or a boom already hits), a quiet background bed under the shot
+    (sea and ships: waves; fire: fire; outdoors: wind; rain: rain; towns and crowds: crowd; archival photos: the film
+    projector; time cards: a ticking clock) and a paper rustle when a document comes up. Beds are ducked under the voice."""
+    loud = [c[1] for c in cues if c[0] in ('chapter', 'boom', 'hit', 'stamp', 'shot')]
+    for i, e in enumerate(sc):
+        k = e.get('shot')
+        if k == 'off': continue
+        t0, d = e['t'], max(1.0, e.get('dur', 6))
+        if i and not any(abs(x - t0) < 1.2 for x in loud): cues.append(('cut', t0))
+        if k == 'photo': cues.append(('bed', t0, d, 'projector', .16))
+        elif k == 'card': cues.append(('bed', t0, min(d, 7), 'clock', .45))
+        elif k == 'doc': cues.append(('paper', t0 + .15))
+        elif k == 'set':
+            types = {p.get('type') for p in e.get('parts', []) if isinstance(p, dict)}
+            fx = set([e['fx']] if isinstance(e.get('fx'), str) else e.get('fx') or []) | ({e['weather']} if e.get('weather') else set())
+            wet = types & {'sea', 'coast', 'ships'}
+            if wet: cues.append(('bed', t0, d, 'waves', .32))
+            if 'fire' in types or 'embers' in fx: cues.append(('bed', t0, d, 'fire', .34))
+            if fx & {'rain', 'storm'}: cues.append(('rain', t0, d))
+            if types & {'town', 'crowd'}: cues.append(('crowd', t0 + .3))
+            if (types & OUTDOOR or 'fog' in fx) and not wet: cues.append(('bed', t0, d, 'wind', .26))
+
+LIBMAP = {'whoosh': ('whoosh', .55), 'cut': ('whoosh', .3), 'hit': ('subdrop', .9), 'shot': ('shot', .9), 'bells': ('bells', .8),
+          'thunder': ('thunder', 1.0), 'braam': ('braam', .9), 'tension': ('tension', .7), 'riser': ('riser', .6), 'impact': ('impact', .9)}
+LOOPS = {'fire': ('fire', .7), 'waves': ('waves', .7), 'wind': ('wind', .6), 'train': ('train', .7), 'clock': ('clock', .6), 'projector': ('projector', .5)}
+
 SPEAK = {}
-def sfx_track(cues, total, rng):
-    n = int((total + 1) * MSR); out = np.zeros(n)
+def sfx_track(cues, total, rng, beds=False):
+    """The effects track. beds=True returns only the background beds (quiet, not normalised: ducked under the voice in the mix).
+    Every kind uses a real recording from studio/sfx when there is one, and falls back to the sound made here."""
+    n = int((total + 1) * MSR); out = np.zeros(n, np.float32)   # 35 minutes at 48 kHz is 400 MB even in float32: keep every full-length track float32
     def add(at, s, g=1.0):
         i = int(max(0, at) * MSR); j = min(n, i + len(s))
         if i < n: out[i:j] += s[:j - i] * g
+    if beds:
+        for c in cues:
+            if c[0] == 'bed':
+                s = lib_pick(c[3], rng)
+                if s is not None: add(c[1], fit(s, c[2]), c[4])
+        return np.clip(out, -.95, .95, out=out)
     for c in cues:
         kind, at = c[0], c[1]
+        if kind == 'bed': continue
+        if kind in LIBMAP:   # a one-shot from the library
+            s = lib_pick(LIBMAP[kind][0], rng)
+            if s is not None: add(at - (.25 if kind in ('whoosh', 'cut') else 0), s, LIBMAP[kind][1]); continue
+        if kind == 'boom':
+            s = lib_pick('impact', rng)
+            if s is not None: add(at, s, c[2] if len(c) > 2 else 1); continue
+        if kind == 'chapter':   # a riser that lands on the chapter card, then a sub drop
+            r, d = lib_pick('riser', rng), lib_pick('subdrop', rng)
+            if r is not None and d is not None:
+                r = r[:int(min(len(r) / MSR, 3.0) * MSR)].copy(); r[:int(.8 * MSR)] *= np.linspace(0, 1, int(.8 * MSR)); add(at - len(r) / MSR, r, .4); add(at, d, 1.0); continue
+        if kind in LOOPS or kind == 'tick':
+            k_, g_ = LOOPS.get(kind, ('clock', .6)); s = lib_pick(k_, rng)
+            if s is not None: add(at, fit(s, c[2] if len(c) > 2 else (5 if kind == 'tick' else 4), .2, .6), g_); continue
         if kind == 'boom':
             L = int(2.8 * MSR); x = np.arange(L) / MSR; add(at, (np.sin(2 * np.pi * np.cumsum(46 - 14 * np.clip(x / 1.5, 0, 1)) / MSR) * np.exp(-x * 1.5) + lp(rng.standard_normal(L), 160) * np.exp(-x * 7) * 3) * .9, c[2] if len(c) > 2 else 1)
         elif kind == 'shot':
@@ -381,8 +460,8 @@ def sfx_track(cues, total, rng):
             for j in range(6): L = int(.08 * MSR); x = np.arange(L) / MSR; add(at + j * .09, (lp(rng.standard_normal(L), 5) + np.sin(2 * np.pi * 140 * x)) * np.exp(-x * 30) * .4)
         elif kind == 'blip':
             who = c[2]; f = SPEAK.setdefault(who, 420 + 90 * (len(SPEAK) % 6)); L = int(.045 * MSR); x = np.arange(L) / MSR; add(at, np.sign(np.sin(2 * np.pi * f * x)) * env(L, .002, .015) * .1)
-    out = out * .85 + convolve(out.astype(np.float32), reverb_ir(1.4, seed=5)) * .25
-    return out / (np.abs(out).max() or 1)
+    wet = convolve(out, reverb_ir(1.4, seed=5)); out *= .85; wet *= .25; out += wet; del wet
+    out /= (np.abs(out).max() or 1); return out
 
 # ---------- render ----------
 class _Quiet(http.server.SimpleHTTPRequestHandler):
@@ -510,6 +589,10 @@ def render_video(story, tl, vid, seg=90):
     for p in parts + [lst]: os.remove(p)
 
 def finish(story, sid, outdir, tl, clips, cues, moods, chapters, total, rng, vid, t0):
+    if 'turbo' in sys.modules:   # the voice model holds several GB; the mix needs that memory on an 8 GB machine
+        import gc, ctypes, turbo; turbo._model = None; gc.collect()
+        try: ctypes.CDLL('libc.so.6').malloc_trim(0)   # hand the freed memory back to the system
+        except Exception: pass
     # narration
     vo = np.zeros(int((total + 1) * SR), np.float32)
     for s0, a in clips: i = int(s0 * SR); vo[i:i + len(a)] += a[:len(vo) - i]
@@ -526,15 +609,17 @@ def finish(story, sid, outdir, tl, clips, cues, moods, chapters, total, rng, vid
     mus = mus * .8 + convolve(mus.astype(np.float32), reverb_ir(2.2, seed=2)) * .3; mus /= (np.abs(mus).max() or 1)
     SMOKE = story.get('brand') == 'smoke'
     mw, xw, irw = (os.path.join(outdir, x) for x in ('music.wav', 'sfx.wav', 'ir.wav')); sf.write(mw, (mus * (.8 if SMOKE else .5)).astype(np.float32), MSR); sf.write(xw, (sfx_track(cues, total, rng) * .55).astype(np.float32), MSR); sf.write(irw, reverb_ir(1.2, seed=11), MSR)
+    del mus   # free ~800 MB before the beds track (an 8 GB machine ran out of memory)
+    bw = os.path.join(outdir, 'beds.wav'); sf.write(bw, sfx_track(cues, total, rng, beds=True), MSR)
     final = os.path.join(outdir, sid + '.mp4'); tmp = final[:-4] + '.tmp2.mp4'
     flt = ('[1:a]aresample=48000,rubberband=pitch=0.95:formant=preserved,highpass=f=70,lowshelf=g=3:f=170,equalizer=f=420:t=q:w=1:g=-2,equalizer=f=3300:t=q:w=1.2:g=2,'
-           'deesser=i=0.4,acompressor=threshold=0.08:ratio=3:attack=8:release=150:makeup=2,asplit=3[dry][wet0][sc];[wet0][4:a]afir=dry=0:wet=1,volume=0.16[wet];[dry][wet]amix=inputs=2:normalize=0[v];'
+           'deesser=i=0.4,acompressor=threshold=0.08:ratio=3:attack=8:release=150:makeup=2,asplit=4[dry][wet0][sc][sc2];[wet0][4:a]afir=dry=0:wet=1,volume=0.16[wet];[dry][wet]amix=inputs=2:normalize=0[v];'
            + ('[2:a]equalizer=f=2500:t=q:w=1.4:g=-5,volume=0.065[m];[m][sc]sidechaincompress=threshold=0.03:ratio=4:attack=40:release=900[md];' if SMOKE else '[2:a]volume=0.55[m];[m][sc]sidechaincompress=threshold=0.03:ratio=6:attack=25:release=700[md];') +
-           '[3:a]volume=0.85[x];[md][x][v]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-15:TP=-2:LRA=11,alimiter=limit=0.84:level=false[a]')
-    r = subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', vid, '-i', vw, '-i', mw, '-i', xw, '-i', irw, '-filter_complex', flt, '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', tmp], capture_output=True, text=True)
+           '[3:a]volume=0.85[x];[5:a]volume=1.0[b0];[b0][sc2]sidechaincompress=threshold=0.03:ratio=3:attack=60:release=1200[bd];[md][x][bd][v]amix=inputs=4:duration=first:normalize=0,loudnorm=I=-15:TP=-2:LRA=11,alimiter=limit=0.84:level=false[a]')
+    r = subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', vid, '-i', vw, '-i', mw, '-i', xw, '-i', irw, '-i', bw, '-filter_complex', flt, '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', tmp], capture_output=True, text=True)
     if r.returncode: sys.exit('mux failed: ' + r.stderr[-800:])
     os.replace(tmp, final)
-    for f in (vid, vw, mw, xw, irw): os.remove(f)
+    for f in (vid, vw, mw, xw, irw, bw): os.remove(f)
     srt(tl['captions'], os.path.join(outdir, sid + '.srt'))
     cover_t = next((e['t'] + 1.5 for e in tl['events'] if e['k'] == 'link' and e.get('war')), total * .4)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-ss', str(cover_t), '-i', final, '-frames:v', '1', '-q:v', '2', os.path.join(outdir, 'cover.jpg')], check=True)

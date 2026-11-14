@@ -57,7 +57,13 @@ def reverb_ir(sec=2.2, sr=MSR, seed=7):
     ir[:int(.022 * sr)] = 0; ir[0] = 1.0; return (ir / np.abs(ir).max()).astype(np.float32)
 
 def convolve(x, ir):
-    n = len(x) + len(ir); N = 1 << (n - 1).bit_length(); return np.fft.irfft(np.fft.rfft(x, N) * np.fft.rfft(ir, N), N)[:len(x)].astype(np.float32)
+    """Reverb by convolution. Block by block (overlap-add): the same result as one huge FFT, which needed ~4 GB for a
+    35-minute track and got the render killed on an 8 GB machine."""
+    try:
+        from scipy.signal import oaconvolve
+        return oaconvolve(np.asarray(x, np.float32), np.asarray(ir, np.float32))[:len(x)].astype(np.float32)
+    except ImportError:
+        n = len(x) + len(ir); N = 1 << (n - 1).bit_length(); return np.fft.irfft(np.fft.rfft(x, N) * np.fft.rfft(ir, N), N)[:len(x)].astype(np.float32)
 
 def score(total, seed, cues):
     """A slow cinematic bed: warm detuned pads (Am-F-C-G), a sub, a sparse piano, all through a hall; plus whooshes on cuts,
