@@ -4,16 +4,34 @@
  "narrator": "bm_george",
  "voices": {
   "CUT": "am_michael",
-  "GRF": "bm_lewis",
+  "GRF": "bm_daniel",
   "US": "am_michael",
   "RN": "bm_lewis",
   "CAM": "am_adam",
-  "PRE": "bm_daniel",
+  "PRE": "bm_lewis",
   "DOU": "bm_daniel",
   "PIC": "am_adam",
   "BAY": "bm_fable",
   "SCO": "am_michael",
-  "POLK": "am_adam"
+  "POLK": "am_adam",
+  "HOR": "bm_lewis",
+  "HAR": "am_fenrir",
+  "BUC": "am_fenrir",
+  "ROB": "am_puck",
+  "KAI": "bm_fable",
+  "SAILOR": "bm_lewis",
+  "MARINE": "bm_daniel",
+  "SOLDIER": "am_puck",
+  "AIDE": "am_puck",
+  "CLERK": "am_fenrir",
+  "SETTLER": "am_adam",
+  "COMPANY": "bm_lewis",
+  "VOTER1": "am_michael",
+  "VOTER2": "am_puck",
+  "MINER": "am_adam",
+  "LOCAL": "bm_daniel",
+  "MEMBER": "am_fenrir",
+  "EXPERT": "bm_fable"
  },
  "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
  "era": "1914",
@@ -609,6 +627,53 @@
     }
    },
    {
+    "talk": [
+     {
+      "who": "CUT",
+      "text": "Not again. Not my potatoes again.",
+      "mood": "angry"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.55,
+       "n": 2,
+       "seed": 3,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.74,
+       "depth": 0.6
+      },
+      {
+       "type": "farm",
+       "x": 0.75,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "animal",
+       "kind": "pig",
+       "x": 0.4,
+       "s": 0.8,
+       "y": 0.88,
+       "walk": true,
+       "facing": 1,
+       "depth": 0.8
+      }
+     ]
+    },
+    "_new": 1
+   },
+   {
     "say": "Within two months, four hundred and sixty-one American soldiers and fourteen cannon are dug in on that island. Facing them are five British warships, seventy guns, and more than two thousand men.",
     "do": [
      {
@@ -741,6 +806,42 @@
      ],
      "push": 0.08
     }
+   },
+   {
+    "talk": [
+     {
+      "who": "SAILOR",
+      "text": "Guns ready, sir. What exactly are we shooting at?"
+     },
+     {
+      "who": "HOR",
+      "text": "Officially? A misunderstanding. About a pig.",
+      "mood": "smug"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.62,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 4,
+       "x": 0.1,
+       "s": 0.55,
+       "flag": "uk",
+       "y": 0.68,
+       "gap": 260,
+       "steam": false,
+       "depth": 0.5
+      }
+     ]
+    },
+    "_new": 1
    },
    {
     "say": "This is the Pig War of 1859, Britain against America, told from both sides. And at its heart are two neighbours almost nobody remembers.",
@@ -1111,6 +1212,56 @@
      "date": "1818"
     },
     {
+     "talk": [
+      {
+       "who": "COMPANY",
+       "text": "So who owns it?"
+      },
+      {
+       "who": "SETTLER",
+       "text": "Both of us. For now."
+      },
+      {
+       "who": "COMPANY",
+       "text": "And after that?"
+      },
+      {
+       "who": "SETTLER",
+       "text": "We'll sort it out later.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "fort",
+        "x": 0.6,
+        "y": 0.72,
+        "w": 700,
+        "h": 100,
+        "flag": "hbc",
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "On the British side, the land was run by a company. The Hudson's Bay Company, founded in London in 1670, traded furs across a huge territory.",
      "do": [
       {
@@ -1418,6 +1569,52 @@
       ]
      },
      "date": "1843"
+    },
+    {
+     "talk": [
+      {
+       "who": "SETTLER",
+       "text": "Is this Oregon?"
+      },
+      {
+       "who": "COMPANY",
+       "text": "It's the Columbia District."
+      },
+      {
+       "who": "SETTLER",
+       "text": "Not for long.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "fort",
+        "x": 0.6,
+        "y": 0.72,
+        "w": 700,
+        "h": 100,
+        "flag": "hbc",
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "So the company moved its bets north. That same year, it built a new post at the south tip of Vancouver Island, at a place called Camosun. It named it after the young Queen. Fort Victoria.",
@@ -2497,6 +2694,55 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "VOTER1",
+       "text": "Fifty-four forty, or fight!",
+       "mood": "angry"
+      },
+      {
+       "who": "VOTER2",
+       "text": "That's not even his slogan."
+      },
+      {
+       "who": "VOTER1",
+       "text": "Then what is?"
+      },
+      {
+       "who": "VOTER2",
+       "text": "Polk, Dallas, and the Tariff of forty-two."
+      },
+      {
+       "who": "VOTER1",
+       "text": "I'll keep mine.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 150,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 80,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Still, Polk talked tough. In January 1846, he said the only way to treat John Bull was to look him straight in the eye.",
      "do": [
       {
@@ -2791,6 +3037,40 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "AIDE",
+       "text": "Mexico, or Britain, Mr President?"
+      },
+      {
+       "who": "POLK",
+       "text": "One war at a time."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "So both sides blinked. Secretary of State James Buchanan and the British minister, Richard Pakenham, worked out a deal. Keep that name, Buchanan. He comes back later, as president.",
      "do": [
       {
@@ -3083,6 +3363,54 @@
      "scene": {
       "shot": "off"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CLERK",
+       "text": "Middle of the channel. Done.",
+       "mood": "happy"
+      },
+      {
+       "who": "AIDE",
+       "text": "Which channel?"
+      },
+      {
+       "who": "CLERK",
+       "text": "The channel."
+      },
+      {
+       "who": "AIDE",
+       "text": "There are two."
+      },
+      {
+       "who": "CLERK",
+       "text": "...Done anyway.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "To the west of the islands runs Haro Strait. To the east runs Rosario Strait.",
@@ -4053,6 +4381,46 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "PRE",
+       "text": "Your own government's maps draw the line through Rosario."
+      },
+      {
+       "who": "CAM",
+       "text": "Maps can be wrong.",
+       "mood": "angry"
+      },
+      {
+       "who": "PRE",
+       "text": "So can treaties, apparently.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "They argued from October to December. On the third of December, Prevost made a final offer: split the difference, down the middle channel, and America gets every main island except San Juan.",
      "do": [
       {
@@ -4351,6 +4719,57 @@
       "move": "in"
      },
      "date": "1858"
+    },
+    {
+     "say": "That is sixty newcomers for every person who already lived there.",
+     "scene": {
+      "shot": "card",
+      "time": "×60",
+      "place": "NEWCOMERS FOR EVERY RESIDENT",
+      "date": "Victoria, 1858",
+      "size": 220
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "MINER",
+       "text": "Which way to the gold?"
+      },
+      {
+       "who": "LOCAL",
+       "text": "Up the river. Everyone else already went."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 8,
+        "gap": 170,
+        "h": 140,
+        "col": "#4a3a2c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Four thousand of them were Chinese. Tens of thousands of the prospectors came up from California.",
@@ -4713,6 +5132,17 @@
      }
     },
     {
+     "say": "Three hundred and twenty acres. That is about two hundred and forty football fields, for free.",
+     "scene": {
+      "shot": "card",
+      "time": "320 ACRES",
+      "place": "≈ 240 FOOTBALL FIELDS",
+      "date": "for free",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "say": "[chuckle] There was one small problem. The free land offer had expired, in December 1855. And the island might not even be American.",
      "do": [
       {
@@ -4741,6 +5171,49 @@
       "place": "the free land offer ends",
       "date": "Cutlar arrives anyway"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CLERK",
+       "text": "Your claim?"
+      },
+      {
+       "who": "CUT",
+       "text": "Three hundred and twenty acres. Free."
+      },
+      {
+       "who": "CLERK",
+       "text": "That offer ended in 1855."
+      },
+      {
+       "who": "CUT",
+       "text": "...I'll keep the garden.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "His neighbour was Charles Griffin, an Irishman who ran Belle Vue farm for the Hudson's Bay Company. Griffin kept pigs, and he let them roam free.",
@@ -5176,6 +5649,67 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CUT",
+       "text": "Ten dollars. For the pig."
+      },
+      {
+       "who": "GRF",
+       "text": "A hundred.",
+       "mood": "angry"
+      },
+      {
+       "who": "CUT",
+       "text": "For a pig?",
+       "mood": "shock"
+      },
+      {
+       "who": "GRF",
+       "text": "For MY pig.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "pig",
+        "x": 0.4,
+        "s": 0.8,
+        "y": 0.88,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Griffin said no. He wanted a hundred.",
      "do": [
       {
@@ -5291,104 +5825,56 @@
      }
     },
     {
-     "say": "Cutlar: It was eating my potatoes.",
-     "do": [
+     "talk": [
       {
-       "say": [
-        "CUT",
-        "It was eating my potatoes."
-       ],
-       "on": "Cutlar"
+       "who": "CUT",
+       "text": "It was eating my potatoes.",
+       "mood": "angry"
       },
       {
-       "mood": [
-        "CUT",
-        "angry"
-       ],
-       "on": "potatoes"
+       "who": "GRF",
+       "text": "It is up to you to keep your potatoes out of my pig.",
+       "mood": "smug"
       }
      ],
-     "scene": {
+     "bg": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
        {
         "type": "land",
         "kind": "grass",
-        "y": 0.66,
+        "y": 0.74,
         "depth": 0.6
        },
        {
-        "type": "people",
-        "list": [
-         {
-          "x": 0.32,
-          "pose": "point",
-          "facing": 1,
-          "h": 1.05,
-          "cap": false,
-          "hat": "wide"
-         }
-        ],
-        "lx": 0.7,
-        "ly": 0.4,
-        "depth": 0.85
-       }
-      ],
-      "push": 0.1
-     }
-    },
-    {
-     "say": "Griffin: It is up to you to keep your potatoes out of my pig.",
-     "do": [
-      {
-       "say": [
-        "GRF",
-        "Keep your potatoes out of my pig."
-       ],
-       "on": "Griffin"
-      },
-      {
-       "mood": [
-        "GRF",
-        "smug"
-       ],
-       "on": "pig"
-      },
-      {
-       "zoomhit": 1,
-       "on": "pig"
-      }
-     ],
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "land",
-        "kind": "grass",
-        "y": 0.66,
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
         "depth": 0.6
        },
        {
-        "type": "people",
-        "list": [
-         {
-          "x": 0.68,
-          "pose": "arms",
-          "facing": -1,
-          "h": 1.05,
-          "cap": false,
-          "hat": "wide"
-         }
-        ],
-        "lx": 0.3,
-        "ly": 0.4,
-        "depth": 0.85
+        "type": "animal",
+        "kind": "pig",
+        "x": 0.4,
+        "s": 0.8,
+        "y": 0.88,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8
        }
-      ],
-      "push": 0.1
-     }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Now the island's two sides took over. According to the usual telling, British officials threatened to arrest Cutlar, and take him to Victoria.",
@@ -5466,6 +5952,49 @@
        "of the United States Army"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SETTLER",
+       "text": "They want to arrest a man over a pig!",
+       "mood": "angry"
+      },
+      {
+       "who": "SOLDIER",
+       "text": "I'll send it up to the general."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "So a small squabble between two neighbours went up the chain. And at the top of that chain, on the American side, sat exactly the wrong man.",
@@ -5747,6 +6276,45 @@
       "place": "WEST POINT, CLASS OF 1846",
       "date": "George Pickett"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "HAR",
+       "text": "Who's free?"
+      },
+      {
+       "who": "AIDE",
+       "text": "Captain Pickett. Last in his class."
+      },
+      {
+       "who": "HAR",
+       "text": "Send him.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "In the Northwest he had married a Haida woman, known as Morning Mist. In 1857, she bore him a son, James.",
@@ -6139,7 +6707,57 @@
      }
     },
     {
-     "say": "And he said the line everyone remembers. Don't be afraid of their big guns. We'll make a Bunker Hill of it.",
+     "talk": [
+      {
+       "who": "SOLDIER",
+       "text": "Captain. That's a British warship. Right there.",
+       "mood": "shock"
+      },
+      {
+       "who": "PIC",
+       "text": "Then we move the cannon."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.7,
+        "s": 0.7,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "y": 0.8,
+        "n": 2,
+        "x0": 0.15,
+        "gap": 300,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "And he said the line everyone remembers.",
      "do": [
       {
        "card": {
@@ -6208,6 +6826,45 @@
       ],
       "push": 0.12
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "PIC",
+       "text": "Don't be afraid of their big guns. We'll make a Bunker Hill of it.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Bunker Hill. A battle from the American Revolution, against the British. On a little island over a dead pig, a captain was talking about the last war, and asking for the next one.",
@@ -6394,6 +7051,48 @@
        "and avoid a fight, if possible."
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "DOU",
+       "text": "Get those American soldiers off the island."
+      },
+      {
+       "who": "HOR",
+       "text": "And if they won't go?"
+      },
+      {
+       "who": "DOU",
+       "text": "Avoid a fight. If possible."
+      },
+      {
+       "who": "HOR",
+       "text": "If possible."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "If possible. Two words that left a young captain holding the peace of two empires.",
@@ -6594,6 +7293,32 @@
      }
     },
     {
+     "say": "Seventy guns. Pointed at a camp that was there because of a pig that was already dead.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.1,
+        "s": 0.55,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "The American redoubt, an earthen fort for the cannon, was built under a young engineer, Second Lieutenant Henry Martyn Robert. Keep an eye on him. His name lives on in a very unexpected place.",
      "do": [
       {
@@ -6756,6 +7481,49 @@
       ],
       "push": 0.12
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SAILOR",
+       "text": "Seventy guns loaded, sir."
+      },
+      {
+       "who": "HOR",
+       "text": "And we wait."
+      },
+      {
+       "who": "SAILOR",
+       "text": "For what?"
+      },
+      {
+       "who": "HOR",
+       "text": "The admiral."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.1,
+        "s": 0.55,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Hornby had the guns to blow it apart. But he did not fire. He would not act until his commander arrived.",
@@ -7020,48 +7788,38 @@
      }
     },
     {
-     "say": "He would not, he said, involve two great nations in a war over a squabble about a pig.",
-     "do": [
+     "talk": [
       {
-       "card": {
-        "kind": "quote",
-        "text": "...involve two great nations in a war over a squabble about a pig.",
-        "who": "Rear Admiral Robert Baynes, 1859",
-        "dur": 4.6
-       },
-       "on": "squabble"
+       "who": "DOU",
+       "text": "Land the Royal Marines."
       },
       {
-       "say": [
-        "BAY",
-        "Over a squabble about a pig?"
-       ],
-       "on": "pig"
-      },
-      {
-       "mood": [
-        "BAY",
-        "smug"
-       ],
-       "on": "pig"
+       "who": "BAY",
+       "text": "No. I will not involve two great nations in a war over a squabble about a pig."
       }
      ],
-     "cam": {
-      "lon": -123.0,
-      "lat": 48.4,
-      "scale": 20000
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
      },
-     "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Rear Admiral R. L. Baynes",
-      "lines": [
-       "\"...not involve two great nations",
-       "in a war over a squabble",
-       "about a pig.\""
-      ],
-      "sign": "R. L. Baynes"
-     }
+     "_new": 1
     },
     {
      "say": "One sentence, from one old sailor who had seen war. And that may have been the most important decision of the whole affair.",
@@ -7302,6 +8060,44 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "BUC",
+       "text": "Which channel did I write into that treaty?"
+      },
+      {
+       "who": "AIDE",
+       "text": "The middle one, sir."
+      },
+      {
+       "who": "BUC",
+       "text": "...Get me General Scott."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "And he had a bigger worry at home. North and South were tearing apart over slavery. The country was heading toward civil war.",
      "do": [
       {
@@ -7530,6 +8326,41 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SCO",
+       "text": "Gentlemen. Buttons done up, please."
+      },
+      {
+       "who": "SCO",
+       "text": "Now. About this pig.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "[chuckle] But Scott had a rare skill. He had calmed two border crises with the British before, in the late 1830s, including the Aroostook War, between Maine and New Brunswick.",
      "do": [
       {
@@ -7705,6 +8536,49 @@
      "date": "NOVEMBER 1859"
     },
     {
+     "talk": [
+      {
+       "who": "SCO",
+       "text": "A hundred men each."
+      },
+      {
+       "who": "DOU",
+       "text": "Until when?"
+      },
+      {
+       "who": "SCO",
+       "text": "Until the diplomats decide."
+      },
+      {
+       "who": "DOU",
+       "text": "So, later.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "The warships sailed away. The hundreds of soldiers left. And Harney? The army recalled him to St. Louis.",
      "do": [
       {
@@ -7793,6 +8667,17 @@
       "place": "SAN JUAN ISLAND",
       "date": "two armies, one island"
      }
+    },
+    {
+     "say": "Twelve years. More than four thousand days of guarding one small island. Over a pig.",
+     "scene": {
+      "shot": "card",
+      "time": "4,000+ DAYS",
+      "place": "OF GUARD DUTY",
+      "date": "over one pig",
+      "size": 160
+     },
+     "_new": 1
     }
    ]
   },
@@ -8049,6 +8934,50 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "MARINE",
+       "text": "Happy Fourth of July!",
+       "mood": "happy"
+      },
+      {
+       "who": "SOLDIER",
+       "text": "God save the Queen!",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "They held sports contests against each other. Park rangers today like to say the biggest threat to peace on the island was not the guns. It was the large amount of alcohol available.",
      "do": [
       {
@@ -8117,6 +9046,49 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SOLDIER",
+       "text": "Another round?"
+      },
+      {
+       "who": "MARINE",
+       "text": "For peace.",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.5,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.7,
+        "r": 220,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Back on the farm, the story of our two neighbours fades out. The company gave up Belle Vue farm in 1861. Charles Griffin left the island in 1862.",
@@ -8714,6 +9686,49 @@
      "date": "TUESDAY, 25 JUNE 1861\nFORT STEILACOOM"
     },
     {
+     "talk": [
+      {
+       "who": "PIC",
+       "text": "Virginia."
+      },
+      {
+       "who": "SOLDIER",
+       "text": "Then you're leaving the army, sir.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Two years later, on the third of July 1863, at Gettysburg, in Pennsylvania, Pickett's name was given to one of the most famous attacks in American history. Pickett's Charge.",
      "do": [
       {
@@ -9146,6 +10161,42 @@
       ]
      },
      "date": "NEW BEDFORD"
+    },
+    {
+     "talk": [
+      {
+       "who": "MEMBER",
+       "text": "Point of order!",
+       "mood": "angry"
+      },
+      {
+       "who": "ROB",
+       "text": "...What's a point of order?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 50,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "So he wrote them himself. In February 1876, he published a pocket manual. Today it is known as Robert's Rules of Order.",
@@ -9722,6 +10773,45 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "KAI",
+       "text": "Haro, or Rosario?"
+      },
+      {
+       "who": "EXPERT",
+       "text": "We will need about a year, Your Majesty."
+      },
+      {
+       "who": "KAI",
+       "text": "For a pig?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "de",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Wilhelm was seventy-four years old. He had just become emperor, after Germany's war with France.",
      "do": [
       {
@@ -10107,6 +11197,53 @@
      "date": "25 NOVEMBER 1872"
     },
     {
+     "talk": [
+      {
+       "who": "MARINE",
+       "text": "Pack up, lads."
+      },
+      {
+       "who": "SOLDIER",
+       "text": "No hard feelings?"
+      },
+      {
+       "who": "MARINE",
+       "text": "None. Mind the pigs.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "The Americans followed by July 1874. The last soldiers left an island that was no longer in dispute.",
      "do": [
       {
@@ -10271,6 +11408,17 @@
      }
     },
     {
+     "say": "That is about eleven hundred people a day, visiting a war whose only casualty was a pig.",
+     "scene": {
+      "shot": "card",
+      "time": "≈ 1,100 A DAY",
+      "place": "VISITORS",
+      "date": "San Juan Island, 2025",
+      "size": 160
+     },
+     "_new": 1
+    },
+    {
      "say": "Henry Robert's redoubt still stands on the windswept prairie. On that same prairie lives the world's only viable population of a rare butterfly, the island marble.",
      "do": [
       {
@@ -10386,6 +11534,58 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CUT",
+       "text": "Still not paying.",
+       "mood": "smug"
+      },
+      {
+       "who": "GRF",
+       "text": "Still waiting.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "pig",
+        "x": 0.4,
+        "s": 0.8,
+        "y": 0.88,
+        "walk": true,
+        "facing": 1,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "So which side was right? America would say the treaty's words pointed to Haro, the wider channel, and the referee agreed.",
@@ -11091,5 +12291,160 @@
    "head": "NOT OVER|A PIG",
    "title": "The Admiral Who REFUSED to Start a War #shorts"
   }
- ]
+ ],
+ "cast": {
+  "CUT": {
+   "preset": "settler",
+   "name": "Lyman Cutlar"
+  },
+  "GRF": {
+   "preset": "hbc_man",
+   "name": "Charles Griffin"
+  },
+  "PIC": {
+   "preset": "pickett",
+   "name": "Capt. George Pickett"
+  },
+  "HOR": {
+   "preset": "rn_officer",
+   "name": "Capt. Geoffrey Hornby"
+  },
+  "BAY": {
+   "preset": "rn_officer",
+   "name": "Rear Adm. Robert Baynes",
+   "spec": {
+    "hair": "#d8d4cc"
+   }
+  },
+  "DOU": {
+   "preset": "douglas",
+   "name": "Gov. James Douglas"
+  },
+  "HAR": {
+   "preset": "us_officer",
+   "name": "Gen. William Harney"
+  },
+  "SCO": {
+   "preset": "us_officer",
+   "name": "Gen. Winfield Scott",
+   "spec": {
+    "hair": "#e8e4dc"
+   }
+  },
+  "PRE": {
+   "preset": "rn_officer",
+   "name": "Capt. James Prevost"
+  },
+  "CAM": {
+   "preset": "us_officer",
+   "name": "Archibald Campbell",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "BUC": {
+   "preset": "governor",
+   "name": "President James Buchanan"
+  },
+  "POLK": {
+   "preset": "governor",
+   "name": "President James K. Polk",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "ROB": {
+   "preset": "us_officer",
+   "name": "Henry Robert",
+   "spec": {
+    "hair": "#6b4a2a"
+   }
+  },
+  "KAI": {
+   "preset": "king_george",
+   "name": "Emperor Wilhelm I",
+   "spec": {
+    "hair": "#e8e4dc",
+    "beard": "full"
+   }
+  },
+  "SAILOR": {
+   "preset": "us_sailor",
+   "name": "A British sailor",
+   "spec": {
+    "coat": "#1c2a44"
+   }
+  },
+  "MARINE": {
+   "preset": "redcoat",
+   "name": "A Royal Marine"
+  },
+  "SOLDIER": {
+   "preset": "us_officer",
+   "name": "An American soldier",
+   "spec": {
+    "coat": "#1f3150"
+   }
+  },
+  "AIDE": {
+   "preset": "us_officer",
+   "name": "An aide"
+  },
+  "CLERK": {
+   "preset": "governor",
+   "name": "A clerk",
+   "spec": {
+    "hair": "#5a3a22"
+   }
+  },
+  "SETTLER": {
+   "preset": "settler",
+   "name": "A settler"
+  },
+  "COMPANY": {
+   "preset": "hbc_man",
+   "name": "A company man",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "VOTER1": {
+   "preset": "settler",
+   "name": "A voter"
+  },
+  "VOTER2": {
+   "preset": "governor",
+   "name": "Another voter",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MINER": {
+   "preset": "settler",
+   "name": "A miner",
+   "spec": {
+    "hair": "#8a6a3a"
+   }
+  },
+  "LOCAL": {
+   "preset": "hbc_man",
+   "name": "A Victoria local"
+  },
+  "MEMBER": {
+   "preset": "governor",
+   "name": "A church member",
+   "spec": {
+    "hair": "#9a8a7a"
+   }
+  },
+  "EXPERT": {
+   "preset": "governor",
+   "name": "A Geneva expert",
+   "spec": {
+    "hair": "#c8c0b0",
+    "glasses": 1
+   }
+  }
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
 }

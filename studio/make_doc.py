@@ -217,10 +217,20 @@ def build(story, k):
                 nxt = ch['beats'][bi + 1] if bi + 1 < len(ch['beats']) else None
                 t += d + (.75 if nxt and 'talk' in nxt else .5)
             elif 'talk' in b:
+                order = []
+                for line in b['talk']:
+                    if line['who'] not in order: order.append(line['who'])
                 for line in b['talk']:
                     if SMOKE:   # dialogue is spoken in each side's own voice
                         a = say_as(line['who'], line['text']); clips.append((t + .15, a)); dur = len(a) / SR + .55
-                        E(k='say', who=line['who'], text=line['text'], t=t, dur=dur + .3); t += dur + .15; continue
+                        if story.get('film'):   # owner, 15 Nov 2026: acted dialogue, shot / reverse shot, one cut per line
+                            cast = story.get('cast', {}); me = cast.get(line['who'], {}); oth = next((w for w in order if w != line['who']), None)
+                            E(k='scene', t=t, shot='talk', who=line['who'], name=line.get('name') or me.get('name', line['who']), preset=me.get('preset'), spec=me.get('spec'),
+                              side='l' if order.index(line['who']) == 0 else 'r', text=line['text'], mood=line.get('mood', me.get('mood', 'neutral')),
+                              other={'preset': cast.get(oth, {}).get('preset'), 'spec': cast.get(oth, {}).get('spec')} if oth else None,
+                              bg=b.get('bg') or me.get('bg') or story.get('talkBg'))
+                        else: E(k='say', who=line['who'], text=line['text'], t=t, dur=dur + .3)
+                        t += dur + .15; continue
                     dur = min(4.6, max(2.2, 1.3 + len(line['text']) * .045)); E(k='say', who=line['who'], text=line['text'], t=t, dur=dur)
                     for j in range(int(len(line['text']) / 38 / .07)): cues.append(('blip', t + j * .07, line['who']))
                     t += dur * .9 + .1
@@ -336,6 +346,9 @@ def film_sound(sc, cues):
         k = e.get('shot')
         if k == 'off': continue
         t0, d = e['t'], max(1.0, e.get('dur', 6))
+        if k == 'talk':   # dialogue: one soft whoosh into the exchange, none between its lines
+            if i and sc[i - 1].get('shot') != 'talk': cues.append(('cut', t0))
+            continue
         if i and not any(abs(x - t0) < 1.2 for x in loud): cues.append(('cut', t0))
         if k == 'photo': cues.append(('bed', t0, d, 'projector', .16))
         elif k == 'card': cues.append(('bed', t0, min(d, 7), 'clock', .45))
@@ -518,8 +531,19 @@ def film_check(tl, chapters, total):
     for ch in chapters:
         t0 = ch['t'] if isinstance(ch, dict) else ch[0]
         if not any(on and (a <= t0 + 6 < b or t0 <= a <= t0 + 6) for a, b, on, k in spans): opens.append(ch['title'] if isinstance(ch, dict) else ch[1])   # a scene within 6 s (after the chapter card)
-    print('FILM CHECK: scenes %.0f%% of %.1f min (need 70%%), map %.0f%% (max 30%%), %d shots, %d over 20 s, %d chapters open on the map'
-          % (share * 100, total / 60, (1 - share) * 100, len(spans), len(long_), len(opens)))
+    import math
+    def rnd(i): x = math.sin(i * 127.1 + 311.7) * 43758.5453; return x - math.floor(x)
+    angle = 0
+    for e in sc:
+        if e.get('shot') in ('doc', 'card', 'talk', 'off') or e.get('angles') is False: continue
+        a, i_ = 0, 0
+        while True:
+            a += 2.6 + rnd(e['t'] * 7 + i_ * 3.1) * 0.9
+            if a > e.get('dur', 8) - 1.8: break
+            angle += 1; i_ += 1
+    talk = sum(1 for e in sc if e.get('shot') == 'talk')
+    print('FILM CHECK: scenes %.0f%% of %.1f min (need 70%%), map %.0f%% (max 30%%), %d shots + %d angle cuts = a cut every %.1f s (aim 3-4), %d dialogue lines, %d over 20 s, %d chapters open on the map'
+          % (share * 100, total / 60, (1 - share) * 100, len(spans), angle, total / max(1, len(spans) + angle), talk, len(long_), len(opens)))
     if share < .70: bad.append('scenes cover only %.0f%%' % (share * 100))
     if long_: bad.append('shots over 20 s at ' + ', '.join('%ds (%ds %s)' % x for x in long_[:12]))
     if opens: bad.append('chapters opening on the map: ' + '; '.join(opens))

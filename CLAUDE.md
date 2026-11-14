@@ -30,6 +30,10 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
   people), plus the Korea-specific drawn shots. Every episode gets its OWN storyboard and photos; add new parts to
   scenes2.js when a story needs them. `"film": true` turns on the FILM CHECK in make_doc.py, which blocks the render if
   scenes < 70%, map > 30%, a shot > 20 s, or a chapter opens on the map. `sb-pig-war.json` is the worked example.
+- **Acted, fast, concrete (owner, 15 Nov 2026, smoke/STYLE.md 2c):** characters act out short exchanges about once a minute
+  (`talk` beats + the story's `cast`; dramatized from the record, jokes only for unnamed roles, `talkNote` in the description);
+  a cut every 3-4 s (automatic angle cuts inside long shots); every big number made concrete; callbacks; hooks on famous names and the
+  news. Length stays 30-45 minutes and thumbnails stay the three templates (owner kept those).
 - **Titles (owner, 12 Nov 2026): only two formulas.** A = "How X Happened — Minute by Minute"; B = "The N Days That Made
   X" (Days → Hours/Years when that is the real span; N stated in the script and sourced). Never Ziro's "in N Minutes".
 - **Thumbnails (owner, 12 Nov 2026): only three templates**, always in the dark style over a burning relief map with
@@ -87,8 +91,8 @@ take two runs.
   New thumbnails + two-formula titles for the first two are in smoke/ab/ for the owner's Test & Compare.
 - **Redo queue** (`plan.json` "redo"): American Revolution, Rome vs Carthage and Korea get redone in the film style, with
   their Shorts, then HELD (no upload) until the owner decides new channel or old.
-- **Pig War** (`sb-pig-war`, 18 Nov): fully storyboarded (184 shots, 16 archival photos, 97% film), passes the film
-  check; renders next. Next: WW2 both sides (21 Nov), then every 3 days (see plan.json).
+- **Pig War** (`sb-pig-war`, 18 Nov): rewritten in the new style on 15 Nov (29 acted exchanges, 5 comparisons; a cut every 3.8 s);
+  re-renders in the next run (narration voice saved on wip/sb-pig-war; the old finished render is kept on keep/sb-pig-war-v1). Next: WW2 both sides (21 Nov), then every 3 days (see plan.json).
 - Trial review on 5 Dec 2026.
 
 ## Map of the repo

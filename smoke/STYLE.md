@@ -47,6 +47,25 @@ Every episode is storyboarded like a film before it is rendered. **No episode re
 - **The film check** (make_doc.py, on stories with `"film": true`): scenes at least 70% of the runtime, the map at most 30%, no shot over 20 s, every chapter opens on a scene. If it fails, the render does not start. Look at one contact sheet of 16 shots before the long render.
 - `sb-pig-war.json` is the worked example (182 beats, 15 archival photos, documents, cards, sets).
 
+## 2c. Acted, fast and concrete (owner, 15 Nov 2026, after studying Paper Billions: "go with" points 1, 2, 3, 5; length stays 30-45 min, thumbnails stay the three templates)
+Paper Billions (@PaperBillionsTV) got millions of views with money stories drawn on paper. What we copy:
+- **Characters talk.** About once a minute (25-35 exchanges an episode) a short acted exchange: 1-5 lines, each under ~12 words, in the
+  characters' own voices. Write it as a `talk` beat: `{"talk": [{"who": "CUT", "text": "...", "mood": "angry"}], "bg": <set shot>}`. Every
+  speaker needs an entry in the story's `"cast"` ({who: {preset, name, spec}}; presets in studio/doc/vendor/chars.js) and in `"voices"`.
+  In film episodes each line becomes its own close-up (shot / reverse shot) with the line typed in a name-tagged box.
+  **Truth rule for dialogue:** dramatized from the record. Real people only act out what the sources say they did or said (a real quote
+  may be spoken by its speaker); jokes and colour go to unnamed roles ("A British sailor", "A clerk", "A voter"). Never put a new opinion,
+  confession or claim in a real person's mouth. Add `"talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."`
+- **A cut every 3-4 seconds.** The renderer adds angle cuts (wide / medium / close of the same picture) every ~3 s inside any shot
+  longer than ~5 s; dialogue cuts on every line. The FILM CHECK prints "a cut every X s": aim 3-4.
+- **Make every big number concrete.** Convert it into something people know, using only arithmetic on sourced numbers: per person,
+  per day, "about the price of...", "sixty newcomers for every resident", "about 240 football fields". Show it on a time card.
+- **Callbacks.** Plant 2-3 running lines early (a date, a sum of money, a phrase) and pay them off later; end on a callback to the
+  cold open ("Still not paying." / "Still waiting.").
+- **Hook on names people know, and on the news.** The cold open's first sentence names the most famous person or thing in the story and
+  the twist ("The boss of the most valuable company on Earth is having dinner with a Chinese spy"). When an old border is in today's
+  news, say so in the first minute. Pick topics that touch a famous name or a current headline when the plan allows.
+
 ## 3. Editing for the eye (watchers)
 - **First 3 minutes:** something new on screen every 6–10 seconds, such as a camera move, pin, arrow, card, or a ball reacting. After that, every 15–25 seconds is enough, but the camera is never completely still.
 - **Pattern interrupt at 25–35 seconds:** the logo sting, a big card or a sharp camera move.

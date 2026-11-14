@@ -94,6 +94,32 @@
     c.restore(); grain(c, W, H, .06);
   };
 
+  // ---------- talk: a line of dialogue, acted (owner, 15 Nov 2026: characters talk, Paper Billions style) ----------
+  // S = {who, name, preset, spec, side: 'l'|'r', other: {preset, spec}, text, mood, bg: <set shot>}. Shot / reverse shot: every line is
+  // its own cut to the speaker, close up, the other character's shoulder dark in the foreground, the line typed in a name-tagged box.
+  SH['talk'] = (c, W, H, S, t, env) => {
+    const u = S.u, d = S.dur || 3, L = S.side === 'r';
+    if (S.bg && SH.set) { c.save(); c.translate(W / 2, H / 2); c.scale(1.12, 1.12); c.translate(-W / 2, -H / 2); SH.set(c, W, H, Object.assign({}, S.bg, { u: u + (S.t || 0) % 7, dur: 30 }), t, env); c.restore(); c.fillStyle = 'rgba(8,6,4,.42)'; c.fillRect(0, 0, W, H) }
+    else { const g = c.createRadialGradient(W * (L ? .7 : .3), H * .4, 50, W / 2, H / 2, W * .8); g.addColorStop(0, '#3a2a1c'); g.addColorStop(1, '#0a0705'); c.fillStyle = g; c.fillRect(0, 0, W, H) }
+    glow(c, W * (L ? .66 : .34), H * .35, 600, '255,180,110', .22);
+    const P = env.PRESETS || {}, talking = u > .1 && u < d - .35, flap = talking && Math.floor(u * 8.5) % 2 === 0;
+    if (env.drawChar) {
+      const sp = Object.assign({}, P[S.preset] || {}, S.spec || {}, { facing: L ? -1 : 1, mood: flap ? 'shock' : (S.mood || 'neutral') });
+      const x = W * (L ? .6 : .4) + Math.sin(u * .7) * 6, sway = Math.sin(u * 1.3) * 4;
+      env.drawChar(c, x, H * 1.06 + sway, H * .92, sp, u);
+      if (S.other) {   // over the shoulder: the listener, dark, out of the frame's edge
+        const [oc, k] = off(W, H, 5); const so = Object.assign({}, P[S.other.preset] || {}, S.other.spec || {}, { facing: L ? 1 : -1, mood: 'neutral' });
+        env.drawChar(k, W * (L ? -.04 : 1.04), H * 1.5, H * 1.25, so, u + 3); k.save(); k.globalCompositeOperation = 'source-atop'; k.fillStyle = 'rgba(6,4,3,.86)'; k.fillRect(0, 0, W, H); k.restore(); c.drawImage(oc, 0, 0) } }
+    // the line, in a box with the speaker's name
+    const pad = 38, bw = Math.min(1500, W - 240), bx = (W - bw) / 2, by = H - 250, a = clamp(u / .2) * (1 - clamp((u - d + .25) / .25));
+    c.save(); c.globalAlpha = a; c.fillStyle = 'rgba(10,8,6,.86)'; c.fillRect(bx, by, bw, 170); c.fillStyle = '#e8b04a'; c.fillRect(bx, by, 8, 170);
+    c.font = `700 30px ${BODY}`; c.fillStyle = '#e8b04a'; c.textAlign = 'left'; c.textBaseline = 'top'; c.fillText((S.name || S.who || '').toUpperCase(), bx + pad, by + 22);
+    c.font = `500 44px ${BODY}`; c.fillStyle = '#f3e7cf'; const words = (S.text || '').split(' '); let rem = Math.floor(u * 42), yy = by + 66, ln = '';   // typed at 42 letters a second
+    for (const w of words) { const tst = ln ? ln + ' ' + w : w; if (c.measureText(tst).width > bw - pad * 2) { c.fillText(ln.slice(0, Math.max(0, rem)), bx + pad, yy); rem -= ln.length + 1; yy += 52; ln = w } else ln = tst }
+    c.fillText(ln.slice(0, Math.max(0, rem)), bx + pad, yy);
+    c.restore(); vignette(c, W, H, .55); grain(c, W, H, .06);
+  };
+
   // ---------- set: an illustrated scene composed from parts ----------
   const SKY = { dawn: ['#2b3350', '#d98a62'], day: ['#7fa3c0', '#e6e1cf'], dusk: ['#1d2140', '#d0603a'], night: ['#050912', '#1a2640'], storm: ['#1b1f26', '#4a5058'] };
   const ridge = (c, W, H, y, amp, col, seed) => { c.fillStyle = col; c.beginPath(); c.moveTo(-300, H + 300); for (let x = -300; x <= W + 300; x += 14) { const v = Math.sin(x * .004 + seed) * .5 + Math.sin(x * .011 + seed * 2) * .3 + Math.sin(x * .029 + seed * 3) * .12; c.lineTo(x, y - amp * v) } c.lineTo(W + 300, H + 300); c.fill() };

@@ -26,7 +26,7 @@ def main():
         f = os.path.join(outdir, 'short-%s.meta.json' % n)
     else:
         desc = '\n'.join([story.get('hook', ''), '', story.get('about', ''), '', '⏱️ Chapters', *summ['chapters'], '',
-                          '📚 Sources: the full list is pinned in the comments.', '', 'Smoke & Borders: every border has two sides. We tell both.',
+                          '📚 Sources: the full list is pinned in the comments.' + ('\n' + story['talkNote'] if story.get('talkNote') else ''), '', 'Smoke & Borders: every border has two sides. We tell both.',
                           '#history #animatedhistory #documentary'])
         # titles may say "{min}" (owner, 11 Nov 2026: "The Korean War Explained in 37 Minutes"); it becomes the real length
         mins = str(max(1, round(float(summ.get('duration') or summ.get('total') or 0) / 60)))

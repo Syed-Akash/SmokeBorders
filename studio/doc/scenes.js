@@ -272,13 +272,23 @@
   G.SCENE_SHOTS = SH;
   G.SCENE_KIT = { clamp, lerp, io, o3, rnd, glow, rain, smoke, dust, figure, cam, layer, off, cached, TYPE, SERIF, BODY, BAR };   // for scenes2.js
   G.SCENE = function (c, W, H, S, t, env) {
-    const f = SH[S.shot]; if (!f) return false; c.save(); f(c, W, H, S, t, env || {}); c.restore();
+    const f = SH[S.shot]; if (!f) return false; c.save();
+    // angle cuts (owner, 15 Nov 2026: a cut every 3-4 s, like Paper Billions): inside a longer shot the camera jumps between a wide,
+    // a medium and a close framing of the same picture every ~3.6 s. Text shots (doc, card) and dialogue (own cuts) keep one framing.
+    const A = G.SCENE_ANGLE(S, W, H); if (A) { c.translate(W / 2 + A.dx, H / 2 + A.dy); c.scale(A.z, A.z); c.translate(-W / 2, -H / 2) }
+    f(c, W, H, S, t, env || {}); c.restore();
     // film grade: lift the blacks a touch towards teal, warm the highlights
     c.save(); c.globalCompositeOperation = 'soft-light'; const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, 'rgba(40,80,110,.35)'); g.addColorStop(1, 'rgba(255,170,90,.25)'); c.fillStyle = g; c.fillRect(0, 0, W, H); c.restore();
     // a cut opens on a short fade from black
     const inn = S.fadeIn == null ? .35 : S.fadeIn; if (S.u < inn) { c.fillStyle = `rgba(0,0,0,${1 - S.u / inn})`; c.fillRect(0, 0, W, H) }
     const out = S.fadeOut || 0, d = S.dur || 8; if (out && S.u > d - out) { c.fillStyle = `rgba(0,0,0,${clamp((S.u - d + out) / out)})`; c.fillRect(0, 0, W, H) }
     return true };
+  const NOANGLE = { doc: 1, card: 1, talk: 1, off: 1 };
+  const ANGLES = [[1.18, -.07, -.04], [1.1, .06, .02], [1.26, .02, -.07], [1.14, -.05, .03], [1.22, .07, -.05]];
+  G.SCENE_CUTS = S => { if (NOANGLE[S.shot] || S.angles === false) return []; const d = S.dur || 8, out = []; let a = 0, i = 0;   // where the angle cuts fall
+    while (true) { a += 2.6 + rnd((S.t || 0) * 7 + i * 3.1) * 0.9; if (a > d - 1.8) break; out.push(a); i++ } return out };
+  G.SCENE_ANGLE = (S, W, H) => { const cuts = G.SCENE_CUTS(S); let k = 0; while (k < cuts.length && S.u >= cuts[k]) k++; if (!k) return null;
+    const g = ANGLES[(k - 1 + Math.floor(rnd((S.t || 0) * 13) * 5)) % ANGLES.length]; return { z: g[0], dx: g[1] * W, dy: g[2] * H } };
   // cinema bars and the typed date card, drawn by doc.html above the scene and under the captions
   G.SCENE_BARS = function (c, W, H, a = 1) { c.fillStyle = '#000'; c.fillRect(0, 0, W, BAR * a); c.fillRect(0, H - BAR * a, W, BAR * a) };
   G.SCENE_DATE = function (c, W, H, text, u) {
