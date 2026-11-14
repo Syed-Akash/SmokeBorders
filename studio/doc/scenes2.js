@@ -61,7 +61,8 @@
     if (!bg) { c.fillStyle = '#e33'; c.font = `40px ${BODY}`; c.fillText('missing photo: ' + S.img, 80, 200); return }
     const mv = S.move || 'in', z0 = mv === 'out' ? 1.16 : 1.04, z1 = mv === 'out' ? 1.04 : 1.16, z = lerp(z0, z1, k), [bw, bh] = cover(bg, W, H),
       pan = S.pan || [mv === 'left' ? 60 : mv === 'right' ? -60 : 0, 0], fx0 = S.focus ? (S.focus[0] - .5) * bw * .3 : 0, fy0 = S.focus ? (S.focus[1] - .5) * bh * .3 : 0;
-    const draw = (im, depth) => { const zz = 1 + (z - 1) * depth; c.save(); c.translate(W / 2 - fx0 * k * depth + pan[0] * (k - .5) * depth, H / 2 - fy0 * k * depth + pan[1] * (k - .5) * depth); c.scale(zz, zz); c.drawImage(im, -bw / 2, -bh / 2, bw, bh); c.restore() };
+    const py = bh > H * 1.15 && !S.focus ? (bh - H) * .45 : 0;   // a tall portrait: frame its top (the face), not its middle (15 Nov 2026: a general's head was cut off)
+    const draw = (im, depth) => { const zz = 1 + (z - 1) * depth; c.save(); c.translate(W / 2 - fx0 * k * depth + pan[0] * (k - .5) * depth, H / 2 + py - fy0 * k * depth + pan[1] * (k - .5) * depth); c.scale(zz, zz); c.drawImage(im, -bw / 2, -bh / 2, bw, bh); c.restore() };
     draw(bg, 1); if (S.fx && [].concat(S.fx).includes('fog')) fx(c, W, H, u, 'fog');
     if (fg) { c.save(); c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 30; draw(fg, 1.9); c.restore() }
     tone(c, W, H, S.tone || 'sepia');
