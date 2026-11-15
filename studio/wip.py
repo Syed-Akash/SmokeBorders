@@ -43,6 +43,7 @@ def save(sid):
     # so the next run can upload without rendering again (14 Nov 2026: a save after the render emptied the branch)
     fin = sorted(f for f in os.listdir(d) if not f.startswith('seg-') and '.part.' not in f and os.path.isfile(os.path.join(d, f))) if d else []
     if not any(f.endswith('.mp4') for f in fin): fin = []
+    if fin: clips = []   # a finished render needs no voice clips; with them the push went over GitHub's 2 GB limit (15 Nov 2026)
     if not segs and not clips and not fin: print('nothing to save'); return
     w = tempfile.mkdtemp(prefix='wip-'); br = 'wip/' + sid
     try:
