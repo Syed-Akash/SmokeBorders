@@ -4,7 +4,34 @@
  "narrator": "bm_george",
  "voices": {
   "GB": "bm_lewis",
-  "US": "am_michael"
+  "US": "am_michael",
+  "FRA": "am_michael",
+  "WIL": "bm_daniel",
+  "KING": "bm_fable",
+  "NORTH": "bm_lewis",
+  "MP": "bm_fable",
+  "CLERK": "bm_daniel",
+  "COL": "am_adam",
+  "BOS": "am_puck",
+  "STAMP": "bm_lewis",
+  "PRINTER": "am_fenrir",
+  "RED": "bm_lewis",
+  "OFF": "bm_fable",
+  "MIL": "am_puck",
+  "CAPT": "am_fenrir",
+  "SAILOR": "bm_daniel",
+  "COURT1": "bm_lewis",
+  "COURT2": "bm_daniel",
+  "GUARD": "am_adam",
+  "HESS": "am_fenrir",
+  "HESS2": "am_puck",
+  "FR1": "bm_fable",
+  "FR2": "bm_lewis",
+  "LOY": "am_michael",
+  "PAT": "am_adam",
+  "FREE": "am_fenrir",
+  "DIPGB": "bm_lewis",
+  "DIPUS": "am_michael"
  },
  "title": "How Britain Lost America: The American Revolution From Both Sides",
  "era": "1715",
@@ -176,11 +203,72 @@
   "beats": [
    {
     "cam": {
+     "lon": -74.8,
+     "lat": 40.3,
+     "scale": 4200
+    },
+    "say": "Benjamin Franklin helped tear America away from the British Empire. His own son fought just as hard to keep it British.",
+    "do": [
+     {
+      "on": "Benjamin",
+      "show": [
+       "BEN"
+      ]
+     },
+     {
+      "on": "son",
+      "show": [
+       "WIL"
+      ]
+     },
+     {
+      "on": "British",
+      "mood": [
+       "WIL",
+       "angry"
+      ]
+     },
+     {
+      "on": "son",
+      "scene": {
+       "shot": "photo",
+       "img": "wfranklin",
+       "move": "right",
+       "caption": "William Franklin, his son"
+      }
+     }
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "bfranklin",
+     "move": "in",
+     "caption": "Benjamin Franklin",
+     "fallback": {
+      "shot": "faces",
+      "names": [
+       [
+        "BENJAMIN FRANKLIN",
+        ""
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "franklin",
+        "x": 0.5
+       }
+      ]
+     }
+    }
+   },
+   {
+    "cam": {
      "lon": -55,
      "lat": 42,
      "scale": 700
     },
-    "say": "In 1763, Britain won the biggest war the world had ever seen. It took Canada from France. It took Florida from Spain. It was the most powerful empire on Earth.",
+    "say": "In 1763, Britain had just won the biggest war the world had ever seen. It took Canada from France. It took Florida from Spain. It was the most powerful empire on Earth.",
     "do": [
      {
       "on": "Britain",
@@ -302,67 +390,6 @@
      "fx": [
       "smoke"
      ]
-    }
-   },
-   {
-    "cam": {
-     "lon": -74.8,
-     "lat": 40.3,
-     "scale": 4200
-    },
-    "say": "And one of the men who helped it lose was Benjamin Franklin, while his own son fought just as hard to keep America British.",
-    "do": [
-     {
-      "on": "Benjamin",
-      "show": [
-       "BEN"
-      ]
-     },
-     {
-      "on": "son",
-      "show": [
-       "WIL"
-      ]
-     },
-     {
-      "on": "British",
-      "mood": [
-       "WIL",
-       "angry"
-      ]
-     },
-     {
-      "on": "son",
-      "scene": {
-       "shot": "photo",
-       "img": "wfranklin",
-       "move": "right",
-       "caption": "William Franklin, his son"
-      }
-     }
-    ],
-    "scene": {
-     "shot": "photo",
-     "img": "bfranklin",
-     "move": "in",
-     "caption": "Benjamin Franklin",
-     "fallback": {
-      "shot": "faces",
-      "names": [
-       [
-        "BENJAMIN FRANKLIN",
-        ""
-       ]
-      ],
-      "nameAt": 0.4,
-      "push": 0.06,
-      "people": [
-       {
-        "preset": "franklin",
-        "x": 0.5
-       }
-      ]
-     }
     }
    },
    {
@@ -603,6 +630,49 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CLERK",
+       "text": "A hundred and thirty-two million, sir."
+      },
+      {
+       "who": "MP",
+       "text": "Pounds?",
+       "mood": "shock"
+      },
+      {
+       "who": "CLERK",
+       "text": "Pounds."
+      },
+      {
+       "who": "MP",
+       "text": "...Who's paying for this?"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 12,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "The national debt had nearly doubled, to about one hundred and thirty two million pounds. Back home, landowners were already handing a quarter of their income to the government.",
      "do": [
       {
@@ -716,6 +786,17 @@
      }
     },
     {
+     "say": "That's thirty pounds a year, for every single soldier.",
+     "scene": {
+      "shot": "card",
+      "time": "£30 A YEAR",
+      "place": "FOR EVERY SOLDIER",
+      "date": "7,500 men in America",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -38,
       "lat": 45,
@@ -738,21 +819,39 @@
     {
      "talk": [
       {
-       "who": "GB",
+       "who": "MP",
        "text": "We just saved you from France. Now pay up."
       },
       {
-       "who": "US",
+       "who": "COL",
        "text": "Happy to discuss it. Who do we vote for?"
       },
       {
-       "who": "GB",
+       "who": "MP",
        "text": "Nobody, actually."
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
      }
     },
     {
@@ -893,6 +992,55 @@
        "light"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "COL",
+       "text": "So we can't go west?"
+      },
+      {
+       "who": "RED",
+       "text": "Not past the mountains."
+      },
+      {
+       "who": "COL",
+       "text": "Who decided that?",
+       "mood": "angry"
+      },
+      {
+       "who": "RED",
+       "text": "London."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.2
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 40,
+        "seed": 5,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Now the other side. The colonists had fought in that war too. Their men had died in it. And their reward was a new tax, and a wall of paper across the land they had hoped to settle.",
@@ -1146,6 +1294,51 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "PRINTER",
+       "text": "A stamp? On every newspaper?",
+       "mood": "shock"
+      },
+      {
+       "who": "CLERK",
+       "text": "And every contract."
+      },
+      {
+       "who": "PRINTER",
+       "text": "And the playing cards?"
+      },
+      {
+       "who": "CLERK",
+       "text": "Especially the playing cards.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.3,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a3a2a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 14,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "The colonies exploded. Boycotts, riots, tax collectors chased out of town. Within a year, Parliament backed down and repealed it.",
      "do": [
       {
@@ -1197,6 +1390,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "STAMP",
+       "text": "I'm only the stamp collector!",
+       "mood": "shock"
+      },
+      {
+       "who": "BOS",
+       "text": "Not any more.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Then it tried again, with new taxes on glass, paint, paper and tea. More boycotts. Most of those went too. All except one, kept on purpose, to prove a point. The tax on tea.",
      "do": [
       {
@@ -1217,6 +1447,45 @@
       "date": "1767",
       "size": 80
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MP",
+       "text": "Drop the taxes. All but tea."
+      },
+      {
+       "who": "CLERK",
+       "text": "Why keep the tea?"
+      },
+      {
+       "who": "MP",
+       "text": "To prove we can.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -1449,6 +1718,42 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "BOS",
+       "text": "John Adams is defending the soldiers?",
+       "mood": "shock"
+      },
+      {
+       "who": "COL",
+       "text": "Somebody has to."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "date": "16 DECEMBER 1773",
      "say": "Now, the tea. In 1773, Parliament passed the Tea Act. And here's the irony. It made legal British tea cheaper, cheap enough to undercut the smugglers. Colonists would pay less for tea than before, as long as they accepted Parliament's right to tax it.",
      "do": [
@@ -1536,6 +1841,46 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "BOS",
+       "text": "Cheaper tea?"
+      },
+      {
+       "who": "COL",
+       "text": "Cheaper tea. And Parliament's right to tax it."
+      },
+      {
+       "who": "BOS",
+       "text": "No, thank you.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "On the night of the sixteenth of December 1773, men disguised as Mohawk warriors climbed aboard the ships, and dumped three hundred and forty two chests of tea into Boston Harbor. About ten thousand pounds' worth.",
@@ -1660,6 +2005,17 @@
      }
     },
     {
+     "say": "Ten thousand pounds, over three hundred and forty two chests. About twenty nine pounds a chest. Nearly what London paid to keep one soldier in America for a year. Every chest.",
+     "scene": {
+      "shot": "card",
+      "time": "≈ £29 A CHEST",
+      "place": "≈ ONE SOLDIER FOR A YEAR",
+      "date": "Boston Harbor, 16 Dec 1773",
+      "size": 150
+     },
+     "_new": 1
+    },
+    {
      "say": "The most expensive tea party in history, thrown over tea that had just got cheaper.",
      "do": [
       {
@@ -1710,6 +2066,52 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SAILOR",
+       "text": "Is that... our tea?",
+       "mood": "shock"
+      },
+      {
+       "who": "BOS",
+       "text": "What tea?",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.25,
+        "s": 0.6,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 320,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "town",
+        "y": 0.64,
+        "n": 8,
+        "gap": 160,
+        "h": 120,
+        "col": "#1c1a22",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -1773,6 +2175,46 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MP",
+       "text": "They threw it in the sea?",
+       "mood": "angry"
+      },
+      {
+       "who": "CLERK",
+       "text": "All of it, sir."
+      },
+      {
+       "who": "MP",
+       "text": "Close the harbour. Until it's paid for.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -1929,6 +2371,53 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "OFF",
+       "text": "Who fired?",
+       "mood": "shock"
+      },
+      {
+       "who": "MIL",
+       "text": "Not me!",
+       "mood": "shock"
+      },
+      {
+       "who": "RED",
+       "text": "Not me either."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 5,
+        "gap": 200,
+        "h": 120,
+        "col": "#3a3028",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -71.06,
       "lat": 42.37,
@@ -2043,6 +2532,55 @@
        "fog"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MIL",
+       "text": "Is this Bunker Hill?"
+      },
+      {
+       "who": "CAPT",
+       "text": "Close enough.",
+       "mood": "smug"
+      },
+      {
+       "who": "MIL",
+       "text": "It's Breed's Hill."
+      },
+      {
+       "who": "CAPT",
+       "text": "Keep digging."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 12,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "y": 0.8,
+        "n": 1,
+        "x0": 0.7,
+        "gap": 300,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "British troops marched straight up the slope, into the guns. Twice they were thrown back. On the third attack, the rebels ran out of gunpowder, and the British took the hill.",
@@ -2242,6 +2780,17 @@
      }
     },
     {
+     "say": "More than two British soldiers down, for every American.",
+     "scene": {
+      "shot": "card",
+      "time": "2 FOR 1",
+      "place": "BRITISH LOSSES FOR EVERY AMERICAN",
+      "date": "Breed's Hill, June 1775",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -75.16,
       "lat": 39.95,
@@ -2379,6 +2928,42 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CLERK",
+       "text": "A petition from the colonies, Your Majesty."
+      },
+      {
+       "who": "CLERK",
+       "text": "...I'll just leave it here, then.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#5a2a2a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 4,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "It was the last chance to stop the war with words. Both sides were too angry, too proud, or too far away to take it.",
@@ -2616,6 +3201,48 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "COURT1",
+       "text": "Did he say anything back?"
+      },
+      {
+       "who": "COURT2",
+       "text": "Not a word."
+      },
+      {
+       "who": "COURT1",
+       "text": "Not one?"
+      },
+      {
+       "who": "COURT2",
+       "text": "He just stood there."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a2a2a"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "He went home to America. He did not come back a loyal Briton.",
@@ -2875,6 +3502,44 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CAPT",
+       "text": "William Franklin. You are under arrest."
+      },
+      {
+       "who": "WIL",
+       "text": "I am the King's governor."
+      },
+      {
+       "who": "CAPT",
+       "text": "Not any more."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -73.19,
       "lat": 41.75,
@@ -2975,6 +3640,42 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WIL",
+       "text": "Let me see my wife. Please.",
+       "mood": "sad"
+      },
+      {
+       "who": "GUARD",
+       "text": "Request refused."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.05,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#2a2a2a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.3,
+        "candles": 1,
+        "papers": 1,
+        "w": 500,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "His father was in France by then, working on the deal that would decide the whole war.",
@@ -3166,6 +3867,45 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "MP",
+       "text": "We need more soldiers."
+      },
+      {
+       "who": "CLERK",
+       "text": "We don't have more soldiers."
+      },
+      {
+       "who": "MP",
+       "text": "Then rent some.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Six German states signed contracts with King George. Their princes got paid, and their soldiers got shipped across the ocean. About thirty thousand men in total. More than half came from Hesse-Kassel and Hesse-Hanau, so the Americans called all of them Hessians.",
      "do": [
       {
@@ -3203,17 +3943,35 @@
     {
      "talk": [
       {
-       "who": "GB",
+       "who": "MP",
        "text": "Perfectly normal. Everyone rents soldiers."
       },
       {
-       "who": "US",
+       "who": "COL",
        "text": "You hired foreign soldiers to fight us?"
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
      }
     },
     {
@@ -3452,6 +4210,51 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "HESS2",
+       "text": "Did you hear something?"
+      },
+      {
+       "who": "HESS",
+       "text": "Only the river. Nobody attacks at Christmas.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 30,
+        "seed": 8,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 3,
+        "x0": 0.6,
+        "gap": 220,
+        "col": "#d8d0c0",
+        "fire": 0.5,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow"
+     },
+     "_new": 1
+    },
+    {
      "say": "It wasn't a big battle. But it told everyone the rebellion was still alive.",
      "do": [
       {
@@ -3557,6 +4360,49 @@
        "fog"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "HESS",
+       "text": "Remind me why we are here?"
+      },
+      {
+       "who": "HESS2",
+       "text": "The prince got paid.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -3789,6 +4635,47 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "FR1",
+       "text": "Saratoga? A whole British army?",
+       "mood": "shock"
+      },
+      {
+       "who": "FR2",
+       "text": "Surrendered."
+      },
+      {
+       "who": "FR1",
+       "text": "Then perhaps they can win.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "fr",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "France had lost Canada to Britain only fifteen years earlier. It had been looking for revenge ever since. Saratoga proved the Americans could actually win. So in early 1778, France signed an alliance with the United States.",
      "do": [
       {
@@ -3969,6 +4856,45 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CLERK",
+       "text": "France, Spain and the Dutch, sir."
+      },
+      {
+       "who": "MP",
+       "text": "And the bill?"
+      },
+      {
+       "who": "CLERK",
+       "text": "Bigger.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 12,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -76,
       "lat": 39,
@@ -4018,6 +4944,54 @@
        "embers"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "LOY",
+       "text": "You turned me in?",
+       "mood": "angry"
+      },
+      {
+       "who": "PAT",
+       "text": "You'd have done the same."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.72,
+        "night": true,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.72,
+        "y": 0.62,
+        "r": 260,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "And for some people, the choice of side was about freedom, in the most literal sense.",
@@ -4086,6 +5060,49 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "FREE",
+       "text": "Is it true? Freedom, if we reach the British?"
+      },
+      {
+       "who": "RED",
+       "text": "That is the governor's promise."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.78,
+        "flag": "uk",
+        "h": 420,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Over the war, British offers like that freed about twenty thousand people. Black soldiers fought on the American side too. Both armies talked about liberty. Only one of them was offering it to the people the other side held in chains, and even that offer was made to win a war, not to end slavery.",
@@ -4361,6 +5378,51 @@
        "smoke"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "RED",
+       "text": "Ships, sir! Are they ours?",
+       "mood": "happy"
+      },
+      {
+       "who": "OFF",
+       "text": "...French.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.45,
+        "s": 0.55,
+        "flag": "fr",
+        "y": 0.66,
+        "gap": 300,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": -0.2,
+        "x1": 0.3,
+        "y": 0.6,
+        "h": 90,
+        "depth": 0.3
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -4647,27 +5709,46 @@
      }
     },
     {
-     "say": "Oh God. It is all over.",
-     "do": [
+     "say": "Thirty seven days, from Yorktown to London.",
+     "scene": {
+      "shot": "card",
+      "time": "37 DAYS",
+      "place": "FROM YORKTOWN TO LONDON",
+      "date": "19 Oct – 25 Nov 1781",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
       {
-       "on": "Oh",
-       "card": {
-        "kind": "quote",
-        "text": "Oh God! It is all over.",
-        "who": "Lord North, 25 November 1781",
-        "dur": 4
-       }
+       "who": "NORTH",
+       "text": "Oh God. It is all over.",
+       "mood": "shock"
       }
      ],
-     "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Lord North, 25 November 1781",
-      "lines": [
-       "Oh God!",
-       "It is all over."
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
       ]
-     }
+     },
+     "_quote": 1
     },
     {
      "say": "Four months later, he resigned. From London, it wasn't only a defeat. It was the end of an idea, that the empire could be one people, under one Parliament, on both sides of an ocean.",
@@ -4931,6 +6012,50 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "DIPGB",
+       "text": "Through the middle of the Great Lakes."
+      },
+      {
+       "who": "DIPUS",
+       "text": "Then down the Mississippi."
+      },
+      {
+       "who": "DIPGB",
+       "text": "Where does it start?"
+      },
+      {
+       "who": "DIPUS",
+       "text": "Up there. Somewhere.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 16,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -95,
       "lat": 48.6,
@@ -5101,6 +6226,17 @@
      }
     },
     {
+     "say": "Sixty thousand Loyalists, and fifteen thousand enslaved people taken with them. Seventy five thousand people, leaving one country for another.",
+     "scene": {
+      "shot": "card",
+      "time": "75,000",
+      "place": "PEOPLE LEFT",
+      "date": "60,000 Loyalists + 15,000 enslaved",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": -35,
       "lat": 25,
@@ -5204,6 +6340,17 @@
       "date": "1775 – 1783",
       "size": 170
      }
+    },
+    {
+     "say": "Fewer than one in three of them died in battle.",
+     "scene": {
+      "shot": "card",
+      "time": "7 IN 25",
+      "place": "DIED IN BATTLE",
+      "date": "American deaths, 1775–1783",
+      "size": 170
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -5536,6 +6683,41 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MP",
+       "text": "So... who's paying for this?"
+      },
+      {
+       "who": "COL",
+       "text": "Not us.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     }
    ]
   }
@@ -5735,5 +6917,181 @@
    "Lord Dunmore proclamation 1775 broadside",
    true
   ]
- }
+ },
+ "cast": {
+  "FRA": {
+   "preset": "franklin",
+   "name": "Benjamin Franklin"
+  },
+  "WIL": {
+   "preset": "governor",
+   "name": "Gov. William Franklin",
+   "spec": {
+    "hair": "#d8d3cb"
+   }
+  },
+  "KING": {
+   "preset": "king_george",
+   "name": "King George III"
+  },
+  "NORTH": {
+   "preset": "lord_north",
+   "name": "Lord North"
+  },
+  "MP": {
+   "preset": "lord_north",
+   "name": "A member of Parliament",
+   "spec": {
+    "sash": 0,
+    "medal": 0,
+    "coat": "#4a3a2a"
+   }
+  },
+  "CLERK": {
+   "preset": "governor",
+   "name": "A Treasury clerk",
+   "spec": {
+    "coat": "#3a3a3a",
+    "hairStyle": "short",
+    "hair": "#5a3a22",
+    "glasses": 1
+   }
+  },
+  "COL": {
+   "preset": "settler",
+   "name": "A colonist"
+  },
+  "BOS": {
+   "preset": "settler",
+   "name": "A Bostonian",
+   "spec": {
+    "coat": "#4a3a2a",
+    "hat": "tricorn",
+    "beard": "none"
+   }
+  },
+  "STAMP": {
+   "preset": "governor",
+   "name": "A stamp collector",
+   "spec": {
+    "coat": "#5a4a3a"
+   }
+  },
+  "PRINTER": {
+   "preset": "settler",
+   "name": "A printer",
+   "spec": {
+    "hat": "none",
+    "beard": "none",
+    "coat": "#3a3028"
+   }
+  },
+  "RED": {
+   "preset": "redcoat",
+   "name": "A British soldier"
+  },
+  "OFF": {
+   "preset": "redcoat",
+   "name": "A British officer",
+   "spec": {
+    "epaulettes": 1
+   }
+  },
+  "MIL": {
+   "preset": "continental",
+   "name": "A militiaman",
+   "spec": {
+    "coat": "#5a4a3a"
+   }
+  },
+  "CAPT": {
+   "preset": "continental",
+   "name": "A rebel captain"
+  },
+  "SAILOR": {
+   "preset": "us_sailor",
+   "name": "A British sailor"
+  },
+  "COURT1": {
+   "preset": "governor",
+   "name": "A courtier",
+   "spec": {
+    "coat": "#5a2a3a"
+   }
+  },
+  "COURT2": {
+   "preset": "governor",
+   "name": "Another courtier",
+   "spec": {
+    "coat": "#2a4a3a"
+   }
+  },
+  "GUARD": {
+   "preset": "continental",
+   "name": "A guard"
+  },
+  "HESS": {
+   "preset": "hessian",
+   "name": "A Hessian soldier"
+  },
+  "HESS2": {
+   "preset": "hessian",
+   "name": "A Hessian sentry",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "FR1": {
+   "preset": "french_officer",
+   "name": "A French minister"
+  },
+  "FR2": {
+   "preset": "french_officer",
+   "name": "A French officer",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "LOY": {
+   "preset": "settler",
+   "name": "A Loyalist farmer",
+   "spec": {
+    "coat": "#7a2a2a"
+   }
+  },
+  "PAT": {
+   "preset": "continental",
+   "name": "A Patriot neighbour",
+   "spec": {
+    "coat": "#4a5a3a",
+    "hat": "none"
+   }
+  },
+  "FREE": {
+   "preset": "settler",
+   "name": "A man escaping slavery",
+   "spec": {
+    "skin": "#6b4429",
+    "hair": "#1c1a1a",
+    "hat": "none",
+    "beard": "none",
+    "coat": "#6b5a44"
+   }
+  },
+  "DIPGB": {
+   "preset": "governor",
+   "name": "A British negotiator"
+  },
+  "DIPUS": {
+   "preset": "franklin",
+   "name": "An American negotiator",
+   "spec": {
+    "hairStyle": "wig",
+    "hair": "#efeae0",
+    "glasses": 0,
+    "coat": "#2a2a33"
+   }
+  }
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
 }
