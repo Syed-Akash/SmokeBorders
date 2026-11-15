@@ -28,7 +28,7 @@ command -v ffmpeg >/dev/null || (apt-get install -y -q ffmpeg >/dev/null 2>&1 ||
 # Smoke & Borders orchestral score: FluidSynth + the FluidR3 GM soundfont (MIT, Frank Wen), 148 MB, kept out of git
 "$PY" -m pip install -q --break-system-packages pyfluidsynth 2>/dev/null || "$PY" -m pip install -q pyfluidsynth
 "$PY" -m pip install -q --break-system-packages scrapetube pillow 2>/dev/null || "$PY" -m pip install -q scrapetube pillow   # smoke/scout.py fallback + contact sheets
-python3 -c "import ctypes.util,sys; sys.exit(0 if ctypes.util.find_library('fluidsynth') else 1)" || (apt-get install -y -q libfluidsynth3 >/dev/null 2>&1 || true)
+python3 -c "import ctypes.util,sys; sys.exit(0 if ctypes.util.find_library('fluidsynth') else 1)" || (apt-get install -y -q libfluidsynth3 >/dev/null 2>&1 || (apt-get update -qq >/dev/null 2>&1 && apt-get install -y -q libfluidsynth3 >/dev/null 2>&1) || true)
 mkdir -p music && [ -s music/FluidR3_GM.sf2 ] && head -c 4 music/FluidR3_GM.sf2 | grep -q RIFF || curl -sL -o music/FluidR3_GM.sf2 https://media.githubusercontent.com/media/Jacalz/fluid-soundfont/master/original-files/FluidR3_GM.sf2
 "$PY" -c "import fluidsynth; print('score ok')"
 # film-style episodes: archival photos cut into layers (smoke/photo.py, smoke/portrait.py)
