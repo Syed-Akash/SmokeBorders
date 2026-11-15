@@ -141,5 +141,6 @@ k = [i for i, c in enumerate(s['chapters']) if c['title'] == 'It Is All Over'][0
 s['chapters'].insert(k + 1, CHAPTER)
 for c in s['chapters']:
     if c['title'] == 'Father Against Son': c['years'] = '1772 – 1777'
+s['title'] = 'How Britain Lost America — Minute by Minute'   # title formula A (owner, 12 Nov 2026)
 json.dump(s, open(F, 'w'), indent=1, ensure_ascii=False)
 print('chapters', len(s['chapters']), 'new beats', sum(len(b) for _, b in AFTER) + len(CHAPTER['beats']))
