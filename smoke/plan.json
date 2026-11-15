@@ -69,19 +69,19 @@
   {
    "id": "sb-pig-war",
    "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
-   "publish": "2026-11-18T16:00:00Z",
+   "publish": "2026-11-15T16:00:00Z",
    "status": "scripted",
    "audience": "US CA UK",
    "shorts": [
     {
-     "publish": "2026-11-19T16:00:00Z"
+     "publish": "2026-11-16T16:00:00Z"
     },
     {
-     "publish": "2026-11-20T16:00:00Z"
+     "publish": "2026-11-17T16:00:00Z"
     }
    ],
    "angle": "Hidden people: Lyman Cutlar, the farmer who shot the pig, and the pig's owner Charles Griffin.",
-   "note": "Owner approved the movie-style preview (15 Nov 2026). Render it in the new style (acting characters, transitions, motion graphics, dialogue). Narration voice clips are on wip/sb-pig-war; the old render is kept on keep/sb-pig-war-v1 (do not use it)."
+   "note": "Owner, 15 Nov 2026: the first video on the new channel goes out TODAY (9 pm Pakistan) in the approved style. Rendered in the owner session; the finished files are saved on wip/sb-pig-war for the run to upload."
   },
   {
    "id": "sb-ww2-both-sides",
