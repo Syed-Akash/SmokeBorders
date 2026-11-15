@@ -39,7 +39,7 @@ def make(sid, out=None, spec=None):
 
 def ab(sid):
     story = json.load(open(os.path.join(ROOT, 'studio', 'doc', 'stories', sid + '.json'))); d = os.path.join(HERE, 'ab', sid); os.makedirs(d, exist_ok=True)
-    raw = 'https://raw.githubusercontent.com/Syed-Akash/Flagbomb/main/smoke/ab/%s/' % sid; lines = ['# Test & Compare: %s' % sid, '',
+    raw = 'https://raw.githubusercontent.com/Syed-Akash/SmokeBorders/main/smoke/ab/%s/' % sid; lines = ['# Test & Compare: %s' % sid, '',
         'In YouTube Studio: Content > the video > Details > A/B Testing. If all three titles below are the same, choose **Thumbnail** only and upload the three images; otherwise choose Title and thumbnail. A is already uploaded.', '']
     import glob; sm = sorted(glob.glob(os.path.join(ROOT, 'studio', 'out', '*-doc-%s' % sid, 'summary.json')))   # {min} = the real length, once rendered
     mins = str(round(json.load(open(sm[-1]))['duration'] / 60)) if sm else 'N'
