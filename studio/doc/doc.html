@@ -201,6 +201,7 @@ function frame(t){if(!T)return;const st=state(t),cam=st.cam,sx=Math.sin(t*43)*st
   if(st.scene&&window.SCENE_BARS){SCENE_BARS(ctx,W,H,st.scene.bars==null?1:st.scene.bars);if(st.date)SCENE_DATE(ctx,W,H,st.date.text,st.date.u)}
   else if(st.date){const u=st.date.u,a=clamp(u/.4);ctx.save();ctx.globalAlpha=a;const dx=T.short?360:70;ctx.fillStyle='#ffd36b';ctx.fillRect(dx,74,6,64);ctx.font=`700 46px ${SERIF}`;ctx.textAlign='left';ctx.textBaseline='middle';ctx.shadowColor='rgba(0,0,0,.8)';ctx.shadowBlur=14;ctx.fillStyle='#fff';
     const shown=st.date.text.slice(0,Math.ceil(clamp(u/.5)*st.date.text.length));ctx.fillText(shown,dx+24,108);ctx.restore()}
+  if(window.SCENE_LOOK&&T.look&&T.look!=='cinematic')SCENE_LOOK(ctx,W,H,t,T.look);   // an alternative animation look (style samples, 15 Nov 2026); captions stay clean
   // captions
   caption(t);
   if(st.outro)outro(st.outro,t);

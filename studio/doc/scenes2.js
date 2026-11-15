@@ -151,6 +151,50 @@
     if (lab) { c.shadowBlur = 0; c.font = `700 40px ${BODY}`; c.fillStyle = '#e8b04a'; c.fillText(lab, 0, big / 2 + 22) }
     c.restore() };
 
+  // ---------- looks: the same film in other animation styles (owner, 15 Nov 2026: "show me 5 different animation styles") ----------
+  // paper (cut paper: flat colour bands on a paper texture), ink (inked lines on sepia), flat (bright, clean vector), film (1900s newsreel).
+  let LOOKBUF = null, PAPER = null;
+  function lookDefs() {
+    if (document.getElementById('lk-defs')) return; const d = document.createElement('div'); d.id = 'lk-defs';
+    const post = (id, n) => `<filter id="${id}" color-interpolation-filters="sRGB"><feComponentTransfer>${['R', 'G', 'B'].map(k => `<feFunc${k} type="discrete" tableValues="${Array.from({ length: n }, (_, i) => (i / (n - 1)).toFixed(3)).join(' ')}"/>`).join('')}</feComponentTransfer></filter>`;
+    d.innerHTML = `<svg width="0" height="0" style="position:absolute">${post('lk-post5', 9)}${post('lk-post4', 5)}
+      <filter id="lk-ink" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="0" result="g"/>
+        <feConvolveMatrix in="g" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" preserveAlpha="true" result="e"/>
+        <feColorMatrix in="e" type="matrix" values="-4 0 0 0 1  -4 0 0 0 1  -4 0 0 0 1  0 0 0 1 0" result="ei"/>
+        <feComponentTransfer in="g" result="gc"><feFuncR type="linear" slope="1.45" intercept="-.12"/><feFuncG type="linear" slope="1.45" intercept="-.12"/><feFuncB type="linear" slope="1.45" intercept="-.12"/></feComponentTransfer>
+        <feBlend in="gc" in2="ei" mode="multiply"/></filter></svg>`;
+    document.body.appendChild(d) }
+  function paperTex(W, H) {   // made once: fibres and blotches, multiplied over the frame
+    if (PAPER) return PAPER; const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const k = cv.getContext('2d');
+    k.fillStyle = '#f4ead6'; k.fillRect(0, 0, W, H);
+    for (let i = 0; i < 9000; i++) { const x = rnd(i * 1.3) * W, y = rnd(i * 2.7 + 5) * H, l = 4 + rnd(i * 3.1) * 26, a = rnd(i * 4.9) * 6.28;
+      k.strokeStyle = `rgba(120,95,60,${.04 + rnd(i * 5.3) * .07})`; k.lineWidth = 1; k.beginPath(); k.moveTo(x, y); k.lineTo(x + Math.cos(a) * l, y + Math.sin(a) * l); k.stroke() }
+    for (let i = 0; i < 60; i++) { const g = k.createRadialGradient(rnd(i * 7.1) * W, rnd(i * 8.3) * H, 0, rnd(i * 7.1) * W, rnd(i * 8.3) * H, 60 + rnd(i * 9.7) * 220); g.addColorStop(0, 'rgba(150,120,80,.10)'); g.addColorStop(1, 'rgba(150,120,80,0)'); k.fillStyle = g; k.fillRect(0, 0, W, H) }
+    return PAPER = cv }
+  G.SCENE_LOOK = (c, W, H, t, name) => {
+    lookDefs(); if (!LOOKBUF) { LOOKBUF = document.createElement('canvas'); LOOKBUF.width = W; LOOKBUF.height = H }
+    const b = LOOKBUF.getContext('2d'); b.clearRect(0, 0, W, H); b.drawImage(c.canvas, 0, 0);
+    c.save(); c.setTransform(1, 0, 0, 1, 0, 0);
+    if (name === 'paper') {
+      c.filter = 'blur(.8px) saturate(.72) sepia(.3) contrast(1.06) brightness(1.1)'; c.drawImage(LOOKBUF, 0, 0);
+      c.globalCompositeOperation = 'multiply'; c.globalAlpha = .45; c.filter = 'url(#lk-ink)'; c.drawImage(LOOKBUF, 0, 0); c.globalAlpha = 1; c.filter = 'none';   // soft pencil lines
+      c.globalCompositeOperation = 'multiply'; c.drawImage(paperTex(W, H), 0, 0); c.globalCompositeOperation = 'source-over';
+      c.strokeStyle = 'rgba(60,40,20,.35)'; c.lineWidth = 26; c.strokeRect(0, 0, W, H) }
+    else if (name === 'ink') {
+      c.filter = 'url(#lk-ink) sepia(.6) contrast(1.22) brightness(1.0)'; c.drawImage(LOOKBUF, 0, 0); c.filter = 'none';
+      c.globalCompositeOperation = 'multiply'; c.globalAlpha = .55; c.drawImage(paperTex(W, H), 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over' }
+    else if (name === 'flat') {   // bright and clean: more colour, lifted shadows, the dark film vignette washed out
+      c.filter = 'saturate(1.55) brightness(1.2) contrast(1.12)'; c.drawImage(LOOKBUF, 0, 0); c.filter = 'none'; c.beginPath(); c.rect(0, BAR, W, H - 2 * BAR); c.clip();
+      const g = c.createRadialGradient(W / 2, H / 2, H * .3, W / 2, H / 2, H * 1.0); g.addColorStop(0, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(255,250,240,.28)'); c.globalCompositeOperation = 'screen'; c.fillStyle = g; c.fillRect(0, 0, W, H); c.globalCompositeOperation = 'source-over' }
+    else if (name === 'film') {
+      const fl = .92 + rnd(Math.floor(t * 24)) * .14, jx = (rnd(Math.floor(t * 12) * 3.3) - .5) * 5, jy = (rnd(Math.floor(t * 12) * 5.1) - .5) * 5;
+      c.fillStyle = '#000'; c.fillRect(0, 0, W, H); c.filter = `sepia(.9) contrast(1.25) brightness(${fl.toFixed(3)}) blur(.6px)`; c.drawImage(LOOKBUF, jx, jy); c.filter = 'none';
+      const f = Math.floor(t * 24);   // scratches, dust, a blotch now and then
+      c.strokeStyle = 'rgba(255,250,235,.35)'; c.lineWidth = 2; for (let i = 0; i < 2; i++) { if (rnd(f * 1.7 + i) < .6) { const x = rnd(f * 3.3 + i * 9) * W; c.beginPath(); c.moveTo(x, 0); c.lineTo(x + (rnd(f + i) - .5) * 30, H); c.stroke() } }
+      c.fillStyle = 'rgba(20,14,8,.7)'; for (let i = 0; i < 14; i++) { c.beginPath(); c.arc(rnd(f * 5.1 + i * 2.2) * W, rnd(f * 6.7 + i * 1.9) * H, .8 + rnd(f + i * 3) * 2.6, 0, 7); c.fill() }
+      const g = c.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, H * .95); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,.75)'); c.fillStyle = g; c.fillRect(0, 0, W, H) }
+    c.restore() };
+
   // ---------- talk: a line of dialogue, acted (owner, 15 Nov 2026: characters talk, Paper Billions style) ----------
   // S = {who, name, preset, spec, side: 'l'|'r', other: {preset, spec}, text, mood, bg: <set shot>}. Shot / reverse shot: every line is
   // its own cut to the speaker, close up, the other character's shoulder dark in the foreground, the line typed in a name-tagged box.

@@ -694,6 +694,7 @@ def main():
     k = Kokoro(os.path.join(HERE, 'tts/kokoro.onnx'), os.path.join(HERE, 'tts/voices.bin'))
     tl, clips, cues, moods, chapters, total = build(story, k)
     free_voice()
+    tl['look'] = story.get('look', 'cinematic')   # the animation look (cinematic, paper, ink, flat, film): owner picks, 15 Nov 2026
     fc = film_check(tl, chapters, total) if story.get('film') else None   # film-style episodes (owner, 14 Nov 2026)
     if '--pacing' in sys.argv: pacing(tl, chapters, total, outdir); return
     if fc and '--stills' not in sys.argv and '--force' not in sys.argv: sys.exit('NOT RENDERING: the film check failed (see above). Add scenes, then run again.')
