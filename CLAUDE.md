@@ -95,8 +95,9 @@ take two runs.
   New thumbnails + two-formula titles for the first two are in smoke/ab/ for the owner's Test & Compare.
 - **Redo queue** (`plan.json` "redo"): American Revolution, Rome vs Carthage and Korea get redone in the film style, with
   their Shorts, then HELD (no upload) until the owner decides new channel or old.
-- **Pig War** (`sb-pig-war`, 18 Nov): rebuilt in the approved style on 15 Nov (29 dialogues, 34 acted scenes, transitions,
-  motion graphics); renders in the 16 Nov run (narration voice saved on wip/sb-pig-war; the old finished render is kept on keep/sb-pig-war-v1). Next: WW2 both sides (21 Nov), then every 3 days (see plan.json).
+- **Pig War** (`sb-pig-war`): the first new-channel video, moved to TODAY 15 Nov 16:00 UTC by the owner. Rendered on 15 Nov in
+  the approved style (33.8 min, 34 acted scenes, 29 dialogues); video, Shorts (16 and 17 Nov), meta and cover saved on
+  wip/sb-pig-war for the run's UPLOAD job (needs the new-channel token in the task's environment). Next: WW2 both sides (21 Nov), then every 3 days (see plan.json).
 - Trial review on 5 Dec 2026.
 
 ## Map of the repo
