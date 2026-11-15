@@ -85,6 +85,23 @@ Every episode on the new channel (@SmokeAndBorders) is edited like the approved 
 - **Photos** frame their `focus` (faces in portraits). Check every photo shows what the narration says (a WWII submarine nearly stood in
   for an 1859 frigate).
 
+## 2e. In sync, never repeated, always moving (owner, 15 Nov 2026, after the Pig War: "scenes not in sync with the script, not related, repeated again and again, motion graphics still very less, not lively")
+- **The picture shows the words, on the word.** Every shot shows exactly what the narration says while it is on screen: the person
+  named, the place named, the action described. When a sentence moves to something new, cut there with `{"on": "<word>", "scene": ...}`.
+  A shot that shows something else than the words is a mistake, however pretty.
+- **Cast every person.** Every character in a scene has a `preset` that fits who they are and their century: civilian, clerk, worker,
+  woman, coast_salish, settler, hbc_man, redcoat, us_officer, soviet_officer, korean... `governor` is an 18th-century wigged official
+  only (it once drew Coast Salish villagers and an 1850s president in powdered wigs). The FILM CHECK fails on uncast people.
+- **Never the same picture more than twice.** A photo at most twice; an illustrated composition (same parts, seed, time) at most twice;
+  vary place, time of day, camera, characters. The FILM CHECK fails on repeats and lists them. Close-ups go only to cast characters,
+  never the same one within 45 s.
+- **Motion graphics on every number.** The renderer pops every number, sum of money, year and character name the narrator says onto
+  the screen on that word (make_doc.py `kinetic`), away from faces, at most one every ~4.5 s. Write numbers so they can be read:
+  "four hundred and sixty-one American soldiers" becomes 461 AMERICAN SOLDIERS.
+- **Review the storyboard sheet before every render:** `NARRATOR=kokoro python3 studio/storysheet.py <id>` makes contact sheets with one
+  still per shot and the exact words spoken over it (REPEAT marked in red). Look at every sheet; fix every mismatch, repeat and dull
+  stretch; look again. Only then render.
+
 ## 3. Editing for the eye (watchers)
 - **First 3 minutes:** something new on screen every 6–10 seconds, such as a camera move, pin, arrow, card, or a ball reacting. After that, every 15–25 seconds is enough, but the camera is never completely still.
 - **Pattern interrupt at 25–35 seconds:** the logo sting, a big card or a sharp camera move.

@@ -143,6 +143,11 @@
     us_army_1859: { coat: '#1f2f5a', coat2: '#2c3f73', hat: 'kepi', hatCol: '#1a2647', trim: '#d4a72c', hairStyle: 'short', hair: '#5a3b22', beard: 'mustache' },
     pickett: { coat: '#1f2f5a', coat2: '#2c3f73', hat: 'kepi', hatCol: '#1a2647', trim: '#d4a72c', hairStyle: 'long', hair: '#6b4a2a', beard: 'mustache', epaulettes: 1 },
     rn_officer: { coat: '#141c3a', coat2: '#f1ede2', hat: 'bicorne', hatCol: '#111', trim: '#d4a72c', hairStyle: 'short', hair: '#3b2a1a', epaulettes: 1 },
+    civilian: { coat: '#3b3a3f', coat2: '#d8d2c4', trim: '#6a6458', hairStyle: 'short', hair: '#4a3626' },   // an ordinary 19th-century man: the default for people without a role (no wig)
+    clerk: { coat: '#2f3b33', coat2: '#e3dccb', trim: '#8a7a5a', hairStyle: 'short', hair: '#3b2a1a', glasses: 1 },
+    worker: { coat: '#6a5a44', coat2: '#b8a888', trim: '#5a4a34', hairStyle: 'short', hair: '#2a1d12', hat: 'cap', hatCol: '#4a4034' },
+    coast_salish: { coat: '#7a3b22', coat2: '#2a1a12', trim: '#c8462e', hairStyle: 'long', hair: '#141010', skin: '#c99068' },   // Coast Salish peoples: cedar-red blanket, long hair
+    woman: { coat: '#5a3a4a', coat2: '#e8dccb', trim: '#a88a6a', hairStyle: 'long', hair: '#3a2416' },
     settler: { coat: '#6b4f33', coat2: '#c9b58a', hat: 'tophat', hatCol: '#4a3a2a', trim: '#8a6a47', hairStyle: 'short', hair: '#7a5230', beard: 'full' },
     hbc_man: { coat: '#2f4a3a', coat2: '#d8d1c0', hat: 'tophat', hatCol: '#222', trim: '#b3202a', hairStyle: 'short', hair: '#a0522d', beard: 'mustache' },
     douglas: { coat: '#2a2a33', coat2: '#e9e2d0', hairStyle: 'short', hair: '#d8d3cb', skin: '#c99068', medal: 1 },

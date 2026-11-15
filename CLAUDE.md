@@ -37,7 +37,10 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
 - **The approved editing style (owner, 15 Nov 2026, STYLE.md 2d) for every new-channel video:** acting full-body characters
   (`actors` parts: walk, point, aim, fire, hold, toast...), close-up coverage of acted scenes, automatic whip/push/zoom/ink
   transitions, motion graphics (counting numbers, sliding name tags, highlighted document lines, circles drawn on photos).
-  Never zoom into a still to fake a cut (rejected). Aim for a real cut every 4-6 s and 30+ acted scenes an episode. Length 25-45 minutes and thumbnails stay the three templates (owner kept those).
+  Never zoom into a still to fake a cut (rejected). Aim for a real cut every 4-6 s and 30+ acted scenes an episode.
+- **In sync, never repeated (owner, 15 Nov 2026, STYLE.md 2e):** each shot shows what the words say, cut on the word; every
+  person cast with a fitting `preset` (no wigs after 1800); no picture more than twice (the FILM CHECK fails on repeats and uncast
+  people); every spoken number/money/year/name pops up automatically (`kinetic`); review `studio/storysheet.py <id>` sheets before rendering. Length 25-45 minutes and thumbnails stay the three templates (owner kept those).
 - **Titles (owner, 12 Nov 2026): only two formulas.** A = "How X Happened — Minute by Minute"; B = "The N Days That Made
   X" (Days → Hours/Years when that is the real span; N stated in the script and sourced). Never Ziro's "in N Minutes".
 - **Thumbnails (owner, 12 Nov 2026): only three templates**, always in the dark style over a burning relief map with

@@ -93,6 +93,7 @@ function state(t){const st={fx:[],tele:[],cars:[],era:null,cam:{...T.start},ball
     case 'telegraph':if(t<e.t+(e.dur||3))st.tele.push({...e,u:t-e.t});break;
     case 'car':if(t<e.t+(e.dur||4)+1)st.cars.push({...e,u:t-e.t});break;
     // cinematic shots (scenes.js): a shot holds until the next shot or {shot:'off'}, which returns to the map
+    case 'pop':if(t-e.t<e.dur)(st.pops=st.pops||[]).push({...e,u:t-e.t});break;
     case 'scene':st.prev=st.scene;st.scene=e.shot==='off'?null:{...e,u:t-e.t};st.sceneN=(st.sceneN||0)+1;break;
     case 'scenecue':if(st.scene)st.scene[e.key]=e.t-st.scene.t;break}}
   return st}
@@ -191,7 +192,7 @@ function frame(t){if(!T)return;const st=state(t),cam=st.cam,sx=Math.sin(t*43)*st
   for(const b of Object.values(st.balls).sort((p,q)=>q.lat-p.lat)){const p=BP(b);if(!p)continue;const bob=Math.sin(t*2.2+b.lon)*4;ball(b,p[0],p[1]+bob,b.r*rs,t)}
   for(const q of st.bubbles){const b=st.balls[q.who],p=b&&BP(b);if(!p)continue;bubble(p[0],p[1],b.r*rs,q.text,q.u,q.dur,MAIN[b.flag])}
   if(st.dim>0){ctx.fillStyle=`rgba(3,5,12,${st.dim})`;ctx.fillRect(0,0,W,H)}}
-  if(st.scene&&window.SCENE){const ENV={LAND,d3,drawChar:window.drawChar,PRESETS:window.CHAR_PRESETS,story:T.story};if(!(window.SCENE_TRANSITION&&SCENE_TRANSITION(ctx,W,H,st,t,ENV)))SCENE(ctx,W,H,st.scene,t,ENV);if(st.shake>0){ctx.save();ctx.globalCompositeOperation='lighter';ctx.fillStyle=`rgba(255,240,220,${st.shake*.08})`;ctx.fillRect(0,0,W,H);ctx.restore()}}
+  if(st.scene&&window.SCENE){const ENV={LAND,d3,drawChar:window.drawChar,PRESETS:window.CHAR_PRESETS,story:T.story};if(!(window.SCENE_TRANSITION&&SCENE_TRANSITION(ctx,W,H,st,t,ENV)))SCENE(ctx,W,H,st.scene,t,ENV);if(window.SCENE_POP)for(const P of (st.pops||[]))SCENE_POP(ctx,W,H,P);if(st.shake>0){ctx.save();ctx.globalCompositeOperation='lighter';ctx.fillStyle=`rgba(255,240,220,${st.shake*.08})`;ctx.fillRect(0,0,W,H);ctx.restore()}}
   if(st.snow>0){ctx.save();ctx.fillStyle='#fff';for(let i=0;i<220;i++){const x=(rnd(i)*W+Math.sin(t*.8+i)*30)%W,y=((rnd(i+7)*H+t*(40+rnd(i+3)*60))%H);ctx.globalAlpha=st.snow*(.3+rnd(i+5)*.6);ctx.beginPath();ctx.arc(x,y,1.5+rnd(i+9)*2.5,0,7);ctx.fill()}ctx.restore()}
   // cards
   for(const C of st.cards)if(!st.scene||C.kind==='counter')card(C,t);   // over a film shot only numbers stay; the shot carries the rest

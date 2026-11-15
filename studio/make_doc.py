@@ -244,14 +244,20 @@ def build(story, k):
     for i, e in enumerate(sc):
         if 'dur' not in e: e['dur'] = round(((sc[i + 1]['t'] if i + 1 < len(sc) else t) - e['t']), 2)
     if story.get('film'):   # coverage: a long acted scene cuts to a close-up of its main character halfway (owner, 15 Nov 2026: real cuts, not zooms)
+        lastclose = {}
         for e in list(sc):
-            acts = [q for p in (e.get('parts') or []) if p.get('type') in ('actors', 'people') for q in p.get('list', []) if not q.get('photo')]
-            if e.get('shot') == 'set' and acts and e.get('dur', 0) > 6.5 and e.get('close', True):
-                a = dict(acts[0]); a.setdefault('preset', 'settler' if a.get('hat') == 'wide' else 'governor'); at = round(e['t'] + e['dur'] * .5, 2)
+            # only characters the storyboard cast on purpose get a close-up, and never the same one twice within 45 s
+            # (15 Nov 2026: generic extras were closed-up as the same wigged face again and again)
+            acts = [q for p in (e.get('parts') or []) if p.get('type') in ('actors', 'people') for q in p.get('list', []) if not q.get('photo') and (q.get('preset') or p.get('preset'))]
+            if e.get('shot') == 'set' and acts and e.get('dur', 0) > 6.5 and e.get('close', True) and e['t'] - lastclose.get(acts[0].get('preset'), -99) > 45:
+                a = dict(acts[0]); lastclose[a.get('preset')] = e['t']; at = round(e['t'] + e['dur'] * .5, 2)
                 ev.append({'k': 'scene', 't': at, 'shot': 'close', 'actor': a, 'bg': {k_: v_ for k_, v_ in e.items() if k_ not in ('k', 't', 'dur')}, 'from': round(at - e['t'], 2), 'dur': round(e['t'] + e['dur'] - at, 2), 'transition': 'cut'})
                 e['dur'] = round(at - e['t'], 2)
         sc = sorted([e for e in ev if e['k'] == 'scene'], key=lambda e: e['t'])
         film_sound(sc, cues)
+        kinetic(caps, ev, story, sc)
+        for e in ev:
+            if e['k'] == 'pop': cues.append(('pop', e['t']))
     if story.get('short') or story.get('demo'):   # a standalone Short (or a style demo): just the story, no outro, reminder or end card (cut_shorts.py makes it vertical)
         start = next(b['cam'] for c in ([story['intro']] if story.get('intro') else []) + story['chapters'] for b in c['beats'] if 'cam' in b)
         total = t + 1.0
@@ -342,6 +348,91 @@ def fit(s, dur, fin=.5, fout=.8):
     if a: s[:a] *= np.linspace(0, 1, a)
     if b and len(s) > b: s[-b:] *= np.linspace(1, 0, b)
     return s
+
+# ---------- kinetic callouts: motion graphics that follow the narration (owner, 15 Nov 2026: "motion graphics are still very less") ----------
+# Every number, sum of money, year and character name that the narrator says pops up on screen on the word it is spoken:
+# "461 AMERICAN SOLDIERS", "$100", "1859", "LYMAN CUTLAR". At most one every ~4.5 s, never over a card, document or dialogue shot.
+_UNITS = {w: i for i, w in enumerate('zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen'.split())}
+_TENS = {w: 10 * i for i, w in enumerate('_ _ twenty thirty forty fifty sixty seventy eighty ninety'.split()) if w != '_'}
+_SCALE = {'hundred': 100, 'thousand': 1000, 'million': 10 ** 6, 'billion': 10 ** 9}
+_STOP = set('a an the of and to in on at for from by with as that this these those his her their its our was were is are be been it he she they we you i'.split())
+def _num(words, i):
+    """English number words (or digits) starting at words[i] -> (value, words used) or None. 'four hundred and sixty-one' -> 461"""
+    w = words[i]
+    if re.fullmatch(r'[\d,]+(\.\d+)?', w): v = float(w.replace(',', '')); j = i + 1
+    else:
+        total = cur = 0; j = i; got = False
+        while j < len(words):
+            parts = words[j].split('-'); ok = True; val = 0
+            for q in parts:
+                if q in _UNITS: val += _UNITS[q]
+                elif q in _TENS: val += _TENS[q]
+                else: ok = False
+            if ok and parts[0]: cur += val; got = True; j += 1; continue
+            if words[j] in _SCALE and (got or words[j] != 'and'):
+                if not got: cur = 1
+                sc = _SCALE[words[j]]
+                if sc == 100: cur *= 100
+                else: total += cur * sc; cur = 0
+                got = True; j += 1; continue
+            if words[j] == 'and' and got and j + 1 < len(words) and (words[j + 1].split('-')[0] in _UNITS or words[j + 1].split('-')[0] in _TENS): j += 1; continue
+            if words[j] == 'a' and j + 1 < len(words) and words[j + 1] in _SCALE and not got: cur = 1; j += 1; continue
+            break
+        if not got: return None
+        v = total + cur
+    if j < len(words) and words[j] in _SCALE and re.fullmatch(r'[\d,.]+', w): v *= _SCALE[words[j]]; j += 1
+    return v, j - i
+
+def _fmt(v): return ('%d' % v if v == int(v) else ('%.1f' % v)).replace('.0', '') if v < 1000 else '{:,}'.format(int(v))
+_ADJ = set('american british french spanish german japanese soviet chinese korean roman carthaginian royal native indigenous enslaved union confederate new more extra armed loyal free young old'.split())
+
+def kinetic(caps, ev, story, sc):
+    words = [(re.sub(r"[^\w'$£,.-]", '', x['w']).strip('.,').lower(), x['w'], x['t']) for c in caps for x in c['words']]
+    toks = [w[0] for w in words]; out, last, seen, recent = [], -99, set(), {}
+    names = {}
+    for k_, m in (story.get('cast') or {}).items():
+        nm = m.get('name') or ''
+        if nm and not nm.lower().startswith(('a ', 'an ', 'another ')): names[nm.split()[-1].lower()] = nm
+    def cur_at(t):
+        cur = None
+        for e in sc:
+            if e['t'] <= t: cur = e
+            else: break
+        return cur
+    def shot_at(t): c_ = cur_at(t); return c_.get('shot') if c_ else None
+    def side_at(t):   # the side away from the characters, so a callout never covers a face
+        c_ = cur_at(t) or {}
+        xs = [q.get('x', .5) for p in c_.get('parts') or [] if p.get('type') in ('actors', 'people') for q in p.get('list', [])]
+        if c_.get('shot') == 'close': xs = [.6 if (c_.get('actor') or {}).get('facing', 1) < 0 else .4]
+        if c_.get('shot') == 'photo': xs = [(c_.get('focus') or [.5])[0]]
+        if xs and min(xs) < .45 and max(xs) > .55: return 'c'   # characters on both sides: above their heads, in the middle
+        return None if not xs else ('r' if sum(xs) / len(xs) < .5 else 'l')
+    dates = [e['t'] for e in ev if e['k'] == 'date']
+    i = 0
+    while i < len(words):
+        w, raw, t = words[i]; pop = None; used = 1
+        n = _num(toks, i) if (w and (w[0].isdigit() or w.split('-')[0] in _UNITS or w.split('-')[0] in _TENS or (w == 'a' and i + 1 < len(toks) and toks[i + 1] in _SCALE))) else None
+        if n and not (n[0] < 10 and n[1] == 1 and not w[0].isdigit()):   # skip 'one', 'two' said in passing
+            v, used = n; nxt = toks[i + used:i + used + 3]
+            if re.fullmatch(r'1[5-9]\d\d|20\d\d', w) and used == 1: pop = {'kind': 'year', 'text': w}
+            elif nxt[:1] and nxt[0] in ('dollars', 'dollar'): pop = {'kind': 'money', 'text': '$' + _fmt(v)}; used += 1
+            elif nxt[:1] and nxt[0] in ('pounds',): pop = {'kind': 'money', 'text': '£' + _fmt(v)}; used += 1
+            elif nxt[:1] and nxt[0] in ('percent',): pop = {'kind': 'num', 'text': _fmt(v) + '%'}; used += 1
+            elif v >= 3 and not re.search(r'[.,;:!?]$', words[i + used - 1][1]):   # a label only from the same phrase: "461 AMERICAN SOLDIERS"
+                a1 = toks[i + used] if i + used < len(toks) else ''; a2 = toks[i + used + 1] if i + used + 1 < len(toks) else ''
+                end1 = re.search(r'[.,;:!?]$', words[i + used][1]) if i + used < len(words) else True
+                if a1 and a1 not in _STOP and re.fullmatch(r"[a-z'-]+", a1) and a1 not in ('them', 'more', 'of', 'or'):
+                    lab = [a1] + ([a2] if not end1 and a2 and (a1 in _ADJ or a2 in ('ago', 'old', 'later', 'earlier', 'long', 'away')) and re.fullmatch(r"[a-z'-]+", a2) and a2 not in _STOP else [])
+                    pop = {'kind': 'num', 'text': _fmt(v), 'label': ' '.join(lab).upper()}
+        elif w in names and names[w] not in seen:
+            pop = {'kind': 'name', 'text': names[w].upper()}; seen.add(names[w])
+        if pop and t - recent.get(pop['text'] + pop.get('label', ''), -999) < 90: pop = None   # the same callout again within 90 s: once is enough
+        if pop and pop['kind'] == 'year' and any(abs(t - d) < 6 for d in dates): pop = None   # the date is already typed on screen
+        if pop and t - last >= 4.5 and shot_at(t + .2) not in ('card', 'doc', 'talk'):
+            recent[pop['text'] + pop.get('label', '')] = t
+            out.append(dict(k='pop', t=round(t, 2), dur=2.4, side=side_at(t + .2) or ['l', 'r'][len(out) % 2], **pop)); last = t
+        i += max(1, used)
+    ev.extend(out); return len(out)
 
 OUTDOOR = {'hills', 'land', 'forest', 'farm', 'camp', 'fort', 'flagpole', 'animal', 'soldiers', 'cannons'}
 def film_sound(sc, cues):
@@ -555,6 +646,17 @@ def film_check(tl, chapters, total):
     if tl.get('brand') == 'smoke' and acted < 30: print('FILM CHECK WARNING: only %d acted scenes (STYLE.md 2d wants 30+: characters acting the story)' % acted)
     print('FILM CHECK: scenes %.0f%% of %.1f min (need 70%%), map %.0f%% (max 30%%), %d shots + %d angle cuts = a cut every %.1f s (aim 4-6), %d dialogue lines, %d over 20 s, %d chapters open on the map'
           % (share * 100, total / 60, (1 - share) * 100, len(spans), angle, total / max(1, len(spans) + angle), talk, len(long_), len(opens)))
+    # repeats (owner, 15 Nov 2026: "some were being repeated again and again"): a photo at most twice, the same illustrated composition at most twice
+    import collections
+    ph = collections.Counter(e['img'] for e in sc if e.get('shot') == 'photo')
+    sig = lambda e: (e.get('time'),) + tuple(sorted((p.get('type'), p.get('seed'), p.get('kind'), p.get('flag'), p.get('n')) for p in e.get('parts') or [] if p.get('type') not in ('actors', 'people')))
+    st = collections.Counter(sig(e) for e in sc if e.get('shot') == 'set')
+    rp = ['photo %s x%d' % (k, v) for k, v in ph.items() if v > 2] + ['set (%s) x%d' % (', '.join(str(x[0]) for x in k[1:]), v) for k, v in st.items() if v > 2]
+    pops = sum(1 for e in tl['events'] if e['k'] == 'pop')
+    print('FILM CHECK: %d kinetic callouts (numbers, money, years, names on the spoken word); %d distinct photos, %d distinct illustrated scenes' % (pops, len(ph), len(st)))
+    nop = sum(1 for e in sc if e.get('shot') == 'set' for p in e.get('parts') or [] if p.get('type') in ('actors', 'people') and not p.get('preset') for q in p.get('list', []) if not q.get('preset') and not q.get('photo'))
+    if nop: bad.append('%d people in scenes have no preset: cast each one to fit the story (civilian, clerk, worker, woman, coast_salish, settler, hbc_man, redcoat, us_officer...; governor = an 18th-century wigged official only)' % nop)
+    if rp: bad.append('shots repeated more than twice (make each one its own picture): ' + '; '.join(rp[:10]))
     if share < .70: bad.append('scenes cover only %.0f%%' % (share * 100))
     if long_: bad.append('shots over 20 s at ' + ', '.join('%ds (%ds %s)' % x for x in long_[:12]))
     if opens: bad.append('chapters opening on the map: ' + '; '.join(opens))

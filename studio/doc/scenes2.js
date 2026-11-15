@@ -131,6 +131,26 @@
     else { c.drawImage(ca, 0, 0); c.beginPath(); c.arc(W * .5, H * .5, Math.hypot(W, H) * .55 * k, 0, 7); c.clip(); c.drawImage(cb, 0, 0) }   // ink
     c.restore(); return true };
 
+  // ---------- kinetic callouts on the spoken word (make_doc.py kinetic): numbers, money, years, names ----------
+  G.SCENE_POP = (c, W, H, P) => {
+    const u = P.u, d = P.dur || 2.4, inn = clamp(u / .28), out = clamp((u - d + .3) / .3); if (out >= 1) return;
+    const bounce = inn < 1 ? 1 + Math.sin(inn * Math.PI) * .18 : 1, s = (.6 + .4 * o3(inn)) * bounce * (1 - .15 * out), L = P.side !== 'r';
+    c.save(); c.globalAlpha = 1 - out;
+    if (P.kind === 'name') {   // a name tag sliding in from the side
+      c.font = `700 46px ${BODY}`; const w = c.measureText(P.text).width + 90, x = L ? 70 - (1 - o3(inn)) * (w + 100) : W - 70 - w + (1 - o3(inn)) * (w + 100), y = BAR + 70;
+      c.fillStyle = 'rgba(12,9,6,.85)'; c.fillRect(x, y, w, 76); c.fillStyle = '#e8b04a'; c.fillRect(x, y, 10, 76); c.beginPath(); c.arc(x + 42, y + 38, 9, 0, 7); c.fill();
+      c.fillStyle = '#f3e7cf'; c.textBaseline = 'middle'; c.fillText(P.text, x + 66, y + 40); c.restore(); return }
+    const C = P.side === 'c', cx = C ? W * .5 : L ? W * .19 : W * .81, cy = C ? H * .2 : L ? H * .33 : H * .27, sc0 = C ? .72 : 1; c.translate(0, 0); c.translate(cx, cy); c.scale(s * sc0, s * sc0); c.rotate(C ? 0 : (L ? -1 : 1) * .03);
+    const big = P.kind === 'year' ? 120 : 150; c.font = `800 ${big}px ${BODY}`; c.textAlign = 'center'; c.textBaseline = 'middle';
+    const tw = c.measureText(P.text).width, lab = P.label || (P.kind === 'year' ? '' : ''), lw = lab ? (c.font = `700 40px ${BODY}`, c.measureText(lab).width) : 0, bw = Math.max(tw, lw) + 90, bh = big + (lab ? 70 : 30);
+    c.fillStyle = 'rgba(10,8,6,.72)'; c.beginPath(); c.roundRect(-bw / 2, -big / 2 - 20, bw, bh, 18); c.fill();
+    c.fillStyle = P.kind === 'money' ? '#e8c04a' : P.kind === 'year' ? '#d9c39a' : '#c8462e'; c.fillRect(-bw / 2, -big / 2 - 20, bw * o3(clamp((u - .2) / .4)), 8);
+    if (P.kind === 'money') { c.save(); c.translate(-bw / 2 - 10, -big / 2 - 20); c.rotate(u * 3); c.fillStyle = '#e8c04a'; c.beginPath(); c.arc(0, 0, 34, 0, 7); c.fill(); c.strokeStyle = '#8a6a1c'; c.lineWidth = 5; c.stroke(); c.fillStyle = '#8a6a1c'; c.font = `800 40px ${BODY}`; c.fillText('$', 0, 2); c.restore() }
+    if (P.kind === 'year') { c.strokeStyle = 'rgba(217,195,154,.8)'; c.lineWidth = 5; c.strokeRect(-bw / 2 + 12, -big / 2 - 8, bw - 24, bh - 24) }
+    c.font = `800 ${big}px ${BODY}`; c.fillStyle = P.kind === 'money' ? '#f1d27a' : '#f3e7cf'; c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 12; c.fillText(P.text, 0, 6);
+    if (lab) { c.shadowBlur = 0; c.font = `700 40px ${BODY}`; c.fillStyle = '#e8b04a'; c.fillText(lab, 0, big / 2 + 22) }
+    c.restore() };
+
   // ---------- talk: a line of dialogue, acted (owner, 15 Nov 2026: characters talk, Paper Billions style) ----------
   // S = {who, name, preset, spec, side: 'l'|'r', other: {preset, spec}, text, mood, bg: <set shot>}. Shot / reverse shot: every line is
   // its own cut to the speaker, close up, the other character's shoulder dark in the foreground, the line typed in a name-tagged box.
@@ -306,7 +326,7 @@
           c.save(); c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 30; c.drawImage(im, x, y, w, h); c.restore(); continue }
         if (S._env && S._env.drawChar) {   // owner, 15 Nov 2026: acting cartoon characters instead of black silhouettes
           const pose = q.pose === 'lean' ? 'think' : q.pose || (['hips', 'cross', 'idle', 'shrug'][Math.floor(rnd(q.x * 31) * 4)]);
-          actor(c, W, H, { preset: q.preset || p.preset || (q.hat === 'wide' ? 'settler' : 'governor'), spec: q.spec, x: q.x, y: Math.min(.97, (q.y || 1.04) - .06), h: (q.h || .8) * .78, facing: q.facing, pose, mood: q.mood, talk: q.talk, act: q.act, walk: q.walk, prop: q.prop }, u + q.x * 3, S._env); continue }
+          actor(c, W, H, { preset: q.preset || p.preset || (q.hat === 'wide' ? 'settler' : 'civilian'), spec: q.spec, x: q.x, y: Math.min(.97, (q.y || 1.04) - .06), h: (q.h || .8) * .78, facing: q.facing, pose, mood: q.mood, talk: q.talk, act: q.act, walk: q.walk, prop: q.prop }, u + q.x * 3, S._env); continue }
         figure(c, W, H, W * q.x, H * (q.y || 1.04), H * (q.h || .8), q, u + q.x * 10, W * (p.lx || .5), H * (p.ly || .4), p.warm || '255,170,90') } },
   };
   SH['set'] = (c, W, H, S, t, env) => {
