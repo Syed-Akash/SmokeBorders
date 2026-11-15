@@ -129,5 +129,29 @@
   "license": "Public domain",
   "artist": "Second Continental Congress",
   "credit": "Scan of original in US Library of Congress"
+ },
+ "bunkerhill": {
+  "title": "File:The Death of General Warren at the Battle of Bunker's Hill.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/The_Death_of_General_Warren_at_the_Battle_of_Bunker%27s_Hill.jpg/1280px-The_Death_of_General_Warren_at_the_Battle_of_Bunker%27s_Hill.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Death_of_General_Warren_at_the_Battle_of_Bunker%27s_Hill.jpg",
+  "license": "Public domain",
+  "artist": "John Trumbull",
+  "credit": "From the Boston Museum of Fine Arts, accession #1977.853: http://www.mfa.org/collections/object/the-death-of-general-warren-at-the-battle-of-bunker-s-hill-17-june-1775-34260"
+ },
+ "hessians": {
+  "title": "File:The Capture of the Hessians at Trenton December 26 1776.jpeg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/The_Capture_of_the_Hessians_at_Trenton_December_26_1776.jpeg/1280px-The_Capture_of_the_Hessians_at_Trenton_December_26_1776.jpeg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Capture_of_the_Hessians_at_Trenton_December_26_1776.jpeg",
+  "license": "Public domain",
+  "artist": "John Trumbull",
+  "credit": "Yale University Art Gallery"
+ },
+ "dunmore": {
+  "title": "File:Dunmore's Proclamation signed November 7, 1775.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dunmore%27s_Proclamation_signed_November_7%2C_1775.jpg/500px-Dunmore%27s_Proclamation_signed_November_7%2C_1775.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Dunmore%27s_Proclamation_signed_November_7,_1775.jpg",
+  "license": "Public domain",
+  "artist": "John Murray, 4th Earl Dunmore",
+  "credit": "https://www.dhr.history.vt.edu/modules/us/mod03_rev/images/1_dunmore_large.jpg"
  }
 }
