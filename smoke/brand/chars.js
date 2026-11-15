@@ -73,7 +73,8 @@
     c.beginPath(); c.moveTo(hx + f * R * .1, ey + R * .05); c.quadraticCurveTo(hx + f * R * .28, ey + R * .32, hx + f * R * .02, ey + R * .36); outline(c, lw * .6);
     // mouth
     const my = hy + R * .62; c.beginPath();
-    if (m === 'shock') { ell(c, hx, my + R * .02, R * .13, R * .17); c.fillStyle = '#5a1d14'; c.fill(); outline(c, lw * .6) }
+    if (s.talk > 0) { ell(c, hx, my + R * .03, R * (.12 + .05 * s.talk), R * (.025 + .15 * s.talk)); c.fillStyle = '#5a1d14'; c.fill(); outline(c, lw * .6) }   // speaking: only the mouth moves
+    else if (m === 'shock') { ell(c, hx, my + R * .02, R * .13, R * .17); c.fillStyle = '#5a1d14'; c.fill(); outline(c, lw * .6) }
     else if (m === 'happy') { c.moveTo(hx - R * .25, my - R * .04); c.quadraticCurveTo(hx, my + R * .2, hx + R * .25, my - R * .04); c.closePath(); c.fillStyle = '#5a1d14'; c.fill(); outline(c, lw * .6) }
     else if (m === 'smug') { c.moveTo(hx - R * .18, my + R * .02); c.quadraticCurveTo(hx + R * .05, my + R * .06, hx + f * R * .26, my - R * .08); outline(c, lw * .65) }
     else if (m === 'angry') { c.moveTo(hx - R * .24, my + R * .08); c.quadraticCurveTo(hx, my - R * .08, hx + R * .24, my + R * .08); outline(c, lw * .7) }

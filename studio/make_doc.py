@@ -551,7 +551,9 @@ def film_check(tl, chapters, total):
             if a > e.get('dur', 8) - 1.8: break
             angle += 1; i_ += 1
     talk = sum(1 for e in sc if e.get('shot') == 'talk')
-    print('FILM CHECK: scenes %.0f%% of %.1f min (need 70%%), map %.0f%% (max 30%%), %d shots + %d angle cuts = a cut every %.1f s (aim 3-4), %d dialogue lines, %d over 20 s, %d chapters open on the map'
+    acted = sum(1 for e in sc if e.get('shot') == 'set' and any(p.get('type') in ('actors', 'people') for p in e.get('parts') or []))
+    if tl.get('brand') == 'smoke' and acted < 30: print('FILM CHECK WARNING: only %d acted scenes (STYLE.md 2d wants 30+: characters acting the story)' % acted)
+    print('FILM CHECK: scenes %.0f%% of %.1f min (need 70%%), map %.0f%% (max 30%%), %d shots + %d angle cuts = a cut every %.1f s (aim 4-6), %d dialogue lines, %d over 20 s, %d chapters open on the map'
           % (share * 100, total / 60, (1 - share) * 100, len(spans), angle, total / max(1, len(spans) + angle), talk, len(long_), len(opens)))
     if share < .70: bad.append('scenes cover only %.0f%%' % (share * 100))
     if long_: bad.append('shots over 20 s at ' + ', '.join('%ds (%ds %s)' % x for x in long_[:12]))

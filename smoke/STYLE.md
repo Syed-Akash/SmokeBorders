@@ -66,6 +66,25 @@ Paper Billions (@PaperBillionsTV) got millions of views with money stories drawn
   the twist ("The boss of the most valuable company on Earth is having dinner with a Chinese spy"). When an old border is in today's
   news, say so in the first minute. Pick topics that touch a famous name or a current headline when the plan allows.
 
+## 2d. The approved editing style (owner, 15 Nov 2026: "now it looks better, make sure new channel videos go with this type of editing")
+Every episode on the new channel (@SmokeAndBorders) is edited like the approved Pig War preview. In the storyboard:
+- **Characters act the story.** Wherever people are in a scene, use an `actors` part (or `people`, which draws the same characters):
+  `{"type": "actors", "list": [{"preset", "x", "y", "h", "facing", "pose", "act": [[t, pose]], "walk": [x0, x1, t0, t1], "mood", "talk", "prop"}]}`.
+  Poses: idle, point, aim, fire, rifle, hold, toast, dig, wave, shrug, hips, cross, think, run; props: rifle, cup, paper, coin, shovel, lamp.
+  The narration's action happens on screen: the farmer aims and fires, the envoy walks in and hands over the paper, soldiers dig in.
+  Aim for 30+ acted scenes an episode (tools/storyboard/pigwar_actors.py is the worked example). Never black silhouettes.
+- **Coverage, not zooms.** A long acted scene cuts to a close-up of its main character on its own (make_doc.py). Never fake a cut by
+  zooming into the same still (the owner rejected that). More shots per beat is the way to a faster rhythm: aim for a real cut every
+  4-6 s (the FILM CHECK prints it).
+- **Transitions** between shots are automatic (whip, push, zoom-through, ink wipe); dialogue cuts hard. Set `"transition": "cut"` on a shot
+  to cut hard on purpose.
+- **Motion graphics:** numbers on time cards count up (write them as numbers: "≈ 60,000"), name tags slide in on photos (`caption`),
+  a highlighter sweeps the key line of a document (`hl`: line index, default the last), and `mark` draws a circle and label on a photo
+  (`{"x", "y", "r", "label"}`): use it on the key person or place in a group photo or map engraving.
+- **Talking** moves only the mouth. Dialogue (2c) about once a minute.
+- **Photos** frame their `focus` (faces in portraits). Check every photo shows what the narration says (a WWII submarine nearly stood in
+  for an 1859 frigate).
+
 ## 3. Editing for the eye (watchers)
 - **First 3 minutes:** something new on screen every 6–10 seconds, such as a camera move, pin, arrow, card, or a ball reacting. After that, every 15–25 seconds is enough, but the camera is never completely still.
 - **Pattern interrupt at 25–35 seconds:** the logo sting, a big card or a sharp camera move.
