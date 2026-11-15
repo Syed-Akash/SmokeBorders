@@ -31,7 +31,16 @@
   "PAT": "am_adam",
   "FREE": "am_fenrir",
   "DIPGB": "bm_lewis",
-  "DIPUS": "am_michael"
+  "DIPUS": "am_michael",
+  "DRUM": "am_puck",
+  "DEL1": "am_michael",
+  "DEL2": "am_fenrir",
+  "SHIPCAP": "bm_lewis",
+  "MAID": "bf_emma",
+  "RAID1": "am_adam",
+  "RAID2": "am_puck",
+  "FISH": "bm_daniel",
+  "DOVER": "bm_lewis"
  },
  "title": "How Britain Lost America: The American Revolution From Both Sides",
  "era": "1715",
@@ -196,7 +205,11 @@
   "The Canadian Encyclopedia, Treaty of Paris 1783: https://www.thecanadianencyclopedia.ca/en/article/treaty-of-paris-1783",
   "AmericanRevolution.org, casualties: https://www.americanrevolution.org/?p=9627",
   "Britannica, Battle of Bunker Hill: https://www.britannica.com/event/Battle-of-Bunker-Hill",
-  "American Battlefield Trust, Petitioning the King and Parliament: https://www.battlefields.org/learn/articles/petitioning-king-and-parliament"
+  "American Battlefield Trust, Petitioning the King and Parliament: https://www.battlefields.org/learn/articles/petitioning-king-and-parliament",
+  "Wikipedia, William Franklin: https://en.wikipedia.org/wiki/William_Franklin",
+  "Wikipedia, Asgill Affair: https://en.wikipedia.org/wiki/Asgill_Affair",
+  "Wikipedia, William Temple Franklin: https://en.wikipedia.org/wiki/William_Temple_Franklin",
+  "Wikipedia, Hutchinson letters affair: https://en.wikipedia.org/wiki/Hutchinson_letters_affair"
  ],
  "intro": {
   "mood": "uneasy",
@@ -2998,7 +3011,7 @@
   },
   {
    "title": "Father Against Son",
-   "years": "1775 – 1776",
+   "years": "1772 – 1777",
    "mood": "tension",
    "beats": [
     {
@@ -3087,6 +3100,116 @@
        }
       ]
      }
+    },
+    {
+     "say": "Here is how it went wrong. In December 1772, Franklin gets hold of about twenty private letters, written by the men who run Massachusetts, among them Thomas Hutchinson.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Private letters, 1768–1769",
+      "lines": [
+       "\"...an abridgement of what are called English liberties...\""
+      ],
+      "sign": "T. Hutchinson"
+     },
+     "_more": 1
+    },
+    {
+     "say": "He sends them to Boston, with one condition. Do not publish them. By June 1773, they are in a Boston newspaper.",
+     "scene": {
+      "shot": "doc",
+      "kind": "newspaper",
+      "paper": "~ BOSTON, 1773 ~",
+      "head": [
+       "THE GOVERNOR'S LETTERS"
+      ],
+      "date": "June 1773"
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "BOS",
+       "text": "\"Not to be published,\" it says."
+      },
+      {
+       "who": "PRINTER",
+       "text": "Then why is it on my front page?",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.3,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a3a2a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 14,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "Crowds burn the governor in effigy on Boston Common. And in London, two men fight a duel over who leaked the letters.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#2a2430",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 80,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.62,
+        "r": 200,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "So on Christmas Day 1773, Franklin publishes a letter admitting that he sent them, to stop a second duel.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "London, 25 December 1773",
+      "lines": [
+       "Franklin admits he sent",
+       "the Hutchinson letters to Boston,",
+       "to prevent \"further mischief\"."
+      ],
+      "sign": "B. Franklin"
+     },
+     "_more": 1
     },
     {
      "say": "Then, in front of the King's Privy Council, he was publicly humiliated. He stood in silence while a government lawyer called him, more or less, a thief and a liar, in front of a laughing room.",
@@ -3245,6 +3368,17 @@
      "_new": 1
     },
     {
+     "say": "That was the twenty ninth of January 1774. The lawyer was the Solicitor General, Alexander Wedderburn. Soon after, Franklin was fired from his post as Postmaster General.",
+     "scene": {
+      "shot": "card",
+      "time": "29 JANUARY 1774",
+      "place": "THE PRIVY COUNCIL, LONDON",
+      "date": "Franklin stands in silence",
+      "size": 120
+     },
+     "_more": 1
+    },
+    {
      "say": "He went home to America. He did not come back a loyal Briton.",
      "do": [
       {
@@ -3366,6 +3500,45 @@
       "move": "in",
       "caption": "William Franklin, Royal Governor of New Jersey"
      }
+    },
+    {
+     "say": "His father expected him to resign in protest. William's advice to his father, in short: take your medicine, and retire.",
+     "scene": {
+      "shot": "photo",
+      "img": "wfranklin",
+      "move": "in",
+      "caption": "William Franklin",
+      "focus": [
+       0.5,
+       0.3
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "His Two Roads speech asked New Jersey to choose loyalty over civil war. The assembly answered by voting, unanimously, to support Boston.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a2a"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_more": 1
     },
     {
      "say": "One Franklin was becoming a rebel. The other was the King's man. Same family, same dinner table, opposite sides of the line.",
@@ -3715,6 +3888,32 @@
        }
       ]
      }
+    },
+    {
+     "say": "And with him went a sixteen year old secretary. Temple Franklin. William's own son, raised by his grandfather.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 16,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
     },
     {
      "cam": {
@@ -5826,6 +6025,707 @@
    ]
   },
   {
+   "title": "The Unfortunate Ticket",
+   "years": "1778 – 1782",
+   "mood": "tension",
+   "_more": 1,
+   "beats": [
+    {
+     "say": "Back to William. In 1778, he walks out of prison in a prisoner exchange, and goes straight to New York, held by the British.",
+     "scene": {
+      "shot": "card",
+      "time": "1778",
+      "place": "NEW YORK CITY",
+      "date": "held by the British",
+      "size": 170
+     },
+     "_more": 1
+    },
+    {
+     "say": "There, he becomes the leader of the Loyalists. He builds a network of spies, and raises Loyalist fighting units.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 280,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "town",
+        "y": 0.66,
+        "n": 16,
+        "gap": 120,
+        "h": 170,
+        "col": "#2a2430",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "He wants a guerrilla war against the rebels. The British commander, General Henry Clinton, has little use for the idea, or for Loyalists.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "But by 1780, William has official blessing. A group called the Associated Loyalists starts raiding New York, New Jersey and Connecticut.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 50,
+        "seed": 9,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.3,
+        "gap": 90,
+        "col": "#5a3a2a",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "RAID1",
+       "text": "Where tonight?"
+      },
+      {
+       "who": "RAID2",
+       "text": "New Jersey. Again."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 50,
+        "seed": 9,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.3,
+        "gap": 90,
+        "col": "#5a3a2a",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "In New Jersey, neighbours are now killing neighbours, and every killing gets an answer.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.75,
+        "s": 0.7,
+        "y": 0.72,
+        "night": true,
+        "depth": 0.6
+       },
+       {
+        "type": "fire",
+        "x": 0.72,
+        "y": 0.62,
+        "r": 240,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "In March 1782, a Loyalist named Philip White is killed by Patriot militiamen. Accounts differ. One says he was shot trying to escape. Another says he was executed.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 21,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.64,
+        "n": 30,
+        "seed": 4,
+        "h": 160,
+        "depth": 0.45
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "On the twelfth of April, Loyalists take a Patriot militia captain, Joshua Huddy, and hang him by the shore. Huddy was not even there when White was killed.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": -0.1,
+        "x1": 0.5,
+        "y": 0.64,
+        "h": 80,
+        "depth": 0.3
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "weather": "fog"
+     },
+     "_more": 1
+    },
+    {
+     "say": "On his body, they leave a note.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Monmouth, New Jersey, 12 April 1782",
+      "lines": [
+       "\"Up goes Huddy for Philip White.\""
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "The men who did it belonged to William Franklin's Associated Loyalists. One account says he signed the order himself. Historians still argue how much he knew.",
+     "scene": {
+      "shot": "photo",
+      "img": "wfranklin",
+      "move": "out",
+      "caption": "William Franklin",
+      "focus": [
+       0.5,
+       0.3
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "Washington demands the officer who led the hanging, Richard Lippincott. A British court martial tries him, and lets him go.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "So Washington decides that someone else will pay. A British officer, of the same rank as Huddy, chosen by lot.",
+     "scene": {
+      "shot": "card",
+      "time": "1 OFFICER",
+      "place": "CHOSEN BY LOT",
+      "date": "for one hanging",
+      "size": 170
+     },
+     "_more": 1
+    },
+    {
+     "say": "The twenty seventh of May 1782. The Black Bear Tavern, in Lancaster, Pennsylvania. The names of captured British officers are drawn. A drummer boy pulls out one name, and with it, a paper marked Unfortunate.",
+     "scene": {
+      "shot": "card",
+      "time": "27 MAY 1782",
+      "place": "BLACK BEAR TAVERN",
+      "date": "Lancaster, Pennsylvania",
+      "size": 140
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "DRUM",
+       "text": "Captain Charles Asgill."
+      },
+      {
+       "who": "DRUM",
+       "text": "...And this one says \"Unfortunate\".",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.05,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 4,
+        "papers": 3,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "Charles Asgill is a young captain, captured at Yorktown. And that is the problem. The Yorktown surrender, which Washington himself signed, protects him from exactly this.",
+     "scene": {
+      "shot": "photo",
+      "img": "asgill",
+      "move": "in",
+      "caption": "Captain Charles Asgill",
+      "focus": [
+       0.5,
+       0.3
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "Washington writes that the choice has distressed him exceedingly. But the order stands.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "George Washington to Benjamin Lincoln, 1782",
+      "lines": [
+       "\"...has distressed me exceedingly.\""
+      ],
+      "sign": "G. Washington"
+     },
+     "_more": 1
+    },
+    {
+     "say": "In England, Asgill's mother hears the news. Lady Asgill writes to the court of France, begging for her son's life.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "And here is the strangest turn of the whole war. King Louis the Sixteenth and Queen Marie Antoinette, at war with Britain, ask Washington to spare a British officer.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "fr",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a4a5a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 4,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "Their foreign minister, the Comte de Vergennes, writes to Washington on the twenty ninth of July.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Versailles, 29 July 1782",
+      "lines": [
+       "\"...you will do what is",
+       "agreeable to their Majesties.\""
+      ],
+      "sign": "Vergennes"
+     },
+     "_more": 1
+    },
+    {
+     "say": "The French letter is read out in Congress on the very day it was planning to vote on hanging him.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 50,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "DEL1",
+       "text": "A letter. From the King of France."
+      },
+      {
+       "who": "DEL2",
+       "text": "Today? Of all days?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 50,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "On the seventh of November 1782, after days of debate, Congress lets him go.",
+     "scene": {
+      "shot": "card",
+      "time": "7 NOVEMBER 1782",
+      "place": "PHILADELPHIA",
+      "date": "Asgill is released",
+      "size": 130
+     },
+     "_more": 1
+    },
+    {
+     "say": "A hundred and sixty four days, from the paper marked Unfortunate, to freedom.",
+     "scene": {
+      "shot": "card",
+      "time": "164 DAYS",
+      "place": "WAITING TO LEARN IF HE WOULD HANG",
+      "date": "27 May – 7 Nov 1782",
+      "size": 170
+     },
+     "_more": 1
+    },
+    {
+     "say": "He rides for New York, misses his ship, pays a crew to row him out to catch it, and reaches England on the eighteenth of December.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.3,
+        "s": 0.6,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 420,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "weather": "storm"
+     },
+     "_more": 1
+    },
+    {
+     "say": "At home, he hides in the bulrushes at the end of the garden, and sends the ship's captain in first with a letter, so the shock won't hurt his parents.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 14,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.66,
+        "n": 18,
+        "seed": 2,
+        "h": 120,
+        "depth": 0.45
+       },
+       {
+        "type": "farm",
+        "x": 0.8,
+        "s": 0.6,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "SHIPCAP",
+       "text": "A letter, my lady. Good news."
+      },
+      {
+       "who": "MAID",
+       "text": "She won't come down. She thinks it's bad news.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 1,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "The whole affair stalled the peace talks in Paris. And sitting at those talks, for the Americans, was Benjamin Franklin. A crisis his son's men had started, landing on his father's table.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 16,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "By then, William had already sailed for Britain. He left America in 1782, and never came back.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.7,
+        "flag": "uk",
+        "y": 0.66,
+        "gap": 0,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "coast",
+        "x0": -0.2,
+        "x1": 0.25,
+        "y": 0.6,
+        "h": 80,
+        "depth": 0.3
+       }
+      ]
+     },
+     "_more": 1
+    }
+   ]
+  },
+  {
    "title": "The New Line",
    "years": "1783",
    "mood": "grief",
@@ -6427,24 +7327,74 @@
      }
     },
     {
-     "say": "William wrote to his father in 1784, hoping to make peace. He got a cold reply. They met once more, a year later, briefly, to talk about money.",
+     "say": "His grandson Temple, the secretary at those same talks, quietly asked one of the British negotiators if something could be done for his father.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 16,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "In London, the British government paid William one thousand eight hundred pounds. That was the value of his furniture. Nothing for his lands. Plus a pension of eight hundred pounds a year.",
+     "scene": {
+      "shot": "card",
+      "time": "£1,800",
+      "place": "FOR HIS FURNITURE",
+      "date": "nothing for his lands",
+      "size": 170
+     },
+     "_more": 1
+    },
+    {
+     "say": "Eight hundred pounds a year. About what it once cost to keep twenty six British soldiers in America.",
+     "scene": {
+      "shot": "card",
+      "time": "£800 A YEAR",
+      "place": "≈ 26 SOLDIERS",
+      "date": "at £30 a soldier",
+      "size": 170
+     },
+     "_more": 1
+    },
+    {
+     "say": "On the twenty second of July 1784, William wrote to his father, hoping to make peace. The answer came three weeks later. Polite. Careful.",
      "do": [
       {
-       "on": "cold",
+       "on": "Polite",
        "mood": [
         "BEN",
         "neutral"
-       ]
+       ],
+       "_on": "cold"
       },
       {
-       "on": "money",
+       "on": "Careful",
        "mood": [
         "WIL",
         "sad"
-       ]
+       ],
+       "_on": "money"
       },
       {
-       "on": "cold",
+       "on": "Polite",
        "scene": {
         "shot": "photo",
         "img": "bfranklin",
@@ -6466,7 +7416,8 @@
           }
          ]
         }
-       }
+       },
+       "_on": "cold"
       }
      ],
      "scene": {
@@ -6477,10 +7428,107 @@
        "Dear Father,",
        "I hope we may be reconciled…"
       ]
-     }
+     },
+     "_orig": "William wrote to his father in 1784, hoping to make peace. He got a cold reply. They met once more, a year later, briefly, to talk about money."
     },
     {
-     "say": "In his will, Benjamin left his son some land in Nova Scotia that was worth almost nothing. His reasoning, more or less: if the British had won, there would have been nothing to leave anyone.",
+     "say": "His father wrote back that they would try, as William proposed, to forget what had happened, as well as they could.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Passy, 16 August 1784",
+      "lines": [
+       "\"...will endeavor, as you propose",
+       "mutually to forget what has happened",
+       "relating to it, as well we can.\""
+      ],
+      "sign": "B. Franklin"
+     },
+     "_more": 1
+    },
+    {
+     "say": "They met once more, in England, in 1785. Briefly. To tie up money and land.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "That same winter, in January 1785, a letter from William to his son Temple crossed the English Channel in a hydrogen balloon. The first airmail in history.",
+     "scene": {
+      "shot": "card",
+      "time": "JANUARY 1785",
+      "place": "THE ENGLISH CHANNEL",
+      "date": "the first airmail",
+      "size": 130
+     },
+     "_more": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "FISH",
+       "text": "Is that... a balloon?",
+       "mood": "shock"
+      },
+      {
+       "who": "DOVER",
+       "text": "Carrying the post.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.6,
+        "x1": 1.1,
+        "y": 0.66,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.2,
+        "s": 0.5,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 300,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_more": 1
+    },
+    {
+     "say": "In his will of 1788, Benjamin left his son some land in Nova Scotia that was worth almost nothing. And he wrote down why.",
      "do": [
       {
        "on": "will",
@@ -6492,10 +7540,11 @@
          "lands in Nova Scotia."
         ],
         "dur": 5
-       }
+       },
+       "_on": "will"
       },
       {
-       "on": "reasoning",
+       "on": "why",
        "scene": {
         "shot": "photo",
         "img": "bfranklin",
@@ -6521,7 +7570,8 @@
           }
          ]
         }
-       }
+       },
+       "_on": "reasoning"
       }
      ],
      "scene": {
@@ -6532,7 +7582,24 @@
        "To my son William:",
        "lands in Nova Scotia."
       ]
-     }
+     },
+     "_orig": "In his will, Benjamin left his son some land in Nova Scotia that was worth almost nothing. His reasoning, more or less: if the British had won, there would have been nothing to leave anyone."
+    },
+    {
+     "say": "The part he acted against me in the late war, which is of public notoriety, will account for my leaving him no more of an estate he endeavoured to deprive me of.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Last will of Benjamin Franklin, 1788",
+      "lines": [
+       "\"The part he acted against me in the late war,",
+       "which is of public notoriety, will account for",
+       "my leaving him no more of an estate",
+       "he endeavoured to deprive me of.\""
+      ],
+      "sign": "B. Franklin"
+     },
+     "_more": 1
     },
     {
      "say": "William Franklin died in London in 1813. Today, nobody knows exactly where his grave is.",
@@ -6916,6 +7983,10 @@
   "dunmore": [
    "Lord Dunmore proclamation 1775 broadside",
    true
+  ],
+  "asgill": [
+   "File:Sir Charles Asgill 2nd Baronet.jpg",
+   false
   ]
  },
  "cast": {
