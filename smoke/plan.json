@@ -70,14 +70,16 @@
    "id": "sb-pig-war",
    "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
    "publish": "2026-11-15T16:00:00Z",
-   "status": "rendered",
+   "status": "uploaded",
    "audience": "US CA UK",
    "shorts": [
     {
-     "publish": "2026-11-16T16:00:00Z"
+     "publish": "2026-11-16T16:00:00Z",
+     "done": true
     },
     {
-     "publish": "2026-11-17T16:00:00Z"
+     "publish": "2026-11-17T16:00:00Z",
+     "done": true
     }
    ],
    "angle": "Hidden people: Lyman Cutlar, the farmer who shot the pig, and the pig's owner Charles Griffin.",

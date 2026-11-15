@@ -70,6 +70,17 @@
    "publishAt": "2026-11-15T16:00:00Z",
    "channel": "@SmokeAndBorders"
   },
-  "shorts": []
+  "shorts": [
+   {
+    "n": 1,
+    "videoId": "1-7V6ABN9NQ",
+    "publishAt": "2026-11-16T16:00:00Z"
+   },
+   {
+    "n": 2,
+    "videoId": "cqxmPWhMGC4",
+    "publishAt": "2026-11-17T16:00:00Z"
+   }
+  ]
  }
 }

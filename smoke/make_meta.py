@@ -33,7 +33,7 @@ def main():
         for v in story.get('abTest') or []: v['title'] = v.get('title', '').replace('{min}', mins)
         story['title'] = story['title'].replace('{min}', mins)
         meta = {'title': (story.get('abTest') or [{'title': story['title']}])[0]['title'][:100], 'description': desc[:4900], 'tags': (BASE_TAGS + story.get('tags', []))[:30], 'categoryId': '24',
-                'privacy': 'private', 'publishAt': when, 'thumbnail': os.path.join(outdir, 'thumb.jpg'), 'captions': summ['srt'], 'long': True, 'linkPlaylists': ['sb-shorts'],
+                'privacy': 'private', 'publishAt': when, 'thumbnail': os.path.join(outdir, 'thumb.jpg'), 'captions': summ['srt'] if os.path.exists(summ.get('srt') or '') else os.path.join(outdir, os.path.basename(summ.get('srt') or '')), 'long': True, 'linkPlaylists': ['sb-shorts'],
                 'playlists': summ.get('playlists', ['sb-episodes']), 'comment': '📚 Sources for this episode:\n' + src + '\n\nSpotted a mistake? Tell us below and we will pin the correction.',
                 'localizations': story.get('localizations', {})}
         f = os.path.join(outdir, 'meta.json')
