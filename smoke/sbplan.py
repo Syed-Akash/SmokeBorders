@@ -29,6 +29,10 @@ def today_jobs(now=None):
         elif e['status'] == 'rendered' and days <= 5: jobs.append((days, 'UPLOAD %s: first `cd studio && ./py wip.py restore <id>` (a finished render comes back ready: video, Shorts, meta.json, thumb; no re-render), then thumbnail, meta, upload the episode, then cut both Shorts (cut_shorts.py %s auto) and upload them scheduled for %s; publish %s (RUNBOOK 3).' % (e['id'], e['id'], ' and '.join(s['publish'] for s in e.get('shorts', [])), e['publish'])))
         if e.get('replaces') and jobs and jobs[-1][1].startswith(('RENDER', 'UPLOAD')) and e['id'] in jobs[-1][1]: jobs[-1] = (jobs[-1][0], jobs[-1][1] + ' This REPLACES the old scheduled upload %s: its old saved pieces were already cleared, so wip restore only brings back this re-render\'s own pieces. Only after the new upload succeeds run `YT_CHANNEL=smoke python3 upload.py --replace %s <new id>`, then drop "replaces" from plan.json.' % (e['replaces'], e['replaces']))
         if e.get('angle') and jobs and e['id'] in jobs[-1][1] and jobs[-1][1].startswith(('WRITE', 'RENDER')): jobs[-1] = (jobs[-1][0], jobs[-1][1] + ' ANGLE: ' + e['angle'])
+    # one-time channel fixes (16 Nov 2026): description, clean keywords, category Education, captions on the Pig War
+    try: cs = json.load(open(os.path.join(HERE, 'channel_setup.json')))
+    except Exception: cs = {'done': True}
+    if not cs.get('done'): jobs.append((5, 'SETUP the channel once: cd studio && ./py wip.py restore sb-pig-war, then YT_CHANNEL=smoke ./py ../smoke/channel_setup.py --captions dr-cHJ-YyDk <the sb-pig-war .srt from the restored files>; commit smoke/channel_setup.json (it records done)'))
     # the redo queue (owner, 14 Nov 2026): one redo job per run, only when nothing urgent is rendering
     if not rendered and not any(j.startswith(('LATE', 'UPLOAD')) for _, j in jobs):
         r = next((x for x in p.get('redo', []) if x['status'] != 'held'), None)

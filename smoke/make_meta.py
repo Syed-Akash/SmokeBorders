@@ -22,7 +22,7 @@ def main():
         first = story.get('hook') or (story.get('intro') or {}).get('beats', [{}])[0].get('say', '')
         full = 'The full story, from both sides: "%s"%s' % ((parent.get('abTest') or [{'title': parent['title']}])[0]['title'], (' https://youtu.be/' + ep['videoId']) if ep.get('videoId') else ' on Smoke & Borders.')
         meta = {'title': title[:100], 'description': '%s\n\n%s\n\n📚 Source:\n%s\n\n#history #shorts #documentary' % (first, full, src),
-                'tags': BASE_TAGS + parent.get('tags', []), 'categoryId': '24', 'privacy': 'private', 'publishAt': when, 'playlists': ['sb-shorts'], 'linkPlaylists': ['sb-episodes'], 'comment': ('Would you have done the same? 👇\n\n' + full)}
+                'tags': BASE_TAGS + parent.get('tags', []), 'categoryId': '27', 'privacy': 'private', 'publishAt': when, 'playlists': ['sb-shorts'], 'linkPlaylists': ['sb-episodes'], 'comment': ('Would you have done the same? 👇\n\n' + full)}
         f = os.path.join(outdir, 'short-%s.meta.json' % n)
     else:
         desc = '\n'.join([story.get('hook', ''), '', story.get('about', ''), '', '⏱️ Chapters', *summ['chapters'], '',
@@ -32,7 +32,7 @@ def main():
         mins = str(max(1, round(float(summ.get('duration') or summ.get('total') or 0) / 60)))
         for v in story.get('abTest') or []: v['title'] = v.get('title', '').replace('{min}', mins)
         story['title'] = story['title'].replace('{min}', mins)
-        meta = {'title': (story.get('abTest') or [{'title': story['title']}])[0]['title'][:100], 'description': desc[:4900], 'tags': (BASE_TAGS + story.get('tags', []))[:30], 'categoryId': '24',
+        meta = {'title': (story.get('abTest') or [{'title': story['title']}])[0]['title'][:100], 'description': desc[:4900], 'tags': (BASE_TAGS + story.get('tags', []))[:30], 'categoryId': '27',
                 'privacy': 'private', 'publishAt': when, 'thumbnail': os.path.join(outdir, 'thumb.jpg'), 'captions': summ['srt'] if os.path.exists(summ.get('srt') or '') else os.path.join(outdir, os.path.basename(summ.get('srt') or '')), 'long': True, 'linkPlaylists': ['sb-shorts'],
                 'playlists': summ.get('playlists', ['sb-episodes']), 'comment': '📚 Sources for this episode:\n' + src + '\n\nSpotted a mistake? Tell us below and we will pin the correction.',
                 'localizations': story.get('localizations', {})}

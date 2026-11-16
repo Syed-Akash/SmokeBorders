@@ -58,7 +58,7 @@ def upload(video, meta):
         try: meta['description'] = with_playlist_links(tok, meta.get('description', ''), (meta.get('playlists') or []) + (meta.get('linkPlaylists') or []))
         except Exception as e: print('playlist links skipped:', e, file=sys.stderr)
     body = {'snippet': {'title': meta['title'][:100], 'description': meta.get('description', '')[:5000], 'tags': meta.get('tags', []),
-                        'categoryId': '24', 'defaultLanguage': 'en', 'defaultAudioLanguage': 'en'},
+                        'categoryId': '27', 'defaultLanguage': 'en', 'defaultAudioLanguage': 'en'},
             'status': status}
     loc = {k: {'title': v['title'][:100], 'description': v.get('description', '')[:5000]} for k, v in (meta.get('localizations') or {}).items() if v.get('title')}
     if loc: body['localizations'] = loc   # translated titles/descriptions: the same video shows in the viewer's language
@@ -238,5 +238,11 @@ if __name__ == '__main__':
     if sys.argv[1:] == ['--whoami']: print(*whoami(token()), sep='  |  '); sys.exit()
     if sys.argv[1:] == ['--recent']: [print(*v, sep='  |  ') for v in recent(token())]; sys.exit()
     res = upload(sys.argv[1], json.load(open(sys.argv[2])))
+    srt = os.path.splitext(sys.argv[1])[0] + '.srt'   # captions with every upload (16 Nov 2026: search and accessibility)
+    if os.path.exists(srt) and isinstance(res, dict) and res.get('id'):
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'smoke')); import channel_setup
+            res['captions'] = channel_setup.captions(token(), res['id'], srt)
+        except Exception as e: res['captions'] = 'captions error: %s' % e
     json.dump(res, open(os.path.splitext(sys.argv[2])[0] + '.result.json', 'w'), indent=1)   # keep the link even if the log is lost
     print(json.dumps(res, indent=1))
