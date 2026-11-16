@@ -22,12 +22,14 @@ def today_jobs(now=None):
             continue
         days = (datetime.datetime.fromisoformat(e['publish'].replace('Z', '+00:00')) - now).total_seconds() / 86400
         if days < 0: jobs.append((0, 'LATE: %s was due %s and is still "%s". Finish it and upload it for the next free 16:00 UTC (move the later episodes down 3 days in plan.json, Shorts with them).' % (e['id'], e['publish'], e['status']))); continue
+        if e['status'] == 'storyboard': continue   # a redo still in the redo queue (its REDO job finishes it)
         if e['status'] == 'idea' and days <= 7 and not wrote:
             wrote = True; jobs.append((days, 'WRITE %s ("%s"), publishes %s. Research, then write doc/stories/%s.json by smoke/STYLE.md, with its two "shorts" (RUNBOOK 1.3c).' % (e['id'], e['title'], e['publish'], e['id'])))
         elif e['status'] == 'scripted' and days <= 4.5 and not rendered:   # film episodes take two runs to render, so start a day earlier
             rendered = True; jobs.append((days, 'RENDER %s: ./py wip.py restore; ./py make_doc.py <id> --pacing: it must be 25-45 minutes (25 is fine when the story is fully told; never pad), aiming for 30-35 when the story has that much, with every gap fixed (STYLE.md 3); check the storyboard sheets (studio/storysheet.py, STYLE.md 2e: picture matches the words, no repeats, everyone cast) and fix them; then render with --resume; save with wip.py every ~15 min and do not end the run while it renders (RUNBOOK 2). Then go straight on to UPLOAD in the same run.' % e['id']))
         elif e['status'] == 'rendered' and days <= 5: jobs.append((days, 'UPLOAD %s: first `cd studio && ./py wip.py restore <id>` (a finished render comes back ready: video, Shorts, meta.json, thumb; no re-render), then thumbnail, meta, upload the episode, then cut both Shorts (cut_shorts.py %s auto) and upload them scheduled for %s; publish %s (RUNBOOK 3).' % (e['id'], e['id'], ' and '.join(s['publish'] for s in e.get('shorts', [])), e['publish'])))
         if e.get('replaces') and jobs and jobs[-1][1].startswith(('RENDER', 'UPLOAD')) and e['id'] in jobs[-1][1]: jobs[-1] = (jobs[-1][0], jobs[-1][1] + ' This REPLACES the old scheduled upload %s: its old saved pieces were already cleared, so wip restore only brings back this re-render\'s own pieces. Only after the new upload succeeds run `YT_CHANNEL=smoke python3 upload.py --replace %s <new id>`, then drop "replaces" from plan.json.' % (e['replaces'], e['replaces']))
+        if e.get('oldVideoId') and jobs and e['id'] in jobs[-1][1] and jobs[-1][1].startswith(('RENDER', 'UPLOAD')): jobs[-1] = (jobs[-1][0], jobs[-1][1] + ' OWNER DECISION 17 Nov 2026: the old channel is deleted and this redo now goes on the new channel like any episode. This overrides the "never upload a redo" line in the task instructions.')
         if e.get('angle') and jobs and e['id'] in jobs[-1][1] and jobs[-1][1].startswith(('WRITE', 'RENDER')): jobs[-1] = (jobs[-1][0], jobs[-1][1] + ' ANGLE: ' + e['angle'])
     # one-time channel fixes (16 Nov 2026): description, clean keywords, category Education, captions on the Pig War
     try: cs = json.load(open(os.path.join(HERE, 'channel_setup.json')))
@@ -38,7 +40,7 @@ def today_jobs(now=None):
         r = next((x for x in p.get('redo', []) if x['status'] != 'held'), None)
         if r: jobs.append((50, 'REDO %s (%s): %s' % (r['id'], r['status'], {
             'storyboard': 'its film storyboard is done (tools/storyboard/<id>.py); add the acted dialogue, comparisons and callbacks of STYLE.md 2c (a cast entry and voice per speaker), keep it 25-45 minutes, never padded; storyboard anything new by STYLE.md 2b (every spoken beat its own shot; real archival photos with smoke/photo.py listed in "photos"; "film": true; the hook formulas; the three final thumbnails); pass the FILM CHECK (--pacing), then set its redo status to render',
-            'render': 'render it (wip.py restore/save, --resume), cut both Shorts (cut_shorts.py <id> auto), make the thumbnails (make_thumb_sb.py --ab), then set its redo status to held. DO NOT UPLOAD: the owner decides where it goes'}[r['status']])))
+            'render': 'render it (wip.py restore/save, --resume), cut both Shorts (cut_shorts.py <id> auto), make the thumbnails (make_thumb_sb.py --ab), then set its episode status to rendered (sbplan.py set <id> rendered) and remove it from the redo list'}[r['status']])))
     if now.weekday() == 0: jobs.append((99, 'REVIEW: weekly competitor watch + our channel numbers -> smoke/LEARNINGS.md, and update STYLE.md / plan.json if the numbers say so.'))
     return [j for _, j in sorted(jobs)]
 

@@ -2,71 +2,6 @@
  "note": "Episode queue. status: idea -> scripted (story JSON written + checked) -> rendered (mp4 + thumbs + both Shorts cut) -> uploaded. publish = UTC. Cadence (owner, 11 Nov 2026, replaces the 4-day rhythm of 7 Nov): ONE video a day at most, all at 16:00 UTC (11:00 New York, 16:00 London, 21:00 Pakistan). Day 1 the long episode (30-45 minutes, aim 30-35, built around a hidden person, STYLE.md 1); day 2 Short 1 = the story's opening, cut from the episode; day 3 Short 2 = a special moment from the middle, cut from the episode; day 4 the next episode. Both Shorts are cut and uploaded (scheduled) in the same run as the episode, so no separate Short writing. Trial review on 5 Dec 2026. An episode that isn't ready (pacing passed, sources opened) waits a day rather than going out rushed.",
  "episodes": [
   {
-   "id": "sb-american-revolution",
-   "title": "How Britain Lost America: The American Revolution From Both Sides",
-   "publish": "2026-11-06T18:00:00Z",
-   "status": "uploaded",
-   "audience": "US UK CA DE",
-   "videoId": "y2nbDhzbAN8",
-   "published": "2026-11-06 (about 19:00 UTC, late slot)",
-   "note": "Uploaded from the owner's session; its shorts were not recorded here. Duration 19:11.",
-   "shorts": [
-    {
-     "publish": "2026-11-08T16:00:00Z",
-     "done": true,
-     "note": "Short 1 (Adams) rendered 2026-11-09 but dropped: the next Short was due within a day (runbook). Cut file not uploaded."
-    },
-    {
-     "publish": "2026-11-09T16:00:00Z",
-     "done": true
-    },
-    {
-     "publish": "2026-11-10T16:00:00Z",
-     "done": true
-    }
-   ]
-  },
-  {
-   "id": "sb-rome-carthage",
-   "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
-   "publish": "2026-11-11T16:00:00Z",
-   "status": "uploaded",
-   "audience": "US UK EU",
-   "shorts": [
-    {
-     "publish": "2026-11-12T16:00:00Z",
-     "done": true
-    },
-    {
-     "publish": "2026-11-13T16:00:00Z",
-     "done": true,
-     "note": "Dropped on 11 Nov 2026: the cadence changed to two Shorts cut from the episode, and the Rome render is gone, so 13 Nov stays empty."
-    }
-   ],
-   "videoId": "dfkC_dDN5M8",
-   "angle": "Hidden person: Hasdrubal the Boetharch's wife, who cursed him for surrendering and threw herself and her children into the burning temple (Appian, Punic Wars). Also: Hannibal's oath at 9 (Polybius). Expand to 30+ minutes before the render."
-  },
-  {
-   "id": "sb-korea-38th",
-   "title": "How Two Men and a Map Split Korea",
-   "publish": "2026-11-15T16:00:00Z",
-   "status": "uploaded",
-   "audience": "US CA AU",
-   "shorts": [
-    {
-     "publish": "2026-11-16T16:00:00Z",
-     "done": true
-    },
-    {
-     "publish": "2026-11-17T16:00:00Z",
-     "done": true
-    }
-   ],
-   "note": "Owner, 12 Nov 2026: re-render in the new style (cinematic cold open, new titles and thumbnails) and cut both Shorts. The old scheduled upload o6vPJ6TSsAk is deleted with `upload.py --replace o6vPJ6TSsAk <new id>` only AFTER the new one is uploaded. If the render can't finish before 15 Nov 16:00 UTC, publish the new one a day later and move the rest down a day.",
-   "angle": "Hidden people: Dean Rusk and Charles Bonesteel, two young officers who drew the line in about 30 minutes with a National Geographic map.",
-   "videoId": "bWtNC0Mk7hg"
-  },
-  {
    "id": "sb-pig-war",
    "title": "The Pig War: How ONE Pig Nearly Started a War Between Britain and America",
    "publish": "2026-11-15T16:00:00Z",
@@ -87,6 +22,24 @@
    "videoId": "dr-cHJ-YyDk"
   },
   {
+   "id": "sb-american-revolution",
+   "title": "How Britain Lost America: The American Revolution From Both Sides",
+   "publish": "2026-11-18T16:00:00Z",
+   "status": "rendered",
+   "audience": "US UK CA DE",
+   "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode.",
+   "shorts": [
+    {
+     "publish": "2026-11-19T16:00:00Z"
+    },
+    {
+     "publish": "2026-11-20T16:00:00Z"
+    }
+   ],
+   "oldVideoId": "y2nbDhzbAN8",
+   "channel": "new"
+  },
+  {
    "id": "sb-ww2-both-sides",
    "title": "How World War II Happened — Minute by Minute",
    "publish": "2026-11-21T16:00:00Z",
@@ -103,11 +56,11 @@
    "angle": "Hidden person: William Patrick Hitler, Hitler's British-born nephew, who joined the US Navy to fight his uncle. Thumbnail 'HITLER'S NEPHEW?'."
   },
   {
-   "id": "sb-western-front",
-   "title": "Your Life on Both Sides of the Western Front",
+   "id": "sb-rome-carthage",
+   "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
    "publish": "2026-11-24T16:00:00Z",
-   "status": "idea",
-   "audience": "UK AU CA DE",
+   "status": "scripted",
+   "audience": "US UK EU",
    "shorts": [
     {
      "publish": "2026-11-25T16:00:00Z"
@@ -116,14 +69,17 @@
      "publish": "2026-11-26T16:00:00Z"
     }
    ],
-   "angle": "Find one: a soldier or nurse on each side whose letters survive."
+   "angle": "Hidden person: Hasdrubal the Boetharch's wife, who cursed him for surrendering and threw herself and her children into the burning temple (Appian, Punic Wars). Also: Hannibal's oath at 9 (Polybius). Expand to 30+ minutes before the render.",
+   "oldVideoId": "dfkC_dDN5M8",
+   "channel": "new",
+   "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode."
   },
   {
-   "id": "sb-berlin-wall",
-   "title": "The Wall That Opened by MISTAKE",
+   "id": "sb-western-front",
+   "title": "Your Life on Both Sides of the Western Front",
    "publish": "2026-11-27T16:00:00Z",
    "status": "idea",
-   "audience": "DE US UK",
+   "audience": "UK AU CA DE",
    "shorts": [
     {
      "publish": "2026-11-28T16:00:00Z"
@@ -132,14 +88,14 @@
      "publish": "2026-11-29T16:00:00Z"
     }
    ],
-   "angle": "Hidden person: Günter Schabowski and the note he hadn't read; the border guard Harald Jäger who opened the gate."
+   "angle": "Find one: a soldier or nurse on each side whose letters survive."
   },
   {
-   "id": "sb-cuban-missile",
-   "title": "13 Days From the End of the World: The Cuban Missile Crisis From Both Sides",
+   "id": "sb-korea-38th",
+   "title": "How Two Men and a Map Split Korea",
    "publish": "2026-11-30T16:00:00Z",
-   "status": "idea",
-   "audience": "US",
+   "status": "storyboard",
+   "audience": "US CA AU",
    "shorts": [
     {
      "publish": "2026-12-01T16:00:00Z"
@@ -148,14 +104,17 @@
      "publish": "2026-12-02T16:00:00Z"
     }
    ],
-   "angle": "Hidden person: Vasili Arkhipov, the submarine officer who refused to launch."
+   "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode.",
+   "angle": "Hidden people: Dean Rusk and Charles Bonesteel, two young officers who drew the line in about 30 minutes with a National Geographic map.",
+   "oldVideoId": "bWtNC0Mk7hg",
+   "channel": "new"
   },
   {
-   "id": "sb-shortest-war",
-   "title": "The Shortest War EVER (38 Minutes)",
+   "id": "sb-berlin-wall",
+   "title": "The Wall That Opened by MISTAKE",
    "publish": "2026-12-03T16:00:00Z",
    "status": "idea",
-   "audience": "UK",
+   "audience": "DE US UK",
    "shorts": [
     {
      "publish": "2026-12-04T16:00:00Z"
@@ -164,20 +123,52 @@
      "publish": "2026-12-05T16:00:00Z"
     }
    ],
-   "angle": "Widen to the Scramble for Africa through Zanzibar; hidden person: Khalid bin Barghash, sultan for two days."
+   "angle": "Hidden person: Günter Schabowski and the note he hadn't read; the border guard Harald Jäger who opened the gate."
   },
   {
-   "id": "sb-mongols",
-   "title": "The Mongols: The Empire That Ignored Every Border",
+   "id": "sb-cuban-missile",
+   "title": "13 Days From the End of the World: The Cuban Missile Crisis From Both Sides",
    "publish": "2026-12-06T16:00:00Z",
    "status": "idea",
-   "audience": "global",
+   "audience": "US",
    "shorts": [
     {
      "publish": "2026-12-07T16:00:00Z"
     },
     {
      "publish": "2026-12-08T16:00:00Z"
+    }
+   ],
+   "angle": "Hidden person: Vasili Arkhipov, the submarine officer who refused to launch."
+  },
+  {
+   "id": "sb-shortest-war",
+   "title": "The Shortest War EVER (38 Minutes)",
+   "publish": "2026-12-09T16:00:00Z",
+   "status": "idea",
+   "audience": "UK",
+   "shorts": [
+    {
+     "publish": "2026-12-10T16:00:00Z"
+    },
+    {
+     "publish": "2026-12-11T16:00:00Z"
+    }
+   ],
+   "angle": "Widen to the Scramble for Africa through Zanzibar; hidden person: Khalid bin Barghash, sultan for two days."
+  },
+  {
+   "id": "sb-mongols",
+   "title": "The Mongols: The Empire That Ignored Every Border",
+   "publish": "2026-12-12T16:00:00Z",
+   "status": "idea",
+   "audience": "global",
+   "shorts": [
+    {
+     "publish": "2026-12-13T16:00:00Z"
+    },
+    {
+     "publish": "2026-12-14T16:00:00Z"
     }
    ],
    "angle": "Find one: a person on the receiving end (a city's governor, a merchant, an envoy)."
@@ -191,20 +182,10 @@
  "reviewTrial": "2026-12-05",
  "redo": [
   {
-   "id": "sb-american-revolution",
-   "status": "held",
-   "note": "published on the old channel as y2nbDhzbAN8; 15 Nov 2026: 26.1 min, 10 chapters, 34 acted exchanges, FILM CHECK passed; voice clips on wip/sb-american-revolution; 15 Nov 2026: RENDERED in the film style (26.1 min, Turbo voice), Short 1 = cold open 0:00-0:44, Short 2 = father vs son 9:45-10:43, thumbnails in smoke/ab; finished files on wip/sb-american-revolution. HELD: the owner decides new channel or old."
-  },
-  {
-   "id": "sb-rome-carthage",
-   "status": "render",
-   "note": "published on the old channel as dfkC_dDN5M8; 16 Nov 2026: film storyboard finished (tools/storyboard/rome.py, rome_talk.py, rome_fix.py, in that order): 32.8 min, 11 chapters, 40 acted exchanges (31 new, 28 people cast), 34 acted scenes, 21 distinct photos, FILM CHECK passed. Missing Commons photos (han3-5, sci2-3, ruins2) are fetched at render; each has a drawn fallback."
-  },
-  {
    "id": "sb-korea-38th",
    "status": "storyboard",
    "note": "scheduled on the old channel for 15 Nov 2026 (bWtNC0Mk7hg); the owner let it go out"
   }
  ],
- "redoNote": "Owner, 14 Nov 2026: redo the first three long episodes in the film style (STYLE.md 2b), each with both Shorts cut, then HOLD: do not upload anywhere until the owner decides (new channel or old). status: storyboard -> render -> held."
+ "redoNote": "Owner, 17 Nov 2026: the old channel is deleted, so the redos are regular new-channel episodes in 'episodes' (AmRev 18 Nov, Rome 24 Nov, Korea 30 Nov). Korea still needs its dialogue pass here; when done, set its episode status to scripted (sbplan.py set sb-korea-38th scripted) and empty this list."
 }

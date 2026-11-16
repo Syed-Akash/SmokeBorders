@@ -92,15 +92,15 @@ take two runs.
   with that account (the new email must be a test user of the OAuth app, or the app published), and the decision where
   the redone episodes go. Until the token is in, runs do everything except upload.
 
-## Where things stand (14 Nov 2026)
-- Old channel (UChRyy_-XdfEp04lyQA1WoJg, @SmokeBorders): American Revolution (y2nbDhzbAN8, published), Rome vs Carthage
-  (dfkC_dDN5M8, published), Korea (bWtNC0Mk7hg, goes public 15 Nov 9 pm Pakistan; the owner let it go out, map-heavy).
-  New thumbnails + two-formula titles for the first two are in smoke/ab/ for the owner's Test & Compare.
-- **Redo queue** (`plan.json` "redo"): American Revolution, Rome vs Carthage and Korea get redone in the film style, with
-  their Shorts, then HELD (no upload) until the owner decides new channel or old.
-- **Pig War** (`sb-pig-war`): the first new-channel video, moved to TODAY 15 Nov 16:00 UTC by the owner. Rendered on 15 Nov in
-  the approved style (33.8 min, 34 acted scenes, 29 dialogues); video, Shorts (16 and 17 Nov), meta and cover saved on
-  wip/sb-pig-war for the run's UPLOAD job (needs the new-channel token in the task's environment). Next: WW2 both sides (21 Nov), then every 3 days (see plan.json).
+## Where things stand (17 Nov 2026)
+- **The old channel (@SmokeBorders) is deleted** (owner, 17 Nov). Everything goes on @SmokeAndBorders.
+- Pig War (dr-cHJ-YyDk) is out (15 Nov) with both Shorts; the first days had almost no views (new channel). Channel description,
+  keywords and Education category fixed on 16 Nov (smoke/channel_setup.py); captions go up with every upload. The owner adds
+  @PlayFlagbomb as a collaborator on videos (Studio invite link, opened while signed in as FlagBomb).
+- **The redos are now regular episodes** (owner, 17 Nov): American Revolution 18 Nov (rendered, on wip/), WW2 21 Nov, Rome
+  24 Nov (storyboard done, renders ~20 Nov), Western Front 27 Nov, Korea 30 Nov (still needs its dialogue pass via the REDO job),
+  then Berlin Wall, Cuban Missile Crisis, Shortest War, Mongols every 3 days. plan.json has the dates.
+- Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 
 ## Map of the repo
