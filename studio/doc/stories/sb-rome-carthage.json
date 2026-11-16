@@ -8,7 +8,29 @@
   "HAN": "bm_fable",
   "SCI": "am_michael",
   "FAB": "bm_lewis",
-  "CAT": "bm_daniel"
+  "CAT": "bm_daniel",
+  "SEN2": "am_adam",
+  "MAM": "am_fenrir",
+  "LEG": "am_puck",
+  "LEG2": "am_adam",
+  "ROWER": "am_puck",
+  "CAPT": "am_fenrir",
+  "PRIEST": "bm_daniel",
+  "PUL": "bm_lewis",
+  "SAIL": "am_adam",
+  "COUNC": "bm_lewis",
+  "HAM": "am_fenrir",
+  "BOY": "am_puck",
+  "MERC": "am_fenrir",
+  "ENVOY": "bm_fable",
+  "GAUL": "am_fenrir",
+  "MULE": "am_adam",
+  "YSCI": "am_michael",
+  "OFFC": "bm_daniel",
+  "MAS": "am_adam",
+  "NAS": "am_michael",
+  "AEM": "am_michael",
+  "POLY": "bm_daniel"
  },
  "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
  "era": "bc300",
@@ -556,7 +578,7 @@
      "lat": 39,
      "scale": 1500
     },
-    "say": "This is the end of Rome versus Carthage. The Punic Wars, 264 to 146 BC. Three wars, one hundred and eighteen years, and two of the most powerful cities in the ancient world.",
+    "say": "This is the end of Rome versus Carthage. The war of Hannibal, and his elephants over the Alps. The Punic Wars, 264 to 146 BC. Three wars, one hundred and eighteen years, and two of the most powerful cities in the ancient world.",
     "do": [
      {
       "on": "Rome",
@@ -990,6 +1012,40 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CAR",
+       "text": "As much land as an ox hide covers?"
+      },
+      {
+       "who": "CAR",
+       "text": "Fetch me a very sharp knife.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "sea",
+        "y": 0.8,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": 5,
       "lat": 38,
@@ -1220,8 +1276,26 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -1357,6 +1431,50 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MAM",
+       "text": "Write to Carthage. Ask for help."
+      },
+      {
+       "who": "MAM",
+       "text": "And write to Rome as well."
+      },
+      {
+       "who": "MAM",
+       "text": "Both?"
+      },
+      {
+       "who": "MAM",
+       "text": "Whoever comes first.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 150,
+        "h": 140,
+        "col": "#2a2018",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.7,
+        "r": 200,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "This was a terrible idea. Two great powers, both invited into the same small town, by the same people, who were loyal to nobody.",
@@ -1500,6 +1618,50 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "LEG",
+       "text": "Whose town is this, then?"
+      },
+      {
+       "who": "LEG2",
+       "text": "Not ours."
+      },
+      {
+       "who": "LEG",
+       "text": "Not theirs either."
+      },
+      {
+       "who": "LEG2",
+       "text": "Then let's hold it.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 150,
+        "h": 140,
+        "col": "#2a2018",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.7,
+        "r": 200,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Both sides believed they were defending themselves. Both sides were partly right. And so began a war over a town that neither of them had owned.",
@@ -1757,6 +1919,17 @@
      }
     },
     {
+     "say": "A hundred and twenty ships in sixty days. That is two warships, every single day, for two months.",
+     "scene": {
+      "shot": "card",
+      "time": "2 A DAY",
+      "place": "WARSHIPS, FOR 60 DAYS",
+      "date": "Rome, 260 BC",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "say": "They probably copied Carthaginian ships they had captured. And while the ships were still being built, the rowers practised on wooden benches, on dry land.",
      "do": [
       {
@@ -1846,6 +2019,48 @@
     {
      "talk": [
       {
+       "who": "ROWER",
+       "text": "When do we get a sea?"
+      },
+      {
+       "who": "CAPT",
+       "text": "When the ship is finished. Row."
+      },
+      {
+       "who": "ROWER",
+       "text": "It's sand, sir."
+      },
+      {
+       "who": "CAPT",
+       "text": "Row harder.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "sea",
+        "y": 0.8,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
        "who": "CAR",
        "text": "Is that our ship design?"
       },
@@ -1855,8 +2070,35 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": -0.2,
+        "x1": 0.5,
+        "y": 0.6,
+        "h": 90,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.5,
+        "s": 0.55,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
      }
     },
     {
@@ -1961,6 +2203,43 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SAIL",
+       "text": "What's that thing on the front?",
+       "mood": "shock"
+      },
+      {
+       "who": "LEG",
+       "text": "A bridge. Coming over.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.2,
+        "s": 0.6,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 420,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -2234,6 +2513,46 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "COUNC",
+       "text": "We need a general who has beaten Romans."
+      },
+      {
+       "who": "COUNC",
+       "text": "...Do we have one?"
+      },
+      {
+       "who": "COUNC",
+       "text": "We can hire one.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Then the sea itself joined the war. The Roman fleet that rescued the survivors sailed into a storm. Ancient writers say as many as a hundred thousand men drowned. More storms followed. Rome lost whole fleets to the weather, without a single enemy in sight.",
      "do": [
       {
@@ -2311,6 +2630,47 @@
        "rain"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "ROWER",
+       "text": "Which enemy is this?",
+       "mood": "shock"
+      },
+      {
+       "who": "CAPT",
+       "text": "The weather.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.2,
+        "s": 0.6,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 400,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "weather": "storm",
+      "fx": [
+       "rain"
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -2391,6 +2751,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "PRIEST",
+       "text": "Admiral... the chickens won't eat.",
+       "mood": "sad"
+      },
+      {
+       "who": "PUL",
+       "text": "Then let them drink.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.2,
+        "s": 0.6,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 420,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "He lost ninety three of his hundred and twenty ships.",
      "do": [
       {
@@ -2412,6 +2809,17 @@
       "date": "Drepana, 249 BC",
       "size": 170
      }
+    },
+    {
+     "say": "Ninety three out of a hundred and twenty. Nearly four ships in every five.",
+     "scene": {
+      "shot": "card",
+      "time": "93 OF 120",
+      "place": "SHIPS LOST",
+      "date": "Drepana, 249 BC",
+      "size": 170
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -2649,6 +3057,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SAIL",
+       "text": "Roman warships! Hundreds!",
+       "mood": "shock"
+      },
+      {
+       "who": "SAIL",
+       "text": "And we are carrying grain.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.2,
+        "s": 0.6,
+        "flag": "red",
+        "y": 0.66,
+        "gap": 420,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Hamilcar's men were still holding out on their mountain. But Carthage told him to make peace.",
      "do": [
       {
@@ -2784,6 +3229,17 @@
      }
     },
     {
+     "say": "Three thousand two hundred talents over ten years. Three hundred and twenty talents of silver, every year, for a decade.",
+     "scene": {
+      "shot": "card",
+      "time": "320 A YEAR",
+      "place": "TALENTS OF SILVER",
+      "date": "for 10 years, from 241 BC",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "say": "Then Carthage could not pay its own mercenaries. They rebelled, and Carthage spent years fighting its own army in Africa. Hamilcar led the side that saved the city.",
      "do": [
       {
@@ -2827,6 +3283,55 @@
        "smoke"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "MERC",
+       "text": "Where is our pay?",
+       "mood": "angry"
+      },
+      {
+       "who": "COUNC",
+       "text": "Rome has it. Well, it will have.",
+       "mood": "sad"
+      },
+      {
+       "who": "MERC",
+       "text": "Then we take the city.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.1,
+        "gap": 240,
+        "col": "#a08060",
+        "fire": 0.4,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -2912,8 +3417,27 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
      }
     },
     {
@@ -3194,6 +3718,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "HAM",
+       "text": "Put your hand on the altar."
+      },
+      {
+       "who": "BOY",
+       "text": "I swear I will never be a friend to Rome."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": null,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#1a120c"
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.74,
+        "r": 260,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "embers"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Hamilcar died in Spain in 229 BC. His son-in-law, Hasdrubal, took over, and signed a deal with Rome. Carthage would stay south of the river Ebro.",
      "do": [
       {
@@ -3258,6 +3819,46 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "ENVOY",
+       "text": "You stay south of the Ebro."
+      },
+      {
+       "who": "CAR",
+       "text": "And you stay north of it."
+      },
+      {
+       "who": "ENVOY",
+       "text": "We never said that.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 31,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -3464,6 +4065,51 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "ENVOY",
+       "text": "Hand over Hannibal."
+      },
+      {
+       "who": "COUNC",
+       "text": "No."
+      },
+      {
+       "who": "ENVOY",
+       "text": "Then it is war.",
+       "mood": "angry"
+      },
+      {
+       "who": "COUNC",
+       "text": "Then it is war.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     }
    ]
   },
@@ -3708,8 +4354,27 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 31,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -3963,6 +4628,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "MULE",
+       "text": "The elephant will not move."
+      },
+      {
+       "who": "MULE",
+       "text": "It is from Africa. It has never seen snow.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.4,
+        "n": 3,
+        "seed": 4,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.7,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow",
+      "fx": [
+       "fog"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Livy says the crossing took sixteen days. Exactly which pass he used is still argued about, more than two thousand two hundred years later. One recent study points to a high pass on today's border between France and Italy.",
      "do": [
       {
@@ -4115,6 +4817,17 @@
        }
       ]
      }
+    },
+    {
+     "say": "About fifty nine thousand men and horsemen went up. About twenty six thousand came down. Fewer than one in two made it.",
+     "scene": {
+      "shot": "card",
+      "time": "26,000 LEFT",
+      "place": "OF ABOUT 59,000",
+      "date": "northern Italy, 218 BC",
+      "size": 150
+     },
+     "_new": 1
     },
     {
      "say": "Now the other side. In Rome, they could hardly believe it. The war they had planned to fight in Spain and Africa was suddenly in Italy.",
@@ -4322,6 +5035,61 @@
       ],
       "weather": "snow"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GAUL",
+       "text": "You came over the mountains? To fight Rome?"
+      },
+      {
+       "who": "HAN",
+       "text": "Yes."
+      },
+      {
+       "who": "GAUL",
+       "text": "Then we are coming with you.",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 5,
+        "x0": 0.1,
+        "gap": 220,
+        "col": "#e8e0c8",
+        "fire": 0.45,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 30,
+        "seed": 8,
+        "h": 160,
+        "depth": 0.45
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "He had crossed the Alps to break Rome's alliance. Would Rome's friends switch sides? That was the question the whole war now hung on.",
@@ -4555,6 +5323,51 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "LEG",
+       "text": "I can't see a thing."
+      },
+      {
+       "who": "LEG2",
+       "text": "Neither can they."
+      },
+      {
+       "who": "LEG",
+       "text": "...Then who is on that hill?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "At least fifteen thousand Romans were killed. Flaminius died with them.",
      "do": [
       {
@@ -4703,6 +5516,45 @@
     {
      "talk": [
       {
+       "who": "SEN2",
+       "text": "Another day without a battle?",
+       "mood": "angry"
+      },
+      {
+       "who": "ROM",
+       "text": "He calls it a plan."
+      },
+      {
+       "who": "SEN2",
+       "text": "I call it delay."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
        "who": "ROM",
        "text": "We have the biggest army in Italy. Why are we hiding?"
       },
@@ -4712,8 +5564,27 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -4863,6 +5734,42 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GAUL",
+       "text": "You put us in the middle?",
+       "mood": "shock"
+      },
+      {
+       "who": "HAN",
+       "text": "Bend. Don't break."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "The Roman legions pushed the centre back. It bent, but it didn't break. The Romans poured into the gap, deeper and deeper. Then the veterans on the wings turned inward. And Hannibal's cavalry came round behind them.",
@@ -5075,6 +5982,17 @@
      }
     },
     {
+     "say": "Even the lowest estimate is more than seven Romans killed for every man Hannibal lost.",
+     "scene": {
+      "shot": "card",
+      "time": "7 FOR 1",
+      "place": "ROMAN DEATHS FOR EACH OF HANNIBAL'S",
+      "date": "Cannae, 216 BC",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "say": "It was one of the bloodiest single days of fighting in history.",
      "do": [
       {
@@ -5204,6 +6122,43 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "OFFC",
+       "text": "Italy is lost. We should sail away.",
+       "mood": "sad"
+      },
+      {
+       "who": "YSCI",
+       "text": "Swear you will not abandon Rome. All of you. Swear it.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#2a2018"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 3,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     }
    ]
   },
@@ -5361,6 +6316,17 @@
      }
     },
     {
+     "say": "Two hundred thousand men under arms, three years after Cannae. Two and a half times the whole army Rome took to Cannae.",
+     "scene": {
+      "shot": "card",
+      "time": "200,000+",
+      "place": "ROMANS UNDER ARMS",
+      "date": "213 BC",
+      "size": 170
+     },
+     "_new": 1
+    },
+    {
      "talk": [
       {
        "who": "HAN",
@@ -5372,8 +6338,38 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 14,
+        "gap": 130,
+        "h": 160,
+        "col": "#2a2018",
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.3,
+        "y": 0.66,
+        "r": 300,
+        "depth": 0.4
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.68,
+        "r": 260,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
      }
     },
     {
@@ -5443,6 +6439,41 @@
       "img": "hannibal",
       "move": "right"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "COUNC",
+       "text": "He wants more men. And siege engines."
+      },
+      {
+       "who": "COUNC",
+       "text": "He keeps winning. Why does he need anything?"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -5612,6 +6643,49 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "ROM",
+       "text": "Who will take Spain?"
+      },
+      {
+       "who": "YSCI",
+       "text": "I will."
+      },
+      {
+       "who": "ROM",
+       "text": "You are twenty four."
+      },
+      {
+       "who": "YSCI",
+       "text": "So was Hannibal, nearly.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -5832,6 +6906,49 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "MULE",
+       "text": "Something was thrown over the wall, sir."
+      },
+      {
+       "who": "HAN",
+       "text": "I know that face.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.1,
+        "gap": 240,
+        "col": "#a08060",
+        "fire": 0.4,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "cam": {
       "lon": 11,
       "lat": 37.5,
@@ -6040,7 +7157,7 @@
      "talk": [
       {
        "who": "HAN",
-       "text": "Fortune changes. I've seen it change on me."
+       "text": "Fortune changes. I have seen it change on me. Let us make peace."
       },
       {
        "who": "SCI",
@@ -6048,8 +7165,27 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      }
     },
     {
@@ -6173,6 +7309,41 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "MAS",
+       "text": "Our prince rides with Rome now."
+      },
+      {
+       "who": "MAS",
+       "text": "Then so do we."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Hannibal opened with eighty war elephants. But they were badly trained, and they scattered. Some panicked and turned back onto Hannibal's own men.",
      "do": [
       {
@@ -6280,6 +7451,42 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "LEG",
+       "text": "Here they come!",
+       "mood": "shock"
+      },
+      {
+       "who": "LEG2",
+       "text": "Open the lines! Let them through!"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 6,
+        "depth": 0.2
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Then Masinissa's horsemen chased off Hannibal's cavalry, and came back to hit his infantry from behind. It was Cannae, in reverse.",
@@ -6395,6 +7602,17 @@
       "date": "20,000 captured · ≈ 1,500 Romans killed",
       "size": 200
      }
+    },
+    {
+     "say": "About twenty thousand Carthaginians killed, against about fifteen hundred Romans. More than thirteen for one. The numbers of Cannae, turned round.",
+     "scene": {
+      "shot": "card",
+      "time": "13 FOR 1",
+      "place": "THE OTHER WAY ROUND",
+      "date": "Zama, 202 BC",
+      "size": 170
+     },
+     "_new": 1
     },
     {
      "say": "Hannibal escaped. He would never command a Carthaginian army again. And Carthage asked for peace.",
@@ -6546,6 +7764,17 @@
        "Pay 10,000 talents, over 50 years."
       ]
      }
+    },
+    {
+     "say": "Ten thousand talents over fifty years. Two hundred talents a year. Payments that would outlive almost everyone who signed the treaty.",
+     "scene": {
+      "shot": "card",
+      "time": "50 YEARS",
+      "place": "200 TALENTS A YEAR",
+      "date": "peace of 201 BC",
+      "size": 170
+     },
+     "_new": 1
     },
     {
      "say": "Fifty years. That number is important. Rome had built a timer into the treaty, and nobody yet knew what would happen when it ran out.",
@@ -6740,6 +7969,43 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "COUNC",
+       "text": "Where did all this money come from?",
+       "mood": "shock"
+      },
+      {
+       "who": "HAN",
+       "text": "From counting it properly.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "This was good news for Carthage. And it worried people in Rome a great deal. A defeated city that pays its bills on time is a city that is recovering.",
      "do": [
       {
@@ -6802,8 +8068,26 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -6960,6 +8244,42 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "HAN",
+       "text": "Rome is coming. I'd move fast, Your Majesty."
+      },
+      {
+       "who": "ROM",
+       "text": "Hannibal is there? Then we are coming.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#5a3a22"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -7368,6 +8688,41 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CAT",
+       "text": "A fresh fig. From Africa."
+      },
+      {
+       "who": "CAT",
+       "text": "Three days' sail from here.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "And after that, whatever the Senate was voting on, Cato added the same line at the end.",
      "do": [
       {
@@ -7428,8 +8783,26 @@
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
      }
     },
     {
@@ -7497,6 +8870,46 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "NAS",
+       "text": "Carthage must be spared."
+      },
+      {
+       "who": "CAT",
+       "text": "Carthage must be destroyed.",
+       "mood": "angry"
+      },
+      {
+       "who": "ROM",
+       "text": "Can we vote on the drains now?",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5844"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -7742,6 +9155,51 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "ENVOY",
+       "text": "Three hundred children."
+      },
+      {
+       "who": "COUNC",
+       "text": "Here.",
+       "mood": "sad"
+      },
+      {
+       "who": "ENVOY",
+       "text": "Every weapon."
+      },
+      {
+       "who": "COUNC",
+       "text": "...Here.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3d2a55"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 2,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Then Rome made its final demand. Leave the city, and settle at least sixteen kilometres from the sea.",
      "do": [
       {
@@ -7765,6 +9223,17 @@
       "date": "Rome's final demand",
       "size": 220
      }
+    },
+    {
+     "say": "Sixteen kilometres. About a four hour walk from the sea, for a city that lived on ships.",
+     "scene": {
+      "shot": "card",
+      "time": "16 KM",
+      "place": "FROM THE SEA",
+      "date": "Rome's last demand, 149 BC",
+      "size": 170
+     },
+     "_new": 1
     },
     {
      "say": "For a city of sailors and traders, that meant death anyway. Carthage, with no weapons left, refused.",
@@ -8193,6 +9662,53 @@
        "embers"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "POLY",
+       "text": "You have won. Why are you crying?"
+      },
+      {
+       "who": "AEM",
+       "text": "One day, someone will give the same order about Rome.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.1
+       },
+       {
+        "type": "town",
+        "y": 0.76,
+        "n": 10,
+        "gap": 160,
+        "h": 140,
+        "col": "#1d1612",
+        "depth": 0.35
+       },
+       {
+        "type": "fire",
+        "x": 0.5,
+        "y": 0.74,
+        "r": 400,
+        "depth": 0.35
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "You may have heard that the Romans then salted the earth, so nothing would grow. That part is a later invention. They didn't need salt. They had already done enough.",
@@ -9027,6 +10543,51 @@
        "fog"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CAR",
+       "text": "You stay on land. We keep the sea."
+      },
+      {
+       "who": "ROM",
+       "text": "We kept both.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.75,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.7,
+        "n": 6,
+        "gap": 160,
+        "h": 120,
+        "col": "#3a2a22",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     }
    ]
   }
@@ -9217,5 +10778,241 @@
    "Claudius Pulcher sacred chickens",
    true
   ]
- }
+ },
+ "cast": {
+  "ROM": {
+   "preset": "roman",
+   "name": "A Roman senator",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a",
+    "hair": "#8a8278"
+   }
+  },
+  "CAR": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian merchant",
+   "spec": {
+    "hat": "none",
+    "coat": "#5b2a6e"
+   }
+  },
+  "HAN": {
+   "preset": "carthaginian",
+   "name": "Hannibal"
+  },
+  "SCI": {
+   "preset": "scipio",
+   "name": "Scipio Africanus"
+  },
+  "FAB": {
+   "preset": "roman",
+   "name": "Fabius Maximus",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "hair": "#c8c2b8"
+   }
+  },
+  "CAT": {
+   "preset": "roman",
+   "name": "Cato the Elder",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#7a6a5a",
+    "hairStyle": "bald",
+    "hair": "#c8c2b8"
+   }
+  },
+  "SEN2": {
+   "preset": "roman",
+   "name": "Another senator",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#3a4a6a",
+    "hair": "#3b2a1a"
+   }
+  },
+  "MAM": {
+   "preset": "worker",
+   "name": "A Mamertine mercenary",
+   "spec": {
+    "coat": "#6a5a44",
+    "hat": "helmet",
+    "hatCol": "#7a6a4a",
+    "beard": "full"
+   }
+  },
+  "LEG": {
+   "preset": "roman",
+   "name": "A Roman legionary"
+  },
+  "LEG2": {
+   "preset": "roman",
+   "name": "Another legionary",
+   "spec": {
+    "hair": "#5a3a22",
+    "beard": "none"
+   }
+  },
+  "ROWER": {
+   "preset": "worker",
+   "name": "A Roman rower",
+   "spec": {
+    "coat": "#8a7a5a"
+   }
+  },
+  "CAPT": {
+   "preset": "roman",
+   "name": "A Roman ship captain",
+   "spec": {
+    "hat": "none",
+    "coat": "#7a1d1d"
+   }
+  },
+  "PRIEST": {
+   "preset": "roman",
+   "name": "The keeper of the sacred chickens",
+   "spec": {
+    "hat": "none",
+    "coat": "#d8d0c0",
+    "coat2": "#d8d0c0",
+    "hairStyle": "bald"
+   }
+  },
+  "PUL": {
+   "preset": "roman",
+   "name": "Claudius Pulcher",
+   "spec": {
+    "hatCol": "#b8b8b8",
+    "coat": "#8a1a2a"
+   }
+  },
+  "SAIL": {
+   "preset": "worker",
+   "name": "A Carthaginian sailor",
+   "spec": {
+    "coat": "#5b2a6e",
+    "skin": "#c99068"
+   }
+  },
+  "COUNC": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian councillor",
+   "spec": {
+    "hat": "none",
+    "coat": "#3d2a55",
+    "hair": "#8a8278"
+   }
+  },
+  "HAM": {
+   "preset": "carthaginian",
+   "name": "Hamilcar Barca",
+   "spec": {
+    "hatCol": "#c8a24a",
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "BOY": {
+   "preset": "carthaginian",
+   "name": "Hannibal, aged about nine",
+   "spec": {
+    "hat": "none",
+    "beard": "none",
+    "coat": "#7a4a8a"
+   }
+  },
+  "MERC": {
+   "preset": "worker",
+   "name": "An unpaid mercenary",
+   "spec": {
+    "coat": "#5a4a34",
+    "beard": "full"
+   }
+  },
+  "ENVOY": {
+   "preset": "roman",
+   "name": "A Roman envoy",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a"
+   }
+  },
+  "GAUL": {
+   "preset": "worker",
+   "name": "A Celtic warrior",
+   "spec": {
+    "coat": "#4a6a3a",
+    "hair": "#b8732a",
+    "hairStyle": "long",
+    "beard": "full"
+   }
+  },
+  "MULE": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian soldier",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "YSCI": {
+   "preset": "scipio",
+   "name": "The young Scipio",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "OFFC": {
+   "preset": "roman",
+   "name": "A surviving officer",
+   "spec": {
+    "hat": "none",
+    "coat": "#6a2a2a"
+   }
+  },
+  "MAS": {
+   "preset": "carthaginian",
+   "name": "A Numidian horseman",
+   "spec": {
+    "coat": "#c9a85a",
+    "hat": "turban",
+    "hatCol": "#e9e2d0",
+    "skin": "#8a5a3a"
+   }
+  },
+  "NAS": {
+   "preset": "roman",
+   "name": "Scipio Nasica",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#2a5a3a",
+    "hair": "#8a8278"
+   }
+  },
+  "AEM": {
+   "preset": "scipio",
+   "name": "Scipio Aemilianus",
+   "spec": {
+    "hair": "#5a3a22"
+   }
+  },
+  "POLY": {
+   "preset": "roman",
+   "name": "Polybius",
+   "spec": {
+    "hat": "none",
+    "coat": "#3a4a6a",
+    "coat2": "#d8d0c0",
+    "beard": "full",
+    "hair": "#8a8278"
+   }
+  }
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
 }
