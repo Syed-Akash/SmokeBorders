@@ -1,0 +1,59 @@
+{
+ "date": "2026-11-16",
+ "source": "NexLev youtube_channel_videos (newest) + youtube_search; ages are NexLev's relative dates (coarse beyond 2 weeks)",
+ "window": "uploads from 2026-11-02 to 2026-11-16",
+ "channels": [
+  {"name": "Historically", "uploads": [{"title": "WORLD WAR 2 [Members]", "views": null, "length": "0:34", "age": "7 days", "note": "members-only teaser"}], "usual": "2-4M per long video", "outliers": []},
+  {"name": "Unknown Frequencies", "uploads": [
+    {"title": "The ENTIRE History of D-DAY Explained (The Normandy Landings)", "views": 3700, "length": "16:29", "age": "1 day"},
+    {"title": "The Deadliest Snipers To Ever Live in History", "views": 35000, "length": "14:16", "age": "6 days"},
+    {"title": "The Real Reason Japan Never Invaded Australia", "views": 4100, "length": "15:46", "age": "2 weeks"}],
+   "usual": "100K-1M (older uploads)", "outliers": [], "note": "cooling: last three uploads far below the channel's usual, even with the ENTIRE formula"},
+  {"name": "Animated History", "uploads": [
+    {"title": "900 Years of American History in 23 Minutes [NO AI]", "views": 6300, "length": "23:15", "age": "10 hours"},
+    {"title": "The ENTIRE History of Rome [NO AI]", "views": 47000, "length": "33:25", "age": "2 weeks"}],
+   "usual": "100K-1.4M", "outliers": [], "note": "Rome under-performs: same title as Historically's 10M video; Rome is saturated"},
+  {"name": "Epic History", "uploads": [{"title": "The First Crusade", "views": null, "length": "26:56", "age": "5 days", "note": "no view count shown"}], "usual": "0.4-1.2M", "outliers": []},
+  {"name": "The Operations Room", "uploads": [], "usual": "350-900K", "note": "nothing in 14 days (last: Pearl Harbor 3/3, 1 month)"},
+  {"name": "Geo History", "uploads": [], "usual": "150K-2M", "note": "nothing in 14 days (last: Cuba on Maps, 3 months)"},
+  {"name": "History Matters", "uploads": [{"title": "Why didn't Napoleon just stop? (Short Animated Documentary)", "views": 1400000, "length": "8:11", "age": "9 days"}],
+   "usual": "0.5-1.3M", "outliers": [{"title": "Why didn't Napoleon just stop?", "x": "about 1.5x in 9 days", "why": "famous name + a 'why didn't X' question that names a decision; 8 minutes"}]},
+  {"name": "Simple History", "uploads": [
+    {"title": "Why Soldiers Love Duct Tape", "views": 115000, "length": "12:16", "age": "2 days"},
+    {"title": "Bad Guy Guns", "views": 311000, "length": "10:20", "age": "5 days"},
+    {"title": "Strange Secrets of the AK 47", "views": 172000, "length": "34:50", "age": "9 days"},
+    {"title": "The Deadliest Secret of Unit 731", "views": 112000, "length": "9:46", "age": "12 days"},
+    {"title": "Weirdest Tanks Ever Made", "views": 309000, "length": "36:02", "age": "2 weeks"},
+    {"title": "Weirdest Grenades", "views": 145000, "length": "9:10", "age": "2 weeks"}],
+   "usual": "150-400K", "outliers": [{"title": "Bad Guy Guns", "x": "about 1.5-2x for 5 days", "why": "three-word title, pop-culture hook (movie villains)"}]},
+  {"name": "The Armchair Historian", "uploads": [
+    {"title": "Gaddafi's All Female Amazonian Guard", "views": 154000, "length": "11:38", "age": "1 day"},
+    {"title": "Korea Under Japanese Rule", "views": 757000, "length": "14:46", "age": "2 weeks"}],
+   "usual": "300-500K", "outliers": [{"title": "Korea Under Japanese Rule", "x": "about 1.7x in 2 weeks", "why": "Korea before the split: the audience for our Korea episode exists; plain 4-word title"}]},
+  {"name": "OverSimplified", "uploads": [], "usual": "20-100M", "note": "no uploads in a year; Pig War (40M, 38:43) is the benchmark for our Pig War episode"}
+ ],
+ "searches": [
+  {"topic": "sb-ww2-both-sides (21 Nov)", "query": "how World War 2 started minute by minute",
+   "top": [
+    {"title": "Why World War 2 Happened? | The Real Reason", "channel": "Dhruv Rathee", "views": 30236594, "length": "22:15", "age": "3y"},
+    {"title": "1918-1939: What Really Started World War 2?", "channel": "The World History Channel", "views": 8982996, "length": "51:17", "age": "1y"},
+    {"title": "How World War 2 Began", "channel": "Ryan Chapman", "views": 4585460, "length": "1:50:40", "age": "2y"},
+    {"title": "World War II From Beginning to End", "channel": "The Infographics Show", "views": 1478932, "length": "3:07:05", "age": "1y"},
+    {"title": "World War 2: 1939", "channel": "Epic History", "views": 1178528, "length": "36:10", "age": "2mo"},
+    {"title": "Bloodiest Day of World War 2 || D-Day (Minute by Minute)", "channel": "The Infographics Show", "views": 1610163, "length": "29:55", "age": "3y"},
+    {"title": "Hiroshima A-Bomb: Minute-By-Minute Account Of The Event That Ended WW2", "channel": "Timeline", "views": 1067934, "length": "45:33", "age": "1y"},
+    {"title": "Why World War 2 Really Happened in 30 Minutes", "channel": "Verse World", "views": 33543, "length": "29:44", "age": "8d"}],
+   "read": "Broad 'how WW2 began' is owned by huge videos; new small 'WW2 explained' uploads get under 400 views. 'Minute by Minute' works when it is ONE day or ONE event (D-Day 1.6M, Hiroshima 1.07M)."},
+  {"topic": "sb-western-front (24 Nov)", "query": "life on the western front both sides ww1",
+   "top": [
+    {"title": "24 Hrs In The Trenches (WW1 Documentary) No AI", "channel": "Battle Guide", "views": 2809157, "length": "9:44", "age": "3y"},
+    {"title": "4 Hours Of First-Hand Accounts From WW1", "channel": "All Out Warfare", "views": 1900072, "length": "3:53:50", "age": "2y"},
+    {"title": "Could You Survive Life On The Front Line In WW1?", "channel": "History Hit", "views": 788504, "length": "51:04", "age": "2y"},
+    {"title": "These WW1 Movie Tactics Would Get Everyone Killed", "channel": "Survive History", "views": 559738, "length": "39:38", "age": "2w"},
+    {"title": "Your Day As a WW1 Soldier", "channel": "Your POV", "views": 134529, "length": "17:47", "age": "2w"},
+    {"title": "Could You Survive 24 Hours on the Western Front?", "channel": "Survive History", "views": 39474, "length": "2:24:50", "age": "6d"}],
+   "read": "A fixed time frame (24 hours, one day) wins; nobody ranks with a both-sides telling. Room for 'The 24 Hours...' (formula B with Hours) told from a British and a German trench."}
+ ],
+ "scout": "smoke/watch/2026-11-16/ (58 outliers vs 116 under median; thumbnails not reachable again)",
+ "ours": "smoke/stats.py: Pig War 1 view, 1 comment; both Shorts 0 views (scheduled 16 and 17 Nov); analytics 403"
+}
