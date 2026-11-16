@@ -197,8 +197,8 @@
   },
   {
    "id": "sb-rome-carthage",
-   "status": "storyboard",
-   "note": "published on the old channel as dfkC_dDN5M8"
+   "status": "render",
+   "note": "published on the old channel as dfkC_dDN5M8; 16 Nov 2026: film storyboard finished (tools/storyboard/rome.py, rome_talk.py, rome_fix.py, in that order): 32.8 min, 11 chapters, 40 acted exchanges (31 new, 28 people cast), 34 acted scenes, 21 distinct photos, FILM CHECK passed. Missing Commons photos (han3-5, sci2-3, ruins2) are fetched at render; each has a drawn fallback."
   },
   {
    "id": "sb-korea-38th",

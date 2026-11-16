@@ -422,6 +422,22 @@
        "gap": 260,
        "steam": false,
        "depth": 0.5
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "x": 0.28,
+         "facing": 1,
+         "h": 0.85,
+         "pose": "point",
+         "preset": "carthaginian"
+        }
+       ],
+       "lx": 0.4,
+       "ly": 0.6,
+       "depth": 0.85,
+       "_fix": 1
       }
      ],
      "fx": [
@@ -558,7 +574,8 @@
         {
          "x": 0.25,
          "facing": 1,
-         "h": 0.95
+         "h": 0.95,
+         "preset": "roman"
         }
        ],
        "lx": 0.4,
@@ -719,7 +736,7 @@
  },
  "chapters": [
   {
-   "title": "Rome vs Carthage: A Fight Over Sicily",
+   "title": "A Fight Over Sicily",
    "years": "264 BC",
    "mood": "uneasy",
    "beats": [
@@ -747,7 +764,7 @@
        "zoomhit": 1
       },
       {
-       "on": "coast",
+       "on": "Tunisia",
        "scene": {
         "shot": "off"
        }
@@ -959,6 +976,27 @@
           "gap": 260,
           "steam": false,
           "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.28,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "carthaginian"
+           },
+           {
+            "x": 0.72,
+            "facing": -1,
+            "h": 0.8,
+            "preset": "carthaginian"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85,
+          "_fix": 1
          }
         ]
        }
@@ -998,7 +1036,8 @@
           "x": 0.3,
           "facing": 1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -1098,6 +1137,28 @@
           "gap": 250,
           "steam": false,
           "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.28,
+            "facing": 1,
+            "h": 0.85,
+            "pose": "point",
+            "preset": "carthaginian"
+           },
+           {
+            "x": 0.72,
+            "facing": -1,
+            "h": 0.8,
+            "preset": "carthaginian"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85,
+          "_fix": 1
          }
         ]
        }
@@ -1133,6 +1194,22 @@
         "gap": 240,
         "steam": false,
         "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "lean",
+          "preset": "carthaginian"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ]
      }
@@ -1196,6 +1273,28 @@
           "col": "#7a1d1d",
           "march": true,
           "depth": 0.7
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.28,
+            "facing": 1,
+            "h": 0.85,
+            "pose": "point",
+            "preset": "roman"
+           },
+           {
+            "x": 0.72,
+            "facing": -1,
+            "h": 0.8,
+            "preset": "roman"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85,
+          "_fix": 1
          }
         ]
        }
@@ -1260,6 +1359,21 @@
         "walk": true,
         "facing": 1,
         "depth": 0.8
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "roman"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ]
      }
@@ -1341,6 +1455,21 @@
         "h": 120,
         "col": "#5a4636",
         "depth": 0.32
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "carthaginian"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ],
       "fx": [
@@ -1428,6 +1557,28 @@
         "y": 0.7,
         "r": 200,
         "depth": 0.4
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "lean",
+          "preset": "carthaginian"
+         },
+         {
+          "x": 0.72,
+          "facing": -1,
+          "h": 0.8,
+          "preset": "roman"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ]
      }
@@ -1523,12 +1674,22 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          }
         ],
         "lx": 0.4,
@@ -1615,6 +1776,22 @@
         "gap": 220,
         "steam": false,
         "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "point",
+          "preset": "carthaginian"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ]
      }
@@ -1710,6 +1887,22 @@
           "col": "#3d2a55",
           "march": true,
           "depth": 0.7
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.28,
+            "facing": 1,
+            "h": 0.85,
+            "pose": "point",
+            "preset": "carthaginian"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85,
+          "_fix": 1
          }
         ]
        }
@@ -1742,6 +1935,27 @@
         "col": "#7a1d1d",
         "march": true,
         "depth": 0.7
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.28,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "carthaginian"
+         },
+         {
+          "x": 0.72,
+          "facing": -1,
+          "h": 0.8,
+          "preset": "roman"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85,
+        "_fix": 1
        }
       ]
      }
@@ -1899,13 +2113,15 @@
           "x": 0.3,
           "facing": 1,
           "h": 0.8,
-          "pose": "point"
+          "pose": "point",
+          "preset": "roman"
          },
          {
           "x": 0.6,
           "facing": -1,
           "h": 0.8,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "roman"
          }
         ],
         "lx": 0.4,
@@ -1961,49 +2177,57 @@
           "x": 0.1,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.2,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.30000000000000004,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.4,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.5,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.6,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.7000000000000001,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          },
          {
           "x": 0.8,
           "facing": 1,
           "h": 0.7,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -2159,6 +2383,27 @@
           "gap": 240,
           "steam": false,
           "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.28,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "roman"
+           },
+           {
+            "x": 0.72,
+            "facing": -1,
+            "h": 0.8,
+            "preset": "roman"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85,
+          "_fix": 1
          }
         ]
        }
@@ -2402,7 +2647,7 @@
        },
        {
         "type": "ships",
-        "n": 5,
+        "n": 7,
         "x": 0.1,
         "s": 0.5,
         "flag": "red",
@@ -2413,7 +2658,7 @@
        },
        {
         "type": "ships",
-        "n": 5,
+        "n": 7,
         "x": 0.7,
         "s": 0.5,
         "flag": "white",
@@ -3011,7 +3256,7 @@
          },
          {
           "type": "ships",
-          "n": 5,
+          "n": 7,
           "x": 0.1,
           "s": 0.5,
           "flag": "red",
@@ -3022,7 +3267,7 @@
          },
          {
           "type": "ships",
-          "n": 5,
+          "n": 7,
           "x": 0.7,
           "s": 0.5,
           "flag": "white",
@@ -3131,7 +3376,8 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -3476,7 +3722,11 @@
          {
           "x": 0.35,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -3618,12 +3868,22 @@
          {
           "x": 0.35,
           "facing": 1,
-          "h": 0.95
+          "h": 0.95,
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          },
          {
           "x": 0.62,
           "facing": -1,
-          "h": 0.55
+          "h": 0.55,
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          }
         ],
         "lx": 0.4,
@@ -3704,7 +3964,11 @@
           "x": 0.45,
           "facing": 1,
           "h": 0.6,
-          "pose": "point"
+          "pose": "point",
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -3933,7 +4197,7 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "hannibal",
+      "img": "han2",
       "move": "out",
       "focus": [
        0.5,
@@ -3991,12 +4255,22 @@
           "x": 0.3,
           "facing": 1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          }
         ],
         "lx": 0.4,
@@ -4031,7 +4305,7 @@
        "on": "Hannibal",
        "scene": {
         "shot": "photo",
-        "img": "hannibal",
+        "img": "han2",
         "move": "in"
        }
       }
@@ -5122,7 +5396,8 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.95
+          "h": 0.95,
+          "preset": "roman"
          }
         ],
         "lx": 0.4,
@@ -6078,7 +6353,7 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "night",
+      "time": "day",
       "parts": [
        {
         "type": "room",
@@ -6101,19 +6376,37 @@
          {
           "x": 0.25,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          },
          {
           "x": 0.45,
           "facing": 1,
           "h": 0.85,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          },
          {
           "x": 0.72,
           "facing": -1,
           "h": 0.95,
-          "pose": "point"
+          "pose": "point",
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          }
         ],
         "lx": 0.4,
@@ -6300,13 +6593,13 @@
         "type": "hills",
         "y": 0.56,
         "n": 3,
-        "seed": 7,
+        "seed": 14,
         "depth": 0.15
        },
        {
         "type": "town",
         "y": 0.74,
-        "n": 18,
+        "n": 20,
         "gap": 115,
         "h": 180,
         "col": "#6a5844",
@@ -6395,7 +6688,7 @@
        "on": "Carthage",
        "scene": {
         "shot": "set",
-        "time": "day",
+        "time": "dusk",
         "parts": [
          {
           "type": "room",
@@ -6418,12 +6711,20 @@
            {
             "x": 0.3,
             "facing": 1,
-            "h": 0.9
+            "h": 0.9,
+            "preset": "carthaginian",
+            "spec": {
+             "hat": "none"
+            }
            },
            {
             "x": 0.7,
             "facing": -1,
-            "h": 0.9
+            "h": 0.9,
+            "preset": "carthaginian",
+            "spec": {
+             "hat": "none"
+            }
            }
           ],
           "lx": 0.4,
@@ -6436,7 +6737,7 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "hannibal",
+      "img": "han3",
       "move": "right"
      }
     },
@@ -6892,7 +7193,8 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.95
+          "h": 0.95,
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -6999,7 +7301,7 @@
        "on": "home",
        "scene": {
         "shot": "photo",
-        "img": "hannibal",
+        "img": "han3",
         "move": "out"
        }
       },
@@ -7138,12 +7440,14 @@
          {
           "x": 0.35,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian"
          },
          {
           "x": 0.65,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman"
          }
         ],
         "lx": 0.4,
@@ -7295,7 +7599,8 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.95
+          "h": 0.95,
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -7655,7 +7960,8 @@
          {
           "x": 0.55,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian"
          }
         ],
         "lx": 0.4,
@@ -7813,9 +8119,8 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "scipio",
+      "img": "sci2",
       "move": "out",
-      "caption": "Scipio Africanus",
       "fallback": {
        "shot": "faces",
        "names": [
@@ -8036,7 +8341,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 16,
+        "n": 18,
         "gap": 120,
         "h": 170,
         "col": "#5a4636",
@@ -8044,7 +8349,7 @@
        },
        {
         "type": "ships",
-        "n": 3,
+        "n": 5,
         "x": 0.7,
         "s": 0.45,
         "flag": "white",
@@ -8205,7 +8510,7 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "room",
@@ -8230,12 +8535,24 @@
           "x": 0.3,
           "facing": 1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman",
+          "spec": {
+           "hat": "none",
+           "coat": "#e9e2d0",
+           "coat2": "#9e1b2a"
+          }
          }
         ],
         "lx": 0.4,
@@ -8302,7 +8619,7 @@
        "on": "poison",
        "scene": {
         "shot": "photo",
-        "img": "hannibal",
+        "img": "han4",
         "move": "in",
         "focus": [
          0.5,
@@ -8313,7 +8630,7 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "night",
+      "time": "dawn",
       "parts": [
        {
         "type": "room",
@@ -8337,7 +8654,11 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -8426,7 +8747,7 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "scipio",
+      "img": "sci2",
       "move": "in",
       "fallback": {
        "shot": "faces",
@@ -8460,7 +8781,7 @@
        "on": "Both",
        "scene": {
         "shot": "photo",
-        "img": "scipio",
+        "img": "sci3",
         "move": "out",
         "fallback": {
          "shot": "faces",
@@ -8485,7 +8806,7 @@
      "pause": 1.0,
      "scene": {
       "shot": "photo",
-      "img": "hannibal",
+      "img": "han4",
       "move": "out"
      }
     },
@@ -8588,7 +8909,7 @@
          {
           "type": "town",
           "y": 0.7,
-          "n": 16,
+          "n": 18,
           "gap": 120,
           "h": 170,
           "col": "#5a4636",
@@ -8596,7 +8917,7 @@
          },
          {
           "type": "ships",
-          "n": 3,
+          "n": 5,
           "x": 0.7,
           "s": 0.45,
           "flag": "white",
@@ -8672,13 +8993,13 @@
         "type": "hills",
         "y": 0.56,
         "n": 3,
-        "seed": 7,
+        "seed": 14,
         "depth": 0.15
        },
        {
         "type": "town",
         "y": 0.74,
-        "n": 18,
+        "n": 20,
         "gap": 115,
         "h": 180,
         "col": "#6a5844",
@@ -8861,7 +9182,11 @@
           "x": 0.5,
           "facing": 1,
           "h": 0.95,
-          "pose": "point"
+          "pose": "point",
+          "preset": "carthaginian",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -9644,12 +9969,14 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.95
+          "h": 0.95,
+          "preset": "roman"
          },
          {
           "x": 0.42,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "roman"
          }
         ],
         "lx": 0.4,
@@ -9756,7 +10083,8 @@
           "x": 0.4,
           "facing": 1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "roman"
          }
         ],
         "lx": 0.4,
@@ -9862,7 +10190,7 @@
        },
        {
         "type": "ships",
-        "n": 5,
+        "n": 6,
         "x": 0.1,
         "s": 0.5,
         "flag": "red",
@@ -9873,7 +10201,7 @@
        },
        {
         "type": "ships",
-        "n": 5,
+        "n": 6,
         "x": 0.7,
         "s": 0.5,
         "flag": "white",
@@ -9903,7 +10231,7 @@
        "on": "invaded",
        "scene": {
         "shot": "photo",
-        "img": "hannibal",
+        "img": "han5",
         "move": "in"
        }
       }
@@ -9916,13 +10244,13 @@
         "type": "hills",
         "y": 0.56,
         "n": 3,
-        "seed": 7,
+        "seed": 14,
         "depth": 0.15
        },
        {
         "type": "town",
         "y": 0.74,
-        "n": 18,
+        "n": 20,
         "gap": 115,
         "h": 180,
         "col": "#6a5844",
@@ -9967,7 +10295,7 @@
          {
           "type": "town",
           "y": 0.7,
-          "n": 16,
+          "n": 18,
           "gap": 120,
           "h": 170,
           "col": "#5a4636",
@@ -9975,7 +10303,7 @@
          },
          {
           "type": "ships",
-          "n": 3,
+          "n": 5,
           "x": 0.7,
           "s": 0.45,
           "flag": "white",
@@ -10261,7 +10589,7 @@
          {
           "type": "town",
           "y": 0.7,
-          "n": 16,
+          "n": 18,
           "gap": 120,
           "h": 170,
           "col": "#5a4636",
@@ -10269,7 +10597,7 @@
          },
          {
           "type": "ships",
-          "n": 3,
+          "n": 5,
           "x": 0.7,
           "s": 0.45,
           "flag": "white",
@@ -10293,13 +10621,13 @@
         "type": "hills",
         "y": 0.56,
         "n": 3,
-        "seed": 7,
+        "seed": 14,
         "depth": 0.15
        },
        {
         "type": "town",
         "y": 0.74,
-        "n": 18,
+        "n": 20,
         "gap": 115,
         "h": 180,
         "col": "#6a5844",
@@ -10327,7 +10655,7 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "hannibal",
+      "img": "han5",
       "move": "in",
       "focus": [
        0.5,
@@ -10350,9 +10678,8 @@
      ],
      "scene": {
       "shot": "photo",
-      "img": "ruins",
+      "img": "ruins2",
       "move": "out",
-      "caption": "Carthage today, beside the sea",
       "fallback": {
        "shot": "set",
        "time": "day",
@@ -10467,7 +10794,7 @@
        "on": "winner",
        "scene": {
         "shot": "photo",
-        "img": "ruins",
+        "img": "ruins2",
         "move": "in",
         "fallback": {
          "shot": "set",
@@ -10776,6 +11103,38 @@
   ],
   "pulcher": [
    "Claudius Pulcher sacred chickens",
+   true
+  ],
+  "han2": [
+   "Hannibal Barca statue Slodtz Louvre",
+   false
+  ],
+  "han3": [
+   "Hannibal Barcid coin Carthage shekel",
+   true
+  ],
+  "han4": [
+   "Hannibal crossing the Rhone Henri Motte",
+   true
+  ],
+  "han5": [
+   "Hannibal swears eternal enmity to Rome Amigoni",
+   true
+  ],
+  "sci2": [
+   "Continence of Scipio painting",
+   true
+  ],
+  "sci3": [
+   "Scipio Africanus statue",
+   false
+  ],
+  "ruins2": [
+   "Carthage Antonine Baths ruins",
+   true
+  ],
+  "ruins3": [
+   "Carthage Punic quarter Byrsa hill excavation",
    true
   ]
  },
