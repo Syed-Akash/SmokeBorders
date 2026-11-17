@@ -64,9 +64,13 @@ Standing rules, never broken:
 - **Portraits first:** for every entry in the story's `"portraits"` ({name: Commons file}) that has no `smoke/portraits/<name>.png` yet, run `python3 smoke/portrait.py <name> "<file>"` (it checks the licence; Wikimedia sometimes answers 429, then it waits and retries). Commit the PNGs and credits.json. Never mirror a photo with writing on it.
 - Make the thumbnail (pair A): `python3 smoke/make_thumb_sb.py <id> studio/out/<dir>/thumb.jpg`, and look at it.
 - Make all three pairs: `python3 smoke/make_thumb_sb.py <id> --ab` writes `smoke/ab/<id>/a.jpg, b.jpg, c.jpg` and `ab.md`. Look at each at 320x180, then commit them.
-- `python3 smoke/sbplan.py set <id> rendered`; commit (not the video files). Then do UPLOAD in the same run: the video files are gone when the run ends.
+- `python3 smoke/sbplan.py set <id> rendered`; commit (not the video files). Then do KIT (section 3) in the same run: the video files are gone when the run ends.
 
 ## 3. UPLOAD (scheduled, never published immediately)
+**Owner, 17 Nov 2026: the owner uploads by hand.** Every API upload on the new channel got 0 impressions in 2 days; the owner's
+hand upload got views within the hour. So steps 2-3a below stop at the files: run make_meta (episode and Shorts), cut the Shorts,
+then `python3 smoke/make_kit.py <id>`, send every file in studio/out/kit-<id>/ with SendUserFile and KIT.md with SendUserMessage,
+commit smoke/kits/<id>.md, `sbplan.py set <id> kit`. Never call upload.py for a video until the owner says API uploads are back.
 1. `python3 smoke/make_meta.py <id> <publish>` builds `meta.json`: title, description with chapters, tags, thumbnail, captions, playlist, sources as the first comment, and localizations. Read it; fix anything odd.
 2. `cd studio && YT_CHANNEL=smoke python3 upload.py out/<dir>/<id>.mp4 out/<dir>/meta.json`.
 3. Record the episode's `videoId` in `smoke/plan.json` (so the Shorts can link to it).

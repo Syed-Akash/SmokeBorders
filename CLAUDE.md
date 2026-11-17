@@ -16,6 +16,8 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
 - Both sides told fairly. Dark humour at bad decisions, never at victims. No sides in wars happening now.
 - Thumbnails: no blood, wounds or bodies (YouTube removes or age-restricts them); graves, smoke and fire instead.
   Text never covers a face.
+- **The owner uploads by hand (17 Nov 2026):** API uploads got 0 impressions on the new channel, a hand upload got views at once.
+  Runs make an upload kit (smoke/make_kit.py) and send it; never call upload.py for videos until the owner says so.
 - Uploads are always scheduled, never published at once. `YT_CHANNEL=smoke` (the default here).
 - Commit and push every change; end commit messages with the attribution lines the session gives you.
 
