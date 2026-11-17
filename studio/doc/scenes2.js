@@ -234,7 +234,16 @@
   const SKY = { dawn: ['#2b3350', '#d98a62'], day: ['#7fa3c0', '#e6e1cf'], dusk: ['#1d2140', '#d0603a'], night: ['#050912', '#1a2640'], storm: ['#1b1f26', '#4a5058'] };
   const ridge = (c, W, H, y, amp, col, seed) => { c.fillStyle = col; c.beginPath(); c.moveTo(-300, H + 300); for (let x = -300; x <= W + 300; x += 14) { const v = Math.sin(x * .004 + seed) * .5 + Math.sin(x * .011 + seed * 2) * .3 + Math.sin(x * .029 + seed * 3) * .12; c.lineTo(x, y - amp * v) } c.lineTo(W + 300, H + 300); c.fill() };
   const tree = (c, x, y, h, col) => { c.fillStyle = col; c.beginPath(); c.moveTo(x, y - h); for (let i = 0; i < 5; i++) { const f = (i + 1) / 5; c.lineTo(x + h * .22 * f, y - h + h * f * .95); c.lineTo(x + h * .08 * f, y - h + h * f * .95) } c.lineTo(x + h * .03, y); c.lineTo(x - h * .03, y); for (let i = 4; i >= 0; i--) { const f = (i + 1) / 5; c.lineTo(x - h * .08 * f, y - h + h * f * .95); c.lineTo(x - h * .22 * f, y - h + h * f * .95) } c.fill() };
-  function flag(c, x, y, w, h, cols, u, vertical) { for (let i = 0; i < cols.length; i++) { c.fillStyle = cols[i]; c.beginPath(); const n = cols.length;
+  let UJ = null;   // the Union Jack, drawn once and waved in slices (17 Nov 2026: plain stripes didn't read as the British flag)
+  function unionJack() { if (UJ) return UJ; const W = 300, H = 150, cv = document.createElement('canvas'); cv.width = W; cv.height = H; const k = cv.getContext('2d');
+    k.fillStyle = '#012169'; k.fillRect(0, 0, W, H); k.save(); k.beginPath(); k.rect(0, 0, W, H); k.clip();
+    k.strokeStyle = '#fff'; k.lineWidth = 30; k.beginPath(); k.moveTo(0, 0); k.lineTo(W, H); k.moveTo(W, 0); k.lineTo(0, H); k.stroke();
+    k.strokeStyle = '#c8102e'; k.lineWidth = 10; k.beginPath(); k.moveTo(0, 0); k.lineTo(W, H); k.moveTo(W, 0); k.lineTo(0, H); k.stroke(); k.restore();
+    k.fillStyle = '#fff'; k.fillRect(W / 2 - 25, 0, 50, H); k.fillRect(0, H / 2 - 25, W, 50); k.fillStyle = '#c8102e'; k.fillRect(W / 2 - 15, 0, 30, H); k.fillRect(0, H / 2 - 15, W, 30);
+    return UJ = cv }
+  function flag(c, x, y, w, h, cols, u, vertical) { if (cols === FLAGS.uk) { const im = unionJack(), n = 24; for (let s = 0; s < n; s++) { const f = s / n, dy = Math.sin(f * 5 - u * 4) * h * .08 * f;
+      c.drawImage(im, im.width * f, 0, im.width / n + 1, im.height, x + w * f, y + dy, w / n + 1, h) } return }
+    for (let i = 0; i < cols.length; i++) { c.fillStyle = cols[i]; c.beginPath(); const n = cols.length;
       const a = i / n, b = (i + 1) / n; c.moveTo(x, y + h * a); for (let s = 0; s <= 12; s++) { const f = s / 12; c.lineTo(x + w * f, y + h * a + Math.sin(f * 5 - u * 4) * h * .08 * f) } for (let s = 12; s >= 0; s--) { const f = s / 12; c.lineTo(x + w * f, y + h * b + Math.sin(f * 5 - u * 4) * h * .08 * f) } c.fill() } }
   const FLAGS = { us: ['#b22234', '#fff', '#b22234', '#fff', '#b22234', '#fff', '#b22234'], uk: ['#012169', '#c8102e', '#012169'], hbc: ['#c8102e', '#c8102e', '#fff'], fr: ['#0055a4', '#fff', '#ef4135'], de: ['#000', '#fff', '#c00'], ru: ['#fff', '#0039a6', '#d52b1e'], jp: ['#fff', '#fff', '#fff'], red: ['#b3161c'], white: ['#eee'] };
   function ship(c, x, y, s, u, o = {}) {   // a sailing warship (o.steam adds a funnel and smoke)

@@ -1,0 +1,1069 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "CUT": "am_michael",
+  "GRF": "bm_daniel",
+  "US": "am_michael",
+  "RN": "bm_lewis",
+  "CAM": "am_adam",
+  "PRE": "bm_lewis",
+  "DOU": "bm_daniel",
+  "PIC": "am_adam",
+  "BAY": "bm_fable",
+  "SCO": "am_michael",
+  "POLK": "am_adam",
+  "HOR": "bm_lewis",
+  "HAR": "am_fenrir",
+  "BUC": "am_fenrir",
+  "ROB": "am_puck",
+  "KAI": "bm_fable",
+  "SAILOR": "bm_lewis",
+  "MARINE": "bm_daniel",
+  "SOLDIER": "am_puck",
+  "AIDE": "am_puck",
+  "CLERK": "am_fenrir",
+  "SETTLER": "am_adam",
+  "COMPANY": "bm_lewis",
+  "VOTER1": "am_michael",
+  "VOTER2": "am_puck",
+  "MINER": "am_adam",
+  "LOCAL": "bm_daniel",
+  "MEMBER": "am_fenrir",
+  "EXPERT": "bm_fable"
+ },
+ "era": "1914",
+ "musicEra": "1800s",
+ "balls": {
+  "CUT": {
+   "flag": "US48",
+   "label": "LYMAN CUTLAR",
+   "at": [
+    -122.75,
+    48.36
+   ],
+   "r": 52,
+   "char": {
+    "preset": "settler",
+    "facing": -1
+   }
+  },
+  "GRF": {
+   "flag": "GBR",
+   "label": "CHARLES GRIFFIN",
+   "at": [
+    -123.25,
+    48.36
+   ],
+   "r": 52,
+   "char": {
+    "preset": "hbc_man",
+    "facing": 1
+   }
+  },
+  "US": {
+   "flag": "US48",
+   "label": "UNITED STATES",
+   "at": [
+    -121.9,
+    48.0
+   ],
+   "r": 56,
+   "char": {
+    "preset": "us_army_1859",
+    "facing": -1
+   }
+  },
+  "RN": {
+   "flag": "GBR",
+   "label": "BRITAIN",
+   "at": [
+    -124.6,
+    49.2
+   ],
+   "r": 56,
+   "char": {
+    "preset": "rn_officer",
+    "facing": 1
+   }
+  },
+  "RM": {
+   "flag": "GBR",
+   "label": "ROYAL MARINES",
+   "at": [
+    -123.5,
+    49.1
+   ],
+   "r": 50,
+   "char": {
+    "preset": "redcoat",
+    "hat": "kepi",
+    "hatCol": "#1c1a1a",
+    "hairStyle": "short",
+    "hair": "#3b2a1a",
+    "facing": 1
+   }
+  },
+  "SAL": {
+   "flag": "DOT",
+   "label": "COAST SALISH",
+   "at": [
+    -121.6,
+    48.95
+   ],
+   "r": 50,
+   "char": {
+    "coat": "#7a4a2a",
+    "coat2": "#c9a85a",
+    "hat": "none",
+    "hairStyle": "long",
+    "hair": "#1c1a1a",
+    "skin": "#b07a55",
+    "trim": "#b3202a",
+    "facing": -1
+   }
+  },
+  "DOU": {
+   "flag": "GBR",
+   "label": "GOV. JAMES DOUGLAS",
+   "at": [
+    -124.3,
+    48.15
+   ],
+   "r": 50,
+   "char": {
+    "preset": "douglas",
+    "facing": 1
+   }
+  },
+  "POLK": {
+   "flag": "US48",
+   "label": "PRESIDENT POLK",
+   "at": [
+    -118.0,
+    44.0
+   ],
+   "r": 52,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#8a8a8a",
+    "coat": "#1c1c22",
+    "facing": -1
+   }
+  },
+  "BUC": {
+   "flag": "US48",
+   "label": "JAMES BUCHANAN",
+   "at": [
+    -118.5,
+    43.0
+   ],
+   "r": 50,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#efeae0",
+    "coat": "#1c1c22",
+    "facing": -1
+   }
+  },
+  "PRE": {
+   "flag": "GBR",
+   "label": "JAMES PREVOST",
+   "at": [
+    -123.9,
+    49.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "rn_officer",
+    "facing": 1
+   }
+  },
+  "CAM": {
+   "flag": "US48",
+   "label": "ARCHIBALD CAMPBELL",
+   "at": [
+    -122.0,
+    48.5
+   ],
+   "r": 48,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#5a3b22",
+    "coat": "#2a2a33",
+    "facing": -1
+   }
+  },
+  "HAR": {
+   "flag": "US48",
+   "label": "GEN. HARNEY",
+   "at": [
+    -121.6,
+    47.4
+   ],
+   "r": 50,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "full",
+    "hair": "#d8d3cb",
+    "epaulettes": 1,
+    "facing": -1
+   }
+  },
+  "PIC": {
+   "flag": "US48",
+   "label": "CAPT. PICKETT",
+   "at": [
+    -122.4,
+    48.62
+   ],
+   "r": 50,
+   "char": {
+    "preset": "pickett",
+    "facing": -1
+   }
+  },
+  "CAS": {
+   "flag": "US48",
+   "label": "COL. SILAS CASEY",
+   "at": [
+    -122.15,
+    48.9
+   ],
+   "r": 46,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "full",
+    "hair": "#8a8a8a",
+    "facing": -1
+   }
+  },
+  "ROB": {
+   "flag": "US48",
+   "label": "LT. HENRY ROBERT",
+   "at": [
+    -122.85,
+    48.75
+   ],
+   "r": 46,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "none",
+    "facing": -1
+   }
+  },
+  "BAY": {
+   "flag": "GBR",
+   "label": "ADM. BAYNES",
+   "at": [
+    -124.75,
+    48.6
+   ],
+   "r": 50,
+   "char": {
+    "preset": "rn_officer",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "medal": 1,
+    "facing": 1
+   }
+  },
+  "SCO": {
+   "flag": "US48",
+   "label": "GEN. WINFIELD SCOTT",
+   "at": [
+    -122.5,
+    47.7
+   ],
+   "r": 52,
+   "char": {
+    "preset": "us_army_1859",
+    "hat": "bicorne",
+    "hatCol": "#111",
+    "hair": "#d8d3cb",
+    "beard": "none",
+    "epaulettes": 1,
+    "medal": 1,
+    "facing": -1
+   }
+  },
+  "KAI": {
+   "flag": "DE",
+   "label": "KAISER WILHELM I",
+   "at": [
+    13.4,
+    54.0
+   ],
+   "r": 52,
+   "char": {
+    "preset": "hessian",
+    "hat": "none",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "coat": "#1f2f4a",
+    "medal": 1,
+    "facing": -1
+   }
+  },
+  "BAN": {
+   "flag": "US48",
+   "label": "GEORGE BANCROFT",
+   "at": [
+    2.0,
+    46.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "coat": "#2a2a33",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "San Juan Island": [
+   -123.08,
+   48.53
+  ],
+  "Garrison Bay": [
+   -123.15,
+   48.59
+  ],
+  "English Camp": [
+   -123.15,
+   48.59
+  ],
+  "American Camp": [
+   -123.03,
+   48.47
+  ],
+  "Belle Vue Farm": [
+   -122.98,
+   48.46
+  ],
+  "Smallpox Bay": [
+   -123.16,
+   48.55
+  ],
+  "Fort Victoria": [
+   -123.37,
+   48.43
+  ],
+  "Esquimalt": [
+   -123.43,
+   48.43
+  ],
+  "Fort Bellingham": [
+   -122.52,
+   48.77
+  ],
+  "Fort Steilacoom": [
+   -122.58,
+   47.17
+  ],
+  "Fort Vancouver": [
+   -122.66,
+   45.62
+  ],
+  "Columbia River": [
+   -123.9,
+   46.25
+  ],
+  "Fraser River": [
+   -121.44,
+   49.38
+  ],
+  "Washington, D.C.": [
+   -77.04,
+   38.9
+  ],
+  "London": [
+   -0.13,
+   51.5
+  ],
+  "Mexico City": [
+   -99.13,
+   19.43
+  ],
+  "Callao": [
+   -77.15,
+   -12.05
+  ],
+  "New Orleans": [
+   -90.07,
+   29.95
+  ],
+  "Aroostook": [
+   -68.3,
+   46.7
+  ],
+  "St. Louis": [
+   -90.2,
+   38.63
+  ],
+  "Gettysburg": [
+   -77.23,
+   39.83
+  ],
+  "Philadelphia": [
+   -75.17,
+   39.95
+  ],
+  "New Bedford": [
+   -70.93,
+   41.64
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "Geneva": [
+   6.14,
+   46.2
+  ]
+ },
+ "cast": {
+  "CUT": {
+   "preset": "settler",
+   "name": "Lyman Cutlar"
+  },
+  "GRF": {
+   "preset": "hbc_man",
+   "name": "Charles Griffin"
+  },
+  "PIC": {
+   "preset": "pickett",
+   "name": "Capt. George Pickett"
+  },
+  "HOR": {
+   "preset": "rn_officer",
+   "name": "Capt. Geoffrey Hornby"
+  },
+  "BAY": {
+   "preset": "rn_officer",
+   "name": "Rear Adm. Robert Baynes",
+   "spec": {
+    "hair": "#d8d4cc"
+   }
+  },
+  "DOU": {
+   "preset": "douglas",
+   "name": "Gov. James Douglas"
+  },
+  "HAR": {
+   "preset": "us_officer",
+   "name": "Gen. William Harney"
+  },
+  "SCO": {
+   "preset": "us_officer",
+   "name": "Gen. Winfield Scott",
+   "spec": {
+    "hair": "#e8e4dc"
+   }
+  },
+  "PRE": {
+   "preset": "rn_officer",
+   "name": "Capt. James Prevost"
+  },
+  "CAM": {
+   "preset": "us_officer",
+   "name": "Archibald Campbell",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "BUC": {
+   "preset": "governor",
+   "name": "President James Buchanan"
+  },
+  "POLK": {
+   "preset": "governor",
+   "name": "President James K. Polk",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "ROB": {
+   "preset": "us_officer",
+   "name": "Henry Robert",
+   "spec": {
+    "hair": "#6b4a2a"
+   }
+  },
+  "KAI": {
+   "preset": "king_george",
+   "name": "Emperor Wilhelm I",
+   "spec": {
+    "hair": "#e8e4dc",
+    "beard": "full"
+   }
+  },
+  "SAILOR": {
+   "preset": "us_sailor",
+   "name": "A British sailor",
+   "spec": {
+    "coat": "#1c2a44"
+   }
+  },
+  "MARINE": {
+   "preset": "redcoat",
+   "name": "A Royal Marine"
+  },
+  "SOLDIER": {
+   "preset": "us_officer",
+   "name": "An American soldier",
+   "spec": {
+    "coat": "#1f3150"
+   }
+  },
+  "AIDE": {
+   "preset": "us_officer",
+   "name": "An aide"
+  },
+  "CLERK": {
+   "preset": "governor",
+   "name": "A clerk",
+   "spec": {
+    "hair": "#5a3a22"
+   }
+  },
+  "SETTLER": {
+   "preset": "settler",
+   "name": "A settler"
+  },
+  "COMPANY": {
+   "preset": "hbc_man",
+   "name": "A company man",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "VOTER1": {
+   "preset": "settler",
+   "name": "A voter"
+  },
+  "VOTER2": {
+   "preset": "governor",
+   "name": "Another voter",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MINER": {
+   "preset": "settler",
+   "name": "A miner",
+   "spec": {
+    "hair": "#8a6a3a"
+   }
+  },
+  "LOCAL": {
+   "preset": "hbc_man",
+   "name": "A Victoria local"
+  },
+  "MEMBER": {
+   "preset": "governor",
+   "name": "A church member",
+   "spec": {
+    "hair": "#9a8a7a"
+   }
+  },
+  "EXPERT": {
+   "preset": "governor",
+   "name": "A Geneva expert",
+   "spec": {
+    "hair": "#c8c0b0",
+    "glasses": 1
+   }
+  }
+ },
+ "photos": {
+  "marines_camp": [
+   "File:Royal Marines Camp on San Juan Island, ca. 1866 - DPLA - 216de89ae708703c0f24b1dab0e33809.jpg",
+   false
+  ],
+  "american_camp": [
+   "File:American Camp, San Juan Island, July 4, 1867.jpg",
+   false
+  ],
+  "bellevue": [
+   "File:San Juan Island Belle-Vue-Sheep-Farm-photo.jpg",
+   true
+  ],
+  "pickett": [
+   "File:GeorgePickett.jpeg",
+   false
+  ],
+  "douglas": [
+   "File:Sir James Douglas.jpg",
+   false
+  ],
+  "scott": [
+   "File:Winfield Scott Seated 1861.jpg",
+   false
+  ],
+  "harney": [
+   "File:Gen. William S. Harney - NARA - 528814 (cropped).jpg",
+   false
+  ],
+  "fort_victoria": [
+   "File:Fort Victoria circa 1860.jpg",
+   true
+  ],
+  "victoria_street": [
+   "File:A Street in Victoria, 1860.jpg",
+   true
+  ],
+  "fort_drawing": [
+   "File:Drawing of the Hudson's Bay Company's fort at Victoria (AL+CA 798).jpg",
+   true
+  ],
+  "haro": [
+   "File:Haro Straits Sunset.jpg",
+   true
+  ],
+  "wilhelm": [
+   "File:Wilhelm I vuonna 1883.jpg",
+   false
+  ],
+  "treaty": [
+   "File:American High Commissioners For The Treaty Of Washington 1871.jpg",
+   true
+  ],
+  "eng_camp": [
+   "File:San Juan Island NHP Eng Camp.JPG",
+   true
+  ]
+ },
+ "id": "sb-pig-war-flag",
+ "short": true,
+ "film": true,
+ "title": "Do You Know Why America Flies the British Flag Every Day? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know there's a place in America where government workers raise the British flag, every single day?",
+    "do": [
+     {
+      "card": {
+       "kind": "big",
+       "text": "EVERY SINGLE DAY",
+       "dur": 2.4
+      },
+      "on": "every"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.55,
+       "n": 3,
+       "seed": 4,
+       "depth": 0.2
+      },
+      {
+       "type": "forest",
+       "y": 0.63,
+       "n": 40,
+       "seed": 6,
+       "h": 150,
+       "depth": 0.45
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "flagpole",
+       "x": 0.6,
+       "y": 0.8,
+       "flag": "uk",
+       "h": 560,
+       "depth": 0.55
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "worker",
+         "x": 0.5,
+         "pose": "hold",
+         "facing": 1,
+         "h": 0.55,
+         "y": 0.95,
+         "mood": "happy",
+         "act": [
+          [
+           1.2,
+           "point"
+          ]
+         ]
+        }
+       ],
+       "depth": 0.85
+      }
+     ],
+     "push": 0.18
+    },
+    "date": "UNITED STATES, TODAY",
+    "cam": {
+     "lon": -123.05,
+     "lat": 48.52,
+     "scale": 45000
+    }
+   },
+   {
+    "say": "English Camp, on San Juan Island, Washington.",
+    "do": [],
+    "scene": {
+     "shot": "photo",
+     "img": "eng_camp",
+     "caption": "English Camp, San Juan Island, Washington",
+     "move": "right"
+    }
+   },
+   {
+    "say": "It's there because of a pig.",
+    "do": [
+     {
+      "sfx": "tick4",
+      "on": "pig"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.56,
+       "n": 3,
+       "seed": 1,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.68,
+       "depth": 0.6
+      },
+      {
+       "type": "animal",
+       "kind": "pig",
+       "x": 0.5,
+       "s": 1.5,
+       "walk": true,
+       "facing": -1,
+       "y": 0.88,
+       "depth": 0.8
+      }
+     ],
+     "push": 0.2
+    }
+   },
+   {
+    "say": "In 1859, an American farmer shot a British company's pig in his potato patch.",
+    "do": [
+     {
+      "date": "15 JUNE 1859",
+      "on": "1859"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.66,
+       "depth": 0.6
+      },
+      {
+       "type": "animal",
+       "kind": "pig",
+       "x": 0.75,
+       "s": 1.2,
+       "walk": false,
+       "facing": -1,
+       "y": 0.86,
+       "depth": 0.8
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "settler",
+         "x": 0.3,
+         "pose": "aim",
+         "facing": 1,
+         "h": 0.6,
+         "y": 0.93,
+         "mood": "angry",
+         "act": [
+          [
+           2.6,
+           "fire"
+          ]
+         ]
+        }
+       ],
+       "depth": 0.85
+      }
+     ],
+     "fx": [
+      "smoke"
+     ],
+     "push": 0.15
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "CUT",
+      "text": "Ten dollars. For the pig."
+     },
+     {
+      "who": "GRF",
+      "text": "A hundred.",
+      "mood": "angry"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.55,
+       "n": 2,
+       "seed": 3,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.74,
+       "depth": 0.6
+      },
+      {
+       "type": "farm",
+       "x": 0.75,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "Soon, American soldiers faced British warships.",
+    "do": [
+     {
+      "sfx": "waves",
+      "on": "warships"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.6,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 2,
+       "x": 0.65,
+       "s": 0.6,
+       "flag": "uk",
+       "y": 0.66,
+       "gap": -320,
+       "steam": true,
+       "depth": 0.5
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.74,
+       "depth": 0.6
+      },
+      {
+       "type": "cannons",
+       "y": 0.82,
+       "n": 2,
+       "x0": 0.12,
+       "gap": 300,
+       "depth": 0.7
+      }
+     ],
+     "push": 0.12
+    }
+   },
+   {
+    "say": "Nobody fired. Both armies shared the island, for twelve years.",
+    "do": [
+     {
+      "card": {
+       "kind": "big",
+       "text": "12 YEARS",
+       "dur": 2.2
+      },
+      "on": "twelve"
+     }
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "marines_camp",
+     "caption": "Royal Marines camp, San Juan Island, about 1866",
+     "move": "left"
+    }
+   },
+   {
+    "say": "The only casualty was the pig.",
+    "do": [
+     {
+      "card": {
+       "kind": "stamp",
+       "text": "CASUALTIES: 1 PIG",
+       "dur": 2.6
+      },
+      "on": "casualty"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.56,
+       "n": 3,
+       "seed": 1,
+       "depth": 0.2
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.68,
+       "depth": 0.6
+      },
+      {
+       "type": "animal",
+       "kind": "pig",
+       "x": 0.5,
+       "s": 1.5,
+       "walk": true,
+       "facing": -1,
+       "y": 0.88,
+       "depth": 0.8
+      }
+     ],
+     "push": 0.2
+    }
+   },
+   {
+    "say": "Today it's a national park. And rangers still raise the British flag there, every day.",
+    "do": [],
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.55,
+       "n": 3,
+       "seed": 4,
+       "depth": 0.2
+      },
+      {
+       "type": "forest",
+       "y": 0.63,
+       "n": 40,
+       "seed": 6,
+       "h": 150,
+       "depth": 0.45
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "flagpole",
+       "x": 0.6,
+       "y": 0.8,
+       "flag": "uk",
+       "h": 560,
+       "depth": 0.55
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "worker",
+         "x": 0.5,
+         "pose": "hold",
+         "facing": 1,
+         "h": 0.55,
+         "y": 0.95,
+         "mood": "happy",
+         "act": [
+          [
+           1.2,
+           "point"
+          ]
+         ]
+        }
+       ],
+       "depth": 0.85
+      }
+     ],
+     "push": 0.1
+    }
+   },
+   {
+    "say": "In 1998, Britain even gave them a new eighty-foot flagpole. All because of one pig.",
+    "do": [
+     {
+      "card": {
+       "kind": "big",
+       "text": "80-FOOT FLAGPOLE",
+       "dur": 2.4
+      },
+      "on": "eighty"
+     }
+    ],
+    "scene": {
+     "shot": "photo",
+     "img": "eng_camp",
+     "caption": "The Union flag at English Camp",
+     "move": "up"
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, San Juan Island National Historical Park: https://en.wikipedia.org/wiki/San_Juan_Island_National_Historical_Park",
+  "National Park Service, San Juan Island NHP Official Map and Guide (2004): https://www.npshistory.com/publications/sajh/brochures/2004.pdf",
+  "National Park Service, Encampment at English Camp (1998 flagpole gift): https://corpora.tika.apache.org/base/docs/govdocs1/278/278066.html",
+  "Wikipedia, Pig War (1859): https://en.wikipedia.org/wiki/Pig_War_(1859)"
+ ],
+ "photosFrom": "sb-pig-war"
+}
