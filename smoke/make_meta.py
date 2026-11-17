@@ -21,7 +21,8 @@ def main():
         ep = next((e for e in json.load(open(os.path.join(HERE, 'plan.json')))['episodes'] if e['id'] == pid), {})
         first = story.get('hook') or (story.get('intro') or {}).get('beats', [{}])[0].get('say', '')
         full = 'The full story, from both sides: "%s"%s' % ((parent.get('abTest') or [{'title': parent['title']}])[0]['title'], (' https://youtu.be/' + ep['videoId']) if ep.get('videoId') else ' on Smoke & Borders.')
-        meta = {'title': title[:100], 'description': '%s\n\n%s\n\n📚 Source:\n%s\n\n#history #shorts #documentary' % (first, full, src),
+        # 17 Nov 2026: no long link lists on Shorts (a new channel's Short with 30+ links can look like spam)
+        meta = {'title': title[:100], 'description': '%s\n\n%s\n\n📚 Sources: pinned under the full episode.\n\n#history #shorts #documentary' % (first, full),
                 'tags': BASE_TAGS + parent.get('tags', []), 'categoryId': '27', 'privacy': 'private', 'publishAt': when, 'playlists': ['sb-shorts'], 'linkPlaylists': ['sb-episodes'], 'comment': ('Would you have done the same? 👇\n\n' + full)}
         f = os.path.join(outdir, 'short-%s.meta.json' % n)
     else:
