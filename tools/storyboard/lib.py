@@ -88,4 +88,4 @@ def photolist(path):
         p = line.rstrip('\n').split('\t')
         if len(p) >= 2 and p[0]: out[p[0]] = (p[1], len(p) > 2 and p[2] == 'flat')
     return out
-def graves(rows=3, n=9, y=.78, col='#2a2420', d=.7): return dict(type='graves', rows=rows, n=n, y=y, col=col, depth=d)
+def graves(rows=3, n=9, y=.78, col='#a8a294', d=.7): return dict(type='graves', rows=rows, n=n, y=y, col=col, depth=d)
