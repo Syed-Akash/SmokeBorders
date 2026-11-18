@@ -80,6 +80,22 @@ commit smoke/kits/<id>.md, `sbplan.py set <id> kit`. Never call upload.py for a 
 5. **Test & Compare.** YouTube's API can't start the test, so the owner does it in Studio (about a minute). In the run's summary, add a section "Set up the A/B test", with the video's Studio link (https://studio.youtube.com/video/<videoId>/edit), then the contents of `smoke/ab/<id>/ab.md` (three titles plus image links). Repeat it in every daily summary until the owner says it's done. Record the video IDs in `smoke/uploads.json`.
 - No `YT_REFRESH_TOKEN_SMOKE` yet: do everything except the upload, and say so in the report.
 
+## 3b. "Do you know" Shorts (owner, 18 Nov 2026)
+The cut-from-the-episode Shorts got 3-4 views; the first "Do you know" Short got 800 in a day. So every episode gets two
+Shorts built as their own stories, `studio/doc/stories/<id>-short1.json` and `-short2.json` (examples: sb-pig-war-flag.json,
+sb-amrev-franklin-son.json):
+- **One surprising, little-known fact** from the episode (or about its place today), each fact checked on a page you opened and
+  listed in the Short's `sources`. Short 1 and Short 2 use different facts. Prefer facts with a "wait, what?" twist.
+- **First words: "Do you know..."** asking the fact as a question. Then the story behind it in 6-9 beats, a talk exchange
+  (cast from the episode), a quote shown on a doc if there is a real one, and a last line that lands the twist.
+- `"short": true, "film": true, "photosFrom": "<id>"`, the episode's cast/voices/photos; reuse the episode's scene specs.
+  Under 60 s (check `make_doc.py <short-id> --pacing`, length 1.0 min max; trim lines until it is).
+- Render, then the opening: the first ~1.4 s is a map/dip, so cover it with the first scene's frame:
+  `ffmpeg -ss 1.9 -i X.mp4 -frames:v 1 f.png`, overlay it while t<1.6, then
+  `cut_shorts.py <short-id> 1 1.0 <end of last caption + 0.4 - 1.0> "DO YOU KNOW|<HOOK, max ~22 characters>?"` and look at a frame:
+  the headline must fit the width.
+- Title: "Do You Know <the fact as a question>? #shorts". In the kit the owner sets each Short's Related video to the episode.
+
 ## 6. REVIEW (Mondays)
 1. **Competitors.** For every channel in `smoke/competitors.json`, use the NexLev free tools (`youtube_channel_videos` sorted newest, then popular) to collect their uploads from the last 14 days: title, views, length, age. Flag outliers (views well above that channel's usual) and why they likely worked: topic, title pattern, thumbnail idea, length. Also run `youtube_search` for our next two topics to see what already ranks. Save to `smoke/watch/<date>.json`.
 1a. **Packaging scout.** `YT_CHANNEL=smoke python3 smoke/scout.py` (YouTube Data API, read-only; falls back to scrapetube). Read `smoke/watch/<date>/title-patterns.md` and LOOK at every `sheet-*.jpg`. In LEARNINGS.md, write what the outlier thumbnails share (layout, number of words, colours, characters, what the curiosity is) and what the outlier titles share. If a pattern repeats for two weeks, add it to STYLE.md 4/4b. Commit the watch folder.

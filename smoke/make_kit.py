@@ -34,9 +34,11 @@ def main(sid):
     parts.append(block('1. The episode', m, 'episode.mp4', '**Thumbnail:** `thumbnail.jpg` · **Subtitles:** upload `captions.srt` (Subtitles → Add language → English → Upload file)\n'
                        '**End screen:** Editor → End screen → Import from video (the previous episode).'))
     for n in (1, 2):
-        mp, v = os.path.join(out, 'short-%d.meta.json' % n), os.path.join(out, 'short-%d.mp4' % n)
+        od = (sorted(glob.glob(os.path.join(STUDIO, 'out', '*-doc-%s-short%d' % (sid, n)))) or [out])[-1]   # "Do you know" Shorts are their own stories (18 Nov 2026)
+        mp, v = os.path.join(od, 'short-%d.meta.json' % n), os.path.join(od, 'short-1.mp4' if od != out else 'short-%d.mp4' % n)
+        if od != out and not os.path.exists(mp): mp = os.path.join(od, 'short-1.meta.json')
         if os.path.exists(mp) and os.path.exists(v):
-            shutil.copy(v, os.path.join(kit, 'short-%d.mp4' % n)); parts.append(block('%d. Short %d' % (n + 1, n), json.load(open(mp)), 'short-%d.mp4' % n))
+            shutil.copy(v, os.path.join(kit, 'short-%d.mp4' % n)); parts.append(block('%d. Short %d' % (n + 1, n), json.load(open(mp)), 'short-%d.mp4' % n, '**Related video:** after the episode is up, set it here (Short → Details → Related video → the episode). This is how Short viewers reach the episode.'))
     ab = os.path.join(HERE, 'ab', sid, 'ab.md')
     if os.path.exists(ab): parts += ['## A/B test (after the episode is up)', '', open(ab).read()]
     md = '\n'.join(parts); open(os.path.join(kit, 'KIT.md'), 'w').write(md)

@@ -61,8 +61,9 @@ plain words, keep it short, and send previews (frames, contact sheets, short cli
   ducked under the voice. Stories can also call `"sfx": "braam" | "tension" | "riser" | "bells" | ...` on a beat.
   Never use the pack's meme/anime/game clips (copyright claims) or its BLASTWAVEFX files (a paid library).
 - **Subscribe/like animation** mid-video and a warm closing call to action; playlist links in descriptions.
-- **Shorts:** two per episode, CUT from the finished episode (Short 1 = the cold open, Short 2 = a special moment), listed
-  in the story's `"shorts"`; `smoke/cut_shorts.py <id> auto`.
+- **Shorts (owner, 18 Nov 2026): two "Do you know" Shorts per episode**, each its own story (`<id>-short1/2.json`) built on one
+  surprising sourced fact, opening with "Do you know...", under 60 s (RUNBOOK 3b). Cut-from-episode Shorts got 3-4 views; the
+  first "Do you know" Short got 800 in a day. The owner sets each Short's Related video to its episode.
 
 ## Cadence (owner, 11 Nov 2026)
 One video a day at most, 16:00 UTC (9 pm Pakistan): the episode, then Short 1, then Short 2, then the next episode (an
@@ -102,6 +103,8 @@ take two runs.
 - **The redos are now regular episodes** (owner, 17 Nov): American Revolution 18 Nov (rendered, on wip/), WW2 21 Nov, Rome
   24 Nov (storyboard done, renders ~20 Nov), Western Front 27 Nov, Korea 30 Nov (still needs its dialogue pass via the REDO job),
   then Berlin Wall, Cuban Missile Crisis, Shortest War, Mongols every 3 days. plan.json has the dates.
+- Manual uploads so far: Pig War flag Short (VBOnWm5X9Yo, 800+ views), American Revolution (s8FoqUIAzZU, 18 Nov).
+  The Franklin's-son "Do you know" Short was sent to the owner on 18 Nov.
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 

@@ -1,0 +1,695 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "GB": "bm_lewis",
+  "US": "am_michael",
+  "FRA": "am_michael",
+  "WIL": "bm_daniel",
+  "KING": "bm_fable",
+  "NORTH": "bm_lewis",
+  "MP": "bm_fable",
+  "CLERK": "bm_daniel",
+  "COL": "am_adam",
+  "BOS": "am_puck",
+  "STAMP": "bm_lewis",
+  "PRINTER": "am_fenrir",
+  "RED": "bm_lewis",
+  "OFF": "bm_fable",
+  "MIL": "am_puck",
+  "CAPT": "am_fenrir",
+  "SAILOR": "bm_daniel",
+  "COURT1": "bm_lewis",
+  "COURT2": "bm_daniel",
+  "GUARD": "am_adam",
+  "HESS": "am_fenrir",
+  "HESS2": "am_puck",
+  "FR1": "bm_fable",
+  "FR2": "bm_lewis",
+  "LOY": "am_michael",
+  "PAT": "am_adam",
+  "FREE": "am_fenrir",
+  "DIPGB": "bm_lewis",
+  "DIPUS": "am_michael",
+  "DRUM": "am_puck",
+  "DEL1": "am_michael",
+  "DEL2": "am_fenrir",
+  "SHIPCAP": "bm_lewis",
+  "MAID": "bf_emma",
+  "RAID1": "am_adam",
+  "RAID2": "am_puck",
+  "FISH": "bm_daniel",
+  "DOVER": "bm_lewis"
+ },
+ "era": "1715",
+ "musicEra": "1700s",
+ "balls": {
+  "GB": {
+   "flag": "GB1707",
+   "label": "BRITAIN",
+   "at": [
+    -4,
+    52.5
+   ],
+   "r": 58,
+   "char": {
+    "preset": "king_george",
+    "facing": -1
+   }
+  },
+  "US": {
+   "flag": "US13",
+   "label": "13 COLONIES",
+   "at": [
+    -80.5,
+    41.5
+   ],
+   "r": 56,
+   "char": {
+    "preset": "continental",
+    "facing": 1
+   }
+  },
+  "FR": {
+   "flag": "FRK",
+   "label": "FRANCE",
+   "at": [
+    3,
+    46.5
+   ],
+   "r": 52,
+   "char": {
+    "preset": "french_officer",
+    "facing": -1
+   }
+  },
+  "HE": {
+   "flag": "HES",
+   "label": "HESSE",
+   "at": [
+    10.5,
+    50.5
+   ],
+   "r": 46,
+   "char": {
+    "preset": "hessian",
+    "facing": -1
+   }
+  },
+  "BEN": {
+   "flag": "US13",
+   "label": "BENJAMIN FRANKLIN",
+   "at": [
+    -78.2,
+    38.6
+   ],
+   "r": 46,
+   "char": {
+    "preset": "franklin",
+    "facing": 1
+   }
+  },
+  "WIL": {
+   "flag": "GB1707",
+   "label": "WILLIAM FRANKLIN",
+   "at": [
+    -71.6,
+    40.4
+   ],
+   "r": 46,
+   "char": {
+    "preset": "governor",
+    "facing": -1
+   }
+  }
+ },
+ "places": {
+  "London": [
+   -0.13,
+   51.51
+  ],
+  "Boston": [
+   -71.06,
+   42.36
+  ],
+  "Philadelphia": [
+   -75.16,
+   39.95
+  ],
+  "Lexington": [
+   -71.23,
+   42.45
+  ],
+  "Trenton": [
+   -74.76,
+   40.22
+  ],
+  "Saratoga": [
+   -73.64,
+   43.01
+  ],
+  "Yorktown": [
+   -76.51,
+   37.24
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Kassel": [
+   9.48,
+   51.31
+  ],
+  "New Jersey": [
+   -74.4,
+   40.2
+  ],
+  "Litchfield": [
+   -73.19,
+   41.75
+  ],
+  "Freetown": [
+   -13.23,
+   8.48
+  ],
+  "Halifax": [
+   -63.57,
+   44.65
+  ],
+  "Lake of the Woods": [
+   -94.9,
+   49.3
+  ],
+  "Jamaica": [
+   -77.3,
+   18.1
+  ],
+  "Nassau": [
+   -77.35,
+   25.05
+  ],
+  "Williamsburg": [
+   -76.7,
+   37.27
+  ]
+ },
+ "cast": {
+  "FRA": {
+   "preset": "franklin",
+   "name": "Benjamin Franklin"
+  },
+  "WIL": {
+   "preset": "governor",
+   "name": "Gov. William Franklin",
+   "spec": {
+    "hair": "#d8d3cb"
+   }
+  },
+  "KING": {
+   "preset": "king_george",
+   "name": "King George III"
+  },
+  "NORTH": {
+   "preset": "lord_north",
+   "name": "Lord North"
+  },
+  "MP": {
+   "preset": "lord_north",
+   "name": "A member of Parliament",
+   "spec": {
+    "sash": 0,
+    "medal": 0,
+    "coat": "#4a3a2a"
+   }
+  },
+  "CLERK": {
+   "preset": "governor",
+   "name": "A Treasury clerk",
+   "spec": {
+    "coat": "#3a3a3a",
+    "hairStyle": "short",
+    "hair": "#5a3a22",
+    "glasses": 1
+   }
+  },
+  "COL": {
+   "preset": "settler",
+   "name": "A colonist"
+  },
+  "BOS": {
+   "preset": "settler",
+   "name": "A Bostonian",
+   "spec": {
+    "coat": "#4a3a2a",
+    "hat": "tricorn",
+    "beard": "none"
+   }
+  },
+  "STAMP": {
+   "preset": "governor",
+   "name": "A stamp collector",
+   "spec": {
+    "coat": "#5a4a3a"
+   }
+  },
+  "PRINTER": {
+   "preset": "settler",
+   "name": "A printer",
+   "spec": {
+    "hat": "none",
+    "beard": "none",
+    "coat": "#3a3028"
+   }
+  },
+  "RED": {
+   "preset": "redcoat",
+   "name": "A British soldier"
+  },
+  "OFF": {
+   "preset": "redcoat",
+   "name": "A British officer",
+   "spec": {
+    "epaulettes": 1
+   }
+  },
+  "MIL": {
+   "preset": "continental",
+   "name": "A militiaman",
+   "spec": {
+    "coat": "#5a4a3a"
+   }
+  },
+  "CAPT": {
+   "preset": "continental",
+   "name": "A rebel captain"
+  },
+  "SAILOR": {
+   "preset": "us_sailor",
+   "name": "A British sailor"
+  },
+  "COURT1": {
+   "preset": "governor",
+   "name": "A courtier",
+   "spec": {
+    "coat": "#5a2a3a"
+   }
+  },
+  "COURT2": {
+   "preset": "governor",
+   "name": "Another courtier",
+   "spec": {
+    "coat": "#2a4a3a"
+   }
+  },
+  "GUARD": {
+   "preset": "continental",
+   "name": "A guard"
+  },
+  "HESS": {
+   "preset": "hessian",
+   "name": "A Hessian soldier"
+  },
+  "HESS2": {
+   "preset": "hessian",
+   "name": "A Hessian sentry",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "FR1": {
+   "preset": "french_officer",
+   "name": "A French minister"
+  },
+  "FR2": {
+   "preset": "french_officer",
+   "name": "A French officer",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "LOY": {
+   "preset": "settler",
+   "name": "A Loyalist farmer",
+   "spec": {
+    "coat": "#7a2a2a"
+   }
+  },
+  "PAT": {
+   "preset": "continental",
+   "name": "A Patriot neighbour",
+   "spec": {
+    "coat": "#4a5a3a",
+    "hat": "none"
+   }
+  },
+  "FREE": {
+   "preset": "settler",
+   "name": "A man escaping slavery",
+   "spec": {
+    "skin": "#6b4429",
+    "hair": "#1c1a1a",
+    "hat": "none",
+    "beard": "none",
+    "coat": "#6b5a44"
+   }
+  },
+  "DIPGB": {
+   "preset": "governor",
+   "name": "A British negotiator"
+  },
+  "DIPUS": {
+   "preset": "franklin",
+   "name": "An American negotiator",
+   "spec": {
+    "hairStyle": "wig",
+    "hair": "#efeae0",
+    "glasses": 0,
+    "coat": "#2a2a33"
+   }
+  }
+ },
+ "photos": {
+  "bfranklin": [
+   "File:Joseph Siffrein Duplessis - Benjamin Franklin - Google Art Project.jpg",
+   false
+  ],
+  "george3": [
+   "File:Allan Ramsay - King George III in coronation robes - Google Art Project.jpg",
+   false
+  ],
+  "teaparty": [
+   "File:Boston Tea Party Currier colored.jpg",
+   true
+  ],
+  "declaration": [
+   "File:Declaration of Independence (1819), by John Trumbull.jpg",
+   true
+  ],
+  "delaware": [
+   "File:Washington Crossing the Delaware by Emanuel Leutze, MMA-NYC, 1851.jpg",
+   true
+  ],
+  "yorktown": [
+   "File:Surrender of Lord Cornwallis.jpg",
+   true
+  ],
+  "saratoga": [
+   "File:Surrender of General Burgoyne.jpg",
+   true
+  ],
+  "treaty": [
+   "File:Treaty of Paris by Benjamin West 1783.jpg",
+   true
+  ],
+  "wfranklin": [
+   "smoke/portraits/wfranklin.png",
+   false
+  ],
+  "massacre": [
+   "Bloody Massacre King Street 1770 Revere engraving",
+   true
+  ],
+  "lexington": [
+   "Battle of Lexington 1775 Doolittle engraving",
+   true
+  ],
+  "bunkerhill": [
+   "Death of General Warren Battle of Bunker Hill Trumbull",
+   true
+  ],
+  "privy": [
+   "Franklin before the Privy Council Schussele",
+   true
+  ],
+  "lordnorth": [
+   "Frederick North Lord North portrait Dance",
+   false
+  ],
+  "cornwallis": [
+   "Charles Cornwallis 1st Marquess portrait Gainsborough",
+   false
+  ],
+  "stamp": [
+   "Stamp Act 1765 revenue stamp",
+   true
+  ],
+  "hessians": [
+   "File:The Capture of the Hessians at Trenton December 26 1776.jpeg",
+   true
+  ],
+  "petition": [
+   "Olive Branch Petition 1775 document",
+   true
+  ],
+  "dunmore": [
+   "File:Dunmore's Proclamation signed November 7, 1775.jpg",
+   true
+  ],
+  "asgill": [
+   "File:Sir Charles Asgill 2nd Baronet.jpg",
+   false
+  ]
+ },
+ "id": "sb-amrev-franklin-son",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-american-revolution",
+ "title": "Do You Know Benjamin Franklin's Son Fought for the King? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know Benjamin Franklin's own son fought against the American Revolution?",
+    "scene": {
+     "shot": "faces",
+     "names": [
+      [
+       "BENJAMIN FRANKLIN",
+       "becoming a rebel"
+      ],
+      [
+       "WILLIAM FRANKLIN",
+       "the King's man"
+      ]
+     ],
+     "nameAt": 0.4,
+     "push": 0.06,
+     "people": [
+      {
+       "preset": "franklin",
+       "x": 0.3
+      },
+      {
+       "preset": "governor",
+       "x": 0.7
+      }
+     ]
+    },
+    "do": [],
+    "cam": {
+     "lon": -74.6,
+     "lat": 40.4,
+     "scale": 5200
+    }
+   },
+   {
+    "say": "He was the King's governor of New Jersey. His father helped him get the job.",
+    "scene": {
+     "shot": "photo",
+     "img": "wfranklin",
+     "move": "in",
+     "caption": "William Franklin, Royal Governor of New Jersey",
+     "focus": [
+      0.5,
+      0.3
+     ]
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "FRA",
+      "text": "Resign, William. Join us."
+     },
+     {
+      "who": "WIL",
+      "text": "I serve the King."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "room",
+       "flag": "uk",
+       "window": 0.7,
+       "night": false,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.6,
+       "candles": 2,
+       "papers": 6,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "In 1776, the rebels arrested him. Later they kept him alone in a cell, for eight months.",
+    "do": [
+     {
+      "card": {
+       "kind": "big",
+       "text": "8 MONTHS ALONE",
+       "dur": 2.4
+      },
+      "on": "alone"
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": null,
+       "window": null,
+       "night": true,
+       "depth": 0.3,
+       "wall": "#16120e"
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "x": 0.5,
+         "facing": 1,
+         "h": 0.8,
+         "photo": "wfranklin"
+        }
+       ],
+       "lx": 0.4,
+       "ly": 0.6,
+       "depth": 0.85
+      }
+     ]
+    }
+   },
+   {
+    "say": "His wife was dying. He asked to see her. The answer was no.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": null,
+       "window": 0.5,
+       "night": true,
+       "depth": 0.3,
+       "wall": "#0f0d0c"
+      },
+      {
+       "type": "table",
+       "lamp": 0.4,
+       "candles": 1,
+       "papers": 1,
+       "w": 900,
+       "depth": 0.6
+      }
+     ],
+     "fx": [
+      "dust"
+     ]
+    }
+   },
+   {
+    "say": "After the war, they met only once. Benjamin never forgave him.",
+    "scene": {
+     "shot": "photo",
+     "img": "bfranklin",
+     "move": "right",
+     "caption": "Benjamin Franklin",
+     "focus": [
+      0.5,
+      0.3
+     ]
+    }
+   },
+   {
+    "say": "In his will, he left William some land in Nova Scotia. And this line.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "The will of Benjamin Franklin, 1788",
+     "lines": [
+      "\"To my son, William Franklin,",
+      "late Governor of the Jerseys...\""
+     ],
+     "sign": "B. Franklin"
+    }
+   },
+   {
+    "say": "The part he acted against me in the late war, will account for my leaving him no more of an estate he endeavoured to deprive me of.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "The will of Benjamin Franklin, 1788",
+     "lines": [
+      "\"The part he acted against me",
+      "in the late war ... will account",
+      "for my leaving him no more of an",
+      "estate he endeavoured to deprive me of.\""
+     ],
+     "sign": "B. Franklin",
+     "hl": [
+      0
+     ]
+    }
+   },
+   {
+    "say": "Father against son. That was the American Revolution.",
+    "scene": {
+     "shot": "faces",
+     "names": [
+      [
+       "BENJAMIN FRANKLIN",
+       "becoming a rebel"
+      ],
+      [
+       "WILLIAM FRANKLIN",
+       "the King's man"
+      ]
+     ],
+     "nameAt": 0.4,
+     "push": 0.06,
+     "people": [
+      {
+       "preset": "franklin",
+       "x": 0.3
+      },
+      {
+       "preset": "governor",
+       "x": 0.7
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "talkNote": "The short dialogue is dramatized; every fact comes from the sources.",
+ "sources": [
+  "Benjamin Franklin's will (1788), constitution.org: https://constitution.org/1-History/primarysources/lastwill.html",
+  "Franklin Papers, William Franklin: https://franklinpapers.org/bio?id=25",
+  "New Jersey State Archives, William Franklin appointment: https://nj.gov/www.nj.gov/state/archives/docfranklin.html",
+  "Wikipedia, William Franklin: https://en.wikipedia.org/wiki/William_Franklin",
+  "American Battlefield Trust, William Franklin: https://www.battlefields.org/learn/biographies/william-franklin",
+  "The Papers of Benjamin Franklin, William Franklin: https://franklinpapers.org/bio?id=25",
+  "Wikipedia, William Franklin: https://en.wikipedia.org/wiki/William_Franklin"
+ ]
+}
