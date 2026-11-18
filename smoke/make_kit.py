@@ -22,15 +22,15 @@ def main(sid):
     m = json.load(open(os.path.join(out, 'meta.json'))); ep = os.path.join(out, sid + '.mp4')
     for src, dst in ((ep, 'episode.mp4'), (m.get('thumbnail', ''), 'thumbnail.jpg'), (m.get('captions', ''), 'captions.srt')):
         if src and os.path.exists(src): shutil.copy(src, os.path.join(kit, dst))
-    # the chat can only send files up to 500 MB (18 Nov 2026: the 35-minute WW2 episode was 1.1 GB): a smaller copy to send
+    # the chat can only send files up to 400 MB (18 Nov 2026: the 35-minute WW2 episode was 1.1 GB): a smaller copy to send
     epk = os.path.join(kit, 'episode.mp4')
-    if os.path.exists(epk) and os.path.getsize(epk) > 480e6:
+    if os.path.exists(epk) and os.path.getsize(epk) > 380e6:
         import subprocess
         dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', epk], capture_output=True, text=True).stdout or 1800)
-        vk = int(min(4000, max(800, 450e6 * 8 / dur / 1000 - 140)))   # about 450 MB in all
+        vk = int(min(4000, max(800, 360e6 * 8 / dur / 1000 - 140)))   # about 360 MB in all
         subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', epk, '-c:v', 'libx264', '-preset', 'medium', '-b:v', '%dk' % vk, '-maxrate', '%dk' % (vk * 1.6),
                         '-bufsize', '%dk' % (vk * 3), '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', os.path.join(kit, 'episode-send.mp4')], check=True)
-        print('episode over 480 MB: episode-send.mp4 is the copy to send (episode.mp4 stays the full-quality file)')
+        print('episode over 380 MB: episode-send.mp4 is the copy to send (episode.mp4 stays the full-quality file)')
     parts.append(block('1. The episode', m, 'episode.mp4', '**Thumbnail:** `thumbnail.jpg` · **Subtitles:** upload `captions.srt` (Subtitles → Add language → English → Upload file)\n'
                        '**End screen:** Editor → End screen → Import from video (the previous episode).'))
     for n in (1, 2):
