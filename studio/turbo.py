@@ -20,7 +20,9 @@ def ensure():
     except ImportError:
         pip = [sys.executable, '-m', 'pip', 'install', '-q', '--break-system-packages']
         subprocess.run(pip + ['torch', 'torchaudio', '--index-url', 'https://download.pytorch.org/whl/cpu'], check=False)
-        subprocess.run(pip + ['chatterbox-tts'], check=True)
+        # download.pytorch.org can be blocked by the session's network (18 Nov 2026); PyPI's torch works too.
+        # --ignore-installed packaging: Debian's own copy has no RECORD file and makes pip abort.
+        subprocess.run(pip + ['--ignore-installed', 'packaging', 'chatterbox-tts'], check=True)
 
 def model():
     global _model
