@@ -69,7 +69,7 @@ Standing rules, never broken:
 ## 3. UPLOAD (scheduled, never published immediately)
 **Owner, 17 Nov 2026: the owner uploads by hand.** Every API upload on the new channel got 0 impressions in 2 days; the owner's
 hand upload got views within the hour. So steps 2-3a below stop at the files: run make_meta (episode and Shorts), cut the Shorts,
-then `python3 smoke/make_kit.py <id>`, send every file in studio/out/kit-<id>/ with SendUserFile and KIT.md with SendUserMessage,
+then `python3 smoke/make_kit.py <id>`, send every file in studio/out/kit-<id>/ with SendUserFile (files over 500 MB cannot be sent: send episode-send.mp4, the smaller copy make_kit.py makes, instead of episode.mp4) and KIT.md with SendUserMessage,
 commit smoke/kits/<id>.md, `sbplan.py set <id> kit`. Never call upload.py for a video until the owner says API uploads are back.
 1. `python3 smoke/make_meta.py <id> <publish>` builds `meta.json`: title, description with chapters, tags, thumbnail, captions, playlist, sources as the first comment, and localizations. Read it; fix anything odd.
 2. `cd studio && YT_CHANNEL=smoke python3 upload.py out/<dir>/<id>.mp4 out/<dir>/meta.json`.
