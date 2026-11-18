@@ -10,7 +10,62 @@
   "SU": "am_adam",
   "JP": "am_adam",
   "PL": "bm_lewis",
-  "FR": "bm_daniel"
+  "FR": "bm_daniel",
+  "WPHN": "bm_lewis",
+  "BOY": "bm_lewis",
+  "BRID": "bf_emma",
+  "COOK": "bm_daniel",
+  "COOK2": "bm_fable",
+  "NB": "bf_isabella",
+  "NB2": "bm_daniel",
+  "TEACH": "bm_fable",
+  "BORD": "am_fenrir",
+  "CUST": "am_adam",
+  "CUST2": "af_sarah",
+  "AIDE": "am_fenrir",
+  "CHAM": "bm_fable",
+  "LOND": "bm_daniel",
+  "LOND2": "bf_alice",
+  "REP": "bm_daniel",
+  "PURSER": "am_michael",
+  "POL": "am_adam",
+  "POL2": "am_fenrir",
+  "SKIP": "bm_daniel",
+  "NAVY": "bm_fable",
+  "TOMMY": "bm_lewis",
+  "CREW": "bm_daniel",
+  "AUD": "am_adam",
+  "PILOT": "bm_lewis",
+  "PILOT2": "bm_fable",
+  "LUFT": "am_fenrir",
+  "LUFT2": "am_adam",
+  "GERS": "am_fenrir",
+  "GERS2": "am_adam",
+  "SOV": "am_echo",
+  "SOV2": "am_onyx",
+  "JPOFF": "am_onyx",
+  "SHIM": "am_puck",
+  "JPMIN": "am_echo",
+  "JPMIN2": "am_onyx",
+  "USS": "am_puck",
+  "USS2": "am_michael",
+  "FDR": "am_onyx",
+  "RECR": "am_michael",
+  "WH1": "am_adam",
+  "WH2": "am_michael",
+  "CODE": "am_adam",
+  "CODE2": "am_michael",
+  "CPO": "am_fenrir",
+  "STAGG": "bm_daniel",
+  "IKE": "am_michael",
+  "BERL": "af_sarah",
+  "BERL2": "am_fenrir",
+  "MOSC": "am_echo",
+  "REBEL": "am_onyx",
+  "STAFF": "am_echo",
+  "LIST": "am_echo",
+  "LIST2": "af_nicole",
+  "REG": "am_adam"
  },
  "title": "How World War II Happened — Minute by Minute",
  "era": "1938",
@@ -370,7 +425,54 @@
      "move": "in",
      "fx": [
       "grain"
-     ]
+     ],
+     "fallback": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": -0.15,
+        "x1": 0.4,
+        "y": 0.64,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.62,
+        "s": 0.75,
+        "flag": "us",
+        "y": 0.7,
+        "gap": 300,
+        "steam": true,
+        "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "us_sailor",
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.9,
+          "spec": {
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.3,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
+     }
     }
    },
    {
@@ -389,7 +491,37 @@
      "shot": "photo",
      "img": "potsdam",
      "caption": "Adolf Hitler, 1933",
-     "move": "left"
+     "move": "left",
+     "fallback": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 10,
+        "gap": 150,
+        "h": 220,
+        "col": "#4a4038",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 70,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "flagpole",
+        "x": 0.5,
+        "y": 0.72,
+        "flag": "de",
+        "h": 420,
+        "depth": 0.5
+       }
+      ]
+     }
     }
    },
    {
@@ -672,10 +804,51 @@
      }
     ],
     "scene": {
-     "shot": "photo",
-     "img": "wph_navy",
-     "caption": "William Patrick Hitler",
-     "move": "out"
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.64,
+       "depth": 0.3
+      },
+      {
+       "type": "coast",
+       "x0": -0.15,
+       "x1": 0.4,
+       "y": 0.64,
+       "h": 110,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 1,
+       "x": 0.62,
+       "s": 0.75,
+       "flag": "us",
+       "y": 0.7,
+       "gap": 300,
+       "steam": true,
+       "depth": 0.5
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "preset": "us_sailor",
+         "x": 0.3,
+         "facing": 1,
+         "h": 0.9,
+         "spec": {
+          "hair": "#2a1d12"
+         }
+        }
+       ],
+       "lx": 0.3,
+       "ly": 0.6,
+       "depth": 0.85
+      }
+     ]
     }
    },
    {
@@ -697,7 +870,28 @@
      "move": "right",
      "fx": [
       "grain"
-     ]
+     ],
+     "fallback": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.76,
+        "n": 10,
+        "gap": 150,
+        "h": 160,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.8,
+        "depth": 0.6
+       }
+      ]
+     }
     },
     "date": "1911"
    },
@@ -799,7 +993,38 @@
       "shot": "photo",
       "img": "bridget",
       "caption": "Bridget Dowling Hitler, years later",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "uk",
+         "window": 0.6,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "woman",
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.88,
+           "spec": {
+            "hair": "#6a3a1e",
+            "coat": "#3a4a5a"
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -842,14 +1067,21 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian"
          }
         ],
         "lx": 0.55,
@@ -918,14 +1150,25 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker",
+          "spec": {
+           "coat": "#e8e2d4",
+           "coat2": "#e8e2d4"
+          }
          }
         ],
         "lx": 0.55,
@@ -934,6 +1177,47 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "COOK",
+       "text": "The Irish girl thinks you own this hotel."
+      },
+      {
+       "who": "COOK2",
+       "text": "He told her that?",
+       "mood": "shock"
+      },
+      {
+       "who": "COOK",
+       "text": "He told her that.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#4a4a3a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 1,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Her father does not approve. So on the third of June, 1910, the couple elope to London and marry.",
@@ -975,7 +1259,28 @@
       "shot": "photo",
       "img": "liverpool",
       "caption": "Liverpool, around 1911",
-      "move": "left"
+      "move": "left",
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.76,
+         "n": 10,
+         "gap": 150,
+         "h": 160,
+         "col": "#3a3028",
+         "depth": 0.4
+        },
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.8,
+         "depth": 0.6
+        }
+       ]
+      }
      }
     },
     {
@@ -1050,14 +1355,25 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#6a3a1e",
+           "coat": "#3a4a5a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1108,14 +1424,25 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#6a3a1e",
+           "coat": "#3a4a5a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1124,6 +1451,41 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "NB",
+       "text": "Another new business, Mr Hitler?"
+      },
+      {
+       "who": "NB2",
+       "text": "Give it a month.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.76,
+        "n": 9,
+        "gap": 160,
+        "h": 160,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.82,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Years later, Bridget writes a memoir. She claims that Adolf himself came to stay with them in Liverpool, from November 1912 to April 1913.",
@@ -1222,14 +1584,20 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker"
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#3a2416",
+           "coat": "#5a4a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1374,14 +1742,24 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#6a3a1e",
+           "coat": "#3a4a5a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a4a52",
+           "hair": "#3b2a1a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1511,15 +1889,25 @@
           "x": 0.3,
           "pose": "stand",
           "facing": 1,
-          "h": 0.8,
-          "cap": true
+          "h": 0.6,
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a4a52",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#6a3a1e",
+           "coat": "#3a4a5a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1528,6 +1916,45 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "TEACH",
+       "text": "Name?"
+      },
+      {
+       "who": "BOY",
+       "text": "William Hitler, sir."
+      },
+      {
+       "who": "TEACH",
+       "text": "Fine. Sit down."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#5a5a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "In 1929, his father asks to see him. William is eighteen. His mother agrees, and he travels to Germany. Four years later, the family name will mean everything.",
@@ -1631,7 +2058,37 @@
       "shot": "photo",
       "img": "potsdam",
       "caption": "Hitler and Hindenburg, March 1933",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 10,
+         "gap": 150,
+         "h": 220,
+         "col": "#4a4038",
+         "depth": 0.4
+        },
+        {
+         "type": "crowd",
+         "y": 0.95,
+         "n": 70,
+         "hats": true,
+         "depth": 0.8
+        },
+        {
+         "type": "flagpole",
+         "x": 0.5,
+         "y": 0.72,
+         "flag": "de",
+         "h": 420,
+         "depth": 0.5
+        }
+       ]
+      }
      }
     },
     {
@@ -1674,14 +2131,28 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#1e1e24",
+           "hat": "tophat",
+           "hatCol": "#111",
+           "hair": "#9a9488"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#1e1e24",
+           "hat": "tophat",
+           "hatCol": "#111",
+           "hair": "#9a9488"
+          }
          }
         ],
         "lx": 0.55,
@@ -1814,7 +2285,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 16,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -1835,14 +2306,25 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3a3a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -1852,6 +2334,58 @@
       ]
      },
      "date": "1933"
+    },
+    {
+     "talk": [
+      {
+       "who": "BORD",
+       "text": "Name?"
+      },
+      {
+       "who": "WPH",
+       "text": "Hitler."
+      },
+      {
+       "who": "BORD",
+       "text": "...Any relation?",
+       "mood": "shock"
+      },
+      {
+       "who": "WPH",
+       "text": "Nephew."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "de",
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a4a44"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "flagpole",
+        "x": 0.85,
+        "y": 0.7,
+        "flag": "de",
+        "h": 300,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "He is twenty-two years old, and the nephew of the most powerful man in Germany. Surely that opens doors.",
@@ -1866,10 +2400,53 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wph_navy",
-      "caption": "William Patrick Hitler",
-      "move": "left"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 130,
+        "h": 200,
+        "col": "#3a3530",
+        "depth": 0.4
+       },
+       {
+        "type": "flagpole",
+        "x": 0.78,
+        "y": 0.74,
+        "flag": "de",
+        "h": 380,
+        "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.9,
+          "walk": [
+           0.15,
+           0.4,
+           0,
+           4
+          ],
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.35,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -1912,14 +2489,27 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -1967,10 +2557,17 @@
         "list": [
          {
           "x": 0.42,
-          "pose": "stand",
+          "pose": "hold",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -1999,7 +2596,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 16,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -2017,17 +2614,25 @@
         "list": [
          {
           "x": 0.4,
-          "pose": "stand",
+          "pose": "point",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.62,
-          "pose": "arms",
+          "pose": "think",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian"
          }
         ],
         "lx": 0.55,
@@ -2036,6 +2641,46 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CUST",
+       "text": "And the salesman is called...?"
+      },
+      {
+       "who": "CUST2",
+       "text": "Hitler. Like the Führer.",
+       "mood": "shock"
+      },
+      {
+       "who": "CUST",
+       "text": "...We will take it.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 6,
+        "gap": 200,
+        "h": 200,
+        "col": "#4a4440",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.8,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "[chuckle] Of all the names in Germany to sell cars with, that one was always going to be noticed.",
@@ -2056,7 +2701,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 16,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -2077,14 +2722,27 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2f4a3a",
+           "hat": "kepi",
+           "hatCol": "#2f4a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -2131,17 +2789,25 @@
         "list": [
          {
           "x": 0.33,
-          "pose": "stand",
+          "pose": "point",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.64,
-          "pose": "arms",
+          "pose": "cross",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "hitler"
          }
         ],
         "lx": 0.55,
@@ -2193,35 +2859,46 @@
        {
         "type": "room",
         "flag": "de",
-        "window": 0.30000000000000004,
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 7,
+        "papers": 10,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 10
        },
        {
         "type": "people",
         "list": [
          {
           "x": 0.33,
-          "pose": "stand",
+          "pose": "point",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "hitler"
          },
          {
           "x": 0.64,
-          "pose": "arms",
+          "pose": "think",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -2230,6 +2907,41 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "AIDE",
+       "text": "Give up the British passport. A fine job awaits."
+      },
+      {
+       "who": "WPH",
+       "text": "No, thank you."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "de",
+        "window": 0.2,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#3a2e28"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 3,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "William smells a trap. If he stops being British, nobody can protect him. So he says no.",
@@ -2269,10 +2981,17 @@
         "list": [
          {
           "x": 0.42,
-          "pose": "stand",
+          "pose": "shrug",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -2301,7 +3020,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 16,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -2322,14 +3041,25 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3a3a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -2468,7 +3198,57 @@
       "shot": "photo",
       "img": "munich",
       "caption": "Munich, 30 September 1938",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "de",
+         "window": 0.2,
+         "night": true,
+         "depth": 0.3
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 6,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "civilian",
+           "x": 0.3,
+           "spec": {
+            "coat": "#1e1e24",
+            "hat": "tophat",
+            "hatCol": "#111",
+            "hair": "#9a9488"
+           }
+          },
+          {
+           "preset": "civilian",
+           "x": 0.62,
+           "facing": -1,
+           "spec": {
+            "coat": "#1e1e24",
+            "hat": "tophat",
+            "hatCol": "#111",
+            "hair": "#9a9488"
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -2597,7 +3377,45 @@
       "move": "in",
       "fx": [
        "grain"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "grass",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "crowd",
+         "y": 0.96,
+         "n": 50,
+         "hats": true,
+         "depth": 0.8
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "civilian",
+           "x": 0.45,
+           "h": 0.9,
+           "pose": "hold",
+           "spec": {
+            "coat": "#1e1e24",
+            "hair": "#c8c2b8",
+            "beard": "mustache"
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -2650,6 +3468,55 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CHAM",
+       "text": "Peace for our time."
+      },
+      {
+       "who": "LOND",
+       "text": "Peace!",
+       "mood": "happy"
+      },
+      {
+       "who": "LOND2",
+       "text": "For how long?",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 130,
+        "h": 190,
+        "col": "#3a3530",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.96,
+        "n": 60,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.72,
+        "flag": "uk",
+        "h": 320,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "From the tenth of October, German troops take over the Sudetenland.",
@@ -2786,14 +3653,27 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#1e1e24",
+           "hair": "#c8c2b8",
+           "beard": "mustache"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#1e1e24",
+           "hat": "tophat",
+           "hatCol": "#111",
+           "hair": "#9a9488"
+          }
          }
         ],
         "lx": 0.55,
@@ -2869,6 +3749,42 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "REP",
+       "text": "Your uncle. What is he like?"
+      },
+      {
+       "who": "WPH",
+       "text": "I believe he has created a Frankenstein which even he perhaps cannot stop.",
+       "mood": "grim"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a3a44"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "He writes an article for the American magazine Look. The title is, Why I Hate My Uncle.",
      "do": [
       {
@@ -2939,6 +3855,46 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "PURSER",
+       "text": "Name for the passenger list?"
+      },
+      {
+       "who": "BRID",
+       "text": "Hitler. Mrs Bridget Hitler."
+      },
+      {
+       "who": "PURSER",
+       "text": "...Welcome aboard.",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 1,
+        "x": 0.5,
+        "s": 0.9,
+        "flag": "us",
+        "y": 0.7,
+        "gap": 300,
+        "steam": true,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Mother and son cross the Atlantic. They expect to go home again. They never will.",
@@ -3140,7 +4096,13 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker",
+          "spec": {
+           "coat": "#5a5e5a",
+           "hat": "helmet",
+           "hatCol": "#4a4e4a"
+          }
          }
         ],
         "lx": 0.55,
@@ -3176,19 +4138,21 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#26231f",
-        "window": 0.3,
+        "wall": "#3a4a4a",
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1
        },
        {
         "type": "table",
         "lamp": 0.8,
         "candles": 0,
-        "papers": 2,
+        "papers": 5,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 5
        },
        {
         "type": "people",
@@ -3198,7 +4162,13 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker",
+          "spec": {
+           "coat": "#5a5e5a",
+           "hat": "helmet",
+           "hatCol": "#4a4e4a"
+          }
          }
         ],
         "lx": 0.55,
@@ -3254,7 +4224,47 @@
       "move": "right",
       "fx": [
        "smoke"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": 0.45,
+         "x1": 1.1,
+         "y": 0.6,
+         "h": 90,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 1,
+         "x": 0.25,
+         "s": 0.8,
+         "flag": "de",
+         "y": 0.68,
+         "gap": 300,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "fire",
+         "x": 0.75,
+         "y": 0.58,
+         "r": 220,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -3322,6 +4332,17 @@
        "smoke"
       ]
      }
+    },
+    {
+     "say": "Two thousand seven hundred and fifty tanks against two hundred and ten. Thirteen German tanks for every Polish one.",
+     "scene": {
+      "shot": "card",
+      "time": "13 TO 1",
+      "place": "GERMAN TANKS FOR EACH POLISH TANK",
+      "date": "Poland, September 1939",
+      "size": 160
+     },
+     "_new": 1
     },
     {
      "say": "Now the other side. Poland has about a million soldiers. But only two hundred and ten tanks.",
@@ -3457,6 +4478,54 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "POL",
+       "text": "Any word from London?"
+      },
+      {
+       "who": "POL2",
+       "text": "Not yet.",
+       "mood": "sad"
+      },
+      {
+       "who": "POL",
+       "text": "Then we hold."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 2,
+        "seed": 21,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 30,
+        "seed": 14,
+        "h": 160,
+        "depth": 0.45
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Two days later, Britain and France declare war on Germany. The Second World War has begun.",
@@ -3732,7 +4801,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 16,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -3750,17 +4819,27 @@
         "list": [
          {
           "x": 0.5,
-          "pose": "stand",
+          "pose": "rifle",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker",
+          "spec": {
+           "coat": "#5a5e5a",
+           "hat": "helmet",
+           "hatCol": "#4a4e4a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3b3a3f"
+          }
          }
         ],
         "lx": 0.55,
@@ -3958,16 +5037,19 @@
         "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.5,
         "candles": 0,
-        "papers": 6,
+        "papers": 9,
         "w": 700,
         "x": 0.45,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 9
        },
        {
         "type": "people",
@@ -3977,7 +5059,14 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#7a6a45",
+           "coat2": "#5f5235",
+           "hatCol": "#5f5235",
+           "trim": "#b3202a"
+          }
          }
         ],
         "lx": 0.55,
@@ -4107,6 +5196,54 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SKIP",
+       "text": "A pleasure boat? To a war?",
+       "mood": "shock"
+      },
+      {
+       "who": "NAVY",
+       "text": "Everything that floats."
+      },
+      {
+       "who": "SKIP",
+       "text": "Then fill her up."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": -0.1,
+        "x1": 0.45,
+        "y": 0.62,
+        "h": 100,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.55,
+        "s": 0.4,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 160,
+        "steam": false,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "In nine days, three hundred and thirty-eight thousand men are carried to Britain. Nearly a hundred and forty thousand of them are French, Polish and Belgian.",
      "do": [
       {
@@ -4140,8 +5277,50 @@
       "shot": "photo",
       "img": "dunkirk",
       "caption": "Troops from Dunkirk arriving at Dover, 31 May 1940",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 4,
+         "x": 0.2,
+         "s": 0.5,
+         "flag": "uk",
+         "y": 0.68,
+         "gap": 260,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "land",
+         "kind": "sand",
+         "y": 0.8,
+         "depth": 0.6
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
+    },
+    {
+     "say": "Three hundred and thirty-eight thousand men in nine days. About thirty-seven thousand every single day.",
+     "scene": {
+      "shot": "card",
+      "time": "37,000 A DAY",
+      "place": "MEN BROUGHT HOME",
+      "date": "Dunkirk, 1940",
+      "size": 160
+     },
+     "_new": 1
     },
     {
      "say": "Of the eight hundred and sixty-one vessels used, two hundred and forty-three are sunk.",
@@ -4181,6 +5360,50 @@
        "embers"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "TOMMY",
+       "text": "Where are we going?"
+      },
+      {
+       "who": "CREW",
+       "text": "Home. Get in."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.82,
+        "depth": 0.6
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.3,
+        "s": 0.55,
+        "flag": "uk",
+        "y": 0.7,
+        "gap": 420,
+        "steam": true,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "On the fourteenth of June, German troops march into Paris.",
@@ -4330,6 +5553,45 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "AUD",
+       "text": "Is it true? You are really his nephew?"
+      },
+      {
+       "who": "WPH",
+       "text": "I am."
+      },
+      {
+       "who": "AUD",
+       "text": "...Can I have your autograph?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#4a3a2e"
+       },
+       {
+        "type": "crowd",
+        "y": 0.99,
+        "n": 40,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "From the tenth of July, the German air force, the Luftwaffe, fights the Royal Air Force over southern England.",
      "do": [
       {
@@ -4413,6 +5675,39 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "PILOT",
+       "text": "How many today?"
+      },
+      {
+       "who": "PILOT2",
+       "text": "Too many. Up again in an hour.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 17,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "From the seventh of September, the bombs fall on London itself. The Blitz goes on until May 1941.",
      "do": [
       {
@@ -4432,7 +5727,33 @@
       "fx": [
        "smoke",
        "embers"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 14,
+         "gap": 120,
+         "h": 200,
+         "col": "#1d1612",
+         "depth": 0.4
+        },
+        {
+         "type": "fire",
+         "x": 0.6,
+         "y": 0.66,
+         "r": 300,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke",
+        "embers"
+       ]
+      }
      }
     },
     {
@@ -4473,6 +5794,45 @@
        "smoke"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "LUFT",
+       "text": "We are a long way from home."
+      },
+      {
+       "who": "LUFT2",
+       "text": "And it is their sky.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.62,
+        "n": 2,
+        "seed": 23,
+        "depth": 0.2
+       },
+       {
+        "type": "town",
+        "y": 0.76,
+        "n": 8,
+        "gap": 160,
+        "h": 90,
+        "col": "#2a2622",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "By the end, nearly two thousand German aircraft are destroyed, and over seventeen hundred British ones.",
@@ -4979,6 +6339,44 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SOV",
+       "text": "They are close to Moscow."
+      },
+      {
+       "who": "SOV2",
+       "text": "Then this is where we stop them.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 10,
+        "gap": 150,
+        "h": 170,
+        "col": "#2a2622",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.8,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "Autumn rain turns the roads to mud. Then the snow comes.",
      "do": [
       {
@@ -5032,6 +6430,56 @@
       ],
       "weather": "snow"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GERS",
+       "text": "Is the truck moving?"
+      },
+      {
+       "who": "GERS2",
+       "text": "Not since Tuesday.",
+       "mood": "sad"
+      },
+      {
+       "who": "GERS",
+       "text": "And now it is snowing.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 33,
+        "depth": 0.2
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 40,
+        "seed": 33,
+        "h": 160,
+        "depth": 0.45
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow",
+      "fx": [
+       "snow"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "By the fifth of December, the German offensive stalls at the edge of Moscow. That same day, the Red Army strikes back.",
@@ -5635,6 +7083,55 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "JPOFF",
+       "text": "Where were you?",
+       "mood": "angry"
+      },
+      {
+       "who": "SHIM",
+       "text": "I got lost, sir.",
+       "mood": "sad"
+      },
+      {
+       "who": "JPOFF",
+       "text": "...It is too late now.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 41,
+        "depth": 0.2
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.78,
+        "n": 3,
+        "x0": 0.1,
+        "gap": 260,
+        "col": "#c8c0a8",
+        "fire": 0.4,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "China will lose between fourteen and twenty million people in this war.",
      "do": [
       {
@@ -5653,7 +7150,7 @@
        {
         "type": "town",
         "y": 0.72,
-        "n": 12,
+        "n": 14,
         "x0": -0.05,
         "gap": 160,
         "h": 110,
@@ -5677,7 +7174,7 @@
        {
         "type": "soldiers",
         "y": 0.86,
-        "n": 5,
+        "n": 7,
         "gap": 120,
         "x0": 0.1,
         "col": "#1e1c18",
@@ -5739,7 +7236,16 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          }
         ],
         "lx": 0.55,
@@ -5791,6 +7297,42 @@
       "scale": 700
      },
      "date": "1941"
+    },
+    {
+     "talk": [
+      {
+       "who": "JPMIN",
+       "text": "How much oil is left?"
+      },
+      {
+       "who": "JPMIN2",
+       "text": "Not enough. Not for long.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "jp",
+        "window": 0.2,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#3a2e22"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 7,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Now the other side. To Tokyo, the choice looks stark. Give up, or seize the oil of the Dutch East Indies by force.",
@@ -5872,14 +7414,30 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "rn_officer",
+          "spec": {
+           "hat": "kepi",
+           "hatCol": "#111",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          }
         ],
         "lx": 0.55,
@@ -5980,6 +7538,54 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "USS",
+       "text": "Whose planes are those?",
+       "mood": "shock"
+      },
+      {
+       "who": "USS2",
+       "text": "Not ours!",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.0,
+        "x1": 0.6,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.5,
+        "s": 0.5,
+        "flag": "us",
+        "y": 0.7,
+        "gap": 260,
+        "steam": true,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "All eight American battleships in the harbour are damaged. Four are sunk. The USS Arizona will never sail again.",
      "do": [
       {
@@ -5999,7 +7605,39 @@
       "fx": [
        "smoke",
        "embers"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 1,
+         "x": 0.5,
+         "s": 0.9,
+         "flag": "us",
+         "y": 0.68,
+         "gap": 300,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "fire",
+         "x": 0.5,
+         "y": 0.6,
+         "r": 260,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -6300,8 +7938,81 @@
       "shot": "photo",
       "img": "fdr",
       "caption": "Franklin D. Roosevelt",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "us",
+         "window": 0.6,
+         "night": false,
+         "depth": 0.3,
+         "wall": "#5a5044"
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 6,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "civilian",
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.88,
+           "spec": {
+            "coat": "#2e3440",
+            "hair": "#9a9488",
+            "glasses": 1
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "FDR",
+       "text": "A date which will live in infamy.",
+       "mood": "grim"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.6,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#5a5044"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Three days later, Germany declares war on the United States. Now the nephew's new country is at war with his uncle.",
@@ -6382,10 +8093,46 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wph_navy",
-      "caption": "William Patrick Hitler",
-      "move": "right"
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.2,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.7,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.42,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "hold",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.42,
+        "ly": 0.55,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -6434,10 +8181,17 @@
         "list": [
          {
           "x": 0.42,
-          "pose": "stand",
+          "pose": "shrug",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -6487,14 +8241,25 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3a3f4a"
+          }
          }
         ],
         "lx": 0.55,
@@ -6503,6 +8268,54 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "RECR",
+       "text": "Name?"
+      },
+      {
+       "who": "WPH",
+       "text": "Hitler."
+      },
+      {
+       "who": "RECR",
+       "text": "...Next!",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#4a5a5a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 5,
+        "w": 900,
+        "depth": 0.6
+       },
+       {
+        "type": "flagpole",
+        "x": 0.85,
+        "y": 0.7,
+        "flag": "us",
+        "h": 300,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "So he goes straight to the top. He writes to the President of the United States.",
@@ -6520,7 +8333,48 @@
       "shot": "photo",
       "img": "fdr",
       "caption": "President Franklin D. Roosevelt",
-      "move": "out"
+      "move": "out",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "us",
+         "window": 0.6,
+         "night": false,
+         "depth": 0.3,
+         "wall": "#5a5044"
+        },
+        {
+         "type": "table",
+         "lamp": 0.6,
+         "candles": 0,
+         "papers": 6,
+         "w": 900,
+         "depth": 0.6
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "civilian",
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.88,
+           "spec": {
+            "coat": "#2e3440",
+            "hair": "#9a9488",
+            "glasses": 1
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -6570,26 +8424,36 @@
         "window": 0.7,
         "night": false,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.5,
         "candles": 0,
-        "papers": 6,
+        "papers": 9,
         "w": 700,
         "x": 0.45,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 9
        },
        {
         "type": "people",
         "list": [
          {
           "x": 0.42,
-          "pose": "stand",
+          "pose": "hold",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          }
         ],
         "lx": 0.55,
@@ -6598,6 +8462,43 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WH1",
+       "text": "A letter for the President. From a Mr... Hitler.",
+       "mood": "shock"
+      },
+      {
+       "who": "WH2",
+       "text": "Put it on the pile. The big pile.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#5a4a3a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.7,
+        "candles": 0,
+        "papers": 12,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "His request has to go up through Washington. It will take a long time to be answered.",
@@ -6854,10 +8755,14 @@
         "list": [
          {
           "x": 0.42,
-          "pose": "stand",
+          "pose": "think",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3a3f4a"
+          }
          }
         ],
         "lx": 0.55,
@@ -6892,6 +8797,42 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CODE",
+       "text": "AF is short of water."
+      },
+      {
+       "who": "CODE2",
+       "text": "Then AF is Midway.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#2e3a4a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.8,
+        "candles": 0,
+        "papers": 11,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "From the fourth to the seventh of June, American planes sink four Japanese carriers. Akagi, Kaga, Soryu and Hiryu.",
      "do": [
       {
@@ -6918,7 +8859,39 @@
       "move": "left",
       "fx": [
        "smoke"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.62,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 1,
+         "x": 0.55,
+         "s": 0.8,
+         "flag": "jp",
+         "y": 0.68,
+         "gap": 300,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "fire",
+         "x": 0.55,
+         "y": 0.6,
+         "r": 200,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -7108,7 +9081,33 @@
       "fx": [
        "smoke",
        "dust"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.72,
+         "n": 12,
+         "gap": 140,
+         "h": 180,
+         "col": "#2a2622",
+         "depth": 0.4
+        },
+        {
+         "type": "fire",
+         "x": 0.3,
+         "y": 0.66,
+         "r": 200,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke",
+        "snow"
+       ]
+      }
      }
     },
     {
@@ -7315,6 +9314,46 @@
        "smoke"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GERS",
+       "text": "Any bread?"
+      },
+      {
+       "who": "GERS2",
+       "text": "Tomorrow. Maybe.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 170,
+        "h": 140,
+        "col": "#1d1612",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.8,
+        "depth": 0.6
+       }
+      ],
+      "weather": "snow",
+      "fx": [
+       "snow",
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "On the second of February, 1943, what is left of the Sixth Army surrenders.",
@@ -7549,7 +9588,7 @@
        {
         "type": "town",
         "y": 0.72,
-        "n": 12,
+        "n": 14,
         "x0": -0.05,
         "gap": 160,
         "h": 110,
@@ -7573,7 +9612,7 @@
        {
         "type": "soldiers",
         "y": 0.86,
-        "n": 5,
+        "n": 7,
         "gap": 120,
         "x0": 0.1,
         "col": "#1e1c18",
@@ -7686,7 +9725,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 15,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -7707,14 +9746,26 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#6a3a1e",
+           "coat": "#3a4a5a"
+          }
          }
         ],
         "lx": 0.55,
@@ -7782,10 +9833,57 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "fdr",
-      "caption": "President Roosevelt, 1944",
-      "move": "left"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a4a4a",
+        "seed": 1
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 3,
+        "w": 900,
+        "depth": 0.6,
+        "n": 3
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "clerk",
+          "x": 0.35,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "hold",
+          "spec": {
+           "coat": "#3a3f4a"
+          }
+         },
+         {
+          "preset": "us_officer",
+          "x": 0.68,
+          "facing": -1,
+          "h": 0.85,
+          "spec": {
+           "coat": "#6b6448",
+           "coat2": "#55503a",
+           "hatCol": "#55503a"
+          }
+         }
+        ],
+        "lx": 0.5,
+        "ly": 0.55,
+        "depth": 0.85
+       }
+      ]
      }
     },
     {
@@ -7809,11 +9907,92 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wph_navy",
-      "caption": "William Patrick Hitler",
-      "move": "in"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#3a4a4a",
+        "seed": 1
+       },
+       {
+        "type": "table",
+        "lamp": 0.4,
+        "candles": 0,
+        "papers": 5,
+        "w": 900,
+        "depth": 0.6,
+        "n": 5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "us_sailor",
+          "x": 0.4,
+          "facing": 1,
+          "h": 0.88,
+          "pose": "hold",
+          "spec": {
+           "hair": "#2a1d12"
+          }
+         },
+         {
+          "preset": "us_sailor",
+          "x": 0.7,
+          "facing": -1,
+          "h": 0.8
+         }
+        ],
+        "lx": 0.45,
+        "ly": 0.55,
+        "depth": 0.85
+       }
+      ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "CPO",
+       "text": "Name?"
+      },
+      {
+       "who": "WPHN",
+       "text": "Hitler, sir."
+      },
+      {
+       "who": "CPO",
+       "text": "...Welcome to the Navy, Hitler."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.4,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#d8d2c4"
+       },
+       {
+        "type": "table",
+        "lamp": 0.4,
+        "candles": 0,
+        "papers": 2,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "His job is to care for the sick and the wounded.",
@@ -7834,35 +10013,43 @@
        {
         "type": "room",
         "flag": "us",
-        "window": 0.30000000000000004,
+        "window": 0.7,
         "night": false,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 5,
+        "papers": 8,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 8
        },
        {
         "type": "people",
         "list": [
          {
           "x": 0.33,
-          "pose": "stand",
+          "pose": "hold",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_sailor",
+          "spec": {
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_sailor"
          }
         ],
         "lx": 0.55,
@@ -7967,18 +10154,21 @@
        {
         "type": "room",
         "flag": "us",
-        "window": 0.7000000000000001,
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 6,
+        "papers": 9,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 9
        },
        {
         "type": "people",
@@ -7988,14 +10178,19 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_sailor",
+          "spec": {
+           "hair": "#2a1d12"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_sailor"
          }
         ],
         "lx": 0.55,
@@ -8018,10 +10213,11 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wph_navy",
-      "caption": "William Patrick Hitler",
-      "move": "left"
+      "shot": "card",
+      "time": "HIS CHOICE",
+      "place": "THE OTHER SIDE",
+      "date": "U.S. Navy, 1944",
+      "size": 150
      }
     },
     {
@@ -8129,7 +10325,7 @@
        },
        {
         "type": "ships",
-        "n": 3,
+        "n": 5,
         "x": 0.72,
         "s": 0.55,
         "steam": true,
@@ -8164,16 +10360,19 @@
         "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.5,
         "candles": 0,
-        "papers": 6,
+        "papers": 9,
         "w": 700,
         "x": 0.45,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 9
        },
        {
         "type": "people",
@@ -8183,7 +10382,13 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a5a7a",
+           "coat2": "#d8d2c4",
+           "hair": "#5a3a22"
+          }
          }
         ],
         "lx": 0.55,
@@ -8193,6 +10398,41 @@
       ],
       "weather": "rain"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "STAGG",
+       "text": "A short break in the weather. On the sixth."
+      },
+      {
+       "who": "IKE",
+       "text": "Then we go on the sixth."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "uk",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#3a3a2e"
+       },
+       {
+        "type": "table",
+        "lamp": 0.7,
+        "candles": 0,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "If they wait, the next good tides will not come until about the eighteenth of June. So Eisenhower decides. They go on the sixth.",
@@ -8221,18 +10461,21 @@
        {
         "type": "room",
         "flag": "us",
-        "window": 0.7000000000000001,
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 7,
+        "papers": 10,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 10
        },
        {
         "type": "people",
@@ -8242,14 +10485,26 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6448",
+           "coat2": "#55503a",
+           "hatCol": "#55503a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a5a7a",
+           "coat2": "#d8d2c4",
+           "hair": "#5a3a22"
+          }
          }
         ],
         "lx": 0.55,
@@ -8358,7 +10613,38 @@
       "move": "in",
       "fx": [
        "smoke"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.66,
+         "depth": 0.3
+        },
+        {
+         "type": "land",
+         "kind": "sand",
+         "y": 0.8,
+         "depth": 0.6
+        },
+        {
+         "type": "soldiers",
+         "y": 0.86,
+         "n": 14,
+         "rows": 2,
+         "x0": 0,
+         "gap": 90,
+         "col": "#55603a",
+         "march": true,
+         "depth": 0.7
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -8435,6 +10721,17 @@
        "smoke"
       ]
      }
+    },
+    {
+     "say": "A hundred and fifty-six thousand soldiers in one day. About sixty-five hundred every hour.",
+     "scene": {
+      "shot": "card",
+      "time": "6,500 AN HOUR",
+      "place": "SOLDIERS ASHORE",
+      "date": "Normandy, 6 June 1944",
+      "size": 150
+     },
+     "_new": 1
     },
     {
      "say": "Now the other side. The German air force can put only eight hundred and fifteen aircraft over Normandy. The Allies have more than nine thousand.",
@@ -8792,14 +11089,22 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "hitler"
          },
          {
           "x": 0.6,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#5a5e5a",
+           "coat2": "#454a45",
+           "hatCol": "#454a45",
+           "trim": "#b8b8b8"
+          }
          }
         ],
         "lx": 0.55,
@@ -8849,14 +11154,20 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "hitler"
          },
          {
           "x": 0.6,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#d8b86a",
+           "coat": "#2a2a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -8893,7 +11204,33 @@
       "move": "in",
       "fx": [
        "smoke"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.72,
+         "n": 10,
+         "gap": 160,
+         "h": 220,
+         "col": "#3a3530",
+         "depth": 0.4
+        },
+        {
+         "type": "flagpole",
+         "x": 0.55,
+         "y": 0.6,
+         "flag": "ru",
+         "h": 300,
+         "depth": 0.5
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      }
     },
     {
@@ -8914,42 +11251,23 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#1e1d1b",
-        "window": 0,
+        "flag": "de",
+        "window": null,
         "night": true,
-        "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "wall": "#2a2622"
        },
        {
         "type": "table",
-        "lamp": 0.7,
+        "lamp": 0.25,
         "candles": 0,
-        "papers": 7,
-        "w": 800,
+        "papers": 1,
+        "w": 900,
         "depth": 0.6
-       },
-       {
-        "type": "people",
-        "list": [
-         {
-          "x": 0.38,
-          "pose": "stand",
-          "facing": 1,
-          "h": 0.8,
-          "cap": true
-         },
-         {
-          "x": 0.6,
-          "pose": "arms",
-          "facing": -1,
-          "h": 0.8,
-          "cap": true
-         }
-        ],
-        "lx": 0.55,
-        "ly": 0.45,
-        "depth": 0.85
        }
+      ],
+      "fx": [
+       "dust"
       ]
      },
      "pause": 1.0
@@ -8995,19 +11313,21 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#26231f",
-        "window": 0.3,
+        "wall": "#3a4a4a",
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1
        },
        {
         "type": "table",
         "lamp": 0.8,
         "candles": 0,
-        "papers": 2,
+        "papers": 5,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 5
        },
        {
         "type": "people",
@@ -9017,7 +11337,11 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "coat": "#3a3a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -9026,6 +11350,44 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "BERL",
+       "text": "Is it true?",
+       "mood": "shock"
+      },
+      {
+       "who": "BERL2",
+       "text": "The radio says so."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 10,
+        "gap": 150,
+        "h": 180,
+        "col": "#3a3530",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.8,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "On the seventh of May, at two forty-one in the morning, in Reims in France, General Alfred Jodl signs Germany's surrender.",
@@ -9133,14 +11495,22 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#5a5e5a",
+           "coat2": "#454a45",
+           "hatCol": "#454a45",
+           "trim": "#b8b8b8"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "soviet_officer"
          }
         ],
         "lx": 0.55,
@@ -9196,6 +11566,51 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "LOND",
+       "text": "It's over!",
+       "mood": "happy"
+      },
+      {
+       "who": "MOSC",
+       "text": "Not here. Not until after midnight.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 12,
+        "gap": 130,
+        "h": 190,
+        "col": "#3a3530",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.96,
+        "n": 60,
+        "hats": true,
+        "depth": 0.8
+       },
+       {
+        "type": "flagpole",
+        "x": 0.8,
+        "y": 0.72,
+        "flag": "uk",
+        "h": 320,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "And William's father? The British arrest Alois Hitler in 1945. They find he was never a member of the Nazi Party while his half-brother ruled. He had kept away from politics.",
      "do": [
       {
@@ -9214,7 +11629,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 15,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -9235,14 +11650,26 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
-          "pose": "arms",
+          "pose": "rifle",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "worker",
+          "spec": {
+           "coat": "#7a6a45",
+           "hat": "helmet",
+           "hatCol": "#5f5a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -9419,7 +11846,32 @@
       "move": "out",
       "fx": [
        "grain"
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.55,
+         "n": 2,
+         "seed": 9,
+         "depth": 0.2
+        },
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 12,
+         "gap": 140,
+         "h": 120,
+         "col": "#3a3028",
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
      },
      "pause": 1.4
     },
@@ -9536,7 +11988,41 @@
       "shot": "photo",
       "img": "hirohito",
       "caption": "Emperor Hirohito",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "jp",
+         "window": 0.5,
+         "night": false,
+         "depth": 0.3,
+         "wall": "#4a3a2a"
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "clerk",
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.88,
+           "spec": {
+            "hair": "#1a1a1a",
+            "skin": "#e8c49a",
+            "coat": "#3a3a2a",
+            "beard": "mustache"
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -9566,18 +12052,21 @@
        {
         "type": "room",
         "flag": "jp",
-        "window": 0.30000000000000004,
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 4,
+        "papers": 7,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 7
        },
        {
         "type": "people",
@@ -9587,14 +12076,32 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          }
         ],
         "lx": 0.55,
@@ -9626,18 +12133,21 @@
        {
         "type": "room",
         "flag": "jp",
-        "window": 0.30000000000000004,
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.6,
         "candles": 0,
-        "papers": 3,
+        "papers": 6,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 6
        },
        {
         "type": "people",
@@ -9647,14 +12157,32 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          },
          {
           "x": 0.64,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          }
         ],
         "lx": 0.55,
@@ -9686,16 +12214,19 @@
         "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1,
+        "wall": "#3a4a4a"
        },
        {
         "type": "table",
         "lamp": 0.5,
         "candles": 0,
-        "papers": 6,
+        "papers": 9,
         "w": 700,
         "x": 0.45,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 9
        },
        {
         "type": "people",
@@ -9705,7 +12236,13 @@
           "pose": "stand",
           "facing": 1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a",
+           "coat": "#2a2a30"
+          }
          }
         ],
         "lx": 0.55,
@@ -9714,6 +12251,42 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "REBEL",
+       "text": "Where is the record?",
+       "mood": "angry"
+      },
+      {
+       "who": "STAFF",
+       "text": "I could not say, sir."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "jp",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3,
+        "wall": "#2a2218"
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "Noon, the fifteenth of August. Many ordinary Japanese hear their emperor's voice for the first time.",
@@ -9752,19 +12325,21 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#26231f",
-        "window": 0.3,
+        "wall": "#3a4a4a",
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1
        },
        {
         "type": "table",
         "lamp": 0.8,
         "candles": 0,
-        "papers": 2,
+        "papers": 5,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 5
        },
        {
         "type": "people",
@@ -9774,7 +12349,13 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a",
+           "coat": "#2a2a30"
+          }
          }
         ],
         "lx": 0.55,
@@ -9811,19 +12392,21 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#26231f",
-        "window": 0.3,
+        "wall": "#3a4a4a",
+        "window": 0.7,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 1
        },
        {
         "type": "table",
         "lamp": 0.8,
         "candles": 0,
-        "papers": 2,
+        "papers": 5,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 5
        },
        {
         "type": "people",
@@ -9833,7 +12416,13 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "clerk",
+          "spec": {
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a",
+           "coat": "#2a2a30"
+          }
          }
         ],
         "lx": 0.55,
@@ -9842,6 +12431,42 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "LIST",
+       "text": "Is that... the emperor?",
+       "mood": "shock"
+      },
+      {
+       "who": "LIST2",
+       "text": "Quiet. Listen."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 10,
+        "gap": 150,
+        "h": 120,
+        "col": "#3a3028",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.97,
+        "n": 30,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "In the early hours, rebels led by Major Kenji Hatanaka even try to stop the broadcast at the radio station. The army orders them to stand down.",
@@ -9861,19 +12486,21 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#26231f",
-        "window": 0.3,
+        "wall": "#4a3a44",
+        "window": 0.4,
         "night": true,
         "portrait": null,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 2
        },
        {
         "type": "table",
         "lamp": 0.8,
         "candles": 0,
-        "papers": 2,
+        "papers": 8,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "n": 8
        },
        {
         "type": "people",
@@ -9883,7 +12510,16 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "us_officer",
+          "spec": {
+           "coat": "#6b6a3a",
+           "coat2": "#5a5a30",
+           "hatCol": "#5a5a30",
+           "trim": "#c8102e",
+           "hair": "#1a1a1a",
+           "skin": "#e8c49a"
+          }
          }
         ],
         "lx": 0.55,
@@ -10000,7 +12636,57 @@
       "shot": "photo",
       "img": "surrender",
       "caption": "Mamoru Shigemitsu signs, 2 September 1945",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.6,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 1,
+         "x": 0.5,
+         "s": 0.9,
+         "flag": "us",
+         "y": 0.7,
+         "gap": 300,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "clerk",
+           "x": 0.35,
+           "pose": "hold",
+           "spec": {
+            "hair": "#1a1a1a",
+            "skin": "#e8c49a",
+            "coat": "#2a2a30"
+           }
+          },
+          {
+           "preset": "us_officer",
+           "x": 0.65,
+           "facing": -1,
+           "spec": {
+            "coat": "#6b6448",
+            "coat2": "#55503a",
+            "hatCol": "#55503a"
+           }
+          }
+         ],
+         "lx": 0.5,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      },
      "date": "1945"
     },
@@ -10307,7 +12993,7 @@
        {
         "type": "town",
         "y": 0.72,
-        "n": 16,
+        "n": 18,
         "x0": -0.05,
         "gap": 125,
         "h": 200,
@@ -10437,10 +13123,57 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "wph_navy",
-      "caption": "William Patrick Hitler leaves the Navy",
-      "move": "out"
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.5,
+        "x1": 1.1,
+        "y": 0.62,
+        "h": 100,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 2,
+        "x": 0.3,
+        "s": 0.55,
+        "flag": "us",
+        "y": 0.68,
+        "gap": 380,
+        "steam": true,
+        "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "preset": "us_sailor",
+          "x": 0.6,
+          "facing": -1,
+          "h": 0.85,
+          "walk": [
+           0.75,
+           0.55,
+           0,
+           4
+          ],
+          "spec": {
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.6,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ]
      },
      "date": "1947"
     },
@@ -10475,6 +13208,46 @@
       ],
       "stamp": "NEW NAME"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "REG",
+       "text": "Name?"
+      },
+      {
+       "who": "WPH",
+       "text": "Stuart-Houston."
+      },
+      {
+       "who": "REG",
+       "text": "Much easier.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.6,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#6a5a44"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 7,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_new": 1
     },
     {
      "say": "He settles in Patchogue, on Long Island, New York. From his house on Silver Street, he runs a small business testing blood samples.",
@@ -10636,7 +13409,38 @@
       "shot": "photo",
       "img": "bridget",
       "caption": "Bridget Dowling Hitler",
-      "move": "out"
+      "move": "out",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": "uk",
+         "window": 0.6,
+         "night": false,
+         "depth": 0.3
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "woman",
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.88,
+           "spec": {
+            "hair": "#6a3a1e",
+            "coat": "#3a4a5a"
+           }
+          }
+         ],
+         "lx": 0.45,
+         "ly": 0.55,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -10662,7 +13466,7 @@
        {
         "type": "town",
         "y": 0.7,
-        "n": 14,
+        "n": 15,
         "x0": -0.05,
         "gap": 140,
         "h": 170,
@@ -10683,14 +13487,25 @@
           "pose": "stand",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "civilian",
+          "spec": {
+           "coat": "#4a3a2a",
+           "beard": "mustache",
+           "hair": "#3b2a1a"
+          }
          },
          {
           "x": 0.62,
           "pose": "arms",
           "facing": -1,
           "h": 0.8,
-          "cap": true
+          "cap": true,
+          "preset": "woman",
+          "spec": {
+           "hair": "#3a2416",
+           "coat": "#5a4a3a"
+          }
          }
         ],
         "lx": 0.55,
@@ -10842,7 +13657,54 @@
       "shot": "photo",
       "img": "wph_navy",
       "caption": "William Patrick Hitler",
-      "move": "in"
+      "move": "in",
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.64,
+         "depth": 0.3
+        },
+        {
+         "type": "coast",
+         "x0": -0.15,
+         "x1": 0.4,
+         "y": 0.64,
+         "h": 110,
+         "depth": 0.3
+        },
+        {
+         "type": "ships",
+         "n": 1,
+         "x": 0.62,
+         "s": 0.75,
+         "flag": "us",
+         "y": 0.7,
+         "gap": 300,
+         "steam": true,
+         "depth": 0.5
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "preset": "us_sailor",
+           "x": 0.3,
+           "facing": 1,
+           "h": 0.9,
+           "spec": {
+            "hair": "#2a1d12"
+           }
+          }
+         ],
+         "lx": 0.3,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     }
    ]
@@ -11072,5 +13934,440 @@
    "head": "HE BLACKMAILED|HITLER?",
    "title": "Hitler's Nephew Made a THREAT, and Got a Raise #shorts"
   }
- ]
+ ],
+ "cast": {
+  "WPH": {
+   "preset": "civilian",
+   "name": "William Patrick Hitler",
+   "spec": {
+    "coat": "#2e3440",
+    "coat2": "#e8e2d4",
+    "trim": "#6a6458",
+    "hair": "#2a1d12"
+   }
+  },
+  "WPHN": {
+   "preset": "us_sailor",
+   "name": "William Patrick Hitler",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "BOY": {
+   "preset": "civilian",
+   "name": "William, aged about ten",
+   "spec": {
+    "coat": "#4a4a52",
+    "hair": "#3b2a1a"
+   }
+  },
+  "BRID": {
+   "preset": "woman",
+   "name": "Bridget Hitler",
+   "spec": {
+    "hair": "#6a3a1e",
+    "coat": "#3a4a5a"
+   }
+  },
+  "COOK": {
+   "preset": "worker",
+   "name": "A hotel cook",
+   "spec": {
+    "coat": "#e8e2d4",
+    "coat2": "#e8e2d4"
+   }
+  },
+  "COOK2": {
+   "preset": "worker",
+   "name": "A kitchen boy"
+  },
+  "NB": {
+   "preset": "woman",
+   "name": "A Liverpool neighbour",
+   "spec": {
+    "hair": "#3a2416",
+    "coat": "#5a4a3a"
+   }
+  },
+  "NB2": {
+   "preset": "worker",
+   "name": "Another neighbour"
+  },
+  "TEACH": {
+   "preset": "civilian",
+   "name": "A schoolteacher"
+  },
+  "BORD": {
+   "preset": "clerk",
+   "name": "A German border clerk",
+   "spec": {
+    "coat": "#3a3a3a"
+   }
+  },
+  "CUST": {
+   "preset": "civilian",
+   "name": "A customer"
+  },
+  "CUST2": {
+   "preset": "woman",
+   "name": "The customer's wife",
+   "spec": {
+    "hair": "#3a2416",
+    "coat": "#5a4a3a"
+   }
+  },
+  "AIDE": {
+   "preset": "clerk",
+   "name": "A party official",
+   "spec": {
+    "coat": "#3a3a3a"
+   }
+  },
+  "CHAM": {
+   "preset": "civilian",
+   "name": "Neville Chamberlain",
+   "spec": {
+    "coat": "#1e1e24",
+    "hair": "#c8c2b8",
+    "beard": "mustache"
+   }
+  },
+  "LOND": {
+   "preset": "worker",
+   "name": "A Londoner"
+  },
+  "LOND2": {
+   "preset": "woman",
+   "name": "Another Londoner",
+   "spec": {
+    "hair": "#3a2416",
+    "coat": "#5a4a3a"
+   }
+  },
+  "REP": {
+   "preset": "civilian",
+   "name": "A reporter"
+  },
+  "PURSER": {
+   "preset": "clerk",
+   "name": "A ship's purser",
+   "spec": {
+    "coat": "#3a3f4a"
+   }
+  },
+  "POL": {
+   "preset": "worker",
+   "name": "A Polish soldier",
+   "spec": {
+    "coat": "#6a6a4a",
+    "hat": "helmet",
+    "hatCol": "#5a5a3a"
+   }
+  },
+  "POL2": {
+   "preset": "worker",
+   "name": "His sergeant",
+   "spec": {
+    "coat": "#6a6a4a",
+    "hat": "helmet",
+    "hatCol": "#5a5a3a"
+   }
+  },
+  "SKIP": {
+   "preset": "worker",
+   "name": "A boat owner"
+  },
+  "NAVY": {
+   "preset": "us_officer",
+   "name": "A Royal Navy officer",
+   "spec": {
+    "coat": "#7a6a45",
+    "coat2": "#5f5235",
+    "hatCol": "#5f5235",
+    "trim": "#b3202a"
+   }
+  },
+  "TOMMY": {
+   "preset": "worker",
+   "name": "A British soldier",
+   "spec": {
+    "coat": "#7a6a45",
+    "hat": "helmet",
+    "hatCol": "#5f5a3a"
+   }
+  },
+  "CREW": {
+   "preset": "us_sailor",
+   "name": "A deckhand"
+  },
+  "AUD": {
+   "preset": "civilian",
+   "name": "A man in the audience"
+  },
+  "PILOT": {
+   "preset": "civilian",
+   "name": "An RAF pilot",
+   "spec": {
+    "coat": "#4a5a7a",
+    "coat2": "#d8d2c4",
+    "hair": "#5a3a22"
+   }
+  },
+  "PILOT2": {
+   "preset": "civilian",
+   "name": "His flight leader",
+   "spec": {
+    "coat": "#4a5a7a",
+    "coat2": "#d8d2c4",
+    "hair": "#5a3a22"
+   }
+  },
+  "LUFT": {
+   "preset": "worker",
+   "name": "A German airman",
+   "spec": {
+    "coat": "#5a5e5a",
+    "hat": "helmet",
+    "hatCol": "#4a4e4a"
+   }
+  },
+  "LUFT2": {
+   "preset": "worker",
+   "name": "His gunner",
+   "spec": {
+    "coat": "#5a5e5a",
+    "hat": "helmet",
+    "hatCol": "#4a4e4a"
+   }
+  },
+  "GERS": {
+   "preset": "worker",
+   "name": "A German soldier",
+   "spec": {
+    "coat": "#5a5e5a",
+    "hat": "helmet",
+    "hatCol": "#4a4e4a"
+   }
+  },
+  "GERS2": {
+   "preset": "worker",
+   "name": "Another German soldier",
+   "spec": {
+    "coat": "#5a5e5a",
+    "hat": "helmet",
+    "hatCol": "#4a4e4a"
+   }
+  },
+  "SOV": {
+   "preset": "worker",
+   "name": "A Soviet soldier",
+   "spec": {
+    "coat": "#5a6b3a",
+    "hat": "helmet",
+    "hatCol": "#4a5a2e"
+   }
+  },
+  "SOV2": {
+   "preset": "soviet_officer",
+   "name": "His officer"
+  },
+  "JPOFF": {
+   "preset": "us_officer",
+   "name": "A Japanese officer",
+   "spec": {
+    "coat": "#6b6a3a",
+    "coat2": "#5a5a30",
+    "hatCol": "#5a5a30",
+    "trim": "#c8102e",
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a"
+   }
+  },
+  "SHIM": {
+   "preset": "us_officer",
+   "name": "Private Shimura Kikujiro",
+   "spec": {
+    "coat": "#6b6a3a",
+    "coat2": "#5a5a30",
+    "hatCol": "#5a5a30",
+    "trim": "#c8102e",
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a"
+   }
+  },
+  "JPMIN": {
+   "preset": "clerk",
+   "name": "A Japanese official",
+   "spec": {
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a",
+    "coat": "#2a2a30"
+   }
+  },
+  "JPMIN2": {
+   "preset": "us_officer",
+   "name": "An army officer",
+   "spec": {
+    "coat": "#6b6a3a",
+    "coat2": "#5a5a30",
+    "hatCol": "#5a5a30",
+    "trim": "#c8102e",
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a"
+   }
+  },
+  "USS": {
+   "preset": "us_sailor",
+   "name": "An American sailor"
+  },
+  "USS2": {
+   "preset": "us_sailor",
+   "name": "Another sailor"
+  },
+  "FDR": {
+   "preset": "civilian",
+   "name": "Franklin D. Roosevelt",
+   "spec": {
+    "coat": "#2e3440",
+    "hair": "#9a9488",
+    "glasses": 1
+   }
+  },
+  "RECR": {
+   "preset": "us_officer",
+   "name": "A recruiting officer",
+   "spec": {
+    "coat": "#6b6448",
+    "coat2": "#55503a",
+    "hatCol": "#55503a"
+   }
+  },
+  "WH1": {
+   "preset": "clerk",
+   "name": "A White House clerk",
+   "spec": {
+    "coat": "#3a3f4a"
+   }
+  },
+  "WH2": {
+   "preset": "clerk",
+   "name": "Another clerk",
+   "spec": {
+    "coat": "#3a3f4a"
+   }
+  },
+  "CODE": {
+   "preset": "clerk",
+   "name": "A Navy codebreaker",
+   "spec": {
+    "coat": "#3a3f4a"
+   }
+  },
+  "CODE2": {
+   "preset": "us_officer",
+   "name": "His officer",
+   "spec": {
+    "coat": "#6b6448",
+    "coat2": "#55503a",
+    "hatCol": "#55503a"
+   }
+  },
+  "CPO": {
+   "preset": "us_officer",
+   "name": "A Navy petty officer",
+   "spec": {
+    "coat": "#6b6448",
+    "coat2": "#55503a",
+    "hatCol": "#55503a"
+   }
+  },
+  "STAGG": {
+   "preset": "civilian",
+   "name": "Group Captain James Stagg",
+   "spec": {
+    "coat": "#4a5a7a",
+    "coat2": "#d8d2c4",
+    "hair": "#5a3a22"
+   }
+  },
+  "IKE": {
+   "preset": "us_officer",
+   "name": "General Dwight Eisenhower",
+   "spec": {
+    "coat": "#6b6448",
+    "coat2": "#55503a",
+    "hatCol": "#55503a"
+   }
+  },
+  "BERL": {
+   "preset": "woman",
+   "name": "A woman in Berlin",
+   "spec": {
+    "hair": "#3a2416",
+    "coat": "#5a4a3a"
+   }
+  },
+  "BERL2": {
+   "preset": "clerk",
+   "name": "A man in Berlin",
+   "spec": {
+    "coat": "#3a3a3a"
+   }
+  },
+  "MOSC": {
+   "preset": "worker",
+   "name": "A Soviet soldier in Berlin",
+   "spec": {
+    "coat": "#5a6b3a",
+    "hat": "helmet",
+    "hatCol": "#4a5a2e"
+   }
+  },
+  "REBEL": {
+   "preset": "us_officer",
+   "name": "A rebel officer",
+   "spec": {
+    "coat": "#6b6a3a",
+    "coat2": "#5a5a30",
+    "hatCol": "#5a5a30",
+    "trim": "#c8102e",
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a"
+   }
+  },
+  "STAFF": {
+   "preset": "clerk",
+   "name": "A palace official",
+   "spec": {
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a",
+    "coat": "#2a2a30"
+   }
+  },
+  "LIST": {
+   "preset": "clerk",
+   "name": "A listener in Tokyo",
+   "spec": {
+    "hair": "#1a1a1a",
+    "skin": "#e8c49a",
+    "coat": "#2a2a30"
+   }
+  },
+  "LIST2": {
+   "preset": "woman",
+   "name": "His neighbour",
+   "spec": {
+    "hair": "#3a2416",
+    "coat": "#5a4a3a"
+   }
+  },
+  "REG": {
+   "preset": "clerk",
+   "name": "A clerk in New York",
+   "spec": {
+    "coat": "#3a3f4a"
+   }
+  }
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
 }
