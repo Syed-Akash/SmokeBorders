@@ -14,6 +14,8 @@ def save(p): json.dump(p, open(F, 'w'), indent=1, ensure_ascii=False)
 def today_jobs(now=None):
     now = now or datetime.datetime.now(datetime.timezone.utc); p = load(); jobs = []; wrote = rendered = False
     for e in p['episodes']:
+        for td in e.get('todo', []):   # leftovers a run could not finish (e.g. a portrait Wikimedia would not hand out); remove when done
+            jobs.append((-1, 'TODO %s: %s' % (e['id'], td)))
         if e['status'] == 'uploaded':
             for n, sh in enumerate(e.get('shorts', []), 1):
                 if sh.get('done'): continue
