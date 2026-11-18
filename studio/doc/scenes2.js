@@ -244,10 +244,19 @@
   function flag(c, x, y, w, h, cols, u, vertical) { if (cols === FLAGS.uk) { const im = unionJack(), n = 24; for (let s = 0; s < n; s++) { const f = s / n, dy = Math.sin(f * 5 - u * 4) * h * .08 * f;
       c.drawImage(im, im.width * f, 0, im.width / n + 1, im.height, x + w * f, y + dy, w / n + 1, h) } return }
     for (let i = 0; i < cols.length; i++) { c.fillStyle = cols[i]; c.beginPath(); const n = cols.length;
-      const a = i / n, b = (i + 1) / n; c.moveTo(x, y + h * a); for (let s = 0; s <= 12; s++) { const f = s / 12; c.lineTo(x + w * f, y + h * a + Math.sin(f * 5 - u * 4) * h * .08 * f) } for (let s = 12; s >= 0; s--) { const f = s / 12; c.lineTo(x + w * f, y + h * b + Math.sin(f * 5 - u * 4) * h * .08 * f) } c.fill() } }
+      const a = i / n, b = (i + 1) / n; c.moveTo(x, y + h * a); for (let s = 0; s <= 12; s++) { const f = s / 12; c.lineTo(x + w * f, y + h * a + Math.sin(f * 5 - u * 4) * h * .08 * f) } for (let s = 12; s >= 0; s--) { const f = s / 12; c.lineTo(x + w * f, y + h * b + Math.sin(f * 5 - u * 4) * h * .08 * f) } c.fill() }
+    if (cols === FLAGS.jp) { const dy = Math.sin(.5 * 5 - u * 4) * h * .08 * .5; c.fillStyle = '#bc002d'; c.beginPath(); c.arc(x + w * .5, y + h * .5 + dy, h * .3, 0, 7); c.fill() } }
   const FLAGS = { us: ['#b22234', '#fff', '#b22234', '#fff', '#b22234', '#fff', '#b22234'], uk: ['#012169', '#c8102e', '#012169'], hbc: ['#c8102e', '#c8102e', '#fff'], fr: ['#0055a4', '#fff', '#ef4135'], de: ['#000', '#fff', '#c00'], ru: ['#fff', '#0039a6', '#d52b1e'], jp: ['#fff', '#fff', '#fff'], red: ['#b3161c'], white: ['#eee'] };
   function ship(c, x, y, s, u, o = {}) {   // a sailing warship (o.steam adds a funnel and smoke)
     c.save(); c.translate(x, y + Math.sin(u * 1.2 + x) * 3 * s); c.scale(s * (o.facing || 1), s); const col = o.col || '#15110d';
+    if (o.modern) {   // a 20th-century steel ship (WW2 stories): long low hull, bridge, gun turrets, one funnel, a thin mast; no sails
+      c.fillStyle = col; c.beginPath(); c.moveTo(-280, -30); c.lineTo(300, -30); c.lineTo(270, 18); c.lineTo(-260, 18); c.closePath(); c.fill();
+      c.fillRect(-120, -78, 150, 48); c.fillRect(-80, -118, 80, 40); c.fillRect(-52, -170, 6, 52);   // superstructure, bridge, mast
+      for (const gx of [120, 200, -200]) { c.fillRect(gx - 22, -52, 44, 22); c.fillRect(gx + (gx > 0 ? 18 : -60), -46, 42, 7) }   // turrets and barrels
+      c.fillStyle = 'rgba(230,220,190,.45)'; for (let i = 0; i < 6; i++) c.fillRect(-105 + i * 22, -64, 10, 7);
+      if (o.flag) flag(c, -270, -96, 46, 30, FLAGS[o.flag] || [o.flag], u);
+      c.fillStyle = col; c.fillRect(40, -120, 34, 90); c.restore();
+      if (o.steam !== false) smoke(c, x + 57 * s * (o.facing || 1), y - 120 * s, u + x, 260 * s, .18, x); return }
     c.fillStyle = col; c.beginPath(); c.moveTo(-230, -40); c.lineTo(250, -40); c.quadraticCurveTo(230, 10, 190, 20); c.lineTo(-200, 20); c.quadraticCurveTo(-230, 0, -230, -40); c.fill();
     c.fillStyle = 'rgba(230,220,190,.55)'; for (let i = 0; i < 9; i++) c.fillRect(-170 + i * 40, -28, 16, 9);
     c.strokeStyle = col; c.lineWidth = 6; for (const mx of [-120, 20, 150]) { c.beginPath(); c.moveTo(mx, -40); c.lineTo(mx, -300); c.stroke(); c.fillStyle = o.sails === false ? 'transparent' : 'rgba(225,215,190,.9)';
@@ -363,6 +372,12 @@
       else { c.beginPath(); c.ellipse(0, -60 + b, 70, 42, 0, 0, 7); c.fill(); c.beginPath(); c.ellipse(70, -70 + b, 24, 18, 0, 0, 7); c.fill(); c.fillStyle = '#222'; for (const lx of [-40, -15, 25, 45]) c.fillRect(lx, -25, 9, 30) }
       c.restore() },
     flagpole: (c, W, H, u, p) => { const x = W * (p.x || .5), y = H * (p.y || .7), h = p.h || 420; c.fillStyle = '#1a140f'; c.fillRect(x - 4, y - h, 8, h); flag(c, x + 4, y - h, p.w || 180, (p.w || 180) * .6, FLAGS[p.flag] || [p.flag || '#b3161c'], u) },
+    graves: (c, W, H, u, p) => {   // a cemetery: rows of headstones and a few crosses, smaller towards the back (p.n per row, p.rows, p.col)
+      const rows = p.rows || 3, n = p.n || 9, y0 = H * (p.y || .78); c.fillStyle = p.col || '#2a2420';
+      for (let r = 0; r < rows; r++) { const s = .55 + r * .25, y = y0 + r * H * .06, gap = W / (n - .5);
+        for (let i = 0; i < n; i++) { const x = gap * (i + (r % 2 ? .5 : .25)) + Math.sin(i * 7.1 + r * 3) * 12, h = 70 * s, w = 38 * s;
+          if ((i + r * 2) % 5 === 2) { c.fillRect(x - w * .14, y - h * 1.15, w * .28, h * 1.15); c.fillRect(x - w * .5, y - h * .85, w, w * .28) }
+          else { c.beginPath(); c.moveTo(x - w / 2, y); c.lineTo(x - w / 2, y - h + w / 2); c.arc(x, y - h + w / 2, w / 2, Math.PI, 0); c.lineTo(x + w / 2, y); c.fill() } } } },
     fire: (c, W, H, u, p) => { const x = W * (p.x || .5), y = H * (p.y || .8); glow(c, x, y, p.r || 400, '255,120,40', .7); c.save(); c.globalCompositeOperation = 'lighter'; for (let i = 0; i < 26; i++) { const a = rnd(i), hh = (60 + rnd(i + 1) * 120) * (1 + .3 * Math.sin(u * 9 + i)); c.fillStyle = `rgba(255,${120 + a * 100 | 0},40,.35)`; c.beginPath(); c.moveTo(x - 50 + a * 100, y); c.quadraticCurveTo(x - 30 + a * 60, y - hh * .6, x - 40 + a * 80 + Math.sin(u * 6 + i) * 10, y - hh); c.quadraticCurveTo(x - 10 + a * 60, y - hh * .5, x - 30 + a * 100, y); c.fill() } c.restore(); smoke(c, x, y - 100, u, 500, .2, 3) },
     room: (c, W, H, u, p) => { const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, p.wall || '#2a1d14'); g.addColorStop(1, '#120c08'); c.fillStyle = g; c.fillRect(-300, -300, W + 600, H + 600); c.strokeStyle = 'rgba(0,0,0,.35)'; c.lineWidth = 3; for (let x = -300; x < W + 300; x += 170) { c.beginPath(); c.moveTo(x, -300); c.lineTo(x, H * .72); c.stroke() }
       c.fillStyle = p.floor || '#1c120a'; c.fillRect(-300, H * .72, W + 600, H); if (p.window) { const wx = W * p.window, wy = H * .18, ww = 360, wh = 420, n = p.night; const sg = c.createLinearGradient(0, wy, 0, wy + wh); sg.addColorStop(0, n ? '#0c1426' : '#a8bfd0'); sg.addColorStop(1, n ? '#1b2640' : '#e6e0cc'); c.fillStyle = sg; c.fillRect(wx, wy, ww, wh); c.strokeStyle = '#0a0705'; c.lineWidth = 16; c.strokeRect(wx, wy, ww, wh); c.lineWidth = 8; c.beginPath(); c.moveTo(wx + ww / 2, wy); c.lineTo(wx + ww / 2, wy + wh); c.moveTo(wx, wy + wh / 2); c.lineTo(wx + ww, wy + wh / 2); c.stroke();

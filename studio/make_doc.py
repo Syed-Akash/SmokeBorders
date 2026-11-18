@@ -356,26 +356,39 @@ _UNITS = {w: i for i, w in enumerate('zero one two three four five six seven eig
 _TENS = {w: 10 * i for i, w in enumerate('_ _ twenty thirty forty fifty sixty seventy eighty ninety'.split()) if w != '_'}
 _SCALE = {'hundred': 100, 'thousand': 1000, 'million': 10 ** 6, 'billion': 10 ** 9}
 _STOP = set('a an the of and to in on at for from by with as that this these those his her their its our was were is are be been it he she they we you i'.split())
+def _range(a, b):
+    """70,000,000 and 85,000,000 -> '70-85 MILLION'; 4,000 and 9,000 -> '4,000-9,000'."""
+    for sc, nm in ((10 ** 9, ' BILLION'), (10 ** 6, ' MILLION')):
+        if a >= sc and b >= sc: return '%s–%s%s' % (_fmt(a / sc), _fmt(b / sc), nm)
+    return '%s–%s' % (_fmt(a), _fmt(b))
+
 def _num(words, i):
     """English number words (or digits) starting at words[i] -> (value, words used) or None. 'four hundred and sixty-one' -> 461"""
     w = words[i]
     if re.fullmatch(r'[\d,]+(\.\d+)?', w): v = float(w.replace(',', '')); j = i + 1
     else:
-        total = cur = 0; j = i; got = False
+        total = cur = 0; j = i; got = False; after_scale = False
+        if w == 'a' and i > 0 and words[i - 1] == 'half': cur = .5; got = True; j = i + 1   # "half a million" is 500,000, not a million
         while j < len(words):
             parts = words[j].split('-'); ok = True; val = 0
             for q in parts:
                 if q in _UNITS: val += _UNITS[q]
                 elif q in _TENS: val += _TENS[q]
                 else: ok = False
-            if ok and parts[0]: cur += val; got = True; j += 1; continue
+            if ok and parts[0]: cur += val; got = True; after_scale = False; j += 1; continue
             if words[j] in _SCALE and (got or words[j] != 'and'):
                 if not got: cur = 1
                 sc = _SCALE[words[j]]
                 if sc == 100: cur *= 100
                 else: total += cur * sc; cur = 0
-                got = True; j += 1; continue
-            if words[j] == 'and' and got and j + 1 < len(words) and (words[j + 1].split('-')[0] in _UNITS or words[j + 1].split('-')[0] in _TENS): j += 1; continue
+                got = True; after_scale = True; j += 1; continue
+            # "one point three million" = 1.3 million (it used to read as 3,000,000)
+            if words[j] == 'point' and got and not after_scale and j + 1 < len(words) and words[j + 1] in _UNITS:
+                k = j + 1; frac = ''
+                while k < len(words) and words[k] in _UNITS and _UNITS[words[k]] < 10: frac += str(_UNITS[words[k]]); k += 1
+                if frac: cur += float('0.' + frac); j = k; continue
+            # "and" joins only after hundred/thousand/million ("four hundred and sixty-one"); "seventy and eighty-five million" is a range
+            if words[j] == 'and' and got and after_scale and j + 1 < len(words) and (words[j + 1].split('-')[0] in _UNITS or words[j + 1].split('-')[0] in _TENS): j += 1; continue
             if words[j] == 'a' and j + 1 < len(words) and words[j + 1] in _SCALE and not got: cur = 1; j += 1; continue
             break
         if not got: return None
@@ -412,6 +425,14 @@ def kinetic(caps, ev, story, sc):
     while i < len(words):
         w, raw, t = words[i]; pop = None; used = 1
         n = _num(toks, i) if (w and (w[0].isdigit() or w.split('-')[0] in _UNITS or w.split('-')[0] in _TENS or (w == 'a' and i + 1 < len(toks) and toks[i + 1] in _SCALE))) else None
+        rng = None
+        if n and not re.fullmatch(r'1[5-9]\d\d|20\d\d', w) and i + n[1] + 1 < len(toks) and toks[i + n[1]] in ('and', 'to') and not re.search(r'[.,;:!?]$', words[i + n[1] - 1][1]):
+            n2 = _num(toks, i + n[1] + 1)   # a range: "between seventy and eighty-five million", "four and nine thousand men"
+            if n2 and n2[0] > n[0]:
+                v1, v2 = n[0], n2[0]
+                for sc_ in (10 ** 9, 10 ** 6, 1000):
+                    if v2 >= sc_ and v1 < sc_ and v1 * sc_ <= v2: v1 *= sc_; break
+                rng = (v1, v2); n = (v2, n[1] + 1 + n2[1])
         if n and not (n[0] < 10 and n[1] == 1 and not w[0].isdigit()):   # skip 'one', 'two' said in passing
             v, used = n; nxt = toks[i + used:i + used + 3]
             if re.fullmatch(r'1[5-9]\d\d|20\d\d', w) and used == 1: pop = {'kind': 'year', 'text': w}
@@ -424,6 +445,7 @@ def kinetic(caps, ev, story, sc):
                 if a1 and a1 not in _STOP and re.fullmatch(r"[a-z'-]+", a1) and a1 not in ('them', 'more', 'of', 'or'):
                     lab = [a1] + ([a2] if not end1 and a2 and (a1 in _ADJ or a2 in ('ago', 'old', 'later', 'earlier', 'long', 'away')) and re.fullmatch(r"[a-z'-]+", a2) and a2 not in _STOP else [])
                     pop = {'kind': 'num', 'text': _fmt(v), 'label': ' '.join(lab).upper()}
+            if pop and rng and pop['kind'] == 'num': pop['text'] = _range(*rng)
         elif w in names and names[w] not in seen:
             pop = {'kind': 'name', 'text': names[w].upper()}; seen.add(names[w])
         if pop and t - recent.get(pop['text'] + pop.get('label', ''), -999) < 90: pop = None   # the same callout again within 90 s: once is enough

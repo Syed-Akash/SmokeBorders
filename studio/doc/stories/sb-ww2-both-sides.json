@@ -390,10 +390,10 @@
        "x": 0.7,
        "s": 0.5,
        "steam": true,
-       "sails": false,
        "y": 0.68,
        "depth": 0.5,
-       "flag": "us"
+       "flag": "us",
+       "modern": true
       }
      ],
      "fx": [
@@ -452,7 +452,8 @@
         "y": 0.7,
         "gap": 300,
         "steam": true,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        },
        {
         "type": "people",
@@ -725,9 +726,9 @@
        "x": 0.7,
        "s": 0.35,
        "steam": true,
-       "sails": false,
        "y": 0.6,
-       "depth": 0.4
+       "depth": 0.4,
+       "modern": true
       },
       {
        "type": "land",
@@ -779,11 +780,11 @@
        "x": 0.5,
        "s": 0.9,
        "steam": true,
-       "sails": false,
        "y": 0.7,
        "depth": 0.5,
        "flag": "uk",
-       "facing": -1
+       "facing": -1,
+       "modern": true
       }
      ],
      "fx": [
@@ -805,30 +806,30 @@
     ],
     "scene": {
      "shot": "set",
-     "time": "dawn",
+     "time": "day",
      "parts": [
       {
-       "type": "sea",
-       "y": 0.64,
-       "depth": 0.3
-      },
-      {
-       "type": "coast",
-       "x0": -0.15,
-       "x1": 0.4,
-       "y": 0.64,
-       "h": 110,
-       "depth": 0.3
-      },
-      {
-       "type": "ships",
-       "n": 1,
-       "x": 0.62,
-       "s": 0.75,
+       "type": "room",
        "flag": "us",
+       "window": 0.7,
+       "night": false,
+       "depth": 0.3,
+       "wall": "#4a5a5a"
+      },
+      {
+       "type": "table",
+       "lamp": 0.6,
+       "candles": 0,
+       "papers": 5,
+       "w": 900,
+       "depth": 0.6
+      },
+      {
+       "type": "flagpole",
+       "x": 0.85,
        "y": 0.7,
-       "gap": 300,
-       "steam": true,
+       "flag": "us",
+       "h": 300,
        "depth": 0.5
       },
       {
@@ -836,16 +837,28 @@
        "list": [
         {
          "preset": "us_sailor",
-         "x": 0.3,
+         "x": 0.35,
          "facing": 1,
-         "h": 0.9,
+         "h": 0.88,
          "spec": {
           "hair": "#2a1d12"
          }
+        },
+        {
+         "preset": "us_officer",
+         "x": 0.66,
+         "facing": -1,
+         "h": 0.85,
+         "pose": "point",
+         "spec": {
+          "coat": "#6b6448",
+          "coat2": "#55503a",
+          "hatCol": "#55503a"
+         }
         }
        ],
-       "lx": 0.3,
-       "ly": 0.6,
+       "lx": 0.5,
+       "ly": 0.55,
        "depth": 0.85
       }
      ]
@@ -1643,11 +1656,11 @@
         "x": 0.5,
         "s": 0.9,
         "steam": true,
-        "sails": false,
         "y": 0.7,
         "depth": 0.5,
         "flag": "de",
-        "facing": -1
+        "facing": -1,
+        "modern": true
        }
       ],
       "fx": [
@@ -1988,11 +2001,11 @@
         "x": 0.5,
         "s": 0.9,
         "steam": true,
-        "sails": false,
         "y": 0.7,
         "depth": 0.5,
         "flag": "uk",
-        "facing": -1
+        "facing": -1,
+        "modern": true
        }
       ]
      },
@@ -3712,11 +3725,11 @@
         "x": 0.5,
         "s": 0.9,
         "steam": true,
-        "sails": false,
         "y": 0.7,
         "depth": 0.5,
         "flag": "uk",
-        "facing": -1
+        "facing": -1,
+        "modern": true
        }
       ],
       "fx": [
@@ -3738,14 +3751,15 @@
      ],
      "scene": {
       "shot": "doc",
-      "kind": "newspaper",
-      "header": "~ 1939 ~",
+      "kind": "letter",
+      "header": "The Times, 1939",
       "lines": [
        "William Patrick Hitler on his uncle:",
        "\"I believe he has created",
        "a Frankenstein which even he",
        "perhaps cannot stop.\""
-      ]
+      ],
+      "stamp": "HIS WORDS"
      }
     },
     {
@@ -3806,8 +3820,8 @@
      ],
      "scene": {
       "shot": "doc",
-      "kind": "newspaper",
-      "header": "~ LOOK ~",
+      "kind": "letter",
+      "header": "Look magazine, 1939",
       "lines": [
        "\"Why I Hate My Uncle\"",
        "by William Patrick Hitler"
@@ -3847,11 +3861,11 @@
         "x": 0.5,
         "s": 0.9,
         "steam": true,
-        "sails": false,
         "y": 0.7,
         "depth": 0.5,
         "flag": "uk",
-        "facing": -1
+        "facing": -1,
+        "modern": true
        }
       ]
      }
@@ -3890,7 +3904,8 @@
         "y": 0.7,
         "gap": 300,
         "steam": true,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        }
       ]
      },
@@ -4251,7 +4266,8 @@
          "y": 0.68,
          "gap": 300,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "fire",
@@ -4896,10 +4912,10 @@
         "x": 0.7,
         "s": 0.5,
         "steam": true,
-        "sails": false,
         "y": 0.68,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -5130,9 +5146,9 @@
         "x": 0.7,
         "s": 0.35,
         "steam": true,
-        "sails": false,
         "y": 0.6,
-        "depth": 0.4
+        "depth": 0.4,
+        "modern": true
        },
        {
         "type": "land",
@@ -5183,10 +5199,10 @@
         "x": 0.67,
         "s": 0.55,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "uk"
+        "flag": "uk",
+        "modern": true
        }
       ],
       "fx": [
@@ -5237,7 +5253,8 @@
         "y": 0.68,
         "gap": 160,
         "steam": false,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        }
       ]
      },
@@ -5296,7 +5313,8 @@
          "y": 0.68,
          "gap": 260,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "land",
@@ -5349,10 +5367,10 @@
         "x": 0.72,
         "s": 0.55,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "uk"
+        "flag": "uk",
+        "modern": true
        }
       ],
       "fx": [
@@ -5396,7 +5414,8 @@
         "y": 0.7,
         "gap": 420,
         "steam": true,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        }
       ],
       "fx": [
@@ -5419,29 +5438,34 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dawn",
       "parts": [
        {
         "type": "town",
-        "y": 0.66,
-        "n": 14,
-        "x0": -0.05,
+        "y": 0.72,
+        "n": 12,
         "gap": 140,
-        "h": 220,
-        "night": false,
-        "depth": 0.35
+        "h": 210,
+        "col": "#4a4440",
+        "depth": 0.4
        },
        {
-        "type": "crowd",
-        "y": 0.9,
-        "n": 90,
-        "depth": 0.8
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 18,
+        "rows": 3,
+        "x0": 0,
+        "gap": 80,
+        "col": "#5a5e5a",
+        "march": true,
+        "depth": 0.7
        },
        {
         "type": "flagpole",
-        "x": 0.5,
-        "y": 0.66,
+        "x": 0.8,
+        "y": 0.7,
         "flag": "de",
+        "h": 360,
         "depth": 0.5
        }
       ]
@@ -6297,44 +6321,63 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "dusk",
+      "time": "night",
       "parts": [
        {
         "type": "town",
-        "y": 0.72,
-        "n": 12,
-        "x0": -0.05,
+        "y": 0.74,
+        "n": 9,
         "gap": 160,
-        "h": 110,
-        "night": false,
-        "col": "#2a2622",
-        "depth": 0.35
+        "h": 150,
+        "col": "#1d1612",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.82,
+        "depth": 0.6
        },
        {
         "type": "fire",
         "x": 0.7,
-        "y": 0.76,
-        "r": 260,
-        "depth": 0.5
+        "y": 0.7,
+        "r": 220,
+        "depth": 0.4
        },
        {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.74,
-        "depth": 0.6
-       },
-       {
-        "type": "soldiers",
-        "y": 0.86,
-        "n": 5,
-        "gap": 120,
-        "x0": 0.1,
-        "col": "#1e1c18",
-        "depth": 0.8
+        "type": "people",
+        "list": [
+         {
+          "preset": "worker",
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "rifle",
+          "spec": {
+           "coat": "#5a6b3a",
+           "hat": "helmet",
+           "hatCol": "#4a5a2e"
+          }
+         },
+         {
+          "preset": "woman",
+          "x": 0.55,
+          "facing": -1,
+          "h": 0.78,
+          "spec": {
+           "hair": "#3a2416",
+           "coat": "#5a4a3a"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ],
       "fx": [
-       "smoke"
+       "snow"
       ]
      }
     },
@@ -6856,10 +6899,10 @@
         "x": 0.7,
         "s": 0.5,
         "steam": true,
-        "sails": false,
         "y": 0.68,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ]
      }
@@ -6902,10 +6945,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -7526,10 +7569,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -7576,7 +7619,8 @@
         "y": 0.7,
         "gap": 260,
         "steam": true,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        }
       ],
       "fx": [
@@ -7624,7 +7668,8 @@
          "y": 0.68,
          "gap": 300,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "fire",
@@ -7678,10 +7723,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "jp"
+        "flag": "jp",
+        "modern": true
        }
       ],
       "fx": [
@@ -7727,10 +7772,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -7795,10 +7840,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -7852,10 +7897,10 @@
         "x": 0.7,
         "s": 0.5,
         "steam": true,
-        "sails": false,
         "y": 0.68,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -7902,10 +7947,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "jp"
+        "flag": "jp",
+        "modern": true
        }
       ],
       "fx": [
@@ -8572,38 +8617,11 @@
       }
      ],
      "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "forest",
-        "y": 0.62,
-        "n": 50,
-        "seed": 10,
-        "h": 170,
-        "depth": 0.35
-       },
-       {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.7,
-        "depth": 0.6
-       },
-       {
-        "type": "camp",
-        "y": 0.78,
-        "n": 6,
-        "x0": 0.1,
-        "gap": 230,
-        "col": "#5a5640",
-        "fire": 0.5,
-        "depth": 0.7
-       }
-      ],
-      "weather": "snow",
-      "fx": [
-       "smoke"
-      ]
+      "shot": "card",
+      "time": "AUSCHWITZ-BIRKENAU",
+      "place": "GERMAN-OCCUPIED POLAND",
+      "date": "extermination camp",
+      "size": 120
      },
      "pause": 0.8
     },
@@ -8640,38 +8658,11 @@
       }
      ],
      "scene": {
-      "shot": "set",
-      "time": "dusk",
-      "parts": [
-       {
-        "type": "forest",
-        "y": 0.62,
-        "n": 50,
-        "seed": 12,
-        "h": 170,
-        "depth": 0.35
-       },
-       {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.7,
-        "depth": 0.6
-       },
-       {
-        "type": "camp",
-        "y": 0.78,
-        "n": 6,
-        "x0": 0.1,
-        "gap": 230,
-        "col": "#5a5640",
-        "fire": 0.5,
-        "depth": 0.7
-       }
-      ],
-      "weather": "snow",
-      "fx": [
-       "fog"
-      ]
+      "shot": "card",
+      "time": "NO OTHER SIDE",
+      "place": "",
+      "date": "",
+      "size": 150
      },
      "pause": 1.0
     },
@@ -8878,7 +8869,8 @@
          "y": 0.68,
          "gap": 300,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "fire",
@@ -8954,10 +8946,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "jp"
+        "flag": "jp",
+        "modern": true
        }
       ],
       "fx": [
@@ -10104,10 +10096,10 @@
         "x": 0.7,
         "s": 0.5,
         "steam": true,
-        "sails": false,
         "y": 0.68,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ]
      }
@@ -10247,10 +10239,10 @@
         "x": 0.62,
         "s": 0.55,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "uk"
+        "flag": "uk",
+        "modern": true
        }
       ],
       "fx": [
@@ -10329,10 +10321,10 @@
         "x": 0.72,
         "s": 0.55,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "uk"
+        "flag": "uk",
+        "modern": true
        }
       ],
       "weather": "storm"
@@ -10683,38 +10675,24 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "dawn",
+      "time": "day",
       "parts": [
        {
         "type": "sea",
-        "y": 0.58,
+        "y": 0.6,
         "depth": 0.3
        },
        {
         "type": "ships",
-        "n": 3,
-        "x": 0.7,
+        "n": 7,
+        "x": 0.1,
         "s": 0.35,
+        "flag": "us",
+        "y": 0.66,
+        "gap": 150,
         "steam": true,
-        "sails": false,
-        "y": 0.6,
-        "depth": 0.4
-       },
-       {
-        "type": "land",
-        "kind": "sand",
-        "y": 0.74,
-        "depth": 0.6
-       },
-       {
-        "type": "soldiers",
-        "y": 0.84,
-        "n": 12,
-        "gap": 90,
-        "x0": 0.05,
-        "march": true,
-        "col": "#2b2a1c",
-        "depth": 0.8
+        "depth": 0.5,
+        "modern": true
        }
       ],
       "fx": [
@@ -10813,38 +10791,30 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "dusk",
+      "time": "night",
       "parts": [
        {
         "type": "sea",
-        "y": 0.58,
+        "y": 0.64,
         "depth": 0.3
-       },
-       {
-        "type": "ships",
-        "n": 3,
-        "x": 0.7,
-        "s": 0.35,
-        "steam": true,
-        "sails": false,
-        "y": 0.6,
-        "depth": 0.4
        },
        {
         "type": "land",
         "kind": "sand",
-        "y": 0.74,
+        "y": 0.8,
         "depth": 0.6
        },
        {
-        "type": "soldiers",
-        "y": 0.84,
-        "n": 12,
-        "gap": 90,
-        "x0": 0.05,
-        "march": true,
-        "col": "#2b2a1c",
-        "depth": 0.8
+        "type": "ships",
+        "n": 2,
+        "x": 0.7,
+        "s": 0.4,
+        "flag": "uk",
+        "y": 0.68,
+        "gap": 300,
+        "steam": true,
+        "depth": 0.5,
+        "modern": true
        }
       ],
       "fx": [
@@ -10924,10 +10894,10 @@
         "x": 0.67,
         "s": 0.55,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -11222,7 +11192,7 @@
          "type": "flagpole",
          "x": 0.55,
          "y": 0.6,
-         "flag": "ru",
+         "flag": "red",
          "h": 300,
          "depth": 0.5
         }
@@ -11473,7 +11443,7 @@
       "parts": [
        {
         "type": "room",
-        "flag": "ru",
+        "flag": "red",
         "window": 0.7000000000000001,
         "night": true,
         "portrait": null,
@@ -11556,7 +11526,7 @@
         "type": "flagpole",
         "x": 0.5,
         "y": 0.66,
-        "flag": "ru",
+        "flag": "red",
         "depth": 0.5
        }
       ],
@@ -11580,32 +11550,35 @@
      ],
      "bg": {
       "shot": "set",
-      "time": "day",
+      "time": "night",
       "parts": [
        {
         "type": "town",
-        "y": 0.74,
-        "n": 12,
-        "gap": 130,
+        "y": 0.73,
+        "n": 11,
+        "gap": 140,
         "h": 190,
-        "col": "#3a3530",
+        "col": "#2a2622",
         "depth": 0.4
        },
        {
         "type": "crowd",
         "y": 0.96,
-        "n": 60,
+        "n": 50,
         "hats": true,
         "depth": 0.8
        },
        {
         "type": "flagpole",
-        "x": 0.8,
+        "x": 0.78,
         "y": 0.72,
-        "flag": "uk",
-        "h": 320,
+        "flag": "red",
+        "h": 340,
         "depth": 0.5
        }
+      ],
+      "fx": [
+       "smoke"
       ]
      },
      "_new": 1
@@ -11718,10 +11691,10 @@
         "gap": -200,
         "s": 0.45,
         "steam": true,
-        "sails": false,
         "y": 0.66,
         "depth": 0.5,
-        "flag": "us"
+        "flag": "us",
+        "modern": true
        }
       ],
       "fx": [
@@ -12392,41 +12365,48 @@
       "parts": [
        {
         "type": "room",
-        "wall": "#3a4a4a",
-        "window": 0.7,
-        "night": true,
-        "portrait": null,
+        "flag": "jp",
+        "window": 0.6,
+        "night": false,
         "depth": 0.3,
-        "seed": 1
+        "wall": "#5a4a3a"
        },
        {
         "type": "table",
-        "lamp": 0.8,
+        "lamp": 0.5,
         "candles": 0,
-        "papers": 5,
-        "w": 700,
-        "depth": 0.6,
-        "n": 5
+        "papers": 0,
+        "w": 900,
+        "depth": 0.6
        },
        {
         "type": "people",
         "list": [
          {
-          "x": 0.5,
-          "pose": "stand",
-          "facing": -1,
-          "h": 0.8,
-          "cap": true,
           "preset": "clerk",
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.82,
           "spec": {
            "hair": "#1a1a1a",
            "skin": "#e8c49a",
            "coat": "#2a2a30"
           }
+         },
+         {
+          "preset": "woman",
+          "x": 0.6,
+          "facing": -1,
+          "h": 0.78,
+          "spec": {
+           "hair": "#1a1a1a",
+           "coat": "#4a3a4a",
+           "skin": "#e8c49a"
+          }
          }
         ],
-        "lx": 0.55,
-        "ly": 0.45,
+        "lx": 0.45,
+        "ly": 0.55,
         "depth": 0.85
        }
       ]
@@ -12655,7 +12635,8 @@
          "y": 0.7,
          "gap": 300,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "people",
@@ -12773,27 +12754,24 @@
       "time": "dusk",
       "parts": [
        {
-        "type": "forest",
-        "y": 0.62,
-        "n": 50,
-        "seed": 14,
-        "h": 170,
-        "depth": 0.35
-       },
-       {
         "type": "land",
-        "kind": "mud",
-        "y": 0.7,
+        "kind": "grass",
+        "y": 0.72,
         "depth": 0.6
        },
        {
-        "type": "camp",
-        "y": 0.78,
-        "n": 6,
-        "x0": 0.1,
-        "gap": 230,
-        "col": "#5a5640",
-        "fire": 0.5,
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 71,
+        "depth": 0.2
+       },
+       {
+        "type": "graves",
+        "rows": 4,
+        "n": 12,
+        "y": 0.74,
+        "col": "#2a2420",
         "depth": 0.7
        }
       ],
@@ -13073,35 +13051,28 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "dusk",
+      "time": "night",
       "parts": [
        {
-        "type": "forest",
-        "y": 0.62,
-        "n": 50,
-        "seed": 19,
+        "type": "town",
+        "y": 0.72,
+        "n": 12,
+        "gap": 130,
         "h": 170,
-        "depth": 0.35
+        "col": "#1d1612",
+        "depth": 0.4
        },
        {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.7,
-        "depth": 0.6
-       },
-       {
-        "type": "camp",
-        "y": 0.78,
-        "n": 6,
-        "x0": 0.1,
-        "gap": 230,
-        "col": "#5a5640",
-        "fire": 0.5,
+        "type": "graves",
+        "rows": 2,
+        "n": 10,
+        "y": 0.86,
+        "col": "#1a1512",
         "depth": 0.7
        }
       ],
       "fx": [
-       "fog"
+       "smoke"
       ]
      },
      "pause": 1.0
@@ -13148,7 +13119,8 @@
         "y": 0.68,
         "gap": 380,
         "steam": true,
-        "depth": 0.5
+        "depth": 0.5,
+        "modern": true
        },
        {
         "type": "people",
@@ -13266,33 +13238,45 @@
       "time": "day",
       "parts": [
        {
-        "type": "hills",
-        "y": 0.6,
-        "n": 2,
-        "seed": 5,
-        "depth": 0.2
-       },
-       {
-        "type": "forest",
-        "y": 0.66,
-        "n": 20,
-        "seed": 6,
-        "h": 140,
+        "type": "town",
+        "y": 0.76,
+        "n": 7,
+        "gap": 210,
+        "h": 130,
+        "col": "#6a5a4a",
         "depth": 0.4
        },
        {
         "type": "land",
         "kind": "grass",
-        "y": 0.72,
+        "y": 0.84,
         "depth": 0.6
        },
        {
-        "type": "farm",
-        "x": 0.62,
-        "y": 0.74,
-        "s": 0.9,
-        "col": "#3e3428",
-        "depth": 0.6
+        "type": "people",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.85,
+          "walk": [
+           0.15,
+           0.32,
+           0,
+           4
+          ],
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.3,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ]
      }
@@ -13314,33 +13298,41 @@
       "time": "day",
       "parts": [
        {
-        "type": "hills",
-        "y": 0.6,
-        "n": 2,
-        "seed": 13,
-        "depth": 0.2
+        "type": "room",
+        "flag": "us",
+        "window": 0.6,
+        "night": false,
+        "depth": 0.3,
+        "wall": "#e0d8c8"
        },
        {
-        "type": "forest",
-        "y": 0.66,
-        "n": 20,
-        "seed": 14,
-        "h": 140,
-        "depth": 0.4
-       },
-       {
-        "type": "land",
-        "kind": "grass",
-        "y": 0.72,
+        "type": "table",
+        "lamp": 0.7,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
         "depth": 0.6
        },
        {
-        "type": "farm",
-        "x": 0.62,
-        "y": 0.74,
-        "s": 0.9,
-        "col": "#3e3428",
-        "depth": 0.6
+        "type": "people",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.42,
+          "facing": 1,
+          "h": 0.85,
+          "pose": "hold",
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
+         }
+        ],
+        "lx": 0.42,
+        "ly": 0.55,
+        "depth": 0.85
        }
       ]
      }
@@ -13362,33 +13354,59 @@
       "time": "dusk",
       "parts": [
        {
-        "type": "hills",
-        "y": 0.6,
-        "n": 2,
-        "seed": 15,
-        "depth": 0.2
-       },
-       {
-        "type": "forest",
-        "y": 0.66,
-        "n": 20,
-        "seed": 16,
-        "h": 140,
+        "type": "town",
+        "y": 0.76,
+        "n": 6,
+        "gap": 230,
+        "h": 130,
+        "col": "#5a4a3a",
         "depth": 0.4
        },
        {
         "type": "land",
         "kind": "grass",
-        "y": 0.72,
+        "y": 0.84,
         "depth": 0.6
        },
        {
-        "type": "farm",
-        "x": 0.62,
-        "y": 0.74,
-        "s": 0.9,
-        "col": "#3e3428",
-        "depth": 0.6
+        "type": "people",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.85,
+          "spec": {
+           "coat": "#2e3440",
+           "coat2": "#e8e2d4",
+           "trim": "#6a6458",
+           "hair": "#2a1d12"
+          }
+         },
+         {
+          "preset": "woman",
+          "x": 0.45,
+          "facing": -1,
+          "h": 0.8,
+          "spec": {
+           "hair": "#3a2416",
+           "coat": "#5a4a3a"
+          }
+         },
+         {
+          "preset": "civilian",
+          "x": 0.6,
+          "facing": -1,
+          "h": 0.5,
+          "spec": {
+           "coat": "#4a4a52",
+           "hair": "#3b2a1a"
+          }
+         }
+        ],
+        "lx": 0.45,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ]
      }
@@ -13559,33 +13577,26 @@
       "time": "dusk",
       "parts": [
        {
-        "type": "hills",
-        "y": 0.6,
-        "n": 2,
-        "seed": 7,
-        "depth": 0.2
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
        },
        {
         "type": "forest",
         "y": 0.66,
-        "n": 20,
-        "seed": 8,
+        "n": 18,
+        "seed": 61,
         "h": 140,
-        "depth": 0.4
+        "depth": 0.45
        },
        {
-        "type": "land",
-        "kind": "grass",
-        "y": 0.72,
-        "depth": 0.6
-       },
-       {
-        "type": "farm",
-        "x": 0.62,
-        "y": 0.74,
-        "s": 0.9,
-        "col": "#3e3428",
-        "depth": 0.6
+        "type": "graves",
+        "rows": 3,
+        "n": 9,
+        "y": 0.78,
+        "col": "#2a2420",
+        "depth": 0.7
        }
       ],
       "fx": [
@@ -13610,34 +13621,25 @@
       "time": "dusk",
       "parts": [
        {
-        "type": "hills",
-        "y": 0.6,
-        "n": 2,
-        "seed": 9,
-        "depth": 0.2
-       },
-       {
-        "type": "forest",
-        "y": 0.66,
-        "n": 20,
-        "seed": 10,
-        "h": 140,
+        "type": "town",
+        "y": 0.7,
+        "n": 12,
+        "gap": 130,
+        "h": 150,
+        "col": "#2a2420",
         "depth": 0.4
        },
        {
-        "type": "land",
-        "kind": "grass",
-        "y": 0.72,
-        "depth": 0.6
-       },
-       {
-        "type": "farm",
-        "x": 0.62,
-        "y": 0.74,
-        "s": 0.9,
-        "col": "#3e3428",
-        "depth": 0.6
+        "type": "graves",
+        "rows": 2,
+        "n": 11,
+        "y": 0.84,
+        "col": "#2a2420",
+        "depth": 0.7
        }
+      ],
+      "fx": [
+       "smoke"
       ]
      }
     },
@@ -13684,7 +13686,8 @@
          "y": 0.7,
          "gap": 300,
          "steam": true,
-         "depth": 0.5
+         "depth": 0.5,
+         "modern": true
         },
         {
          "type": "people",
@@ -13938,7 +13941,7 @@
  "cast": {
   "WPH": {
    "preset": "civilian",
-   "name": "William Patrick Hitler",
+   "name": "William Patrick",
    "spec": {
     "coat": "#2e3440",
     "coat2": "#e8e2d4",
@@ -13948,14 +13951,14 @@
   },
   "WPHN": {
    "preset": "us_sailor",
-   "name": "William Patrick Hitler",
+   "name": "William Patrick",
    "spec": {
     "hair": "#2a1d12"
    }
   },
   "BOY": {
    "preset": "civilian",
-   "name": "William, aged about ten",
+   "name": "A boy named William",
    "spec": {
     "coat": "#4a4a52",
     "hair": "#3b2a1a"
@@ -13963,7 +13966,7 @@
   },
   "BRID": {
    "preset": "woman",
-   "name": "Bridget Hitler",
+   "name": "Bridget Dowling",
    "spec": {
     "hair": "#6a3a1e",
     "coat": "#3a4a5a"
@@ -14010,7 +14013,7 @@
   },
   "CUST2": {
    "preset": "woman",
-   "name": "The customer's wife",
+   "name": "A customer's wife",
    "spec": {
     "hair": "#3a2416",
     "coat": "#5a4a3a"
@@ -14066,7 +14069,7 @@
   },
   "POL2": {
    "preset": "worker",
-   "name": "His sergeant",
+   "name": "A sergeant",
    "spec": {
     "coat": "#6a6a4a",
     "hat": "helmet",
@@ -14115,7 +14118,7 @@
   },
   "PILOT2": {
    "preset": "civilian",
-   "name": "His flight leader",
+   "name": "A flight leader",
    "spec": {
     "coat": "#4a5a7a",
     "coat2": "#d8d2c4",
@@ -14133,7 +14136,7 @@
   },
   "LUFT2": {
    "preset": "worker",
-   "name": "His gunner",
+   "name": "A gunner",
    "spec": {
     "coat": "#5a5e5a",
     "hat": "helmet",
@@ -14169,7 +14172,7 @@
   },
   "SOV2": {
    "preset": "soviet_officer",
-   "name": "His officer"
+   "name": "A Soviet officer"
   },
   "JPOFF": {
    "preset": "us_officer",
@@ -14265,7 +14268,7 @@
   },
   "CODE2": {
    "preset": "us_officer",
-   "name": "His officer",
+   "name": "A Navy officer",
    "spec": {
     "coat": "#6b6448",
     "coat2": "#55503a",
@@ -14355,7 +14358,7 @@
   },
   "LIST2": {
    "preset": "woman",
-   "name": "His neighbour",
+   "name": "A neighbour",
    "spec": {
     "hair": "#3a2416",
     "coat": "#5a4a3a"

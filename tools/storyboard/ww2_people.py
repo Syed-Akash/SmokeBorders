@@ -36,7 +36,7 @@ PEOPLE = {
  'CIV':   ('civilian', {}),
 }
 def who(code, **k):
-    p, sp = PEOPLE[code]; q = dict(preset=p, **k)
-    if sp: q['spec'] = dict(sp)
+    p, sp = PEOPLE[code]; extra = k.pop('spec', {}); q = dict(preset=p, **k)
+    if sp or extra: q['spec'] = dict(sp, **extra)
     return q
 

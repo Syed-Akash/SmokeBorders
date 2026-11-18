@@ -86,5 +86,13 @@
   "license": "Public domain",
   "artist": "Yevgeny Khaldei / Adam Cuerden",
   "credit": "Internet portal of the Ministry of Defense of Russia mil.ru archive"
+ },
+ "hiroshima": {
+  "title": "File:Atomic cloud over Hiroshima.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Atomic_cloud_over_Hiroshima.jpg/1280px-Atomic_cloud_over_Hiroshima.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Atomic_cloud_over_Hiroshima.jpg",
+  "license": "Public domain",
+  "artist": "George R. Caron",
+  "credit": "This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing."
  }
 }
