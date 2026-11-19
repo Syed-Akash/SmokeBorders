@@ -10,6 +10,7 @@ MALL = lambda **k: S('day', shop('CROWN LIQUORS', y=.8), palms(y=.84, n=3, x0=.0
 INTRO = dict(mood='tension', beats=[
   B("Wednesday, the eleventh of July, 1979. About half past two in the afternoon. Dadeland Mall, south of Miami, the busiest shopping centre in the city.",
     S('day', palms(y=.82, n=5), car('sedan', x=.2, y=.92, col='#3a5a7a'), car('sedan', x=.75, y=.95, col='#c8b070'), shop('DADELAND', y=.74, col='#e8e0d0', sign='#2a4a6a'), push=.06),
+    ('Dadeland', S('day', shop('DADELAND', y=.9, col='#e8e0d0', sign='#2a4a6a'), crowd(n=30, y=1.02), push=.1)),
     date="WEDNESDAY, 11 JULY 1979\nDADELAND MALL, MIAMI", cam={'lon': -80.31, 'lat': 25.69, 'scale': 9000}),
   B("A white Ford van rolls slowly across the car park. On its side, painted in neat letters: Happy Time Complete Party Supply.",
     S('day', palms(y=.8, n=4, h=340), car('van', y=.93, s=.9, drive=[-.2, .55, 0, 5], text='HAPPY TIME|COMPLETE PARTY SUPPLY')),
@@ -99,7 +100,7 @@ CH2 = dict(title='The Orange Blossom', years='1891–1896', mood='hope', beats=[
     ('proof', D(['Orange blossoms from Biscayne Bay.', 'Untouched by the frost.'], 'The legend, 1895'))),
   B("Some historians call that a myth. One of them asks: how did she send them? By FedEx? What she probably did was simpler: she wrote or wired him that the bay had escaped the cold.",
     D(['"How did she send them?', 'By FedEx?"'], 'A Miami historian on the orange blossom story'), ('wired', S('night', room(night=True, wall='#2a2430'), table(lamp=.5, papers=3, w=700)))),
-  B("Either way, it works. Flagler sees ruined farmers and a frost free bay, and extends the railway. In April 1896, the first train steams into Miami.",
+  B("It works. Flagler sees ruined farmers and a frost free bay, and extends the railway. In April 1896, the first train steams into Miami.",
     S('day', land('grass', y=.74), palms(y=.84, n=4), train(drive=(-.3, .8, 0, 7)), push=.06), date="APRIL 1896\nTHE FIRST TRAIN", sfx='bells'),
   B("Three months later, on the twenty eighth of July 1896, the men of the settlement meet in a pool hall on the river to vote. To become a city, they need three hundred registered voters.",
     S('night', room(night=True, wall='#3a2a1c', window=.2), table(lamp=.5, papers=0, w=1000), crowd(n=40, y=1.0, hats=True)),
@@ -156,7 +157,7 @@ CH3 = dict(title='The Boom and the Eye', years='1920–1926', mood='tension', be
 
 CH4 = dict(title='Rum Row', years='1920–1947', mood='uneasy', beats=[
   B("Meanwhile, the United States has banned alcohol. Prohibition. And Miami has a gift for smugglers: the Bahamas, British islands where drinking is legal, are a short boat ride away.",
-    MAP, ('Bahamas', S('night', sea(y=.6), boats(n=2, crowded=False, y=.72, s=.6), push=.06)), cam={'lon': -79.6, 'lat': 25.6, 'scale': 1900}),
+    S('night', sea(y=.6), boats(n=2, crowded=False, y=.72, s=.6), push=.06), ('Bahamas', MAP), cam={'lon': -79.6, 'lat': 25.6, 'scale': 1900}),
   B("The twenty fourth of February 1926, at sunset. E. W. Red Shannon, the King of the Florida Smugglers, heads for Miami Beach in a thirty foot boat carrying a hundred and seventy cases of liquor, picked up at Gun Cay, near Bimini.",
     S('dusk', sea(y=.6), boats(n=1, crowded=False, y=.74, s=.9, x=.4), A(('rumrunner', .2, 'hold')), push=.06),
     ('hundred', C('170 CASES', 'IN A 30-FOOT BOAT', 'Gun Cay to Miami Beach, 24 February 1926', size=150))),

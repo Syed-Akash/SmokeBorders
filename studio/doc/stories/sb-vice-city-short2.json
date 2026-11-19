@@ -1,0 +1,589 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "era": "1994",
+ "musicEra": "modern",
+ "balls": {},
+ "places": {
+  "Miami": [
+   -80.19,
+   25.77
+  ],
+  "Havana": [
+   -82.37,
+   23.11
+  ],
+  "Mariel": [
+   -82.75,
+   23.02
+  ],
+  "Key West": [
+   -81.78,
+   24.56
+  ],
+  "Bimini": [
+   -79.28,
+   25.73
+  ]
+ },
+ "cast": {
+  "COP1": {
+   "preset": "miami_cop",
+   "name": "A Miami detective"
+  },
+  "COP2": {
+   "preset": "miami_cop",
+   "name": "A patrolman"
+  },
+  "COP3": {
+   "preset": "miami_cop",
+   "name": "A patrolman"
+  },
+  "TUT": {
+   "preset": "tuttle",
+   "name": "Julia Tuttle"
+  },
+  "FLA": {
+   "preset": "flagler",
+   "name": "Henry Flagler"
+  },
+  "VOT1": {
+   "preset": "worker",
+   "name": "A voter"
+  },
+  "VOT2": {
+   "preset": "citizen80s",
+   "name": "A Bahamian voter",
+   "spec": {
+    "coat": "#5a4a34"
+   }
+  },
+  "BUY": {
+   "preset": "clerk",
+   "name": "A buyer"
+  },
+  "SELL": {
+   "preset": "civilian",
+   "name": "A land agent"
+  },
+  "NEW1": {
+   "preset": "civilian",
+   "name": "A newcomer"
+  },
+  "OLD1": {
+   "preset": "worker",
+   "name": "An old Floridian"
+  },
+  "CG": {
+   "preset": "us_sailor",
+   "name": "A Coast Guardsman"
+  },
+  "RUM": {
+   "preset": "rumrunner",
+   "name": "A rum runner"
+  },
+  "CAP": {
+   "preset": "capone",
+   "name": "Al Capone"
+  },
+  "AGENT": {
+   "preset": "clerk",
+   "name": "An estate agent"
+  },
+  "RES1": {
+   "preset": "citizen80s",
+   "name": "An Overtown resident"
+  },
+  "RES2": {
+   "preset": "woman",
+   "name": "An Overtown resident",
+   "spec": {
+    "skin": "#8a5a3a"
+   }
+  },
+  "OFF": {
+   "preset": "clerk",
+   "name": "A highway official"
+  },
+  "EX1": {
+   "preset": "politician",
+   "name": "A Cuban exile",
+   "spec": {
+    "coat": "#e8e4da"
+   }
+  },
+  "EX2": {
+   "preset": "refugee_woman",
+   "name": "His wife"
+  },
+  "RECRUIT": {
+   "preset": "cuban_soldier",
+   "name": "A recruit"
+  },
+  "VET": {
+   "preset": "cuban_soldier",
+   "name": "A brigade veteran"
+  },
+  "EDN": {
+   "preset": "reporter",
+   "name": "Edna Buchanan"
+  },
+  "DRV": {
+   "preset": "refugee",
+   "name": "The bus driver"
+  },
+  "PAS": {
+   "preset": "refugee_woman",
+   "name": "A passenger"
+  },
+  "HEC": {
+   "preset": "refugee",
+   "name": "Héctor Sanyustiz"
+  },
+  "CUB": {
+   "preset": "cuban_soldier",
+   "name": "A Cuban official"
+  },
+  "PER": {
+   "preset": "politician",
+   "name": "The Peruvian diplomat"
+  },
+  "CRD1": {
+   "preset": "refugee_woman",
+   "name": "A woman in the embassy garden"
+  },
+  "CRD2": {
+   "preset": "refugee",
+   "name": "A man in the embassy garden"
+  },
+  "CG2": {
+   "preset": "us_sailor",
+   "name": "A Coast Guardsman"
+  },
+  "CG3": {
+   "preset": "us_sailor",
+   "name": "A Coast Guardsman"
+  },
+  "TOUR": {
+   "preset": "woman",
+   "name": "A tourist",
+   "spec": {
+    "coat": "#e88aa8"
+   }
+  },
+  "LOCAL": {
+   "preset": "worker",
+   "name": "A Key West local"
+  },
+  "VOL": {
+   "preset": "woman",
+   "name": "A volunteer",
+   "spec": {
+    "coat": "#3a5a7a"
+   }
+  },
+  "NEW": {
+   "preset": "refugee",
+   "name": "A new arrival"
+  },
+  "RES3": {
+   "preset": "woman",
+   "name": "A Liberty City resident",
+   "spec": {
+    "skin": "#7a4a30"
+   }
+  },
+  "RES4": {
+   "preset": "citizen80s",
+   "name": "A Liberty City resident"
+  },
+  "ME1": {
+   "preset": "clerk",
+   "name": "A medical examiner's assistant"
+  },
+  "ME2": {
+   "preset": "clerk",
+   "name": "A medical examiner"
+  },
+  "BOSS": {
+   "preset": "politician",
+   "name": "A Miami businessman"
+  },
+  "PR": {
+   "preset": "clerk",
+   "name": "His publicist"
+  },
+  "ED2": {
+   "preset": "clerk",
+   "name": "An editor"
+  },
+  "PROD": {
+   "preset": "detective80s",
+   "name": "A film producer",
+   "spec": {
+    "coat": "#2a2a32"
+   }
+  },
+  "LOCAL2": {
+   "preset": "refugee",
+   "name": "A Little Havana resident"
+  },
+  "YER": {
+   "preset": "civilian",
+   "name": "Anthony Yerkovich"
+  },
+  "FRIEND": {
+   "preset": "clerk",
+   "name": "A friend"
+  },
+  "NBC1": {
+   "preset": "politician",
+   "name": "A TV executive"
+  },
+  "NBC2": {
+   "preset": "woman",
+   "name": "A TV executive"
+  }
+ },
+ "voices": {
+  "COP1": "am_michael",
+  "COP2": "am_eric",
+  "COP3": "am_michael",
+  "TUT": "af_sarah",
+  "FLA": "am_adam",
+  "VOT1": "am_michael",
+  "VOT2": "am_onyx",
+  "BUY": "am_puck",
+  "SELL": "am_eric",
+  "NEW1": "am_liam",
+  "OLD1": "am_adam",
+  "CG": "am_eric",
+  "RUM": "am_puck",
+  "CAP": "am_fenrir",
+  "AGENT": "am_michael",
+  "RES1": "am_onyx",
+  "RES2": "af_kore",
+  "OFF": "am_eric",
+  "EX1": "am_liam",
+  "EX2": "af_bella",
+  "RECRUIT": "am_puck",
+  "VET": "am_onyx",
+  "EDN": "af_nicole",
+  "DRV": "am_eric",
+  "PAS": "af_bella",
+  "HEC": "am_puck",
+  "CUB": "am_fenrir",
+  "PER": "bm_lewis",
+  "CRD1": "af_kore",
+  "CRD2": "am_liam",
+  "CG2": "am_michael",
+  "CG3": "am_eric",
+  "TOUR": "af_sky",
+  "LOCAL": "am_adam",
+  "VOL": "af_sarah",
+  "NEW": "am_liam",
+  "RES3": "af_kore",
+  "RES4": "am_onyx",
+  "ME1": "am_michael",
+  "ME2": "bm_lewis",
+  "BOSS": "am_fenrir",
+  "PR": "af_sky",
+  "ED2": "am_adam",
+  "PROD": "am_puck",
+  "LOCAL2": "am_liam",
+  "YER": "am_adam",
+  "FRIEND": "am_michael",
+  "NBC1": "am_eric",
+  "NBC2": "af_bella"
+ },
+ "photos": {
+  "tuttle": [
+   "Julia Tuttle portrait",
+   false
+  ],
+  "flagler": [
+   "Henry Flagler portrait",
+   false
+  ],
+  "hurricane1926": [
+   "1926 Miami hurricane damage",
+   true
+  ],
+  "capone": [
+   "Al Capone mugshot 1931",
+   false
+  ],
+  "castro": [
+   "Fidel Castro 1959",
+   false
+  ],
+  "freedomtower": [
+   "File:Miami Freedom Tower by Tom Schaefer.jpg",
+   true
+  ],
+  "carter": [
+   "Jimmy Carter official portrait",
+   false
+  ],
+  "reagan": [
+   "Official Portrait of President Reagan 1981",
+   false
+  ],
+  "bush": [
+   "George H. W. Bush vice presidential portrait",
+   false
+  ]
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below.",
+ "id": "sb-vice-city-short2",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-vice-city",
+ "title": "Do You Know Al Capone Bought His Miami Mansion From a Beer Family? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know Al Capone bought his Miami mansion from a beer family?",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.64,
+       "depth": 0.3
+      },
+      {
+       "type": "coast",
+       "x0": 0.2,
+       "x1": 0.8,
+       "y": 0.64,
+       "h": 40,
+       "depth": 0.3
+      },
+      {
+       "type": "palms",
+       "y": 0.7,
+       "n": 6,
+       "h": 220,
+       "wind": 0.15,
+       "x0": 0.22,
+       "gap": 0.09,
+       "seed": 84,
+       "depth": 0.4
+      }
+     ]
+    },
+    "do": [],
+    "cam": {
+     "lon": -80.17,
+     "lat": 25.78,
+     "scale": 9000
+    }
+   },
+   {
+    "say": "1928. Prohibition. Alcohol is illegal across America, and Capone, the boss of Chicago, has made a fortune selling it anyway.",
+    "scene": {
+     "shot": "photo",
+     "img": "capone",
+     "move": "in",
+     "caption": "Al Capone"
+    },
+    "do": []
+   },
+   {
+    "say": "He wants somewhere warm. So he buys a house on Palm Island, a man made island dug out of Biscayne Bay, for forty thousand dollars, in cash.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "palms",
+       "y": 0.84,
+       "n": 5,
+       "h": 420,
+       "wind": 0.15,
+       "x0": 0.04,
+       "gap": 0.16,
+       "seed": 85,
+       "depth": 0.7
+      },
+      {
+       "type": "land",
+       "kind": "sand",
+       "y": 0.78,
+       "depth": 0.6
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "capone",
+         "x": 0.4,
+         "pose": "hold",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.98,
+         "prop": "coin"
+        }
+       ],
+       "depth": 0.88
+      }
+     ]
+    },
+    "do": []
+   },
+   {
+    "talk": [
+     {
+      "who": "CAP",
+      "text": "Who owned it?"
+     },
+     {
+      "who": "AGENT",
+      "text": "Mr Busch. The brewing family."
+     },
+     {
+      "who": "CAP",
+      "text": "I'll take it. Cash."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "room",
+       "flag": null,
+       "window": 0.6,
+       "night": false,
+       "depth": 0.3,
+       "seed": 86,
+       "wall": "#e8dcc8"
+      },
+      {
+       "type": "table",
+       "lamp": 0.6,
+       "candles": 0,
+       "papers": 2,
+       "w": 700,
+       "depth": 0.6,
+       "seed": 87
+      }
+     ]
+    }
+   },
+   {
+    "say": "The seller: Clarence Busch, of the beer brewing Busch family. A brewer, selling his house to the king of illegal beer.",
+    "scene": {
+     "shot": "card",
+     "time": "$40,000",
+     "place": "IN CASH",
+     "date": "Palm Island, 1928",
+     "size": 200
+    },
+    "do": []
+   },
+   {
+    "say": "Miami's newspaper campaigns to drive him out. He stays, adds a pool and a guest house for armed guards, and dies there in 1947.",
+    "scene": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "palms",
+       "y": 0.84,
+       "n": 4,
+       "h": 420,
+       "wind": 0.05,
+       "x0": 0.04,
+       "gap": 0.16,
+       "seed": 88,
+       "depth": 0.7
+      },
+      {
+       "type": "sea",
+       "y": 0.66,
+       "depth": 0.3
+      }
+     ],
+     "push": 0.05
+    },
+    "do": []
+   },
+   {
+    "say": "Gangsters, sunshine and money from somewhere else. The real Vice City had it all, long before the game.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.66,
+       "depth": 0.3
+      },
+      {
+       "type": "boats",
+       "n": 1,
+       "y": 0.78,
+       "x": 0.12,
+       "gap": 0.22,
+       "s": 0.7,
+       "drift": 1,
+       "crowded": false,
+       "depth": 0.6
+      },
+      {
+       "type": "palms",
+       "y": 0.92,
+       "n": 3,
+       "h": 330,
+       "wind": 0.15,
+       "x0": 0.04,
+       "gap": 0.16,
+       "seed": 89,
+       "depth": 0.85
+      },
+      {
+       "type": "neon",
+       "text": "VICE CITY",
+       "x": 0.5,
+       "y": 0.3,
+       "col": "255,60,170",
+       "size": 110,
+       "depth": 0.3
+      }
+     ]
+    },
+    "do": []
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Miami New Times, Prohibition (Red Shannon, Capone): https://www.miaminewtimes.com/news/sixty-years-before-the-cocaine-cowboys-miami-was-the-wild-west-of-prohibition-8269399",
+  "FBI, Al Capone: https://www.fbi.gov/history/famous-cases/al-capone",
+  "PBS American Experience, Al Capone in Miami Beach: https://www.pbs.org/wgbh/americanexperience/features/miami-al-capone",
+  "WFTV, Capone's Miami Beach mansion (Clarence Busch): https://www.wftv.com/news/trending/miami-beach-mansion-once-owned-by-al-capone-demolished/MBPRWG3TKVCQ7IX7QVETEDJ6ME/",
+  "Historic Preservation Association of Coral Gables, Palm Island: https://historiccoralgables.org/?p=6838",
+  "Atlanta Journal-Constitution, Capone's mansion: https://www.pressreader.com/usa/the-atlanta-journal-constitution/20210908/281612423516805",
+  "Community Newspapers, Al Capone and Greater Miami: https://communitynewspapers.com/?p=197003",
+  "Cubans in America, Freedom Flights and Little Havana: https://cubansinamerica.us/?p=7258",
+  "Wikipedia, Havana Peruvian embassy crisis: https://en.wikipedia.org/wiki/Havana_Peruvian_embassy_crisis",
+  "National Archives, causes and effects of the Mariel boatlift: https://text-message.blogs.archives.gov/2021/08/03/the-causes-and-effects-of-the-mariel-boatlift",
+  "Clements Center, diplomatic history April 20 (Sanyustiz, Havana statement, Carter): https://www.clementscenter.org/?p=863",
+  "Cubanet, Sanyustiz and the route 79 bus: https://www.cubanet.org/?p=211930",
+  "ECOI, the Peruvian embassy, 4-6 April 1980: https://www.ecoi.net/en/document/1073810.html",
+  "ADST, the Mariel boatlift: https://adst.org/?p=10753",
+  "NPR, Scarface and Mariel (Cuban government description): https://www.npr.org/transcripts/1149875505",
+  "History.com, Castro announces the Mariel boatlift: https://www.history.com/this-day-in-history/april-20/castro-announces-mariel-boatlift",
+  "Florida Memory, the Mariel Boatlift of 1980: https://floridamemory.com/items/show/332816",
+  "Wikipedia, Mariel boatlift: https://en.wikipedia.org/wiki/Mariel_boatlift",
+  "National Archives, Mariel arrivals by month: https://text-message.blogs.archives.gov/?p=18647",
+  "GlobalSecurity, Mariel Boatlift (Coast Guard, criminal records): https://www.globalsecurity.org/military/ops/mariel-boatlift.htm",
+  "Seattle Times, How Marielitos changed Florida: https://archive.seattletimes.com/archive/20050417/mariel17/how-marielitos-helped-change-the-face-of-florida",
+  "WorldAtlas, What was the Mariel boatlift (3,500): https://www.worldatlas.com/articles/what-was-the-mariel-boatlift.html",
+  "NYT via RallyPoint, Marielitos face long-delayed reckoning (2,746): https://www.rallypoint.com/shared-links/marielitos-face-long-delayed-reckoning-expulsion-to-cuba-nytimes-com"
+ ]
+}

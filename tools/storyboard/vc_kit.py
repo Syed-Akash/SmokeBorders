@@ -31,7 +31,7 @@ def highway(y=.38, d=.7): return dict(type='highway', y=y, depth=d)
 def houses(y=.8, n=6, night=False, d=.5): return dict(type='houses', y=y, n=n, night=night, seed=_s(), depth=d)
 def train(y=.8, s=.7, drive=(.1, .9, 0, 7), d=.5): return dict(type='train', y=y, s=s, drive=list(drive), depth=d)
 def shop(text, x=.5, y=.82, col=None, sign=None, d=.4): return dict(type='shopfront', text=text, x=x, y=y, depth=d, **({'col': col} if col else {}), **({'signCol': sign} if sign else {}))
-def tv(x=.5, y=.5, w=760, d=.5): return dict(type='tv', x=x, y=y, w=w, depth=d)
+def tv(x=.5, y=.5, w=760, d=.5): return dict(type='tv', x=x, y=y, w=w, depth=d, seed=_s())
 def town(n=14, y=.75, h=160, gap=140, col='#3a3028', night=False, d=.4): return dict(type='town', y=y, n=n, gap=gap, h=h, col=col, night=night, depth=d)
 def camp(n=7, y=.78, x0=.05, gap=200, col='#e8e0c8', fire=None, d=.6): return dict(type='camp', y=y, n=n, x0=x0, gap=gap, col=col, fire=fire, depth=d)
 def crowd(n=80, y=.97, hats=False, d=.8): return dict(type='crowd', y=y, n=n, hats=hats, depth=d)
@@ -39,8 +39,9 @@ def soldiers(n=10, col='#5a6340', rows=2, x0=.1, gap=90, y=.88, march=True, d=.7
 def ships(n=1, flag='us', x=.5, y=.66, s=.5, gap=300, steam=True, d=.5): return dict(type='ships', n=n, x=x, s=s, flag=flag, y=y, gap=gap, steam=steam, depth=d)
 def flagpole(flag='us', x=.5, y=.78, h=420, d=.5): return dict(type='flagpole', x=x, y=y, flag=flag, h=h, depth=d)
 def fire(x=.6, y=.62, r=240, d=.4): return dict(type='fire', x=x, y=y, r=r, depth=d)
-def room(flag=None, window=.1, night=False, wall=None, d=.3): return dict(type='room', flag=flag, window=window, night=night, depth=d, **({'wall': wall} if wall else {}))
-def table(lamp=.6, candles=0, papers=5, w=900, d=.6): return dict(type='table', lamp=lamp, candles=candles, papers=papers, w=w, depth=d)
+def room(flag=None, window=.1, night=False, wall=None, d=.3):
+    k = _s(); return dict(type='room', flag=flag, window=window, night=night, depth=d, seed=k, **({'wall': wall} if wall else {}))
+def table(lamp=.6, candles=0, papers=5, w=900, d=.6): return dict(type='table', lamp=lamp, candles=candles, papers=papers, w=w, depth=d, seed=_s())
 def graves(rows=3, n=9, y=.8, d=.7): return dict(type='graves', rows=rows, n=n, y=y, col='#a8a294', depth=d)
 def A(*lst, d=.88):
     """actors: A(('preset', x, pose, {extra}), ...)"""

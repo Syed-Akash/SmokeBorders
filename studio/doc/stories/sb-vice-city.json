@@ -533,6 +533,34 @@
      ],
      "push": 0.06
     },
+    "do": [
+     {
+      "on": "Dadeland",
+      "scene": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "shopfront",
+         "text": "DADELAND",
+         "x": 0.5,
+         "y": 0.9,
+         "depth": 0.4,
+         "col": "#e8e0d0",
+         "signCol": "#2a4a6a"
+        },
+        {
+         "type": "crowd",
+         "y": 1.02,
+         "n": 30,
+         "hats": false,
+         "depth": 0.8
+        }
+       ],
+       "push": 0.1
+      }
+     }
+    ],
     "date": "WEDNESDAY, 11 JULY 1979\nDADELAND MALL, MIAMI",
     "cam": {
      "lon": -80.31,
@@ -610,6 +638,7 @@
        "window": 0.5,
        "night": false,
        "depth": 0.3,
+       "seed": 4,
        "wall": "#3a3a40"
       },
       {
@@ -618,7 +647,8 @@
        "candles": 0,
        "papers": 0,
        "w": 700,
-       "depth": 0.6
+       "depth": 0.6,
+       "seed": 5
       },
       {
        "type": "actors",
@@ -719,7 +749,7 @@
        "wind": 0.15,
        "x0": 0.04,
        "gap": 0.16,
-       "seed": 6,
+       "seed": 8,
        "depth": 0.7
       }
      ]
@@ -748,7 +778,7 @@
          "neon": true,
          "h": 320,
          "n": 16,
-         "seed": 7,
+         "seed": 9,
          "depth": 0.4
         },
         {
@@ -778,6 +808,7 @@
        "window": 0.1,
        "night": true,
        "depth": 0.3,
+       "seed": 10,
        "wall": "#0e0e16"
       },
       {
@@ -785,7 +816,8 @@
        "x": 0.5,
        "y": 0.48,
        "w": 760,
-       "depth": 0.5
+       "depth": 0.5,
+       "seed": 11
       },
       {
        "type": "actors",
@@ -826,7 +858,7 @@
          "wind": 0.15,
          "x0": 0.04,
          "gap": 0.16,
-         "seed": 8,
+         "seed": 12,
          "depth": 0.8
         }
        ]
@@ -862,7 +894,7 @@
          "neon": false,
          "h": 300,
          "n": 16,
-         "seed": 9,
+         "seed": 13,
          "depth": 0.4
         },
         {
@@ -873,75 +905,8 @@
          "wind": 0.15,
          "x0": 0.04,
          "gap": 0.16,
-         "seed": 10,
+         "seed": 14,
          "depth": 0.7
-        }
-       ]
-      }
-     }
-    ]
-   },
-   {
-    "say": "And today, the nineteenth of November 2026, Grand Theft Auto Six is out. Vice City again, modern day this time, in a made-up state called Leonida. Florida, with the names filed off.",
-    "scene": {
-     "shot": "set",
-     "time": "night",
-     "parts": [
-      {
-       "type": "room",
-       "flag": null,
-       "window": 0.1,
-       "night": true,
-       "depth": 0.3,
-       "wall": "#0c0c14"
-      },
-      {
-       "type": "tv",
-       "x": 0.5,
-       "y": 0.5,
-       "w": 900,
-       "depth": 0.5
-      }
-     ],
-     "push": 0.08
-    },
-    "do": [
-     {
-      "on": "Leonida",
-      "scene": {
-       "shot": "set",
-       "time": "day",
-       "parts": [
-        {
-         "type": "sea",
-         "y": 0.62,
-         "depth": 0.3
-        },
-        {
-         "type": "land",
-         "kind": "sand",
-         "y": 0.74,
-         "depth": 0.6
-        },
-        {
-         "type": "palms",
-         "y": 0.86,
-         "n": 6,
-         "h": 420,
-         "wind": 0.15,
-         "x0": 0.04,
-         "gap": 0.16,
-         "seed": 11,
-         "depth": 0.7
-        },
-        {
-         "type": "neon",
-         "text": "LEONIDA",
-         "x": 0.5,
-         "y": 0.3,
-         "col": "40,220,255",
-         "size": 110,
-         "depth": 0.3
         }
        ]
       }
@@ -961,7 +926,7 @@
        "neon": true,
        "h": 380,
        "n": 16,
-       "seed": 12,
+       "seed": 18,
        "depth": 0.4
       },
       {
@@ -972,7 +937,7 @@
        "wind": 0.15,
        "x0": 0.04,
        "gap": 0.16,
-       "seed": 13,
+       "seed": 19,
        "depth": 0.85
       },
       {
@@ -1025,7 +990,7 @@
          "y": 0.8,
          "n": 6,
          "night": true,
-         "seed": 14,
+         "seed": 20,
          "depth": 0.5
         },
         {
@@ -1054,6 +1019,7 @@
          "window": 0.1,
          "night": true,
          "depth": 0.3,
+         "seed": 21,
          "wall": "#1a1c20"
         },
         {
@@ -1062,7 +1028,8 @@
          "candles": 0,
          "papers": 2,
          "w": 1000,
-         "depth": 0.6
+         "depth": 0.6,
+         "seed": 22
         }
        ]
       }
@@ -1143,7 +1110,7 @@
        "neon": true,
        "h": 400,
        "n": 16,
-       "seed": 15,
+       "seed": 23,
        "depth": 0.4
       },
       {
@@ -1154,7 +1121,7 @@
        "wind": 0.15,
        "x0": 0.04,
        "gap": 0.16,
-       "seed": 16,
+       "seed": 24,
        "depth": 0.85
       }
      ],
@@ -1194,7 +1161,7 @@
          "wind": 0.15,
          "x0": 0.6,
          "gap": 0.12,
-         "seed": 117,
+         "seed": 208,
          "depth": 0.7
         },
         {
@@ -1230,7 +1197,7 @@
           "type": "forest",
           "y": 0.66,
           "n": 50,
-          "seed": 23,
+          "seed": 31,
           "h": 160,
           "depth": 0.45
          },
@@ -1287,6 +1254,7 @@
          "window": 0.6,
          "night": false,
          "depth": 0.3,
+         "seed": 209,
          "wall": "#4a3a2a"
         },
         {
@@ -1295,7 +1263,8 @@
          "candles": 0,
          "papers": 4,
          "w": 900,
-         "depth": 0.6
+         "depth": 0.6,
+         "seed": 210
         },
         {
          "type": "actors",
@@ -1347,13 +1316,53 @@
           "wind": 0.15,
           "x0": 0.6,
           "gap": 0.12,
-          "seed": 24,
+          "seed": 32,
           "depth": 0.7
          }
         ]
        }
       }
      ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TUT",
+       "text": "Bring the railway south, Mr Flagler."
+      },
+      {
+       "who": "FLA",
+       "text": "There's nothing down there, Mrs Tuttle."
+      },
+      {
+       "who": "TUT",
+       "text": "There's land. And there will be people."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3,
+        "seed": 33,
+        "wall": "#4a3a2a"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 800,
+        "depth": 0.6,
+        "seed": 34
+       }
+      ]
+     }
     },
     {
      "say": "Then the weather helps her. On the twenty fourth and twenty eighth of December 1894, and again on the sixth of February 1895, killing frosts hit Florida.",
@@ -1381,7 +1390,7 @@
           "type": "forest",
           "y": 0.64,
           "n": 60,
-          "seed": 25,
+          "seed": 35,
           "h": 130,
           "depth": 0.45
          }
@@ -1392,61 +1401,7 @@
      ]
     },
     {
-     "say": "Here is the famous version. Julia Tuttle cuts fresh orange blossoms from her own trees and sends them to Flagler, as proof that Miami is frost free.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "room",
-        "flag": null,
-        "window": 0.6,
-        "night": false,
-        "depth": 0.3,
-        "wall": "#5a4a3a"
-       },
-       {
-        "type": "table",
-        "lamp": 0.6,
-        "candles": 0,
-        "papers": 1,
-        "w": 700,
-        "depth": 0.6
-       },
-       {
-        "type": "actors",
-        "list": [
-         {
-          "preset": "tuttle",
-          "x": 0.5,
-          "pose": "hold",
-          "facing": -1,
-          "h": 0.62,
-          "y": 0.98,
-          "prop": "paper"
-         }
-        ],
-        "depth": 0.88
-       }
-      ]
-     },
-     "do": [
-      {
-       "on": "proof",
-       "scene": {
-        "shot": "doc",
-        "kind": "letter",
-        "header": "The legend, 1895",
-        "lines": [
-         "Orange blossoms from Biscayne Bay.",
-         "Untouched by the frost."
-        ]
-       }
-      }
-     ]
-    },
-    {
-     "say": "Either way, it works. Flagler sees ruined farmers and a frost free bay, and extends the railway. In April 1896, the first train steams into Miami.",
+     "say": "It works. Flagler sees ruined farmers and a frost free bay, and extends the railway. In April 1896, the first train steams into Miami.",
      "scene": {
       "shot": "set",
       "time": "day",
@@ -1465,7 +1420,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 28,
+        "seed": 42,
         "depth": 0.7
        },
        {
@@ -1498,6 +1453,7 @@
         "window": 0.2,
         "night": true,
         "depth": 0.3,
+        "seed": 43,
         "wall": "#3a2a1c"
        },
        {
@@ -1506,7 +1462,8 @@
         "candles": 0,
         "papers": 0,
         "w": 1000,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 44
        },
        {
         "type": "crowd",
@@ -1529,6 +1486,46 @@
        }
       }
      ]
+    },
+    {
+     "talk": [
+      {
+       "who": "VOT1",
+       "text": "How many have we got?"
+      },
+      {
+       "who": "VOT2",
+       "text": "Three hundred and sixty eight."
+      },
+      {
+       "who": "VOT1",
+       "text": "Then let's make it a city."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.15,
+        "night": true,
+        "depth": 0.3,
+        "seed": 45,
+        "wall": "#3a2a1c"
+       },
+       {
+        "type": "table",
+        "lamp": 0.4,
+        "candles": 0,
+        "papers": 0,
+        "w": 900,
+        "depth": 0.6,
+        "seed": 46
+       }
+      ]
+     }
     },
     {
      "say": "Three hundred and sixty eight men. And here is the part that usually gets left out: a hundred and sixty two of them were Black, many from the Bahamas. Without them, there would have been no city of Miami that day.",
@@ -1603,7 +1600,7 @@
         "y": 0.8,
         "n": 6,
         "night": false,
-        "seed": 29,
+        "seed": 47,
         "depth": 0.5
        },
        {
@@ -1614,7 +1611,7 @@
         "wind": 0.15,
         "x0": 0.1,
         "gap": 0.7,
-        "seed": 30,
+        "seed": 48,
         "depth": 0.7
        }
       ],
@@ -1653,7 +1650,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 33,
+        "seed": 51,
         "depth": 0.7
        },
        {
@@ -1667,6 +1664,73 @@
       "push": 0.06
      },
      "date": "1925\nTHE LAND BOOM"
+    },
+    {
+     "talk": [
+      {
+       "who": "BUY",
+       "text": "I'll take the lot."
+      },
+      {
+       "who": "SELL",
+       "text": "You haven't seen it."
+      },
+      {
+       "who": "BUY",
+       "text": "I'm selling it this afternoon."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.75,
+        "n": 10,
+        "gap": 140,
+        "h": 180,
+        "col": "#e8dcc8",
+        "night": false,
+        "depth": 0.4
+       },
+       {
+        "type": "palms",
+        "y": 0.88,
+        "n": 3,
+        "h": 420,
+        "wind": 0.15,
+        "x0": 0.04,
+        "gap": 0.16,
+        "seed": 54,
+        "depth": 0.7
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "clerk",
+          "x": 0.3,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98,
+          "prop": "paper"
+         },
+         {
+          "preset": "civilian",
+          "x": 0.7,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98,
+          "prop": "coin"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
     },
     {
      "say": "By 1926, the boom is already running out of buyers. And on the eleventh of September, ships far out in the Atlantic report a hurricane.",
@@ -1727,7 +1791,7 @@
         "wind": 0.95,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 37,
+        "seed": 57,
         "depth": 0.7
        }
       ],
@@ -1746,7 +1810,7 @@
           "y": 0.8,
           "n": 5,
           "night": false,
-          "seed": 38,
+          "seed": 58,
           "depth": 0.5
          },
          {
@@ -1757,7 +1821,7 @@
           "wind": 1.0,
           "x0": 0.1,
           "gap": 0.25,
-          "seed": 39,
+          "seed": 59,
           "depth": 0.7
          }
         ],
@@ -1780,7 +1844,7 @@
         "y": 0.8,
         "n": 6,
         "night": false,
-        "seed": 40,
+        "seed": 60,
         "depth": 0.5
        },
        {
@@ -1791,7 +1855,7 @@
         "wind": 0,
         "x0": 0.05,
         "gap": 0.25,
-        "seed": 41,
+        "seed": 61,
         "depth": 0.7
        }
       ],
@@ -1822,7 +1886,7 @@
         "y": 0.8,
         "n": 6,
         "night": false,
-        "seed": 42,
+        "seed": 62,
         "depth": 0.5
        },
        {
@@ -1840,7 +1904,7 @@
         "wind": 0,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 43,
+        "seed": 63,
         "depth": 0.7
        }
       ]
@@ -1923,7 +1987,7 @@
         "y": 0.8,
         "n": 5,
         "night": false,
-        "seed": 44,
+        "seed": 64,
         "depth": 0.5
        },
        {
@@ -1934,7 +1998,7 @@
         "wind": 0,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 45,
+        "seed": 65,
         "depth": 0.7
        },
        {
@@ -1978,7 +2042,7 @@
         "y": 0.8,
         "n": 5,
         "night": false,
-        "seed": 46,
+        "seed": 66,
         "depth": 0.5
        },
        {
@@ -1989,7 +2053,7 @@
         "wind": 1.0,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 47,
+        "seed": 67,
         "depth": 0.7
        }
       ],
@@ -2008,7 +2072,7 @@
           "y": 0.8,
           "n": 4,
           "night": false,
-          "seed": 48,
+          "seed": 68,
           "depth": 0.5
          },
          {
@@ -2019,7 +2083,7 @@
           "wind": 0.9,
           "x0": 0.04,
           "gap": 0.16,
-          "seed": 49,
+          "seed": 69,
           "depth": 0.7
          }
         ],
@@ -2028,55 +2092,6 @@
         ],
         "weather": "storm",
         "push": 0.2
-       }
-      }
-     ]
-    },
-    {
-     "say": "The Red Cross counts three hundred and seventy two dead and more than six thousand injured. Around twenty five thousand people are left without a roof.",
-     "scene": {
-      "shot": "photo",
-      "img": "hurricane1926",
-      "move": "out",
-      "caption": "Damage, Miami, 1926",
-      "fallback": {
-       "shot": "set",
-       "time": "day",
-       "parts": [
-        {
-         "type": "houses",
-         "y": 0.8,
-         "n": 5,
-         "night": false,
-         "seed": 118,
-         "depth": 0.5
-        },
-        {
-         "type": "palms",
-         "y": 0.86,
-         "n": 3,
-         "h": 420,
-         "wind": 0.2,
-         "x0": 0.04,
-         "gap": 0.16,
-         "seed": 119,
-         "depth": 0.7
-        }
-       ],
-       "fx": [
-        "dust"
-       ]
-      }
-     },
-     "do": [
-      {
-       "on": "twenty",
-       "scene": {
-        "shot": "card",
-        "time": "25,000",
-        "place": "LEFT WITHOUT SHELTER",
-        "date": "and 372 dead",
-        "size": 200
        }
       }
      ]
@@ -2100,7 +2115,7 @@
         "wind": 0.3,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 52,
+        "seed": 72,
         "depth": 0.7
        }
       ],
@@ -2118,33 +2133,33 @@
     {
      "say": "Meanwhile, the United States has banned alcohol. Prohibition. And Miami has a gift for smugglers: the Bahamas, British islands where drinking is legal, are a short boat ride away.",
      "scene": {
-      "shot": "off"
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "boats",
+        "n": 2,
+        "y": 0.72,
+        "x": 0.12,
+        "gap": 0.22,
+        "s": 0.6,
+        "drift": 0,
+        "crowded": false,
+        "depth": 0.6
+       }
+      ],
+      "push": 0.06
      },
      "do": [
       {
        "on": "Bahamas",
        "scene": {
-        "shot": "set",
-        "time": "night",
-        "parts": [
-         {
-          "type": "sea",
-          "y": 0.6,
-          "depth": 0.3
-         },
-         {
-          "type": "boats",
-          "n": 2,
-          "y": 0.72,
-          "x": 0.12,
-          "gap": 0.22,
-          "s": 0.6,
-          "drift": 0,
-          "crowded": false,
-          "depth": 0.6
-         }
-        ],
-        "push": 0.06
+        "shot": "off"
        }
       }
      ],
@@ -2171,6 +2186,7 @@
          "window": 0.5,
          "night": false,
          "depth": 0.3,
+         "seed": 213,
          "wall": "#3a3a40"
         },
         {
@@ -2218,7 +2234,7 @@
           "wind": 0.15,
           "x0": 0.22,
           "gap": 0.09,
-          "seed": 53,
+          "seed": 73,
           "depth": 0.4
          }
         ]
@@ -2238,6 +2254,7 @@
         "window": 0.6,
         "night": false,
         "depth": 0.3,
+        "seed": 74,
         "wall": "#e8dcc8"
        },
        {
@@ -2246,7 +2263,8 @@
         "candles": 0,
         "papers": 2,
         "w": 700,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 75
        },
        {
         "type": "actors",
@@ -2313,7 +2331,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 54,
+        "seed": 76,
         "depth": 0.7
        },
        {
@@ -2345,52 +2363,6 @@
        }
       ]
      }
-    },
-    {
-     "say": "Gangsters, fast boats, sunshine, and money from somewhere else. Miami has played this part before. The real Vice City had its first famous gangster decades before anybody made a game about it.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "sea",
-        "y": 0.66,
-        "depth": 0.3
-       },
-       {
-        "type": "boats",
-        "n": 1,
-        "y": 0.78,
-        "x": 0.12,
-        "gap": 0.22,
-        "s": 0.7,
-        "drift": 1,
-        "crowded": false,
-        "depth": 0.6
-       },
-       {
-        "type": "palms",
-        "y": 0.92,
-        "n": 3,
-        "h": 330,
-        "wind": 0.15,
-        "x0": 0.04,
-        "gap": 0.16,
-        "seed": 57,
-        "depth": 0.85
-       },
-       {
-        "type": "neon",
-        "text": "RUM ROW",
-        "x": 0.5,
-        "y": 0.3,
-        "col": "255,180,60",
-        "size": 90,
-        "depth": 0.3
-       }
-      ]
-     },
-     "sfx": "riser"
     }
    ]
   },
@@ -2410,7 +2382,7 @@
         "y": 0.8,
         "n": 6,
         "night": false,
-        "seed": 58,
+        "seed": 82,
         "depth": 0.5
        },
        {
@@ -2421,66 +2393,13 @@
         "wind": 0.15,
         "x0": 0.1,
         "gap": 0.7,
-        "seed": 59,
+        "seed": 83,
         "depth": 0.7
        }
       ],
       "push": 0.05
      },
      "date": "1940s\nOVERTOWN, MIAMI"
-    },
-    {
-     "say": "Black owned shops, churches, lodges, a newspaper, The Miami Times, founded in 1923 and still printing today. Theatres and clubs along a strip people call Little Broadway.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "houses",
-        "y": 0.8,
-        "n": 6,
-        "night": true,
-        "seed": 60,
-        "depth": 0.5
-       },
-       {
-        "type": "neon",
-        "text": "LYRIC",
-        "x": 0.3,
-        "y": 0.32,
-        "col": "255,180,60",
-        "size": 90,
-        "depth": 0.3
-       },
-       {
-        "type": "neon",
-        "text": "LITTLE BROADWAY",
-        "x": 0.68,
-        "y": 0.22,
-        "col": "255,60,170",
-        "size": 70,
-        "depth": 0.3
-       }
-      ]
-     },
-     "do": [
-      {
-       "on": "Times",
-       "scene": {
-        "shot": "doc",
-        "kind": "letter",
-        "header": "Overtown",
-        "lines": [
-         "THE MIAMI TIMES",
-         "founded 1923",
-         "still published today"
-        ],
-        "hl": [
-         0
-        ]
-       }
-      }
-     ]
     },
     {
      "talk": [
@@ -2506,7 +2425,7 @@
         "y": 0.8,
         "n": 5,
         "night": true,
-        "seed": 63,
+        "seed": 88,
         "depth": 0.5
        },
        {
@@ -2557,7 +2476,7 @@
           "y": 0.8,
           "n": 6,
           "night": false,
-          "seed": 64,
+          "seed": 89,
           "depth": 0.5
          },
          {
@@ -2605,7 +2524,7 @@
         "y": 0.8,
         "n": 4,
         "night": false,
-        "seed": 66,
+        "seed": 91,
         "depth": 0.5
        },
        {
@@ -2658,7 +2577,7 @@
           "y": 0.8,
           "n": 7,
           "night": false,
-          "seed": 67,
+          "seed": 92,
           "depth": 0.5
          },
          {
@@ -2690,7 +2609,7 @@
         "y": 0.8,
         "n": 6,
         "night": true,
-        "seed": 69,
+        "seed": 94,
         "depth": 0.5
        }
       ],
@@ -2721,7 +2640,8 @@
          "flag": "cu",
          "window": 0.6,
          "night": false,
-         "depth": 0.3
+         "depth": 0.3,
+         "seed": 214
         },
         {
          "type": "actors",
@@ -2833,7 +2753,7 @@
          "neon": false,
          "h": 420,
          "n": 6,
-         "seed": 120,
+         "seed": 215,
          "depth": 0.4
         },
         {
@@ -2844,7 +2764,7 @@
          "wind": 0.15,
          "x0": 0.04,
          "gap": 0.16,
-         "seed": 121,
+         "seed": 216,
          "depth": 0.7
         }
        ]
@@ -2852,213 +2772,7 @@
      }
     },
     {
-     "say": "From 1962 to 1974 it helps the new arrivals with health care, housing, money and school. Cubans call it el refugio, the refuge. Americans call it the Ellis Island of the South. Today it's the Freedom Tower.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "room",
-        "flag": null,
-        "window": 0.6,
-        "night": false,
-        "depth": 0.3,
-        "wall": "#d8d0c0"
-       },
-       {
-        "type": "table",
-        "lamp": 0.6,
-        "candles": 0,
-        "papers": 10,
-        "w": 900,
-        "depth": 0.6
-       },
-       {
-        "type": "actors",
-        "list": [
-         {
-          "preset": "clerk",
-          "x": 0.3,
-          "pose": "hold",
-          "facing": 1,
-          "h": 0.62,
-          "y": 0.98,
-          "prop": "paper"
-         },
-         {
-          "preset": "refugee",
-          "x": 0.7,
-          "pose": "idle",
-          "facing": -1,
-          "h": 0.62,
-          "y": 0.98
-         }
-        ],
-        "depth": 0.88
-       }
-      ]
-     },
-     "do": [
-      {
-       "on": "Ellis",
-       "scene": {
-        "shot": "card",
-        "time": "ELLIS ISLAND",
-        "place": "OF THE SOUTH",
-        "date": "the Freedom Tower, 1962–1974",
-        "size": 170
-       }
-      }
-     ]
-    },
-    {
-     "say": "In April 1961, some of the exiles go back the hard way. Backed by the CIA, a brigade of Cuban exiles lands at the Bay of Pigs on the seventeenth of April, to overthrow Castro.",
-     "scene": {
-      "shot": "set",
-      "time": "dawn",
-      "parts": [
-       {
-        "type": "sea",
-        "y": 0.6,
-        "depth": 0.3
-       },
-       {
-        "type": "boats",
-        "n": 3,
-        "y": 0.74,
-        "x": 0.12,
-        "gap": 0.22,
-        "s": 0.6,
-        "drift": 0,
-        "crowded": true,
-        "depth": 0.6
-       }
-      ],
-      "weather": "fog"
-     },
-     "do": [
-      {
-       "on": "seventeenth",
-       "scene": {
-        "shot": "card",
-        "time": "17 APRIL 1961",
-        "place": "THE BAY OF PIGS",
-        "date": "Brigade 2506 lands",
-        "size": 150
-       }
-      }
-     ]
-    },
-    {
-     "say": "After three days of fighting, the invasion fails. From Havana's side, it's a victory over the Americans. From the exiles' side, it's a defeat Miami's Cubans will remember for decades.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "sea",
-        "y": 0.6,
-        "depth": 0.3
-       },
-       {
-        "type": "soldiers",
-        "y": 0.88,
-        "n": 12,
-        "rows": 2,
-        "x0": 0.1,
-        "gap": 90,
-        "col": "#5a6340",
-        "march": false,
-        "depth": 0.7
-       }
-      ],
-      "fx": [
-       "smoke"
-      ]
-     },
-     "do": [
-      {
-       "on": "betrayal",
-       "scene": {
-        "shot": "set",
-        "time": "dusk",
-        "parts": [
-         {
-          "type": "sea",
-          "y": 0.62,
-          "depth": 0.3
-         },
-         {
-          "type": "palms",
-          "y": 0.84,
-          "n": 4,
-          "h": 420,
-          "wind": 0.15,
-          "x0": 0.04,
-          "gap": 0.16,
-          "seed": 71,
-          "depth": 0.7
-         },
-         {
-          "type": "actors",
-          "list": [
-           {
-            "preset": "refugee",
-            "x": 0.5,
-            "pose": "think",
-            "facing": -1,
-            "h": 0.62,
-            "y": 0.98
-           }
-          ],
-          "depth": 0.88
-         }
-        ]
-       }
-      }
-     ]
-    },
-    {
-     "say": "Four years later, both governments agree on something for once. From the first of December 1965, the Freedom Flights carry Cubans from Varadero Beach to Miami, twice a day, five days a week.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "land",
-        "kind": "grass",
-        "y": 0.76,
-        "depth": 0.6
-       },
-       {
-        "type": "palms",
-        "y": 0.86,
-        "n": 4,
-        "h": 420,
-        "wind": 0.15,
-        "x0": 0.6,
-        "gap": 0.1,
-        "seed": 72,
-        "depth": 0.7
-       }
-      ],
-      "push": 0.04
-     },
-     "do": [
-      {
-       "on": "twice",
-       "scene": {
-        "shot": "card",
-        "time": "TWICE A DAY",
-        "place": "FIVE DAYS A WEEK",
-        "date": "Varadero to Miami, 1965–1973",
-        "size": 150
-       }
-      }
-     ]
-    },
-    {
-     "say": "By the last flight, on the sixth of April 1973, they have brought about three hundred thousand people. The largest and longest resettlement of Cuban refugees the United States government ever ran.",
+     "say": "From December 1965 to April 1973, the Freedom Flights carry Cubans from Varadero Beach to Miami, twice a day. In all, about three hundred thousand people. The largest and longest resettlement of Cuban refugees the United States government ever ran.",
      "scene": {
       "shot": "card",
       "time": "300,000",
@@ -3088,7 +2802,7 @@
           "wind": 0.15,
           "x0": 0.04,
           "gap": 0.16,
-          "seed": 73,
+          "seed": 101,
           "depth": 0.7
          }
         ],
@@ -3096,33 +2810,6 @@
        }
       }
      ]
-    },
-    {
-     "say": "And at the same time, the other half of this story is arriving by boat and by plane, from further south. Cocaine.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "sea",
-        "y": 0.62,
-        "depth": 0.3
-       },
-       {
-        "type": "boats",
-        "n": 1,
-        "y": 0.76,
-        "x": 0.12,
-        "gap": 0.22,
-        "s": 0.7,
-        "drift": 1.5,
-        "crowded": false,
-        "depth": 0.6
-       }
-      ],
-      "push": 0.08
-     },
-     "sfx": "braam"
     }
    ]
   },
@@ -3134,118 +2821,35 @@
     {
      "say": "By the late nineteen seventies, Colombian traffickers are flying and shipping cocaine through South Florida, and fighting each other for control of it, in the open.",
      "scene": {
-      "shot": "off"
-     },
-     "do": [
-      {
-       "on": "Colombian",
-       "scene": {
-        "shot": "set",
-        "time": "night",
-        "parts": [
-         {
-          "type": "sea",
-          "y": 0.62,
-          "depth": 0.3
-         },
-         {
-          "type": "boats",
-          "n": 2,
-          "y": 0.74,
-          "x": 0.12,
-          "gap": 0.22,
-          "s": 0.7,
-          "drift": 1,
-          "crowded": false,
-          "depth": 0.6
-         }
-        ]
-       }
-      }
-     ]
-    },
-    {
-     "say": "The twentieth of May 1979. On the Florida Turnpike, two cars race each other, firing machine guns. Other drivers swerve off the road to get away. Even a police car gets shot at.",
-     "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "night",
       "parts": [
        {
-        "type": "land",
-        "kind": "mud",
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "boats",
+        "n": 2,
         "y": 0.74,
-        "depth": 0.6
-       },
-       {
-        "type": "car",
-        "kind": "sedan",
-        "x": 0.5,
-        "y": 0.9,
+        "x": 0.12,
+        "gap": 0.22,
         "s": 0.7,
-        "facing": 1,
-        "depth": 0.8,
-        "drive": [
-         -0.3,
-         1.2,
-         0,
-         4
-        ],
-        "col": "#2a2a2a"
-       },
-       {
-        "type": "car",
-        "kind": "sedan",
-        "x": 0.5,
-        "y": 0.95,
-        "s": 0.75,
-        "facing": 1,
-        "depth": 0.8,
-        "drive": [
-         -0.6,
-         1.1,
-         0.5,
-         4.5
-        ],
-        "col": "#c8b070"
+        "drift": 1,
+        "crowded": false,
+        "depth": 0.6
        }
       ]
      },
      "do": [
       {
-       "on": "police",
+       "on": "South",
        "scene": {
-        "shot": "set",
-        "time": "day",
-        "parts": [
-         {
-          "type": "land",
-          "kind": "mud",
-          "y": 0.74,
-          "depth": 0.6
-         },
-         {
-          "type": "car",
-          "kind": "police",
-          "x": 0.5,
-          "y": 0.94,
-          "s": 0.85,
-          "facing": 1,
-          "depth": 0.8,
-          "drive": [
-           1.2,
-           0.4,
-           0,
-           3
-          ]
-         }
-        ],
-        "fx": [
-         "smoke"
-        ]
+        "shot": "off"
        }
       }
-     ],
-     "date": "20 MAY 1979\nFLORIDA TURNPIKE"
+     ]
     },
     {
      "say": "Detectives name a suspect: Griselda Blanco, the Colombian trafficker they called the Godmother. She allegedly owed one of the dead men money. She was never tried for Dadeland.",
@@ -3259,6 +2863,7 @@
         "window": 0.1,
         "night": true,
         "depth": 0.3,
+        "seed": 103,
         "wall": "#1c1a22"
        },
        {
@@ -3267,7 +2872,8 @@
         "candles": 0,
         "papers": 6,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 104
        },
        {
         "type": "actors",
@@ -3314,47 +2920,6 @@
      ]
     },
     {
-     "say": "Dadeland is the thirty seventh and thirty eighth drug killing of the year in Miami. In 1979, the city records three hundred and forty nine murders.",
-     "scene": {
-      "shot": "card",
-      "time": "349",
-      "place": "MURDERS IN MIAMI",
-      "date": "1979",
-      "size": 220
-     },
-     "do": [
-      {
-       "on": "thirty",
-       "scene": {
-        "shot": "set",
-        "time": "night",
-        "parts": [
-         {
-          "type": "car",
-          "kind": "police",
-          "x": 0.4,
-          "y": 0.93,
-          "s": 0.8,
-          "facing": 1,
-          "depth": 0.8
-         },
-         {
-          "type": "town",
-          "y": 0.75,
-          "n": 10,
-          "gap": 140,
-          "h": 160,
-          "col": "#3a3028",
-          "night": true,
-          "depth": 0.4
-         }
-        ],
-        "push": 0.06
-       }
-      }
-     ]
-    },
-    {
      "say": "Now meet the hidden person of our story. Edna Buchanan, from Paterson, New Jersey. A police reporter at the Miami Herald since 1973, at a time when women were almost never given the police beat.",
      "scene": {
       "shot": "set",
@@ -3366,6 +2931,7 @@
         "window": 0.6,
         "night": false,
         "depth": 0.3,
+        "seed": 105,
         "wall": "#4a4a52"
        },
        {
@@ -3374,7 +2940,8 @@
         "candles": 0,
         "papers": 14,
         "w": 1000,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 106
        },
        {
         "type": "actors",
@@ -3478,41 +3045,6 @@
      }
     },
     {
-     "say": "And at the end of 1979, she is the one who digs into a death the police want to call a traffic accident.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.76,
-        "depth": 0.6
-       },
-       {
-        "type": "car",
-        "kind": "police",
-        "x": 0.3,
-        "y": 0.94,
-        "s": 0.8,
-        "facing": 1,
-        "depth": 0.8
-       },
-       {
-        "type": "car",
-        "kind": "police",
-        "x": 0.75,
-        "y": 0.95,
-        "s": 0.8,
-        "facing": 1,
-        "depth": 0.8
-       }
-      ],
-      "push": 0.06
-     },
-     "sfx": "tension"
-    },
-    {
      "say": "The seventeenth of December 1979, early in the morning. Arthur McDuffie, thirty three, a Black insurance salesman and a former Marine, is riding his black and orange Kawasaki motorcycle in north Miami. His licence is suspended.",
      "scene": {
       "shot": "set",
@@ -3588,6 +3120,7 @@
           "window": 0.1,
           "night": true,
           "depth": 0.3,
+          "seed": 111,
           "wall": "#14161a"
          },
          {
@@ -3596,7 +3129,8 @@
           "candles": 0,
           "papers": 1,
           "w": 500,
-          "depth": 0.6
+          "depth": 0.6,
+          "seed": 112
          }
         ]
        }
@@ -3631,6 +3165,7 @@
           "window": 0.1,
           "night": true,
           "depth": 0.3,
+          "seed": 113,
           "wall": "#2a2a32"
          },
          {
@@ -3639,7 +3174,8 @@
           "candles": 0,
           "papers": 12,
           "w": 900,
-          "depth": 0.6
+          "depth": 0.6,
+          "seed": 114
          },
          {
           "type": "actors",
@@ -3703,7 +3239,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 75,
+        "seed": 115,
         "depth": 0.7
        }
       ],
@@ -3963,7 +3499,8 @@
         "flag": "pe",
         "window": 0.6,
         "night": false,
-        "depth": 0.3
+        "depth": 0.3,
+        "seed": 116
        },
        {
         "type": "table",
@@ -3971,7 +3508,8 @@
         "candles": 0,
         "papers": 6,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 117
        },
        {
         "type": "actors",
@@ -4001,7 +3539,8 @@
           "flag": "cu",
           "window": 0.6,
           "night": false,
-          "depth": 0.3
+          "depth": 0.3,
+          "seed": 118
          },
          {
           "type": "table",
@@ -4009,7 +3548,8 @@
           "candles": 0,
           "papers": 4,
           "w": 900,
-          "depth": 0.6
+          "depth": 0.6,
+          "seed": 119
          },
          {
           "type": "actors",
@@ -4030,6 +3570,69 @@
        }
       }
      ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CUB",
+       "text": "Hand them over."
+      },
+      {
+       "who": "PER",
+       "text": "They asked for asylum. They have it."
+      },
+      {
+       "who": "CUB",
+       "text": "Then you can guard them yourselves.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.6,
+        "night": false,
+        "depth": 0.3,
+        "seed": 120,
+        "wall": "#4a4a52"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 4,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 121
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "cuban_soldier",
+          "x": 0.3,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98
+         },
+         {
+          "preset": "politician",
+          "x": 0.7,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
     },
     {
      "say": "On Good Friday, the fourth of April, Castro pulls every guard away from the Peruvian embassy. The statement from Havana says the embassy will now be solely responsible for whatever happens there.",
@@ -4077,6 +3680,28 @@
         "n": 120,
         "hats": false,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "refugee",
+          "x": 0.3,
+          "pose": "wave",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98
+         },
+         {
+          "preset": "refugee_woman",
+          "x": 0.7,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
        }
       ],
       "push": 0.06
@@ -4111,7 +3736,7 @@
         "type": "forest",
         "y": 0.62,
         "n": 20,
-        "seed": 76,
+        "seed": 122,
         "h": 200,
         "depth": 0.45
        }
@@ -4135,6 +3760,53 @@
        }
       }
      ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CRD1",
+       "text": "Peru? Are they taking us to Peru?"
+      },
+      {
+       "who": "CRD2",
+       "text": "I don't care where. Anywhere."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "crowd",
+        "y": 1.02,
+        "n": 80,
+        "hats": false,
+        "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "refugee",
+          "x": 0.35,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98
+         },
+         {
+          "preset": "refugee_woman",
+          "x": 0.65,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
     },
     {
      "say": "Then Castro surprises everyone. On the twentieth of April, he announces that anybody who wants to leave Cuba can go, through the port of Mariel, west of Havana. As long as someone comes to pick them up.",
@@ -4269,6 +3941,20 @@
         "drift": 0,
         "crowded": false,
         "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "cuban_soldier",
+          "x": 0.85,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.5,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
        }
       ],
       "push": 0.05
@@ -4331,10 +4017,24 @@
      ]
     },
     {
-     "say": "The boats are overloaded. The Florida Straits can be rough. The Coast Guard and the Navy pull people out of the water and escort boat after boat. Over the whole boatlift, twenty seven people die at sea. With that many people in that many small boats, it could have been far worse.",
-     "scene": {
+     "talk": [
+      {
+       "who": "CG2",
+       "text": "How many on that one?"
+      },
+      {
+       "who": "CG3",
+       "text": "Built for twelve. I count sixty.",
+       "mood": "shock"
+      },
+      {
+       "who": "CG2",
+       "text": "Get a line on her."
+      }
+     ],
+     "bg": {
       "shot": "set",
-      "time": "dusk",
+      "time": "day",
       "parts": [
        {
         "type": "sea",
@@ -4343,11 +4043,11 @@
        },
        {
         "type": "boats",
-        "n": 2,
-        "y": 0.72,
-        "x": 0.12,
+        "n": 1,
+        "y": 0.78,
+        "x": 0.45,
         "gap": 0.22,
-        "s": 0.8,
+        "s": 1.1,
         "drift": 0,
         "crowded": true,
         "depth": 0.6
@@ -4355,29 +4055,171 @@
        {
         "type": "ships",
         "n": 1,
-        "x": 0.8,
-        "s": 0.45,
+        "x": 0.85,
+        "s": 0.5,
         "flag": "us",
         "y": 0.66,
         "gap": 300,
         "steam": true,
         "depth": 0.5
        }
+      ]
+     }
+    },
+    {
+     "say": "In Key West, the scene is surreal. Holiday makers are water skiing between the refugee boats.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.56,
+        "depth": 0.3
+       },
+       {
+        "type": "boats",
+        "n": 3,
+        "y": 0.72,
+        "x": 0.12,
+        "gap": 0.28,
+        "s": 0.6,
+        "drift": 0,
+        "crowded": true,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "detective80s",
+          "x": 0.8,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.45,
+          "y": 0.9
+         }
+        ],
+        "depth": 0.88
+       }
       ],
-      "weather": "rain"
+      "push": 0.06
      },
      "do": [
       {
-       "on": "twenty",
+       "on": "water",
        "scene": {
-        "shot": "card",
-        "time": "27",
-        "place": "DIED AT SEA",
-        "date": "out of 125,000 who crossed",
-        "size": 220
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.6,
+          "depth": 0.3
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.78,
+          "depth": 0.6
+         },
+         {
+          "type": "palms",
+          "y": 0.84,
+          "n": 3,
+          "h": 420,
+          "wind": 0.15,
+          "x0": 0.6,
+          "gap": 0.12,
+          "seed": 123,
+          "depth": 0.7
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "citizen80s",
+            "x": 0.3,
+            "pose": "point",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.98,
+            "spec": {
+             "coat": "#e88aa8"
+            }
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
        }
       }
      ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TOUR",
+       "text": "Is that a boat race?"
+      },
+      {
+       "who": "LOCAL",
+       "text": "No. That's a country leaving."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "boats",
+        "n": 3,
+        "y": 0.72,
+        "x": 0.12,
+        "gap": 0.25,
+        "s": 0.55,
+        "drift": 0,
+        "crowded": true,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.8,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "citizen80s",
+          "x": 0.3,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98,
+          "spec": {
+           "coat": "#e88aa8"
+          }
+         },
+         {
+          "preset": "worker",
+          "x": 0.72,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
     },
     {
      "say": "On the fifth of May, President Jimmy Carter speaks to the League of Women Voters. Ours is a country of refugees, he says. We'll continue to provide an open heart and open arms to refugees seeking freedom from communist domination.",
@@ -4395,7 +4237,8 @@
          "flag": "us",
          "window": 0.6,
          "night": false,
-         "depth": 0.3
+         "depth": 0.3,
+         "seed": 217
         },
         {
          "type": "actors",
@@ -4449,7 +4292,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 78,
+        "seed": 124,
         "depth": 0.7
        },
        {
@@ -4504,93 +4347,6 @@
      ]
     },
     {
-     "say": "The ones nobody comes to collect wait. In cramped camps in Key West, in tents in the Miami Orange Bowl stadium, and later, in a tent city underneath an expressway.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "camp",
-        "y": 0.78,
-        "n": 8,
-        "x0": 0.05,
-        "gap": 200,
-        "col": "#e8e0d0",
-        "fire": null,
-        "depth": 0.6
-       },
-       {
-        "type": "crowd",
-        "y": 1.0,
-        "n": 40,
-        "hats": false,
-        "depth": 0.8
-       }
-      ],
-      "push": 0.04
-     },
-     "do": [
-      {
-       "on": "expressway",
-       "scene": {
-        "shot": "set",
-        "time": "day",
-        "parts": [
-         {
-          "type": "highway",
-          "y": 0.3,
-          "depth": 0.7
-         },
-         {
-          "type": "camp",
-          "y": 0.84,
-          "n": 7,
-          "x0": 0.05,
-          "gap": 200,
-          "col": "#d8d0c0",
-          "fire": null,
-          "depth": 0.6
-         }
-        ],
-        "push": 0.08
-       }
-      }
-     ]
-    },
-    {
-     "say": "Remember Overtown? Miami's expressways cost Black Miami thousands of homes. Now the shade under one of them is home to the newest Miamians.",
-     "scene": {
-      "shot": "set",
-      "time": "dusk",
-      "parts": [
-       {
-        "type": "highway",
-        "y": 0.34,
-        "depth": 0.7
-       },
-       {
-        "type": "camp",
-        "y": 0.86,
-        "n": 6,
-        "x0": 0.05,
-        "gap": 200,
-        "col": "#d8d0c0",
-        "fire": null,
-        "depth": 0.6
-       },
-       {
-        "type": "houses",
-        "y": 0.92,
-        "n": 4,
-        "night": false,
-        "seed": 79,
-        "depth": 0.85
-       }
-      ]
-     },
-     "sfx": "tension"
-    },
-    {
      "say": "And then the other side of the story comes out. Castro has not only let people go. He has opened his prisons and mental hospitals, and put some of those people on the boats too.",
      "scene": {
       "shot": "photo",
@@ -4605,7 +4361,8 @@
          "flag": "cu",
          "window": 0.6,
          "night": false,
-         "depth": 0.3
+         "depth": 0.3,
+         "seed": 214
         },
         {
          "type": "actors",
@@ -4637,6 +4394,7 @@
           "window": 0.1,
           "night": true,
           "depth": 0.3,
+          "seed": 126,
           "wall": "#2a2a26"
          },
          {
@@ -4679,6 +4437,7 @@
           "window": 0.6,
           "night": false,
           "depth": 0.3,
+          "seed": 127,
           "wall": "#d8d0c0"
          },
          {
@@ -4687,7 +4446,8 @@
           "candles": 0,
           "papers": 12,
           "w": 900,
-          "depth": 0.6
+          "depth": 0.6,
+          "seed": 128
          },
          {
           "type": "actors",
@@ -4726,45 +4486,6 @@
       "date": "about 2 in every 100 arrivals",
       "size": 200
      }
-    },
-    {
-     "say": "Two in a hundred. But in the newspapers, on the television, and soon in the movies, the other ninety eight will pay for them, for years.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "room",
-        "flag": null,
-        "window": 0.1,
-        "night": true,
-        "depth": 0.3,
-        "wall": "#14141a"
-       },
-       {
-        "type": "tv",
-        "x": 0.5,
-        "y": 0.48,
-        "w": 700,
-        "depth": 0.5
-       },
-       {
-        "type": "actors",
-        "list": [
-         {
-          "preset": "refugee",
-          "x": 0.2,
-          "pose": "think",
-          "facing": 1,
-          "h": 0.5,
-          "y": 0.98
-         }
-        ],
-        "depth": 0.88
-       }
-      ],
-      "push": 0.08
-     }
     }
    ]
   },
@@ -4785,6 +4506,7 @@
         "window": 0.6,
         "night": false,
         "depth": 0.3,
+        "seed": 131,
         "wall": "#4a3a2a"
        },
        {
@@ -4811,6 +4533,7 @@
         "window": 0.6,
         "night": false,
         "depth": 0.3,
+        "seed": 132,
         "wall": "#4a3a2a"
        },
        {
@@ -4819,7 +4542,8 @@
         "candles": 0,
         "papers": 8,
         "w": 1000,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 133
        },
        {
         "type": "crowd",
@@ -4869,7 +4593,7 @@
         "y": 0.8,
         "n": 5,
         "night": false,
-        "seed": 80,
+        "seed": 134,
         "depth": 0.5
        },
        {
@@ -4911,7 +4635,7 @@
         "y": 0.8,
         "n": 6,
         "night": false,
-        "seed": 81,
+        "seed": 135,
         "depth": 0.5
        },
        {
@@ -4920,6 +4644,32 @@
         "n": 90,
         "hats": false,
         "depth": 0.8
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "citizen80s",
+          "x": 0.35,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98
+         },
+         {
+          "preset": "woman",
+          "x": 0.65,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98,
+          "prop": "paper",
+          "spec": {
+           "skin": "#7a4a30"
+          }
+         }
+        ],
+        "depth": 0.88
        }
       ],
       "push": 0.04
@@ -4936,7 +4686,7 @@
           "y": 0.8,
           "n": 6,
           "night": true,
-          "seed": 82,
+          "seed": 136,
           "depth": 0.5
          },
          {
@@ -4973,7 +4723,7 @@
         "y": 0.8,
         "n": 5,
         "night": true,
-        "seed": 83,
+        "seed": 137,
         "depth": 0.5
        },
        {
@@ -5041,7 +4791,7 @@
         "y": 0.8,
         "n": 5,
         "night": false,
-        "seed": 84,
+        "seed": 138,
         "depth": 0.5
        }
       ],
@@ -5065,27 +4815,6 @@
      ]
     },
     {
-     "say": "It is the deadliest riot in a single American city since Detroit in 1967. It will stay that way until Los Angeles in 1992.",
-     "scene": {
-      "shot": "set",
-      "time": "dawn",
-      "parts": [
-       {
-        "type": "houses",
-        "y": 0.8,
-        "n": 4,
-        "night": false,
-        "seed": 85,
-        "depth": 0.5
-       }
-      ],
-      "fx": [
-       "smoke"
-      ],
-      "push": 0.1
-     }
-    },
-    {
      "say": "Think about the timing. In the very same month, tens of thousands of new arrivals are landing a few miles away, and Washington is promising them an open heart and open arms. In Liberty City, people who have been here for generations watch that, from behind a police cordon.",
      "scene": {
       "shot": "set",
@@ -5101,7 +4830,7 @@
         "y": 0.86,
         "n": 5,
         "night": false,
-        "seed": 86,
+        "seed": 140,
         "depth": 0.5
        },
        {
@@ -5127,7 +4856,7 @@
           "y": 0.8,
           "n": 6,
           "night": false,
-          "seed": 87,
+          "seed": 141,
           "depth": 0.5
          },
          {
@@ -5195,7 +4924,7 @@
           "neon": true,
           "h": 340,
           "n": 16,
-          "seed": 90,
+          "seed": 144,
           "depth": 0.4
          },
          {
@@ -5220,7 +4949,7 @@
      "date": "1980\nMIAMI"
     },
     {
-     "say": "In 1981, six hundred and twenty one. Remember, in 1979 it was three hundred and forty nine. In two years, the number has nearly doubled.",
+     "say": "In 1981, six hundred and twenty one. Two years earlier, it was three hundred and forty nine. The number has nearly doubled.",
      "scene": {
       "shot": "card",
       "time": "621",
@@ -5280,6 +5009,7 @@
         "window": 0.1,
         "night": true,
         "depth": 0.3,
+        "seed": 145,
         "wall": "#1a1c20"
        },
        {
@@ -5288,7 +5018,8 @@
         "candles": 0,
         "papers": 2,
         "w": 1000,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 146
        },
        {
         "type": "actors",
@@ -5331,59 +5062,72 @@
      "date": "SUMMER 1981\nDADE COUNTY MORGUE"
     },
     {
-     "say": "Edna Buchanan is in the middle of all of it. Over her years at the Herald she will report more than five thousand violent deaths. More than three thousand murders.",
-     "scene": {
+     "talk": [
+      {
+       "who": "ME1",
+       "text": "We're out of room."
+      },
+      {
+       "who": "ME2",
+       "text": "Then we rent a truck."
+      },
+      {
+       "who": "ME1",
+       "text": "For them?",
+       "mood": "sad"
+      },
+      {
+       "who": "ME2",
+       "text": "There's nowhere else."
+      }
+     ],
+     "bg": {
       "shot": "set",
       "time": "night",
       "parts": [
        {
-        "type": "town",
-        "y": 0.75,
-        "n": 8,
-        "gap": 140,
-        "h": 160,
-        "col": "#3a3028",
+        "type": "room",
+        "flag": null,
+        "window": 0.1,
         "night": true,
-        "depth": 0.4
+        "depth": 0.3,
+        "seed": 147,
+        "wall": "#1a1c20"
        },
        {
-        "type": "car",
-        "kind": "police",
-        "x": 0.7,
-        "y": 0.94,
-        "s": 0.8,
-        "facing": 1,
-        "depth": 0.8
+        "type": "table",
+        "lamp": 0.4,
+        "candles": 0,
+        "papers": 1,
+        "w": 900,
+        "depth": 0.6,
+        "seed": 148
        },
        {
         "type": "actors",
         "list": [
          {
-          "preset": "reporter",
+          "preset": "clerk",
           "x": 0.3,
           "pose": "hold",
           "facing": 1,
           "h": 0.62,
           "y": 0.98,
           "prop": "paper"
+         },
+         {
+          "preset": "clerk",
+          "x": 0.7,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
          }
         ],
         "depth": 0.88
        }
       ]
-     },
-     "do": [
-      {
-       "on": "three",
-       "scene": {
-        "shot": "card",
-        "time": "3,000+",
-        "place": "MURDERS REPORTED",
-        "date": "by Edna Buchanan",
-        "size": 200
-       }
-      }
-     ]
+     }
     },
     {
      "say": "She writes: many of the corpses have had familiar faces. Cops and killers, politicians and prostitutes, doctors and lawyers. Some were my friends.",
@@ -5451,7 +5195,7 @@
           "wind": 0.9,
           "x0": 0.04,
           "gap": 0.16,
-          "seed": 91,
+          "seed": 149,
           "depth": 0.7
          },
          {
@@ -5459,7 +5203,7 @@
           "y": 0.8,
           "n": 4,
           "night": false,
-          "seed": 92,
+          "seed": 150,
           "depth": 0.5
          }
         ],
@@ -5482,7 +5226,7 @@
         "wind": 0,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 93,
+        "seed": 151,
         "depth": 0.7
        },
        {
@@ -5492,29 +5236,12 @@
         "neon": false,
         "h": 300,
         "n": 16,
-        "seed": 94,
+        "seed": 152,
         "depth": 0.4
        }
       ],
       "clouds": 2,
       "push": 0.08
-     }
-    },
-    {
-     "say": "The magazine reports that fifty three refugees have been arrested for murder in Miami that year. And that fifty one Marielitos have been killed in Miami that year, most of them by other Marielitos.",
-     "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "Time, 23 November 1981",
-      "lines": [
-       "Refugees arrested for murder in Miami, 1981: 53",
-       "Marielitos killed in Miami, 1981: 51",
-       "most of them by other Marielitos"
-      ],
-      "hl": [
-       0,
-       1
-      ]
      }
     }
    ]
@@ -5541,6 +5268,7 @@
          "window": 0.6,
          "night": false,
          "depth": 0.3,
+         "seed": 218,
          "wall": "#4a3a3a"
         },
         {
@@ -5565,23 +5293,6 @@
      }
     },
     {
-     "say": "His statement says the once tranquil area of south Florida has become a landing area for hundreds of thousands of refugees and the nation's major terminal for the smuggling of illegal drugs into the United States.",
-     "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "President Reagan, 28 January 1982",
-      "lines": [
-       "\"...the once tranquil area of south Florida",
-       "has become a landing area for hundreds of thousands",
-       "of refugees and the Nation's major terminal for the",
-       "smuggling of illegal drugs into the United States.\""
-      ],
-      "hl": [
-       3
-      ]
-     }
-    },
-    {
      "say": "The man in charge is the Vice President, George Bush. For really the first time, the military is brought in against the smugglers: military aircraft and ships, alongside the police agencies.",
      "scene": {
       "shot": "photo",
@@ -5598,6 +5309,7 @@
          "window": 0.6,
          "night": false,
          "depth": 0.3,
+         "seed": 219,
          "wall": "#3a3a4a"
         },
         {
@@ -5716,6 +5428,7 @@
         "window": 0.7,
         "night": false,
         "depth": 0.3,
+        "seed": 164,
         "wall": "#4a4a52"
        },
        {
@@ -5724,7 +5437,8 @@
         "candles": 0,
         "papers": 20,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 165
        },
        {
         "type": "actors",
@@ -5771,7 +5485,7 @@
         "neon": true,
         "h": 360,
         "n": 16,
-        "seed": 98,
+        "seed": 168,
         "depth": 0.4
        },
        {
@@ -5782,7 +5496,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 99,
+        "seed": 169,
         "depth": 0.85
        },
        {
@@ -5913,6 +5627,72 @@
      ]
     },
     {
+     "talk": [
+      {
+       "who": "PROD",
+       "text": "We'd like to film in Miami."
+      },
+      {
+       "who": "LOCAL2",
+       "text": "About what?"
+      },
+      {
+       "who": "PROD",
+       "text": "A refugee gangster."
+      },
+      {
+       "who": "LOCAL2",
+       "text": "Then film it somewhere else.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "deco",
+        "y": 0.8,
+        "night": false,
+        "n": 5,
+        "depth": 0.45,
+        "words": [
+         "HOTEL",
+         "BAR",
+         "CAFE",
+         "HOTEL",
+         "GRILL"
+        ]
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "detective80s",
+          "x": 0.3,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98,
+          "spec": {
+           "coat": "#2a2a32"
+          }
+         },
+         {
+          "preset": "refugee",
+          "x": 0.7,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    {
      "say": "The film carries a note at the end: Scarface is a fictional account of the activities of a small group of ruthless criminals. It is released on the ninth of December 1983. Many critics pan it. It becomes the sixteenth highest grossing film of the year anyway.",
      "scene": {
       "shot": "doc",
@@ -5939,32 +5719,6 @@
        }
       }
      ]
-    },
-    {
-     "say": "Over the next decades, it becomes a cult classic. And when a game studio builds its own Miami in 2002, Scarface is one of its biggest inspirations.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "room",
-        "flag": null,
-        "window": 0.1,
-        "night": true,
-        "depth": 0.3,
-        "wall": "#14141a"
-       },
-       {
-        "type": "tv",
-        "x": 0.5,
-        "y": 0.5,
-        "w": 820,
-        "depth": 0.5
-       }
-      ],
-      "push": 0.06
-     },
-     "sfx": "riser"
     }
    ]
   },
@@ -5985,6 +5739,7 @@
         "window": 0.6,
         "night": false,
         "depth": 0.3,
+        "seed": 175,
         "wall": "#5a5a62"
        },
        {
@@ -5993,7 +5748,8 @@
         "candles": 0,
         "papers": 10,
         "w": 900,
-        "depth": 0.6
+        "depth": 0.6,
+        "seed": 176
        },
        {
         "type": "actors",
@@ -6028,6 +5784,70 @@
       "hl": [
        0,
        2
+      ]
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "YER",
+       "text": "Twenty percent?"
+      },
+      {
+       "who": "FRIEND",
+       "text": "Of all the dirty money in America."
+      },
+      {
+       "who": "YER",
+       "text": "That's a story.",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.6,
+        "night": false,
+        "depth": 0.3,
+        "seed": 177,
+        "wall": "#5a5a62"
+       },
+       {
+        "type": "table",
+        "lamp": 0.6,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6,
+        "seed": 178
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.3,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.98,
+          "prop": "paper"
+         },
+         {
+          "preset": "clerk",
+          "x": 0.7,
+          "pose": "shrug",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.98
+         }
+        ],
+        "depth": 0.88
+       }
       ]
      }
     },
@@ -6068,7 +5888,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 101,
+        "seed": 179,
         "depth": 0.85
        }
       ]
@@ -6089,20 +5909,6 @@
        }
       }
      ]
-    },
-    {
-     "say": "There's a famous story that the NBC boss, Brandon Tartikoff, came up with the whole idea by writing two words on a napkin: MTV Cops. Yerkovich says that is a falsehood. But the nickname stuck anyway.",
-     "scene": {
-      "shot": "doc",
-      "kind": "letter",
-      "header": "the napkin that, according to Yerkovich, never happened",
-      "lines": [
-       "\"MTV Cops\""
-      ],
-      "hl": [
-       0
-      ]
-     }
     },
     {
      "say": "Miami Vice premieres in September 1984. Pastel suits, sports cars, speedboats, pop songs over the action. Each episode costs about one point three million dollars, one of the most expensive shows on television.",
@@ -6150,61 +5956,6 @@
      ]
     },
     {
-     "say": "Here's a callback. Back in July 1979, a fight to save Miami Beach's Art Deco district was knocked out of the news by the Dadeland shooting. Five years later, a TV show about drugs and murder makes the same Art Deco buildings famous around the world.",
-     "scene": {
-      "shot": "set",
-      "time": "day",
-      "parts": [
-       {
-        "type": "deco",
-        "y": 0.8,
-        "night": false,
-        "n": 5,
-        "depth": 0.45
-       },
-       {
-        "type": "palms",
-        "y": 0.92,
-        "n": 4,
-        "h": 330,
-        "wind": 0.15,
-        "x0": 0.04,
-        "gap": 0.16,
-        "seed": 102,
-        "depth": 0.85
-       }
-      ]
-     },
-     "do": [
-      {
-       "on": "Dadeland",
-       "scene": {
-        "shot": "set",
-        "time": "day",
-        "parts": [
-         {
-          "type": "car",
-          "kind": "van",
-          "x": 0.5,
-          "y": 0.95,
-          "s": 0.9,
-          "facing": 1,
-          "depth": 0.8,
-          "text": "HAPPY TIME|COMPLETE PARTY SUPPLY"
-         },
-         {
-          "type": "shopfront",
-          "text": "CROWN LIQUORS",
-          "x": 0.5,
-          "y": 0.82,
-          "depth": 0.4
-         }
-        ]
-       }
-      }
-     ]
-    },
-    {
      "say": "Miami Vice runs until 1989, with twenty Emmy nominations and four wins. And the image it leaves behind, neon, pastel, palm trees and danger, is exactly the image a game studio will reach for, thirteen years later.",
      "scene": {
       "shot": "set",
@@ -6217,7 +5968,7 @@
         "neon": true,
         "h": 380,
         "n": 16,
-        "seed": 104,
+        "seed": 184,
         "depth": 0.4
        },
        {
@@ -6228,7 +5979,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 105,
+        "seed": 185,
         "depth": 0.85
        },
        {
@@ -6264,6 +6015,7 @@
         "window": 0.1,
         "night": true,
         "depth": 0.3,
+        "seed": 186,
         "wall": "#0e0e16"
        },
        {
@@ -6271,7 +6023,8 @@
         "x": 0.5,
         "y": 0.5,
         "w": 700,
-        "depth": 0.5
+        "depth": 0.5,
+        "seed": 187
        },
        {
         "type": "actors",
@@ -6380,7 +6133,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 106,
+        "seed": 188,
         "depth": 0.85
        }
       ]
@@ -6398,6 +6151,7 @@
           "window": 0.1,
           "night": true,
           "depth": 0.3,
+          "seed": 189,
           "wall": "#14141a"
          },
          {
@@ -6405,7 +6159,8 @@
           "x": 0.5,
           "y": 0.48,
           "w": 820,
-          "depth": 0.5
+          "depth": 0.5,
+          "seed": 190
          }
         ],
         "push": 0.08
@@ -6425,6 +6180,7 @@
         "window": 0.1,
         "night": true,
         "depth": 0.3,
+        "seed": 191,
         "wall": "#0c0c14"
        },
        {
@@ -6432,7 +6188,8 @@
         "x": 0.5,
         "y": 0.5,
         "w": 900,
-        "depth": 0.5
+        "depth": 0.5,
+        "seed": 192
        },
        {
         "type": "actors",
@@ -6477,7 +6234,7 @@
           "wind": 0.15,
           "x0": 0.04,
           "gap": 0.16,
-          "seed": 107,
+          "seed": 193,
           "depth": 0.7
          },
          {
@@ -6495,32 +6252,6 @@
      ]
     },
     {
-     "say": "And today, the nineteenth of November 2026, after two delays, the game is finally out.",
-     "scene": {
-      "shot": "set",
-      "time": "night",
-      "parts": [
-       {
-        "type": "room",
-        "flag": null,
-        "window": 0.1,
-        "night": true,
-        "depth": 0.3,
-        "wall": "#0c0c14"
-       },
-       {
-        "type": "tv",
-        "x": 0.5,
-        "y": 0.5,
-        "w": 900,
-        "depth": 0.5
-       }
-      ],
-      "push": 0.1
-     },
-     "date": "19 NOVEMBER 2026\nTODAY"
-    },
-    {
      "say": "From the pool hall vote in 1896 to the year the game is set, 1986: ninety years. The ninety years that made Vice City.",
      "scene": {
       "shot": "card",
@@ -6528,48 +6259,6 @@
       "place": "THAT MADE VICE CITY",
       "date": "1896 – 1986",
       "size": 200
-     }
-    },
-    {
-     "say": "So why Miami, again and again? Because Miami has always been the place where America's dream and its shadow are standing on the same beach.",
-     "scene": {
-      "shot": "set",
-      "time": "dusk",
-      "parts": [
-       {
-        "type": "sea",
-        "y": 0.62,
-        "depth": 0.3
-       },
-       {
-        "type": "land",
-        "kind": "sand",
-        "y": 0.76,
-        "depth": 0.6
-       },
-       {
-        "type": "palms",
-        "y": 0.86,
-        "n": 6,
-        "h": 420,
-        "wind": 0.15,
-        "x0": 0.04,
-        "gap": 0.16,
-        "seed": 109,
-        "depth": 0.7
-       },
-       {
-        "type": "city",
-        "y": 0.62,
-        "night": true,
-        "neon": false,
-        "h": 300,
-        "n": 16,
-        "seed": 110,
-        "depth": 0.3
-       }
-      ],
-      "push": 0.06
      }
     },
     {
@@ -6593,7 +6282,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 113,
+        "seed": 201,
         "depth": 0.7
        },
        {
@@ -6603,7 +6292,7 @@
         "neon": false,
         "h": 300,
         "n": 16,
-        "seed": 114,
+        "seed": 202,
         "depth": 0.3
        }
       ]
@@ -6671,7 +6360,7 @@
         "wind": 0.05,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 115,
+        "seed": 203,
         "depth": 0.7
        },
        {
@@ -6722,7 +6411,40 @@
       "hl": [
        2
       ]
-     }
+     },
+     "do": [
+      {
+       "on": "everything",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "city",
+          "y": 0.72,
+          "night": true,
+          "neon": true,
+          "h": 400,
+          "n": 16,
+          "seed": 204,
+          "depth": 0.4
+         },
+         {
+          "type": "palms",
+          "y": 0.98,
+          "n": 5,
+          "h": 340,
+          "wind": 0.15,
+          "x0": 0.04,
+          "gap": 0.16,
+          "seed": 205,
+          "depth": 0.85
+         }
+        ],
+        "push": 0.06
+       }
+      }
+     ]
     },
     {
      "say": "So next time you drive down Ocean Drive in Vice City, under the neon, remember the real one. It's a lot stranger, and a lot more human, than any game.",
@@ -6750,7 +6472,7 @@
         "wind": 0.15,
         "x0": 0.04,
         "gap": 0.16,
-        "seed": 116,
+        "seed": 206,
         "depth": 0.85
        },
        {
@@ -6771,7 +6493,62 @@
        }
       ],
       "push": 0.1
-     }
+     },
+     "do": [
+      {
+       "on": "real",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.76,
+          "depth": 0.6
+         },
+         {
+          "type": "palms",
+          "y": 0.86,
+          "n": 6,
+          "h": 420,
+          "wind": 0.15,
+          "x0": 0.04,
+          "gap": 0.16,
+          "seed": 207,
+          "depth": 0.7
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "citizen80s",
+            "x": 0.4,
+            "pose": "wave",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.98
+           },
+           {
+            "preset": "refugee_woman",
+            "x": 0.6,
+            "pose": "idle",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.98
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
     }
    ]
   }

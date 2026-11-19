@@ -60,7 +60,7 @@ CH6 = dict(title='Ninety Miles', years='1959–1973', mood='tension', beats=[
   B("Four years later, both governments agree on something for once. From the first of December 1965, the Freedom Flights carry Cubans from Varadero Beach to Miami, twice a day, five days a week.",
     S('day', land('grass', y=.76), palms(y=.86, n=4, x0=.6, gap=.1), push=.04),
     ('twice', C('TWICE A DAY', 'FIVE DAYS A WEEK', 'Varadero to Miami, 1965–1973', size=150))),
-  B("By the last flight, on the sixth of April 1973, they have brought about three hundred thousand people. The largest and longest resettlement of Cuban refugees the United States government ever ran.",
+  B("From December 1965 to April 1973, the Freedom Flights carry Cubans from Varadero Beach to Miami, twice a day. In all, about three hundred thousand people. The largest and longest resettlement of Cuban refugees the United States government ever ran.",
     C('300,000', 'CARRIED BY THE FREEDOM FLIGHTS', '1 December 1965 – 6 April 1973', size=200),
     ('largest', S('day', crowd(n=80, y=1.0), palms(y=.86, n=3), push=.06))),
   B("A neighbourhood near downtown fills with the new arrivals and their businesses. They call it Little Havana. Miami is becoming a Cuban city.",
@@ -72,7 +72,7 @@ CH6 = dict(title='Ninety Miles', years='1959–1973', mood='tension', beats=[
 
 CH7 = dict(title='The Cocaine Cowboys', years='1979', mood='war', beats=[
   B("By the late nineteen seventies, Colombian traffickers are flying and shipping cocaine through South Florida, and fighting each other for control of it, in the open.",
-    MAP, ('Colombian', S('night', sea(y=.62), boats(n=2, crowded=False, y=.74, drift=1)))),
+    S('night', sea(y=.62), boats(n=2, crowded=False, y=.74, drift=1)), ('South', MAP)),
   B("The twentieth of May 1979. On the Florida Turnpike, two cars race each other, firing machine guns. Other drivers swerve off the road to get away. Even a police car gets shot at.",
     S('day', land('mud', y=.74), car('sedan', y=.9, s=.7, col='#2a2a2a', drive=[-.3, 1.2, 0, 4]), car('sedan', y=.95, s=.75, col='#c8b070', drive=[-.6, 1.1, .5, 4.5])),
     ('police', S('day', land('mud', y=.74), car('police', y=.94, s=.85, drive=[1.2, .4, 0, 3]), fx=['smoke'])), date="20 MAY 1979\nFLORIDA TURNPIKE"),
@@ -133,7 +133,7 @@ CH8 = dict(title='The Bus', years='April 1980', mood='clock', beats=[
     D(['"From now on, the embassy\'s officials', 'will be solely responsible', 'for what occurs in their embassy."'], 'Statement from Havana, 4 April 1980', hl=[1]),
     ('Good', C('GOOD FRIDAY', '4 APRIL 1980', 'the guards are withdrawn', size=170))),
   B("Word spreads through Havana by mouth. And within about forty eight hours, around ten thousand eight hundred people pour into the embassy grounds.",
-    S('day', fence(), crowd(n=120, y=1.0), push=.06),
+    S('day', fence(), crowd(n=120, y=1.0), A(('refugee', .3, 'wave'), ('refugee_woman', .7, 'point')), push=.06),
     ('ten', C('10,800', 'PEOPLE INSIDE THE EMBASSY', 'in about 48 hours', size=200))),
   B("More than ten thousand people cram into the embassy's gardens. From Washington's side, this is proof of how many Cubans want out. From Castro's side, the people in that garden are criminals, bums and anti socials, and he wants the world to know it.",
     S('day', crowd(n=160, y=1.0), forest(y=.62, n=20, h=200), push=.04),

@@ -152,12 +152,12 @@ SOURCES = [
 
 def build():
     # owner, 19 Nov 2026: "20 to 25 minutes is fine ... only exceed if it's necessary": these beats stay (indices per chapter)
-    KEEP = {'INTRO': [0, 1, 3, 5, 6, 7, 8, 10, 11, 13, 14, 15], 'The Orange Blossom': [0, 1, 2, 4, 6, 8, 9, 11, 12],
-            'The Boom and the Eye': [0, 3, 5, 6, 7, 8, 9, 10, 12], 'Rum Row': [0, 4, 5, 6, 9], 'The Harlem of the South': [0, 1, 4, 5, 7, 8, 10],
-            'Ninety Miles': [0, 1, 4, 5, 6, 9, 10, 11, 13], 'The Cocaine Cowboys': [0, 1, 3, 4, 5, 6, 8, 9, 10, 11, 12], 'The Bus': [0, 1, 3, 4, 5, 6, 8, 9, 10, 12, 14],
-            'The Freedom Flotilla': [0, 1, 3, 7, 9, 10, 11, 13, 14, 15, 16], 'Miami Burns': [0, 1, 2, 3, 4, 5, 6, 7, 9], 'Paradise Lost': [0, 1, 2, 5, 6, 7, 8, 9, 10],
-            'Washington Comes to Miami': [1, 2, 3, 5, 7, 8], 'Scarface': [0, 1, 2, 3, 4, 8, 9], 'Pastel': [0, 1, 3, 4, 6, 8, 10],
-            'Vice City': [0, 1, 2, 4, 6, 7, 8, 11, 12, 13, 14]}
+    KEEP = {'INTRO': [0, 1, 3, 5, 6, 7, 8, 11, 13, 14, 15], 'The Orange Blossom': [0, 1, 2, 3, 4, 8, 9, 10, 11, 12],
+            'The Boom and the Eye': [0, 2, 3, 5, 6, 7, 8, 9, 12], 'Rum Row': [0, 4, 5, 6], 'The Harlem of the South': [0, 4, 5, 7, 8, 10],
+            'Ninety Miles': [0, 1, 4, 11], 'The Cocaine Cowboys': [0, 3, 5, 6, 9, 10, 11, 12], 'The Bus': [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14],
+            'The Freedom Flotilla': [0, 1, 4, 5, 6, 7, 9, 13, 14, 15], 'Miami Burns': [0, 1, 2, 3, 4, 5, 7, 9], 'Paradise Lost': [0, 1, 2, 3, 6, 7, 8, 9],
+            'Washington Comes to Miami': [1, 3, 5, 7, 8], 'Scarface': [0, 1, 2, 3, 4, 6, 8], 'Pastel': [0, 1, 2, 3, 6, 10],
+            'Vice City': [0, 1, 2, 4, 7, 11, 12, 13, 14]}
     def keep(ch, name): ch['beats'] = [bt for i, bt in enumerate(ch['beats']) if i in KEEP[name]]; return ch
     keep(a.INTRO, 'INTRO')
     chs = [keep(x, x['title']) for x in [a.CH2, a.CH3, a.CH4, b.CH5, b.CH6, b.CH7, b.CH8, c.CH9, c.CH10, c.CH11, c.CH12, c.CH13, c.CH14, c.CH15]]

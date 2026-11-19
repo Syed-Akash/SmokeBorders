@@ -3,7 +3,7 @@ from vc_part1 import B, T
 
 CH9 = dict(title='The Freedom Flotilla', years='April–October 1980', mood='tension', beats=[
   B("Within days, Mariel harbour turns into a floating city. Pleasure boats, fishing boats, shrimp boats, hundreds of them, waiting their turn to load.",
-    S('day', sea(y=.5), boats(n=5, crowded=False, y=.66, s=.55, gap=.18), boats(n=4, crowded=False, y=.78, s=.7, x=.05, gap=.24), push=.05),
+    S('day', sea(y=.5), boats(n=5, crowded=False, y=.66, s=.55, gap=.18), boats(n=4, crowded=False, y=.78, s=.7, x=.05, gap=.24), A(('cuban_soldier', .85, 'point', {'h': .5})), push=.05),
     ('hundreds', D(['"Harbor in Cuba', 'A Floating City of 1300 Boats"'], 'The New York Times, 26 April 1980', hl=[0])), date="APRIL 1980\nMARIEL HARBOUR, CUBA"),
   B("Between April and October 1980, around one thousand seven hundred boats make the crossing. They carry about one hundred and twenty five thousand Cubans to Florida. Around twenty five thousand Haitians arrive in the same months.",
     C('125,000', 'CUBANS CROSS TO FLORIDA', 'April – October 1980', size=200),
@@ -59,7 +59,7 @@ CH10 = dict(title='Miami Burns', years='May 1980', mood='grief', beats=[
   T([('RES3', "Not guilty?"), ('RES4', "All of them."), ('RES3', "He's dead. And it was nobody?", 'angry')],
     S('dusk', houses(n=5), A(('citizen80s', .3, 'shrug'), ('woman', .7, 'cross', {'spec': {'skin': '#7a4a30'}})))),
   B("The news reaches Miami that afternoon. People march from Liberty City towards the Dade County justice building. By that night, Liberty City, Overtown, and other Black neighbourhoods are burning.",
-    S('dusk', houses(n=6), crowd(n=90, y=1.0), push=.04),
+    S('dusk', houses(n=6), crowd(n=90, y=1.0), A(('citizen80s', .35, 'point'), ('woman', .65, 'hold', {'prop': 'paper', 'spec': {'skin': '#7a4a30'}})), push=.04),
     ('burning', S('night', houses(night=True, n=6), fire(x=.4, y=.66, r=420), fire(x=.8, y=.7, r=300), fx=['embers', 'smoke']))),
   B("For three days there is rioting, arson, looting and sniping. Governor Bob Graham sends in the National Guard. The Guard and the police seal off Liberty City.",
     S('night', houses(night=True, n=5), car('police', x=.25, y=.93), fire(x=.7, y=.66, r=360), fx=['smoke']),
@@ -81,7 +81,7 @@ CH10 = dict(title='Miami Burns', years='May 1980', mood='grief', beats=[
 CH11 = dict(title='Paradise Lost', years='1980–1981', mood='war', beats=[
   B("Miami has a riot, a refugee crisis and a cocaine war, all at once. In 1980 the city records five hundred and seventy three murders.",
     C('573', 'MURDERS IN MIAMI', '1980', size=220), ('war', S('night', city(h=340), car('police', x=.6, y=.94, drive=[1.2, .5, 0, 3]))), date="1980\nMIAMI"),
-  B("In 1981, six hundred and twenty one. Remember, in 1979 it was three hundred and forty nine. In two years, the number has nearly doubled.",
+  B("In 1981, six hundred and twenty one. Two years earlier, it was three hundred and forty nine. The number has nearly doubled.",
     C('621', 'MURDERS IN MIAMI', '1981 (349 in 1979)', size=220),
     ('doubled', S('night', town(night=True, n=10), car('police', x=.3, y=.93), car('police', x=.75, y=.95)))),
   B("The summer of 1981. The Dade County medical examiner has more bodies than the morgue can hold. So the office rents a refrigerated truck, to keep the overflow cold.",
@@ -230,7 +230,7 @@ CH15 = dict(title='Vice City', years='1997–2026', mood='hope', beats=[
     S('night', palms(y=.86, n=4, wind=.05), graves(rows=3, n=9, y=.82), clouds=2),
     ('McDuffie', S('night', town(night=True, n=8), push=.06))),
   B("Julia Tuttle wanted to see this wilderness turned into a prosperous country. She got her wish. It just came with everything else.",
-    D(['"It is the dream of my life', 'to see this wilderness turned', 'into a prosperous country."'], 'Julia Tuttle', hl=[2])),
+    D(['"It is the dream of my life', 'to see this wilderness turned', 'into a prosperous country."'], 'Julia Tuttle', hl=[2]), ('everything', S('night', city(h=400), palms(y=.98, n=5, h=340, d=.85), push=.06))),
   B("So next time you drive down Ocean Drive in Vice City, under the neon, remember the real one. It's a lot stranger, and a lot more human, than any game.",
-    S('night', sea(y=.7), deco(night=True, y=.74, d=.35), palms(y=.98, n=6, h=360, d=.85), car('sedan', y=1.0, s=.9, col='#e8e4da', drive=[-.3, 1.3, 0, 6]), push=.1)),
+    S('night', sea(y=.7), deco(night=True, y=.74, d=.35), palms(y=.98, n=6, h=360, d=.85), car('sedan', y=1.0, s=.9, col='#e8e4da', drive=[-.3, 1.3, 0, 6]), push=.1), ('real', S('dusk', sea(y=.62), land('sand', y=.76), palms(y=.86, n=6), A(('citizen80s', .4, 'wave'), ('refugee_woman', .6, 'idle'))))),
 ])
