@@ -105,6 +105,9 @@ take two runs.
   then Berlin Wall, Cuban Missile Crisis, Shortest War, Mongols every 3 days. plan.json has the dates.
 - Manual uploads so far: Pig War flag Short (VBOnWm5X9Yo, 800+ views), American Revolution (s8FoqUIAzZU, 18 Nov).
   The Franklin's-son "Do you know" Short was sent to the owner on 18 Nov.
+- **The Real Vice City** (`sb-vice-city`, owner 19 Nov 2026, GTA 6 release day): 22.7 min, Shorts = stories sb-vice-city-short1/2,
+  kit sent to the owner on 20 Nov for 24/25/26 Nov; Rome and later episodes moved 3 days later. Owner: 20-25 min is fine,
+  exceed only if necessary. Full source lists that exceed YouTube's 10,000-character comment limit go to smoke/sources/<id>.md.
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 
