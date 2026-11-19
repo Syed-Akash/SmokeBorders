@@ -7,7 +7,55 @@
   "SU": "bm_daniel",
   "RHEE": "bm_fable",
   "KIM": "bm_lewis",
-  "KOR": "bm_fable"
+  "KOR": "bm_fable",
+  "RUSK": "am_michael",
+  "AIDE": "am_adam",
+  "AIDE2": "am_puck",
+  "WASH1": "am_michael",
+  "WASH2": "am_fenrir",
+  "FARMER": "bm_daniel",
+  "WIFE": "bf_emma",
+  "PROT": "bm_lewis",
+  "PROT2": "bm_daniel",
+  "TEACH": "bm_fable",
+  "STUD": "bm_lewis",
+  "STUD2": "bm_daniel",
+  "SEOUL": "bm_lewis",
+  "SOVCLERK": "bm_fable",
+  "SOVOFF": "bm_daniel",
+  "SOVSOLD": "bm_lewis",
+  "SHOP": "bm_fable",
+  "VIL1": "bm_daniel",
+  "VIL2": "bm_lewis",
+  "CROWD1": "bm_lewis",
+  "CROWD2": "bf_emma",
+  "ABE": "bm_daniel",
+  "SONG": "bm_fable",
+  "JPRES": "bm_lewis",
+  "JPRES2": "bf_emma",
+  "GI1": "am_puck",
+  "GI2": "am_adam",
+  "SGT": "am_fenrir",
+  "WOMAN": "bf_emma",
+  "SELLER": "bm_daniel",
+  "NKOFF": "bm_lewis",
+  "USOFF1": "am_michael",
+  "USOFF2": "am_fenrir",
+  "CHO": "bm_fable",
+  "GUARD": "bm_daniel",
+  "TRAV": "bm_lewis",
+  "SOVDEL": "bm_daniel",
+  "USDEL": "am_michael",
+  "WORKER": "bm_lewis",
+  "WORKER2": "bm_daniel",
+  "SOUTH": "bm_lewis",
+  "NORTH": "bm_daniel",
+  "ROK1": "bm_lewis",
+  "ROK2": "bm_daniel",
+  "NEG1": "am_michael",
+  "NEG2": "bm_daniel",
+  "OLD": "bm_fable",
+  "GRAND": "bm_lewis"
  },
  "title": "How Two Men and a Map Split Korea: The 38th Parallel From Both Sides",
  "era": "1945",
@@ -239,6 +287,41 @@
     }
    },
    {
+    "talk": [
+     {
+      "who": "AIDE",
+      "text": "Colonels. We need a line across Korea."
+     },
+     {
+      "who": "AIDE",
+      "text": "Tonight.",
+      "mood": "tension"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": "us",
+       "window": 0.1,
+       "night": true,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.5,
+       "candles": 1,
+       "papers": 8,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    },
+    "_talk": 1
+   },
+   {
     "say": "Dean Rusk. And Charles Bonesteel. Neither of them is an expert on Korea.",
     "do": [
      {
@@ -297,6 +380,45 @@
     }
    },
    {
+    "talk": [
+     {
+      "who": "AIDE",
+      "text": "Is this really the best map we have?"
+     },
+     {
+      "who": "AIDE2",
+      "text": "It's from National Geographic."
+     },
+     {
+      "who": "AIDE",
+      "text": "...So, yes.",
+      "mood": "smug"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": "us",
+       "window": 0.1,
+       "night": true,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.5,
+       "candles": 1,
+       "papers": 8,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    },
+    "_talk": 1
+   },
+   {
     "say": "They know one thing. Seoul, the capital, should be on the American side.",
     "do": [
      {
@@ -346,6 +468,54 @@
      ],
      "cutY": 0.5
     }
+   },
+   {
+    "talk": [
+     {
+      "who": "FARMER",
+      "text": "Any news from Seoul?"
+     },
+     {
+      "who": "WIFE",
+      "text": "Nothing. Same as always."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.5,
+       "n": 3,
+       "seed": 27,
+       "depth": 0.15
+      },
+      {
+       "type": "farm",
+       "x": 0.3,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "farm",
+       "x": 0.72,
+       "s": 0.6,
+       "y": 0.73,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.76,
+       "depth": 0.6
+      }
+     ]
+    },
+    "_talk": 1
    },
    {
     "say": "Not one of them knows... that their country has just been cut in two.",
@@ -893,6 +1063,50 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "PROT",
+       "text": "Long live Korean independence!",
+       "mood": "angry"
+      },
+      {
+       "who": "PROT2",
+       "text": "They're arresting everyone!",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "It struggled for years to get anyone to recognize it. That mattered later. When the empire fell, there was no single Korean authority ready to take over.",
      "do": [
       {
@@ -1060,6 +1274,41 @@
        "free and independent."
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "TEACH",
+       "text": "In due course. How long is that?"
+      },
+      {
+       "who": "STUD",
+       "text": "Nobody says.",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 4,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "Remember this feeling. In 1945, Koreans did not want a new master. They wanted their country back, whole, and in their own hands.",
@@ -1402,6 +1651,38 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SEOUL",
+       "text": "Another master? After thirty-five years?",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_talk": 1
     }
    ]
   },
@@ -1784,6 +2065,41 @@
        10
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WASH1",
+       "text": "How far south can the Soviets get?"
+      },
+      {
+       "who": "WASH2",
+       "text": "All the way. If nobody stops them.",
+       "mood": "tension"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "Someone has to draw a line, fast. And that is how two young officers, Dean Rusk and Charles Bonesteel, end up in a room with a map.",
@@ -2234,6 +2550,45 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "AIDE2",
+       "text": "Do we ask a Korea expert first?"
+      },
+      {
+       "who": "AIDE",
+       "text": "No time."
+      },
+      {
+       "who": "AIDE2",
+       "text": "...Do we have one?",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 1,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "But the plan assumed the Soviets would stop where they were told. Nobody could be sure. And the next decision would be made very quickly.",
      "do": [
       {
@@ -2526,17 +2881,35 @@
     {
      "talk": [
       {
-       "who": "US",
+       "who": "RUSK",
        "text": "We felt it important to include the capital."
       },
       {
-       "who": "US",
+       "who": "RUSK",
        "text": "Soviet troops could enter the area before ours."
       }
      ],
      "do": [],
-     "scene": {
-      "shot": "off"
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 1,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
      }
     },
     {
@@ -3102,6 +3475,41 @@
        40
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "AIDE",
+       "text": "A thousand years as one country."
+      },
+      {
+       "who": "AIDE2",
+       "text": "And one evening to split it.",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.1,
+        "night": true,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 1,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     }
    ]
   },
@@ -3190,6 +3598,44 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SOVCLERK",
+       "text": "The Americans propose the thirty-eighth parallel."
+      },
+      {
+       "who": "SOVOFF",
+       "text": "Any objection?"
+      },
+      {
+       "who": "SOVCLERK",
+       "text": "None."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "ru",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "They said yes, immediately. To the surprise of the Americans, there was no argument.",
      "do": [
       {
@@ -3221,6 +3667,41 @@
       ],
       "stamp": "YES"
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WASH1",
+       "text": "They said yes?",
+       "mood": "shock"
+      },
+      {
+       "who": "WASH2",
+       "text": "No argument at all."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 10,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "In September, the Soviet administration issued its own currency. It was called the Red Army won. The north was already starting to run on its own rules.",
@@ -3280,6 +3761,50 @@
       "date": "north Korea, 1945",
       "size": 110
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SHOP",
+       "text": "What is this money?"
+      },
+      {
+       "who": "SOVSOLD",
+       "text": "Red Army won. Take it.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "flagpole",
+        "x": 0.78,
+        "y": 0.7,
+        "flag": "ru",
+        "h": 360,
+        "depth": 0.5
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "The deal was written into General Order Number One, the surrender order for Japan. It was approved on the seventeenth of August.",
@@ -3629,6 +4154,55 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "VIL1",
+       "text": "They fought Japan here. Let them in."
+      },
+      {
+       "who": "VIL2",
+       "text": "Let's hope they leave as easily.",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "But the soldiers were poorly supplied. Some lacked shoes and uniforms. They lived off the land, and they looted. There were accusations of rape. These abuses faded when more disciplined units arrived.",
      "do": [
       {
@@ -3910,6 +4484,50 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CROWD1",
+       "text": "Japan has surrendered!",
+       "mood": "happy"
+      },
+      {
+       "who": "CROWD2",
+       "text": "We're free!",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "In Seoul, the last Japanese governor-general, Nobuyuki Abe, tried to arrange a handover. He offered power to a respected newspaper man, Song Jin-woo. Song said no. He thought it would make him a puppet.",
      "do": [
       {
@@ -3979,6 +4597,40 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "ABE",
+       "text": "Will you take charge of order in Seoul?"
+      },
+      {
+       "who": "SONG",
+       "text": "No. I would only be your puppet."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "So Abe asked a different man. Lyuh Woon-hyung accepted. He formed a committee to prepare for independence, and it began to take over security in the city.",
@@ -4107,6 +4759,42 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "JPRES",
+       "text": "A Soviet army is coming by train!",
+       "mood": "shock"
+      },
+      {
+       "who": "JPRES2",
+       "text": "Pack everything. Now."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "On the sixteenth, young Japanese officers in Seoul protested their government's decisions, and warned they would punish any unrest. The city hung between joy and fear.",
@@ -4345,6 +5033,60 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GI1",
+       "text": "So what are our orders for governing, sir?"
+      },
+      {
+       "who": "SGT",
+       "text": "Washington hasn't really sent any.",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.3,
+        "gap": 220,
+        "col": "#8a8270",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#4b5a3c",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "On the ninth, in the old throne room in Seoul, Japan's commanders signed the surrender. Hodge accepted it for the Allies. And the American occupation of southern Korea began.",
@@ -4693,6 +5435,42 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WOMAN",
+       "text": "What does rice cost today?"
+      },
+      {
+       "who": "SELLER",
+       "text": "Don't ask today. Ask tomorrow.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_talk": 1
     }
    ]
   },
@@ -4938,6 +5716,61 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "CROWD1",
+       "text": "Who is he?"
+      },
+      {
+       "who": "CROWD2",
+       "text": "Kim Il Sung. A guerrilla, they say."
+      },
+      {
+       "who": "CROWD1",
+       "text": "He is so young!",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "flagpole",
+        "x": 0.78,
+        "y": 0.7,
+        "flag": "ru",
+        "h": 360,
+        "depth": 0.5
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "He spent the last years of the war training with Soviet troops in Manchuria. His supporters saw a war hero. His critics saw a Soviet creation. Historians still argue.",
      "do": [
       {
@@ -5169,6 +6002,56 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "FARMER",
+       "text": "This field is mine now?",
+       "mood": "shock"
+      },
+      {
+       "who": "NKOFF",
+       "text": "Yours. The landlord is gone.",
+       "mood": "happy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "Major industries were nationalised. Yet the government was not purely Korean. Records say Soviet generals even designed the results of a 1946 election, down to the seats.",
      "do": [
       {
@@ -5226,6 +6109,41 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SOVCLERK",
+       "text": "How many seats for each party?"
+      },
+      {
+       "who": "SOVOFF",
+       "text": "Already decided.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "ru",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 9,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "So in the north, Koreans gained land, jobs and pride. And they lost a free vote. Both of those things are true.",
@@ -5887,6 +6805,40 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "USOFF1",
+       "text": "What do we make of Rhee?"
+      },
+      {
+       "who": "USOFF2",
+       "text": "Hard to handle. But he hates communists."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "us",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 6,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "Meanwhile, the American occupation was chaotic. Historians contrast it with the calm occupation of Japan. Hodge reported to MacArthur in Tokyo, not to Washington.",
      "do": [
       {
@@ -6394,6 +7346,50 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "STUD",
+       "text": "Five more years of foreigners?",
+       "mood": "angry"
+      },
+      {
+       "who": "STUD2",
+       "text": "Not one more day!",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "Left and right split over it, and the split became deadly. The Korean Communist Party, close to Moscow, backed the trusteeship. Rhee's supporters fought it.",
      "do": [
       {
@@ -6675,6 +7671,40 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SOVOFF",
+       "text": "Sign your support for the trusteeship."
+      },
+      {
+       "who": "CHO",
+       "text": "I will not sign."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": "ru",
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 3,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "Four days later, Soviet soldiers arrested him, and held him in a hotel in Pyongyang. He later disappeared into the prison system. He was probably shot in October 1950. Nobody has confirmed the date.",
@@ -7022,6 +8052,54 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "GUARD",
+       "text": "Permit."
+      },
+      {
+       "who": "TRAV",
+       "text": "My mother lives two villages north.",
+       "mood": "sad"
+      },
+      {
+       "who": "GUARD",
+       "text": "Permit."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#3c4a34",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "In September 1947, the Soviet delegate proposed that both armies simply leave, and let Koreans decide. The Americans refused. Here, both sides had a case, and both had fears.",
      "do": [
       {
@@ -7077,6 +8155,41 @@
        }
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "SOVDEL",
+       "text": "Both armies leave. Let Koreans decide."
+      },
+      {
+       "who": "USDEL",
+       "text": "And who fills the gap?",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 8,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "So here is the pattern. Each side tried to unify Korea on its own terms. And each side's fear of the other made unity less likely.",
@@ -7408,6 +8521,42 @@
        "dust"
       ]
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "WORKER",
+       "text": "Two elections means two countries."
+      },
+      {
+       "who": "WORKER2",
+       "text": "Then we strike.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.52,
+        "n": 3,
+        "seed": 12,
+        "depth": 0.15
+       },
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 16,
+        "gap": 125,
+        "h": 150,
+        "col": "#3a332c",
+        "depth": 0.4
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "A United Nations commission was set up to watch the vote. Without Soviet cooperation, it could only work in the south.",
@@ -7922,6 +9071,60 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "SOUTH",
+       "text": "We have a country now!",
+       "mood": "happy"
+      },
+      {
+       "who": "NORTH",
+       "text": "So do we."
+      },
+      {
+       "who": "SOUTH",
+       "text": "...The same country?",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "A line chosen on short notice was now two governments, two armies and two flags. Neither accepted the other as legitimate.",
      "do": [
       {
@@ -8269,6 +9472,54 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "ROK1",
+       "text": "Tanks! Coming from the north!",
+       "mood": "shock"
+      },
+      {
+       "who": "ROK2",
+       "text": "Fall back to Seoul!",
+       "mood": "war"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#34465a",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "The United Nations Security Council denounced the invasion. The Soviet representative was absent, so he could not veto it. Twenty-one countries joined the force, and the United States supplied about nine in ten of its soldiers.",
      "do": [
       {
@@ -8541,6 +9792,54 @@
       "date": "Task Force Smith: 540 men",
       "size": 130
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GI1",
+       "text": "Nothing we have stops those tanks!",
+       "mood": "shock"
+      },
+      {
+       "who": "SGT",
+       "text": "Hold as long as you can!",
+       "mood": "war"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#4b5a3c",
+        "march": false,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "Then, on the fifteenth of September, UN forces landed at Incheon. They cut the enemy supply lines and took back Seoul. And the line did not stop them. They invaded the north.",
@@ -8961,6 +10260,41 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "NEG1",
+       "text": "Same table. Same arguments."
+      },
+      {
+       "who": "NEG2",
+       "text": "See you tomorrow, then.",
+       "mood": "uneasy"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.7,
+        "night": false,
+        "depth": 0.3
+       },
+       {
+        "type": "table",
+        "lamp": 0.5,
+        "candles": 0,
+        "papers": 12,
+        "w": 900,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "The UN side wanted a line based on the ground each side held, because it was easier to defend. In the end, that is what they got. The old parallel had been a map line. The new border was drawn by the fighting itself.",
      "do": [
       {
@@ -9217,6 +10551,59 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "GI1",
+       "text": "So it's over?"
+      },
+      {
+       "who": "GI2",
+       "text": "It's stopped. That's not the same thing."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.3,
+        "gap": 220,
+        "col": "#8a8270",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#4b5a3c",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_talk": 1
     },
     {
      "say": "Here is the strange part. The new border follows where the armies stood, not the old line. It crosses the thirty-eighth parallel at a diagonal.",
@@ -9716,6 +11103,64 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "GI1",
+       "text": "Who's the new general?"
+      },
+      {
+       "who": "GI2",
+       "text": "Bonesteel. They say he drew this line."
+      },
+      {
+       "who": "GI1",
+       "text": "Then he can guard it.",
+       "mood": "smug"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "y": 0.76,
+        "n": 4,
+        "x0": 0.3,
+        "gap": 220,
+        "col": "#8a8270",
+        "fire": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#4b5a3c",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "His years there were violent. North Korean infiltration, and clashes along the border. Historians call it the Korean DMZ Conflict. In January 1968, tensions rose again, with the Pueblo incident. He was photographed welcoming the crew of the Pueblo.",
      "do": [
       {
@@ -10076,6 +11521,49 @@
      }
     },
     {
+     "talk": [
+      {
+       "who": "ROK1",
+       "text": "Anything moving out there?"
+      },
+      {
+       "who": "ROK2",
+       "text": "Just the cranes."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 7,
+        "depth": 0.15
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 14,
+        "rows": 2,
+        "x0": 0,
+        "gap": 80,
+        "col": "#34465a",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_talk": 1
+    },
+    {
      "say": "One line, drawn on a map by two tired officers. Their zone was meant to be temporary. It has now lasted more than eighty years.",
      "do": [
       {
@@ -10200,6 +11688,55 @@
        ]
       }
      }
+    },
+    {
+     "talk": [
+      {
+       "who": "OLD",
+       "text": "Any news about the line?"
+      },
+      {
+       "who": "GRAND",
+       "text": "Still there, grandfather.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 27,
+        "depth": 0.15
+       },
+       {
+        "type": "farm",
+        "x": 0.3,
+        "s": 0.7,
+        "y": 0.72,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "farm",
+        "x": 0.72,
+        "s": 0.6,
+        "y": 0.73,
+        "night": false,
+        "depth": 0.6
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ]
+     },
+     "_talk": 1
     }
    ]
   }
@@ -10415,5 +11952,357 @@
    "smoke/portraits/rhee.png",
    false
   ]
- }
+ },
+ "cast": {
+  "RUSK": {
+   "preset": "us_officer",
+   "name": "Col. Dean Rusk",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "AIDE": {
+   "preset": "us_officer",
+   "name": "A Pentagon officer",
+   "spec": {
+    "hat": "none",
+    "hair": "#2a1d12"
+   }
+  },
+  "AIDE2": {
+   "preset": "us_officer",
+   "name": "Another officer",
+   "spec": {
+    "hat": "none",
+    "hair": "#8a6a3a",
+    "glasses": 1
+   }
+  },
+  "WASH1": {
+   "preset": "clerk",
+   "name": "A Washington official"
+  },
+  "WASH2": {
+   "preset": "civilian",
+   "name": "Another official"
+  },
+  "FARMER": {
+   "preset": "korean",
+   "name": "A Korean farmer",
+   "spec": {
+    "coat": "#d8d1c0",
+    "coat2": "#8a7a5a"
+   }
+  },
+  "WIFE": {
+   "preset": "woman",
+   "name": "His wife",
+   "spec": {
+    "coat": "#e8e2d4",
+    "coat2": "#b3202a",
+    "hair": "#1c1a1a",
+    "skin": "#efc49c"
+   }
+  },
+  "PROT": {
+   "preset": "korean",
+   "name": "A protester"
+  },
+  "PROT2": {
+   "preset": "korean",
+   "name": "Another protester",
+   "spec": {
+    "coat2": "#34465a"
+   }
+  },
+  "TEACH": {
+   "preset": "korean",
+   "name": "A teacher",
+   "spec": {
+    "coat": "#2b2b33",
+    "glasses": 1
+   }
+  },
+  "STUD": {
+   "preset": "korean",
+   "name": "A student",
+   "spec": {
+    "coat": "#1f2a3a"
+   }
+  },
+  "STUD2": {
+   "preset": "korean",
+   "name": "Another student",
+   "spec": {
+    "coat": "#3a3226"
+   }
+  },
+  "SEOUL": {
+   "preset": "korean",
+   "name": "A man in Seoul",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "SOVCLERK": {
+   "preset": "clerk",
+   "name": "A Soviet clerk",
+   "spec": {
+    "coat": "#4a5a3a"
+   }
+  },
+  "SOVOFF": {
+   "preset": "soviet_officer",
+   "name": "A Soviet officer"
+  },
+  "SOVSOLD": {
+   "preset": "soviet_officer",
+   "name": "A Red Army soldier",
+   "spec": {
+    "medal": 0,
+    "epaulettes": 0
+   }
+  },
+  "SHOP": {
+   "preset": "korean",
+   "name": "A shopkeeper",
+   "spec": {
+    "coat": "#6a5a44"
+   }
+  },
+  "VIL1": {
+   "preset": "korean",
+   "name": "A villager"
+  },
+  "VIL2": {
+   "preset": "korean",
+   "name": "Another villager",
+   "spec": {
+    "coat": "#b8a888"
+   }
+  },
+  "CROWD1": {
+   "preset": "korean",
+   "name": "A man in the crowd"
+  },
+  "CROWD2": {
+   "preset": "woman",
+   "name": "A woman in the crowd",
+   "spec": {
+    "hair": "#1c1a1a",
+    "skin": "#efc49c"
+   }
+  },
+  "ABE": {
+   "preset": "civilian",
+   "name": "Gov.-Gen. Nobuyuki Abe",
+   "spec": {
+    "hair": "#d8d3cb",
+    "glasses": 1,
+    "skin": "#efc49c"
+   }
+  },
+  "SONG": {
+   "preset": "korean",
+   "name": "Song Jin-woo",
+   "spec": {
+    "coat": "#2b2b33",
+    "glasses": 1
+   }
+  },
+  "JPRES": {
+   "preset": "civilian",
+   "name": "A Japanese resident",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "JPRES2": {
+   "preset": "woman",
+   "name": "His neighbour",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "coat": "#3a4a5a"
+   }
+  },
+  "GI1": {
+   "preset": "us_officer",
+   "name": "An American private",
+   "spec": {
+    "medal": 0,
+    "trim": "#6f6438"
+   }
+  },
+  "GI2": {
+   "preset": "us_officer",
+   "name": "Another private",
+   "spec": {
+    "medal": 0,
+    "trim": "#6f6438",
+    "hair": "#2a1d12"
+   }
+  },
+  "SGT": {
+   "preset": "us_officer",
+   "name": "An American sergeant",
+   "spec": {
+    "medal": 0
+   }
+  },
+  "WOMAN": {
+   "preset": "woman",
+   "name": "A woman in Seoul",
+   "spec": {
+    "hair": "#1c1a1a",
+    "skin": "#efc49c",
+    "coat": "#e8e2d4"
+   }
+  },
+  "SELLER": {
+   "preset": "korean",
+   "name": "A rice seller",
+   "spec": {
+    "coat": "#6a5a44"
+   }
+  },
+  "NKOFF": {
+   "preset": "korean",
+   "name": "A land-reform official",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "USOFF1": {
+   "preset": "us_officer",
+   "name": "An American officer"
+  },
+  "USOFF2": {
+   "preset": "us_officer",
+   "name": "Another American officer",
+   "spec": {
+    "hair": "#8a6a3a"
+   }
+  },
+  "CHO": {
+   "preset": "korean",
+   "name": "Cho Man-sik",
+   "spec": {
+    "hair": "#d8d3cb",
+    "glasses": 1
+   }
+  },
+  "GUARD": {
+   "preset": "soviet_officer",
+   "name": "A border guard",
+   "spec": {
+    "medal": 0,
+    "epaulettes": 0
+   }
+  },
+  "TRAV": {
+   "preset": "korean",
+   "name": "A traveller",
+   "spec": {
+    "coat": "#b8a888"
+   }
+  },
+  "SOVDEL": {
+   "preset": "soviet_officer",
+   "name": "The Soviet delegate",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "USDEL": {
+   "preset": "civilian",
+   "name": "An American delegate"
+  },
+  "WORKER": {
+   "preset": "worker",
+   "name": "A worker in Seoul",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "WORKER2": {
+   "preset": "worker",
+   "name": "Another worker",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "coat": "#4a4a52"
+   }
+  },
+  "SOUTH": {
+   "preset": "korean",
+   "name": "A man in the south"
+  },
+  "NORTH": {
+   "preset": "korean",
+   "name": "A man in the north",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "ROK1": {
+   "preset": "us_officer",
+   "name": "A South Korean soldier",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "medal": 0,
+    "coat": "#4a5a4a"
+   }
+  },
+  "ROK2": {
+   "preset": "us_officer",
+   "name": "Another soldier",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "medal": 0,
+    "coat": "#4a5a4a"
+   }
+  },
+  "NEG1": {
+   "preset": "us_officer",
+   "name": "A UN negotiator",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "NEG2": {
+   "preset": "soviet_officer",
+   "name": "A Communist negotiator",
+   "spec": {
+    "hat": "none",
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "OLD": {
+   "preset": "korean",
+   "name": "An old farmer",
+   "spec": {
+    "hair": "#d8d3cb",
+    "coat": "#d8d1c0"
+   }
+  },
+  "GRAND": {
+   "preset": "korean",
+   "name": "His grandson"
+  },
+  "RHEE": {
+   "preset": "rhee",
+   "name": "Syngman Rhee"
+  },
+  "KIM": {
+   "preset": "kim",
+   "name": "Kim Il Sung"
+  }
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
 }
