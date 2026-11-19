@@ -425,7 +425,29 @@
       "on": "Seoul",
       "zoomhit": 1
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": "us",
+       "window": 0.1,
+       "night": true,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.5,
+       "candles": 1,
+       "papers": 8,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    },
+    "_autoscene": 1
    },
    {
     "say": "So a red pencil goes across the map... just north of Seoul. The thirty-eighth parallel.",
@@ -526,7 +548,68 @@
       "boom": 0.6,
       "shake": 0.5
      }
-    ]
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.5,
+       "n": 3,
+       "seed": 27,
+       "depth": 0.15
+      },
+      {
+       "type": "farm",
+       "x": 0.3,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "farm",
+       "x": 0.72,
+       "s": 0.6,
+       "y": 0.73,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.76,
+       "depth": 0.6
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "x": 0.36,
+         "facing": 1,
+         "h": 0.85,
+         "preset": "korean"
+        },
+        {
+         "x": 0.62,
+         "facing": -1,
+         "h": 0.82,
+         "preset": "woman",
+         "spec": {
+          "hair": "#1c1a1a",
+          "skin": "#efc49c",
+          "coat": "#e8e2d4"
+         }
+        }
+       ],
+       "lx": 0.4,
+       "ly": 0.6,
+       "depth": 0.85
+      }
+     ]
+    },
+    "_autoscene": 1
    },
    {
     "say": "Here is what the line will cost. Within five years, Korea will fight a war that kills about a million soldiers, and between one and a half and three million civilians.",
@@ -689,7 +772,7 @@
      "parts": [
       {
        "type": "room",
-       "flag": null,
+       "flag": "us",
        "window": 0.1,
        "night": true,
        "depth": 0.3
@@ -775,6 +858,31 @@
           "flag": "jp",
           "h": 380,
           "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -817,6 +925,32 @@
         "kind": "grass",
         "y": 0.76,
         "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.36,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "korean",
+          "pose": "point"
+         },
+         {
+          "x": 0.62,
+          "facing": -1,
+          "h": 0.82,
+          "preset": "woman",
+          "spec": {
+           "hair": "#1c1a1a",
+           "skin": "#efc49c",
+           "coat": "#e8e2d4"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -887,7 +1021,8 @@
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -937,6 +1072,32 @@
           "n": 2,
           "seed": 9,
           "depth": 0.15
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "think"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -974,12 +1135,14 @@
           "x": 0.3,
           "facing": 1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "korean"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -1202,17 +1365,20 @@
           {
            "x": 0.25,
            "facing": 1,
-           "h": 0.85
+           "h": 0.85,
+           "preset": "korean"
           },
           {
            "x": 0.5,
            "facing": 1,
-           "h": 0.85
+           "h": 0.85,
+           "preset": "korean"
           },
           {
            "x": 0.75,
            "facing": -1,
-           "h": 0.85
+           "h": 0.85,
+           "preset": "korean"
           }
          ],
          "lx": 0.4,
@@ -1365,6 +1531,31 @@
         "kind": "grass",
         "y": 0.76,
         "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.36,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "korean"
+         },
+         {
+          "x": 0.62,
+          "facing": -1,
+          "h": 0.82,
+          "preset": "woman",
+          "spec": {
+           "hair": "#1c1a1a",
+           "skin": "#efc49c",
+           "coat": "#e8e2d4"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -1440,12 +1631,20 @@
          {
           "x": 0.35,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "us_officer",
+          "spec": {
+           "hat": "none"
+          }
          },
          {
           "x": 0.65,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "us_officer",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -1511,6 +1710,32 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "point"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -1518,7 +1743,7 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "room",
@@ -1530,7 +1755,7 @@
        {
         "type": "table",
         "lamp": 0.6,
-        "candles": 2,
+        "candles": 0,
         "papers": 9,
         "w": 900,
         "depth": 0.6
@@ -1570,7 +1795,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 128,
           "depth": 0.15
          },
          {
@@ -1594,6 +1819,31 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ],
         "fx": [
@@ -1609,7 +1859,7 @@
      },
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "room",
@@ -1632,17 +1882,20 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          },
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -2209,6 +2462,32 @@
           "n": 2,
           "seed": 4,
           "depth": 0.15
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "think"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -2459,6 +2738,31 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ],
         "fx": [
@@ -2469,20 +2773,20 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "night",
+      "time": "day",
       "parts": [
        {
         "type": "room",
-        "flag": null,
+        "flag": "us",
         "window": null,
-        "night": true,
+        "night": false,
         "depth": 0.3,
         "wall": "#14100c"
        },
        {
         "type": "table",
         "lamp": 0.5,
-        "candles": 1,
+        "candles": 0,
         "papers": 2,
         "w": 900,
         "depth": 0.6
@@ -2494,7 +2798,11 @@
           "x": 0.4,
           "facing": 1,
           "h": 0.9,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "us_officer",
+          "spec": {
+           "hat": "none"
+          }
          }
         ],
         "lx": 0.4,
@@ -2663,7 +2971,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 128,
           "depth": 0.15
          },
          {
@@ -2687,6 +2995,32 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "point"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -2744,6 +3078,31 @@
           "h": 150,
           "col": "#3a332c",
           "depth": 0.4
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -3000,7 +3359,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 2,
+          "seed": 103,
           "depth": 0.2
          },
          {
@@ -3203,30 +3562,21 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "rusk",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.35
-      ],
-      "fallback": {
-       "shot": "faces",
-       "names": [
-        [
-         "DEAN RUSK",
-         ""
-        ]
-       ],
-       "nameAt": 0.4,
-       "push": 0.06,
-       "people": [
-        {
-         "preset": "us_officer",
-         "x": 0.5
-        }
+      "shot": "faces",
+      "names": [
+       [
+        "DEAN RUSK",
+        "the colonel with the pencil"
        ]
-      }
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -3307,6 +3657,32 @@
           "h": 170,
           "col": "#2a2420",
           "depth": 0.4
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "think"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ],
         "fx": [
@@ -3360,7 +3736,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 128,
           "depth": 0.15
          },
          {
@@ -3384,6 +3760,31 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -3430,7 +3831,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 128,
           "depth": 0.15
          },
          {
@@ -3454,6 +3855,32 @@
           "kind": "grass",
           "y": 0.76,
           "depth": 0.6
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "point"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ],
         "fx": [
@@ -3590,6 +4017,31 @@
         "h": 170,
         "col": "#2a2420",
         "depth": 0.4
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.36,
+          "facing": 1,
+          "h": 0.85,
+          "preset": "korean"
+         },
+         {
+          "x": 0.62,
+          "facing": -1,
+          "h": 0.82,
+          "preset": "woman",
+          "spec": {
+           "hair": "#1c1a1a",
+           "skin": "#efc49c",
+           "coat": "#e8e2d4"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
        }
       ],
       "fx": [
@@ -3744,6 +4196,32 @@
           "flag": "ru",
           "h": 380,
           "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.36,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "korean",
+            "pose": "think"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.82,
+            "preset": "woman",
+            "spec": {
+             "hair": "#1c1a1a",
+             "skin": "#efc49c",
+             "coat": "#e8e2d4"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
          }
         ]
        }
@@ -3868,7 +4346,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 229,
           "depth": 0.15
          },
          {
@@ -4078,47 +4556,37 @@
       {
        "on": "welcomed",
        "scene": {
-        "shot": "photo",
-        "img": "soviets45",
-        "move": "in",
-        "focus": [
-         0.5,
-         0.5
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 43,
+          "depth": 0.15
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 18,
+          "rows": 3,
+          "x0": 0,
+          "gap": 75,
+          "col": "#3c4a34",
+          "march": true,
+          "depth": 0.7
+         }
         ],
-        "fallback": {
-         "shot": "set",
-         "time": "day",
-         "parts": [
-          {
-           "type": "town",
-           "y": 0.74,
-           "n": 12,
-           "gap": 140,
-           "h": 150,
-           "col": "#3a332c",
-           "depth": 0.4
-          },
-          {
-           "type": "soldiers",
-           "y": 0.86,
-           "n": 16,
-           "rows": 2,
-           "x0": 0,
-           "gap": 80,
-           "col": "#3c4a34",
-           "march": true,
-           "depth": 0.7
-          },
-          {
-           "type": "flagpole",
-           "x": 0.8,
-           "y": 0.7,
-           "flag": "ru",
-           "h": 360,
-           "depth": 0.5
-          }
-         ]
-        }
+        "fx": [
+         "dust"
+        ]
        }
       }
      ],
@@ -4583,12 +5051,22 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "civilian",
+          "spec": {
+           "skin": "#efc49c",
+           "hair": "#1c1a1a"
+          }
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "civilian",
+          "spec": {
+           "skin": "#efc49c",
+           "hair": "#1c1a1a"
+          }
          }
         ],
         "lx": 0.4,
@@ -5142,12 +5620,22 @@
             {
              "x": 0.3,
              "facing": 1,
-             "h": 0.9
+             "h": 0.9,
+             "preset": "civilian",
+             "spec": {
+              "skin": "#efc49c",
+              "hair": "#1c1a1a"
+             }
             },
             {
              "x": 0.7,
              "facing": -1,
-             "h": 0.9
+             "h": 0.9,
+             "preset": "civilian",
+             "spec": {
+              "skin": "#efc49c",
+              "hair": "#1c1a1a"
+             }
             }
            ],
            "lx": 0.4,
@@ -5265,7 +5753,7 @@
        "on": "country",
        "scene": {
         "shot": "set",
-        "time": "day",
+        "time": "dusk",
         "parts": [
          {
           "type": "room",
@@ -5288,7 +5776,11 @@
            {
             "x": 0.5,
             "facing": 1,
-            "h": 0.9
+            "h": 0.9,
+            "preset": "us_officer",
+            "spec": {
+             "hat": "none"
+            }
            }
           ],
           "lx": 0.4,
@@ -5944,12 +6436,14 @@
             "x": 0.3,
             "facing": 1,
             "h": 0.8,
-            "pose": "point"
+            "pose": "point",
+            "preset": "korean"
            },
            {
             "x": 0.6,
             "facing": -1,
-            "h": 0.8
+            "h": 0.8,
+            "preset": "korean"
            }
           ],
           "lx": 0.4,
@@ -5973,7 +6467,7 @@
         "type": "hills",
         "y": 0.5,
         "n": 3,
-        "seed": 27,
+        "seed": 229,
         "depth": 0.15
        },
        {
@@ -6196,7 +6690,7 @@
         "type": "hills",
         "y": 0.5,
         "n": 3,
-        "seed": 27,
+        "seed": 229,
         "depth": 0.15
        },
        {
@@ -6268,12 +6762,14 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "soviet_officer"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "soviet_officer"
          }
         ],
         "lx": 0.4,
@@ -6318,30 +6814,21 @@
       "scale": 4200
      },
      "scene": {
-      "shot": "photo",
-      "img": "kim",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.35
-      ],
-      "fallback": {
-       "shot": "faces",
-       "names": [
-        [
-         "KIM IL SUNG",
-         ""
-        ]
-       ],
-       "nameAt": 0.4,
-       "push": 0.06,
-       "people": [
-        {
-         "preset": "kim",
-         "x": 0.5
-        }
+      "shot": "faces",
+      "names": [
+       [
+        "KIM IL SUNG",
+        "the guerrilla"
        ]
-      }
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "kim",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -6435,10 +6922,21 @@
       "scale": 4200
      },
      "scene": {
-      "shot": "photo",
-      "img": "rhee",
-      "move": "in",
-      "caption": "Syngman Rhee"
+      "shot": "faces",
+      "names": [
+       [
+        "SYNGMAN RHEE",
+        "the exile"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -6477,7 +6975,8 @@
             "x": 0.5,
             "facing": 1,
             "h": 0.85,
-            "pose": "lean"
+            "pose": "lean",
+            "preset": "korean"
            }
           ],
           "lx": 0.4,
@@ -6611,9 +7110,21 @@
       {
        "on": "lobbied",
        "scene": {
-        "shot": "photo",
-        "img": "rhee",
-        "move": "out"
+        "shot": "faces",
+        "names": [
+         [
+          "SYNGMAN RHEE",
+          "the exile"
+         ]
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "rhee",
+          "x": 0.5
+         }
+        ]
        }
       }
      ],
@@ -6738,12 +7249,20 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "rhee",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.35
+      "shot": "faces",
+      "names": [
+       [
+        "SYNGMAN RHEE",
+        "the exile"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
       ]
      }
     },
@@ -6859,26 +7378,21 @@
       {
        "on": "Tokyo",
        "scene": {
-        "shot": "photo",
-        "img": "hodge",
-        "move": "in",
-        "fallback": {
-         "shot": "faces",
-         "names": [
-          [
-           "GEN. JOHN R. HODGE",
-           ""
-          ]
-         ],
-         "nameAt": 0.4,
-         "push": 0.06,
-         "people": [
-          {
-           "preset": "us_officer",
-           "x": 0.5
-          }
+        "shot": "faces",
+        "names": [
+         [
+          "GEN. JOHN HODGE",
+          "the American commander"
          ]
-        }
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "us_officer",
+          "x": 0.5
+         }
+        ]
        }
       }
      ],
@@ -6895,7 +7409,7 @@
         "type": "hills",
         "y": 0.52,
         "n": 3,
-        "seed": 12,
+        "seed": 113,
         "depth": 0.15
        },
        {
@@ -7069,7 +7583,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 229,
           "depth": 0.15
          },
          {
@@ -7565,26 +8079,21 @@
       {
        "on": "popular",
        "scene": {
-        "shot": "photo",
-        "img": "cho",
-        "move": "out",
-        "fallback": {
-         "shot": "faces",
-         "names": [
-          [
-           "CHO MAN-SIK",
-           ""
-          ]
-         ],
-         "nameAt": 0.4,
-         "push": 0.06,
-         "people": [
-          {
-           "preset": "korean",
-           "x": 0.5
-          }
+        "shot": "faces",
+        "names": [
+         [
+          "CHO MAN-SIK",
+          "the \"Gandhi of Korea\""
          ]
-        }
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "korean",
+          "x": 0.5
+         }
+        ]
        }
       }
      ],
@@ -7656,13 +8165,15 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "soviet_officer"
          },
          {
           "x": 0.7,
           "facing": -1,
           "h": 0.9,
-          "pose": "point"
+          "pose": "point",
+          "preset": "soviet_officer"
          }
         ],
         "lx": 0.4,
@@ -7755,7 +8266,8 @@
           "x": 0.5,
           "facing": 1,
           "h": 0.85,
-          "pose": "lean"
+          "pose": "lean",
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -7778,30 +8290,21 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "cho",
-      "move": "in",
-      "focus": [
-       0.5,
-       0.4
-      ],
-      "fallback": {
-       "shot": "faces",
-       "names": [
-        [
-         "CHO MAN-SIK",
-         ""
-        ]
-       ],
-       "nameAt": 0.4,
-       "push": 0.06,
-       "people": [
-        {
-         "preset": "korean",
-         "x": 0.5
-        }
+      "shot": "faces",
+      "names": [
+       [
+        "CHO MAN-SIK",
+        "the \"Gandhi of Korea\""
        ]
-      }
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "korean",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -7885,7 +8388,7 @@
      },
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dawn",
       "parts": [
        {
         "type": "room",
@@ -7908,22 +8411,26 @@
          {
           "x": 0.25,
           "facing": 1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          },
          {
           "x": 0.42,
           "facing": 1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          },
          {
           "x": 0.6,
           "facing": -1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          },
          {
           "x": 0.77,
           "facing": -1,
-          "h": 0.85
+          "h": 0.85,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -8274,7 +8781,7 @@
         "type": "hills",
         "y": 0.5,
         "n": 3,
-        "seed": 27,
+        "seed": 330,
         "depth": 0.15
        },
        {
@@ -8324,7 +8831,7 @@
        "on": "Moscow",
        "scene": {
         "shot": "set",
-        "time": "night",
+        "time": "day",
         "parts": [
          {
           "type": "town",
@@ -8581,7 +9088,7 @@
      },
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dawn",
       "parts": [
        {
         "type": "room",
@@ -8604,17 +9111,20 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          },
          {
           "x": 0.5,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -8862,11 +9372,11 @@
      },
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "room",
-        "flag": null,
+        "flag": "ru",
         "window": 0.7,
         "night": false,
         "depth": 0.3
@@ -8885,12 +9395,14 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -9005,9 +9517,21 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "rhee",
-      "move": "in"
+      "shot": "faces",
+      "names": [
+       [
+        "SYNGMAN RHEE",
+        "the exile"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "rhee",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -9035,26 +9559,21 @@
       {
        "on": "Kim",
        "scene": {
-        "shot": "photo",
-        "img": "kim",
-        "move": "in",
-        "fallback": {
-         "shot": "faces",
-         "names": [
-          [
-           "KIM IL SUNG",
-           ""
-          ]
-         ],
-         "nameAt": 0.4,
-         "push": 0.06,
-         "people": [
-          {
-           "preset": "kim",
-           "x": 0.5
-          }
+        "shot": "faces",
+        "names": [
+         [
+          "KIM IL SUNG",
+          "the guerrilla"
          ]
-        }
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "kim",
+          "x": 0.5
+         }
+        ]
        }
       }
      ],
@@ -9436,26 +9955,21 @@
       {
        "on": "Kim",
        "scene": {
-        "shot": "photo",
-        "img": "kim",
-        "move": "out",
-        "fallback": {
-         "shot": "faces",
-         "names": [
-          [
-           "KIM IL SUNG",
-           ""
-          ]
-         ],
-         "nameAt": 0.4,
-         "push": 0.06,
-         "people": [
-          {
-           "preset": "kim",
-           "x": 0.5
-          }
+        "shot": "faces",
+        "names": [
+         [
+          "KIM IL SUNG",
+          "the guerrilla"
          ]
-        }
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "kim",
+          "x": 0.5
+         }
+        ]
        }
       }
      ],
@@ -10354,11 +10868,11 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "room",
-        "flag": null,
+        "flag": "ru",
         "window": 0.7,
         "night": false,
         "depth": 0.3
@@ -10377,12 +10891,14 @@
          {
           "x": 0.3,
           "facing": 1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          },
          {
           "x": 0.7,
           "facing": -1,
-          "h": 0.9
+          "h": 0.9,
+          "preset": "korean"
          }
         ],
         "lx": 0.4,
@@ -10513,11 +11029,11 @@
       "caption": "The Korean Armistice, 27 July 1953",
       "fallback": {
        "shot": "set",
-       "time": "day",
+       "time": "dawn",
        "parts": [
         {
          "type": "room",
-         "flag": null,
+         "flag": "ru",
          "window": 0.7,
          "night": false,
          "depth": 0.3
@@ -10536,12 +11052,14 @@
           {
            "x": 0.3,
            "facing": 1,
-           "h": 0.9
+           "h": 0.9,
+           "preset": "korean"
           },
           {
            "x": 0.7,
            "facing": -1,
-           "h": 0.9
+           "h": 0.9,
+           "preset": "korean"
           }
          ],
          "lx": 0.4,
@@ -10864,7 +11382,7 @@
         "type": "hills",
         "y": 0.5,
         "n": 3,
-        "seed": 27,
+        "seed": 330,
         "depth": 0.15
        },
        {
@@ -10956,26 +11474,21 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "rusk",
-      "move": "in",
-      "fallback": {
-       "shot": "faces",
-       "names": [
-        [
-         "DEAN RUSK",
-         ""
-        ]
-       ],
-       "nameAt": 0.4,
-       "push": 0.06,
-       "people": [
-        {
-         "preset": "us_officer",
-         "x": 0.5
-        }
+      "shot": "faces",
+      "names": [
+       [
+        "DEAN RUSK",
+        "the colonel with the pencil"
        ]
-      }
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -11242,26 +11755,21 @@
       {
        "on": "Rusk",
        "scene": {
-        "shot": "photo",
-        "img": "rusk",
-        "move": "out",
-        "fallback": {
-         "shot": "faces",
-         "names": [
-          [
-           "DEAN RUSK",
-           ""
-          ]
-         ],
-         "nameAt": 0.4,
-         "push": 0.06,
-         "people": [
-          {
-           "preset": "us_officer",
-           "x": 0.5
-          }
+        "shot": "faces",
+        "names": [
+         [
+          "DEAN RUSK",
+          "the colonel with the pencil"
          ]
-        }
+        ],
+        "nameAt": 0.4,
+        "push": 0.06,
+        "people": [
+         {
+          "preset": "us_officer",
+          "x": 0.5
+         }
+        ]
        }
       },
       {
@@ -11305,9 +11813,21 @@
      ],
      "pause": 1.2,
      "scene": {
-      "shot": "photo",
-      "img": "bonesteel",
-      "move": "out"
+      "shot": "faces",
+      "names": [
+       [
+        "CHARLES BONESTEEL",
+        "the other colonel"
+       ]
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.5
+       }
+      ]
      }
     },
     {
@@ -11324,43 +11844,34 @@
       {
        "on": "still",
        "scene": {
-        "shot": "photo",
-        "img": "dmz",
-        "move": "in",
-        "focus": [
-         0.5,
-         0.5
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.5,
+          "n": 3,
+          "seed": 63,
+          "depth": 0.15
+         },
+         {
+          "type": "forest",
+          "y": 0.62,
+          "n": 60,
+          "seed": 63,
+          "h": 180,
+          "depth": 0.4
+         },
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.76,
+          "depth": 0.6
+         }
         ],
-        "fallback": {
-         "shot": "set",
-         "time": "dawn",
-         "parts": [
-          {
-           "type": "hills",
-           "y": 0.5,
-           "n": 3,
-           "seed": 15,
-           "depth": 0.15
-          },
-          {
-           "type": "forest",
-           "y": 0.66,
-           "n": 60,
-           "seed": 3,
-           "h": 160,
-           "depth": 0.45
-          },
-          {
-           "type": "land",
-           "kind": "grass",
-           "y": 0.76,
-           "depth": 0.6
-          }
-         ],
-         "fx": [
-          "fog"
-         ]
-        }
+        "fx": [
+         "fog"
+        ]
        }
       }
      ],
@@ -11427,39 +11938,34 @@
       "scale": 3600
      },
      "scene": {
-      "shot": "photo",
-      "img": "dmz",
-      "move": "left",
-      "fallback": {
-       "shot": "set",
-       "time": "dawn",
-       "parts": [
-        {
-         "type": "hills",
-         "y": 0.5,
-         "n": 3,
-         "seed": 15,
-         "depth": 0.15
-        },
-        {
-         "type": "forest",
-         "y": 0.66,
-         "n": 60,
-         "seed": 3,
-         "h": 160,
-         "depth": 0.45
-        },
-        {
-         "type": "land",
-         "kind": "grass",
-         "y": 0.76,
-         "depth": 0.6
-        }
-       ],
-       "fx": [
-        "fog"
-       ]
-      }
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.5,
+        "n": 3,
+        "seed": 64,
+        "depth": 0.15
+       },
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 60,
+        "seed": 64,
+        "h": 180,
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.76,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
      }
     },
     {
@@ -11496,7 +12002,7 @@
         "type": "hills",
         "y": 0.5,
         "n": 3,
-        "seed": 15,
+        "seed": 116,
         "depth": 0.15
        },
        {
@@ -11629,7 +12135,7 @@
           "type": "hills",
           "y": 0.5,
           "n": 3,
-          "seed": 27,
+          "seed": 431,
           "depth": 0.15
          },
          {
@@ -11667,26 +12173,21 @@
       "scale": 9000
      },
      "scene": {
-      "shot": "photo",
-      "img": "rusk",
-      "move": "in",
-      "fallback": {
-       "shot": "faces",
-       "names": [
-        [
-         "DEAN RUSK",
-         ""
-        ]
-       ],
-       "nameAt": 0.4,
-       "push": 0.06,
-       "people": [
-        {
-         "preset": "us_officer",
-         "x": 0.5
-        }
+      "shot": "faces",
+      "names": [
+       [
+        "DEAN RUSK",
+        "the colonel with the pencil"
        ]
-      }
+      ],
+      "nameAt": 0.4,
+      "push": 0.06,
+      "people": [
+       {
+        "preset": "us_officer",
+        "x": 0.5
+       }
+      ]
      }
     },
     {

@@ -1,7 +1,7 @@
 # Korea dialogue pass (STYLE.md 2c): acted exchanges, dramatized from the record.
 # Real people only say or do what the narration (and its sources) says; jokes and colour go to unnamed roles.
 # Run once: python3 tools/storyboard/korea_talk.py   (idempotent: removes earlier "_talk" beats first)
-import json, os
+import json, os, copy
 F = os.path.join(os.path.dirname(__file__), '..', '..', 'studio', 'doc', 'stories', 'sb-korea-38th.json')
 s = json.load(open(F))
 
@@ -131,6 +131,8 @@ VOICES = {
 secs = {'intro': s['intro'], **{i: c for i, c in enumerate(s['chapters'])}}
 for c in secs.values():
     c['beats'] = [b for b in c['beats'] if not b.get('_talk')]
+    for b in c['beats']:
+        if b.pop('_autoscene', None): b.pop('scene', None)
 # the original exchange (chapter 3): Rusk's own account, recast to him with a background
 for b in s['chapters'][2]['beats']:
     if 'talk' in b and not b.get('_talk'):
@@ -141,6 +143,11 @@ for sec, after, lines, bg in sorted(TALK, key=lambda t: (str(t[0]), -t[1])):
     beats = secs[sec]['beats']
     assert 0 <= after < len(beats) and 'say' in beats[after], (sec, after)
     beats.insert(after + 1, {"talk": lines, "bg": bg, "_talk": 1})
+# a narration beat right after an exchange, with no shot of its own, would stay on the close-up: give it the exchange's setting
+for c in secs.values():
+    for i, b in enumerate(c['beats'][:-1]):
+        n = c['beats'][i + 1]
+        if b.get('_talk') and 'say' in n and 'scene' not in n: n['scene'] = copy.deepcopy(b['bg']); n['_autoscene'] = 1
 for t in TALK:
     for l in t[2]:
         assert l['who'] in CAST and l['who'] in VOICES, l['who']
