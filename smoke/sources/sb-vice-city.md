@@ -1,0 +1,106 @@
+# Sources: How the Real Vice City Happened
+
+Every fact in the episode comes from these pages. Dialogue scenes are dramatized.
+
+- Variety, GTA 6 delayed to 19 November 2026: https://au.variety.com/2025/tv/news/gta-6-release-delayed-november-2026-29751
+- Wikipedia, Grand Theft Auto (video game): https://en.wikipedia.org/wiki/Grand_Theft_Auto_(game)
+- Wikipedia, Grand Theft Auto (series): https://en.wikipedia.org/wiki/Grand_Theft_Auto
+- The National, From 1997's Grand Theft Auto to GTA 6: https://thenationalnews.com/arts-culture/2026/08/22/from-1997s-grand-theft-auto-to-gta-6-the-evolution-of-gamings-biggest-crime-series/
+- Giant Bomb, Vice City: https://giantbomb.com/wiki/Locations/Vice_City
+- GameSpot, Evolution of Grand Theft Auto: https://gamespot.com/gallery/evolution-of-grand-theft-auto-milestones-from-ever/2900-1552/
+- Decrypt, 5 biggest reveals from the GTA 6 trailer: https://decrypt.co/208649/5-biggest-reveals-from-gta-6-trailer
+- Benzinga, the Florida Man moments in the GTA 6 trailer: https://benzinga.com/general/gaming/23/12/36117385/the-real-stories-behind-gta-6-trailers-iconic-florida-man-moments-did-you-catch-this-reference
+- GTA Boom, GTA 6 first trailer (4 December 2023): https://www.gtaboom.com/grand-theft-auto-6-first-trailer-b9b8
+- The Daily Beast, Cocaine Cowboys (Dadeland, 11 July 1979): https://www.thedailybeast.com/cocaine-cowboys/
+- NBC Miami, Dadeland Mall Massacre 40th anniversary: https://www.nbcmiami.com/news/local/dadeland-mall-massacre-thursday-marks-40th-anniversary-of-cocaine-cowboys-shootout/127956/
+- Local 10, Griselda archives (Turnpike shootout, Dadeland): https://www.local10.com/news/local/2024/02/12/griselda-archives-cocaine-wars-in-miami-came-with-wild-west-style-shootouts
+- Telemundo 51, 40 años de la masacre del Dadeland Mall: https://www.telemundo51.com/noticias/local/a-40-anos-de-la-masacre-del-dadeland-mall/127810/
+- Miami New Times, A Profusion of Corpses (the party supply van): https://www.miaminewtimes.com/?p=40369817
+- Wikipedia, Miami drug war (murders 1979-1981): https://en.wikipedia.org/wiki/Miami_drug_war
+- Trail of Florida's Indian Heritage, Miami Circle: https://www.trailoffloridasindianheritage.org/miami-circle-3/
+- Historical Marker Database, The Miami Circle: https://www.hmdb.org/m.asp?m=65646
+- Palm Beach County History Online, Florida's ancient people (Miami Circle): https://pbchistory.org/education-floridas-ancient-people/
+- Legends of America, Tequesta Tribe of Florida: https://www.legendsofamerica.com/tequesta-tribe/
+- Florida Historical Marker, Julia Tuttle - Mother of Miami: https://markers.flheritage.com/home/details/1104
+- Wikipedia, Julia Tuttle: https://en.wikipedia.org/wiki/Julia_Tuttle
+- Jitney Books, Debunking the orange blossom myth: https://jitneybooks.com/?p=16631
+- Local 10, The Great Freeze: https://www.local10.com/weather/2023/02/08/the-great-freeze-the-weather-event-that-helped-found-miami
+- Vizcaya, Escape from the Frost (Flagler quote): https://vizcaya.org/es/beyond-vizcaya/the-great-freeze/
+- WLRN, Miami's 125th birthday (367/368 voters, 162 Black): https://www.wlrn.org/news/2021-07-30/miamis-125th-birthday-and-remembering-the-citys-history
+- Xavier Cortada, The Incorporators 1896 (368 men, pool hall): https://cortada.com/?p=56954
+- Catalyst Miami, Miami's Black history: https://catalystmiami.org/racialjustice
+- The Miami Guide, Julia Tuttle: https://themiamiguide.com/julia-tuttle-mother-of-miami/
+- Hurricane Science, the Great Miami Hurricane: https://www.hurricanescience.org/history/storms/1920s/GreatMiami
+- National Weather Service, the 1926 Great Miami Hurricane: https://www.weather.gov/news/260915-great-miami-hurricane
+- Diario Las Americas, 100 years ago a massive hurricane hit Miami: https://www.diariolasamericas.com/100-years-ago-massive-hurricane-hit-miami-n5402393
+- Miami Living, October 1 in Miami history (homeless, homes destroyed): https://www.miamilivingmagazine.com/post/october-1-in-miami-history-selling-the-everglades-and-surviving-the-great-hurricane
+- Project MUSE, the 1926 hurricane (eye, Miami Beach): https://muse.jhu.edu/article/547677/pdf
+- Wikipedia, 1926 Miami hurricane: https://en.wikipedia.org/wiki/1926_Miami_hurricane
+- Flamingo Gardens, eye-witness account of 1926: https://flamingogardens.org/?p=1140
+- Miami New Times, Prohibition (Red Shannon, Capone): https://www.miaminewtimes.com/news/sixty-years-before-the-cocaine-cowboys-miami-was-the-wild-west-of-prohibition-8269399
+- FBI, Al Capone: https://www.fbi.gov/history/famous-cases/al-capone
+- PBS American Experience, Al Capone in Miami Beach: https://www.pbs.org/wgbh/americanexperience/features/miami-al-capone
+- WFTV, Capone's Miami Beach mansion (Clarence Busch): https://www.wftv.com/news/trending/miami-beach-mansion-once-owned-by-al-capone-demolished/MBPRWG3TKVCQ7IX7QVETEDJ6ME/
+- Historic Preservation Association of Coral Gables, Palm Island: https://historiccoralgables.org/?p=6838
+- Atlanta Journal-Constitution, Capone's mansion: https://www.pressreader.com/usa/the-atlanta-journal-constitution/20210908/281612423516805
+- Community Newspapers, Al Capone and Greater Miami: https://communitynewspapers.com/?p=197003
+- The Architect's Newspaper, Overtown and I-95: https://www.archpaper.com/2022/11/segregation-by-design-maps-highway-expansion-florida-magic-city
+- Urban Renewal Atlas, Overtown: https://urban-renewal-atlas.vercel.app/cities/miami/overtown
+- History.com, highways and segregation: https://www.history.com/news/interstate-highway-system-infrastructure-construction-segregation
+- Streetsblog, remembering Overtown: https://usa.streetsblog.org/2013/06/18/remembering-all-that-was-lost-to-an-interchange-in-miami
+- Next City, Miami Underdeck and Overtown: https://nextcity.org/forefront/view/miami-underdeck-overtown-black-community-gentrification-displacement
+- Miami New Times, In the Shadow of New Towers: https://www.miaminewtimes.com/news/in-the-shadow-of-new-towers-6341657/
+- Wikipedia, Cuban exodus: https://en.wikipedia.org/wiki/Cuban_exodus
+- National Park Service, Freedom Tower: https://www.nps.gov/places/freedom-tower.htm
+- Miami Dade College, Cuban Exile Experience: https://artsandculture.google.com/story/FgWhcKDD-eljJw
+- Remezcla, the Freedom Tower: https://remezcla.com/?p=277574
+- City of Miami, Bay of Pigs invasion (Brigade 2506): https://www.miami.gov/files/assets/public/v/1/document-resources/pdf-docs/capital-improvements/bay-of-pigs-invasion-english.pdf
+- Wikipedia, Freedom Flights: https://en.wikipedia.org/wiki/Freedom_Flights
+- Cubans in America, Freedom Flights and Little Havana: https://cubansinamerica.us/?p=7258
+- Wikipedia, Edna Buchanan: https://en.wikipedia.org/wiki/Edna_Buchanan
+- Pulitzer Prize, Edna Buchanan (1986): https://www.pulitzer.org/winners/edna-buchanan
+- Edna Buchanan, The Corpse Had a Familiar Face: https://www.everand.com/book/225108495/The-Corpse-Had-a-Familiar-Face-Covering-Miami-America-s-Hottest-Beat
+- RealClearInvestigations on Calvin Trillin's 1986 New Yorker profile: https://www.realclearinvestigations.com/articles/2018/08/17/investigative_classics_when_murders_afoot_edna_buchanan_ledes_with_her_pen_calvin_trillin_the_new_yorker_1986_.html
+- Jitney Books, Edna Buchanan: https://jitneybooks.com/edna-buchanan/
+- Florida Backroads Travel, Edna Buchanan: https://florida-backroads-travel.com/edna-buchanan.html
+- Miami Beach 411, Edna Buchanan interview: https://miamibeach411.com/blog/edna-buchanan
+- Wikipedia, 1980 Miami riots: https://en.wikipedia.org/wiki/1980_Miami_riots
+- BlackPast, Miami (Liberty City) Riot, 1980: https://blackpast.org/aah/miami-liberty-city-riot-1980
+- Miami Beach 411, the McDuffie riots: https://miamibeach411.com/blog/arthur-mcduffie-riots
+- The Miami Hurricane, legacy of the 1980 riots: https://themiamihurricane.com/2017/05/17/local-residents-and-um-students-discuss-legacy-of-1980-miami-riots
+- Wikipedia, Havana Peruvian embassy crisis: https://en.wikipedia.org/wiki/Havana_Peruvian_embassy_crisis
+- National Archives, causes and effects of the Mariel boatlift: https://text-message.blogs.archives.gov/2021/08/03/the-causes-and-effects-of-the-mariel-boatlift
+- Clements Center, diplomatic history April 20 (Sanyustiz, Havana statement, Carter): https://www.clementscenter.org/?p=863
+- Cubanet, Sanyustiz and the route 79 bus: https://www.cubanet.org/?p=211930
+- Luyano blog, Ernesto Pinto-Bazurco and the embassy: https://luyano-cuba.blogspot.com/2010/04/ernesto-pinto-bazurco-consul-del-peru.html
+- ECOI, the Peruvian embassy, 4-6 April 1980: https://www.ecoi.net/en/document/1073810.html
+- ADST, the Mariel boatlift: https://adst.org/?p=10753
+- NPR, Scarface and Mariel (Cuban government description): https://www.npr.org/transcripts/1149875505
+- History.com, Castro announces the Mariel boatlift: https://www.history.com/this-day-in-history/april-20/castro-announces-mariel-boatlift
+- Florida Memory, the Mariel Boatlift of 1980: https://floridamemory.com/items/show/332816
+- Wikipedia, Mariel boatlift: https://en.wikipedia.org/wiki/Mariel_boatlift
+- National Archives, Mariel arrivals by month: https://text-message.blogs.archives.gov/?p=18647
+- GlobalSecurity, Mariel Boatlift (Coast Guard, criminal records): https://www.globalsecurity.org/military/ops/mariel-boatlift.htm
+- Seattle Times, How Marielitos changed Florida: https://archive.seattletimes.com/archive/20050417/mariel17/how-marielitos-helped-change-the-face-of-florida
+- Cubanet, Cuban exodus sails into (Key West water-skiing): https://www.cubanet.org/htdocs/CNews/y05/apr05/11e4.htm
+- El Hispano News, the boats that would bring us to freedom: https://elhispanonews.com/the-boats-that-would-bring-us-to-freedom/
+- WorldAtlas, What was the Mariel boatlift (3,500): https://www.worldatlas.com/articles/what-was-the-mariel-boatlift.html
+- National History Day, Fleeing Fidel (tent city under the expressway): https://site.nhd.org/20-61774477/Processing_1
+- NYT via RallyPoint, Marielitos face long-delayed reckoning (2,746): https://www.rallypoint.com/shared-links/marielitos-face-long-delayed-reckoning-expulsion-to-cuba-nytimes-com
+- Americas Society, Carter and South Florida: https://as-coa.org/articles/carters-foreign-policy-toward-cuba-nicaragua-and-haiti-left-huge-marks-south-florida
+- Miami New Times, 1981: Miami's deadliest summer (morgue truck): https://www.miaminewtimes.com/?p=40459929
+- Time, South Florida: Trouble in Paradise (23 November 1981): https://content.time.com/time/subscriber/article/0,33009,922693,00.html
+- Time, Southern Florida: riots, refugees, and now a crime wave: https://content.time.com/time/magazine/article/0,9171,952830,00.html
+- Time, letters, Cloudy Miami: https://content.time.com/time/magazine/article/0,9171,925084,00.html
+- Wikipedia, List of covers of Time magazine (1980s): https://en.wikipedia.org/wiki/List_of_covers_of_Time_magazine_(1980s)
+- Reagan Library, statement on the South Florida task force (28 January 1982): https://www.reaganlibrary.gov/research/speeches/12882b
+- CIA Reading Room, War on Drugs broadcast transcript (Bush, Rivera): https://www.cia.gov/readingroom/document/cia-rdp88-01070r000200830002-5
+- Synapse, Paradise Lost and the Miami Chamber of Commerce: https://synapsesocial.com/papers/69d8940c6c1944d70ce04fee
+- AFI Catalog, Scarface (1983): https://catalog.afi.com/Catalog/moviedetails/68337
+- Slashfilm, the Scarface controversy: https://slashfilm.com/668251/the-scarface-controversy-explained
+- Miami Beach 411, the making of Scarface: https://miamibeach411.com/blog/the-making-of-scarface
+- Wikipedia, Scarface (1983 film): https://en.wikipedia.org/wiki/Scarface_(1983_film)
+- Television Academy, Miami Vice oral history: https://www.televisionacademy.com/news/features/miami-vice-oral-history
+- Emmys.com, Miami Vice at 40 (the napkin): https://emmys.com/node/720596
+- CrimeReads, Miami Vice (no earth tones): https://crimereads.com/miami-vice-how-an-icon-of-80s-cool-transformed-a-city-and-the-landscape-of-television/
+- Encyclopedia.com, Miami Vice ($1.3 million an episode): https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/miami-vice

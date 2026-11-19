@@ -1,0 +1,870 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "voices": {
+  "CUT": "am_michael",
+  "GRF": "bm_daniel",
+  "US": "am_michael",
+  "RN": "bm_lewis",
+  "CAM": "am_adam",
+  "PRE": "bm_lewis",
+  "DOU": "bm_daniel",
+  "PIC": "am_adam",
+  "BAY": "bm_fable",
+  "SCO": "am_michael",
+  "POLK": "am_adam",
+  "HOR": "bm_lewis",
+  "HAR": "am_fenrir",
+  "BUC": "am_fenrir",
+  "ROB": "am_puck",
+  "KAI": "bm_fable",
+  "SAILOR": "bm_lewis",
+  "MARINE": "bm_daniel",
+  "SOLDIER": "am_puck",
+  "AIDE": "am_puck",
+  "CLERK": "am_fenrir",
+  "SETTLER": "am_adam",
+  "COMPANY": "bm_lewis",
+  "VOTER1": "am_michael",
+  "VOTER2": "am_puck",
+  "MINER": "am_adam",
+  "LOCAL": "bm_daniel",
+  "MEMBER": "am_fenrir",
+  "EXPERT": "bm_fable"
+ },
+ "era": "1914",
+ "musicEra": "1800s",
+ "balls": {
+  "CUT": {
+   "flag": "US48",
+   "label": "LYMAN CUTLAR",
+   "at": [
+    -122.75,
+    48.36
+   ],
+   "r": 52,
+   "char": {
+    "preset": "settler",
+    "facing": -1
+   }
+  },
+  "GRF": {
+   "flag": "GBR",
+   "label": "CHARLES GRIFFIN",
+   "at": [
+    -123.25,
+    48.36
+   ],
+   "r": 52,
+   "char": {
+    "preset": "hbc_man",
+    "facing": 1
+   }
+  },
+  "US": {
+   "flag": "US48",
+   "label": "UNITED STATES",
+   "at": [
+    -121.9,
+    48.0
+   ],
+   "r": 56,
+   "char": {
+    "preset": "us_army_1859",
+    "facing": -1
+   }
+  },
+  "RN": {
+   "flag": "GBR",
+   "label": "BRITAIN",
+   "at": [
+    -124.6,
+    49.2
+   ],
+   "r": 56,
+   "char": {
+    "preset": "rn_officer",
+    "facing": 1
+   }
+  },
+  "RM": {
+   "flag": "GBR",
+   "label": "ROYAL MARINES",
+   "at": [
+    -123.5,
+    49.1
+   ],
+   "r": 50,
+   "char": {
+    "preset": "redcoat",
+    "hat": "kepi",
+    "hatCol": "#1c1a1a",
+    "hairStyle": "short",
+    "hair": "#3b2a1a",
+    "facing": 1
+   }
+  },
+  "SAL": {
+   "flag": "DOT",
+   "label": "COAST SALISH",
+   "at": [
+    -121.6,
+    48.95
+   ],
+   "r": 50,
+   "char": {
+    "coat": "#7a4a2a",
+    "coat2": "#c9a85a",
+    "hat": "none",
+    "hairStyle": "long",
+    "hair": "#1c1a1a",
+    "skin": "#b07a55",
+    "trim": "#b3202a",
+    "facing": -1
+   }
+  },
+  "DOU": {
+   "flag": "GBR",
+   "label": "GOV. JAMES DOUGLAS",
+   "at": [
+    -124.3,
+    48.15
+   ],
+   "r": 50,
+   "char": {
+    "preset": "douglas",
+    "facing": 1
+   }
+  },
+  "POLK": {
+   "flag": "US48",
+   "label": "PRESIDENT POLK",
+   "at": [
+    -118.0,
+    44.0
+   ],
+   "r": 52,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#8a8a8a",
+    "coat": "#1c1c22",
+    "facing": -1
+   }
+  },
+  "BUC": {
+   "flag": "US48",
+   "label": "JAMES BUCHANAN",
+   "at": [
+    -118.5,
+    43.0
+   ],
+   "r": 50,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#efeae0",
+    "coat": "#1c1c22",
+    "facing": -1
+   }
+  },
+  "PRE": {
+   "flag": "GBR",
+   "label": "JAMES PREVOST",
+   "at": [
+    -123.9,
+    49.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "rn_officer",
+    "facing": 1
+   }
+  },
+  "CAM": {
+   "flag": "US48",
+   "label": "ARCHIBALD CAMPBELL",
+   "at": [
+    -122.0,
+    48.5
+   ],
+   "r": 48,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#5a3b22",
+    "coat": "#2a2a33",
+    "facing": -1
+   }
+  },
+  "HAR": {
+   "flag": "US48",
+   "label": "GEN. HARNEY",
+   "at": [
+    -121.6,
+    47.4
+   ],
+   "r": 50,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "full",
+    "hair": "#d8d3cb",
+    "epaulettes": 1,
+    "facing": -1
+   }
+  },
+  "PIC": {
+   "flag": "US48",
+   "label": "CAPT. PICKETT",
+   "at": [
+    -122.4,
+    48.62
+   ],
+   "r": 50,
+   "char": {
+    "preset": "pickett",
+    "facing": -1
+   }
+  },
+  "CAS": {
+   "flag": "US48",
+   "label": "COL. SILAS CASEY",
+   "at": [
+    -122.15,
+    48.9
+   ],
+   "r": 46,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "full",
+    "hair": "#8a8a8a",
+    "facing": -1
+   }
+  },
+  "ROB": {
+   "flag": "US48",
+   "label": "LT. HENRY ROBERT",
+   "at": [
+    -122.85,
+    48.75
+   ],
+   "r": 46,
+   "char": {
+    "preset": "us_army_1859",
+    "beard": "none",
+    "facing": -1
+   }
+  },
+  "BAY": {
+   "flag": "GBR",
+   "label": "ADM. BAYNES",
+   "at": [
+    -124.75,
+    48.6
+   ],
+   "r": 50,
+   "char": {
+    "preset": "rn_officer",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "medal": 1,
+    "facing": 1
+   }
+  },
+  "SCO": {
+   "flag": "US48",
+   "label": "GEN. WINFIELD SCOTT",
+   "at": [
+    -122.5,
+    47.7
+   ],
+   "r": 52,
+   "char": {
+    "preset": "us_army_1859",
+    "hat": "bicorne",
+    "hatCol": "#111",
+    "hair": "#d8d3cb",
+    "beard": "none",
+    "epaulettes": 1,
+    "medal": 1,
+    "facing": -1
+   }
+  },
+  "KAI": {
+   "flag": "DE",
+   "label": "KAISER WILHELM I",
+   "at": [
+    13.4,
+    54.0
+   ],
+   "r": 52,
+   "char": {
+    "preset": "hessian",
+    "hat": "none",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "coat": "#1f2f4a",
+    "medal": 1,
+    "facing": -1
+   }
+  },
+  "BAN": {
+   "flag": "US48",
+   "label": "GEORGE BANCROFT",
+   "at": [
+    2.0,
+    46.0
+   ],
+   "r": 48,
+   "char": {
+    "preset": "governor",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "beard": "full",
+    "coat": "#2a2a33",
+    "facing": 1
+   }
+  }
+ },
+ "places": {
+  "San Juan Island": [
+   -123.08,
+   48.53
+  ],
+  "Garrison Bay": [
+   -123.15,
+   48.59
+  ],
+  "English Camp": [
+   -123.15,
+   48.59
+  ],
+  "American Camp": [
+   -123.03,
+   48.47
+  ],
+  "Belle Vue Farm": [
+   -122.98,
+   48.46
+  ],
+  "Smallpox Bay": [
+   -123.16,
+   48.55
+  ],
+  "Fort Victoria": [
+   -123.37,
+   48.43
+  ],
+  "Esquimalt": [
+   -123.43,
+   48.43
+  ],
+  "Fort Bellingham": [
+   -122.52,
+   48.77
+  ],
+  "Fort Steilacoom": [
+   -122.58,
+   47.17
+  ],
+  "Fort Vancouver": [
+   -122.66,
+   45.62
+  ],
+  "Columbia River": [
+   -123.9,
+   46.25
+  ],
+  "Fraser River": [
+   -121.44,
+   49.38
+  ],
+  "Washington, D.C.": [
+   -77.04,
+   38.9
+  ],
+  "London": [
+   -0.13,
+   51.5
+  ],
+  "Mexico City": [
+   -99.13,
+   19.43
+  ],
+  "Callao": [
+   -77.15,
+   -12.05
+  ],
+  "New Orleans": [
+   -90.07,
+   29.95
+  ],
+  "Aroostook": [
+   -68.3,
+   46.7
+  ],
+  "St. Louis": [
+   -90.2,
+   38.63
+  ],
+  "Gettysburg": [
+   -77.23,
+   39.83
+  ],
+  "Philadelphia": [
+   -75.17,
+   39.95
+  ],
+  "New Bedford": [
+   -70.93,
+   41.64
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "Geneva": [
+   6.14,
+   46.2
+  ]
+ },
+ "cast": {
+  "CUT": {
+   "preset": "settler",
+   "name": "Lyman Cutlar"
+  },
+  "GRF": {
+   "preset": "hbc_man",
+   "name": "Charles Griffin"
+  },
+  "PIC": {
+   "preset": "pickett",
+   "name": "Capt. George Pickett"
+  },
+  "HOR": {
+   "preset": "rn_officer",
+   "name": "Capt. Geoffrey Hornby"
+  },
+  "BAY": {
+   "preset": "rn_officer",
+   "name": "Rear Adm. Robert Baynes",
+   "spec": {
+    "hair": "#d8d4cc"
+   }
+  },
+  "DOU": {
+   "preset": "douglas",
+   "name": "Gov. James Douglas"
+  },
+  "HAR": {
+   "preset": "us_officer",
+   "name": "Gen. William Harney"
+  },
+  "SCO": {
+   "preset": "us_officer",
+   "name": "Gen. Winfield Scott",
+   "spec": {
+    "hair": "#e8e4dc"
+   }
+  },
+  "PRE": {
+   "preset": "rn_officer",
+   "name": "Capt. James Prevost"
+  },
+  "CAM": {
+   "preset": "us_officer",
+   "name": "Archibald Campbell",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "BUC": {
+   "preset": "governor",
+   "name": "President James Buchanan"
+  },
+  "POLK": {
+   "preset": "governor",
+   "name": "President James K. Polk",
+   "spec": {
+    "hair": "#3b2a1a"
+   }
+  },
+  "ROB": {
+   "preset": "us_officer",
+   "name": "Henry Robert",
+   "spec": {
+    "hair": "#6b4a2a"
+   }
+  },
+  "KAI": {
+   "preset": "king_george",
+   "name": "Emperor Wilhelm I",
+   "spec": {
+    "hair": "#e8e4dc",
+    "beard": "full"
+   }
+  },
+  "SAILOR": {
+   "preset": "us_sailor",
+   "name": "A British sailor",
+   "spec": {
+    "coat": "#1c2a44"
+   }
+  },
+  "MARINE": {
+   "preset": "redcoat",
+   "name": "A Royal Marine"
+  },
+  "SOLDIER": {
+   "preset": "us_officer",
+   "name": "An American soldier",
+   "spec": {
+    "coat": "#1f3150"
+   }
+  },
+  "AIDE": {
+   "preset": "us_officer",
+   "name": "An aide"
+  },
+  "CLERK": {
+   "preset": "governor",
+   "name": "A clerk",
+   "spec": {
+    "hair": "#5a3a22"
+   }
+  },
+  "SETTLER": {
+   "preset": "settler",
+   "name": "A settler"
+  },
+  "COMPANY": {
+   "preset": "hbc_man",
+   "name": "A company man",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "VOTER1": {
+   "preset": "settler",
+   "name": "A voter"
+  },
+  "VOTER2": {
+   "preset": "governor",
+   "name": "Another voter",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MINER": {
+   "preset": "settler",
+   "name": "A miner",
+   "spec": {
+    "hair": "#8a6a3a"
+   }
+  },
+  "LOCAL": {
+   "preset": "hbc_man",
+   "name": "A Victoria local"
+  },
+  "MEMBER": {
+   "preset": "governor",
+   "name": "A church member",
+   "spec": {
+    "hair": "#9a8a7a"
+   }
+  },
+  "EXPERT": {
+   "preset": "governor",
+   "name": "A Geneva expert",
+   "spec": {
+    "hair": "#c8c0b0",
+    "glasses": 1
+   }
+  }
+ },
+ "id": "sb-vc-test",
+ "short": true,
+ "film": true,
+ "title": "t",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Palms on a beach at dawn.",
+    "scene": {
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.6,
+       "depth": 0.3
+      },
+      {
+       "type": "land",
+       "kind": "sand",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "palms",
+       "y": 0.8,
+       "n": 6,
+       "depth": 0.7
+      }
+     ]
+    },
+    "cam": {
+     "lon": -80.19,
+     "lat": 25.77,
+     "scale": 9000
+    }
+   },
+   {
+    "say": "A city at night with neon.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.74,
+       "depth": 0.3
+      },
+      {
+       "type": "city",
+       "y": 0.74,
+       "night": true,
+       "neon": true,
+       "depth": 0.4
+      },
+      {
+       "type": "palms",
+       "y": 0.95,
+       "n": 5,
+       "h": 360,
+       "depth": 0.85
+      }
+     ]
+    }
+   },
+   {
+    "say": "Deco hotels and a police car.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "deco",
+       "y": 0.8,
+       "night": true,
+       "depth": 0.45
+      },
+      {
+       "type": "car",
+       "kind": "police",
+       "x": 0.5,
+       "y": 0.95,
+       "s": 0.9,
+       "depth": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "say": "Boats crowded with people.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.5,
+       "depth": 0.3
+      },
+      {
+       "type": "boats",
+       "n": 4,
+       "y": 0.72,
+       "depth": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "A van in a parking lot outside a liquor store.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "shopfront",
+       "text": "CROWN LIQUORS",
+       "y": 0.8,
+       "depth": 0.4
+      },
+      {
+       "type": "car",
+       "kind": "van",
+       "text": "HAPPY TIME|COMPLETE PARTY SUPPLY",
+       "x": 0.3,
+       "y": 0.95,
+       "depth": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "say": "A bus crashing a fence.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "town",
+       "y": 0.7,
+       "n": 10,
+       "depth": 0.3
+      },
+      {
+       "type": "fence",
+       "y": 0.85,
+       "broken": 0.6,
+       "depth": 0.6
+      },
+      {
+       "type": "bus",
+       "drive": [
+        0.1,
+        0.6,
+        0,
+        3
+       ],
+       "y": 0.92,
+       "s": 0.8,
+       "depth": 0.7
+      }
+     ]
+    }
+   },
+   {
+    "say": "An overpass over wooden houses.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "houses",
+       "y": 0.82,
+       "depth": 0.5
+      },
+      {
+       "type": "highway",
+       "y": 0.35,
+       "depth": 0.7
+      }
+     ]
+    }
+   },
+   {
+    "say": "A steam train, a woman and a man in a fedora.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "train",
+       "drive": [
+        0.2,
+        0.9,
+        0,
+        6
+       ],
+       "y": 0.78,
+       "s": 0.7,
+       "depth": 0.5
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "tuttle",
+         "x": 0.25,
+         "y": 0.98,
+         "h": 0.55
+        },
+        {
+         "preset": "capone",
+         "x": 0.45,
+         "y": 0.98,
+         "h": 0.55
+        },
+        {
+         "preset": "castro",
+         "x": 0.6,
+         "y": 0.98,
+         "h": 0.55
+        },
+        {
+         "preset": "miami_cop",
+         "x": 0.75,
+         "y": 0.98,
+         "h": 0.55
+        },
+        {
+         "preset": "dealer80s",
+         "x": 0.9,
+         "y": 0.98,
+         "h": 0.55
+        }
+       ],
+       "depth": 0.9
+      }
+     ]
+    }
+   },
+   {
+    "say": "Hurricane palms in a storm.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.6,
+       "depth": 0.3
+      },
+      {
+       "type": "land",
+       "kind": "sand",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "palms",
+       "y": 0.82,
+       "n": 6,
+       "wind": 0.9,
+       "depth": 0.7
+      },
+      {
+       "type": "neon",
+       "text": "VICE CITY",
+       "y": 0.3
+      }
+     ],
+     "weather": "storm"
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [],
+ "photos": {}
+}
