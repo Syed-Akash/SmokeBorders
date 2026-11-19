@@ -149,13 +149,13 @@
     clerk: { coat: '#2f3b33', coat2: '#e3dccb', trim: '#8a7a5a', hairStyle: 'short', hair: '#3b2a1a', glasses: 1 },
     worker: { coat: '#6a5a44', coat2: '#b8a888', trim: '#5a4a34', hairStyle: 'short', hair: '#2a1d12' },
     coast_salish: { coat: '#7a3b22', coat2: '#2a1a12', trim: '#c8462e', hairStyle: 'long', hair: '#141010', skin: '#c99068' },   // Coast Salish peoples: cedar-red blanket, long hair
-    woman: { coat: '#5a3a4a', coat2: '#e8dccb', trim: '#a88a6a', hairStyle: 'long', hair: '#3a2416' },
+    woman: { coat: '#5a3a4a', coat2: '#e8dccb', trim: '#a88a6a', hairStyle: 'flowing', hair: '#3a2416' },
     settler: { coat: '#6b4f33', coat2: '#c9b58a', hat: 'tophat', hatCol: '#4a3a2a', trim: '#8a6a47', hairStyle: 'short', hair: '#7a5230', beard: 'full' },
     hbc_man: { coat: '#2f4a3a', coat2: '#d8d1c0', hat: 'tophat', hatCol: '#222', trim: '#b3202a', hairStyle: 'short', hair: '#a0522d', beard: 'mustache' },
     douglas: { coat: '#2a2a33', coat2: '#e9e2d0', hairStyle: 'short', hair: '#d8d3cb', skin: '#c99068', medal: 1 },
     korean: { coat: '#f1ede2', coat2: '#c8102e', hairStyle: 'short', hair: '#1c1a1a', skin: '#efc49c' },
     rhee: { coat: '#2b2b33', coat2: '#e9e2d0', hairStyle: 'short', hair: '#d8d3cb', glasses: 1, skin: '#efc49c' },
-    tuttle: { coat: '#2a2430', coat2: '#e8dccb', trim: '#8a6a5a', hairStyle: 'long', hair: '#5a4030', female: 1 },   // Julia Tuttle, 1890s
+    tuttle: { coat: '#2a2430', coat2: '#e8dccb', trim: '#8a6a5a', hairStyle: 'flowing', hair: '#5a4030', female: 1 },   // Julia Tuttle, 1890s
     flagler: { coat: '#2a2a30', coat2: '#e9e2d0', hairStyle: 'short', hair: '#e8e4dc', beard: 'mustache' },
     capone: { coat: '#4a4a52', coat2: '#e8e0d0', hat: 'fedora', hatCol: '#e8e2d4', trim: '#b3202a', hairStyle: 'short', hair: '#1c1a1a', skin: '#e8b890' },
     rumrunner: { coat: '#5a4a3a', coat2: '#c8b898', hat: 'fedora', hatCol: '#3a3028', trim: '#5a4a34', hairStyle: 'short', hair: '#3a2a1a', beard: 'mustache' },
@@ -164,10 +164,10 @@
     cuban_soldier: { coat: '#5a6340', coat2: '#4a5232', hat: 'kepi', hatCol: '#4a5232', trim: '#2a2a1a', hairStyle: 'short', hair: '#1c1a1a', skin: '#d8a070', beard: 'mustache' },
     castro: { coat: '#5a6340', coat2: '#4a5232', hat: 'kepi', hatCol: '#4a5232', trim: '#2a2a1a', hairStyle: 'short', hair: '#1c1a1a', skin: '#e0b088', beard: 'full' },
     refugee: { coat: '#d9d2c0', coat2: '#a8a090', trim: '#7a7060', hairStyle: 'short', hair: '#1c1a1a', skin: '#d8a070' },
-    refugee_woman: { coat: '#7a9ab0', coat2: '#e8e0d0', trim: '#5a7080', hairStyle: 'long', hair: '#1c1a1a', skin: '#d8a070', female: 1 },
+    refugee_woman: { coat: '#7a9ab0', coat2: '#e8e0d0', trim: '#5a7080', hairStyle: 'flowing', hair: '#1c1a1a', skin: '#d8a070', female: 1 },
     dealer80s: { coat: '#ece8de', coat2: '#e88aa8', trim: '#c8c0b0', hairStyle: 'short', hair: '#1c1a1a', skin: '#d8a070', glasses: 1 },
     detective80s: { coat: '#a8d8d0', coat2: '#f4f0e6', trim: '#e8a0b8', hairStyle: 'short', hair: '#b88a4a' },
-    reporter: { coat: '#7a3a3a', coat2: '#e8dccb', trim: '#a88a6a', hairStyle: 'long', hair: '#a0522d', female: 1, glasses: 1 },
+    reporter: { coat: '#7a3a3a', coat2: '#e8dccb', trim: '#a88a6a', hairStyle: 'flowing', hair: '#a0522d', female: 1, glasses: 1 },
     politician: { coat: '#2a2f3a', coat2: '#e9e2d0', trim: '#b3202a', hairStyle: 'short', hair: '#8a8478' },
     tequesta: { coat: '#a0623a', coat2: '#c88a5a', hairStyle: 'long', hair: '#1c1a1a', skin: '#b87850', trim: '#e8c35a' },
     citizen80s: { coat: '#4a5a7a', coat2: '#e8e0d0', trim: '#6a6458', hairStyle: 'short', hair: '#2a1d12', skin: '#8a5a3a' },

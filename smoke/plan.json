@@ -61,17 +61,32 @@
    "angle": "Hidden person: William Patrick Hitler, Hitler's British-born nephew, who joined the US Navy to fight his uncle. Thumbnail 'HITLER'S NEPHEW?'."
   },
   {
-   "id": "sb-rome-carthage",
-   "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
+   "id": "sb-vice-city",
+   "title": "How the Real Vice City Happened — Minute by Minute",
    "publish": "2026-11-24T16:00:00Z",
    "status": "scripted",
-   "audience": "US UK EU",
    "shorts": [
     {
      "publish": "2026-11-25T16:00:00Z"
     },
     {
      "publish": "2026-11-26T16:00:00Z"
+    }
+   ],
+   "note": "Owner, 19 Nov 2026: GTA 6 release-day topic, ~25 min. Shorts are the stories sb-vice-city-short1/2 (Do you know). Rendered in-session."
+  },
+  {
+   "id": "sb-rome-carthage",
+   "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
+   "publish": "2026-11-27T16:00:00Z",
+   "status": "scripted",
+   "audience": "US UK EU",
+   "shorts": [
+    {
+     "publish": "2026-11-28T16:00:00Z"
+    },
+    {
+     "publish": "2026-11-29T16:00:00Z"
     }
    ],
    "angle": "Hidden person: Hasdrubal the Boetharch's wife, who cursed him for surrendering and threw herself and her children into the burning temple (Appian, Punic Wars). Also: Hannibal's oath at 9 (Polybius). Expand to 30+ minutes before the render.",
@@ -82,15 +97,15 @@
   {
    "id": "sb-western-front",
    "title": "Your Life on Both Sides of the Western Front",
-   "publish": "2026-11-27T16:00:00Z",
+   "publish": "2026-11-30T16:00:00Z",
    "status": "idea",
    "audience": "UK AU CA DE",
    "shorts": [
     {
-     "publish": "2026-11-28T16:00:00Z"
+     "publish": "2026-12-01T16:00:00Z"
     },
     {
-     "publish": "2026-11-29T16:00:00Z"
+     "publish": "2026-12-02T16:00:00Z"
     }
    ],
    "angle": "Find one: a soldier or nurse on each side whose letters survive."
@@ -98,15 +113,15 @@
   {
    "id": "sb-korea-38th",
    "title": "How Two Men and a Map Split Korea",
-   "publish": "2026-11-30T16:00:00Z",
+   "publish": "2026-12-03T16:00:00Z",
    "status": "storyboard",
    "audience": "US CA AU",
    "shorts": [
     {
-     "publish": "2026-12-01T16:00:00Z"
+     "publish": "2026-12-04T16:00:00Z"
     },
     {
-     "publish": "2026-12-02T16:00:00Z"
+     "publish": "2026-12-05T16:00:00Z"
     }
    ],
    "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode.",
@@ -117,25 +132,9 @@
   {
    "id": "sb-berlin-wall",
    "title": "The Wall That Opened by MISTAKE",
-   "publish": "2026-12-03T16:00:00Z",
-   "status": "idea",
-   "audience": "DE US UK",
-   "shorts": [
-    {
-     "publish": "2026-12-04T16:00:00Z"
-    },
-    {
-     "publish": "2026-12-05T16:00:00Z"
-    }
-   ],
-   "angle": "Hidden person: Günter Schabowski and the note he hadn't read; the border guard Harald Jäger who opened the gate."
-  },
-  {
-   "id": "sb-cuban-missile",
-   "title": "13 Days From the End of the World: The Cuban Missile Crisis From Both Sides",
    "publish": "2026-12-06T16:00:00Z",
    "status": "idea",
-   "audience": "US",
+   "audience": "DE US UK",
    "shorts": [
     {
      "publish": "2026-12-07T16:00:00Z"
@@ -144,14 +143,14 @@
      "publish": "2026-12-08T16:00:00Z"
     }
    ],
-   "angle": "Hidden person: Vasili Arkhipov, the submarine officer who refused to launch."
+   "angle": "Hidden person: Günter Schabowski and the note he hadn't read; the border guard Harald Jäger who opened the gate."
   },
   {
-   "id": "sb-shortest-war",
-   "title": "The Shortest War EVER (38 Minutes)",
+   "id": "sb-cuban-missile",
+   "title": "13 Days From the End of the World: The Cuban Missile Crisis From Both Sides",
    "publish": "2026-12-09T16:00:00Z",
    "status": "idea",
-   "audience": "UK",
+   "audience": "US",
    "shorts": [
     {
      "publish": "2026-12-10T16:00:00Z"
@@ -160,20 +159,36 @@
      "publish": "2026-12-11T16:00:00Z"
     }
    ],
-   "angle": "Widen to the Scramble for Africa through Zanzibar; hidden person: Khalid bin Barghash, sultan for two days."
+   "angle": "Hidden person: Vasili Arkhipov, the submarine officer who refused to launch."
   },
   {
-   "id": "sb-mongols",
-   "title": "The Mongols: The Empire That Ignored Every Border",
+   "id": "sb-shortest-war",
+   "title": "The Shortest War EVER (38 Minutes)",
    "publish": "2026-12-12T16:00:00Z",
    "status": "idea",
-   "audience": "global",
+   "audience": "UK",
    "shorts": [
     {
      "publish": "2026-12-13T16:00:00Z"
     },
     {
      "publish": "2026-12-14T16:00:00Z"
+    }
+   ],
+   "angle": "Widen to the Scramble for Africa through Zanzibar; hidden person: Khalid bin Barghash, sultan for two days."
+  },
+  {
+   "id": "sb-mongols",
+   "title": "The Mongols: The Empire That Ignored Every Border",
+   "publish": "2026-12-15T16:00:00Z",
+   "status": "idea",
+   "audience": "global",
+   "shorts": [
+    {
+     "publish": "2026-12-16T16:00:00Z"
+    },
+    {
+     "publish": "2026-12-17T16:00:00Z"
     }
    ],
    "angle": "Find one: a person on the receiving end (a city's governor, a merchant, an envoy)."

@@ -436,7 +436,7 @@
           c.beginPath(); c.arc(px, -60 - ph, 11, 0, 7); c.fill(); c.fillRect(px - 9, -60 - ph + 8, 18, ph - 8) }
         c.restore() } },
     car: (c, W, H, u, p) => {   // a 1970s/80s car: sedan, van ("text" on the side) or police (lights); drive: [x0, x1, t0, t1]
-      const s = p.s || 1, k = p.kind || 'sedan', y = H * (p.y || .86); let x = W * (p.x || .5);
+      const s = p.s || 1, k = p.kind || 'sedan', y = H * Math.min(p.y || .86, .8 + .05 / s); let x = W * (p.x || .5);   // never let a car sink below the frame
       if (p.drive) { const [a, b, t0, t1] = p.drive, f = clamp((u - t0) / Math.max(.1, t1 - t0), 0, 1); x = W * lerp(a, b, io(f)) }
       c.save(); c.translate(x, y); c.scale(s * (p.facing || 1), s); const body = p.col || (k === 'police' ? '#e8e8e8' : k === 'van' ? '#f0ece0' : '#7a2a2a');
       c.fillStyle = 'rgba(0,0,0,.35)'; c.beginPath(); c.ellipse(0, 4, 240, 18, 0, 0, 7); c.fill();
@@ -447,7 +447,7 @@
       c.fillStyle = '#111'; for (const wx of [-150, 150]) { c.beginPath(); c.arc(wx, -28, 38, 0, 7); c.fill(); c.fillStyle = '#888'; c.beginPath(); c.arc(wx, -28, 14, 0, 7); c.fill(); c.fillStyle = '#111' }
       c.restore() },
     bus: (c, W, H, u, p) => {   // a city bus (Havana's route 79 Leyland); drive: [x0, x1, t0, t1]
-      const s = p.s || 1, y = H * (p.y || .86); let x = W * (p.x || .5);
+      const s = p.s || 1, y = H * Math.min(p.y || .86, .82 + .04 / s); let x = W * (p.x || .5);
       if (p.drive) { const [a, b, t0, t1] = p.drive, f = clamp((u - t0) / Math.max(.1, t1 - t0), 0, 1); x = W * lerp(a, b, f * f) }
       c.save(); c.translate(x, y); c.scale(s * (p.facing || 1), s); c.fillStyle = 'rgba(0,0,0,.35)'; c.beginPath(); c.ellipse(0, 4, 380, 20, 0, 0, 7); c.fill();
       c.fillStyle = p.col || '#d8c070'; c.beginPath(); c.roundRect(-380, -260, 760, 230, 22); c.fill(); c.fillStyle = '#6a3a2a'; c.fillRect(-380, -110, 760, 16);

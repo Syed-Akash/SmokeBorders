@@ -33,18 +33,51 @@
  "abTest": [
   {
    "title": "How the Real Vice City Happened — Minute by Minute",
-   "thumb": {}
+   "thumb": {
+    "layout": "spotlight",
+    "anchor": {
+     "portrait": "smoke/portraits/reagan.png"
+    },
+    "hidden": {
+     "portrait": "smoke/portraits/castro.png"
+    },
+    "hook": [
+     "125,000",
+     "IN ONE SUMMER"
+    ],
+    "hi": "125,000"
+   }
   },
   {
    "title": "The 90 Years That Made Vice City",
    "thumb": {
-    "layout": "circled"
+    "layout": "circled",
+    "anchor": {
+     "portrait": "smoke/portraits/reagan.png"
+    },
+    "hidden": {
+     "portrait": "smoke/portraits/castro.png"
+    },
+    "hook": [
+     "IT STARTED WITH A BUS"
+    ],
+    "hi": "BUS"
    }
   },
   {
    "title": "How the Real Vice City Happened — Minute by Minute",
    "thumb": {
-    "layout": "dossier"
+    "layout": "dossier",
+    "hidden": {
+     "portrait": "smoke/portraits/castro.png"
+    },
+    "hook": [
+     "THE REAL",
+     "VICE CITY"
+    ],
+    "hi": "VICE CITY",
+    "caption": "Fidel Castro, 1959",
+    "stamp": "UNTOLD STORY"
    }
   }
  ],

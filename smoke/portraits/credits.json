@@ -53,5 +53,21 @@
   "artist": "Unknown (Democrat and Chronicle, 8 Feb 1946)",
   "page": "https://commons.wikimedia.org/wiki/File:Hitler_kin_out_of_Navy.jpg",
   "note": "cropped to William Patrick Hitler (left)"
+ },
+ "castro": {
+  "title": "File:Fidel Castro - MATS Terminal Washington 1959.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Fidel_Castro_-_MATS_Terminal_Washington_1959.jpg/1280px-Fidel_Castro_-_MATS_Terminal_Washington_1959.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Fidel_Castro_-_MATS_Terminal_Washington_1959.jpg",
+  "license": "Public domain",
+  "artist": "",
+  "credit": "This image  is available from the United States Library of Congress's Prints and Photographs division under the digital ID ppmsc.03256.This tag does not indicate the copyright status of the attached w"
+ },
+ "reagan": {
+  "title": "File:Official Portrait of President Reagan 1981.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/1280px-Official_Portrait_of_President_Reagan_1981.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg",
+  "license": "Public domain",
+  "artist": "Michael Evans",
+  "credit": "https://www.dodmedia.osd.mil/DVIC_View/Still_Details.cfm?SDAN=DASC9003096&amp;JPGPath=/Assets/Still/1990/Army/DA-SC-90-03096.JPG[dead link]"
  }
 }
