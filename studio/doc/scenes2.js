@@ -241,12 +241,15 @@
     k.strokeStyle = '#c8102e'; k.lineWidth = 10; k.beginPath(); k.moveTo(0, 0); k.lineTo(W, H); k.moveTo(W, 0); k.lineTo(0, H); k.stroke(); k.restore();
     k.fillStyle = '#fff'; k.fillRect(W / 2 - 25, 0, 50, H); k.fillRect(0, H / 2 - 25, W, 50); k.fillStyle = '#c8102e'; k.fillRect(W / 2 - 15, 0, 30, H); k.fillRect(0, H / 2 - 15, W, 30);
     return UJ = cv }
-  function flag(c, x, y, w, h, cols, u, vertical) { if (cols === FLAGS.uk) { const im = unionJack(), n = 24; for (let s = 0; s < n; s++) { const f = s / n, dy = Math.sin(f * 5 - u * 4) * h * .08 * f;
+  function flag(c, x, y, w, h, cols, u, vertical) { if (cols === FLAGS.cu) { flag(c, x, y, w, h, FLAGS.cu.slice(), u); c.fillStyle = '#cf142b'; c.beginPath(); c.moveTo(x, y); c.lineTo(x + w * .42, y + h / 2 + Math.sin(-u * 4) * h * .02); c.lineTo(x, y + h); c.closePath(); c.fill();
+      c.fillStyle = '#fff'; c.font = `${h * .32}px serif`; c.textAlign = 'center'; c.fillText('★', x + w * .14, y + h * .62); return }
+    if (cols === FLAGS.pe) return flag(c, x, y, w, h, FLAGS.pe.slice(), u, true);
+    if (cols === FLAGS.uk) { const im = unionJack(), n = 24; for (let s = 0; s < n; s++) { const f = s / n, dy = Math.sin(f * 5 - u * 4) * h * .08 * f;
       c.drawImage(im, im.width * f, 0, im.width / n + 1, im.height, x + w * f, y + dy, w / n + 1, h) } return }
     for (let i = 0; i < cols.length; i++) { c.fillStyle = cols[i]; c.beginPath(); const n = cols.length;
       const a = i / n, b = (i + 1) / n; c.moveTo(x, y + h * a); for (let s = 0; s <= 12; s++) { const f = s / 12; c.lineTo(x + w * f, y + h * a + Math.sin(f * 5 - u * 4) * h * .08 * f) } for (let s = 12; s >= 0; s--) { const f = s / 12; c.lineTo(x + w * f, y + h * b + Math.sin(f * 5 - u * 4) * h * .08 * f) } c.fill() }
     if (cols === FLAGS.jp) { const dy = Math.sin(.5 * 5 - u * 4) * h * .08 * .5; c.fillStyle = '#bc002d'; c.beginPath(); c.arc(x + w * .5, y + h * .5 + dy, h * .3, 0, 7); c.fill() } }
-  const FLAGS = { us: ['#b22234', '#fff', '#b22234', '#fff', '#b22234', '#fff', '#b22234'], uk: ['#012169', '#c8102e', '#012169'], hbc: ['#c8102e', '#c8102e', '#fff'], fr: ['#0055a4', '#fff', '#ef4135'], de: ['#000', '#fff', '#c00'], ru: ['#fff', '#0039a6', '#d52b1e'], jp: ['#fff', '#fff', '#fff'], red: ['#b3161c'], white: ['#eee'] };
+  const FLAGS = { us: ['#b22234', '#fff', '#b22234', '#fff', '#b22234', '#fff', '#b22234'], uk: ['#012169', '#c8102e', '#012169'], hbc: ['#c8102e', '#c8102e', '#fff'], fr: ['#0055a4', '#fff', '#ef4135'], de: ['#000', '#fff', '#c00'], ru: ['#fff', '#0039a6', '#d52b1e'], jp: ['#fff', '#fff', '#fff'], cu: ['#002a8f', '#fff', '#002a8f', '#fff', '#002a8f'], pe: ['#d91023', '#fff', '#d91023'], red: ['#b3161c'], white: ['#eee'] };
   function ship(c, x, y, s, u, o = {}) {   // a sailing warship (o.steam adds a funnel and smoke)
     c.save(); c.translate(x, y + Math.sin(u * 1.2 + x) * 3 * s); c.scale(s * (o.facing || 1), s); const col = o.col || '#15110d';
     if (o.modern) {   // a 20th-century steel ship (WW2 stories): long low hull, bridge, gun turrets, one funnel, a thin mast; no sails
@@ -396,6 +399,92 @@
           const pose = q.pose === 'lean' ? 'think' : q.pose || (['hips', 'cross', 'idle', 'shrug'][Math.floor(rnd(q.x * 31) * 4)]);
           actor(c, W, H, { preset: q.preset || p.preset || (q.hat === 'wide' ? 'settler' : 'civilian'), spec: q.spec, x: q.x, y: Math.min(.97, (q.y || 1.04) - .06), h: (q.h || .8) * .78, facing: q.facing, pose, mood: q.mood, talk: q.talk, act: q.act, walk: q.walk, prop: q.prop }, u + q.x * 3, S._env); continue }
         figure(c, W, H, W * q.x, H * (q.y || 1.04), H * (q.h || .8), q, u + q.x * 10, W * (p.lx || .5), H * (p.ly || .4), p.warm || '255,170,90') } },
+    // ---- Miami / 20th-century parts (The Real Vice City, 19 Nov 2026) ----
+    palms: (c, W, H, u, p) => {   // a row of palm trees; wind (0-1) bends them, storm makes them thrash
+      const y = H * (p.y || .74), n = p.n || 7, wind = p.wind || .15;
+      for (let i = 0; i < n; i++) { const x = W * ((p.x0 != null ? p.x0 : .04) + i * (p.gap || .14) + (rnd(i * 3 + (p.seed || 1)) - .5) * .04), h = (p.h || 420) * (.75 + rnd(i + 7 + (p.seed || 1)) * .45);
+        const sway = Math.sin(u * (1.2 + wind * 3) + i) * (12 + wind * 60) + wind * 120, tx = x + sway, ty = y - h;
+        c.strokeStyle = p.col || '#3a2a1a'; c.lineCap = 'round'; c.lineWidth = 16 * (h / 420); c.beginPath(); c.moveTo(x, y); c.quadraticCurveTo(x + sway * .2 + (rnd(i) - .5) * 60, y - h * .5, tx, ty); c.stroke();
+        c.strokeStyle = p.leaf || '#22381c'; c.lineWidth = 7 * (h / 420);
+        for (let k = 0; k < 9; k++) { const a = -Math.PI / 2 + (k - 4) * .38 + Math.sin(u * (2 + wind * 6) + k + i) * (.05 + wind * .25) + wind * .6, L = 150 * (h / 420) * (.8 + rnd(k + i) * .4);
+          const ex = tx + Math.cos(a) * L, ey = ty + Math.sin(a) * L * .55 + L * .35; c.beginPath(); c.moveTo(tx, ty); c.quadraticCurveTo(tx + Math.cos(a) * L * .55, ty + Math.sin(a) * L * .6 - 20, ex, ey); c.stroke() } } },
+    city: (c, W, H, u, p) => {   // a modern skyline: towers, lit windows at night, neon trims
+      const y = H * (p.y || .7), n = p.n || 16, night = p.night;
+      for (let i = 0; i < n; i++) { const w = 70 + rnd(i * 5 + (p.seed || 2)) * 110, h = (p.h || 360) * (.4 + rnd(i * 7 + (p.seed || 2)) * .9), x = (W + 200) * i / n - 100 + rnd(i) * 30;
+        c.fillStyle = p.col || (night ? '#141826' : '#5a6474'); c.fillRect(x, y - h, w, h);
+        for (let r = 0; r < h / 26 - 1; r++) for (let k = 0; k < w / 22 - 1; k++) { const on = rnd(i * 31 + r * 7 + k) > (night ? .55 : 2);
+          c.fillStyle = on ? 'rgba(255,214,140,.85)' : night ? 'rgba(40,50,70,.6)' : 'rgba(200,215,230,.35)'; c.fillRect(x + 8 + k * 22, y - h + 10 + r * 26, 12, 14) }
+        if (p.neon && rnd(i + 99) > .55) { const col = ['255,60,170', '40,220,255', '255,140,40'][i % 3]; c.save(); c.globalCompositeOperation = 'lighter'; c.strokeStyle = `rgba(${col},${.7 + Math.sin(u * 3 + i) * .2})`; c.lineWidth = 5; c.shadowColor = `rgb(${col})`; c.shadowBlur = 24; c.strokeRect(x + 4, y - h + 4, w - 8, h * .12); c.restore() } }
+      if (night) glow(c, W / 2, y, W * .7, '255,90,180', .06) },
+    deco: (c, W, H, u, p) => {   // Art Deco hotel fronts in pastel, with neon signs at night
+      const y = H * (p.y || .78), n = p.n || 5, cols = ['#f2b5c4', '#a8e0d8', '#f6e0a8', '#c8b8f0', '#f4f0e6'], words = p.words || ['HOTEL', 'BAR', 'CAFE', 'HOTEL', 'GRILL'];
+      for (let i = 0; i < n; i++) { const w = W / n - 30, x = i * W / n + 15, h = (p.h || 360) * (.85 + rnd(i + 3) * .3);
+        c.fillStyle = p.night ? '#3a3448' : cols[i % cols.length]; c.fillRect(x, y - h, w, h); c.fillRect(x + w * .35, y - h - 60, w * .3, 60);
+        c.fillStyle = 'rgba(0,0,0,.18)'; for (let r = 0; r < 3; r++) c.fillRect(x + 20, y - h + 60 + r * 90, w - 40, 14);
+        c.fillStyle = p.night ? 'rgba(255,210,140,.7)' : 'rgba(40,60,80,.55)'; for (let r = 0; r < 3; r++) for (let k = 0; k < 4; k++) c.fillRect(x + 22 + k * (w - 44) / 4, y - h + 84 + r * 90, (w - 44) / 4 - 14, 40);
+        if (p.night || p.neon) { const col = ['255,60,170', '40,220,255', '255,180,60'][i % 3]; c.save(); c.globalCompositeOperation = 'lighter'; c.font = `700 ${Math.round(w * .16)}px ${BODY}`; c.textAlign = 'center';
+          c.fillStyle = `rgba(${col},${rnd(Math.floor(u * 6) + i) > .08 ? .95 : .3})`; c.shadowColor = `rgb(${col})`; c.shadowBlur = 30; c.fillText(words[i % words.length], x + w / 2, y - h + 40); c.restore() } } },
+    neon: (c, W, H, u, p) => { const x = W * (p.x || .5), y = H * (p.y || .3), col = p.col || '255,60,170'; c.save(); c.globalCompositeOperation = 'lighter'; c.font = `700 ${p.size || 110}px ${BODY}`; c.textAlign = 'center';
+      c.fillStyle = `rgba(${col},${rnd(Math.floor(u * 8)) > .1 ? .95 : .25})`; c.shadowColor = `rgb(${col})`; c.shadowBlur = 50; c.fillText(p.text || 'VICE', x, y); c.restore() },
+    boats: (c, W, H, u, p) => {   // small overloaded boats, bobbing, people standing shoulder to shoulder
+      const y = H * (p.y || .7), n = p.n || 4;
+      for (let i = 0; i < n; i++) { const s = (p.s || .7) * (1 - i * .12), x = W * ((p.x || .15) + i * (p.gap || .22)) + Math.sin(u * .3 + i) * 20 + (p.drift || 0) * u * 6, b = Math.sin(u * 1.4 + i * 1.7) * 8, yy = y + i * 18 * s + b;
+        c.save(); c.translate(x, yy); c.scale(s, s); c.rotate(Math.sin(u * 1.1 + i) * .03);
+        c.fillStyle = ['#d8d2c4', '#3a5a7a', '#8a3a2a', '#e8e0c8'][i % 4]; c.beginPath(); c.moveTo(-260, -60); c.lineTo(260, -60); c.lineTo(200, 30); c.lineTo(-220, 30); c.closePath(); c.fill();
+        c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(-250, -40, 500, 10); c.fillStyle = '#ece6d6'; c.fillRect(60, -150, 90, 90);
+        if (p.crowded !== false) for (let k = 0; k < 22; k++) { const px = -230 + k * 21 + rnd(k + i) * 6, ph = 70 + rnd(k * 3 + i) * 25; c.fillStyle = ['#2a2420', '#4a3a30', '#6a4a3a', '#1a1a22'][k % 4];
+          c.beginPath(); c.arc(px, -60 - ph, 11, 0, 7); c.fill(); c.fillRect(px - 9, -60 - ph + 8, 18, ph - 8) }
+        c.restore() } },
+    car: (c, W, H, u, p) => {   // a 1970s/80s car: sedan, van ("text" on the side) or police (lights); drive: [x0, x1, t0, t1]
+      const s = p.s || 1, k = p.kind || 'sedan', y = H * (p.y || .86); let x = W * (p.x || .5);
+      if (p.drive) { const [a, b, t0, t1] = p.drive, f = clamp((u - t0) / Math.max(.1, t1 - t0), 0, 1); x = W * lerp(a, b, io(f)) }
+      c.save(); c.translate(x, y); c.scale(s * (p.facing || 1), s); const body = p.col || (k === 'police' ? '#e8e8e8' : k === 'van' ? '#f0ece0' : '#7a2a2a');
+      c.fillStyle = 'rgba(0,0,0,.35)'; c.beginPath(); c.ellipse(0, 4, 240, 18, 0, 0, 7); c.fill();
+      c.fillStyle = body; if (k === 'van') { c.beginPath(); c.roundRect(-230, -210, 440, 180, 18); c.fill(); c.fillStyle = '#2a3440'; c.fillRect(150, -190, 55, 60) }
+      else { c.beginPath(); c.roundRect(-240, -100, 480, 70, 14); c.fill(); c.beginPath(); c.moveTo(-130, -100); c.lineTo(-80, -160); c.lineTo(90, -160); c.lineTo(140, -100); c.closePath(); c.fill(); c.fillStyle = '#2a3440'; c.fillRect(-70, -150, 70, 44); c.fillRect(10, -150, 70, 44) }
+      if (k === 'police') { c.fillStyle = '#1f3a6a'; c.fillRect(-240, -80, 480, 18); const on = Math.floor(u * 6) % 2; c.fillStyle = on ? '#ff2a2a' : '#2a6aff'; c.fillRect(-30, -178, 60, 18); glow(c, 0, -170, 160, on ? '255,40,40' : '40,110,255', .5) }
+      if (p.text) { c.fillStyle = p.textCol || '#b3202a'; c.font = `700 30px ${BODY}`; c.textAlign = 'center'; String(p.text).split('|').forEach((ln, i) => c.fillText(ln, -10, -150 + i * 36)) }
+      c.fillStyle = '#111'; for (const wx of [-150, 150]) { c.beginPath(); c.arc(wx, -28, 38, 0, 7); c.fill(); c.fillStyle = '#888'; c.beginPath(); c.arc(wx, -28, 14, 0, 7); c.fill(); c.fillStyle = '#111' }
+      c.restore() },
+    bus: (c, W, H, u, p) => {   // a city bus (Havana's route 79 Leyland); drive: [x0, x1, t0, t1]
+      const s = p.s || 1, y = H * (p.y || .86); let x = W * (p.x || .5);
+      if (p.drive) { const [a, b, t0, t1] = p.drive, f = clamp((u - t0) / Math.max(.1, t1 - t0), 0, 1); x = W * lerp(a, b, f * f) }
+      c.save(); c.translate(x, y); c.scale(s * (p.facing || 1), s); c.fillStyle = 'rgba(0,0,0,.35)'; c.beginPath(); c.ellipse(0, 4, 380, 20, 0, 0, 7); c.fill();
+      c.fillStyle = p.col || '#d8c070'; c.beginPath(); c.roundRect(-380, -260, 760, 230, 22); c.fill(); c.fillStyle = '#6a3a2a'; c.fillRect(-380, -110, 760, 16);
+      c.fillStyle = '#2a3440'; for (let i = 0; i < 6; i++) c.fillRect(-340 + i * 112, -230, 90, 80);
+      c.fillStyle = '#111'; c.font = `700 44px ${BODY}`; c.textAlign = 'center'; c.fillText(p.route || '79', 330, -180);
+      c.fillStyle = '#111'; for (const wx of [-250, 240]) { c.beginPath(); c.arc(wx, -28, 44, 0, 7); c.fill() } c.restore() },
+    fence: (c, W, H, u, p) => { const y = H * (p.y || .84), x0 = W * (p.x0 || 0), x1 = W * (p.x1 || 1), h = p.h || 220, br = p.broken;
+      c.strokeStyle = p.col || '#2a2a2a'; c.lineWidth = 6; for (let x = x0; x < x1; x += 40) { if (br && Math.abs(x - W * br) < 140) continue; c.beginPath(); c.moveTo(x, y); c.lineTo(x, y - h); c.stroke() }
+      c.lineWidth = 4; for (const f of [.15, .55, .95]) { c.beginPath(); c.moveTo(x0, y - h * f); if (br) { c.lineTo(W * br - 140, y - h * f); c.moveTo(W * br + 140, y - h * f) } c.lineTo(x1, y - h * f); c.stroke() } },
+    highway: (c, W, H, u, p) => {   // an elevated expressway on concrete pillars, traffic lights streaming
+      const y = H * (p.y || .45), t = p.t || 46; c.fillStyle = p.col || '#8a8a86'; c.fillRect(-300, y, W + 600, t); c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(-300, y + t, W + 600, 14);
+      for (let x = 60; x < W; x += 300) { c.fillStyle = '#7a7a76'; c.fillRect(x, y + t, 60, H); c.fillStyle = 'rgba(0,0,0,.18)'; c.fillRect(x + 40, y + t, 20, H) }
+      c.save(); c.globalCompositeOperation = 'lighter'; for (let i = 0; i < 12; i++) { const x = ((u * 260 + i * 260) % (W + 400)) - 200; glow(c, x, y - 10, 40, i % 2 ? '255,230,180' : '255,60,40', .7) } c.restore() },
+    houses: (c, W, H, u, p) => {   // small wooden houses with porches (Overtown, Colored Town)
+      const y = H * (p.y || .78), n = p.n || 6, cols = ['#d8c8a8', '#a8b8a0', '#e8d0b8', '#b8a898', '#c8d8d8'];
+      for (let i = 0; i < n; i++) { const w = W / n - 40, x = i * W / n + 20, h = 170 + rnd(i + (p.seed || 4)) * 40; c.fillStyle = cols[i % 5]; c.fillRect(x, y - h, w, h);
+        c.fillStyle = '#4a3a2a'; c.beginPath(); c.moveTo(x - 20, y - h); c.lineTo(x + w / 2, y - h - 90); c.lineTo(x + w + 20, y - h); c.closePath(); c.fill();
+        c.fillStyle = p.night ? 'rgba(255,200,120,.8)' : '#2a3440'; c.fillRect(x + w * .15, y - h + 40, w * .22, 50); c.fillRect(x + w * .63, y - h + 40, w * .22, 50); c.fillStyle = '#3a2a1a'; c.fillRect(x + w * .42, y - 100, w * .16, 100);
+        c.fillStyle = '#6a5a4a'; c.fillRect(x - 10, y - 110, w + 20, 10); for (let k = 0; k < 5; k++) c.fillRect(x - 5 + k * (w + 10) / 4, y - 110, 6, 110) } },
+    train: (c, W, H, u, p) => {   // a steam train crossing (Flagler's railway, 1896)
+      const y = H * (p.y || .8); let x = W * (p.x || .5); if (p.drive) { const [a, b, t0, t1] = p.drive, f = clamp((u - t0) / Math.max(.1, t1 - t0), 0, 1); x = W * lerp(a, b, f) }
+      c.fillStyle = '#3a2a1a'; c.fillRect(-300, y + 6, W + 600, 10); c.save(); c.translate(x, y); c.scale(p.s || 1, p.s || 1);
+      c.fillStyle = '#1c1c20'; c.fillRect(-260, -150, 300, 130); c.fillRect(40, -200, 150, 180); c.fillRect(-200, -220, 40, 70); c.fillStyle = '#b3202a'; c.fillRect(-260, -40, 450, 14);
+      for (let k = 1; k < 4; k++) { c.fillStyle = k % 2 ? '#5a3a22' : '#4a3020'; c.fillRect(-260 - k * 330, -170, 310, 150); c.fillStyle = 'rgba(255,220,150,.6)'; for (let w = 0; w < 4; w++) c.fillRect(-240 - k * 330 + w * 72, -150, 50, 40) }
+      c.fillStyle = '#111'; for (let k = -12; k < 3; k++) { c.beginPath(); c.arc(k * 85, -14, 26, 0, 7); c.fill() } c.restore();
+      smoke(c, x - 180 * (p.s || 1), y - 220 * (p.s || 1), u, 260, .25, 3) },
+    tv: (c, W, H, u, p) => {   // a TV / monitor glowing in a dark room, a neon city on screen (generic, never a game's own art)
+      const x = W * (p.x || .5), y = H * (p.y || .55), w = p.w || 760, h = w * .56; c.fillStyle = '#0c0c10'; c.beginPath(); c.roundRect(x - w / 2 - 24, y - h / 2 - 24, w + 48, h + 48, 18); c.fill();
+      const g = c.createLinearGradient(0, y - h / 2, 0, y + h / 2); g.addColorStop(0, '#ff5aa8'); g.addColorStop(.55, '#ffb35a'); g.addColorStop(.56, '#1a2a4a'); g.addColorStop(1, '#0a1020'); c.fillStyle = g; c.fillRect(x - w / 2, y - h / 2, w, h);
+      c.save(); c.beginPath(); c.rect(x - w / 2, y - h / 2, w, h); c.clip(); c.fillStyle = '#ffd27a'; c.beginPath(); c.arc(x, y + h * .05, h * .22, Math.PI, 0); c.fill();
+      for (let i = 0; i < 14; i++) { const bw = w / 18, bh = h * (.15 + rnd(i + 5) * .35), bx = x - w / 2 + i * w / 14; c.fillStyle = '#1a1028'; c.fillRect(bx, y + h * .06 - bh, bw, bh) }
+      for (let i = 0; i < 5; i++) { const px = x - w / 2 + (i + .5) * w / 5 + Math.sin(u + i) * 4; c.strokeStyle = '#0c1a14'; c.lineWidth = 6; c.beginPath(); c.moveTo(px, y + h / 2); c.lineTo(px + 8, y + h * .1); c.stroke() }
+      c.restore(); glow(c, x, y, w * .9, '255,120,180', .25); c.fillStyle = '#0c0c10'; c.fillRect(x - 40, y + h / 2 + 24, 80, H) },
+    shopfront: (c, W, H, u, p) => {   // a store front in a shopping centre, its sign lettered on (e.g. CROWN LIQUORS)
+      const y = H * (p.y || .82), x = W * (p.x || .5), w = p.w || 1100, h = p.h || 480; c.fillStyle = p.col || '#d8d0c0'; c.fillRect(x - w / 2, y - h, w, h);
+      c.fillStyle = '#2a3440'; c.fillRect(x - w / 2 + 40, y - h + 150, w - 80, h - 150); c.fillStyle = 'rgba(200,220,240,.18)'; c.fillRect(x - w / 2 + 40, y - h + 150, w - 80, 40);
+      c.fillStyle = p.signCol || '#b3202a'; c.fillRect(x - w / 2 + 60, y - h + 30, w - 120, 90); c.fillStyle = '#fff'; c.font = `700 64px ${BODY}`; c.textAlign = 'center'; c.fillText(p.text || 'STORE', x, y - h + 98) },
   };
   SH['set'] = (c, W, H, S, t, env) => {
     const u = S.u, C = cam(S, W, H), tm = S.time || 'day', sky = SKY[S.weather === 'storm' ? 'storm' : tm] || SKY.day; S._story = env.story; S._env = env;
