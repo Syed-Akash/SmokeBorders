@@ -51,7 +51,8 @@ function noiseCanvas(w,h,seedN){const c=document.createElement('canvas');c.width
   for(let y=0;y<h;y++)for(let x_=0;x_<w;x_++){const fx=x_/w*.998,fy=y/h*.998,v=val(fx,fy),dv=val(Math.min(.998,fx+1/w),Math.min(.998,fy+1/h))-v,shade=1+dv*9;
     const c_=col(Math.max(0,Math.min(1,(v-.3)*1.7)));const k=(y*w+x_)*4;img.data[k]=Math.min(255,c_[0]*shade);img.data[k+1]=Math.min(255,c_[1]*shade);img.data[k+2]=Math.min(255,c_[2]*shade);img.data[k+3]=255}
   g.putImageData(img,0,0);return c}
-let NOISE;async function sceneRelief(M){if(!LAND){const l=await(await fetch('../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land)}
+let NOISE,LAND10;async function sceneRelief(M){if(!LAND){const l=await(await fetch('../studio/doc/data/land-50m.json')).json();LAND=topojson.feature(l,l.objects.land)}
+  if(M.detail&&!LAND10){const l=await(await fetch('../studio/doc/data/land-10m.json')).json();LAND10=topojson.feature(l,l.objects.land)}const LAND_=LAND;if(M.detail)LAND=LAND10;
   const gj=await(await fetch('../studio/doc/data/world_'+(M.era||'1994')+'.geojson')).json();gj.features=gj.features.filter(f=>f.geometry&&d3.geoArea(f)<6);
   const pr=d3.geoMercator().center(M.center).scale(M.scale).translate([W*(M.cx||.5),H*(M.cy||.55)]),p=d3.geoPath(pr,x);
   let g=x.createRadialGradient(W*.5,H*.5,50,W*.5,H*.5,W*.8);g.addColorStop(0,'#1f6fd1');g.addColorStop(1,'#0a2f7a');x.fillStyle=g;x.fillRect(0,0,W,H);
@@ -60,7 +61,16 @@ let NOISE;async function sceneRelief(M){if(!LAND){const l=await(await fetch('../
   x.beginPath();for(const f of gj.features)p(f);x.strokeStyle='rgba(60,40,25,.35)';x.lineWidth=1.2;x.stroke();
   const hl=(M.hl||[]);for(const h of hl){x.save();x.beginPath();for(const f of gj.features)if(h.names.includes(f.properties.NAME))p(f);
     x.shadowColor=h.glow||'rgba(255,255,255,.95)';x.shadowBlur=22;x.fillStyle=h.color||'#e8141c';x.fill();x.shadowBlur=0;x.lineJoin='round';x.strokeStyle='rgba(255,255,255,.9)';x.lineWidth=4;x.stroke();x.strokeStyle=h.edge||'#8a0a0e';x.lineWidth=1.5;x.stroke();x.restore()}
-  x.beginPath();p(LAND);x.strokeStyle='rgba(30,40,60,.55)';x.lineWidth=1.5;x.stroke()}
+  x.beginPath();p(LAND);x.strokeStyle='rgba(30,40,60,.55)';x.lineWidth=1.5;x.stroke();
+  if(M.neon){ // Miami at night, neon (The Real Vice City, 20 Nov 2026): teal sea, dark magenta land with a street grid, pink and cyan coast glow
+    let gs_=x.createLinearGradient(0,0,W,H);gs_.addColorStop(0,'#0f5a7a');gs_.addColorStop(1,'#071a36');x.fillStyle=gs_;x.fillRect(0,0,W,H);
+    x.save();x.beginPath();p(LAND);x.clip();let gl=x.createLinearGradient(0,0,0,H);gl.addColorStop(0,'#5a1a4a');gl.addColorStop(1,'#24102e');x.fillStyle=gl;x.fillRect(0,0,W,H);
+    x.globalAlpha=.25;x.globalCompositeOperation='overlay';x.drawImage(NOISE,0,0,W,H);x.globalAlpha=1;x.globalCompositeOperation='source-over';
+    x.strokeStyle='rgba(255,170,220,.16)';x.lineWidth=1.2;const gs=M.grid||26;for(let i=0;i<W;i+=gs){x.beginPath();x.moveTo(i,0);x.lineTo(i,H);x.stroke()}for(let j=0;j<H;j+=gs){x.beginPath();x.moveTo(0,j);x.lineTo(W,j);x.stroke()}
+    x.strokeStyle='rgba(255,210,120,.28)';x.lineWidth=3;for(let i=0;i<W;i+=gs*5){x.beginPath();x.moveTo(i,0);x.lineTo(i,H);x.stroke()}for(let j=0;j<H;j+=gs*5){x.beginPath();x.moveTo(0,j);x.lineTo(W,j);x.stroke()}x.restore();
+    for(const [c_,w_,b_] of [['rgba(255,60,170,.95)',14,34],['rgba(80,235,255,.95)',4,12]]){x.save();x.beginPath();p(LAND);x.strokeStyle=c_;x.lineWidth=w_;x.shadowColor=c_;x.shadowBlur=b_;x.stroke();x.restore()}}
+  for(const [lon,lat,t] of (M.labels||[])){const q=pr([lon,lat]);x.save();x.font='40px ANTON';x.textAlign='center';x.fillStyle='#fff';x.shadowColor='rgba(0,0,0,.9)';x.shadowBlur=12;x.fillText(t,q[0],q[1]);x.beginPath();x.arc(q[0],q[1]+14,7,0,7);x.fillStyle='#ffd23a';x.fill();x.restore()}
+  LAND=LAND_}
 // ---------- no text over a person (owner, 12 Nov 2026: "make sure no image is covered with text") ----------
 // Every text box and every person is recorded while a layout draws; draw() then shrinks any person that touches text
 // (feet stay where they are, so the head moves down and away from a hook above) and draws again, up to 12 times.
