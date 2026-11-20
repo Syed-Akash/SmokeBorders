@@ -204,7 +204,7 @@
   {
    "id": "sb-korea-38th",
    "status": "render",
-   "note": "scheduled on the old channel for 15 Nov 2026 (bWtNC0Mk7hg); the owner let it go out"
+   "note": "20 Nov 2026: voice done (Turbo, 34.1 min, FILM CHECK passes; clips on wip/sb-korea-38th). Photos 5/17 fetched: Wikimedia answered 429 all morning. Next run: fetch the rest (story 'photos' now names exact Commons files), then make_doc --resume. Publishes 3 Dec."
   }
  ],
  "redoNote": "Owner, 17 Nov 2026: the old channel is deleted, so the redos are regular new-channel episodes in 'episodes' (AmRev 18 Nov, Rome 24 Nov, Korea 30 Nov). Korea still needs its dialogue pass here; when done, set its episode status to scripted (sbplan.py set sb-korea-38th scripted) and empty this list."
