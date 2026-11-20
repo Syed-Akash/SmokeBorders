@@ -40,7 +40,7 @@ def find(query):
 
 def info(title):
     w0 = next(iter(api(action='query', titles=title, prop='imageinfo', iiprop='size')['query']['pages'].values()))['imageinfo'][0]['width']
-    sw = max([x for x in (330, 500, 960, 1280) if x < w0] or [330])   # a standard thumbnail size SMALLER than the original, or Wikimedia serves the original (429)
+    sw = max([x for x in (120, 250, 330, 500, 960, 1280) if x < w0] or [120])   # a standard thumbnail size SMALLER than the original, or Wikimedia serves the original (429); small originals get 250 or 120
     p = next(iter(api(action='query', titles=title, prop='imageinfo', iiprop='url|size|extmetadata', iiurlwidth=sw)['query']['pages'].values()))
     ii = p['imageinfo'][0]; md = ii.get('extmetadata', {}); g = lambda k: re.sub('<[^>]+>', '', md.get(k, {}).get('value', '')).strip()
     src = ii.get('thumburl') or ii['url']   # Wikimedia asks for standard thumbnail sizes (1280 is one); originals get 429 from shared addresses
