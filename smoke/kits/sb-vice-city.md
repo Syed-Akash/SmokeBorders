@@ -151,3 +151,15 @@ In YouTube Studio: Content > the video > Details > A/B Testing. If all three tit
 
 **C.** How the Real Vice City Happened — Minute by Minute
    thumbnail (dossier): https://raw.githubusercontent.com/Syed-Akash/SmokeBorders/main/smoke/ab/sb-vice-city/c.jpg
+
+## Extra titles for Test & Compare (21 Nov 2026)
+```
+How GTA 6’s Vice City Really Happened — Minute by Minute
+```
+```
+The 90 Years That Made GTA 6’s Vice City
+```
+**Tags (updated, GTA 6 first):**
+```
+vice city, real vice city, gta 6, gta vi, grand theft auto vi, gta vice city, miami history, mariel boatlift, cocaine cowboys, miami vice, scarface, history of miami, gta 6 vice city, gta 6 real life, new gta game, gta 6 story, gta 6 map, gta 6 release, vice city real life, gta 6 history, florida history, cuban exile, 1980 miami riots, leonida, history documentary, animated history, both sides history, history, world history, history explained, history maps, animated map, borders, empires, war history
+```
