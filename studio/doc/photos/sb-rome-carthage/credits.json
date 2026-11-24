@@ -20,5 +20,29 @@
   "license": "Public domain",
   "artist": "J. M. W. Turner",
   "credit": "Web Gallery of Art:   Image  Info about artworkwga QS:P11807,\"/t/turner/1/105turne\""
+ },
+ "han4": {
+  "title": "File:Hannibal traverse le Rhône Henri Motte 1878.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Hannibal_traverse_le_Rh%C3%B4ne_Henri_Motte_1878.jpg/1280px-Hannibal_traverse_le_Rh%C3%B4ne_Henri_Motte_1878.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Hannibal_traverse_le_Rh%C3%B4ne_Henri_Motte_1878.jpg",
+  "license": "Public domain",
+  "artist": "Henri-Paul Motte",
+  "credit": "Self-scanned"
+ },
+ "archi": {
+  "title": "File:Archimedes Directing the Defenses of Syracuse.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Archimedes_Directing_the_Defenses_of_Syracuse.jpg/1280px-Archimedes_Directing_the_Defenses_of_Syracuse.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Archimedes_Directing_the_Defenses_of_Syracuse.jpg",
+  "license": "Public domain",
+  "artist": "Thomas Ralph Spence",
+  "credit": "www.artfinding.com/Biography/Spence-Thomas-Ralph"
+ },
+ "claw": {
+  "title": "File:Parigi griffe.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Parigi_griffe.jpg/1280px-Parigi_griffe.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Parigi_griffe.jpg",
+  "license": "Public domain",
+  "artist": "Giulio Parigi",
+  "credit": "http://www.math.nyu.edu/~crorres/Archimedes/Claw/illustrations.html"
  }
 }
