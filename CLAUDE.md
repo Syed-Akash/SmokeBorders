@@ -108,6 +108,11 @@ take two runs.
 - **The Real Vice City** (`sb-vice-city`, owner 19 Nov 2026, GTA 6 release day): 22.7 min, Shorts = stories sb-vice-city-short1/2,
   kit sent to the owner on 20 Nov for 24/25/26 Nov; Rome and later episodes moved 3 days later. Owner: 20-25 min is fine,
   exceed only if necessary. Full source lists that exceed YouTube's 10,000-character comment limit go to smoke/sources/<id>.md.
+- **24 Nov 2026 run:** Rome vs Carthage expanded (Archimedes, Sophonisba, the siege, Hasdrubal's wife in full) and rendered (34.6 min);
+  kit sent for 27/28/29 Nov with new "Do you know" Shorts (sb-rome-carthage-short1/2). Western Front drafted (3,630 words, ~25 min,
+  hidden person Capt. Robert Miles; tools/storyboard/western_front.py builds it and its two Shorts); still needs its photos (Wikimedia 429
+  all day), then `scripted`. New WW1 presets (tommy, german_1914, german_ww1, poilu, doughboy, nurse_ww1) and trench/wire/craters parts.
+  Only Wikimedia hosts are reachable from the run sandbox; research comes from Wikipedia pages.
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 
