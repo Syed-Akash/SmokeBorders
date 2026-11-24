@@ -506,7 +506,7 @@ def short(sid, title, beats, srcs):
     print('wrote', sid, sum(len(b.get('say', '').split()) for b in beats), 'words')
 SRC = story["sources"]
 short("sb-western-front-short1", "Do You Know the Last French Soldier of WW1 Died Carrying a Note About SOUP? #shorts", [
- B("Do you know the last French soldier killed in the First World War was carrying a note about soup?", card("10:45", "11 NOVEMBER 1918", "fifteen minutes before peace")),
+ B("Do you know the last French soldier killed in the First World War was carrying a note about soup?", card("10:45", "11 NOVEMBER 1918", "fifteen minutes before peace"), cam=MAP(4.85, 49.7, 9000)),
  B("Eleventh of November 1918. The armistice is signed at five in the morning. The guns stop at eleven.", card("05:00", "COMPIÈGNE", "the armistice is signed")),
  B("Augustin Trébuchon is a messenger. He is forty, a shepherd, and he plays the accordion at village weddings.",
    S('day', [{"type": "sea", "y": 0.7, "depth": 0.3}, actors(A('poilu', 0.45, 'walk', 1, prop='paper', walk=[0.3, 0.55, 0, 5]))], weather='rain')),
@@ -519,7 +519,7 @@ short("sb-western-front-short1", "Do You Know the Last French Soldier of WW1 Die
 ], [SRC[11], SRC[13]])
 short("sb-western-front-short2", "Do You Know Germany Tried to SAVE This Painter From the War? #shorts", [
  B("Do you know Germany made a list of famous artists to pull out of the trenches, and one of them died before the order arrived?",
-   photo("marc", "Franz Marc", room('day', A('german_ww1', 0.45, 'think', 1), wall='#5a6a7a', lamp=0))),
+   photo("marc", "Franz Marc", room('day', A('german_ww1', 0.45, 'think', 1), wall='#5a6a7a', lamp=0)), cam=MAP(5.39, 49.16, 9000)),
  B("His name was Franz Marc. Before the war, he painted blue horses.",
    photo("bluehorse", "Blue Horse I (Franz Marc, 1911)", S('day', [{"type": "hills", "y": 0.6, "n": 3, "seed": 5, "depth": 0.2}, {"type": "animal", "kind": "horse", "x": 0.5, "s": 1.6, "y": 0.86, "walk": False, "facing": 1, "depth": 0.8}]), move='right')),
  B("At the front, he painted camouflage covers, to hide positions from aircraft. In styles, he said, from Manet to Kandinsky.",

@@ -272,6 +272,11 @@
      "time": "10:45",
      "place": "11 NOVEMBER 1918",
      "date": "fifteen minutes before peace"
+    },
+    "cam": {
+     "lon": 4.85,
+     "lat": 49.7,
+     "scale": 9000
     }
    },
    {

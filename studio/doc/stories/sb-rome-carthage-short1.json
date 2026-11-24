@@ -374,7 +374,7 @@
   },
   "HASD": {
    "preset": "carthaginian",
-   "name": "Hasdrubal, Carthage's last general",
+   "name": "Hasdrubal",
    "spec": {
     "hatCol": "#c8a24a",
     "beard": "full",
@@ -568,6 +568,11 @@
      "fx": [
       "light"
      ]
+    },
+    "cam": {
+     "lon": 15.29,
+     "lat": 37.08,
+     "scale": 9000
     }
    },
    {

@@ -13,7 +13,7 @@ def short(sid, title, bs, srcs):
     json.dump(sh, open(os.path.join(D, sid + '.json'), 'w'), indent=1, ensure_ascii=False); print(sid, sum(len(b.get('say', '').split()) for b in bs), 'words')
 S = ep['sources']
 short("sb-rome-carthage-short1", "Do You Know Rome ORDERED Its Soldiers Not to Kill Archimedes? #shorts", [
- B("Do you know a Roman general gave orders that Archimedes must not be killed, and a Roman soldier killed him anyway?", sc("One of the cities that went over")),
+ B("Do you know a Roman general gave orders that Archimedes must not be killed, and a Roman soldier killed him anyway?", sc("One of the cities that went over"), cam={"lon": 15.29, "lat": 37.08, "scale": 9000}),
  B("Syracuse, Sicily, 213 BC. Rome besieges the city. Inside lives the most famous inventor in the Greek world.", card("213 BC", "SYRACUSE", "the Roman siege begins")),
  B("His huge crane with a hook reaches over the wall, lifts Roman ships out of the sea, and drops them.", sc("Archimedes built machines")),
  {"talk": find("What is that thing")['talk'], "bg": sc("What is that thing")},
@@ -22,7 +22,7 @@ short("sb-rome-carthage-short1", "Do You Know Rome ORDERED Its Soldiers Not to K
  B("Rome captured the city. And lost the one man it wanted alive.", card("212 BC", "ARCHIMEDES", "killed against orders")),
 ], [S[17]])
 short("sb-rome-carthage-short2", "Do You Know a Roman Admiral Threw the SACRED CHICKENS Overboard? #shorts", [
- B("Do you know a Roman admiral threw the sacred chickens into the sea, and then lost almost his whole fleet?", sc("And then there is the admiral")),
+ B("Do you know a Roman admiral threw the sacred chickens into the sea, and then lost almost his whole fleet?", sc("And then there is the admiral"), cam={"lon": 12.51, "lat": 38.0, "scale": 9000}),
  B("249 BC, off Sicily. Rome is at war with Carthage. Its admiral, Claudius Pulcher, is about to attack at Drepana.", card("249 BC", "DREPANA, SICILY", "Claudius Pulcher attacks")),
  B("Before the attack, the priests report that the sacred chickens will not eat. A very bad omen.", sc("Admiral... the chickens")),
  {"talk": find("Admiral... the chickens")['talk'], "bg": sc("Admiral... the chickens")},
