@@ -623,21 +623,21 @@
       "on": "Hold",
       "scene": {
        "shot": "set",
-       "time": "dusk",
+       "time": "night",
        "parts": [
         {
          "type": "hills",
          "y": 0.58,
          "n": 2,
-         "seed": 9,
+         "seed": 91,
          "depth": 0.15
         },
         {
          "type": "fort",
          "x": 0.55,
          "y": 0.66,
-         "w": 760,
-         "h": 130,
+         "w": 740,
+         "h": 120,
          "flag": null,
          "depth": 0.5
         },
@@ -665,20 +665,20 @@
     ],
     "scene": {
      "shot": "set",
-     "time": "dusk",
+     "time": "dawn",
      "parts": [
       {
        "type": "hills",
        "y": 0.58,
        "n": 2,
-       "seed": 9,
+       "seed": 92,
        "depth": 0.15
       },
       {
        "type": "fort",
        "x": 0.55,
        "y": 0.66,
-       "w": 760,
+       "w": 780,
        "h": 130,
        "flag": null,
        "depth": 0.5
@@ -6844,7 +6844,43 @@
         "shot": "photo",
         "img": "archi",
         "move": "in",
-        "caption": "Archimedes Directing the Defenses of Syracuse (Thomas Ralph Spence, 1895)"
+        "caption": "Archimedes Directing the Defenses of Syracuse (Thomas Ralph Spence, 1895)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "fort",
+           "x": 0.5,
+           "y": 0.62,
+           "w": 900,
+           "h": 150,
+           "flag": null,
+           "depth": 0.45
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.4,
+             "facing": 1,
+             "h": 0.8,
+             "preset": "civilian",
+             "pose": "point",
+             "spec": {
+              "coat": "#e9e2d0",
+              "coat2": "#c8bfa8",
+              "beard": "full",
+              "hair": "#d8d3cb"
+             }
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
        }
       }
      ],
@@ -6890,7 +6926,42 @@
         "shot": "photo",
         "img": "claw",
         "move": "left",
-        "caption": "The Claw of Archimedes, wall painting (c. 1600)"
+        "caption": "The Claw of Archimedes, wall painting (c. 1600)",
+        "fallback": {
+         "shot": "set",
+         "time": "dusk",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.64,
+           "depth": 0.3
+          },
+          {
+           "type": "fort",
+           "x": 0.78,
+           "y": 0.62,
+           "w": 420,
+           "h": 170,
+           "flag": null,
+           "depth": 0.45
+          },
+          {
+           "type": "ships",
+           "n": 2,
+           "x": 0.2,
+           "s": 0.55,
+           "flag": "red",
+           "y": 0.7,
+           "gap": 260,
+           "steam": false,
+           "depth": 0.55
+          }
+         ],
+         "fx": [
+          "dust",
+          "smoke"
+         ]
+        }
        }
       },
       {
@@ -7114,7 +7185,47 @@
         "shot": "photo",
         "img": "archdeath",
         "move": "in",
-        "caption": "Archimedes and the Roman soldier (copy of a Roman mosaic)"
+        "caption": "Archimedes and the Roman soldier (copy of a Roman mosaic)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "room",
+           "flag": null,
+           "window": 0.5,
+           "night": false,
+           "depth": 0.3,
+           "seed": 19,
+           "wall": "#7a6a58"
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.35,
+             "facing": 1,
+             "h": 0.8,
+             "preset": "civilian",
+             "spec": {
+              "coat": "#e9e2d0",
+              "beard": "full",
+              "hair": "#d8d3cb"
+             }
+            },
+            {
+             "x": 0.62,
+             "facing": -1,
+             "h": 0.9,
+             "preset": "roman"
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
        }
       },
       {
@@ -7263,7 +7374,38 @@
      "scene": {
       "shot": "photo",
       "img": "han3",
-      "move": "right"
+      "move": "right",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.56,
+         "n": 3,
+         "seed": 131,
+         "depth": 0.15
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.5,
+           "facing": 1,
+           "h": 0.95,
+           "preset": "carthaginian",
+           "pose": "hips"
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ],
+       "fx": [
+        "light"
+       ]
+      }
      }
     },
     {
@@ -7827,7 +7969,38 @@
        "scene": {
         "shot": "photo",
         "img": "han3",
-        "move": "out"
+        "move": "out",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.56,
+           "n": 3,
+           "seed": 131,
+           "depth": 0.15
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.5,
+             "facing": 1,
+             "h": 0.95,
+             "preset": "carthaginian",
+             "pose": "hips"
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ],
+         "fx": [
+          "light"
+         ]
+        }
        }
       },
       {
@@ -8182,7 +8355,36 @@
         "shot": "photo",
         "img": "soph",
         "move": "in",
-        "caption": "Sophonisba (Simone Cantarini, c. 1638)"
+        "caption": "Sophonisba (Simone Cantarini, c. 1638)",
+        "fallback": {
+         "shot": "set",
+         "time": "dusk",
+         "parts": [
+          {
+           "type": "room",
+           "flag": null,
+           "window": 0.5,
+           "night": false,
+           "depth": 0.3,
+           "seed": 23,
+           "wall": "#4a3028"
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.5,
+             "facing": 1,
+             "h": 0.92,
+             "preset": "carthaginian_woman"
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
        }
       },
       {
@@ -8394,7 +8596,35 @@
       "shot": "photo",
       "img": "sci3",
       "move": "left",
-      "caption": "Scipio Africanus"
+      "caption": "Scipio Africanus",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "camp",
+         "x": 0.5,
+         "y": 0.76,
+         "n": 5,
+         "depth": 0.5
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.45,
+           "facing": 1,
+           "h": 0.92,
+           "preset": "scipio",
+           "pose": "point"
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      },
      "_new": 1
     },
@@ -8493,7 +8723,36 @@
       "shot": "photo",
       "img": "soph",
       "move": "right",
-      "caption": "Sophonisba (Simone Cantarini, c. 1638)"
+      "caption": "Sophonisba (Simone Cantarini, c. 1638)",
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.5,
+         "night": false,
+         "depth": 0.3,
+         "seed": 23,
+         "wall": "#4a3028"
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.5,
+           "facing": 1,
+           "h": 0.92,
+           "preset": "carthaginian_woman"
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      },
      "pause": 1.2,
      "_new": 1
@@ -9514,7 +9773,39 @@
         "focus": [
          0.5,
          0.4
-        ]
+        ],
+        "fallback": {
+         "shot": "set",
+         "time": "dawn",
+         "parts": [
+          {
+           "type": "sea",
+           "y": 0.66,
+           "depth": 0.3
+          },
+          {
+           "type": "hills",
+           "y": 0.56,
+           "n": 2,
+           "seed": 132,
+           "depth": 0.15
+          },
+          {
+           "type": "soldiers",
+           "y": 0.86,
+           "n": 12,
+           "rows": 2,
+           "x0": 0.0,
+           "gap": 80,
+           "col": "#5b2a6e",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
        }
       }
      ],
@@ -9697,7 +9988,39 @@
      "scene": {
       "shot": "photo",
       "img": "han4",
-      "move": "out"
+      "move": "out",
+      "fallback": {
+       "shot": "set",
+       "time": "dawn",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.66,
+         "depth": 0.3
+        },
+        {
+         "type": "hills",
+         "y": 0.56,
+         "n": 2,
+         "seed": 132,
+         "depth": 0.15
+        },
+        {
+         "type": "soldiers",
+         "y": 0.86,
+         "n": 12,
+         "rows": 2,
+         "x0": 0.0,
+         "gap": 80,
+         "col": "#5b2a6e",
+         "march": true,
+         "depth": 0.7
+        }
+       ],
+       "fx": [
+        "fog"
+       ]
+      }
      }
     },
     {
@@ -10595,7 +10918,7 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "dusk",
+      "time": "night",
       "parts": [
        {
         "type": "sea",
@@ -10630,6 +10953,9 @@
         "steam": false,
         "depth": 0.5
        }
+      ],
+      "fx": [
+       "embers"
       ]
      }
     },
@@ -10686,21 +11012,21 @@
      ],
      "scene": {
       "shot": "set",
-      "time": "day",
+      "time": "dusk",
       "parts": [
        {
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 9,
+        "seed": 93,
         "depth": 0.15
        },
        {
         "type": "fort",
         "x": 0.55,
         "y": 0.66,
-        "w": 760,
-        "h": 130,
+        "w": 820,
+        "h": 110,
         "flag": null,
         "depth": 0.5
        },
@@ -10785,40 +11111,6 @@
      "say": "Scipio Aemilianus built a huge mole of stone across the harbour mouth, to starve the city. So the Carthaginians dug a brand new channel to the sea, built a new fleet behind the walls, and sailed out to the Romans' complete surprise.",
      "do": [
       {
-       "on": "mole",
-       "scene": {
-        "shot": "set",
-        "time": "day",
-        "parts": [
-         {
-          "type": "sea",
-          "y": 0.62,
-          "depth": 0.3
-         },
-         {
-          "type": "land",
-          "kind": "sand",
-          "y": 0.7,
-          "depth": 0.5
-         },
-         {
-          "type": "soldiers",
-          "y": 0.86,
-          "n": 12,
-          "rows": 1,
-          "x0": 0.05,
-          "gap": 90,
-          "col": "#7a1d1d",
-          "march": true,
-          "depth": 0.7
-         }
-        ],
-        "fx": [
-         "dust"
-        ]
-       }
-      },
-      {
        "on": "sailed",
        "scene": {
         "shot": "set",
@@ -10848,10 +11140,43 @@
       }
      ],
      "scene": {
-      "shot": "photo",
-      "img": "ports",
-      "move": "left",
-      "caption": "The Punic harbours of Carthage, today"
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.6,
+        "depth": 0.3
+       },
+       {
+        "type": "coast",
+        "x0": 0.6,
+        "x1": 1.0,
+        "y": 0.6,
+        "h": 110,
+        "depth": 0.3
+       },
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.72,
+        "depth": 0.5
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 10,
+        "rows": 1,
+        "x0": 0.0,
+        "gap": 90,
+        "col": "#7a1d1d",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
      },
      "_new": 1
     },
@@ -11180,21 +11505,21 @@
        "on": "Hasdrubal",
        "scene": {
         "shot": "set",
-        "time": "dusk",
+        "time": "night",
         "parts": [
          {
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 9,
+          "seed": 94,
           "depth": 0.15
          },
          {
           "type": "fort",
           "x": 0.55,
           "y": 0.66,
-          "w": 760,
-          "h": 130,
+          "w": 700,
+          "h": 120,
           "flag": null,
           "depth": 0.5
          },
@@ -11234,7 +11559,40 @@
       "shot": "photo",
       "img": "ruins3",
       "move": "in",
-      "caption": "The Byrsa hill, Carthage, today"
+      "caption": "The Byrsa hill, Carthage, today",
+      "fallback": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.54,
+         "n": 2,
+         "seed": 77,
+         "depth": 0.15
+        },
+        {
+         "type": "fort",
+         "x": 0.5,
+         "y": 0.58,
+         "w": 600,
+         "h": 120,
+         "flag": null,
+         "depth": 0.4
+        },
+        {
+         "type": "fire",
+         "x": 0.55,
+         "y": 0.56,
+         "r": 260,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke",
+        "embers"
+       ]
+      }
      },
      "_new": 1
     },
@@ -11350,15 +11708,6 @@
      "say": "His wife saw it from the rampart. This is the woman from the start of our story. The ancient writers say she called out to Scipio, and blessed him. He was the enemy. He had done what enemies do.",
      "do": [
       {
-       "on": "wife",
-       "scene": {
-        "shot": "photo",
-        "img": "hwife",
-        "move": "in",
-        "caption": "Hasdrubal's wife (Pierre Woeiriot, 16th century)"
-       }
-      },
-      {
        "on": "ancient",
        "card": {
         "kind": "caption",
@@ -11371,20 +11720,20 @@
        "on": "Scipio",
        "scene": {
         "shot": "set",
-        "time": "dusk",
+        "time": "day",
         "parts": [
          {
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 9,
+          "seed": 95,
           "depth": 0.15
          },
          {
           "type": "fort",
           "x": 0.55,
           "y": 0.66,
-          "w": 760,
+          "w": 740,
           "h": 130,
           "flag": null,
           "depth": 0.5
@@ -11420,44 +11769,10 @@
       }
      ],
      "scene": {
-      "shot": "set",
-      "time": "dusk",
-      "parts": [
-       {
-        "type": "hills",
-        "y": 0.58,
-        "n": 2,
-        "seed": 9,
-        "depth": 0.15
-       },
-       {
-        "type": "fort",
-        "x": 0.55,
-        "y": 0.66,
-        "w": 760,
-        "h": 130,
-        "flag": null,
-        "depth": 0.5
-       },
-       {
-        "type": "people",
-        "list": [
-         {
-          "x": 0.5,
-          "facing": -1,
-          "h": 0.9,
-          "preset": "carthaginian_woman"
-         }
-        ],
-        "lx": 0.4,
-        "ly": 0.6,
-        "depth": 0.85
-       }
-      ],
-      "fx": [
-       "smoke",
-       "embers"
-      ]
+      "shot": "photo",
+      "img": "hwife",
+      "move": "in",
+      "caption": "Hasdrubal's wife (Pierre Woeiriot, 16th century)"
      },
      "_new": 1
     },
@@ -11647,7 +11962,40 @@
       "shot": "photo",
       "img": "burning",
       "move": "in",
-      "caption": "The fall of Carthage, 146 BC"
+      "caption": "The fall of Carthage, 146 BC",
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "town",
+         "y": 0.74,
+         "n": 14,
+         "gap": 130,
+         "h": 180,
+         "col": "#1d1612",
+         "depth": 0.4
+        },
+        {
+         "type": "fire",
+         "x": 0.3,
+         "y": 0.7,
+         "r": 320,
+         "depth": 0.4
+        },
+        {
+         "type": "fire",
+         "x": 0.7,
+         "y": 0.68,
+         "r": 280,
+         "depth": 0.4
+        }
+       ],
+       "fx": [
+        "smoke",
+        "embers"
+       ]
+      }
      },
      "pause": 1.5,
      "_new": 1
@@ -11971,7 +12319,56 @@
        "scene": {
         "shot": "photo",
         "img": "han5",
-        "move": "in"
+        "move": "in",
+        "fallback": {
+         "shot": "set",
+         "time": "night",
+         "parts": [
+          {
+           "type": "room",
+           "flag": null,
+           "window": 0.4,
+           "night": true,
+           "depth": 0.3,
+           "seed": 133,
+           "wall": "#3a2a22"
+          },
+          {
+           "type": "fire",
+           "x": 0.5,
+           "y": 0.72,
+           "r": 160,
+           "depth": 0.4
+          },
+          {
+           "type": "people",
+           "list": [
+            {
+             "x": 0.35,
+             "facing": 1,
+             "h": 0.95,
+             "preset": "carthaginian",
+             "spec": {
+              "beard": "full"
+             }
+            },
+            {
+             "x": 0.62,
+             "facing": -1,
+             "h": 0.6,
+             "preset": "carthaginian",
+             "spec": {
+              "hat": "none",
+              "beard": "none"
+             }
+            }
+           ],
+           "lx": 0.4,
+           "ly": 0.6,
+           "depth": 0.85
+          }
+         ]
+        }
        }
       }
      ],
@@ -12399,7 +12796,56 @@
       "focus": [
        0.5,
        0.4
-      ]
+      ],
+      "fallback": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.4,
+         "night": true,
+         "depth": 0.3,
+         "seed": 133,
+         "wall": "#3a2a22"
+        },
+        {
+         "type": "fire",
+         "x": 0.5,
+         "y": 0.72,
+         "r": 160,
+         "depth": 0.4
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.35,
+           "facing": 1,
+           "h": 0.95,
+           "preset": "carthaginian",
+           "spec": {
+            "beard": "full"
+           }
+          },
+          {
+           "x": 0.62,
+           "facing": -1,
+           "h": 0.6,
+           "preset": "carthaginian",
+           "spec": {
+            "hat": "none",
+            "beard": "none"
+           }
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ]
+      }
      }
     },
     {
@@ -13150,7 +13596,7 @@
   },
   "HASD": {
    "preset": "carthaginian",
-   "name": "Hasdrubal, Carthage's last general",
+   "name": "Hasdrubal",
    "spec": {
     "hatCol": "#c8a24a",
     "beard": "full",
