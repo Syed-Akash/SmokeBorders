@@ -23,6 +23,8 @@ def today_jobs(now=None):
                 if sd < 1.5: jobs.append((sd, 'SHORT %s #%d (publishes %s) was not uploaded with its episode: if the episode file is still in studio/out, cut it (cut_shorts.py %s auto) and upload it scheduled; otherwise mark it done with a note (sbplan.py short %s %d). Never write a new Short story for it.' % (e['id'], n, sh['publish'], e['id'], e['id'], n)))
             continue
         days = (datetime.datetime.fromisoformat(e['publish'].replace('Z', '+00:00')) - now).total_seconds() / 86400
+        if days < 0 and e['status'] == 'kit':   # owner uploads by hand (17 Nov 2026): a past kit is not late, it just lacks its video IDs
+            jobs.append((0, 'ASK the owner: %s (due %s) was sent as a kit; was it uploaded by hand? Record the video IDs in plan.json and set the status to uploaded. Do not re-render or move the plan.' % (e['id'], e['publish']))); continue
         if days < 0: jobs.append((0, 'LATE: %s was due %s and is still "%s". Finish it and upload it for the next free 16:00 UTC (move the later episodes down 3 days in plan.json, Shorts with them).' % (e['id'], e['publish'], e['status']))); continue
         if e['status'] == 'storyboard': continue   # a redo still in the redo queue (its REDO job finishes it)
         if e['status'] == 'idea' and days <= 7 and not wrote:

@@ -305,7 +305,12 @@
   "HistoryNet, Scipio Africanus: https://www.historynet.com/romes-craftiest-general-scipio-africanus.htm",
   "Dickinson College Commentaries, Chronology of Hannibal's life: https://dcc.dickinson.edu/node/240",
   "Plutarch, Life of Cato the Elder 26-27 (Perseus): https://cts.perseids.org/read/greekLit/tlg0007/tlg025/perseus-eng2/25.1-27.2",
-  "The Death of Carthage, Scipio Aemilianus destroys Carthage (Polybius XXXIX): https://thedeathofcarthage.com/1752/publius-cornelius-scipio-aemilianus-destroys-carthage/"
+  "The Death of Carthage, Scipio Aemilianus destroys Carthage (Polybius XXXIX): https://thedeathofcarthage.com/1752/publius-cornelius-scipio-aemilianus-destroys-carthage/",
+  "Wikipedia, Third Punic War (armour and catapults handed over, walls, mole and new channel, temple of Eshmun, 900 deserters, Hasdrubal's wife): https://en.wikipedia.org/wiki/Third_Punic_War",
+  "Wikipedia, Hasdrubal the Boetharch (Polybius on his wife; displayed in Scipio's triumph, lived in Italy): https://en.wikipedia.org/wiki/Hasdrubal_the_Boeotarch",
+  "Wikipedia, Siege of Syracuse 213-212 BC (Marcellus, the Claw, Artemis festival, Archimedes about 78, killed by a soldier against orders): https://en.wikipedia.org/wiki/Siege_of_Syracuse_(213%E2%80%93212_BC)",
+  "Wikipedia, Sophonisba (married Syphax 206 BC, Masinissa 203 BC, poison, Livy 30.12-15; Masinissa outlived her by 55 years): https://en.wikipedia.org/wiki/Sophonisba",
+  "Appian, The Punic Wars 130-131 and Polybius (via the Wikipedia pages above): Hasdrubal's surrender and his wife's words, paraphrased"
  ],
  "intro": {
   "mood": "grief",
@@ -588,6 +593,106 @@
       "embers"
      ]
     }
+   },
+   {
+    "say": "And above him, on the last hill still standing, a woman is watching too. Nobody wrote down her name. But in a few hours, she will do the thing Rome remembered about this day for the next two thousand years. Hold on to her. We will come back.",
+    "do": [
+     {
+      "on": "woman",
+      "scene": {
+       "shot": "photo",
+       "img": "hwife",
+       "move": "in",
+       "caption": "Hasdrubal's wife (Pierre Woeiriot, 16th century)"
+      }
+     },
+     {
+      "on": "name",
+      "card": {
+       "kind": "caption",
+       "text": "Name unknown",
+       "sub": "the wife of Hasdrubal, Carthage's last general",
+       "dur": 4
+      }
+     },
+     {
+      "on": "Hold",
+      "scene": {
+       "shot": "set",
+       "time": "dusk",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.58,
+         "n": 2,
+         "seed": 9,
+         "depth": 0.15
+        },
+        {
+         "type": "fort",
+         "x": 0.55,
+         "y": 0.66,
+         "w": 760,
+         "h": 130,
+         "flag": null,
+         "depth": 0.5
+        },
+        {
+         "type": "people",
+         "list": [
+          {
+           "x": 0.55,
+           "facing": 1,
+           "h": 0.9,
+           "preset": "carthaginian_woman"
+          }
+         ],
+         "lx": 0.4,
+         "ly": 0.6,
+         "depth": 0.85
+        }
+       ],
+       "fx": [
+        "smoke",
+        "embers"
+       ]
+      }
+     }
+    ],
+    "scene": {
+     "shot": "set",
+     "time": "dusk",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.58,
+       "n": 2,
+       "seed": 9,
+       "depth": 0.15
+      },
+      {
+       "type": "fort",
+       "x": 0.55,
+       "y": 0.66,
+       "w": 760,
+       "h": 130,
+       "flag": null,
+       "depth": 0.5
+      },
+      {
+       "type": "fire",
+       "x": 0.2,
+       "y": 0.72,
+       "r": 260,
+       "depth": 0.4
+      }
+     ],
+     "fx": [
+      "smoke",
+      "embers"
+     ]
+    },
+    "_new": 1
    },
    {
     "cam": {
@@ -6667,6 +6772,422 @@
     },
     {
      "cam": {
+      "lon": 15.28,
+      "lat": 37.08,
+      "scale": 6000
+     },
+     "date": "213 BC",
+     "say": "One of the cities that went over to Carthage was Syracuse, on Sicily. In 213 BC, a Roman army under Marcellus laid siege to it, by land and by sea. And inside the walls lived the most famous inventor in the Greek world. Archimedes.",
+     "do": [
+      {
+       "on": "Syracuse",
+       "pin": "Syracuse"
+      },
+      {
+       "on": "Marcellus",
+       "card": {
+        "kind": "name",
+        "text": "Marcus Claudius Marcellus",
+        "sub": "Roman commander at Syracuse",
+        "dur": 4
+       }
+      },
+      {
+       "on": "sea",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "coast",
+          "x0": 0.45,
+          "x1": 1.0,
+          "y": 0.6,
+          "h": 120,
+          "depth": 0.3
+         },
+         {
+          "type": "fort",
+          "x": 0.75,
+          "y": 0.62,
+          "w": 520,
+          "h": 110,
+          "flag": null,
+          "depth": 0.45
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.05,
+          "s": 0.45,
+          "flag": "red",
+          "y": 0.68,
+          "gap": 200,
+          "steam": false,
+          "depth": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "Archimedes",
+       "scene": {
+        "shot": "photo",
+        "img": "archi",
+        "move": "in",
+        "caption": "Archimedes Directing the Defenses of Syracuse (Thomas Ralph Spence, 1895)"
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.64,
+        "depth": 0.25
+       },
+       {
+        "type": "coast",
+        "x0": 0.4,
+        "x1": 1.0,
+        "y": 0.62,
+        "h": 120,
+        "depth": 0.3
+       },
+       {
+        "type": "town",
+        "y": 0.66,
+        "n": 10,
+        "gap": 120,
+        "h": 150,
+        "col": "#8a7a62",
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "light"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "Archimedes built machines for the walls. The most famous was a huge crane with a hook, later called the Claw of Archimedes. It reached over the wall, lifted Roman ships out of the sea, and dropped them. A later legend adds giant mirrors that set the sails on fire. Historians doubt that part.",
+     "do": [
+      {
+       "on": "Claw",
+       "scene": {
+        "shot": "photo",
+        "img": "claw",
+        "move": "left",
+        "caption": "The Claw of Archimedes, wall painting (c. 1600)"
+       }
+      },
+      {
+       "on": "mirrors",
+       "card": {
+        "kind": "stamp",
+        "text": "LEGEND",
+        "dur": 3
+       }
+      },
+      {
+       "on": "dropped",
+       "sfx": "braam"
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "fort",
+        "x": 0.7,
+        "y": 0.6,
+        "w": 600,
+        "h": 140,
+        "flag": null,
+        "depth": 0.45
+       },
+       {
+        "type": "ships",
+        "n": 3,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.68,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.55
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "LEG",
+       "text": "What is that thing on the wall?"
+      },
+      {
+       "who": "LEG2",
+       "text": "A crane."
+      },
+      {
+       "who": "LEG",
+       "text": "Why is it looking at our ship?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.7,
+        "depth": 0.3
+       },
+       {
+        "type": "fort",
+        "x": 0.7,
+        "y": 0.62,
+        "w": 600,
+        "h": 160,
+        "flag": null,
+        "depth": 0.45
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "date": "212 BC",
+     "say": "Syracuse held out for months. Then in 212 BC, while the city held a festival for the goddess Artemis, Roman soldiers climbed the walls at night. Marcellus gave an order. Archimedes, now about seventy eight, was not to be killed.",
+     "do": [
+      {
+       "on": "festival",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 12,
+          "gap": 130,
+          "h": 160,
+          "col": "#2a2018",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 60,
+          "hats": false,
+          "depth": 0.8
+         }
+        ],
+        "fx": [
+         "embers"
+        ]
+       }
+      },
+      {
+       "on": "climbed",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "fort",
+          "x": 0.5,
+          "y": 0.6,
+          "w": 900,
+          "h": 200,
+          "flag": null,
+          "depth": 0.45
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 10,
+          "rows": 1,
+          "x0": 0.05,
+          "gap": 90,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
+      },
+      {
+       "on": "seventy",
+       "card": {
+        "kind": "big",
+        "text": "ABOUT 78 YEARS OLD",
+        "dur": 3
+       }
+      }
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "NIGHT",
+      "place": "SYRACUSE",
+      "date": "212 BC"
+     },
+     "_new": 1
+    },
+    {
+     "say": "A Roman soldier found him at home, still working. Archimedes told him, rudely, to leave. The soldier did not know who he was. He killed him on the spot. Against his own general's orders, Rome had killed the greatest mind on the island.",
+     "do": [
+      {
+       "on": "working",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.5,
+          "night": false,
+          "depth": 0.3,
+          "seed": 7,
+          "wall": "#6a5a48"
+         },
+         {
+          "type": "table",
+          "lamp": 0,
+          "candles": 1,
+          "papers": 1,
+          "w": 700,
+          "depth": 0.6,
+          "seed": 3
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.4,
+            "facing": 1,
+            "h": 0.85,
+            "preset": "civilian",
+            "spec": {
+             "coat": "#e9e2d0",
+             "coat2": "#c8bfa8",
+             "beard": "full",
+             "hair": "#d8d3cb"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
+      },
+      {
+       "on": "killed",
+       "scene": {
+        "shot": "photo",
+        "img": "archdeath",
+        "move": "in",
+        "caption": "Archimedes and the Roman soldier (copy of a Roman mosaic)"
+       }
+      },
+      {
+       "on": "orders",
+       "mood": [
+        "ROM",
+        "angry"
+       ]
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.4,
+        "night": false,
+        "depth": 0.3,
+        "seed": 7,
+        "wall": "#6a5a48"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 3
+       }
+      ]
+     },
+     "pause": 1.0,
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "LEG2",
+       "text": "Old man. You come with me."
+      },
+      {
+       "who": "ARCH",
+       "text": "Not now. Leave. I am working.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3,
+        "seed": 7,
+        "wall": "#6a5a48"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 3
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "cam": {
       "lon": 10.32,
       "lat": 36.85,
       "scale": 3000
@@ -7643,6 +8164,371 @@
        }
       ],
       "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "And here, before the battle, is a woman the war swallowed. Sophonisba, daughter of the Carthaginian general Hasdrubal Gisco. In 206 BC, Carthage married her to Syphax, a Numidian king who had been Rome's friend. She brought him over to Carthage's side.",
+     "do": [
+      {
+       "on": "Sophonisba",
+       "scene": {
+        "shot": "photo",
+        "img": "soph",
+        "move": "in",
+        "caption": "Sophonisba (Simone Cantarini, c. 1638)"
+       }
+      },
+      {
+       "on": "Sophonisba",
+       "card": {
+        "kind": "name",
+        "text": "Sophonisba",
+        "sub": "daughter of Hasdrubal Gisco, Carthage",
+        "dur": 4
+       }
+      },
+      {
+       "on": "Syphax",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 2,
+          "seed": 11,
+          "depth": 0.15
+         },
+         {
+          "type": "camp",
+          "x": 0.6,
+          "y": 0.74,
+          "n": 6,
+          "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.35,
+            "facing": 1,
+            "h": 0.9,
+            "preset": "carthaginian_woman"
+           },
+           {
+            "x": 0.6,
+            "facing": -1,
+            "h": 0.92,
+            "preset": "carthaginian",
+            "spec": {
+             "hat": "turban",
+             "hatCol": "#e9e2d0",
+             "skin": "#8a5a3a",
+             "coat": "#8a6a3a"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 11,
+        "depth": 0.15
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "date": "203 BC",
+     "say": "In 203 BC, Syphax was beaten and captured. Sophonisba fell into the hands of his rival, Masinissa. And Masinissa freed her, and married her.",
+     "do": [
+      {
+       "on": "captured",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 3,
+          "seed": 4,
+          "depth": 0.15
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 12,
+          "rows": 2,
+          "x0": 0.1,
+          "gap": 80,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
+      },
+      {
+       "on": "married",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.5,
+          "night": false,
+          "depth": 0.3,
+          "seed": 12,
+          "wall": "#5a4030"
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.38,
+            "facing": 1,
+            "h": 0.9,
+            "preset": "carthaginian_woman"
+           },
+           {
+            "x": 0.62,
+            "facing": -1,
+            "h": 0.92,
+            "preset": "carthaginian",
+            "spec": {
+             "coat": "#c9a85a",
+             "hat": "turban",
+             "hatCol": "#e9e2d0",
+             "skin": "#8a5a3a"
+            }
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "card",
+      "time": "203 BC",
+      "place": "CIRTA, NUMIDIA",
+      "date": "Syphax captured"
+     },
+     "_new": 1
+    },
+    {
+     "say": "Scipio said no. He feared she would turn Masinissa against Rome, the way she had turned Syphax. He wanted her handed over, to walk as a prisoner in his triumph in Rome.",
+     "do": [
+      {
+       "on": "Scipio",
+       "show": [
+        "SCI"
+       ]
+      },
+      {
+       "on": "triumph",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 14,
+          "gap": 120,
+          "h": 180,
+          "col": "#b8a88a",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 90,
+          "hats": false,
+          "depth": 0.8
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "sci3",
+      "move": "left",
+      "caption": "Scipio Africanus"
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "SCI",
+       "text": "She goes to Rome."
+      },
+      {
+       "who": "MASI",
+       "text": "She is my wife."
+      },
+      {
+       "who": "SCI",
+       "text": "She was Syphax's wife too. Look where he is now."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "camp",
+        "x": 0.5,
+        "y": 0.76,
+        "n": 5,
+        "depth": 0.5
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 3,
+        "depth": 0.15
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "Masinissa could not save her, and would not break with Rome. So, Livy says, he offered her a cup of poison, and asked her to die as a Carthaginian princess. She drank it with great composure. Her last words scolded him for a marriage so short, and so bitter.",
+     "do": [
+      {
+       "on": "poison",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.4,
+          "night": true,
+          "depth": 0.3,
+          "seed": 12,
+          "wall": "#3a2a22"
+         },
+         {
+          "type": "table",
+          "lamp": 1,
+          "candles": 1,
+          "papers": 0,
+          "w": 600,
+          "depth": 0.6,
+          "seed": 2
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.45,
+            "facing": 1,
+            "h": 0.9,
+            "preset": "carthaginian_woman"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ]
+       }
+      },
+      {
+       "on": "Livy's",
+       "card": {
+        "kind": "caption",
+        "text": "Paraphrase",
+        "sub": "Livy, History of Rome 30.15",
+        "dur": 4
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "soph",
+      "move": "right",
+      "caption": "Sophonisba (Simone Cantarini, c. 1638)"
+     },
+     "pause": 1.2,
+     "_new": 1
+    },
+    {
+     "say": "Masinissa lived another fifty five years, as Rome's most loyal friend in Africa. Remember that. He is going to come back, as a very old man.",
+     "do": [
+      {
+       "on": "fifty",
+       "card": {
+        "kind": "big",
+        "text": "55 MORE YEARS",
+        "dur": 3
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "animal",
+        "kind": "horse",
+        "x": 0.55,
+        "s": 1.3,
+        "y": 0.86,
+        "walk": true,
+        "facing": -1,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "light",
        "dust"
       ]
      },
@@ -9242,7 +10128,7 @@
       "lat": 36,
       "scale": 3000
      },
-     "say": "Meanwhile, remember Masinissa, the Numidian horseman from Zama? He was now an old king, and Rome's friend. He kept taking Carthaginian land, piece by piece. And since the last war, Carthage was not free to fight its own wars.",
+     "say": "Meanwhile, remember Masinissa, the Numidian horseman from Zama? The man who sent Sophonisba the poison was now an old king, and still Rome's friend. He kept taking Carthaginian land, piece by piece. And since the last war, Carthage was not free to fight its own wars.",
      "do": [
       {
        "on": "Masinissa",
@@ -9525,6 +10411,110 @@
      "_new": 1
     },
     {
+     "say": "Surviving records say the convoys carried two hundred thousand sets of armour, and two thousand catapults, out of the city to the Roman camp at Utica. Then Carthage's warships sailed to Utica too, and were burnt in the harbour.",
+     "do": [
+      {
+       "on": "two",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Sets of armour handed over",
+          200000
+         ],
+         [
+          "Catapults handed over",
+          2000
+         ]
+        ],
+        "note": "Third Punic War accounts (Appian)",
+        "dur": 6
+       }
+      },
+      {
+       "on": "burnt",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 5,
+          "x": 0.2,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.68,
+          "gap": 220,
+          "steam": false,
+          "depth": 0.5
+         },
+         {
+          "type": "fire",
+          "x": 0.4,
+          "y": 0.66,
+          "r": 300,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "sand",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "camp",
+        "x": 0.7,
+        "y": 0.74,
+        "n": 6,
+        "depth": 0.5
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 14,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#5b2a6e",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "Two hundred thousand sets of armour. Enough to dress the whole Roman army at Cannae, twice over. A city handing over its own skin.",
+     "scene": {
+      "shot": "card",
+      "time": "200,000",
+      "place": "SETS OF ARMOUR",
+      "date": "149 BC",
+      "size": 190
+     },
+     "_new": 1
+    },
+    {
      "say": "Then Rome made its final demand. Leave the city, and settle at least sixteen kilometres from the sea.",
      "do": [
       {
@@ -9640,6 +10630,92 @@
      }
     },
     {
+     "say": "But Carthage still had its walls. On the land side, the strongest wall was nine metres thick, and up to twenty metres high, with a ditch in front, and barracks inside it for twenty four thousand soldiers. The city freed every slave who would fight.",
+     "do": [
+      {
+       "on": "nine",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Wall thickness (metres)",
+          9
+         ],
+         [
+          "Wall height (metres, up to)",
+          20
+         ],
+         [
+          "Soldiers housed inside the wall",
+          24000
+         ]
+        ],
+        "note": "Third Punic War accounts",
+        "dur": 6
+       }
+      },
+      {
+       "on": "freed",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 12,
+          "gap": 130,
+          "h": 160,
+          "col": "#8a7a62",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 80,
+          "hats": false,
+          "depth": 0.8
+         }
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.15
+       },
+       {
+        "type": "fort",
+        "x": 0.55,
+        "y": 0.66,
+        "w": 760,
+        "h": 130,
+        "flag": null,
+        "depth": 0.5
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 1,
+        "x0": 0.1,
+        "gap": 90,
+        "col": "#5b2a6e",
+        "march": false,
+        "depth": 0.7
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
      "say": "And the city got ready to fight anyway. It sent fire-ships against the Roman fleet, and raided the Roman siege engines. Against an army of up to eighty thousand, Carthage held out for three years.",
      "do": [
       {
@@ -9700,6 +10776,181 @@
        "embers"
       ]
      }
+    },
+    {
+     "say": "Scipio Aemilianus built a huge mole of stone across the harbour mouth, to starve the city. So the Carthaginians dug a brand new channel to the sea, built a new fleet behind the walls, and sailed out to the Romans' complete surprise.",
+     "do": [
+      {
+       "on": "mole",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.7,
+          "depth": 0.5
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 12,
+          "rows": 1,
+          "x0": 0.05,
+          "gap": 90,
+          "col": "#7a1d1d",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
+      },
+      {
+       "on": "sailed",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "ships",
+          "n": 6,
+          "x": 0.1,
+          "s": 0.5,
+          "flag": "white",
+          "y": 0.68,
+          "gap": 200,
+          "steam": false,
+          "depth": 0.5
+         }
+        ],
+        "fx": [
+         "light"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "ports",
+      "move": "left",
+      "caption": "The Punic harbours of Carthage, today"
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "LEG",
+       "text": "Sir! Their fleet is out!"
+      },
+      {
+       "who": "AEM",
+       "text": "They have no fleet."
+      },
+      {
+       "who": "LEG",
+       "text": "They do now, sir.",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.3,
+        "s": 0.4,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 200,
+        "steam": false,
+        "depth": 0.4
+       }
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "They held their own all day. But coming home, many of their ships were trapped against the city's sea wall, and sunk or captured. It was Carthage's last fleet.",
+     "do": [
+      {
+       "on": "trapped",
+       "explode": {
+        "at": [
+         10.33,
+         36.84
+        ],
+        "size": 1
+       }
+      },
+      {
+       "on": "last",
+       "sfx": "tension"
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "fort",
+        "x": 0.7,
+        "y": 0.6,
+        "w": 700,
+        "h": 120,
+        "flag": null,
+        "depth": 0.45
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.35,
+        "s": 0.45,
+        "flag": "white",
+        "y": 0.68,
+        "gap": 180,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "fire",
+        "x": 0.45,
+        "y": 0.66,
+        "r": 220,
+        "depth": 0.4
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
     },
     {
      "cam": {
@@ -9821,7 +11072,7 @@
      }
     },
     {
-     "say": "About fifty thousand people finally came out and surrendered. All of them were sold into slavery. Hasdrubal, the last Carthaginian general, surrendered too. His wife did not. Ancient writers say she threw herself and her two children into the flames.",
+     "say": "About fifty thousand people finally came out and surrendered. All of them were sold into slavery.",
      "do": [
       {
        "on": "fifty",
@@ -9838,15 +11089,262 @@
        }
       },
       {
-       "on": "flames",
-       "fire": {
-        "at": [
-         10.32,
-         36.85
+       "on": "slavery",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 5,
+          "depth": 0.15
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 120,
+          "hats": false,
+          "depth": 0.8
+         },
+         {
+          "type": "soldiers",
+          "y": 0.86,
+          "n": 8,
+          "rows": 1,
+          "x0": 0.6,
+          "gap": 90,
+          "col": "#7a1d1d",
+          "march": false,
+          "depth": 0.7
+         }
         ],
-        "dur": 6
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 8,
+        "gap": 180,
+        "h": 140,
+        "col": "#1d1612",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 110,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
+    },
+    {
+     "say": "But not everyone came out. At the top of the Byrsa hill stood the temple of Eshmun. Inside were nine hundred Roman deserters who had fought for Carthage. They knew Rome would never spare them. And with them was Hasdrubal, the last Carthaginian general, with his wife and their two sons.",
+     "do": [
+      {
+       "on": "Eshmun",
+       "card": {
+        "kind": "caption",
+        "text": "The temple of Eshmun",
+        "sub": "on the Byrsa hill, the citadel of Carthage",
+        "dur": 4
        }
       },
+      {
+       "on": "nine",
+       "card": {
+        "kind": "big",
+        "text": "900 ROMAN DESERTERS",
+        "dur": 3
+       }
+      },
+      {
+       "on": "Hasdrubal",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 9,
+          "depth": 0.15
+         },
+         {
+          "type": "fort",
+          "x": 0.55,
+          "y": 0.66,
+          "w": 760,
+          "h": 130,
+          "flag": null,
+          "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.4,
+            "facing": 1,
+            "h": 0.92,
+            "preset": "carthaginian",
+            "spec": {
+             "hatCol": "#c8a24a",
+             "beard": "full"
+            }
+           },
+           {
+            "x": 0.58,
+            "facing": -1,
+            "h": 0.9,
+            "preset": "carthaginian_woman"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "photo",
+      "img": "ruins3",
+      "move": "in",
+      "caption": "The Byrsa hill, Carthage, today"
+     },
+     "_new": 1
+    },
+    {
+     "say": "Then Hasdrubal slipped away alone, and surrendered to Scipio. He was promised his life, and his freedom.",
+     "do": [
+      {
+       "on": "surrendered",
+       "mood": [
+        "HASD",
+        "sad"
+       ]
+      },
+      {
+       "on": "life",
+       "sfx": "tension"
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.1
+       },
+       {
+        "type": "soldiers",
+        "y": 0.86,
+        "n": 10,
+        "rows": 1,
+        "x0": 0.5,
+        "gap": 80,
+        "col": "#7a1d1d",
+        "march": false,
+        "depth": 0.7
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.75,
+          "preset": "carthaginian",
+          "spec": {
+           "hatCol": "#c8a24a",
+           "beard": "full"
+          }
+         },
+         {
+          "x": 0.55,
+          "facing": -1,
+          "h": 0.95,
+          "preset": "scipio",
+          "spec": {
+           "hair": "#5a3a22"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "HASD",
+       "text": "Spare me. I surrender."
+      },
+      {
+       "who": "AEM",
+       "text": "You will live."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 2,
+        "seed": 5,
+        "depth": 0.1
+       },
+       {
+        "type": "fire",
+        "x": 0.8,
+        "y": 0.72,
+        "r": 300,
+        "depth": 0.35
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "His wife saw it from the rampart. This is the woman from the start of our story. The ancient writers say she called out to Scipio, and blessed him. He was the enemy. He had done what enemies do.",
+     "do": [
       {
        "on": "wife",
        "scene": {
@@ -9854,6 +11352,230 @@
         "img": "hwife",
         "move": "in",
         "caption": "Hasdrubal's wife (Pierre Woeiriot, 16th century)"
+       }
+      },
+      {
+       "on": "ancient",
+       "card": {
+        "kind": "caption",
+        "text": "Paraphrase",
+        "sub": "Appian and Polybius, as summarised by modern historians",
+        "dur": 4
+       }
+      },
+      {
+       "on": "Scipio",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 9,
+          "depth": 0.15
+         },
+         {
+          "type": "fort",
+          "x": 0.55,
+          "y": 0.66,
+          "w": 760,
+          "h": 130,
+          "flag": null,
+          "depth": 0.5
+         },
+         {
+          "type": "people",
+          "list": [
+           {
+            "x": 0.5,
+            "facing": -1,
+            "h": 0.9,
+            "preset": "carthaginian_woman",
+            "pose": "point"
+           }
+          ],
+          "lx": 0.4,
+          "ly": 0.6,
+          "depth": 0.85
+         },
+         {
+          "type": "fire",
+          "x": 0.2,
+          "y": 0.7,
+          "r": 240,
+          "depth": 0.4
+         }
+        ],
+        "fx": [
+         "smoke",
+         "embers"
+        ]
+       }
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 9,
+        "depth": 0.15
+       },
+       {
+        "type": "fort",
+        "x": 0.55,
+        "y": 0.66,
+        "w": 760,
+        "h": 130,
+        "flag": null,
+        "depth": 0.5
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": -1,
+          "h": 0.9,
+          "preset": "carthaginian_woman"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.85
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "Then she turned to her husband, standing safe among the Romans below, and cursed him. To her, the man who had led the city's last stand had simply walked out on it.",
+     "do": [
+      {
+       "on": "cursed",
+       "mood": [
+        "HWIFE",
+        "angry"
+       ]
+      },
+      {
+       "on": "traitor",
+       "sfx": "braam"
+      }
+     ],
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "fort",
+        "x": 0.5,
+        "y": 0.56,
+        "w": 900,
+        "h": 160,
+        "flag": null,
+        "depth": 0.45
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.5,
+          "facing": -1,
+          "h": 0.55,
+          "preset": "carthaginian_woman"
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.4,
+        "depth": 0.6
+       },
+       {
+        "type": "people",
+        "list": [
+         {
+          "x": 0.3,
+          "facing": 1,
+          "h": 0.8,
+          "preset": "carthaginian",
+          "spec": {
+           "hatCol": "#c8a24a",
+           "beard": "full"
+          }
+         }
+        ],
+        "lx": 0.4,
+        "ly": 0.6,
+        "depth": 0.9
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "talk": [
+      {
+       "who": "HWIFE",
+       "text": "Roman, I wish you well. You did what an enemy does."
+      },
+      {
+       "who": "HWIFE",
+       "text": "But you, Hasdrubal. You walked out on us.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "fort",
+        "x": 0.5,
+        "y": 0.66,
+        "w": 900,
+        "h": 140,
+        "flag": null,
+        "depth": 0.45
+       },
+       {
+        "type": "fire",
+        "x": 0.75,
+        "y": 0.7,
+        "r": 300,
+        "depth": 0.35
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "_new": 1
+    },
+    {
+     "say": "The deserters set the temple on fire. And she took her two sons with her, into the flames. Hasdrubal walked in Scipio's triumph in Rome, and was allowed to live out his life in Italy. We remember his wife's words. We still do not know her name.",
+     "do": [
+      {
+       "on": "fire",
+       "fire": {
+        "at": [
+         10.32,
+         36.85
+        ],
+        "dur": 6
        }
       },
       {
@@ -9884,34 +11606,47 @@
          "embers"
         ]
        }
+      },
+      {
+       "on": "Italy",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 3,
+          "seed": 14,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.6,
+          "y": 0.74,
+          "depth": 0.5
+         }
+        ]
+       }
+      },
+      {
+       "on": "name",
+       "card": {
+        "kind": "caption",
+        "text": "Name unknown",
+        "sub": "wife of Hasdrubal, 146 BC",
+        "dur": 4
+       }
       }
      ],
-     "pause": 1.5,
      "scene": {
-      "shot": "set",
-      "time": "dawn",
-      "parts": [
-       {
-        "type": "town",
-        "y": 0.72,
-        "n": 8,
-        "gap": 180,
-        "h": 140,
-        "col": "#1d1612",
-        "depth": 0.4
-       },
-       {
-        "type": "crowd",
-        "y": 0.95,
-        "n": 110,
-        "hats": true,
-        "depth": 0.8
-       }
-      ],
-      "fx": [
-       "smoke"
-      ]
-     }
+      "shot": "photo",
+      "img": "burning",
+      "move": "in",
+      "caption": "The fall of Carthage, 146 BC"
+     },
+     "pause": 1.5,
+     "_new": 1
     },
     {
      "say": "And Scipio Aemilianus wept. The historian Polybius was standing next to him. Scipio quoted a line from Homer about the fall of Troy, and told Polybius he was afraid that one day, someone would give the same order about Rome.",
@@ -11136,6 +12871,22 @@
   "ruins3": [
    "Carthage Punic quarter Byrsa hill excavation",
    true
+  ],
+  "archi": [
+   "Archimedes Directing the Defenses of Syracuse Thomas Ralph Spence",
+   false
+  ],
+  "claw": [
+   "Claw of Archimedes wall painting Stanzino delle Matematiche",
+   false
+  ],
+  "archdeath": [
+   "Death of Archimedes Roman mosaic copy",
+   false
+  ],
+  "soph": [
+   "Simone-cantarini---Sofonisba.jpg",
+   false
   ]
  },
  "cast": {
@@ -11371,6 +13122,40 @@
     "beard": "full",
     "hair": "#8a8278"
    }
+  },
+  "ARCH": {
+   "preset": "civilian",
+   "name": "Archimedes",
+   "spec": {
+    "coat": "#e9e2d0",
+    "coat2": "#c8bfa8",
+    "beard": "full",
+    "hair": "#d8d3cb"
+   }
+  },
+  "MASI": {
+   "preset": "carthaginian",
+   "name": "Masinissa",
+   "spec": {
+    "coat": "#c9a85a",
+    "hat": "turban",
+    "hatCol": "#e9e2d0",
+    "skin": "#8a5a3a",
+    "beard": "full"
+   }
+  },
+  "HASD": {
+   "preset": "carthaginian",
+   "name": "Hasdrubal, Carthage's last general",
+   "spec": {
+    "hatCol": "#c8a24a",
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "HWIFE": {
+   "preset": "carthaginian_woman",
+   "name": "Hasdrubal's wife"
   }
  },
  "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below."
