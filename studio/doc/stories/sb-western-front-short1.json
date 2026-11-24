@@ -1,0 +1,392 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "era": "1914",
+ "musicEra": "modern",
+ "places": {
+  "Brussels": [
+   4.35,
+   50.85
+  ],
+  "Liège": [
+   5.57,
+   50.63
+  ],
+  "Mons": [
+   3.95,
+   50.45
+  ],
+  "Ypres": [
+   2.88,
+   50.85
+  ],
+  "Verdun": [
+   5.39,
+   49.16
+  ],
+  "Albert": [
+   2.65,
+   50.0
+  ],
+  "Passchendaele": [
+   3.02,
+   50.9
+  ],
+  "Compiègne": [
+   2.83,
+   49.42
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "London": [
+   -0.13,
+   51.5
+  ]
+ },
+ "cast": {
+  "GER1": {
+   "preset": "german_1914",
+   "name": "A German soldier"
+  },
+  "GER2": {
+   "preset": "german_ww1",
+   "name": "A German soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "GER3": {
+   "preset": "german_ww1",
+   "name": "Another German soldier",
+   "spec": {
+    "hair": "#c8a060"
+   }
+  },
+  "TOM1": {
+   "preset": "tommy",
+   "name": "A British soldier"
+  },
+  "TOM2": {
+   "preset": "tommy",
+   "name": "Another British soldier",
+   "spec": {
+    "hair": "#b8732a"
+   }
+  },
+  "TOM3": {
+   "preset": "tommy",
+   "name": "A British private",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "TOM4": {
+   "preset": "tommy",
+   "name": "His mate",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MILES": {
+   "preset": "tommy_officer",
+   "name": "Captain Robert Miles"
+  },
+  "GOFF": {
+   "preset": "german_officer_ww1",
+   "name": "A German staff officer"
+  },
+  "GAIDE": {
+   "preset": "german_officer_ww1",
+   "name": "His aide",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "POI": {
+   "preset": "poilu",
+   "name": "A French soldier"
+  },
+  "POI2": {
+   "preset": "poilu",
+   "name": "Another French soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "MARC": {
+   "preset": "german_ww1",
+   "name": "Franz Marc",
+   "spec": {
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "NURSE": {
+   "preset": "nurse_ww1",
+   "name": "A nurse"
+  },
+  "CENSOR": {
+   "preset": "clerk",
+   "name": "An army censor"
+  },
+  "CENSOR2": {
+   "preset": "clerk",
+   "name": "Another censor",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "GINT": {
+   "preset": "german_1914",
+   "name": "A German interpreter, from Suffolk"
+  },
+  "CLERK1": {
+   "preset": "clerk",
+   "name": "A War Office clerk"
+  },
+  "CLERK2": {
+   "preset": "clerk",
+   "name": "Another clerk",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "ERZ": {
+   "preset": "civilian",
+   "name": "Matthias Erzberger, German delegate"
+  },
+  "FOCH": {
+   "preset": "french_officer",
+   "name": "Marshal Ferdinand Foch",
+   "spec": {
+    "hat": "kepi",
+    "hatCol": "#1f3f8a",
+    "coat": "#3a4a6a",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "beard": "mustache"
+   }
+  }
+ },
+ "voices": {
+  "GER1": "am_fenrir",
+  "GER2": "am_adam",
+  "GER3": "am_puck",
+  "TOM1": "bm_lewis",
+  "TOM2": "bm_daniel",
+  "TOM3": "bm_lewis",
+  "TOM4": "bm_daniel",
+  "MILES": "bm_fable",
+  "GOFF": "am_fenrir",
+  "GAIDE": "am_puck",
+  "POI": "am_michael",
+  "POI2": "am_adam",
+  "MARC": "am_adam",
+  "NURSE": "af_sarah",
+  "CENSOR": "am_michael",
+  "CENSOR2": "am_puck",
+  "ERZ": "am_fenrir",
+  "GINT": "am_adam",
+  "CLERK1": "bm_lewis",
+  "CLERK2": "bm_daniel",
+  "FOCH": "bm_daniel"
+ },
+ "photos": {
+  "truce": [
+   "Christmas truce 1914 Northumberland Hussars no man's land",
+   false
+  ],
+  "hitler": [
+   "Hitler with comrades of the List Regiment 1914",
+   false
+  ],
+  "liege": [
+   "Fort de Loncin Liège 1914 ruins",
+   true
+  ],
+  "marne": [
+   "French soldiers Battle of the Marne 1914",
+   false
+  ],
+  "trench": [
+   "Cheshire Regiment trench Somme 1916",
+   false
+  ],
+  "gassed": [
+   "Gassed John Singer Sargent",
+   true
+  ],
+  "douaumont": [
+   "Fort Douaumont 1916",
+   true
+  ],
+  "marc": [
+   "Franz Marc photograph 1910",
+   false
+  ],
+  "bluehorse": [
+   "Franz Marc Blue Horse I 1911",
+   true
+  ],
+  "somme": [
+   "Royal Irish Rifles first day Somme 1916 trench",
+   false
+  ],
+  "gunther": [
+   "Henry Gunther soldier",
+   false
+  ],
+  "passchendaele": [
+   "Chateau Wood Ypres 1917 Hurley",
+   true
+  ],
+  "carriage": [
+   "Armistice railway carriage Compiègne 1918",
+   false
+  ],
+  "trebuchon": [
+   "Augustin Trébuchon",
+   false
+  ]
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below. Lines from letters are quoted as written; paraphrases are labelled.",
+ "balls": {},
+ "id": "sb-western-front-short1",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-western-front",
+ "title": "Do You Know the Last French Soldier of WW1 Died Carrying a Note About SOUP? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know the last French soldier killed in the First World War was carrying a note about soup?",
+    "scene": {
+     "shot": "card",
+     "time": "10:45",
+     "place": "11 NOVEMBER 1918",
+     "date": "fifteen minutes before peace"
+    }
+   },
+   {
+    "say": "Eleventh of November 1918. The armistice is signed at five in the morning. The guns stop at eleven.",
+    "scene": {
+     "shot": "card",
+     "time": "05:00",
+     "place": "COMPIÈGNE",
+     "date": "the armistice is signed"
+    }
+   },
+   {
+    "say": "Augustin Trébuchon is a messenger. He is forty, a shepherd, and he plays the accordion at village weddings.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.7,
+       "depth": 0.3
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "poilu",
+         "x": 0.45,
+         "pose": "walk",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.95,
+         "prop": "paper",
+         "walk": [
+          0.3,
+          0.55,
+          0,
+          5
+         ]
+        }
+       ],
+       "depth": 0.88
+      }
+     ],
+     "weather": "rain"
+    }
+   },
+   {
+    "say": "His note tells the troops by the river Meuse that soup will be served at half past eleven. After the peace.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "~ 11 November 1918 ~ (paraphrase)",
+     "lines": [
+      "Soup will be served",
+      "at 11:30",
+      "after the peace."
+     ],
+     "hl": 1
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "POI",
+      "text": "Soup at half past eleven?"
+     },
+     {
+      "who": "POI2",
+      "text": "If we live till eleven.",
+      "mood": "sad"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "mud",
+       "y": 0.72,
+       "depth": 0.6
+      }
+     ],
+     "weather": "rain"
+    }
+   },
+   {
+    "say": "At ten forty five, he is shot. Fifteen minutes before the end.",
+    "scene": {
+     "shot": "card",
+     "time": "10:45",
+     "place": "VRIGNE-MEUSE",
+     "date": "Augustin Trébuchon"
+    },
+    "pause": 1.0
+   },
+   {
+    "say": "And the French army, embarrassed, wrote down that he died the day before.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "French Army record (paraphrase)",
+     "lines": [
+      "Trébuchon, Augustin",
+      "died: 10 November 1918"
+     ],
+     "hl": 1
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Augustin Trebuchon (10:45, shepherd, accordion, aged 40, date recorded a day early; BBC on the soup message): https://en.wikipedia.org/wiki/Augustin_Tr%C3%A9buchon",
+  "Wikipedia, Armistice of 11 November 1918 (Compiegne, 8 Nov arrival, ten hours, 72 hours, 5:00 and 11:00, Ebert 9 Nov, artillery, 10,944 casualties and 2,738 dead, Price at 10:58): https://en.wikipedia.org/wiki/Armistice_of_11_November_1918"
+ ]
+}

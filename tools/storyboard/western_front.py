@@ -491,3 +491,37 @@ story = {
 json.dump(story, open(OUT, 'w'), indent=1, ensure_ascii=False)
 w = sum(len(b.get('say', '').split()) for c in [story['intro']] + ch for b in c['beats']); t = sum(1 for c in [story['intro']] + ch for b in c['beats'] if 'talk' in b)
 print('wrote', OUT, 'words', w, 'talk beats', t, 'beats', sum(len(c['beats']) for c in [story['intro']] + ch))
+
+# ---------- the two "Do you know" Shorts (RUNBOOK 3b), each its own story
+def short(sid, title, beats, srcs):
+    sh = {k: story[k] for k in ("brand", "narrator", "era", "musicEra", "places", "cast", "voices", "photos", "talkNote")}
+    sh.update({"balls": {}, "id": sid, "short": True, "film": True, "photosFrom": "sb-western-front", "title": title,
+               "intro": {"mood": "tension", "beats": beats}, "chapters": [], "sources": srcs})
+    json.dump(sh, open(os.path.join(os.path.dirname(OUT), sid + '.json'), 'w'), indent=1, ensure_ascii=False)
+    print('wrote', sid, sum(len(b.get('say', '').split()) for b in beats), 'words')
+SRC = story["sources"]
+short("sb-western-front-short1", "Do You Know the Last French Soldier of WW1 Died Carrying a Note About SOUP? #shorts", [
+ B("Do you know the last French soldier killed in the First World War was carrying a note about soup?", card("10:45", "11 NOVEMBER 1918", "fifteen minutes before peace")),
+ B("Eleventh of November 1918. The armistice is signed at five in the morning. The guns stop at eleven.", card("05:00", "COMPIÈGNE", "the armistice is signed")),
+ B("Augustin Trébuchon is a messenger. He is forty, a shepherd, and he plays the accordion at village weddings.",
+   S('day', [{"type": "sea", "y": 0.7, "depth": 0.3}, actors(A('poilu', 0.45, 'walk', 1, prop='paper', walk=[0.3, 0.55, 0, 5]))], weather='rain')),
+ B("His note tells the troops by the river Meuse that soup will be served at half past eleven. After the peace.",
+   doc("letter", "~ 11 November 1918 ~ (paraphrase)", ["Soup will be served", "at 11:30", "after the peace."], hl=1)),
+ T([("POI", "Soup at half past eleven?"), ("POI2", "If we live till eleven.", "sad")], S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}], weather='rain')),
+ B("At ten forty five, he is shot. Fifteen minutes before the end.", card("10:45", "VRIGNE-MEUSE", "Augustin Trébuchon"), pause=1.0),
+ B("And the French army, embarrassed, wrote down that he died the day before.",
+   doc("letter", "French Army record (paraphrase)", ["Trébuchon, Augustin", "died: 10 November 1918"], hl=1)),
+], [SRC[11], SRC[13]])
+short("sb-western-front-short2", "Do You Know Germany Tried to SAVE This Painter From the War? #shorts", [
+ B("Do you know Germany made a list of famous artists to pull out of the trenches, and one of them died before the order arrived?",
+   photo("marc", "Franz Marc", room('day', A('german_ww1', 0.45, 'think', 1), wall='#5a6a7a', lamp=0))),
+ B("His name was Franz Marc. Before the war, he painted blue horses.",
+   photo("bluehorse", "Blue Horse I (Franz Marc, 1911)", S('day', [{"type": "hills", "y": 0.6, "n": 3, "seed": 5, "depth": 0.2}, {"type": "animal", "kind": "horse", "x": 0.5, "s": 1.6, "y": 0.86, "walk": False, "facing": 1, "depth": 0.8}]), move='right')),
+ B("At the front, he painted camouflage covers, to hide positions from aircraft. In styles, he said, from Manet to Kandinsky.",
+   S('day', [{"type": "land", "kind": "grass", "y": 0.72, "depth": 0.6}, {"type": "cannons", "n": 2, "x": 0.4, "fire": False, "depth": 0.6}, actors(A('german_ww1', 0.62, 'point', -1))])),
+ T([("GER2", "Is that a painting or a gun?"), ("MARC", "That is the point.")], S('day', [{"type": "land", "kind": "grass", "y": 0.72, "depth": 0.6}, {"type": "cannons", "n": 1, "x": 0.5, "fire": False, "depth": 0.6}])),
+ B("His name was on the government's list of notable artists, to be withdrawn from combat for their own safety.",
+   doc("letter", "~ 1916 ~ Notable artists to be withdrawn (paraphrase)", ["...", "Marc, Franz", "..."], hl=1)),
+ B("On the fourth of March 1916, at Verdun, a shell splinter killed him instantly. The orders had not reached him yet.", card("4 MARCH 1916", "VERDUN", "Franz Marc, 36"), pause=1.0),
+ B("Twenty three years later, Hitler's government sold his Blue Horses as degenerate art.", card("1939", "LUCERNE", "'degenerate art' sale")),
+], [SRC[6]])

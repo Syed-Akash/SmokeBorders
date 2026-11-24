@@ -1,0 +1,725 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "era": "bc300",
+ "musicEra": "ancient",
+ "places": {
+  "Rome": [
+   12.5,
+   41.9
+  ],
+  "Carthage": [
+   10.32,
+   36.85
+  ],
+  "Messana": [
+   15.55,
+   38.19
+  ],
+  "Syracuse": [
+   15.29,
+   37.08
+  ],
+  "Mylae": [
+   15.24,
+   38.22
+  ],
+  "Ecnomus": [
+   13.95,
+   37.1
+  ],
+  "Tunis": [
+   10.18,
+   36.8
+  ],
+  "Drepana": [
+   12.51,
+   38.02
+  ],
+  "Aegates Islands": [
+   12.25,
+   37.97
+  ],
+  "Eryx": [
+   12.59,
+   38.04
+  ],
+  "Sardinia": [
+   9.0,
+   40.0
+  ],
+  "Tyre": [
+   35.2,
+   33.27
+  ],
+  "New Carthage": [
+   -0.98,
+   37.6
+  ],
+  "Saguntum": [
+   -0.27,
+   39.68
+  ],
+  "Ebro": [
+   0.8,
+   40.7
+  ],
+  "Pyrenees": [
+   1.0,
+   42.6
+  ],
+  "Rhone": [
+   4.8,
+   43.7
+  ],
+  "Alps": [
+   7.07,
+   44.7
+  ],
+  "Trebia": [
+   9.6,
+   45.0
+  ],
+  "Lake Trasimene": [
+   12.1,
+   43.13
+  ],
+  "Cannae": [
+   16.13,
+   41.3
+  ],
+  "Canusium": [
+   16.07,
+   41.22
+  ],
+  "Capua": [
+   14.25,
+   41.1
+  ],
+  "Metaurus": [
+   12.9,
+   43.73
+  ],
+  "Utica": [
+   10.06,
+   37.06
+  ],
+  "Zama": [
+   8.36,
+   36.22
+  ],
+  "Crete": [
+   24.8,
+   35.2
+  ],
+  "Libyssa": [
+   29.4,
+   40.75
+  ]
+ },
+ "cast": {
+  "ROM": {
+   "preset": "roman",
+   "name": "A Roman senator",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a",
+    "hair": "#8a8278"
+   }
+  },
+  "CAR": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian merchant",
+   "spec": {
+    "hat": "none",
+    "coat": "#5b2a6e"
+   }
+  },
+  "HAN": {
+   "preset": "carthaginian",
+   "name": "Hannibal"
+  },
+  "SCI": {
+   "preset": "scipio",
+   "name": "Scipio Africanus"
+  },
+  "FAB": {
+   "preset": "roman",
+   "name": "Fabius Maximus",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "hair": "#c8c2b8"
+   }
+  },
+  "CAT": {
+   "preset": "roman",
+   "name": "Cato the Elder",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#7a6a5a",
+    "hairStyle": "bald",
+    "hair": "#c8c2b8"
+   }
+  },
+  "SEN2": {
+   "preset": "roman",
+   "name": "Another senator",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#3a4a6a",
+    "hair": "#3b2a1a"
+   }
+  },
+  "MAM": {
+   "preset": "worker",
+   "name": "A Mamertine mercenary",
+   "spec": {
+    "coat": "#6a5a44",
+    "hat": "helmet",
+    "hatCol": "#7a6a4a",
+    "beard": "full"
+   }
+  },
+  "LEG": {
+   "preset": "roman",
+   "name": "A Roman legionary"
+  },
+  "LEG2": {
+   "preset": "roman",
+   "name": "Another legionary",
+   "spec": {
+    "hair": "#5a3a22",
+    "beard": "none"
+   }
+  },
+  "ROWER": {
+   "preset": "worker",
+   "name": "A Roman rower",
+   "spec": {
+    "coat": "#8a7a5a"
+   }
+  },
+  "CAPT": {
+   "preset": "roman",
+   "name": "A Roman ship captain",
+   "spec": {
+    "hat": "none",
+    "coat": "#7a1d1d"
+   }
+  },
+  "PRIEST": {
+   "preset": "roman",
+   "name": "The keeper of the sacred chickens",
+   "spec": {
+    "hat": "none",
+    "coat": "#d8d0c0",
+    "coat2": "#d8d0c0",
+    "hairStyle": "bald"
+   }
+  },
+  "PUL": {
+   "preset": "roman",
+   "name": "Claudius Pulcher",
+   "spec": {
+    "hatCol": "#b8b8b8",
+    "coat": "#8a1a2a"
+   }
+  },
+  "SAIL": {
+   "preset": "worker",
+   "name": "A Carthaginian sailor",
+   "spec": {
+    "coat": "#5b2a6e",
+    "skin": "#c99068"
+   }
+  },
+  "COUNC": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian councillor",
+   "spec": {
+    "hat": "none",
+    "coat": "#3d2a55",
+    "hair": "#8a8278"
+   }
+  },
+  "HAM": {
+   "preset": "carthaginian",
+   "name": "Hamilcar Barca",
+   "spec": {
+    "hatCol": "#c8a24a",
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "BOY": {
+   "preset": "carthaginian",
+   "name": "Hannibal, aged about nine",
+   "spec": {
+    "hat": "none",
+    "beard": "none",
+    "coat": "#7a4a8a"
+   }
+  },
+  "MERC": {
+   "preset": "worker",
+   "name": "An unpaid mercenary",
+   "spec": {
+    "coat": "#5a4a34",
+    "beard": "full"
+   }
+  },
+  "ENVOY": {
+   "preset": "roman",
+   "name": "A Roman envoy",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#9e1b2a"
+   }
+  },
+  "GAUL": {
+   "preset": "worker",
+   "name": "A Celtic warrior",
+   "spec": {
+    "coat": "#4a6a3a",
+    "hair": "#b8732a",
+    "hairStyle": "long",
+    "beard": "full"
+   }
+  },
+  "MULE": {
+   "preset": "carthaginian",
+   "name": "A Carthaginian soldier",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "YSCI": {
+   "preset": "scipio",
+   "name": "The young Scipio",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "OFFC": {
+   "preset": "roman",
+   "name": "A surviving officer",
+   "spec": {
+    "hat": "none",
+    "coat": "#6a2a2a"
+   }
+  },
+  "MAS": {
+   "preset": "carthaginian",
+   "name": "A Numidian horseman",
+   "spec": {
+    "coat": "#c9a85a",
+    "hat": "turban",
+    "hatCol": "#e9e2d0",
+    "skin": "#8a5a3a"
+   }
+  },
+  "NAS": {
+   "preset": "roman",
+   "name": "Scipio Nasica",
+   "spec": {
+    "hat": "none",
+    "coat": "#e9e2d0",
+    "coat2": "#2a5a3a",
+    "hair": "#8a8278"
+   }
+  },
+  "AEM": {
+   "preset": "scipio",
+   "name": "Scipio Aemilianus",
+   "spec": {
+    "hair": "#5a3a22"
+   }
+  },
+  "POLY": {
+   "preset": "roman",
+   "name": "Polybius",
+   "spec": {
+    "hat": "none",
+    "coat": "#3a4a6a",
+    "coat2": "#d8d0c0",
+    "beard": "full",
+    "hair": "#8a8278"
+   }
+  },
+  "ARCH": {
+   "preset": "civilian",
+   "name": "Archimedes",
+   "spec": {
+    "coat": "#e9e2d0",
+    "coat2": "#c8bfa8",
+    "beard": "full",
+    "hair": "#d8d3cb"
+   }
+  },
+  "MASI": {
+   "preset": "carthaginian",
+   "name": "Masinissa",
+   "spec": {
+    "coat": "#c9a85a",
+    "hat": "turban",
+    "hatCol": "#e9e2d0",
+    "skin": "#8a5a3a",
+    "beard": "full"
+   }
+  },
+  "HASD": {
+   "preset": "carthaginian",
+   "name": "Hasdrubal, Carthage's last general",
+   "spec": {
+    "hatCol": "#c8a24a",
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "HWIFE": {
+   "preset": "carthaginian_woman",
+   "name": "Hasdrubal's wife"
+  }
+ },
+ "voices": {
+  "ROM": "bm_lewis",
+  "CAR": "bm_daniel",
+  "HAN": "bm_fable",
+  "SCI": "am_michael",
+  "FAB": "bm_lewis",
+  "CAT": "bm_daniel",
+  "SEN2": "am_adam",
+  "MAM": "am_fenrir",
+  "LEG": "am_puck",
+  "LEG2": "am_adam",
+  "ROWER": "am_puck",
+  "CAPT": "am_fenrir",
+  "PRIEST": "bm_daniel",
+  "PUL": "bm_lewis",
+  "SAIL": "am_adam",
+  "COUNC": "bm_lewis",
+  "HAM": "am_fenrir",
+  "BOY": "am_puck",
+  "MERC": "am_fenrir",
+  "ENVOY": "bm_fable",
+  "GAUL": "am_fenrir",
+  "MULE": "am_adam",
+  "YSCI": "am_michael",
+  "OFFC": "bm_daniel",
+  "MAS": "am_adam",
+  "NAS": "am_michael",
+  "AEM": "am_michael",
+  "POLY": "bm_daniel",
+  "ARCH": "bm_daniel",
+  "MASI": "am_adam",
+  "HASD": "am_fenrir",
+  "HWIFE": "af_sarah"
+ },
+ "photos": {
+  "alps": [
+   "Turner Snow Storm Hannibal and his Army Crossing the Alps",
+   true
+  ],
+  "dido": [
+   "Turner Dido building Carthage Rise of the Carthaginian Empire",
+   true
+  ],
+  "hannibal": [
+   "smoke/portraits/hannibal.png",
+   false
+  ],
+  "scipio": [
+   "Scipio Africanus bust Naples",
+   false
+  ],
+  "cato": [
+   "Cato the Elder bust Rome",
+   false
+  ],
+  "zama": [
+   "Battle of Zama Cornelis Cort engraving",
+   true
+  ],
+  "cannae": [
+   "Death of Paulus Aemilius at the Battle of Cannae Trumbull",
+   true
+  ],
+  "ruins": [
+   "Carthage Byrsa Punic ruins Tunisia",
+   true
+  ],
+  "ports": [
+   "Punic ports Carthage harbour",
+   true
+  ],
+  "hwife": [
+   "smoke/portraits/hwife.png",
+   false
+  ],
+  "alpsart": [
+   "Hannibal crossing the Alps Leutemann",
+   true
+  ],
+  "burning": [
+   "Destruction of Carthage painting 146 BC",
+   true
+  ],
+  "corvus": [
+   "corvus boarding bridge Roman ship drawing",
+   true
+  ],
+  "pulcher": [
+   "Claudius Pulcher sacred chickens",
+   true
+  ],
+  "han2": [
+   "Hannibal Barca statue Slodtz Louvre",
+   false
+  ],
+  "han3": [
+   "Hannibal Barcid coin Carthage shekel",
+   true
+  ],
+  "han4": [
+   "Hannibal crossing the Rhone Henri Motte",
+   true
+  ],
+  "han5": [
+   "Hannibal swears eternal enmity to Rome Amigoni",
+   true
+  ],
+  "sci2": [
+   "Continence of Scipio painting",
+   true
+  ],
+  "sci3": [
+   "Scipio Africanus statue",
+   false
+  ],
+  "ruins2": [
+   "Carthage Antonine Baths ruins",
+   true
+  ],
+  "ruins3": [
+   "Carthage Punic quarter Byrsa hill excavation",
+   true
+  ],
+  "archi": [
+   "Archimedes Directing the Defenses of Syracuse Thomas Ralph Spence",
+   false
+  ],
+  "claw": [
+   "Claw of Archimedes wall painting Stanzino delle Matematiche",
+   false
+  ],
+  "archdeath": [
+   "Death of Archimedes Roman mosaic copy",
+   false
+  ],
+  "soph": [
+   "Simone-cantarini---Sofonisba.jpg",
+   false
+  ]
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below.",
+ "balls": {},
+ "id": "sb-rome-carthage-short2",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-rome-carthage",
+ "title": "Do You Know a Roman Admiral Threw the SACRED CHICKENS Overboard? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know a Roman admiral threw the sacred chickens into the sea, and then lost almost his whole fleet?",
+    "scene": {
+     "shot": "photo",
+     "img": "pulcher",
+     "move": "in",
+     "caption": "Claudius Pulcher and the sacred chickens",
+     "fallback": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
+    }
+   },
+   {
+    "say": "249 BC, off Sicily. Rome is at war with Carthage. Its admiral, Claudius Pulcher, is about to attack at Drepana.",
+    "scene": {
+     "shot": "card",
+     "time": "249 BC",
+     "place": "DREPANA, SICILY",
+     "date": "Claudius Pulcher attacks"
+    }
+   },
+   {
+    "say": "Before the attack, the priests report that the sacred chickens will not eat. A very bad omen.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.6,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 2,
+       "x": 0.2,
+       "s": 0.6,
+       "flag": "red",
+       "y": 0.66,
+       "gap": 420,
+       "steam": false,
+       "depth": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "PRIEST",
+      "text": "Admiral... the chickens won't eat.",
+      "mood": "sad"
+     },
+     {
+      "who": "PUL",
+      "text": "Then let them drink.",
+      "mood": "angry"
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "sea",
+       "y": 0.6,
+       "depth": 0.3
+      },
+      {
+       "type": "ships",
+       "n": 2,
+       "x": 0.2,
+       "s": 0.6,
+       "flag": "red",
+       "y": 0.66,
+       "gap": 420,
+       "steam": false,
+       "depth": 0.5
+      }
+     ]
+    }
+   },
+   {
+    "say": "So, the story goes, Pulcher threw them overboard, and said that if they would not eat, they could drink.",
+    "scene": {
+     "shot": "photo",
+     "img": "pulcher",
+     "move": "in",
+     "caption": "Claudius Pulcher and the sacred chickens",
+     "fallback": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.58,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "red",
+        "y": 0.64,
+        "gap": 260,
+        "steam": false,
+        "depth": 0.5
+       },
+       {
+        "type": "ships",
+        "n": 5,
+        "x": 0.7,
+        "s": 0.5,
+        "flag": "white",
+        "y": 0.7,
+        "gap": 240,
+        "steam": false,
+        "depth": 0.5
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
+    }
+   },
+   {
+    "say": "He lost ninety three of his hundred and twenty ships. Nearly four in every five.",
+    "scene": {
+     "shot": "card",
+     "time": "93 OF 120",
+     "place": "SHIPS LOST",
+     "date": "Drepana, 249 BC"
+    },
+    "pause": 1.0
+   },
+   {
+    "say": "Ninety three warships, lost after a joke about chickens.",
+    "scene": {
+     "shot": "card",
+     "time": "93 WARSHIPS",
+     "place": "ONE JOKE",
+     "date": "Drepana, 249 BC"
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Britannica, Punic Wars: https://www.britannica.com/topic/Punic-Wars",
+  "World History Encyclopedia, First Punic War: https://www.worldhistory.org/First_Punic_War/"
+ ]
+}

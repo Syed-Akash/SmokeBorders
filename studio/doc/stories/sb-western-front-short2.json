@@ -1,0 +1,453 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "era": "1914",
+ "musicEra": "modern",
+ "places": {
+  "Brussels": [
+   4.35,
+   50.85
+  ],
+  "Liège": [
+   5.57,
+   50.63
+  ],
+  "Mons": [
+   3.95,
+   50.45
+  ],
+  "Ypres": [
+   2.88,
+   50.85
+  ],
+  "Verdun": [
+   5.39,
+   49.16
+  ],
+  "Albert": [
+   2.65,
+   50.0
+  ],
+  "Passchendaele": [
+   3.02,
+   50.9
+  ],
+  "Compiègne": [
+   2.83,
+   49.42
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "London": [
+   -0.13,
+   51.5
+  ]
+ },
+ "cast": {
+  "GER1": {
+   "preset": "german_1914",
+   "name": "A German soldier"
+  },
+  "GER2": {
+   "preset": "german_ww1",
+   "name": "A German soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "GER3": {
+   "preset": "german_ww1",
+   "name": "Another German soldier",
+   "spec": {
+    "hair": "#c8a060"
+   }
+  },
+  "TOM1": {
+   "preset": "tommy",
+   "name": "A British soldier"
+  },
+  "TOM2": {
+   "preset": "tommy",
+   "name": "Another British soldier",
+   "spec": {
+    "hair": "#b8732a"
+   }
+  },
+  "TOM3": {
+   "preset": "tommy",
+   "name": "A British private",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "TOM4": {
+   "preset": "tommy",
+   "name": "His mate",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MILES": {
+   "preset": "tommy_officer",
+   "name": "Captain Robert Miles"
+  },
+  "GOFF": {
+   "preset": "german_officer_ww1",
+   "name": "A German staff officer"
+  },
+  "GAIDE": {
+   "preset": "german_officer_ww1",
+   "name": "His aide",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "POI": {
+   "preset": "poilu",
+   "name": "A French soldier"
+  },
+  "POI2": {
+   "preset": "poilu",
+   "name": "Another French soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "MARC": {
+   "preset": "german_ww1",
+   "name": "Franz Marc",
+   "spec": {
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "NURSE": {
+   "preset": "nurse_ww1",
+   "name": "A nurse"
+  },
+  "CENSOR": {
+   "preset": "clerk",
+   "name": "An army censor"
+  },
+  "CENSOR2": {
+   "preset": "clerk",
+   "name": "Another censor",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "GINT": {
+   "preset": "german_1914",
+   "name": "A German interpreter, from Suffolk"
+  },
+  "CLERK1": {
+   "preset": "clerk",
+   "name": "A War Office clerk"
+  },
+  "CLERK2": {
+   "preset": "clerk",
+   "name": "Another clerk",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "ERZ": {
+   "preset": "civilian",
+   "name": "Matthias Erzberger, German delegate"
+  },
+  "FOCH": {
+   "preset": "french_officer",
+   "name": "Marshal Ferdinand Foch",
+   "spec": {
+    "hat": "kepi",
+    "hatCol": "#1f3f8a",
+    "coat": "#3a4a6a",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "beard": "mustache"
+   }
+  }
+ },
+ "voices": {
+  "GER1": "am_fenrir",
+  "GER2": "am_adam",
+  "GER3": "am_puck",
+  "TOM1": "bm_lewis",
+  "TOM2": "bm_daniel",
+  "TOM3": "bm_lewis",
+  "TOM4": "bm_daniel",
+  "MILES": "bm_fable",
+  "GOFF": "am_fenrir",
+  "GAIDE": "am_puck",
+  "POI": "am_michael",
+  "POI2": "am_adam",
+  "MARC": "am_adam",
+  "NURSE": "af_sarah",
+  "CENSOR": "am_michael",
+  "CENSOR2": "am_puck",
+  "ERZ": "am_fenrir",
+  "GINT": "am_adam",
+  "CLERK1": "bm_lewis",
+  "CLERK2": "bm_daniel",
+  "FOCH": "bm_daniel"
+ },
+ "photos": {
+  "truce": [
+   "Christmas truce 1914 Northumberland Hussars no man's land",
+   false
+  ],
+  "hitler": [
+   "Hitler with comrades of the List Regiment 1914",
+   false
+  ],
+  "liege": [
+   "Fort de Loncin Liège 1914 ruins",
+   true
+  ],
+  "marne": [
+   "French soldiers Battle of the Marne 1914",
+   false
+  ],
+  "trench": [
+   "Cheshire Regiment trench Somme 1916",
+   false
+  ],
+  "gassed": [
+   "Gassed John Singer Sargent",
+   true
+  ],
+  "douaumont": [
+   "Fort Douaumont 1916",
+   true
+  ],
+  "marc": [
+   "Franz Marc photograph 1910",
+   false
+  ],
+  "bluehorse": [
+   "Franz Marc Blue Horse I 1911",
+   true
+  ],
+  "somme": [
+   "Royal Irish Rifles first day Somme 1916 trench",
+   false
+  ],
+  "gunther": [
+   "Henry Gunther soldier",
+   false
+  ],
+  "passchendaele": [
+   "Chateau Wood Ypres 1917 Hurley",
+   true
+  ],
+  "carriage": [
+   "Armistice railway carriage Compiègne 1918",
+   false
+  ],
+  "trebuchon": [
+   "Augustin Trébuchon",
+   false
+  ]
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below. Lines from letters are quoted as written; paraphrases are labelled.",
+ "balls": {},
+ "id": "sb-western-front-short2",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-western-front",
+ "title": "Do You Know Germany Tried to SAVE This Painter From the War? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know Germany made a list of famous artists to pull out of the trenches, and one of them died before the order arrived?",
+    "scene": {
+     "shot": "photo",
+     "img": "marc",
+     "move": "in",
+     "caption": "Franz Marc",
+     "fallback": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 191,
+        "wall": "#5a6a7a"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 192
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.45,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    }
+   },
+   {
+    "say": "His name was Franz Marc. Before the war, he painted blue horses.",
+    "scene": {
+     "shot": "photo",
+     "img": "bluehorse",
+     "move": "right",
+     "caption": "Blue Horse I (Franz Marc, 1911)",
+     "fallback": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.6,
+        "n": 3,
+        "seed": 5,
+        "depth": 0.2
+       },
+       {
+        "type": "animal",
+        "kind": "horse",
+        "x": 0.5,
+        "s": 1.6,
+        "y": 0.86,
+        "walk": false,
+        "facing": 1,
+        "depth": 0.8
+       }
+      ]
+     }
+    }
+   },
+   {
+    "say": "At the front, he painted camouflage covers, to hide positions from aircraft. In styles, he said, from Manet to Kandinsky.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "cannons",
+       "n": 2,
+       "x": 0.4,
+       "fire": false,
+       "depth": 0.6
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "german_ww1",
+         "x": 0.62,
+         "pose": "point",
+         "facing": -1,
+         "h": 0.62,
+         "y": 0.95
+        }
+       ],
+       "depth": 0.88
+      }
+     ]
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "GER2",
+      "text": "Is that a painting or a gun?"
+     },
+     {
+      "who": "MARC",
+      "text": "That is the point."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.72,
+       "depth": 0.6
+      },
+      {
+       "type": "cannons",
+       "n": 1,
+       "x": 0.5,
+       "fire": false,
+       "depth": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "His name was on the government's list of notable artists, to be withdrawn from combat for their own safety.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "~ 1916 ~ Notable artists to be withdrawn (paraphrase)",
+     "lines": [
+      "...",
+      "Marc, Franz",
+      "..."
+     ],
+     "hl": 1
+    }
+   },
+   {
+    "say": "On the fourth of March 1916, at Verdun, a shell splinter killed him instantly. The orders had not reached him yet.",
+    "scene": {
+     "shot": "card",
+     "time": "4 MARCH 1916",
+     "place": "VERDUN",
+     "date": "Franz Marc, 36"
+    },
+    "pause": 1.0
+   },
+   {
+    "say": "Twenty three years later, Hitler's government sold his Blue Horses as degenerate art.",
+    "scene": {
+     "shot": "card",
+     "time": "1939",
+     "place": "LUCERNE",
+     "date": "'degenerate art' sale"
+    }
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Franz Marc (camouflage letter, nine tarpaulins, 2,000 m, artists list, shell splinter, 4 March 1916, 'flaming agony', 1939 sale): https://en.wikipedia.org/wiki/Franz_Marc"
+ ]
+}
