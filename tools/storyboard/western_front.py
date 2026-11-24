@@ -431,7 +431,7 @@ ch.append({"title": "What the Line Remembers", "years": "1914–1918", "mood": "
 ]})
 
 story = {
- "id": "sb-western-front", "brand": "smoke", "narrator": "bm_george", "film": True, "era": "1914", "musicEra": "modern",
+ "id": "sb-western-front", "brand": "smoke", "balls": {}, "narrator": "bm_george", "film": True, "era": "1914", "musicEra": "modern",
  "title": "How the Western Front Happened — Minute by Minute",
  "hook": "Christmas Eve 1914: the Germans shout Merry Christmas across no man's land, and a British captain writes that his men can't shoot them in cold blood. Five days later he is dead, and the war has 1,412 days left to run.",
  "about": "The Western Front of the First World War, 1914-1918, lived from both sides of the trenches: the march through Belgium, life two metres underground, the Christmas truce in the letters of Captain Robert Miles, Lieutenant Johannes Niemann, Kurt Zehmisch and Gervais Morillon, the first gas attack at Ypres, the painter Franz Marc at Verdun, seven thirty on the first day of the Somme, the mutinies of 1917, Germany's last gamble, and the last minutes of 11 November 1918.",

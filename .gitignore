@@ -9,3 +9,5 @@ __pycache__/
 smoke/render-*.log
 smoke/pacing-*.log
 smoke/brand/fonts/anton.ttf
+smoke/sheet-*.log
+smoke/wip-*.log

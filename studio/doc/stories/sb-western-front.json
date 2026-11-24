@@ -1,6 +1,7 @@
 {
  "id": "sb-western-front",
  "brand": "smoke",
+ "balls": {},
  "narrator": "bm_george",
  "film": true,
  "era": "1914",
