@@ -30,7 +30,11 @@
   "MAS": "am_adam",
   "NAS": "am_michael",
   "AEM": "am_michael",
-  "POLY": "bm_daniel"
+  "POLY": "bm_daniel",
+  "ARCH": "bm_daniel",
+  "MASI": "am_adam",
+  "HASD": "am_fenrir",
+  "HWIFE": "af_sarah"
  },
  "title": "Rome vs Carthage: The ENTIRE War From Both Sides",
  "era": "bc300",
@@ -8476,7 +8480,7 @@
        }
       },
       {
-       "on": "Livy's",
+       "on": "Livy",
        "card": {
         "kind": "caption",
         "text": "Paraphrase",
@@ -11468,7 +11472,7 @@
        ]
       },
       {
-       "on": "traitor",
+       "on": "cursed",
        "sfx": "braam"
       }
      ],

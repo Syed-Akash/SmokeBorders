@@ -120,6 +120,13 @@
       c.beginPath(); c.moveTo(hx - R * .5, ht - R * .1); c.lineTo(hx, ht - R * 1.05); c.lineTo(hx + R * .5, ht - R * .1); c.closePath(); c.fillStyle = s.trim; c.fill(); outline(c, lw * .6) }
     if (s.hat === 'fedora') { c.fillStyle = hc; ell(c, hx, ht + R * .12, R * 1.35, R * .28); c.fill(); outline(c, lw * .7); c.beginPath(); c.roundRect(hx - R * .72, ht - R * .78, R * 1.44, R * .95, R * .35); c.fill(); outline(c, lw * .7);
       c.fillStyle = s.trim || '#222'; c.fillRect(hx - R * .72, ht - R * .05, R * 1.44, R * .18) }
+    // WW1 (Smoke & Borders, Western Front): British Brodie, German Pickelhaube (1914) and Stahlhelm (1916), French Adrian
+    if (s.hat === 'brodie') { c.fillStyle = hc; ell(c, hx, ht + R * .2, R * 1.45, R * .2); c.fill(); outline(c, lw * .8); c.beginPath(); c.moveTo(hx - R * .85, ht + R * .18); c.bezierCurveTo(hx - R * .8, ht - R * .7, hx + R * .8, ht - R * .7, hx + R * .85, ht + R * .18); c.closePath(); c.fill(); outline(c, lw) }
+    if (s.hat === 'pickelhaube') { c.fillStyle = hc; c.beginPath(); c.moveTo(hx - R * .95, ht + R * .35); c.bezierCurveTo(hx - R * .95, ht - R * .75, hx + R * .95, ht - R * .75, hx + R * .95, ht + R * .35); c.closePath(); c.fill(); outline(c, lw);
+      c.beginPath(); c.moveTo(hx - R * .12, ht - R * .5); c.lineTo(hx, ht - R * 1.15); c.lineTo(hx + R * .12, ht - R * .5); c.closePath(); c.fillStyle = s.trim || '#c9a85a'; c.fill(); outline(c, lw * .6); c.fillStyle = INK; c.beginPath(); c.ellipse(hx + f * R * .5, ht + R * .38, R * .6, R * .12, 0, 0, Math.PI * 2); c.fill() }
+    if (s.hat === 'stahlhelm') { c.fillStyle = hc; c.beginPath(); c.moveTo(hx - R * 1.15, ht + R * .75); c.lineTo(hx - R * 1.0, ht + R * .3); c.bezierCurveTo(hx - R * 1.05, ht - R * .8, hx + R * 1.05, ht - R * .8, hx + R * 1.0, ht + R * .3); c.lineTo(hx + R * 1.15, ht + R * .75); c.lineTo(hx + R * .85, ht + R * .55); c.lineTo(hx - R * .85, ht + R * .55); c.closePath(); c.fill(); outline(c, lw) }
+    if (s.hat === 'adrian') { c.fillStyle = hc; ell(c, hx, ht + R * .3, R * 1.2, R * .18); c.fill(); outline(c, lw * .7); c.beginPath(); c.moveTo(hx - R * .9, ht + R * .3); c.bezierCurveTo(hx - R * .9, ht - R * .7, hx + R * .9, ht - R * .7, hx + R * .9, ht + R * .3); c.closePath(); c.fill(); outline(c, lw);
+      c.beginPath(); c.moveTo(hx - R * .5, ht - R * .35); c.quadraticCurveTo(hx, ht - R * .95, hx + R * .5, ht - R * .35); c.lineWidth = R * .16; c.strokeStyle = shade(hc, .2); c.stroke() }
     if (s.hat === 'turban') { for (let i = 0; i < 3; i++) { ell(c, hx, ht + R * .05 - i * R * .3, R * (1.1 - i * .12), R * .4); c.fillStyle = i % 2 ? shade(hc, .15) : hc; c.fill(); outline(c, lw * .7) } }
     c.restore();
   };
@@ -171,6 +178,14 @@
     politician: { coat: '#2a2f3a', coat2: '#e9e2d0', trim: '#b3202a', hairStyle: 'short', hair: '#8a8478' },
     tequesta: { coat: '#a0623a', coat2: '#c88a5a', hairStyle: 'long', hair: '#1c1a1a', skin: '#b87850', trim: '#e8c35a' },
     citizen80s: { coat: '#4a5a7a', coat2: '#e8e0d0', trim: '#6a6458', hairStyle: 'short', hair: '#2a1d12', skin: '#8a5a3a' },
+    tommy: { coat: '#7a6a42', coat2: '#6a5a36', hat: 'brodie', hatCol: '#5e5a3a', trim: '#4a4028', hairStyle: 'short', hair: '#5a3b22' },   // British soldier, WW1 khaki
+    tommy_officer: { coat: '#8a7a50', coat2: '#e9e2d0', hat: 'kepi', hatCol: '#7a6a42', trim: '#c9a85a', hairStyle: 'short', hair: '#3b2a1a', beard: 'mustache' },
+    german_1914: { coat: '#6f7563', coat2: '#5a604e', hat: 'pickelhaube', hatCol: '#2a2a26', trim: '#b8b8b0', hairStyle: 'short', hair: '#6b4a2a' },
+    german_ww1: { coat: '#6f7563', coat2: '#5a604e', hat: 'stahlhelm', hatCol: '#5c6252', trim: '#3a3e32', hairStyle: 'short', hair: '#6b4a2a' },
+    german_officer_ww1: { coat: '#6f7563', coat2: '#d8d1c0', hat: 'kepi', hatCol: '#5c6252', trim: '#c8102e', hairStyle: 'short', hair: '#3b2a1a', beard: 'mustache' },
+    poilu: { coat: '#7d93b0', coat2: '#6a7f9a', hat: 'adrian', hatCol: '#6f86a3', trim: '#3a4a5a', hairStyle: 'short', hair: '#2a1d12', beard: 'full' },   // French soldier, horizon blue
+    doughboy: { coat: '#7a7044', coat2: '#6a6038', hat: 'brodie', hatCol: '#5e5a3a', trim: '#4a4028', hairStyle: 'short', hair: '#8a5a32' },
+    nurse_ww1: { coat: '#e9e6df', coat2: '#2a3a6a', trim: '#c8102e', hairStyle: 'flowing', hair: '#5a3b22', female: 1 },
     kim: { coat: '#4a4a52', coat2: '#d8d1c0', hairStyle: 'short', hair: '#1c1a1a', skin: '#efc49c', hat: 'none' }
   };
 })(typeof window !== 'undefined' ? window : globalThis);

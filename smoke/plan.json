@@ -108,7 +108,8 @@
      "publish": "2026-12-02T16:00:00Z"
     }
    ],
-   "angle": "Find one: a soldier or nurse on each side whose letters survive."
+   "angle": "Find one: a soldier or nurse on each side whose letters survive.",
+   "note": "24 Nov 2026: script and storyboard drafted (3,630 words, ~25 min, 150 beats, 26 exchanges; tools/storyboard/western_front.py builds it). Hidden person: Capt. Robert Miles (truce letter, killed 30 Dec 1914). Still to do: photos, the two 'Do you know' Shorts (Trebuchon's soup note; Franz Marc on the artists list), localizations, pacing + storysheet check, then set scripted."
   },
   {
    "id": "sb-korea-38th",

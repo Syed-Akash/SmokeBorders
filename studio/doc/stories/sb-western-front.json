@@ -1,0 +1,7970 @@
+{
+ "id": "sb-western-front",
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "film": true,
+ "era": "1914",
+ "musicEra": "modern",
+ "title": "How the Western Front Happened — Minute by Minute",
+ "hook": "Christmas Eve 1914: the Germans shout Merry Christmas across no man's land, and a British captain writes that his men can't shoot them in cold blood. Five days later he is dead, and the war has 1,412 days left to run.",
+ "about": "The Western Front of the First World War, 1914-1918, lived from both sides of the trenches: the march through Belgium, life two metres underground, the Christmas truce in the letters of Captain Robert Miles, Lieutenant Johannes Niemann, Kurt Zehmisch and Gervais Morillon, the first gas attack at Ypres, the painter Franz Marc at Verdun, seven thirty on the first day of the Somme, the mutinies of 1917, Germany's last gamble, and the last minutes of 11 November 1918.",
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below. Lines from letters are quoted as written; paraphrases are labelled.",
+ "tags": [
+  "western front",
+  "world war 1",
+  "ww1",
+  "first world war",
+  "christmas truce",
+  "christmas truce 1914",
+  "trench warfare",
+  "battle of the somme",
+  "verdun",
+  "armistice 1918",
+  "henry gunther",
+  "franz marc",
+  "ww1 documentary",
+  "history documentary",
+  "animated history",
+  "both sides",
+  "smoke and borders"
+ ],
+ "places": {
+  "Brussels": [
+   4.35,
+   50.85
+  ],
+  "Liège": [
+   5.57,
+   50.63
+  ],
+  "Mons": [
+   3.95,
+   50.45
+  ],
+  "Ypres": [
+   2.88,
+   50.85
+  ],
+  "Verdun": [
+   5.39,
+   49.16
+  ],
+  "Albert": [
+   2.65,
+   50.0
+  ],
+  "Passchendaele": [
+   3.02,
+   50.9
+  ],
+  "Compiègne": [
+   2.83,
+   49.42
+  ],
+  "Paris": [
+   2.35,
+   48.86
+  ],
+  "Berlin": [
+   13.4,
+   52.52
+  ],
+  "London": [
+   -0.13,
+   51.5
+  ]
+ },
+ "intro": {
+  "mood": "wonder",
+  "beats": [
+   {
+    "say": "Christmas Eve, 1914. A bitter cold night, with white frost, on the Western Front in Belgium.",
+    "scene": {
+     "shot": "card",
+     "time": "24 DEC 1914",
+     "place": "FLANDERS, BELGIUM",
+     "date": "Christmas Eve, a bitter cold night"
+    },
+    "do": [
+     {
+      "on": "frost",
+      "scene": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "mud",
+         "y": 0.7,
+         "depth": 0.5
+        },
+        {
+         "type": "craters",
+         "n": 6,
+         "seed": 1,
+         "water": false,
+         "y": 0.72
+        },
+        {
+         "type": "wire",
+         "y": 0.8400000000000001,
+         "h": 80
+        }
+       ],
+       "fx": [
+        "snow"
+       ]
+      }
+     }
+    ],
+    "date": "24 DECEMBER 1914"
+   },
+   {
+    "say": "Soon after dusk, a shout comes across the frozen mud from the German trenches. Merry Christmas, Englishmen.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "trench",
+       "y": 0.93,
+       "w": 0.75,
+       "top": 0.39,
+       "wet": false
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "german_1914",
+         "x": 0.42,
+         "pose": "wave",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.95
+        },
+        {
+         "preset": "german_1914",
+         "x": 0.6,
+         "pose": "idle",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.95
+        }
+       ],
+       "depth": 0.88
+      }
+     ],
+     "fx": [
+      "snow"
+     ]
+    },
+    "do": [
+     {
+      "on": "shout",
+      "sfx": "tension"
+     }
+    ]
+   },
+   {
+    "talk": [
+     {
+      "who": "GER1",
+      "text": "Merry Christmas, Englishmen!"
+     },
+     {
+      "who": "TOM1",
+      "text": "Did they just say Merry Christmas?",
+      "mood": "shock"
+     },
+     {
+      "who": "TOM2",
+      "text": "Say it back, then."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "trench",
+       "y": 0.93,
+       "w": 0.65,
+       "top": 0.36,
+       "wet": false,
+       "col": "#3e3022"
+      }
+     ],
+     "fx": [
+      "snow"
+     ]
+    }
+   },
+   {
+    "say": "A British captain called Robert Miles will write it all down in a letter home. Men from both sides climb out, unarmed, and meet in no man's land. They swap cigarettes, he writes, and lies.",
+    "scene": {
+     "shot": "photo",
+     "img": "truce",
+     "move": "in",
+     "caption": "British and German troops in no man's land, Christmas 1914",
+     "fallback": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 7,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "cup"
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    "do": [
+     {
+      "on": "Miles",
+      "card": {
+       "kind": "name",
+       "text": "Captain Robert Miles",
+       "sub": "King's Shropshire Light Infantry",
+       "dur": 4
+      }
+     },
+     {
+      "on": "unarmed",
+      "scene": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "mud",
+         "y": 0.7,
+         "depth": 0.5
+        },
+        {
+         "type": "craters",
+         "n": 8,
+         "seed": 8,
+         "water": false,
+         "y": 0.72
+        },
+        {
+         "type": "wire",
+         "y": 0.78,
+         "h": 80
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "tommy",
+           "x": 0.3,
+           "pose": "walk",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95,
+           "walk": [
+            0.15,
+            0.4,
+            0,
+            4
+           ]
+          },
+          {
+           "preset": "german_1914",
+           "x": 0.72,
+           "pose": "walk",
+           "facing": -1,
+           "h": 0.62,
+           "y": 0.95,
+           "walk": [
+            0.85,
+            0.58,
+            0,
+            4
+           ]
+          }
+         ],
+         "depth": 0.88
+        }
+       ],
+       "fx": [
+        "snow"
+       ]
+      }
+     },
+     {
+      "on": "lies",
+      "scene": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "mud",
+         "y": 0.7,
+         "depth": 0.5
+        },
+        {
+         "type": "craters",
+         "n": 8,
+         "seed": 10,
+         "water": false,
+         "y": 0.72
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "tommy_officer",
+           "x": 0.42,
+           "pose": "hold",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95,
+           "prop": "paper"
+          },
+          {
+           "preset": "german_1914",
+           "x": 0.58,
+           "pose": "shrug",
+           "facing": -1,
+           "h": 0.62,
+           "y": 0.95
+          }
+         ],
+         "depth": 0.88
+        }
+       ],
+       "fx": [
+        "snow"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "say": "Somewhere along the same front, a German corporal in a Bavarian regiment does not approve at all. His name is Adolf Hitler.",
+    "scene": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "trench",
+       "y": 0.93,
+       "w": 0.75,
+       "top": 0.36,
+       "wet": false,
+       "col": "#3a2c20"
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "german_1914",
+         "x": 0.5,
+         "pose": "cross",
+         "facing": -1,
+         "h": 0.62,
+         "y": 0.95,
+         "mood": "angry"
+        }
+       ],
+       "depth": 0.88
+      }
+     ],
+     "fx": [
+      "snow"
+     ]
+    },
+    "do": [
+     {
+      "on": "Hitler",
+      "scene": {
+       "shot": "photo",
+       "img": "hitler",
+       "move": "left",
+       "caption": "Adolf Hitler (seated, right) with comrades of his regiment, 1914–1918",
+       "fallback": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.65,
+          "top": 0.42,
+          "wet": false
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_1914",
+            "x": 0.45,
+            "pose": "cross",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "german_1914",
+            "x": 0.62,
+            "pose": "idle",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "say": "About a hundred thousand British and German soldiers stop fighting that Christmas. Captain Miles writes that his men cannot shoot the Germans in cold blood. Five days later, he will be dead.",
+    "scene": {
+     "shot": "card",
+     "time": "≈ 100,000",
+     "place": "SOLDIERS STOP FIGHTING",
+     "date": "Christmas 1914",
+     "size": 170
+    },
+    "do": [
+     {
+      "on": "Miles",
+      "scene": {
+       "shot": "set",
+       "time": "night",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.45,
+         "night": true,
+         "depth": 0.3,
+         "seed": 15,
+         "wall": "#3a3228"
+        },
+        {
+         "type": "table",
+         "lamp": 1,
+         "candles": 0,
+         "papers": 1,
+         "w": 700,
+         "depth": 0.6,
+         "seed": 16
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "tommy_officer",
+           "x": 0.4,
+           "pose": "think",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95,
+           "prop": "paper"
+          }
+         ],
+         "depth": 0.88
+        }
+       ]
+      }
+     },
+     {
+      "on": "Five",
+      "scene": {
+       "shot": "card",
+       "time": "5 DAYS",
+       "place": "LEFT TO LIVE",
+       "date": "Captain Robert Miles",
+       "size": 200
+      }
+     }
+    ],
+    "pause": 1.2
+   },
+   {
+    "say": "This is the Western Front, 1914 to 1918. Britain and France on one side, Germany on the other, and a line of trenches from the North Sea to Switzerland.",
+    "scene": {
+     "shot": "off"
+    },
+    "do": [
+     {
+      "on": "Britain",
+      "hl": [
+       "United Kingdom",
+       "France"
+      ],
+      "color": "#c8102e"
+     },
+     {
+      "on": "Germany",
+      "hl": [
+       "Germany"
+      ],
+      "color": "#5c6252"
+     },
+     {
+      "on": "Switzerland",
+      "scene": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "land",
+         "kind": "mud",
+         "y": 0.74,
+         "depth": 0.6
+        },
+        {
+         "type": "hills",
+         "y": 0.58,
+         "n": 2,
+         "seed": 17,
+         "depth": 0.15
+        },
+        {
+         "type": "soldiers",
+         "y": 0.88,
+         "n": 16,
+         "rows": 2,
+         "x0": 0.0,
+         "gap": 80,
+         "col": "#7a6a42",
+         "march": true,
+         "depth": 0.7
+        }
+       ]
+      }
+     }
+    ],
+    "cam": {
+     "lon": 4.5,
+     "lat": 49.8,
+     "scale": 2600
+    }
+   },
+   {
+    "say": "Today we live it from both sides of that line, minute by minute. And we ask one question. If the men in the trenches did not want to kill each other, why did the war go on for four more years?",
+    "scene": {
+     "shot": "set",
+     "time": "dawn",
+     "parts": [
+      {
+       "type": "land",
+       "kind": "mud",
+       "y": 0.7,
+       "depth": 0.5
+      },
+      {
+       "type": "craters",
+       "n": 8,
+       "seed": 18,
+       "water": false,
+       "y": 0.72
+      },
+      {
+       "type": "wire",
+       "y": 0.81,
+       "h": 80
+      },
+      {
+       "type": "actors",
+       "list": [
+        {
+         "preset": "tommy",
+         "x": 0.3,
+         "pose": "think",
+         "facing": 1,
+         "h": 0.62,
+         "y": 0.95
+        },
+        {
+         "preset": "german_1914",
+         "x": 0.7,
+         "pose": "think",
+         "facing": -1,
+         "h": 0.62,
+         "y": 0.95
+        }
+       ],
+       "depth": 0.88
+      }
+     ]
+    },
+    "do": [
+     {
+      "on": "question",
+      "sfx": "braam"
+     }
+    ]
+   }
+  ]
+ },
+ "chapters": [
+  {
+   "title": "The Road Through Belgium",
+   "years": "August 1914",
+   "mood": "uneasy",
+   "beats": [
+    {
+     "say": "August 1914. Germany sends seven armies west, and one east, against Russia. The plan in the west is to beat France fast, by going around the French defences, and then trapping the French army.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 20,
+        "wall": "#5a5446"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 21
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_officer_ww1",
+          "x": 0.35,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_officer_ww1",
+          "x": 0.65,
+          "pose": "think",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "France",
+       "scene": {
+        "shot": "off"
+       }
+      },
+      {
+       "on": "around",
+       "arrow": [
+        [
+         6.5,
+         51.0
+        ],
+        [
+         3.8,
+         50.6
+        ],
+        [
+         2.6,
+         49.2
+        ]
+       ],
+       "color": "#5c6252",
+       "big": 1
+      }
+     ],
+     "cam": {
+      "lon": 5.0,
+      "lat": 50.0,
+      "scale": 3200
+     }
+    },
+    {
+     "say": "Going around means marching through Belgium, a neutral country. And Belgium's neutrality had been guaranteed by Britain, in a treaty signed in 1839.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Treaty of London, 1839 (in short)",
+      "lines": [
+       "Belgium: neutral.",
+       "Guaranteed by Britain."
+      ],
+      "hl": 1
+     },
+     "do": [
+      {
+       "on": "Belgium",
+       "pin": "Brussels"
+      },
+      {
+       "on": "1839",
+       "card": {
+        "kind": "big",
+        "text": "1839 TREATY",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GOFF",
+       "text": "We go through Belgium. It is faster."
+      },
+      {
+       "who": "GAIDE",
+       "text": "Belgium is neutral, sir."
+      },
+      {
+       "who": "GOFF",
+       "text": "Belgium is in the way."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 22,
+        "wall": "#4a4a40"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 23
+       }
+      ]
+     }
+    },
+    {
+     "say": "On the fourth of August 1914, German armies attack Belgium. At midnight that same day, Britain's ultimatum runs out. Britain is at war.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 24,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 18,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#6f7563",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "do": [
+      {
+       "on": "midnight",
+       "scene": {
+        "shot": "card",
+        "time": "MIDNIGHT",
+        "place": "LONDON",
+        "date": "4 August 1914"
+       }
+      },
+      {
+       "on": "war",
+       "sfx": "braam"
+      }
+     ],
+     "date": "4 AUGUST 1914"
+    },
+    {
+     "say": "The first battle is at Liège, a heavily fortified Belgian city. The siege lasts from the fifth to the sixteenth of August. Liège fights back so hard that it surprises the German army.",
+     "scene": {
+      "shot": "photo",
+      "img": "liege",
+      "move": "in",
+      "caption": "A fort at Liège after the siege, August 1914",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "hills",
+         "y": 0.58,
+         "n": 2,
+         "seed": 4,
+         "depth": 0.15
+        },
+        {
+         "type": "fort",
+         "x": 0.55,
+         "y": 0.68,
+         "w": 760,
+         "h": 110,
+         "flag": null,
+         "depth": 0.5
+        },
+        {
+         "type": "fire",
+         "x": 0.6,
+         "y": 0.64,
+         "r": 220,
+         "depth": 0.45
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
+     },
+     "do": [
+      {
+       "on": "Liège",
+       "pin": "Liège"
+      },
+      {
+       "on": "surprises",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "fort",
+          "x": 0.5,
+          "y": 0.64,
+          "w": 900,
+          "h": 140,
+          "flag": null,
+          "depth": 0.45
+         },
+         {
+          "type": "cannons",
+          "n": 3,
+          "x": 0.3,
+          "fire": true,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ],
+     "cam": {
+      "lon": 5.57,
+      "lat": 50.63,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "Brussels falls on the twentieth of August. On the twenty sixth, a British reservist called George Ellison lands in France with the 5th Royal Irish Lancers. He is thirty six years old.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 25,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 12,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#7a6a42",
+        "march": true,
+        "depth": 0.7
+       },
+       {
+        "type": "animal",
+        "kind": "horse",
+        "x": 0.7,
+        "s": 1.2,
+        "y": 0.86,
+        "walk": true,
+        "facing": -1,
+        "depth": 0.8
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Brussels",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 14,
+          "gap": 120,
+          "h": 180,
+          "col": "#7a6a5a",
+          "depth": 0.4
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 12,
+          "rows": 2,
+          "x0": 0.0,
+          "gap": 80,
+          "col": "#6f7563",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
+      },
+      {
+       "on": "Ellison",
+       "card": {
+        "kind": "name",
+        "text": "Private George Ellison",
+        "sub": "5th Royal Irish Lancers",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "His regiment's records say he fought near Mons that first summer. Remember the name of that town. George Ellison is going to come back to Mons.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.72,
+        "n": 10,
+        "gap": 150,
+        "h": 150,
+        "col": "#5a4a3a",
+        "depth": 0.4
+       },
+       {
+        "type": "land",
+        "kind": "street",
+        "y": 0.8,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.45,
+          "pose": "rifle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Mons",
+       "pin": "Mons"
+      }
+     ]
+    },
+    {
+     "say": "Now the German side. The advance rolls on, south into France. Then, at the river Marne, it is halted.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 26,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 16,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#6f7563",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "do": [
+      {
+       "on": "Marne",
+       "scene": {
+        "shot": "photo",
+        "img": "marne",
+        "move": "in",
+        "caption": "French soldiers at the Marne, September 1914",
+        "fallback": {
+         "shot": "set",
+         "time": "dusk",
+         "parts": [
+          {
+           "type": "land",
+           "kind": "mud",
+           "y": 0.74,
+           "depth": 0.6
+          },
+          {
+           "type": "hills",
+           "y": 0.58,
+           "n": 2,
+           "seed": 27,
+           "depth": 0.15
+          },
+          {
+           "type": "soldiers",
+           "y": 0.88,
+           "n": 14,
+           "rows": 2,
+           "x0": 0.0,
+           "gap": 80,
+           "col": "#7d93b0",
+           "march": true,
+           "depth": 0.7
+          }
+         ],
+         "fx": [
+          "smoke"
+         ]
+        }
+       }
+      },
+      {
+       "on": "halted",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "cannons",
+          "n": 4,
+          "x": 0.2,
+          "fire": true,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER2",
+       "text": "We were nearly at Paris."
+      },
+      {
+       "who": "GER3",
+       "text": "Nearly is a long way, it turns out."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 28,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 6,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#6f7563",
+        "march": true,
+        "depth": 0.7
+       }
+      ]
+     }
+    },
+    {
+     "say": "So both armies try to go around each other's northern end, again and again, all the way to the coast. It is called the Race to the Sea. Nobody wins it.",
+     "scene": {
+      "shot": "off"
+     },
+     "do": [
+      {
+       "on": "coast",
+       "arrow": [
+        [
+         3.5,
+         49.4
+        ],
+        [
+         2.9,
+         50.4
+        ],
+        [
+         2.7,
+         51.1
+        ]
+       ],
+       "color": "#5c6252",
+       "big": 1
+      },
+      {
+       "on": "Nobody",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "sea",
+          "y": 0.62,
+          "depth": 0.3
+         },
+         {
+          "type": "land",
+          "kind": "sand",
+          "y": 0.72,
+          "depth": 0.5
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "tommy",
+            "x": 0.35,
+            "pose": "dig",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "shovel"
+           },
+           {
+            "preset": "poilu",
+            "x": 0.6,
+            "pose": "dig",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "shovel"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ],
+     "cam": {
+      "lon": 3.2,
+      "lat": 50.3,
+      "scale": 5000
+     }
+    },
+    {
+     "say": "By late October 1914, there is one unbroken line of trenches, from the Swiss border to the North Sea. The war of movement is over. The war of digging has begun.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.36,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "dig",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "shovel"
+         },
+         {
+          "preset": "tommy",
+          "x": 0.62,
+          "pose": "dig",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "shovel"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "unbroken",
+       "scene": {
+        "shot": "off"
+       }
+      },
+      {
+       "on": "digging",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.75,
+          "top": 0.42,
+          "wet": false,
+          "col": "#5a4630"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_1914",
+            "x": 0.45,
+            "pose": "dig",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "shovel"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ],
+     "cam": {
+      "lon": 4.5,
+      "lat": 49.3,
+      "scale": 2500
+     }
+    }
+   ]
+  },
+  {
+   "title": "Two Metres Down",
+   "years": "Winter 1914",
+   "mood": "grim",
+   "beats": [
+    {
+     "say": "The first trenches are shallow ditches, crowded with men. Shellfire kills them in huge numbers. So both sides dig deeper. A good trench is at least two and a half metres deep.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.39,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "rifle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "tommy",
+          "x": 0.5,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "tommy",
+          "x": 0.6,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "deeper",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.75,
+          "top": 0.36,
+          "wet": false,
+          "col": "#3e3022"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "tommy",
+            "x": 0.5,
+            "pose": "dig",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "shovel"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      },
+      {
+       "on": "two",
+       "card": {
+        "kind": "big",
+        "text": "2.5 METRES DEEP",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Its walls are held up with sandbags, wire mesh and wood. On the floor lie wooden duckboards, over drainage channels, because the water always comes.",
+     "scene": {
+      "shot": "photo",
+      "img": "trench",
+      "move": "right",
+      "caption": "A British trench, 1916",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "trench",
+         "y": 0.93,
+         "w": 0.65,
+         "top": 0.42,
+         "wet": true
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "tommy",
+           "x": 0.5,
+           "pose": "idle",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95
+          }
+         ],
+         "depth": 0.88
+        }
+       ]
+      }
+     },
+     "do": [
+      {
+       "on": "duckboards",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.75,
+          "top": 0.39,
+          "wet": true
+         }
+        ],
+        "weather": "rain"
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM3",
+       "text": "Where's the floor gone?"
+      },
+      {
+       "who": "TOM4",
+       "text": "Under the water. Same as yesterday."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.36,
+        "wet": true,
+        "col": "#3a2c20"
+       }
+      ],
+      "weather": "rain"
+     }
+    },
+    {
+     "say": "Now the other side of the line. German dugouts are built to last. They can be several storeys deep, at least four metres down, reinforced with concrete, with air vents.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.75,
+        "top": 0.42,
+        "wet": false,
+        "col": "#4a3a2a"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "cup"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "concrete",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.45,
+          "night": true,
+          "depth": 0.3,
+          "seed": 45,
+          "wall": "#6a6a62"
+         },
+         {
+          "type": "table",
+          "lamp": 1,
+          "candles": 0,
+          "papers": 0,
+          "w": 700,
+          "depth": 0.6,
+          "seed": 46
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_1914",
+            "x": 0.4,
+            "pose": "think",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "german_1914",
+            "x": 0.62,
+            "pose": "hold",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "cup"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      },
+      {
+       "on": "four",
+       "card": {
+        "kind": "big",
+        "text": "4 METRES UNDERGROUND",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "A unit's turn in the front trench is usually short. Anything from a single day up to two weeks. Then it is relieved, and marches back. One Australian battalion once spent fifty three days in the line. That was a rare exception.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 47,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 10,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#7a6a42",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "weather": "rain"
+     },
+     "do": [
+      {
+       "on": "fifty",
+       "scene": {
+        "shot": "card",
+        "time": "53 DAYS",
+        "place": "IN THE LINE",
+        "date": "31st Australian Battalion, a rare exception"
+       }
+      }
+     ]
+    },
+    {
+     "say": "But the trench has enemies of its own. Trench foot comes from standing for days in cold, wet mud. It does not even need freezing weather. It starts with tingling and itching. Then numbness. Then sores.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.39,
+        "wet": true
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.5,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "mood": "sad"
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "fog"
+     },
+     "do": [
+      {
+       "on": "tingling",
+       "card": {
+        "kind": "caption",
+        "text": "Trench foot",
+        "sub": "a non-freezing cold injury",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "And lice, in every seam of every uniform. Trench fever, spread by lice droppings, infects more than a million Allied soldiers.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 50,
+        "wall": "#3a3228"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 0,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 51
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "poilu",
+          "x": 0.62,
+          "pose": "shrug",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "million",
+       "scene": {
+        "shot": "card",
+        "time": "1,000,000 +",
+        "place": "CAUGHT TRENCH FEVER",
+        "date": "Allied soldiers alone",
+        "size": 170
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM3",
+       "text": "Something's moving in my shirt."
+      },
+      {
+       "who": "TOM4",
+       "text": "Everyone's is. Mine have names."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.42,
+        "wet": false,
+        "col": "#4a3a28"
+       }
+      ]
+     }
+    },
+    {
+     "say": "Between the two front lines lies a strip of shell holes, wire and mud that belongs to nobody. The soldiers call it no man's land.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 10,
+        "seed": 54,
+        "water": true,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.81,
+        "h": 80
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "nobody",
+       "sfx": "tension"
+      }
+     ]
+    },
+    {
+     "say": "And in quiet parts of the front, something strange begins. Food comes up to the front line after dark. Soldiers on both sides notice that while they collect it, the other side does not shoot.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.36,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.35,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "cup",
+          "walk": [
+           0.2,
+           0.45,
+           0,
+           4
+          ]
+         },
+         {
+          "preset": "tommy",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "cup"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "other",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.7,
+          "top": 0.42,
+          "wet": false,
+          "col": "#3a2c20"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_1914",
+            "x": 0.5,
+            "pose": "hold",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "cup"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "The lines are close enough to shout across. Many German soldiers had lived in England before the war, especially in London. Some shout over to ask for the football results.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 60,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.81,
+        "h": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "London",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.74,
+          "n": 16,
+          "gap": 110,
+          "h": 190,
+          "col": "#6a6460",
+          "depth": 0.4
+         },
+         {
+          "type": "crowd",
+          "y": 0.95,
+          "n": 70,
+          "hats": true,
+          "depth": 0.8
+         }
+        ],
+        "weather": "fog"
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER1",
+       "text": "Englishmen! Who won the football?"
+      },
+      {
+       "who": "TOM1",
+       "text": "Not telling you!"
+      },
+      {
+       "who": "GER1",
+       "text": "Then we lost too?"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.7,
+        "top": 0.36,
+        "wet": false,
+        "col": "#4a3a2a"
+       }
+      ]
+     }
+    },
+    {
+     "say": "Officers hate it. A young French lieutenant called Charles de Gaulle writes on the seventh of December about the lamentable wish of his men to leave the enemy in peace.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Lieutenant Charles de Gaulle, 7 December 1914 (paraphrase)",
+      "lines": [
+       "The men show a lamentable",
+       "wish to leave",
+       "the enemy in peace."
+      ],
+      "hl": 0
+     },
+     "do": [
+      {
+       "on": "Gaulle",
+       "card": {
+        "kind": "name",
+        "text": "Lt Charles de Gaulle",
+        "sub": "French Army, 1914",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Christmas is coming. And on both sides, men are starting to wonder what they will do on the day.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.42,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "poilu",
+          "x": 0.45,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "Silent Night",
+   "years": "24–26 December 1914",
+   "mood": "wonder",
+   "beats": [
+    {
+     "say": "Christmas Eve. The Germans put candles along their trenches, and on small Christmas trees. Then they begin to sing carols.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.7,
+        "top": 0.39,
+        "wet": false,
+        "col": "#3a2c20"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "lamp"
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow",
+       "light"
+      ]
+     },
+     "do": [
+      {
+       "on": "candles",
+       "scene": {
+        "shot": "set",
+        "time": "night",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.7,
+          "depth": 0.5
+         },
+         {
+          "type": "craters",
+          "n": 5,
+          "seed": 68,
+          "water": false,
+          "y": 0.72
+         },
+         {
+          "type": "wire",
+          "y": 0.78,
+          "h": 80
+         }
+        ],
+        "fx": [
+         "snow",
+         "light"
+        ]
+       }
+      },
+      {
+       "on": "carols",
+       "sfx": "bells"
+      }
+     ]
+    },
+    {
+     "say": "The British answer with carols of their own. Then come the greetings, shouted across the frozen ground.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.7,
+        "top": 0.42,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "wave",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "tommy",
+          "x": 0.58,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "Captain Robert Miles is with the Royal Irish Rifles. On Christmas Day he writes the letter that will make him remembered.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 72,
+        "wall": "#4a4030"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 73
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.42,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "letter",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Captain Robert Miles, Christmas Day 1914",
+        "lines": [
+         "A sort of unarranged and quite unauthorized",
+         "but perfectly understood and",
+         "scrupulously observed truce",
+         "exists between us and our friends in front."
+        ],
+        "hl": 2
+       }
+      }
+     ]
+    },
+    {
+     "say": "Men from both sides leave their trenches, unarmed, and meet in what he calls the shot-riddled no man's land between the lines. They agree, all on their own, not to fire at each other until after midnight on Christmas Day.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 74,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.38,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.2,
+           0.42,
+           0,
+           4
+          ]
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.64,
+          "pose": "walk",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.82,
+           0.58,
+           0,
+           4
+          ]
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "midnight",
+       "scene": {
+        "shot": "card",
+        "time": "UNTIL MIDNIGHT",
+        "place": "NO SHOTS FIRED",
+        "date": "their own agreement"
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER1",
+       "text": "Cigarette?"
+      },
+      {
+       "who": "TOM1",
+       "text": "Chocolate?"
+      },
+      {
+       "who": "GER1",
+       "text": "Deal."
+      },
+      {
+       "who": "TOM2",
+       "text": "Are we allowed to do this?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 5,
+        "seed": 75,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "Across the line, a German lieutenant called Johannes Niemann grabs his binoculars. He looks over the parapet, and sees, he writes, the incredible sight of our soldiers exchanging cigarettes, schnapps and chocolate with the enemy.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.42,
+        "wet": false,
+        "col": "#4a3a2a"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_officer_ww1",
+          "x": 0.5,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "Niemann",
+       "card": {
+        "kind": "name",
+        "text": "Lt Johannes Niemann",
+        "sub": "German Army",
+        "dur": 4
+       }
+      },
+      {
+       "on": "incredible",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Lieutenant Johannes Niemann",
+        "lines": [
+         "grabbed my binoculars and looking cautiously",
+         "over the parapet saw the incredible sight",
+         "of our soldiers exchanging cigarettes,",
+         "schnapps and chocolate with the enemy"
+        ],
+        "hl": 1
+       }
+      }
+     ]
+    },
+    {
+     "say": "Near Neuve Chapelle, a British general called Walter Congreve writes that one of his captains smoked a cigar with the best shot in the German army. The German marksman was no more than eighteen.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 78,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.42,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "eighteen",
+       "card": {
+        "kind": "big",
+        "text": "AGED 18",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "A nineteen year old private, Henry Williamson, writes to his mother on Boxing Day.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 79,
+        "wall": "#3e362c"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.42,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    {
+     "say": "He writes. Dear Mother, I am writing from the trenches. In the pipe is German tobacco. From a German soldier. Yes a live German soldier from his own trench.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Private Henry Williamson to his mother, 26 December 1914",
+      "lines": [
+       "In the pipe is German tobacco.",
+       "From a German soldier.",
+       "Yes a live German soldier",
+       "from his own trench."
+      ],
+      "sign": "Henry",
+      "hl": 2
+     }
+    },
+    {
+     "say": "Burial parties go out, and the dead of both sides are brought in together. Joint services are held.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "graves",
+        "n": 7,
+        "rows": 2,
+        "y": 0.84,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.35,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.62,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "snow"
+     },
+     "pause": 1.0
+    },
+    {
+     "say": "Captain Sir Edward Hulse, of the Scots Guards, meets a German interpreter who turns out to be from Suffolk. The man had left behind a girlfriend in England, and a three and a half horsepower motorcycle.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 81,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.42,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "shrug",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "Hulse",
+       "card": {
+        "kind": "name",
+        "text": "Capt. Sir Edward Hulse",
+        "sub": "Scots Guards",
+        "dur": 4
+       }
+      },
+      {
+       "on": "motorcycle",
+       "card": {
+        "kind": "big",
+        "text": "3.5 HP MOTORCYCLE",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GINT",
+       "text": "I left a girl in Suffolk. And a motorcycle."
+      },
+      {
+       "who": "TOM2",
+       "text": "Which one do you miss more?"
+      },
+      {
+       "who": "GINT",
+       "text": "Ask me after the war."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 3,
+        "seed": 82,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "Hulse writes that the sing-song ended with Auld Lang Syne, English, Scots, Irish, Prussians, all singing together. If I had seen it on a cinematograph film, he says, I should have sworn that it was faked.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Captain Sir Edward Hulse",
+      "lines": [
+       "It was absolutely astounding,",
+       "and if I had seen it on a cinematograph film",
+       "I should have sworn that it was faked!"
+      ],
+      "hl": 2
+     }
+    },
+    {
+     "say": "Another officer, Bruce Bairnsfather, takes a fancy to a German officer's buttons. He snips off two with his wire clippers, and gives the officer two of his own in exchange.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 83,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.42,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_officer_ww1",
+          "x": 0.58,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "buttons",
+       "card": {
+        "kind": "big",
+        "text": "2 BUTTONS FOR 2",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "The last thing he sees is one of his machine gunners, a hairdresser before the war, cutting the long hair of a German who kneels patiently on the frozen ground.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 3,
+        "seed": 84,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.45,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.56,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.45,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM1",
+       "text": "Short at the back?"
+      },
+      {
+       "who": "GER1",
+       "text": "Not too short. I have a wife."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 3,
+        "seed": 85,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "Not every unit is at the front that day. Alfred Anderson, of the Black Watch, is in a farmhouse behind the lines. Eighty nine years later, as the last known surviving Scottish veteran of the war, he still remembers the silence. The eerie sound of silence.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "farm",
+        "x": 0.55,
+        "y": 0.74,
+        "depth": 0.5
+       },
+       {
+        "type": "land",
+        "kind": "snow",
+        "y": 0.76,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.35,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "tommy",
+          "x": 0.48,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "snow"
+     },
+     "do": [
+      {
+       "on": "Anderson",
+       "card": {
+        "kind": "name",
+        "text": "Alfred Anderson",
+        "sub": "Black Watch, interviewed in 2003",
+        "dur": 4
+       }
+      },
+      {
+       "on": "silence",
+       "sfx": "riser"
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "say": "And football? A Saxon lieutenant called Kurt Zehmisch wrote that the English brought a soccer ball from their trenches, and pretty soon a lively game ensued. How marvellously wonderful, he said, yet how strange it was.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 86,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "run",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.3,
+           0.5,
+           0,
+           3
+          ]
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "run",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "Zehmisch",
+       "card": {
+        "kind": "name",
+        "text": "Lt Kurt Zehmisch",
+        "sub": "134th Saxon Infantry Regiment",
+        "dur": 4
+       }
+      },
+      {
+       "on": "marvellously",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Lieutenant Kurt Zehmisch",
+        "lines": [
+         "brought a soccer ball from their trenches,",
+         "and pretty soon a lively game ensued.",
+         "How marvellously wonderful,",
+         "yet how strange it was."
+        ],
+        "hl": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Historians still argue about how many real matches there were. Some, it seems, were kick-abouts with a ration tin of bully beef for a ball.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 5,
+        "seed": 87,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.42,
+          "pose": "run",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "tommy",
+          "x": 0.58,
+          "pose": "shrug",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "argue",
+       "card": {
+        "kind": "stamp",
+        "text": "DISPUTED",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM2",
+       "text": "Is that the ball?"
+      },
+      {
+       "who": "TOM1",
+       "text": "It's a tin of beef."
+      },
+      {
+       "who": "TOM2",
+       "text": "Kick-off, then."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 88,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "It happens on the French line too. Gervais Morillon writes to his parents that the Germans waved a white flag, and came towards them unarmed. Then he adds, I am telling you this but don't speak of it to anyone.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 89,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.78,
+        "h": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "poilu",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.62,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Morillon",
+       "card": {
+        "kind": "name",
+        "text": "Gervais Morillon",
+        "sub": "French soldier, aged 20",
+        "dur": 4
+       }
+      },
+      {
+       "on": "telling",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Gervais Morillon to his parents",
+        "lines": [
+         "I am telling you this but",
+         "don't speak of it to anyone.",
+         "We must not mention it",
+         "even to other soldiers"
+        ],
+        "hl": 1
+       }
+      }
+     ]
+    },
+    {
+     "say": "Another Frenchman, Gustave Berthier, writes what the Germans told him. They were tired of making war. They were married, like me.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 91,
+        "wall": "#3a3a44"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 92
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "poilu",
+          "x": 0.45,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "married",
+       "mood": [
+        "POI",
+        "sad"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Back to Business",
+   "years": "26–31 December 1914",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "Boxing Day. In Captain Miles's sector, the truce simply carries on. He writes that the Germans ignore every warning to get down off their parapet.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.39,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.4,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     },
+     "do": [
+      {
+       "on": "parapet",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.7,
+          "depth": 0.5
+         },
+         {
+          "type": "craters",
+          "n": 8,
+          "seed": 95,
+          "water": false,
+          "y": 0.72
+         },
+         {
+          "type": "wire",
+          "y": 0.78,
+          "h": 80
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_1914",
+            "x": 0.55,
+            "pose": "idle",
+            "facing": -1,
+            "h": 0.5,
+            "y": 0.8
+           },
+           {
+            "preset": "german_1914",
+            "x": 0.7,
+            "pose": "wave",
+            "facing": -1,
+            "h": 0.5,
+            "y": 0.8
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "And then come the words that sum up the whole of Christmas 1914. We can't shoot them in cold blood. I cannot see how we can get them to return to business.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Captain Robert Miles, 26 December 1914",
+      "lines": [
+       "The beggars simply disregard all our warnings",
+       "to get down from off their parapet.",
+       "We can't shoot them in cold blood....",
+       "I cannot see how we can get them",
+       "to return to business."
+      ],
+      "hl": 4
+     },
+     "pause": 1.2
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM1",
+       "text": "Orders, sir?"
+      },
+      {
+       "who": "MILES",
+       "text": "Same as yesterday. Don't shoot."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.42,
+        "wet": false,
+        "col": "#4a3a28"
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "The generals can see exactly how. General Sir Horace Smith-Dorrien orders an end to friendly contact with the Germans.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 99,
+        "wall": "#5a4a3a"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 100
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.4,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "mood": "angry"
+         },
+         {
+          "preset": "tommy_officer",
+          "x": 0.62,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Smith-Dorrien",
+       "card": {
+        "kind": "name",
+        "text": "Gen. Sir Horace Smith-Dorrien",
+        "sub": "commander, British II Corps",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "On the German side, an order of the twenty ninth of December warns that every approach to the enemy will be punished as treason.",
+     "scene": {
+      "shot": "doc",
+      "kind": "telegram",
+      "header": "German Army general order, 29 December 1914",
+      "lines": [
+       "every approach to the enemy",
+       "...will be punished as treason"
+      ],
+      "hl": 1
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "GAIDE",
+       "text": "The men are talking to the English, sir."
+      },
+      {
+       "who": "GOFF",
+       "text": "Then the men are committing treason.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 101,
+        "wall": "#4a4a40"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 102
+       }
+      ]
+     }
+    },
+    {
+     "say": "On the thirtieth of December 1914, Captain Robert Miles is killed in action. Five days after his Christmas letter.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 9,
+        "seed": 103,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.8400000000000001,
+        "h": 80
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "killed",
+       "scene": {
+        "shot": "card",
+        "time": "30 DEC 1914",
+        "place": "CAPT. ROBERT MILES",
+        "date": "killed in action"
+       }
+      },
+      {
+       "on": "Five",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "snow",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "graves",
+          "n": 5,
+          "rows": 1,
+          "y": 0.84,
+          "depth": 0.6
+         }
+        ],
+        "weather": "snow"
+       }
+      }
+     ],
+     "pause": 1.5
+    },
+    {
+     "say": "In January, his letter is printed in the Daily Mail, and in his local paper in Shropshire. The readers meet a captain who would not shoot. By then, he is already gone.",
+     "scene": {
+      "shot": "doc",
+      "kind": "newspaper",
+      "header": "~ January 1915 ~",
+      "lines": [
+       "A CAPTAIN'S LETTER FROM THE FRONT",
+       "the truce, in his own words"
+      ],
+      "hl": 0
+     },
+     "do": [
+      {
+       "on": "Shropshire",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "hills",
+          "y": 0.56,
+          "n": 3,
+          "seed": 21,
+          "depth": 0.15
+         },
+         {
+          "type": "farm",
+          "x": 0.6,
+          "y": 0.74,
+          "depth": 0.5
+         },
+         {
+          "type": "town",
+          "y": 0.78,
+          "n": 6,
+          "gap": 200,
+          "h": 120,
+          "col": "#7a6a5a",
+          "depth": 0.45
+         }
+        ],
+        "weather": "fog"
+       }
+      }
+     ]
+    },
+    {
+     "say": "The truce is not reported for a week. The silence is broken on the thirty first of December by the New York Times, in neutral America. British papers follow. In France, the government reminds people that fraternising with the enemy is treason.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 120,
+        "h": 200,
+        "col": "#5a5650",
+        "depth": 0.4
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         },
+         {
+          "preset": "civilian",
+          "x": 0.6,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "York",
+       "card": {
+        "kind": "caption",
+        "text": "31 December 1914",
+        "sub": "the press silence breaks",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "The next Christmas, in 1915, Allied commanders order raids and shelling all along the front, so that nothing like it happens again. It mostly doesn't.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 4,
+        "x": 0.15,
+        "fire": true,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "do": [
+      {
+       "on": "again",
+       "sfx": "braam"
+      }
+     ]
+    },
+    {
+     "say": "In 1915, a Scots Guards company commander, Sir Iain Colquhoun, agrees a short truce to bury the dead. He is court-martialled for breaking standing orders, and found guilty.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "graves",
+        "n": 4,
+        "rows": 1,
+        "y": 0.84,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "fog"
+     },
+     "do": [
+      {
+       "on": "court-martialled",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.45,
+          "night": false,
+          "depth": 0.3,
+          "seed": 105,
+          "wall": "#5a4a3a"
+         },
+         {
+          "type": "table",
+          "lamp": 1,
+          "candles": 0,
+          "papers": 1,
+          "w": 700,
+          "depth": 0.6,
+          "seed": 106
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "tommy_officer",
+            "x": 0.35,
+            "pose": "idle",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "tommy_officer",
+            "x": 0.62,
+            "pose": "point",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95,
+            "mood": "angry"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "Then General Douglas Haig cancels the punishment, and Colquhoun keeps his command. It may have helped that his wife's uncle was the Prime Minister, Herbert Asquith.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 107,
+        "wall": "#6a5a48"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 108
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy_officer",
+          "x": 0.45,
+          "pose": "shrug",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Asquith",
+       "card": {
+        "kind": "caption",
+        "text": "Her uncle: H. H. Asquith",
+        "sub": "Prime Minister",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CLERK1",
+       "text": "Guilty of burying the dead, sir."
+      },
+      {
+       "who": "CLERK2",
+       "text": "And his wife's uncle is?"
+      },
+      {
+       "who": "CLERK1",
+       "text": "The Prime Minister."
+      },
+      {
+       "who": "CLERK2",
+       "text": "Then he's innocent."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 109,
+        "wall": "#6a5a48"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 110
+       }
+      ]
+     }
+    },
+    {
+     "say": "So now we know the men will not always shoot. Which leaves the real question. Who will make them? The answer, in the spring of 1915, is a new weapon, that needs nobody to aim.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 111,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.81,
+        "h": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.5,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "The Cloud",
+   "years": "April 1915",
+   "mood": "dread",
+   "beats": [
+    {
+     "say": "Spring 1915, near Ypres in Belgium. A German chemist called Fritz Haber has an idea. Chlorine gas. It is heavier than air, so it will stay low, close to the ground, where the trenches are.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 113,
+        "wall": "#6a6a62"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 114
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.4,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "glasses": 1
+         },
+         {
+          "preset": "german_officer_ww1",
+          "x": 0.62,
+          "pose": "think",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Ypres",
+       "pin": "Ypres"
+      },
+      {
+       "on": "Haber",
+       "card": {
+        "kind": "name",
+        "text": "Fritz Haber",
+        "sub": "German chemist",
+        "dur": 4
+       }
+      },
+      {
+       "on": "heavier",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.7,
+          "depth": 0.5
+         },
+         {
+          "type": "craters",
+          "n": 6,
+          "seed": 115,
+          "water": false,
+          "y": 0.72
+         },
+         {
+          "type": "wire",
+          "y": 0.8400000000000001,
+          "h": 80
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
+      }
+     ],
+     "cam": {
+      "lon": 2.88,
+      "lat": 50.85,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "German troops carry five thousand seven hundred and thirty gas cylinders into the front line. The biggest weigh forty kilograms each.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.39,
+        "wet": false,
+        "col": "#3a2c20"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.58,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "thousand",
+       "scene": {
+        "shot": "card",
+        "time": "5,730",
+        "place": "GAS CYLINDERS",
+        "date": "carried into the line by hand",
+        "size": 190
+       }
+      },
+      {
+       "on": "forty",
+       "card": {
+        "kind": "big",
+        "text": "UP TO 40 KG EACH",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Five thousand seven hundred and thirty cylinders, at up to forty kilograms each. That is up to two hundred and twenty nine tonnes, carried into the trenches by hand.",
+     "scene": {
+      "shot": "card",
+      "time": "≤ 229 TONNES",
+      "place": "CARRIED BY HAND",
+      "date": "5,730 cylinders x up to 40 kg"
+     }
+    },
+    {
+     "say": "The gas cannot simply be opened, because the valves freeze. The liquid chlorine has to be siphoned out, to turn to vapour, and then the soldiers wait for the wind to carry it to the British and French lines.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.75,
+        "top": 0.36,
+        "wet": false,
+        "col": "#4a3a28"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.45,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     },
+     "do": [
+      {
+       "on": "wind",
+       "sfx": "tension"
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER2",
+       "text": "Which way is the wind?"
+      },
+      {
+       "who": "GER3",
+       "text": "Towards them. For now."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.42,
+        "wet": false,
+        "col": "#4a3a2a"
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
+    },
+    {
+     "say": "On the twenty second of April 1915, the Second Battle of Ypres begins, with the first gas attack, launched from the German trench line near Langemark.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 123,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.81,
+        "h": 80
+       }
+      ],
+      "fx": [
+       "fog",
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "twenty",
+       "scene": {
+        "shot": "card",
+        "time": "22 APRIL 1915",
+        "place": "LANGEMARK, YPRES",
+        "date": "the first gas attack"
+       }
+      },
+      {
+       "on": "gas",
+       "scene": {
+        "shot": "photo",
+        "img": "gassed",
+        "move": "left",
+        "caption": "Gassed (John Singer Sargent, 1919)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "land",
+           "kind": "mud",
+           "y": 0.7,
+           "depth": 0.5
+          },
+          {
+           "type": "craters",
+           "n": 8,
+           "seed": 125,
+           "water": false,
+           "y": 0.72
+          },
+          {
+           "type": "actors",
+           "list": [
+            {
+             "preset": "tommy",
+             "x": 0.4,
+             "pose": "walk",
+             "facing": 1,
+             "h": 0.62,
+             "y": 0.95,
+             "mood": "sad"
+            },
+            {
+             "preset": "tommy",
+             "x": 0.55,
+             "pose": "walk",
+             "facing": 1,
+             "h": 0.62,
+             "y": 0.95,
+             "mood": "sad"
+            }
+           ],
+           "depth": 0.88
+          }
+         ],
+         "fx": [
+          "fog"
+         ]
+        }
+       }
+      }
+     ],
+     "date": "22 APRIL 1915"
+    },
+    {
+     "say": "The weapon is dangerous to its owners too. Twice, shellfire breaks open German cylinders. The second time, three German soldiers are killed and fifty are wounded.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.7,
+        "top": 0.39,
+        "wet": false,
+        "col": "#4a3a28"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.5,
+          "pose": "run",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "mood": "shock"
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     },
+     "do": [
+      {
+       "on": "Twice",
+       "explode": {
+        "at": [
+         2.9,
+         50.9
+        ],
+        "size": 1
+       }
+      }
+     ]
+    },
+    {
+     "say": "After Ypres, the French, the British and the Germans all use gas. In 1915 comes phosgene, which is more deadly. In 1917, mustard gas, which can linger for days.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.3,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "poilu",
+          "x": 0.5,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_ww1",
+          "x": 0.7,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     },
+     "do": [
+      {
+       "on": "1917",
+       "card": {
+        "kind": "big",
+        "text": "1917: MUSTARD GAS",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Now every soldier on the front has two enemies he can see, and one he can't. And in 1916, both sides decide to win the war with one enormous battle each.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.36,
+        "wet": false
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.5,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "fog"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "The Painter of Blue Horses",
+   "years": "February–March 1916",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "The twenty first of February 1916. The Germans attack the French fortress city of Verdun. It becomes a battle of three hundred and two days, one of the longest and costliest in human history.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 3,
+        "seed": 31,
+        "depth": 0.15
+       },
+       {
+        "type": "fort",
+        "x": 0.55,
+        "y": 0.66,
+        "w": 800,
+        "h": 100,
+        "flag": null,
+        "depth": 0.5
+       },
+       {
+        "type": "cannons",
+        "n": 5,
+        "x": 0.1,
+        "fire": true,
+        "depth": 0.65
+       }
+      ],
+      "weather": "snow",
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "Verdun",
+       "pin": "Verdun"
+      },
+      {
+       "on": "three",
+       "scene": {
+        "shot": "card",
+        "time": "302 DAYS",
+        "place": "VERDUN",
+        "date": "21 Feb – 18 Dec 1916",
+        "size": 200
+       }
+      }
+     ],
+     "cam": {
+      "lon": 5.39,
+      "lat": 49.16,
+      "scale": 9000
+     },
+     "date": "21 FEBRUARY 1916"
+    },
+    {
+     "say": "Four days in, the Germans capture Fort Douaumont. Then the French commander, Philippe Pétain, orders that there be no retreat.",
+     "scene": {
+      "shot": "photo",
+      "img": "douaumont",
+      "move": "in",
+      "caption": "Fort Douaumont, Verdun, 1916",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "craters",
+         "n": 12,
+         "seed": 9,
+         "water": false,
+         "y": 0.6
+        },
+        {
+         "type": "fort",
+         "x": 0.5,
+         "y": 0.64,
+         "w": 900,
+         "h": 80,
+         "flag": null,
+         "depth": 0.45
+        }
+       ],
+       "fx": [
+        "smoke"
+       ]
+      }
+     },
+     "do": [
+      {
+       "on": "Pétain",
+       "card": {
+        "kind": "name",
+        "text": "Philippe Pétain",
+        "sub": "French commander at Verdun",
+        "dur": 4
+       }
+      },
+      {
+       "on": "retreat",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.7,
+          "top": 0.42,
+          "wet": false,
+          "col": "#5a4630"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "poilu",
+            "x": 0.4,
+            "pose": "rifle",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "poilu",
+            "x": 0.58,
+            "pose": "aim",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "POI",
+       "text": "Do we fall back?"
+      },
+      {
+       "who": "POI2",
+       "text": "No. We stay. Those are the orders.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.39,
+        "wet": false,
+        "col": "#4a3a2a"
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     }
+    },
+    {
+     "say": "The French keep Verdun alive by road. About thirty four kilometres of road, six metres wide, are rebuilt and paved, just to carry the ammunition.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "street",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 33,
+        "depth": 0.15
+       },
+       {
+        "type": "car",
+        "x": 0.3,
+        "depth": 0.7
+       },
+       {
+        "type": "car",
+        "x": 0.6,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "do": [
+      {
+       "on": "thirty",
+       "card": {
+        "kind": "big",
+        "text": "34 KM OF ROAD",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Now, the German side. In the German army at Verdun serves a man who, before the war, painted animals. Blue horses, red deer, a yellow cow. His name is Franz Marc.",
+     "scene": {
+      "shot": "photo",
+      "img": "marc",
+      "move": "in",
+      "caption": "Franz Marc",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.45,
+         "night": false,
+         "depth": 0.3,
+         "seed": 134,
+         "wall": "#5a6a7a"
+        },
+        {
+         "type": "table",
+         "lamp": 0,
+         "candles": 1,
+         "papers": 1,
+         "w": 700,
+         "depth": 0.6,
+         "seed": 135
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "german_ww1",
+           "x": 0.45,
+           "pose": "think",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95
+          }
+         ],
+         "depth": 0.88
+        }
+       ]
+      }
+     },
+     "do": [
+      {
+       "on": "Blue",
+       "scene": {
+        "shot": "photo",
+        "img": "bluehorse",
+        "move": "right",
+        "caption": "Blue Horse I (Franz Marc, 1911)",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "hills",
+           "y": 0.6,
+           "n": 3,
+           "seed": 5,
+           "depth": 0.2
+          },
+          {
+           "type": "animal",
+           "kind": "horse",
+           "x": 0.5,
+           "s": 1.6,
+           "y": 0.86,
+           "walk": false,
+           "facing": 1,
+           "depth": 0.8
+          }
+         ],
+         "fx": [
+          "light"
+         ]
+        }
+       }
+      },
+      {
+       "on": "Marc",
+       "card": {
+        "kind": "name",
+        "text": "Franz Marc",
+        "sub": "German painter, soldier",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "He is one of the key figures of German Expressionism. In February 1916, he writes to his wife, Maria, that he has turned to camouflage.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 136,
+        "wall": "#3a3a3a"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 137
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.42,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    {
+     "say": "He paints nine tarpaulin covers, to hide positions from aircraft, in styles, he says, from Manet to Kandinsky. He suspects the Kandinsky ones will work best against planes flying at two thousand metres or higher.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 2,
+        "x": 0.4,
+        "fire": false,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.62,
+          "pose": "point",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "nine",
+       "card": {
+        "kind": "big",
+        "text": "9 PAINTED COVERS",
+        "dur": 3
+       }
+      },
+      {
+       "on": "Kandinsky",
+       "scene": {
+        "shot": "card",
+        "time": "2,000 M",
+        "place": "HIDDEN FROM PLANES",
+        "date": "'from Manet to Kandinsky'"
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER2",
+       "text": "Is that a painting or a gun?"
+      },
+      {
+       "who": "MARC",
+       "text": "That is the point."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 1,
+        "x": 0.5,
+        "fire": false,
+        "depth": 0.6
+       }
+      ]
+     }
+    },
+    {
+     "say": "Meanwhile, the government has drawn up a list of notable artists, to be pulled out of the fighting for their own safety. Franz Marc's name is on that list.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "~ 1916 ~ Notable artists to be withdrawn from combat (paraphrase)",
+      "lines": [
+       "...",
+       "Marc, Franz",
+       "..."
+      ],
+      "hl": 1
+     }
+    },
+    {
+     "say": "On the fourth of March 1916, near Verdun, a shell splinter strikes him in the head. He is killed instantly. The orders to move him to safety have not reached him yet. He is thirty six.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 10,
+        "seed": 138,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "fourth",
+       "scene": {
+        "shot": "card",
+        "time": "4 MARCH 1916",
+        "place": "NEAR VERDUN",
+        "date": "Franz Marc, 36"
+       }
+      },
+      {
+       "on": "orders",
+       "scene": {
+        "shot": "doc",
+        "kind": "telegram",
+        "header": "~ 1916 ~",
+        "lines": [
+         "REASSIGNMENT ORDER",
+         "MARC, FRANZ",
+         "TOO LATE"
+        ],
+        "hl": 2
+       }
+      }
+     ],
+     "pause": 1.5
+    },
+    {
+     "say": "Years earlier, he had written on the back of one of his paintings: And all being is flaming agony. During the war, he told his wife that painting was like a premonition of this war. Horrible and shattering.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Franz Marc, on the back of a canvas",
+      "lines": [
+       "Und Alles Sein ist flammend Leid",
+       "And all being is flaming agony"
+      ],
+      "hl": 1
+     }
+    },
+    {
+     "say": "Remember the corporal who opposed the Christmas truce. Twenty three years later, his government sold Franz Marc's Blue Horses at a sale of what it called degenerate art.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.5,
+        "night": false,
+        "depth": 0.3,
+        "seed": 41,
+        "wall": "#7a7468"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.4,
+          "pose": "point",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "civilian",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "degenerate",
+       "card": {
+        "kind": "caption",
+        "text": "Lucerne, 29 June 1939",
+        "sub": "'degenerate art' sale",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Verdun goes on until December. By one modern count, the French lose three hundred and seventy seven thousand men killed, wounded or missing, and the Germans three hundred and thirty seven thousand. About seventy thousand a month.",
+     "scene": {
+      "shot": "card",
+      "time": "≈ 70,000",
+      "place": "CASUALTIES A MONTH",
+      "date": "Verdun, 1916",
+      "size": 190
+     },
+     "do": [
+      {
+       "on": "three",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "French casualties",
+          377231
+         ],
+         [
+          "German casualties",
+          337000
+         ]
+        ],
+        "note": "Heer and Naumann (2000), via Battle of Verdun",
+        "dur": 6
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Seven Thirty",
+   "years": "1 July 1916",
+   "mood": "dread",
+   "beats": [
+    {
+     "say": "That summer, Britain attacks further north, on the river Somme, with five French divisions on its right. And under the German front line, British tunnellers have placed nineteen mines.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.75,
+        "top": 0.42,
+        "wet": false,
+        "col": "#3a2c20"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.42,
+          "pose": "dig",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "shovel"
+         },
+         {
+          "preset": "tommy",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "lamp"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "Somme",
+       "pin": "Albert"
+      },
+      {
+       "on": "nineteen",
+       "card": {
+        "kind": "big",
+        "text": "19 MINES",
+        "dur": 3
+       }
+      }
+     ],
+     "cam": {
+      "lon": 2.65,
+      "lat": 50.0,
+      "scale": 9000
+     }
+    },
+    {
+     "say": "The largest, at La Boisselle, hold twenty four tons of explosive each. One of them is called Lochnagar.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.66,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "lamp"
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "do": [
+      {
+       "on": "twenty",
+       "scene": {
+        "shot": "card",
+        "time": "24 TONS",
+        "place": "LOCHNAGAR MINE",
+        "date": "La Boisselle"
+       }
+      }
+     ]
+    },
+    {
+     "say": "For eight days, British guns pound the German line. The shells are meant to cut the wire and smash the defences, before the infantry cross no man's land.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 6,
+        "x": 0.05,
+        "fire": true,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "smoke",
+       "embers"
+      ]
+     },
+     "do": [
+      {
+       "on": "eight",
+       "card": {
+        "kind": "big",
+        "text": "8 DAYS OF SHELLING",
+        "dur": 3
+       }
+      },
+      {
+       "on": "infantry",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 141,
+          "depth": 0.15
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 12,
+          "rows": 2,
+          "x0": 0.0,
+          "gap": 80,
+          "col": "#7a6a42",
+          "march": true,
+          "depth": 0.7
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "Now, the other side of that bombardment. The German soldiers are deep underground, in dugouts that the shells cannot reach. They wait. They listen.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 142,
+        "wall": "#5a5a52"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 0,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 143
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.4,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_ww1",
+          "x": 0.6,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "listen",
+       "sfx": "tension"
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "GER2",
+       "text": "When it stops, we go up."
+      },
+      {
+       "who": "GER3",
+       "text": "And when will it stop?"
+      },
+      {
+       "who": "GER2",
+       "text": "When they come."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 144,
+        "wall": "#5a5a52"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 0,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 145
+       }
+      ]
+     }
+    },
+    {
+     "say": "The first of July 1916. At seven twenty, the Hawthorn Ridge mine is blown. At seven twenty eight, the others. At seven thirty, the whistles blow, and the British infantry go over the top.",
+     "scene": {
+      "shot": "card",
+      "time": "07:20",
+      "place": "HAWTHORN RIDGE",
+      "date": "1 July 1916"
+     },
+     "do": [
+      {
+       "on": "twenty eight",
+       "scene": {
+        "shot": "card",
+        "time": "07:28",
+        "place": "THE MINES GO UP",
+        "date": "La Boisselle"
+       }
+      },
+      {
+       "on": "thirty",
+       "scene": {
+        "shot": "photo",
+        "img": "somme",
+        "move": "in",
+        "caption": "Royal Irish Rifles before going over the top, 1 July 1916",
+        "fallback": {
+         "shot": "set",
+         "time": "day",
+         "parts": [
+          {
+           "type": "trench",
+           "y": 0.93,
+           "w": 0.7,
+           "top": 0.36,
+           "wet": false
+          },
+          {
+           "type": "actors",
+           "list": [
+            {
+             "preset": "tommy",
+             "x": 0.4,
+             "pose": "rifle",
+             "facing": 1,
+             "h": 0.62,
+             "y": 0.95
+            },
+            {
+             "preset": "tommy",
+             "x": 0.52,
+             "pose": "rifle",
+             "facing": 1,
+             "h": 0.62,
+             "y": 0.95
+            },
+            {
+             "preset": "tommy",
+             "x": 0.64,
+             "pose": "rifle",
+             "facing": 1,
+             "h": 0.62,
+             "y": 0.95
+            }
+           ],
+           "depth": 0.88
+          }
+         ]
+        }
+       }
+      },
+      {
+       "on": "top",
+       "sfx": "braam"
+      }
+     ],
+     "date": "1 JULY 1916"
+    },
+    {
+     "say": "The bombardment has not cut the German wire, and it has not destroyed the deep dugouts. The German machine gunners climb out, and they are ready.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 148,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.8400000000000001,
+        "h": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.3,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.2,
+           0.4,
+           0,
+           5
+          ]
+         },
+         {
+          "preset": "tommy",
+          "x": 0.45,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.35,
+           0.52,
+           0,
+           5
+          ]
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "climb",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.7,
+          "top": 0.39,
+          "wet": false,
+          "col": "#4a3a28"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_ww1",
+            "x": 0.45,
+            "pose": "aim",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "german_ww1",
+            "x": 0.6,
+            "pose": "fire",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95
+           }
+          ],
+          "depth": 0.88
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "By the end of that day, the British have suffered fifty seven thousand four hundred and seventy casualties. Nineteen thousand two hundred and forty of them are dead.",
+     "scene": {
+      "shot": "card",
+      "time": "57,470",
+      "place": "BRITISH CASUALTIES",
+      "date": "in one day",
+      "size": 190
+     },
+     "do": [
+      {
+       "on": "Nineteen",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "grass",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "graves",
+          "n": 12,
+          "rows": 4,
+          "y": 0.86,
+          "depth": 0.6
+         }
+        ],
+        "fx": [
+         "smoke"
+        ]
+       }
+      }
+     ],
+     "pause": 1.5
+    },
+    {
+     "say": "Nineteen thousand two hundred and forty dead, in one day. If you spread them over all twenty four hours, that is about eight hundred every hour.",
+     "scene": {
+      "shot": "card",
+      "time": "≈ 800",
+      "place": "DEAD EVERY HOUR",
+      "date": "19,240 in one day",
+      "size": 190
+     }
+    },
+    {
+     "say": "In places, the two sides agree small truces, so the wounded can be carried in from no man's land. Even on that day, the men find a way.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 8,
+        "seed": 152,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.78,
+        "h": 80
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.35,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_ww1",
+          "x": 0.62,
+          "pose": "idle",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "truces",
+       "sfx": "tension"
+      }
+     ]
+    },
+    {
+     "say": "The Battle of the Somme goes on for months, with over a million casualties on both sides. And the men who survive it carry something home that nobody yet knows how to name.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "craters",
+        "n": 14,
+        "seed": 51,
+        "water": true,
+        "y": 0.58,
+        "stumps": 6
+       }
+      ],
+      "weather": "rain"
+     },
+     "do": [
+      {
+       "on": "million",
+       "card": {
+        "kind": "big",
+        "text": "1,000,000+ CASUALTIES",
+        "dur": 3
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Breaking Point",
+   "years": "1916–1917",
+   "mood": "grim",
+   "beats": [
+    {
+     "say": "Soldiers call it shell shock. The symptoms are a fixed stare, shaking, being unable to speak, ringing in the ears.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 154,
+        "wall": "#d8d0c0"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 0,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 155
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.45,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "mood": "sad"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "shell",
+       "card": {
+        "kind": "caption",
+        "text": "Shell shock",
+        "sub": "a term born in the First World War",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Doctors at the time barely know what it is. Men who do not get better are sent back to special centres behind the lines, labelled N Y D N. Not yet diagnosed, nervous.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "~ 1916 ~ Casualty label",
+      "lines": [
+       "N.Y.D.N.",
+       "Not Yet Diagnosed Nervous"
+      ],
+      "hl": 1
+     },
+     "do": [
+      {
+       "on": "Doctors",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "room",
+          "flag": null,
+          "window": 0.45,
+          "night": false,
+          "depth": 0.3,
+          "seed": 156,
+          "wall": "#e0d8c8"
+         },
+         {
+          "type": "table",
+          "lamp": 0,
+          "candles": 1,
+          "papers": 1,
+          "w": 700,
+          "depth": 0.6,
+          "seed": 157
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "nurse_ww1",
+            "x": 0.4,
+            "pose": "hold",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "prop": "paper"
+           },
+           {
+            "preset": "tommy",
+            "x": 0.62,
+            "pose": "idle",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95,
+            "mood": "sad"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "NURSE",
+       "text": "Name?"
+      },
+      {
+       "who": "TOM4",
+       "text": "..."
+      },
+      {
+       "who": "NURSE",
+       "text": "That's all right. Take your time."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 158,
+        "wall": "#e0d8c8"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 0,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 159
+       }
+      ]
+     }
+    },
+    {
+     "say": "Now the French side. In 1917, whole French units refuse to attack. Mutinies break out in fifty four French divisions. Twenty thousand men desert.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.6,
+        "top": 0.42,
+        "wet": false,
+        "col": "#5a4630"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "poilu",
+          "x": 0.4,
+          "pose": "cross",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "mood": "angry"
+         },
+         {
+          "preset": "poilu",
+          "x": 0.58,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "fifty",
+       "scene": {
+        "shot": "card",
+        "time": "54 DIVISIONS",
+        "place": "MUTINY",
+        "date": "French Army, 1917",
+        "size": 190
+       }
+      },
+      {
+       "on": "Twenty",
+       "card": {
+        "kind": "big",
+        "text": "20,000 DESERT",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "POI",
+       "text": "We will hold the line."
+      },
+      {
+       "who": "POI2",
+       "text": "But we will not attack. Not again.",
+       "mood": "angry"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.7,
+        "top": 0.39,
+        "wet": false,
+        "col": "#5a4630"
+       }
+      ]
+     }
+    },
+    {
+     "say": "And on the sixth of April 1917, the United States declares war on Germany. A new army will cross the Atlantic. The question is whether it will arrive in time.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.62,
+        "depth": 0.3
+       },
+       {
+        "type": "ships",
+        "n": 4,
+        "x": 0.1,
+        "s": 0.5,
+        "flag": "us",
+        "y": 0.68,
+        "gap": 260,
+        "steam": true,
+        "depth": 0.5
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "April",
+       "scene": {
+        "shot": "card",
+        "time": "6 APRIL 1917",
+        "place": "WASHINGTON",
+        "date": "the US declares war"
+       }
+      }
+     ]
+    },
+    {
+     "say": "Among the Americans drafted that September is a bank clerk from Baltimore called Henry Gunther. His family is German American. Keep him in mind.",
+     "scene": {
+      "shot": "photo",
+      "img": "gunther",
+      "move": "in",
+      "caption": "Henry Gunther",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "room",
+         "flag": null,
+         "window": 0.45,
+         "night": false,
+         "depth": 0.3,
+         "seed": 164,
+         "wall": "#6a5a48"
+        },
+        {
+         "type": "table",
+         "lamp": 0,
+         "candles": 1,
+         "papers": 1,
+         "w": 700,
+         "depth": 0.6,
+         "seed": 165
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "doughboy",
+           "x": 0.45,
+           "pose": "idle",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95
+          }
+         ],
+         "depth": 0.88
+        }
+       ]
+      }
+     },
+     "do": [
+      {
+       "on": "Gunther",
+       "card": {
+        "kind": "name",
+        "text": "Henry Gunther",
+        "sub": "Baltimore, drafted September 1917",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "Meanwhile, in Flanders, the British attack again, at Passchendaele, over low fields cut by streams and ditches. An unusually wet August, then the autumn rains, turn it to mud. The cost is put at four hundred and eighty seven thousand casualties.",
+     "scene": {
+      "shot": "photo",
+      "img": "passchendaele",
+      "move": "in",
+      "caption": "Chateau Wood, Ypres, October 1917",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "craters",
+         "n": 16,
+         "seed": 61,
+         "water": true,
+         "y": 0.6,
+         "stumps": 8
+        }
+       ],
+       "weather": "rain"
+      }
+     },
+     "do": [
+      {
+       "on": "Passchendaele",
+       "pin": "Passchendaele"
+      },
+      {
+       "on": "four",
+       "scene": {
+        "shot": "card",
+        "time": "487,000",
+        "place": "CASUALTIES",
+        "date": "Passchendaele, 1917",
+        "size": 190
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "TOM3",
+       "text": "Mind the duckboard."
+      },
+      {
+       "who": "TOM4",
+       "text": "What duckboard?"
+      },
+      {
+       "who": "TOM3",
+       "text": "Exactly."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "craters",
+        "n": 10,
+        "seed": 63,
+        "water": true,
+        "y": 0.62
+       }
+      ],
+      "weather": "rain"
+     }
+    },
+    {
+     "say": "Now the German side. The German commanders decide that their only remaining chance is to beat the Allies before the Americans can cross the Atlantic in strength.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 166,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 18,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#6f7563",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "title": "The Last Gamble",
+   "years": "March–October 1918",
+   "mood": "tense",
+   "beats": [
+    {
+     "say": "The twenty first of March 1918. Germany launches its spring offensive. The Germans call it the Kaiser's Battle. Their aim is to beat the Allies before the United States can bring its full strength across the Atlantic.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 6,
+        "x": 0.1,
+        "fire": true,
+        "depth": 0.6
+       }
+      ],
+      "fx": [
+       "fog",
+       "smoke"
+      ]
+     },
+     "do": [
+      {
+       "on": "Kaiser's",
+       "card": {
+        "kind": "caption",
+        "text": "Kaiserschlacht",
+        "sub": "the Emperor's Battle",
+        "dur": 4
+       }
+      },
+      {
+       "on": "Atlantic",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 167,
+          "depth": 0.15
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 18,
+          "rows": 2,
+          "x0": 0.0,
+          "gap": 80,
+          "col": "#6f7563",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
+      }
+     ],
+     "date": "21 MARCH 1918"
+    },
+    {
+     "talk": [
+      {
+       "who": "GOFF",
+       "text": "We have one spring to win this war."
+      },
+      {
+       "who": "GAIDE",
+       "text": "And if we don't?"
+      },
+      {
+       "who": "GOFF",
+       "text": "Then the Americans come."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 168,
+        "wall": "#4a4a40"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 169
+       }
+      ]
+     }
+    },
+    {
+     "say": "German armies gain ground along whole sections of the front. The line moves again. But supplies still come by railway and by horse, and horse-drawn transport cannot keep up with a deep advance.",
+     "scene": {
+      "shot": "off"
+     },
+     "do": [
+      {
+       "on": "ground",
+       "arrow": [
+        [
+         3.3,
+         49.9
+        ],
+        [
+         2.6,
+         49.8
+        ]
+       ],
+       "color": "#5c6252",
+       "big": 1
+      },
+      {
+       "on": "horse-drawn",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 170,
+          "depth": 0.15
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 10,
+          "rows": 2,
+          "x0": 0.0,
+          "gap": 80,
+          "col": "#6f7563",
+          "march": true,
+          "depth": 0.7
+         },
+         {
+          "type": "animal",
+          "kind": "horse",
+          "x": 0.6,
+          "s": 1.1,
+          "y": 0.86,
+          "walk": true,
+          "facing": 1,
+          "depth": 0.8
+         }
+        ]
+       }
+      }
+     ],
+     "cam": {
+      "lon": 3.0,
+      "lat": 49.8,
+      "scale": 6000
+     }
+    },
+    {
+     "say": "By July, the offensive is finished. The casualties run to the hundreds of thousands on each side. And now it is the Allies' turn.",
+     "scene": {
+      "shot": "card",
+      "time": "21 MAR – 18 JUL",
+      "place": "SPRING OFFENSIVE",
+      "date": "1918"
+     },
+     "do": [
+      {
+       "on": "turn",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "hills",
+          "y": 0.58,
+          "n": 2,
+          "seed": 171,
+          "depth": 0.15
+         },
+         {
+          "type": "soldiers",
+          "y": 0.88,
+          "n": 16,
+          "rows": 2,
+          "x0": 0.0,
+          "gap": 80,
+          "col": "#7a6a42",
+          "march": true,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "dust"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "Henry Gunther arrives in France in July 1918, as a supply sergeant. He writes home about the miserable conditions at the front, and tells a friend to try anything to avoid being drafted.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 172,
+        "wall": "#4a4038"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 173
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "doughboy",
+          "x": 0.42,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "miserable",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "Henry Gunther, letter home, 1918 (paraphrase)",
+        "lines": [
+         "The conditions here are",
+         "\"miserable\".",
+         "Try anything to avoid being drafted."
+        ],
+        "hl": 1
+       }
+      }
+     ]
+    },
+    {
+     "say": "The army censor opens that letter. Gunther is demoted from sergeant to private.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 174,
+        "wall": "#6a6a60"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 175
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "clerk",
+          "x": 0.45,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "demoted",
+       "card": {
+        "kind": "stamp",
+        "text": "DEMOTED",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "CENSOR",
+       "text": "Miserable conditions, he says."
+      },
+      {
+       "who": "CENSOR2",
+       "text": "Then he can be a miserable private."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 176,
+        "wall": "#6a6a60"
+       },
+       {
+        "type": "table",
+        "lamp": 0,
+        "candles": 1,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 177
+       }
+      ]
+     }
+    },
+    {
+     "say": "Through the late summer and autumn, the Allied advance does not stop. It is called the Hundred Days Offensive. The German armies begin to collapse, and their commanders decide that defeat cannot be avoided.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.74,
+        "depth": 0.6
+       },
+       {
+        "type": "hills",
+        "y": 0.58,
+        "n": 2,
+        "seed": 178,
+        "depth": 0.15
+       },
+       {
+        "type": "soldiers",
+        "y": 0.88,
+        "n": 16,
+        "rows": 2,
+        "x0": 0.0,
+        "gap": 80,
+        "col": "#7d93b0",
+        "march": true,
+        "depth": 0.7
+       }
+      ],
+      "fx": [
+       "dust"
+      ]
+     },
+     "do": [
+      {
+       "on": "collapse",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "trench",
+          "y": 0.93,
+          "w": 0.75,
+          "top": 0.36,
+          "wet": false,
+          "col": "#4a3a28"
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_ww1",
+            "x": 0.5,
+            "pose": "idle",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "mood": "sad"
+           }
+          ],
+          "depth": 0.88
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "say": "At home, Germany is starving under the Allied blockade. On the ninth of November, the chancellor hands over power to Friedrich Ebert. And a German delegation is on its way to France, to ask for an armistice.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 14,
+        "gap": 120,
+        "h": 190,
+        "col": "#5a5650",
+        "depth": 0.4
+       },
+       {
+        "type": "crowd",
+        "y": 0.95,
+        "n": 90,
+        "hats": true,
+        "depth": 0.8
+       }
+      ],
+      "weather": "rain"
+     },
+     "do": [
+      {
+       "on": "delegation",
+       "scene": {
+        "shot": "set",
+        "time": "dusk",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "street",
+          "y": 0.74,
+          "depth": 0.6
+         },
+         {
+          "type": "car",
+          "x": 0.4,
+          "depth": 0.7
+         },
+         {
+          "type": "car",
+          "x": 0.7,
+          "depth": 0.7
+         }
+        ],
+        "fx": [
+         "fog"
+        ]
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "The Eleventh Hour",
+   "years": "8–11 November 1918",
+   "mood": "tense",
+   "beats": [
+    {
+     "say": "The morning of the eighth of November. After ten hours driving across the wrecked north of France, the German delegation reaches a railway siding in the Forest of Compiègne. Waiting there is the private train of the French marshal, Ferdinand Foch.",
+     "scene": {
+      "shot": "photo",
+      "img": "carriage",
+      "move": "in",
+      "caption": "Foch's railway carriage, Forest of Compiègne, 1918",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "forest",
+         "y": 0.62,
+         "n": 12,
+         "depth": 0.3
+        },
+        {
+         "type": "train",
+         "x": 0.55,
+         "y": 0.8,
+         "s": 0.9
+        }
+       ],
+       "weather": "fog"
+      }
+     },
+     "do": [
+      {
+       "on": "Compiègne",
+       "pin": "Compiègne"
+      },
+      {
+       "on": "Foch",
+       "card": {
+        "kind": "name",
+        "text": "Marshal Ferdinand Foch",
+        "sub": "Allied Supreme Commander",
+        "dur": 4
+       }
+      }
+     ],
+     "date": "8 NOVEMBER 1918"
+    },
+    {
+     "say": "The Germans are handed the Allied terms, and given seventy two hours to agree. They ask for an immediate ceasefire, to stop the killing while they talk. Foch refuses.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 181,
+        "wall": "#3a2a1a"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 182
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "french_officer",
+          "x": 0.62,
+          "pose": "cross",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "civilian",
+          "x": 0.38,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "paper"
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "seventy",
+       "scene": {
+        "shot": "card",
+        "time": "72 HOURS",
+        "place": "TO AGREE",
+        "date": "the Allied terms"
+       }
+      },
+      {
+       "on": "refuses",
+       "mood": [
+        "FOCH",
+        "angry"
+       ]
+      }
+     ]
+    },
+    {
+     "talk": [
+      {
+       "who": "ERZ",
+       "text": "Stop the fighting while we talk."
+      },
+      {
+       "who": "FOCH",
+       "text": "No. Sign, and then it stops."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": false,
+        "depth": 0.3,
+        "seed": 183,
+        "wall": "#3a2a1a"
+       },
+       {
+        "type": "table",
+        "lamp": 1,
+        "candles": 0,
+        "papers": 1,
+        "w": 700,
+        "depth": 0.6,
+        "seed": 184
+       }
+      ]
+     }
+    },
+    {
+     "say": "Five o'clock in the morning, on the eleventh of November 1918. The armistice is agreed in Foch's carriage. It will take effect at eleven o'clock. Six more hours of war.",
+     "scene": {
+      "shot": "card",
+      "time": "05:00",
+      "place": "COMPIÈGNE",
+      "date": "11 November 1918"
+     },
+     "do": [
+      {
+       "on": "eleven",
+       "scene": {
+        "shot": "card",
+        "time": "11:00",
+        "place": "THE GUNS STOP",
+        "date": "six hours from now"
+       }
+      },
+      {
+       "on": "Six",
+       "sfx": "tension"
+      }
+     ],
+     "date": "11 NOVEMBER 1918"
+    },
+    {
+     "say": "All along the front, many artillery units keep firing, rather than haul their spare shells away. Commanders want the best possible position, in case the fighting starts again.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "cannons",
+        "n": 5,
+        "x": 0.1,
+        "fire": true,
+        "depth": 0.6
+       }
+      ],
+      "weather": "fog",
+      "fx": [
+       "smoke"
+      ]
+     }
+    },
+    {
+     "say": "Nine thirty. On the edge of Mons, in Belgium, a British private on patrol in a wood is shot by a sniper. His name is George Ellison. He fought near Mons in 1914. Four years later, he dies there.",
+     "scene": {
+      "shot": "card",
+      "time": "09:30",
+      "place": "MONS, BELGIUM",
+      "date": "Private George Ellison"
+     },
+     "do": [
+      {
+       "on": "wood",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "forest",
+          "y": 0.7,
+          "n": 14,
+          "depth": 0.4
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "tommy",
+            "x": 0.45,
+            "pose": "walk",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "walk": [
+             0.3,
+             0.5,
+             0,
+             4
+            ]
+           }
+          ],
+          "depth": 0.88
+         }
+        ],
+        "weather": "fog"
+       }
+      },
+      {
+       "on": "dies",
+       "scene": {
+        "shot": "set",
+        "time": "dawn",
+        "parts": [
+         {
+          "type": "forest",
+          "y": 0.66,
+          "n": 10,
+          "depth": 0.35
+         },
+         {
+          "type": "graves",
+          "n": 3,
+          "rows": 1,
+          "y": 0.86,
+          "depth": 0.6
+         }
+        ],
+        "weather": "fog"
+       }
+      }
+     ],
+     "cam": {
+      "lon": 3.95,
+      "lat": 50.45,
+      "scale": 12000
+     },
+     "pause": 1.2
+    },
+    {
+     "say": "Near the river Meuse, a French messenger called Augustin Trébuchon is carrying a note to the troops. It says soup will be served at half past eleven, after the peace. He is forty, a shepherd, and he played the accordion at village weddings.",
+     "scene": {
+      "shot": "photo",
+      "img": "trebuchon",
+      "move": "in",
+      "caption": "Augustin Trébuchon",
+      "fallback": {
+       "shot": "set",
+       "time": "day",
+       "parts": [
+        {
+         "type": "sea",
+         "y": 0.7,
+         "depth": 0.3
+        },
+        {
+         "type": "actors",
+         "list": [
+          {
+           "preset": "poilu",
+           "x": 0.45,
+           "pose": "walk",
+           "facing": 1,
+           "h": 0.62,
+           "y": 0.95,
+           "prop": "paper",
+           "walk": [
+            0.3,
+            0.55,
+            0,
+            5
+           ]
+          }
+         ],
+         "depth": 0.88
+        }
+       ],
+       "weather": "rain"
+      }
+     },
+     "do": [
+      {
+       "on": "Trébuchon",
+       "card": {
+        "kind": "name",
+        "text": "Augustin Trébuchon",
+        "sub": "messenger, 415th Infantry, aged 40",
+        "dur": 4
+       }
+      },
+      {
+       "on": "soup",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "~ 11 November 1918 ~ (paraphrase)",
+        "lines": [
+         "Soup will be served",
+         "at 11:30",
+         "after the peace."
+        ],
+        "hl": 1
+       }
+      }
+     ]
+    },
+    {
+     "say": "That morning, his division has been ordered across the flooded Meuse, seventy metres wide, in freezing rain. Engineers build a plank footbridge in the dark. A little after eight, about seven hundred men cross. Some fall in, and drown.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "sea",
+        "y": 0.66,
+        "depth": 0.3
+       },
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.8,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "poilu",
+          "x": 0.3,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.2,
+           0.5,
+           0,
+           6
+          ]
+         },
+         {
+          "preset": "poilu",
+          "x": 0.45,
+          "pose": "walk",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95,
+          "walk": [
+           0.35,
+           0.62,
+           0,
+           6
+          ]
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "rain"
+     },
+     "do": [
+      {
+       "on": "seventy",
+       "card": {
+        "kind": "big",
+        "text": "70 METRES WIDE",
+        "dur": 3
+       }
+      },
+      {
+       "on": "seven hundred",
+       "scene": {
+        "shot": "card",
+        "time": "≈ 700",
+        "place": "MEN CROSS THE MEUSE",
+        "date": "a little after 08:00"
+       }
+      }
+     ]
+    },
+    {
+     "say": "At ten forty five, he is shot. Fifteen minutes before the end. Later, embarrassed, the French army writes the date of his death down as the day before.",
+     "scene": {
+      "shot": "card",
+      "time": "10:45",
+      "place": "VRIGNE-MEUSE",
+      "date": "Augustin Trébuchon"
+     },
+     "do": [
+      {
+       "on": "embarrassed",
+       "scene": {
+        "shot": "doc",
+        "kind": "letter",
+        "header": "French Army record (paraphrase)",
+        "lines": [
+         "Trébuchon, Augustin",
+         "died: 10 November 1918"
+        ],
+        "hl": 1
+       }
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "talk": [
+      {
+       "who": "POI",
+       "text": "Was the war not over?"
+      },
+      {
+       "who": "POI2",
+       "text": "Not until eleven.",
+       "mood": "sad"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       }
+      ],
+      "weather": "rain"
+     }
+    },
+    {
+     "say": "Ten fifty eight. A Canadian private, George Price, is killed by a sniper near Mons. Two minutes before the armistice.",
+     "scene": {
+      "shot": "card",
+      "time": "10:58",
+      "place": "VILLE-SUR-HAINE",
+      "date": "Private George Price, Canada"
+     }
+    },
+    {
+     "say": "Ten fifty nine. In the village of Chaumont-devant-Damvillers, Henry Gunther's squad comes up against two German machine guns. Against his sergeant's orders, Gunther gets up and charges, with his rifle.",
+     "scene": {
+      "shot": "card",
+      "time": "10:59",
+      "place": "CHAUMONT-DEVANT-DAMVILLERS",
+      "date": "Henry Gunther"
+     },
+     "do": [
+      {
+       "on": "machine",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "town",
+          "y": 0.72,
+          "n": 6,
+          "gap": 220,
+          "h": 130,
+          "col": "#6a5a4a",
+          "depth": 0.4
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "german_ww1",
+            "x": 0.65,
+            "pose": "aim",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95
+           },
+           {
+            "preset": "german_ww1",
+            "x": 0.78,
+            "pose": "idle",
+            "facing": -1,
+            "h": 0.62,
+            "y": 0.95
+           }
+          ],
+          "depth": 0.88
+         }
+        ],
+        "weather": "fog"
+       }
+      },
+      {
+       "on": "charges",
+       "scene": {
+        "shot": "set",
+        "time": "day",
+        "parts": [
+         {
+          "type": "land",
+          "kind": "mud",
+          "y": 0.72,
+          "depth": 0.6
+         },
+         {
+          "type": "actors",
+          "list": [
+           {
+            "preset": "doughboy",
+            "x": 0.35,
+            "pose": "run",
+            "facing": 1,
+            "h": 0.62,
+            "y": 0.95,
+            "walk": [
+             0.2,
+             0.45,
+             0,
+             3
+            ]
+           }
+          ],
+          "depth": 0.88
+         }
+        ],
+        "weather": "fog"
+       }
+      }
+     ]
+    },
+    {
+     "say": "The German gunners know the war will end in one minute. They try to wave him away. He keeps coming. He is hit, and dies instantly. He is twenty three.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.72,
+        "depth": 0.6
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.62,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_ww1",
+          "x": 0.76,
+          "pose": "wave",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "fog"
+     },
+     "do": [
+      {
+       "on": "dies",
+       "scene": {
+        "shot": "card",
+        "time": "10:59",
+        "place": "HENRY GUNTHER",
+        "date": "aged 23"
+       }
+      },
+      {
+       "on": "twenty",
+       "sfx": "braam"
+      }
+     ],
+     "pause": 1.5
+    },
+    {
+     "talk": [
+      {
+       "who": "GER2",
+       "text": "Go back! It's over!",
+       "mood": "shock"
+      },
+      {
+       "who": "GER3",
+       "text": "Why is he still coming?",
+       "mood": "shock"
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 5,
+        "gap": 240,
+        "h": 120,
+        "col": "#5a4a3a",
+        "depth": 0.4
+       }
+      ],
+      "weather": "fog"
+     }
+    },
+    {
+     "say": "Eleven o'clock. The guns stop.",
+     "scene": {
+      "shot": "card",
+      "time": "11:00",
+      "place": "THE WESTERN FRONT",
+      "date": "11 November 1918"
+     },
+     "do": [
+      {
+       "on": "stop",
+       "sfx": "bells"
+      }
+     ],
+     "pause": 2.0
+    },
+    {
+     "say": "On that last day alone, there were ten thousand nine hundred and forty four casualties. Two thousand seven hundred and thirty eight men died. More than on most ordinary days of the war.",
+     "scene": {
+      "shot": "card",
+      "time": "2,738",
+      "place": "DIED ON THE LAST DAY",
+      "date": "11 November 1918",
+      "size": 190
+     },
+     "do": [
+      {
+       "on": "ten",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Casualties on 11 Nov 1918",
+          10944
+         ],
+         [
+          "Of whom died",
+          2738
+         ]
+        ],
+        "note": "Armistice of 11 November 1918",
+        "dur": 6
+       }
+      }
+     ]
+    },
+    {
+     "say": "The next day, the American commander, General Pershing, names Henry Gunther as the last American killed in the war. The army gives him back his rank of sergeant.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "General Pershing, Order of the Day, 12 November 1918 (paraphrase)",
+      "lines": [
+       "Sergeant Henry Gunther",
+       "the last American killed",
+       "in the war"
+      ],
+      "hl": 0
+     }
+    }
+   ]
+  },
+  {
+   "title": "What the Line Remembers",
+   "years": "1914–1918",
+   "mood": "grief",
+   "beats": [
+    {
+     "say": "The Western Front lasted one thousand five hundred and sixty days, from the fourth of August 1914 to the eleventh of November 1918.",
+     "scene": {
+      "shot": "card",
+      "time": "1,560 DAYS",
+      "place": "THE WESTERN FRONT",
+      "date": "4 Aug 1914 – 11 Nov 1918",
+      "size": 190
+     }
+    },
+    {
+     "say": "On the Allied side, about two million and forty one thousand soldiers died. On the German side, about one million four hundred and ninety five thousand.",
+     "scene": {
+      "shot": "set",
+      "time": "dawn",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "grass",
+        "y": 0.7,
+        "depth": 0.6
+       },
+       {
+        "type": "graves",
+        "n": 14,
+        "rows": 5,
+        "y": 0.86,
+        "depth": 0.6
+       }
+      ],
+      "weather": "fog"
+     },
+     "do": [
+      {
+       "on": "two",
+       "card": {
+        "kind": "stat",
+        "rows": [
+         [
+          "Allied military dead",
+          2041000
+         ],
+         [
+          "German military dead",
+          1495000
+         ]
+        ],
+        "note": "Western Front (World War I)",
+        "dur": 6
+       }
+      }
+     ],
+     "pause": 1.2
+    },
+    {
+     "say": "Put together, that is about two thousand two hundred and seventy soldiers dead, every single day, for one thousand five hundred and sixty days.",
+     "scene": {
+      "shot": "card",
+      "time": "≈ 2,270",
+      "place": "DEAD EVERY DAY",
+      "date": "for 1,560 days",
+      "size": 190
+     }
+    },
+    {
+     "say": "So which side was right? The British and French would say they were defending Belgium, and France, from an invasion. That is true.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "town",
+        "y": 0.74,
+        "n": 10,
+        "gap": 160,
+        "h": 160,
+        "col": "#7a6a5a",
+        "depth": 0.4
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "poilu",
+          "x": 0.56,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    {
+     "say": "And the Germans who talked to Gustave Berthier at Christmas said they had no quarrel with the French. They were married. They were tired of making war.",
+     "scene": {
+      "shot": "set",
+      "time": "dusk",
+      "parts": [
+       {
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.36,
+        "wet": false,
+        "col": "#4a3a28"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_1914",
+          "x": 0.45,
+          "pose": "think",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
+    },
+    {
+     "say": "But look at what the men on both sides kept doing, whenever they were left alone. They held their fire while the food came up. They sang to each other. They traded tobacco and buttons, and buried each other's dead.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 187,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "tommy",
+          "x": 0.4,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "german_1914",
+          "x": 0.6,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    },
+    {
+     "say": "It took orders, threats of treason, new weapons and enormous battles to keep them fighting. Captain Robert Miles had wondered how anyone could get them to return to business. Now we know. The business ran for about fourteen hundred more days.",
+     "scene": {
+      "shot": "doc",
+      "kind": "letter",
+      "header": "Captain Robert Miles, 26 December 1914",
+      "lines": [
+       "I cannot see how",
+       "we can get them",
+       "to return to business."
+      ],
+      "hl": 2
+     },
+     "pause": 1.2
+    },
+    {
+     "say": "And the corporal who opposed the truce? Twenty two years later, he had Foch's railway carriage moved back to its exact spot in the forest, for France to sign an armistice with him. That is another border, and another story.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "forest",
+        "y": 0.62,
+        "n": 12,
+        "depth": 0.3
+       },
+       {
+        "type": "train",
+        "x": 0.5,
+        "y": 0.8,
+        "s": 0.9
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.3,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "armistice",
+       "card": {
+        "kind": "caption",
+        "text": "22 June 1940",
+        "sub": "the same carriage, the same clearing",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "One German soldier from that time could not stop thinking about it. Richard Schirrmann saw French and German troops make their own peace in the Vosges mountains, at Christmas 1915. He wondered if young people of all countries could be given places to meet, and get to know each other.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "hills",
+        "y": 0.55,
+        "n": 3,
+        "seed": 71,
+        "depth": 0.15
+       },
+       {
+        "type": "forest",
+        "y": 0.7,
+        "n": 10,
+        "depth": 0.35
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "german_ww1",
+          "x": 0.4,
+          "pose": "idle",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         },
+         {
+          "preset": "poilu",
+          "x": 0.58,
+          "pose": "hold",
+          "facing": -1,
+          "h": 0.62,
+          "y": 0.95,
+          "prop": "cup"
+         }
+        ],
+        "depth": 0.88
+       }
+      ],
+      "weather": "snow"
+     },
+     "do": [
+      {
+       "on": "Schirrmann",
+       "card": {
+        "kind": "name",
+        "text": "Richard Schirrmann",
+        "sub": "German soldier, Vosges, 1915",
+        "dur": 4
+       }
+      }
+     ]
+    },
+    {
+     "say": "In 1919, he founded the German Youth Hostel Association. Cheap beds, under one roof, for strangers from anywhere. A soldier's idea from a Christmas in the trenches.",
+     "scene": {
+      "shot": "set",
+      "time": "day",
+      "parts": [
+       {
+        "type": "houses",
+        "n": 3,
+        "y": 0.78,
+        "seed": 3
+       },
+       {
+        "type": "hills",
+        "y": 0.56,
+        "n": 2,
+        "seed": 72,
+        "depth": 0.15
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.4,
+          "pose": "wave",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     },
+     "do": [
+      {
+       "on": "1919",
+       "card": {
+        "kind": "big",
+        "text": "1919: YOUTH HOSTELS",
+        "dur": 3
+       }
+      }
+     ]
+    },
+    {
+     "say": "Two lines of trenches. A strip of mud between them that belonged to nobody. And on Christmas Day, for a few hours, it belonged to everybody.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 6,
+        "seed": 188,
+        "water": false,
+        "y": 0.72
+       },
+       {
+        "type": "wire",
+        "y": 0.78,
+        "h": 80
+       }
+      ],
+      "fx": [
+       "snow",
+       "light"
+      ]
+     }
+    },
+    {
+     "talk": [
+      {
+       "who": "GER1",
+       "text": "Merry Christmas, Englishmen."
+      },
+      {
+       "who": "TOM1",
+       "text": "Merry Christmas."
+      }
+     ],
+     "bg": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "land",
+        "kind": "mud",
+        "y": 0.7,
+        "depth": 0.5
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 190,
+        "water": false,
+        "y": 0.72
+       }
+      ],
+      "fx": [
+       "snow"
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "outro": {
+  "text": "Every border has two sides. On the Western Front, the two sides were often closer to each other than to the men who gave the orders.",
+  "question": "If you had been in the trench that Christmas, would you have climbed out?",
+  "next": "THE BERLIN WALL"
+ },
+ "cast": {
+  "GER1": {
+   "preset": "german_1914",
+   "name": "A German soldier"
+  },
+  "GER2": {
+   "preset": "german_ww1",
+   "name": "A German soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "GER3": {
+   "preset": "german_ww1",
+   "name": "Another German soldier",
+   "spec": {
+    "hair": "#c8a060"
+   }
+  },
+  "TOM1": {
+   "preset": "tommy",
+   "name": "A British soldier"
+  },
+  "TOM2": {
+   "preset": "tommy",
+   "name": "Another British soldier",
+   "spec": {
+    "hair": "#b8732a"
+   }
+  },
+  "TOM3": {
+   "preset": "tommy",
+   "name": "A British private",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "TOM4": {
+   "preset": "tommy",
+   "name": "His mate",
+   "spec": {
+    "hair": "#2a1d12"
+   }
+  },
+  "MILES": {
+   "preset": "tommy_officer",
+   "name": "Captain Robert Miles"
+  },
+  "GOFF": {
+   "preset": "german_officer_ww1",
+   "name": "A German staff officer"
+  },
+  "GAIDE": {
+   "preset": "german_officer_ww1",
+   "name": "His aide",
+   "spec": {
+    "beard": "none"
+   }
+  },
+  "POI": {
+   "preset": "poilu",
+   "name": "A French soldier"
+  },
+  "POI2": {
+   "preset": "poilu",
+   "name": "Another French soldier",
+   "spec": {
+    "beard": "mustache"
+   }
+  },
+  "MARC": {
+   "preset": "german_ww1",
+   "name": "Franz Marc",
+   "spec": {
+    "beard": "full",
+    "hair": "#4a3626"
+   }
+  },
+  "NURSE": {
+   "preset": "nurse_ww1",
+   "name": "A nurse"
+  },
+  "CENSOR": {
+   "preset": "clerk",
+   "name": "An army censor"
+  },
+  "CENSOR2": {
+   "preset": "clerk",
+   "name": "Another censor",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "GINT": {
+   "preset": "german_1914",
+   "name": "A German interpreter, from Suffolk"
+  },
+  "CLERK1": {
+   "preset": "clerk",
+   "name": "A War Office clerk"
+  },
+  "CLERK2": {
+   "preset": "clerk",
+   "name": "Another clerk",
+   "spec": {
+    "glasses": 0
+   }
+  },
+  "ERZ": {
+   "preset": "civilian",
+   "name": "Matthias Erzberger, German delegate"
+  },
+  "FOCH": {
+   "preset": "french_officer",
+   "name": "Marshal Ferdinand Foch",
+   "spec": {
+    "hat": "kepi",
+    "hatCol": "#1f3f8a",
+    "coat": "#3a4a6a",
+    "hairStyle": "short",
+    "hair": "#d8d3cb",
+    "beard": "mustache"
+   }
+  }
+ },
+ "voices": {
+  "GER1": "am_fenrir",
+  "GER2": "am_adam",
+  "GER3": "am_puck",
+  "TOM1": "bm_lewis",
+  "TOM2": "bm_daniel",
+  "TOM3": "bm_lewis",
+  "TOM4": "bm_daniel",
+  "MILES": "bm_fable",
+  "GOFF": "am_fenrir",
+  "GAIDE": "am_puck",
+  "POI": "am_michael",
+  "POI2": "am_adam",
+  "MARC": "am_adam",
+  "NURSE": "af_sarah",
+  "CENSOR": "am_michael",
+  "CENSOR2": "am_puck",
+  "ERZ": "am_fenrir",
+  "GINT": "am_adam",
+  "CLERK1": "bm_lewis",
+  "CLERK2": "bm_daniel",
+  "FOCH": "bm_daniel"
+ },
+ "photos": {
+  "truce": [
+   "Christmas truce 1914 Northumberland Hussars no man's land",
+   false
+  ],
+  "hitler": [
+   "Hitler with comrades of the List Regiment 1914",
+   false
+  ],
+  "liege": [
+   "Fort de Loncin Liège 1914 ruins",
+   true
+  ],
+  "marne": [
+   "French soldiers Battle of the Marne 1914",
+   false
+  ],
+  "trench": [
+   "Cheshire Regiment trench Somme 1916",
+   false
+  ],
+  "gassed": [
+   "Gassed John Singer Sargent",
+   true
+  ],
+  "douaumont": [
+   "Fort Douaumont 1916",
+   true
+  ],
+  "marc": [
+   "Franz Marc photograph 1910",
+   false
+  ],
+  "bluehorse": [
+   "Franz Marc Blue Horse I 1911",
+   true
+  ],
+  "somme": [
+   "Royal Irish Rifles first day Somme 1916 trench",
+   false
+  ],
+  "gunther": [
+   "Henry Gunther soldier",
+   false
+  ],
+  "passchendaele": [
+   "Chateau Wood Ypres 1917 Hurley",
+   true
+  ],
+  "carriage": [
+   "Armistice railway carriage Compiègne 1918",
+   false
+  ],
+  "trebuchon": [
+   "Augustin Trébuchon",
+   false
+  ]
+ },
+ "sources": [
+  "Wikipedia, Christmas truce (Miles, Niemann, Congreve, Williamson, Zehmisch, Morillon, Berthier, de Gaulle, Smith-Dorrien, Hitler, 100,000 troops, 29 Dec order, press, 1915): https://en.wikipedia.org/wiki/Christmas_truce",
+  "Wikipedia, Western Front (World War I) (Belgium 4 Aug 1914, 1839 treaty, Liège 5-16 Aug, Brussels 20 Aug, Marne, gas types, mutinies, US entry, casualties, military dead): https://en.wikipedia.org/wiki/Western_Front_(World_War_I)",
+  "Wikipedia, Trench warfare (Race to the Sea, 2.5 m trenches, duckboards, German dugouts 4 m, time in the line, 53 days, trench fever, Somme bombardment): https://en.wikipedia.org/wiki/Trench_warfare",
+  "Wikipedia, Trench foot: https://en.wikipedia.org/wiki/Trench_foot",
+  "Wikipedia, Second Battle of Ypres (Haber, chlorine, 5,730 cylinders, 40 kg, frozen valves, 3 killed and 50 wounded): https://en.wikipedia.org/wiki/Second_Battle_of_Ypres",
+  "Wikipedia, Battle of Verdun (21 Feb-18 Dec 1916, 302 days, Douaumont, Petain, 34 km road, 377,231 and 337,000 casualties): https://en.wikipedia.org/wiki/Battle_of_Verdun",
+  "Wikipedia, Franz Marc (camouflage letter, nine tarpaulins, 2,000 m, artists list, shell splinter, 4 March 1916, 'flaming agony', 1939 sale): https://en.wikipedia.org/wiki/Franz_Marc",
+  "Wikipedia, First day on the Somme (19 mines, 24 tons, Lochnagar, 7:20, 7:28, 7:30, 57,470 casualties, 19,240 dead, truces for the wounded): https://en.wikipedia.org/wiki/First_day_on_the_Somme",
+  "Wikipedia, Shell shock (symptoms, NYDN): https://en.wikipedia.org/wiki/Shell_shock",
+  "Wikipedia, German spring offensive (21 March 1918, Kaiserschlacht, aim before US arrival): https://en.wikipedia.org/wiki/German_spring_offensive",
+  "Wikipedia, Henry Gunther (Baltimore, drafted Sept 1917, censored letter, demoted, 10:59, waved away, Pershing, rank restored): https://en.wikipedia.org/wiki/Henry_Gunther",
+  "Wikipedia, Augustin Trebuchon (10:45, shepherd, accordion, aged 40, date recorded a day early; BBC on the soup message): https://en.wikipedia.org/wiki/Augustin_Tr%C3%A9buchon",
+  "Wikipedia, George Edwin Ellison (landed 26 Aug 1914, Mons 1914, killed 09:30 at Mons): https://en.wikipedia.org/wiki/George_Edwin_Ellison",
+  "Wikipedia, Armistice of 11 November 1918 (Compiegne, 8 Nov arrival, ten hours, 72 hours, 5:00 and 11:00, Ebert 9 Nov, artillery, 10,944 casualties and 2,738 dead, Price at 10:58): https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+  "Wikipedia, Compiegne Wagon (Hitler had it moved back for the 1940 armistice): https://en.wikipedia.org/wiki/Compi%C3%A8gne_Wagon",
+  "Wikipedia, Battle of Passchendaele (wet ground, autumn rain): https://en.wikipedia.org/wiki/Battle_of_Passchendaele"
+ ],
+ "thumb": {
+  "scene": "relief",
+  "dread": 1,
+  "graves": 1,
+  "seed": 91,
+  "topic": "FLANDERS · 1914",
+  "map": {
+   "era": "1914",
+   "center": [
+    3.5,
+    50.2
+   ],
+   "scale": 4200,
+   "cx": 0.5,
+   "cy": 0.5,
+   "hl": [
+    {
+     "names": [
+      "Germany"
+     ],
+     "color": "#e8141c"
+    },
+    {
+     "names": [
+      "France",
+      "Belgium"
+     ],
+     "color": "#f4f4f4"
+    }
+   ]
+  },
+  "layout": "spotlight",
+  "hook": [
+   "5 DAYS",
+   "TOO LATE"
+  ],
+  "hi": "5 DAYS"
+ },
+ "abTest": [
+  {
+   "title": "How the Western Front Happened — Minute by Minute",
+   "thumb": {}
+  },
+  {
+   "title": "The 1,560 Days That Made the Western Front",
+   "thumb": {
+    "layout": "circled",
+    "hook": [
+     "HE WOULDN'T SHOOT"
+    ],
+    "hi": "SHOOT"
+   }
+  },
+  {
+   "title": "How the Western Front Happened — Minute by Minute",
+   "thumb": {
+    "layout": "dossier",
+    "hook": [
+     "CHRISTMAS",
+     "1914"
+    ],
+    "hi": "1914",
+    "caption": "Captain Robert Miles, 1914",
+    "stamp": "UNTOLD STORY"
+   }
+  }
+ ],
+ "shortsNote": "Shorts are separate 'Do you know' stories: sb-western-front-short1 (Trebuchon's soup message) and -short2 (Franz Marc on the artists list), to be written in the next run."
+}

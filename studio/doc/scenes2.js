@@ -454,6 +454,25 @@
       c.fillStyle = '#2a3440'; for (let i = 0; i < 6; i++) c.fillRect(-340 + i * 112, -230, 90, 80);
       c.fillStyle = '#111'; c.font = `700 44px ${BODY}`; c.textAlign = 'center'; c.fillText(p.route || '79', 330, -180);
       c.fillStyle = '#111'; for (const wx of [-250, 240]) { c.beginPath(); c.arc(wx, -28, 44, 0, 7); c.fill() } c.restore() },
+    trench: (c, W, H, u, p) => {   // a WW1 trench seen end-on: earth walls, sandbag parapet, fire step, duckboards, wet floor (p.y floor line, p.w width, p.wet)
+      const y = H * (p.y || .9), cx = W * (p.x || .5), w = W * (p.w || .62), top = H * (p.top || .38), mud = p.col || '#4b3a28';
+      c.fillStyle = shade2(mud, -.25); c.fillRect(-300, top - 40, W + 600, y - top + 400);
+      c.fillStyle = mud; c.beginPath(); c.moveTo(-300, top); c.lineTo(cx - w / 2, top + 30); c.lineTo(cx - w / 2 + 60, y); c.lineTo(cx + w / 2 - 60, y); c.lineTo(cx + w / 2, top + 30); c.lineTo(W + 300, top); c.lineTo(W + 300, H + 300); c.lineTo(-300, H + 300); c.closePath(); c.fill();
+      for (let i = 0; i < 26; i++) { const sx = -40 + i * (W + 80) / 26, sy = top - 26 + (i % 2) * 6; c.fillStyle = i % 3 ? '#8a7a58' : '#7a6a4a'; c.beginPath(); c.roundRect(sx, sy, (W + 80) / 26 + 6, 30, 10); c.fill(); c.strokeStyle = '#2a2016'; c.lineWidth = 2; c.stroke() }
+      c.fillStyle = shade2(mud, .12); c.fillRect(cx - w / 2 + 30, y - 120, 120, 120); c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(cx - w / 2 + 30, y - 120, 120, 8);
+      for (let x = cx - w / 2 + 70; x < cx + w / 2 - 70; x += 46) { c.fillStyle = '#5a4630'; c.fillRect(x, y - 10, 38, 12) }
+      c.strokeStyle = 'rgba(30,20,10,.6)'; c.lineWidth = 3; for (let x = cx - w / 2 + 10; x < cx + w / 2; x += 90) { c.beginPath(); c.moveTo(x, top + 40); c.lineTo(x + 14, y - 20); c.stroke() }
+      if (p.wet) { c.fillStyle = 'rgba(120,130,130,.35)'; c.fillRect(cx - w / 2 + 60, y - 4, w - 120, 18) } },
+    wire: (c, W, H, u, p) => {   // barbed wire on posts across no man's land (p.y, p.h, p.x0, p.x1)
+      const y = H * (p.y || .8), h = p.h || 90, x0 = W * (p.x0 || -.05), x1 = W * (p.x1 || 1.05); c.strokeStyle = p.col || '#2a2622'; c.lineWidth = 5;
+      for (let x = x0; x < x1; x += 160) { c.beginPath(); c.moveTo(x, y + 6); c.lineTo(x + 8, y - h); c.stroke() }
+      c.lineWidth = 2; for (let x = x0; x < x1; x += 18) { const r = h * .4; c.beginPath(); c.ellipse(x, y - h * .5, r * .45, r, 0, 0, 7); c.stroke() }
+      c.lineWidth = 2; for (const f of [.25, .7]) { c.beginPath(); c.moveTo(x0, y - h * f); for (let x = x0; x < x1; x += 30) c.lineTo(x, y - h * f + Math.sin(x) * 4); c.stroke() } },
+    craters: (c, W, H, u, p) => {   // a shell-torn field: overlapping craters, some with water, broken tree stumps (p.n, p.seed, p.water)
+      const n = p.n || 9, y0 = H * (p.y || .7); for (let i = 0; i < n; i++) { const x = rnd(i + (p.seed || 3)) * W, y = y0 + rnd(i * 7 + 1) * (H - y0) * .8, r = 80 + rnd(i * 3 + 2) * 120;
+        c.fillStyle = 'rgba(20,14,8,.55)'; c.beginPath(); c.ellipse(x, y, r, r * .28, 0, 0, 7); c.fill(); c.fillStyle = 'rgba(110,90,60,.5)'; c.beginPath(); c.ellipse(x, y - r * .2, r * 1.05, r * .12, 0, Math.PI, 0); c.fill();
+        if (p.water && i % 2 === 0) { c.fillStyle = 'rgba(140,150,150,.45)'; c.beginPath(); c.ellipse(x, y + r * .04, r * .7, r * .15, 0, 0, 7); c.fill() } }
+      c.fillStyle = '#2a2018'; for (let i = 0; i < (p.stumps || 4); i++) { const x = rnd(i * 11 + 5) * W, h = 120 + rnd(i * 13) * 160; c.beginPath(); c.moveTo(x - 12, y0 + 10); c.lineTo(x - 6, y0 - h); c.lineTo(x + 4, y0 - h + 20); c.lineTo(x + 12, y0 + 10); c.fill() } },
     fence: (c, W, H, u, p) => { const y = H * (p.y || .84), x0 = W * (p.x0 || 0), x1 = W * (p.x1 || 1), h = p.h || 220, br = p.broken;
       c.strokeStyle = p.col || '#2a2a2a'; c.lineWidth = 6; for (let x = x0; x < x1; x += 40) { if (br && Math.abs(x - W * br) < 140) continue; c.beginPath(); c.moveTo(x, y); c.lineTo(x, y - h); c.stroke() }
       c.lineWidth = 4; for (const f of [.15, .55, .95]) { c.beginPath(); c.moveTo(x0, y - h * f); if (br) { c.lineTo(W * br - 140, y - h * f); c.moveTo(W * br + 140, y - h * f) } c.lineTo(x1, y - h * f); c.stroke() } },
