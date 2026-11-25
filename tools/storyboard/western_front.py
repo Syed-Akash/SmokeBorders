@@ -13,7 +13,7 @@ def S(time, parts, weather=None, fx=None, **k):
     if fx: d["fx"] = fx
     d.update(k); return d
 def trench(time='day', *who, wet=False, weather=None, fx=None, col=None):
-    p = [{"type": "trench", "y": 0.93, "w": 0.6 + (sd() % 4) * 0.05, "top": 0.36 + (sd() % 3) * 0.03, "wet": wet}]
+    p = [{"type": "trench", "y": 0.93, "w": 0.6 + (sd() % 4) * 0.05, "top": 0.36 + (sd() % 3) * 0.03, "wet": wet, "seed": sd()}]
     if col: p[0]["col"] = col
     if who: p.append(actors(*who))
     return S(time, p, weather, fx)
@@ -381,15 +381,15 @@ ch.append({"title": "The Eleventh Hour", "years": "8–11 November 1918", "mood"
    [on("seventy", card={"kind": "big", "text": "70 METRES WIDE", "dur": 3}), on("seven hundred", scene=card("≈ 700", "MEN CROSS THE MEUSE", "a little after 08:00"))]),
  B("At ten forty five, he is shot. Fifteen minutes before the end. Later, embarrassed, the French army writes the date of his death down as the day before.",
    card("10:45", "VRIGNE-MEUSE", "Augustin Trébuchon"), [on("embarrassed", scene=doc("letter", "French Army record (paraphrase)", ["Trébuchon, Augustin", "died: 10 November 1918"], hl=1))], pause=1.2),
- T([("POI", "Was the war not over?"), ("POI2", "Not until eleven.", "sad")], S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}], weather='rain')),
+ T([("POI", "Was the war not over?"), ("POI2", "Not until eleven.", "sad")], trench('day', wet=True, weather='rain')),
  B("Ten fifty eight. A Canadian private, George Price, is killed by a sniper near Mons. Two minutes before the armistice.",
    card("10:58", "VILLE-SUR-HAINE", "Private George Price, Canada")),
  B("Ten fifty nine. In the village of Chaumont-devant-Damvillers, Henry Gunther's squad comes up against two German machine guns. Against his sergeant's orders, Gunther gets up and charges, with his rifle.",
    card("10:59", "CHAUMONT-DEVANT-DAMVILLERS", "Henry Gunther"),
    [on("machine", scene=S('day', [{"type": "town", "y": 0.72, "n": 6, "gap": 220, "h": 130, "col": "#6a5a4a", "depth": 0.4}, actors(A('german_ww1', 0.65, 'aim', -1), A('german_ww1', 0.78, 'idle', -1))], weather='fog')),
-    on("charges", scene=S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}, actors(A('doughboy', 0.35, 'run', 1, walk=[0.2, 0.45, 0, 3]))], weather='fog'))]),
+    on("charges", scene=S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}, {"type": "craters", "n": 6, "seed": sd(), "water": True, "y": 0.74}, actors(A('doughboy', 0.35, 'run', 1, walk=[0.2, 0.45, 0, 3]))], weather='fog'))]),
  B("The German gunners know the war will end in one minute. They try to wave him away. He keeps coming. He is hit, and dies instantly. He is twenty three.",
-   S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}, actors(A('german_ww1', 0.62, 'wave', -1), A('german_ww1', 0.76, 'wave', -1))], weather='fog'),
+   S('day', [{"type": "land", "kind": "mud", "y": 0.72, "depth": 0.6}, {"type": "wire", "y": 0.8, "h": 80}, {"type": "craters", "n": 4, "seed": sd(), "y": 0.76}, actors(A('german_ww1', 0.62, 'wave', -1), A('german_ww1', 0.76, 'wave', -1))], weather='fog'),
    [on("dies", scene=card("10:59", "HENRY GUNTHER", "aged 23")), on("twenty", sfx="braam")], pause=1.5),
  T([("GER2", "Go back! It's over!", "shock"), ("GER3", "Why is he still coming?", "shock")], S('day', [{"type": "town", "y": 0.74, "n": 5, "gap": 240, "h": 120, "col": "#5a4a3a", "depth": 0.4}], weather='fog')),
  B("Eleven o'clock. The guns stop.",
@@ -419,9 +419,11 @@ ch.append({"title": "What the Line Remembers", "years": "1914–1918", "mood": "
  B("And the corporal who opposed the truce? Twenty two years later, he had Foch's railway carriage moved back to its exact spot in the forest, for France to sign an armistice with him. That is another border, and another story.",
    S('day', [{"type": "forest", "y": 0.62, "n": 12, "depth": 0.3}, {"type": "train", "x": 0.5, "y": 0.8, "s": 0.9}, actors(A('german_ww1', 0.3, 'idle', 1))]),
    [on("armistice", card={"kind": "caption", "text": "22 June 1940", "sub": "the same carriage, the same clearing", "dur": 4})]),
- B("One German soldier from that time could not stop thinking about it. Richard Schirrmann saw French and German troops make their own peace in the Vosges mountains, at Christmas 1915. He wondered if young people of all countries could be given places to meet, and get to know each other.",
+ B("One German soldier from that time could not stop thinking about it. Richard Schirrmann saw French and German troops make their own peace in the Vosges mountains, at Christmas 1915.",
    S('day', [{"type": "hills", "y": 0.55, "n": 3, "seed": 71, "depth": 0.15}, {"type": "forest", "y": 0.7, "n": 10, "depth": 0.35}, actors(A('german_ww1', 0.4, 'idle', 1), A('poilu', 0.58, 'hold', -1, prop='cup'))], weather='snow'),
    [on("Schirrmann", card={"kind": "name", "text": "Richard Schirrmann", "sub": "German soldier, Vosges, 1915", "dur": 4})]),
+ B("He wondered if young people of all countries could be given places to meet, and get to know each other.",
+   S('night', [{"type": "room", "flag": None, "window": 0.45, "night": True, "depth": 0.3, "seed": 73, "wall": "#5d5648"}, actors(A('civilian', 0.45, 'hold', 1))])),
  B("In 1919, he founded the German Youth Hostel Association. Cheap beds, under one roof, for strangers from anywhere. A soldier's idea from a Christmas in the trenches.",
    S('day', [{"type": "houses", "n": 3, "y": 0.78, "seed": 3}, {"type": "hills", "y": 0.56, "n": 2, "seed": 72, "depth": 0.15}, actors(A('civilian', 0.4, 'wave', 1))]),
    [on("1919", card={"kind": "big", "text": "1919: YOUTH HOSTELS", "dur": 3})]),

@@ -131,7 +131,8 @@
        "y": 0.93,
        "w": 0.75,
        "top": 0.39,
-       "wet": false
+       "wet": false,
+       "seed": 5
       },
       {
        "type": "actors",
@@ -190,9 +191,10 @@
       {
        "type": "trench",
        "y": 0.93,
-       "w": 0.65,
-       "top": 0.36,
+       "w": 0.7,
+       "top": 0.39,
        "wet": false,
+       "seed": 8,
        "col": "#3e3022"
       }
      ],
@@ -221,7 +223,7 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 7,
+        "seed": 9,
         "water": false,
         "y": 0.72
        },
@@ -276,13 +278,13 @@
         {
          "type": "craters",
          "n": 8,
-         "seed": 8,
+         "seed": 10,
          "water": false,
          "y": 0.72
         },
         {
          "type": "wire",
-         "y": 0.78,
+         "y": 0.8400000000000001,
          "h": 80
         },
         {
@@ -340,7 +342,7 @@
         {
          "type": "craters",
          "n": 8,
-         "seed": 10,
+         "seed": 12,
          "water": false,
          "y": 0.72
         },
@@ -384,9 +386,10 @@
       {
        "type": "trench",
        "y": 0.93,
-       "w": 0.75,
-       "top": 0.36,
+       "w": 0.65,
+       "top": 0.42,
        "wet": false,
+       "seed": 15,
        "col": "#3a2c20"
       },
       {
@@ -424,9 +427,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.65,
+          "w": 0.6,
           "top": 0.42,
-          "wet": false
+          "wet": false,
+          "seed": 18
          },
          {
           "type": "actors",
@@ -478,7 +482,7 @@
          "window": 0.45,
          "night": true,
          "depth": 0.3,
-         "seed": 15,
+         "seed": 19,
          "wall": "#3a3228"
         },
         {
@@ -488,7 +492,7 @@
          "papers": 1,
          "w": 700,
          "depth": 0.6,
-         "seed": 16
+         "seed": 20
         },
         {
          "type": "actors",
@@ -558,7 +562,7 @@
          "type": "hills",
          "y": 0.58,
          "n": 2,
-         "seed": 17,
+         "seed": 21,
          "depth": 0.15
         },
         {
@@ -597,13 +601,13 @@
       {
        "type": "craters",
        "n": 8,
-       "seed": 18,
+       "seed": 22,
        "water": false,
        "y": 0.72
       },
       {
        "type": "wire",
-       "y": 0.81,
+       "y": 0.8400000000000001,
        "h": 80
       },
       {
@@ -657,7 +661,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 20,
+        "seed": 24,
         "wall": "#5a5446"
        },
        {
@@ -667,7 +671,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 21
+        "seed": 25
        },
        {
         "type": "actors",
@@ -778,7 +782,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 22,
+        "seed": 26,
         "wall": "#4a4a40"
        },
        {
@@ -788,7 +792,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 23
+        "seed": 27
        }
       ]
      }
@@ -809,7 +813,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 24,
+        "seed": 28,
         "depth": 0.15
        },
        {
@@ -941,7 +945,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 25,
+        "seed": 29,
         "depth": 0.15
        },
        {
@@ -1068,7 +1072,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 26,
+        "seed": 30,
         "depth": 0.15
        },
        {
@@ -1109,7 +1113,7 @@
            "type": "hills",
            "y": 0.58,
            "n": 2,
-           "seed": 27,
+           "seed": 31,
            "depth": 0.15
           },
           {
@@ -1182,7 +1186,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 28,
+        "seed": 32,
         "depth": 0.15
        },
        {
@@ -1285,8 +1289,9 @@
         "type": "trench",
         "y": 0.93,
         "w": 0.65,
-        "top": 0.36,
-        "wet": false
+        "top": 0.39,
+        "wet": false,
+        "seed": 35
        },
        {
         "type": "actors",
@@ -1330,9 +1335,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.75,
-          "top": 0.42,
+          "w": 0.6,
+          "top": 0.39,
           "wet": false,
+          "seed": 38,
           "col": "#5a4630"
          },
          {
@@ -1376,9 +1382,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
+        "w": 0.75,
         "top": 0.39,
-        "wet": false
+        "wet": false,
+        "seed": 41
        },
        {
         "type": "actors",
@@ -1422,9 +1429,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.75,
-          "top": 0.36,
+          "w": 0.7,
+          "top": 0.39,
           "wet": false,
+          "seed": 44,
           "col": "#3e3022"
          },
          {
@@ -1470,8 +1478,9 @@
          "type": "trench",
          "y": 0.93,
          "w": 0.65,
-         "top": 0.42,
-         "wet": true
+         "top": 0.39,
+         "wet": true,
+         "seed": 47
         },
         {
          "type": "actors",
@@ -1500,9 +1509,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.75,
+          "w": 0.6,
           "top": 0.39,
-          "wet": true
+          "wet": true,
+          "seed": 50
          }
         ],
         "weather": "rain"
@@ -1528,9 +1538,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
-        "top": 0.36,
+        "w": 0.75,
+        "top": 0.39,
         "wet": true,
+        "seed": 53,
         "col": "#3a2c20"
        }
       ],
@@ -1546,9 +1557,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.75,
-        "top": 0.42,
+        "w": 0.7,
+        "top": 0.39,
         "wet": false,
+        "seed": 56,
         "col": "#4a3a2a"
        },
        {
@@ -1589,7 +1601,7 @@
           "window": 0.45,
           "night": true,
           "depth": 0.3,
-          "seed": 45,
+          "seed": 57,
           "wall": "#6a6a62"
          },
          {
@@ -1599,7 +1611,7 @@
           "papers": 0,
           "w": 700,
           "depth": 0.6,
-          "seed": 46
+          "seed": 58
          },
          {
           "type": "actors",
@@ -1653,7 +1665,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 47,
+        "seed": 59,
         "depth": 0.15
        },
        {
@@ -1693,7 +1705,8 @@
         "y": 0.93,
         "w": 0.6,
         "top": 0.39,
-        "wet": true
+        "wet": true,
+        "seed": 62
        },
        {
         "type": "actors",
@@ -1737,7 +1750,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 50,
+        "seed": 63,
         "wall": "#3a3228"
        },
        {
@@ -1747,7 +1760,7 @@
         "papers": 0,
         "w": 700,
         "depth": 0.6,
-        "seed": 51
+        "seed": 64
        },
        {
         "type": "actors",
@@ -1804,9 +1817,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
-        "top": 0.42,
+        "w": 0.65,
+        "top": 0.36,
         "wet": false,
+        "seed": 67,
         "col": "#4a3a28"
        }
       ]
@@ -1827,13 +1841,13 @@
        {
         "type": "craters",
         "n": 10,
-        "seed": 54,
+        "seed": 68,
         "water": true,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.81,
+        "y": 0.78,
         "h": 80
        }
       ],
@@ -1857,9 +1871,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
-        "top": 0.36,
-        "wet": false
+        "w": 0.7,
+        "top": 0.42,
+        "wet": false,
+        "seed": 72
        },
        {
         "type": "actors",
@@ -1903,9 +1918,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.7,
+          "w": 0.65,
           "top": 0.42,
           "wet": false,
+          "seed": 75,
           "col": "#3a2c20"
          },
          {
@@ -1943,13 +1959,13 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 60,
+        "seed": 76,
         "water": false,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.81,
+        "y": 0.8400000000000001,
         "h": 80
        },
        {
@@ -2020,8 +2036,9 @@
         "type": "trench",
         "y": 0.93,
         "w": 0.7,
-        "top": 0.36,
+        "top": 0.39,
         "wet": false,
+        "seed": 80,
         "col": "#4a3a2a"
        }
       ]
@@ -2061,9 +2078,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
-        "top": 0.42,
-        "wet": false
+        "w": 0.65,
+        "top": 0.39,
+        "wet": false,
+        "seed": 83
        },
        {
         "type": "actors",
@@ -2101,9 +2119,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.7,
+        "w": 0.6,
         "top": 0.39,
         "wet": false,
+        "seed": 86,
         "col": "#3a2c20"
        },
        {
@@ -2151,13 +2170,13 @@
          {
           "type": "craters",
           "n": 5,
-          "seed": 68,
+          "seed": 87,
           "water": false,
           "y": 0.72
          },
          {
           "type": "wire",
-          "y": 0.78,
+          "y": 0.81,
           "h": 80
          }
         ],
@@ -2182,9 +2201,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.7,
-        "top": 0.42,
-        "wet": false
+        "w": 0.65,
+        "top": 0.36,
+        "wet": false,
+        "seed": 91
        },
        {
         "type": "actors",
@@ -2226,7 +2246,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 72,
+        "seed": 92,
         "wall": "#4a4030"
        },
        {
@@ -2236,7 +2256,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 73
+        "seed": 93
        },
        {
         "type": "actors",
@@ -2288,7 +2308,7 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 74,
+        "seed": 94,
         "water": false,
         "y": 0.72
        },
@@ -2376,7 +2396,7 @@
        {
         "type": "craters",
         "n": 5,
-        "seed": 75,
+        "seed": 95,
         "water": false,
         "y": 0.72
        }
@@ -2396,8 +2416,9 @@
         "type": "trench",
         "y": 0.93,
         "w": 0.6,
-        "top": 0.42,
+        "top": 0.39,
         "wet": false,
+        "seed": 98,
         "col": "#4a3a2a"
        },
        {
@@ -2461,7 +2482,7 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 78,
+        "seed": 99,
         "water": false,
         "y": 0.72
        },
@@ -2515,7 +2536,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 79,
+        "seed": 100,
         "wall": "#3e362c"
        },
        {
@@ -2525,7 +2546,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 80
+        "seed": 101
        },
        {
         "type": "actors",
@@ -2622,7 +2643,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 81,
+        "seed": 102,
         "water": false,
         "y": 0.72
        },
@@ -2701,7 +2722,7 @@
        {
         "type": "craters",
         "n": 3,
-        "seed": 82,
+        "seed": 103,
         "water": false,
         "y": 0.72
        }
@@ -2740,7 +2761,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 83,
+        "seed": 104,
         "water": false,
         "y": 0.72
        },
@@ -2797,7 +2818,7 @@
        {
         "type": "craters",
         "n": 3,
-        "seed": 84,
+        "seed": 105,
         "water": false,
         "y": 0.72
        },
@@ -2853,7 +2874,7 @@
        {
         "type": "craters",
         "n": 3,
-        "seed": 85,
+        "seed": 106,
         "water": false,
         "y": 0.72
        }
@@ -2938,7 +2959,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 86,
+        "seed": 107,
         "water": false,
         "y": 0.72
        },
@@ -3017,7 +3038,7 @@
        {
         "type": "craters",
         "n": 5,
-        "seed": 87,
+        "seed": 108,
         "water": false,
         "y": 0.72
        },
@@ -3084,7 +3105,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 88,
+        "seed": 109,
         "water": false,
         "y": 0.72
        }
@@ -3109,7 +3130,7 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 89,
+        "seed": 110,
         "water": false,
         "y": 0.72
        },
@@ -3181,7 +3202,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 91,
+        "seed": 112,
         "wall": "#3a3a44"
        },
        {
@@ -3191,7 +3212,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 92
+        "seed": 113
        },
        {
         "type": "actors",
@@ -3236,9 +3257,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
+        "w": 0.7,
         "top": 0.39,
-        "wet": false
+        "wet": false,
+        "seed": 116
        },
        {
         "type": "actors",
@@ -3275,13 +3297,13 @@
          {
           "type": "craters",
           "n": 8,
-          "seed": 95,
+          "seed": 117,
           "water": false,
           "y": 0.72
          },
          {
           "type": "wire",
-          "y": 0.78,
+          "y": 0.81,
           "h": 80
          },
          {
@@ -3346,9 +3368,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
-        "top": 0.42,
+        "w": 0.75,
+        "top": 0.36,
         "wet": false,
+        "seed": 121,
         "col": "#4a3a28"
        }
       ],
@@ -3369,7 +3392,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 99,
+        "seed": 122,
         "wall": "#5a4a3a"
        },
        {
@@ -3379,7 +3402,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 100
+        "seed": 123
        },
        {
         "type": "actors",
@@ -3453,7 +3476,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 101,
+        "seed": 124,
         "wall": "#4a4a40"
        },
        {
@@ -3463,7 +3486,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 102
+        "seed": 125
        }
       ]
      }
@@ -3483,13 +3506,13 @@
        {
         "type": "craters",
         "n": 9,
-        "seed": 103,
+        "seed": 126,
         "water": false,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.8400000000000001,
+        "y": 0.81,
         "h": 80
        }
       ],
@@ -3713,7 +3736,7 @@
           "window": 0.45,
           "night": false,
           "depth": 0.3,
-          "seed": 105,
+          "seed": 128,
           "wall": "#5a4a3a"
          },
          {
@@ -3723,7 +3746,7 @@
           "papers": 1,
           "w": 700,
           "depth": 0.6,
-          "seed": 106
+          "seed": 129
          },
          {
           "type": "actors",
@@ -3765,7 +3788,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 107,
+        "seed": 130,
         "wall": "#6a5a48"
        },
        {
@@ -3775,7 +3798,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 108
+        "seed": 131
        },
        {
         "type": "actors",
@@ -3834,7 +3857,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 109,
+        "seed": 132,
         "wall": "#6a5a48"
        },
        {
@@ -3844,7 +3867,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 110
+        "seed": 133
        }
       ]
      }
@@ -3864,13 +3887,13 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 111,
+        "seed": 134,
         "water": false,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.81,
+        "y": 0.78,
         "h": 80
        },
        {
@@ -3912,7 +3935,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 113,
+        "seed": 136,
         "wall": "#6a6a62"
        },
        {
@@ -3922,7 +3945,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 114
+        "seed": 137
        },
        {
         "type": "actors",
@@ -3978,13 +4001,13 @@
          {
           "type": "craters",
           "n": 6,
-          "seed": 115,
+          "seed": 138,
           "water": false,
           "y": 0.72
          },
          {
           "type": "wire",
-          "y": 0.8400000000000001,
+          "y": 0.81,
           "h": 80
          }
         ],
@@ -4009,9 +4032,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
-        "top": 0.39,
+        "w": 0.6,
+        "top": 0.36,
         "wet": false,
+        "seed": 142,
         "col": "#3a2c20"
        },
        {
@@ -4080,6 +4104,7 @@
         "w": 0.75,
         "top": 0.36,
         "wet": false,
+        "seed": 145,
         "col": "#4a3a28"
        },
        {
@@ -4126,9 +4151,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
-        "top": 0.42,
+        "w": 0.7,
+        "top": 0.36,
         "wet": false,
+        "seed": 148,
         "col": "#4a3a2a"
        }
       ],
@@ -4152,13 +4178,13 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 123,
+        "seed": 149,
         "water": false,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.81,
+        "y": 0.78,
         "h": 80
        }
       ],
@@ -4197,7 +4223,7 @@
           {
            "type": "craters",
            "n": 8,
-           "seed": 125,
+           "seed": 151,
            "water": false,
            "y": 0.72
           },
@@ -4244,9 +4270,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.7,
-        "top": 0.39,
+        "w": 0.6,
+        "top": 0.36,
         "wet": false,
+        "seed": 154,
         "col": "#4a3a28"
        },
        {
@@ -4349,9 +4376,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
+        "w": 0.75,
         "top": 0.36,
-        "wet": false
+        "wet": false,
+        "seed": 157
        },
        {
         "type": "actors",
@@ -4491,8 +4519,9 @@
           "type": "trench",
           "y": 0.93,
           "w": 0.7,
-          "top": 0.42,
+          "top": 0.36,
           "wet": false,
+          "seed": 160,
           "col": "#5a4630"
          },
          {
@@ -4541,9 +4570,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
-        "top": 0.39,
+        "w": 0.65,
+        "top": 0.36,
         "wet": false,
+        "seed": 163,
         "col": "#4a3a2a"
        }
       ],
@@ -4614,7 +4644,7 @@
          "window": 0.45,
          "night": false,
          "depth": 0.3,
-         "seed": 134,
+         "seed": 164,
          "wall": "#5a6a7a"
         },
         {
@@ -4624,7 +4654,7 @@
          "papers": 1,
          "w": 700,
          "depth": 0.6,
-         "seed": 135
+         "seed": 165
         },
         {
          "type": "actors",
@@ -4702,7 +4732,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 136,
+        "seed": 166,
         "wall": "#3a3a3a"
        },
        {
@@ -4712,7 +4742,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 137
+        "seed": 167
        },
        {
         "type": "actors",
@@ -4847,7 +4877,7 @@
        {
         "type": "craters",
         "n": 10,
-        "seed": 138,
+        "seed": 168,
         "water": false,
         "y": 0.72
        }
@@ -4993,9 +5023,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.75,
+        "w": 0.65,
         "top": 0.42,
         "wet": false,
+        "seed": 171,
         "col": "#3a2c20"
        },
        {
@@ -5138,7 +5169,7 @@
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 141,
+          "seed": 172,
           "depth": 0.15
          },
          {
@@ -5169,7 +5200,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 142,
+        "seed": 173,
         "wall": "#5a5a52"
        },
        {
@@ -5179,7 +5210,7 @@
         "papers": 0,
         "w": 700,
         "depth": 0.6,
-        "seed": 143
+        "seed": 174
        },
        {
         "type": "actors",
@@ -5237,7 +5268,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 144,
+        "seed": 175,
         "wall": "#5a5a52"
        },
        {
@@ -5247,7 +5278,7 @@
         "papers": 0,
         "w": 700,
         "depth": 0.6,
-        "seed": 145
+        "seed": 176
        }
       ]
      }
@@ -5284,9 +5315,10 @@
           {
            "type": "trench",
            "y": 0.93,
-           "w": 0.7,
-           "top": 0.36,
-           "wet": false
+           "w": 0.65,
+           "top": 0.39,
+           "wet": false,
+           "seed": 179
           },
           {
            "type": "actors",
@@ -5344,13 +5376,13 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 148,
+        "seed": 180,
         "water": false,
         "y": 0.72
        },
        {
         "type": "wire",
-        "y": 0.8400000000000001,
+        "y": 0.81,
         "h": 80
        },
        {
@@ -5403,8 +5435,9 @@
           "type": "trench",
           "y": 0.93,
           "w": 0.7,
-          "top": 0.39,
+          "top": 0.36,
           "wet": false,
+          "seed": 184,
           "col": "#4a3a28"
          },
          {
@@ -5500,7 +5533,7 @@
        {
         "type": "craters",
         "n": 8,
-        "seed": 152,
+        "seed": 185,
         "water": false,
         "y": 0.72
        },
@@ -5590,7 +5623,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 154,
+        "seed": 187,
         "wall": "#d8d0c0"
        },
        {
@@ -5600,7 +5633,7 @@
         "papers": 0,
         "w": 700,
         "depth": 0.6,
-        "seed": 155
+        "seed": 188
        },
        {
         "type": "actors",
@@ -5656,7 +5689,7 @@
           "window": 0.45,
           "night": false,
           "depth": 0.3,
-          "seed": 156,
+          "seed": 189,
           "wall": "#e0d8c8"
          },
          {
@@ -5666,7 +5699,7 @@
           "papers": 1,
           "w": 700,
           "depth": 0.6,
-          "seed": 157
+          "seed": 190
          },
          {
           "type": "actors",
@@ -5722,7 +5755,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 158,
+        "seed": 191,
         "wall": "#e0d8c8"
        },
        {
@@ -5732,7 +5765,7 @@
         "papers": 0,
         "w": 700,
         "depth": 0.6,
-        "seed": 159
+        "seed": 192
        }
       ]
      }
@@ -5746,9 +5779,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.6,
+        "w": 0.65,
         "top": 0.42,
         "wet": false,
+        "seed": 195,
         "col": "#5a4630"
        },
        {
@@ -5816,9 +5850,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.7,
-        "top": 0.39,
+        "w": 0.6,
+        "top": 0.42,
         "wet": false,
+        "seed": 198,
         "col": "#5a4630"
        }
       ]
@@ -5877,7 +5912,7 @@
          "window": 0.45,
          "night": false,
          "depth": 0.3,
-         "seed": 164,
+         "seed": 199,
          "wall": "#6a5a48"
         },
         {
@@ -5887,7 +5922,7 @@
          "papers": 1,
          "w": 700,
          "depth": 0.6,
-         "seed": 165
+         "seed": 200
         },
         {
          "type": "actors",
@@ -6004,7 +6039,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 166,
+        "seed": 201,
         "depth": 0.15
        },
        {
@@ -6082,7 +6117,7 @@
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 167,
+          "seed": 202,
           "depth": 0.15
          },
          {
@@ -6130,7 +6165,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 168,
+        "seed": 203,
         "wall": "#4a4a40"
        },
        {
@@ -6140,7 +6175,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 169
+        "seed": 204
        }
       ]
      }
@@ -6182,7 +6217,7 @@
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 170,
+          "seed": 205,
           "depth": 0.15
          },
          {
@@ -6241,7 +6276,7 @@
           "type": "hills",
           "y": 0.58,
           "n": 2,
-          "seed": 171,
+          "seed": 206,
           "depth": 0.15
          },
          {
@@ -6275,7 +6310,7 @@
         "window": 0.45,
         "night": true,
         "depth": 0.3,
-        "seed": 172,
+        "seed": 207,
         "wall": "#4a4038"
        },
        {
@@ -6285,7 +6320,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 173
+        "seed": 208
        },
        {
         "type": "actors",
@@ -6333,7 +6368,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 174,
+        "seed": 209,
         "wall": "#6a6a60"
        },
        {
@@ -6343,7 +6378,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 175
+        "seed": 210
        },
        {
         "type": "actors",
@@ -6394,7 +6429,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 176,
+        "seed": 211,
         "wall": "#6a6a60"
        },
        {
@@ -6404,7 +6439,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 177
+        "seed": 212
        }
       ]
      }
@@ -6425,7 +6460,7 @@
         "type": "hills",
         "y": 0.58,
         "n": 2,
-        "seed": 178,
+        "seed": 213,
         "depth": 0.15
        },
        {
@@ -6454,9 +6489,10 @@
          {
           "type": "trench",
           "y": 0.93,
-          "w": 0.75,
-          "top": 0.36,
+          "w": 0.7,
+          "top": 0.42,
           "wet": false,
+          "seed": 216,
           "col": "#4a3a28"
          },
          {
@@ -6598,7 +6634,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 181,
+        "seed": 217,
         "wall": "#3a2a1a"
        },
        {
@@ -6608,7 +6644,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 182
+        "seed": 218
        },
        {
         "type": "actors",
@@ -6675,7 +6711,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 183,
+        "seed": 219,
         "wall": "#3a2a1a"
        },
        {
@@ -6685,7 +6721,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 184
+        "seed": 220
        }
       ]
      }
@@ -7000,10 +7036,12 @@
       "time": "day",
       "parts": [
        {
-        "type": "land",
-        "kind": "mud",
-        "y": 0.72,
-        "depth": 0.6
+        "type": "trench",
+        "y": 0.93,
+        "w": 0.65,
+        "top": 0.36,
+        "wet": true,
+        "seed": 223
        }
       ],
       "weather": "rain"
@@ -7081,6 +7119,13 @@
           "depth": 0.6
          },
          {
+          "type": "craters",
+          "n": 6,
+          "seed": 224,
+          "water": true,
+          "y": 0.74
+         },
+         {
           "type": "actors",
           "list": [
            {
@@ -7117,6 +7162,17 @@
         "kind": "mud",
         "y": 0.72,
         "depth": 0.6
+       },
+       {
+        "type": "wire",
+        "y": 0.8,
+        "h": 80
+       },
+       {
+        "type": "craters",
+        "n": 4,
+        "seed": 225,
+        "y": 0.76
        },
        {
         "type": "actors",
@@ -7370,9 +7426,10 @@
        {
         "type": "trench",
         "y": 0.93,
-        "w": 0.65,
-        "top": 0.36,
+        "w": 0.7,
+        "top": 0.42,
         "wet": false,
+        "seed": 228,
         "col": "#4a3a28"
        },
        {
@@ -7407,7 +7464,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 187,
+        "seed": 229,
         "water": false,
         "y": 0.72
        },
@@ -7501,7 +7558,7 @@
      ]
     },
     {
-     "say": "One German soldier from that time could not stop thinking about it. Richard Schirrmann saw French and German troops make their own peace in the Vosges mountains, at Christmas 1915. He wondered if young people of all countries could be given places to meet, and get to know each other.",
+     "say": "One German soldier from that time could not stop thinking about it. Richard Schirrmann saw French and German troops make their own peace in the Vosges mountains, at Christmas 1915.",
      "scene": {
       "shot": "set",
       "time": "day",
@@ -7556,6 +7613,38 @@
        }
       }
      ]
+    },
+    {
+     "say": "He wondered if young people of all countries could be given places to meet, and get to know each other.",
+     "scene": {
+      "shot": "set",
+      "time": "night",
+      "parts": [
+       {
+        "type": "room",
+        "flag": null,
+        "window": 0.45,
+        "night": true,
+        "depth": 0.3,
+        "seed": 73,
+        "wall": "#5d5648"
+       },
+       {
+        "type": "actors",
+        "list": [
+         {
+          "preset": "civilian",
+          "x": 0.45,
+          "pose": "hold",
+          "facing": 1,
+          "h": 0.62,
+          "y": 0.95
+         }
+        ],
+        "depth": 0.88
+       }
+      ]
+     }
     },
     {
      "say": "In 1919, he founded the German Youth Hostel Association. Cheap beds, under one roof, for strangers from anywhere. A soldier's idea from a Christmas in the trenches.",
@@ -7618,7 +7707,7 @@
        {
         "type": "craters",
         "n": 6,
-        "seed": 188,
+        "seed": 230,
         "water": false,
         "y": 0.72
        },
@@ -7658,7 +7747,7 @@
        {
         "type": "craters",
         "n": 4,
-        "seed": 190,
+        "seed": 232,
         "water": false,
         "y": 0.72
        }

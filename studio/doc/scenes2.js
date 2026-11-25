@@ -462,7 +462,26 @@
       c.fillStyle = shade2(mud, .12); c.fillRect(cx - w / 2 + 30, y - 120, 120, 120); c.fillStyle = 'rgba(0,0,0,.25)'; c.fillRect(cx - w / 2 + 30, y - 120, 120, 8);
       for (let x = cx - w / 2 + 70; x < cx + w / 2 - 70; x += 46) { c.fillStyle = '#5a4630'; c.fillRect(x, y - 10, 38, 12) }
       c.strokeStyle = 'rgba(30,20,10,.6)'; c.lineWidth = 3; for (let x = cx - w / 2 + 10; x < cx + w / 2; x += 90) { c.beginPath(); c.moveTo(x, top + 40); c.lineTo(x + 14, y - 20); c.stroke() }
-      if (p.wet) { c.fillStyle = 'rgba(120,130,130,.35)'; c.fillRect(cx - w / 2 + 60, y - 4, w - 120, 18) } },
+      if (p.wet) { c.fillStyle = 'rgba(120,130,130,.35)'; c.fillRect(cx - w / 2 + 60, y - 4, w - 120, 18) }
+      if (p.seed != null) {   // seeded set dressing (25 Nov 2026): each trench shot its own picture, not the same backdrop again
+        let s = p.seed * 9301 + 49297; const r = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+        const L = cx - w / 2 + 40, R = cx + w / 2 - 40, side = r() < .5 ? -1 : 1, wx = side < 0 ? L + 20 : R - 20;
+        if (r() < .6) {   // dugout doorway with timber frame, in one wall
+          const dx = side < 0 ? L + 10 : R - 110, dh = 150 + r() * 40; c.fillStyle = '#120c07'; c.fillRect(dx, y - dh, 100, dh);
+          c.fillStyle = '#6a5236'; c.fillRect(dx - 10, y - dh - 12, 120, 14); c.fillRect(dx - 10, y - dh, 12, dh); c.fillRect(dx + 98, y - dh, 12, dh);
+          if (r() < .5) { c.fillStyle = 'rgba(80,70,50,.85)'; c.fillRect(dx + 6, y - dh + 4, 44, dh - 8) } }
+        const nl = Math.floor(r() * 3); for (let i = 0; i < nl; i++) {   // scaling ladders against the parapet
+          const lx = L + 140 + r() * (R - L - 280); c.strokeStyle = '#7a5e3c'; c.lineWidth = 7; c.beginPath(); c.moveTo(lx, y); c.lineTo(lx + 24, top - 10); c.moveTo(lx + 44, y); c.lineTo(lx + 68, top - 10); c.stroke();
+          c.lineWidth = 5; for (let k = 1; k < 8; k++) { const f = k / 8; c.beginPath(); c.moveTo(lx + 24 * f, y + (top - 10 - y) * f); c.lineTo(lx + 44 + 24 * f, y + (top - 10 - y) * f); c.stroke() } }
+        if (r() < .5) { const px = L + 60 + r() * (R - L - 120); c.fillStyle = '#3a3a34'; c.fillRect(px, top - 70, 10, 90); c.fillRect(px, top - 70, 24, 12) }   // trench periscope
+        if (r() < .55) { const sx = side < 0 ? R - 150 : L + 30; c.fillStyle = '#8a7350'; c.fillRect(sx, top + 50, 120, 44); c.fillStyle = '#2a2016'; c.font = 'bold 18px serif'; c.textAlign = 'center';   // a painted trench-name board
+          c.fillText(['HELL FIRE CORNER', 'PICCADILLY', 'DEVIL\'S ALLEY', 'REGENT ST', 'STRAND', 'KAISER WEG'][Math.floor(r() * 6)], sx + 60, top + 78, 110); c.fillRect(sx + 56, top + 94, 8, 40) }
+        if (r() < .6) { const lx = wx, ly = top + 70 + r() * 40; c.strokeStyle = '#2a2016'; c.lineWidth = 2; c.beginPath(); c.moveTo(lx, ly - 30); c.lineTo(lx, ly); c.stroke();   // a hanging lantern
+          c.fillStyle = 'rgba(255,190,90,.9)'; c.fillRect(lx - 8, ly, 16, 22); const g = c.createRadialGradient(lx, ly + 10, 2, lx, ly + 10, 120); g.addColorStop(0, 'rgba(255,180,80,.28)'); g.addColorStop(1, 'rgba(255,180,80,0)'); c.fillStyle = g; c.fillRect(lx - 120, ly - 110, 240, 240) }
+        const nr = Math.floor(r() * 4); for (let i = 0; i < nr; i++) { const rx = (side < 0 ? R - 60 : L + 60) + (side < 0 ? -1 : 1) * i * 22; c.strokeStyle = '#2b2218'; c.lineWidth = 5; c.beginPath(); c.moveTo(rx, y - 4); c.lineTo(rx + 18 * -side, y - 120); c.stroke() }   // rifles leaning on the wall
+        if (r() < .4) { const bx = cx + (r() - .5) * w * .4; c.fillStyle = '#2a2420'; c.fillRect(bx - 18, y - 40, 36, 34); c.fillStyle = 'rgba(255,120,40,.85)'; c.beginPath(); c.arc(bx, y - 42, 12, 0, Math.PI * 2); c.fill() }   // a brazier
+        if (r() < .5) { c.fillStyle = 'rgba(0,0,0,.18)'; for (let i = 0; i < 5; i++) c.fillRect(L + r() * (R - L), top + 40 + r() * (y - top - 80), 40 + r() * 60, 4) }   // shoring planks
+      } },
     wire: (c, W, H, u, p) => {   // barbed wire on posts across no man's land (p.y, p.h, p.x0, p.x1)
       const y = H * (p.y || .8), h = p.h || 90, x0 = W * (p.x0 || -.05), x1 = W * (p.x1 || 1.05); c.strokeStyle = p.col || '#2a2622'; c.lineWidth = 5;
       for (let x = x0; x < x1; x += 160) { c.beginPath(); c.moveTo(x, y + 6); c.lineTo(x + 8, y - h); c.stroke() }

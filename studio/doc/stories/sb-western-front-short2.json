@@ -282,7 +282,7 @@
         "window": 0.45,
         "night": false,
         "depth": 0.3,
-        "seed": 191,
+        "seed": 233,
         "wall": "#5a6a7a"
        },
        {
@@ -292,7 +292,7 @@
         "papers": 1,
         "w": 700,
         "depth": 0.6,
-        "seed": 192
+        "seed": 234
        },
        {
         "type": "actors",
