@@ -8021,11 +8021,14 @@
    ]
   },
   "layout": "spotlight",
+  "hidden": {
+   "portrait": "smoke/portraits/trebuchon.png"
+  },
   "hook": [
-   "5 DAYS",
+   "10:45",
    "TOO LATE"
   ],
-  "hi": "5 DAYS"
+  "hi": "10:45"
  },
  "abTest": [
   {
@@ -8036,22 +8039,31 @@
    "title": "The 1,560 Days That Made the Western Front",
    "thumb": {
     "layout": "circled",
+    "anchor": {
+     "portrait": "smoke/portraits/hitler.png"
+    },
+    "hidden": {
+     "portrait": "smoke/portraits/trebuchon.png"
+    },
     "hook": [
-     "HE WOULDN'T SHOOT"
+     "15 MINUTES TOO LATE"
     ],
-    "hi": "SHOOT"
+    "hi": "15 MINUTES"
    }
   },
   {
    "title": "How the Western Front Happened — Minute by Minute",
    "thumb": {
     "layout": "dossier",
+    "hidden": {
+     "portrait": "smoke/portraits/trebuchon.png"
+    },
     "hook": [
-     "CHRISTMAS",
-     "1914"
+     "THE LAST",
+     "TO FALL"
     ],
-    "hi": "1914",
-    "caption": "Captain Robert Miles, 1914",
+    "hi": "LAST",
+    "caption": "Augustin Trébuchon, 1918",
     "stamp": "UNTOLD STORY"
    }
   }

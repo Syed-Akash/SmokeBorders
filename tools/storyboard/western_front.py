@@ -484,10 +484,10 @@ story = {
   "Wikipedia, Compiegne Wagon (Hitler had it moved back for the 1940 armistice): https://en.wikipedia.org/wiki/Compi%C3%A8gne_Wagon",
   "Wikipedia, Battle of Passchendaele (wet ground, autumn rain): https://en.wikipedia.org/wiki/Battle_of_Passchendaele"],
  "thumb": {"scene": "relief", "dread": 1, "graves": 1, "seed": 91, "topic": "FLANDERS · 1914", "map": {"era": "1914", "center": [3.5, 50.2], "scale": 4200, "cx": 0.5, "cy": 0.5, "hl": [{"names": ["Germany"], "color": "#e8141c"}, {"names": ["France", "Belgium"], "color": "#f4f4f4"}]},
-           "layout": "spotlight", "hook": ["5 DAYS", "TOO LATE"], "hi": "5 DAYS"},
+           "layout": "spotlight", "hidden": {"portrait": "smoke/portraits/trebuchon.png"}, "hook": ["10:45", "TOO LATE"], "hi": "10:45"},
  "abTest": [{"title": "How the Western Front Happened — Minute by Minute", "thumb": {}},
-            {"title": "The 1,560 Days That Made the Western Front", "thumb": {"layout": "circled", "hook": ["HE WOULDN'T SHOOT"], "hi": "SHOOT"}},
-            {"title": "How the Western Front Happened — Minute by Minute", "thumb": {"layout": "dossier", "hook": ["CHRISTMAS", "1914"], "hi": "1914", "caption": "Captain Robert Miles, 1914", "stamp": "UNTOLD STORY"}}],
+            {"title": "The 1,560 Days That Made the Western Front", "thumb": {"layout": "circled", "anchor": {"portrait": "smoke/portraits/hitler.png"}, "hidden": {"portrait": "smoke/portraits/trebuchon.png"}, "hook": ["15 MINUTES TOO LATE"], "hi": "15 MINUTES"}},
+            {"title": "How the Western Front Happened — Minute by Minute", "thumb": {"layout": "dossier", "hidden": {"portrait": "smoke/portraits/trebuchon.png"}, "hook": ["THE LAST", "TO FALL"], "hi": "LAST", "caption": "Augustin Tr\u00e9buchon, 1918", "stamp": "UNTOLD STORY"}}],
  "shortsNote": "Shorts are separate 'Do you know' stories: sb-western-front-short1 (Trebuchon's soup message) and -short2 (Franz Marc on the artists list), to be written in the next run.",
 }
 story["localizations"] = {
