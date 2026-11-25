@@ -113,6 +113,9 @@ take two runs.
   hidden person Capt. Robert Miles; tools/storyboard/western_front.py builds it and its two Shorts); still needs its photos (Wikimedia 429
   all day), then `scripted`. New WW1 presets (tommy, german_1914, german_ww1, poilu, doughboy, nurse_ww1) and trench/wire/craters parts.
   Only Wikimedia hosts are reachable from the run sandbox; research comes from Wikipedia pages.
+- **25 Nov 2026 run:** Western Front got its 14 photos, passes the FILM CHECK (trench part now takes a `seed` for set dressing so
+  trench shots don't repeat), rendered at 26.9 min (Turbo) with both "Do you know" Shorts; thumbnails use Trébuchon (no photo of Miles
+  exists on Commons) and Hitler. Kit sent for 30 Nov / 1 / 2 Dec. Korea REDO render not started (one render per run fits).
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 
