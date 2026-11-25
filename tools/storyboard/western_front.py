@@ -459,10 +459,10 @@ story = {
  "voices": {"GER1": "am_fenrir", "GER2": "am_adam", "GER3": "am_puck", "TOM1": "bm_lewis", "TOM2": "bm_daniel", "TOM3": "bm_lewis", "TOM4": "bm_daniel", "MILES": "bm_fable",
             "GOFF": "am_fenrir", "GAIDE": "am_puck", "POI": "am_michael", "POI2": "am_adam", "MARC": "am_adam", "NURSE": "af_sarah", "CENSOR": "am_michael", "CENSOR2": "am_puck", "ERZ": "am_fenrir", "GINT": "am_adam", "CLERK1": "bm_lewis", "CLERK2": "bm_daniel", "FOCH": "bm_daniel"},
  "photos": {"truce": ["Christmas truce 1914 Northumberland Hussars no man's land", False], "hitler": ["Hitler with comrades of the List Regiment 1914", False],
-            "liege": ["Fort de Loncin Liège 1914 ruins", True], "marne": ["French soldiers Battle of the Marne 1914", False], "trench": ["Cheshire Regiment trench Somme 1916", False],
-            "gassed": ["Gassed John Singer Sargent", True], "douaumont": ["Fort Douaumont 1916", True], "marc": ["Franz Marc photograph 1910", False],
+            "liege": ["File:Ruins of Fort Loucin in the Fortress of Liege 1914.jpg", True], "marne": ["French soldiers Battle of the Marne 1914", False], "trench": ["Cheshire Regiment trench Somme 1916", False],
+            "gassed": ["Gassed John Singer Sargent", True], "douaumont": ["Fort Douaumont 1916", True], "marc": ["File:Franz Marc 1913.jpg", False],
             "bluehorse": ["Franz Marc Blue Horse I 1911", True], "somme": ["Royal Irish Rifles first day Somme 1916 trench", False],
-            "gunther": ["Henry Gunther soldier", False], "passchendaele": ["Chateau Wood Ypres 1917 Hurley", True], "carriage": ["Armistice railway carriage Compiègne 1918", False],
+            "gunther": ["Henry Gunther soldier", False], "passchendaele": ["Chateau Wood Ypres 1917 Hurley", True], "carriage": ["File:Portrait collectif devant le wagon de l'Armistice Photographie dédicacée par le Maréchal Foch, le général Weygand et L, PH73633.jpg", False],
             "trebuchon": ["Augustin Trébuchon", False]},
  "sources": [
   "Wikipedia, Christmas truce (Miles, Niemann, Congreve, Williamson, Zehmisch, Morillon, Berthier, de Gaulle, Smith-Dorrien, Hitler, 100,000 troops, 29 Dec order, press, 1915): https://en.wikipedia.org/wiki/Christmas_truce",

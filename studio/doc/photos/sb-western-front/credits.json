@@ -48,12 +48,12 @@
   "credit": "hochgeladen von AxelHH"
  },
  "marc": {
-  "title": "File:Franz-marc-weidende-pferde-iii-1910.jpg",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Franz-marc-weidende-pferde-iii-1910.jpg/1280px-Franz-marc-weidende-pferde-iii-1910.jpg",
-  "page": "https://commons.wikimedia.org/wiki/File:Franz-marc-weidende-pferde-iii-1910.jpg",
+  "title": "File:Franz Marc 1913.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Franz_Marc_1913.jpg/1280px-Franz_Marc_1913.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Franz_Marc_1913.jpg",
   "license": "Public domain",
-  "artist": "Franz Marc",
-  "credit": "https://moebel.ladendirekt.de/produkte/artland-wandbild-weidende-pferde-iii-1910-8cc21c7e"
+  "artist": "Unknown authorUnknown author",
+  "credit": "https://artsandculture.google.com/asset/portrait-franz-marc-unknown/kwHpSFjZxAELwA"
  },
  "bluehorse": {
   "title": "File:Marc, Franz - Blue Horse I - Google Art Project.jpg",
@@ -94,5 +94,21 @@
   "license": "Public domain",
   "artist": "Unknown authorUnknown author",
   "credit": "Collection Vrigne-Meuse"
+ },
+ "liege": {
+  "title": "File:Ruins of Fort Loucin in the Fortress of Liege 1914.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Ruins_of_Fort_Loucin_in_the_Fortress_of_Liege_1914.jpg/500px-Ruins_of_Fort_Loucin_in_the_Fortress_of_Liege_1914.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Ruins_of_Fort_Loucin_in_the_Fortress_of_Liege_1914.jpg",
+  "license": "Public domain",
+  "artist": "Imperial German Photographer",
+  "credit": "This photograph Q 45995 comes from the collections of the Imperial War Museums."
+ },
+ "carriage": {
+  "title": "File:Portrait collectif devant le wagon de l'Armistice Photographie dédicacée par le Maréchal Foch, le général Weygand et L, PH73633.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_collectif_devant_le_wagon_de_l%27Armistice_Photographie_d%C3%A9dicac%C3%A9e_par_le_Mar%C3%A9chal_Foch%2C_le_g%C3%A9n%C3%A9ral_Weygand_et_L%2C_PH73633.jpg/1280px-Portrait_collectif_devant_le_wagon_de_l%27Armistice_Photographie_d%C3%A9dicac%C3%A9e_par_le_Mar%C3%A9chal_Foch%2C_le_g%C3%A9n%C3%A9ral_Weygand_et_L%2C_PH73633.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Portrait_collectif_devant_le_wagon_de_l%27Armistice_Photographie_d%C3%A9dicac%C3%A9e_par_le_Mar%C3%A9chal_Foch,_le_g%C3%A9n%C3%A9ral_Weygand_et_L,_PH73633.jpg",
+  "license": "CC0",
+  "artist": "Anonyme, photographe",
+  "credit": "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/portrait-collectif-devant-le-wagon-de-l-armistice-photographie-dedicacee#infos-principales"
  }
 }
