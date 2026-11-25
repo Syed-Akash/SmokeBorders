@@ -98,7 +98,7 @@
    "id": "sb-western-front",
    "title": "Your Life on Both Sides of the Western Front",
    "publish": "2026-11-30T16:00:00Z",
-   "status": "idea",
+   "status": "scripted",
    "audience": "UK AU CA DE",
    "shorts": [
     {
@@ -109,7 +109,7 @@
     }
    ],
    "angle": "Find one: a soldier or nurse on each side whose letters survive.",
-   "note": "24 Nov 2026: script and storyboard drafted (3,630 words, ~25 min, 150 beats, 26 exchanges; tools/storyboard/western_front.py builds it). Hidden person: Capt. Robert Miles (truce letter, killed 30 Dec 1914). Still to do: photos, the two 'Do you know' Shorts (Trebuchon's soup note; Franz Marc on the artists list), localizations, pacing + storysheet check, then set scripted."
+   "note": "25 Nov 2026: photos in (14, Commons), FILM CHECK passes (30.4 min, 301 shots, no repeats), storysheets checked; scripted, render started 25 Nov. Shorts are stories sb-western-front-short1/2. 24 Nov 2026: script and storyboard drafted (3,630 words, ~25 min, 150 beats, 26 exchanges; tools/storyboard/western_front.py builds it). Hidden person: Capt. Robert Miles (truce letter, killed 30 Dec 1914). Still to do: photos, the two 'Do you know' Shorts (Trebuchon's soup note; Franz Marc on the artists list), localizations, pacing + storysheet check, then set scripted."
   },
   {
    "id": "sb-korea-38th",
