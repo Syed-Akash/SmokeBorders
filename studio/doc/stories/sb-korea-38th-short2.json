@@ -1,0 +1,733 @@
+{
+ "brand": "smoke",
+ "narrator": "bm_george",
+ "era": "1945",
+ "musicEra": "1940s",
+ "places": {
+  "Seoul": [
+   126.98,
+   37.57
+  ],
+  "Pyongyang": [
+   125.75,
+   39.02
+  ],
+  "Incheon": [
+   126.7,
+   37.46
+  ],
+  "Wonsan": [
+   127.45,
+   39.15
+  ],
+  "Busan": [
+   129.08,
+   35.18
+  ],
+  "Jeju": [
+   126.53,
+   33.5
+  ],
+  "Panmunjom": [
+   126.68,
+   37.96
+  ],
+  "Tokyo": [
+   139.7,
+   35.7
+  ],
+  "Moscow": [
+   37.6,
+   55.75
+  ],
+  "Washington": [
+   -77.04,
+   38.9
+  ],
+  "Hiroshima": [
+   132.45,
+   34.39
+  ],
+  "Yalu": [
+   126.0,
+   40.0
+  ],
+  "Cairo": [
+   31.24,
+   30.04
+  ],
+  "Vladivostok": [
+   131.9,
+   43.1
+  ],
+  "Manchuria": [
+   125.0,
+   44.0
+  ],
+  "38th parallel": [
+   127.0,
+   38.0
+  ]
+ },
+ "voices": {
+  "US": "am_michael",
+  "SU": "bm_daniel",
+  "RHEE": "bm_fable",
+  "KIM": "bm_lewis",
+  "KOR": "bm_fable",
+  "RUSK": "am_michael",
+  "AIDE": "am_adam",
+  "AIDE2": "am_puck",
+  "WASH1": "am_michael",
+  "WASH2": "am_fenrir",
+  "FARMER": "bm_daniel",
+  "WIFE": "bf_emma",
+  "PROT": "bm_lewis",
+  "PROT2": "bm_daniel",
+  "TEACH": "bm_fable",
+  "STUD": "bm_lewis",
+  "STUD2": "bm_daniel",
+  "SEOUL": "bm_lewis",
+  "SOVCLERK": "bm_fable",
+  "SOVOFF": "bm_daniel",
+  "SOVSOLD": "bm_lewis",
+  "SHOP": "bm_fable",
+  "VIL1": "bm_daniel",
+  "VIL2": "bm_lewis",
+  "CROWD1": "bm_lewis",
+  "CROWD2": "bf_emma",
+  "ABE": "bm_daniel",
+  "SONG": "bm_fable",
+  "JPRES": "bm_lewis",
+  "JPRES2": "bf_emma",
+  "GI1": "am_puck",
+  "GI2": "am_adam",
+  "SGT": "am_fenrir",
+  "WOMAN": "bf_emma",
+  "SELLER": "bm_daniel",
+  "NKOFF": "bm_lewis",
+  "USOFF1": "am_michael",
+  "USOFF2": "am_fenrir",
+  "CHO": "bm_fable",
+  "GUARD": "bm_daniel",
+  "TRAV": "bm_lewis",
+  "SOVDEL": "bm_daniel",
+  "USDEL": "am_michael",
+  "WORKER": "bm_lewis",
+  "WORKER2": "bm_daniel",
+  "SOUTH": "bm_lewis",
+  "NORTH": "bm_daniel",
+  "ROK1": "bm_lewis",
+  "ROK2": "bm_daniel",
+  "NEG1": "am_michael",
+  "NEG2": "bm_daniel",
+  "OLD": "bm_fable",
+  "GRAND": "bm_lewis",
+  "BONE": "am_puck",
+  "BONE66": "am_puck"
+ },
+ "photos": {
+  "surrender45": [
+   "File:Hodge Surrender Japanese Forces.jpg",
+   true
+  ],
+  "incheon45": [
+   "File:SC 270789 - Troops of the 17th Inf., 7th Div., marching toward Jensin after landing. First troops in Korea. 8 September, 1945. (52292755496).jpg",
+   true
+  ],
+  "soviets45": [
+   "File:Soviet liberators marching through the Korean county road. October 1945.jpg",
+   true
+  ],
+  "rusk": [
+   "File:Dean Rusk 1968.jpg",
+   false
+  ],
+  "kim": [
+   "File:Kim Il-sung 1946.JPG",
+   false
+  ],
+  "hodge": [
+   "File:Hodge Surrender Japanese Forces 2.jpg",
+   false
+  ],
+  "cairo": [
+   "File:Franklin D. Roosevelt, Chiang Kai-shek, and Winston Churchill at the Cairo Conference, 1943.jpg",
+   true
+  ],
+  "march1": [
+   "File:Longjing Manse Movement.jpg",
+   true
+  ],
+  "sign38": [
+   "File:Korean War Begins (6365935).jpg",
+   true
+  ],
+  "incheon50": [
+   "File:80-G-420027 Inchon Invasion, September 1950.jpg",
+   true
+  ],
+  "refugees": [
+   "File:Refugees in Korea.jpg",
+   true
+  ],
+  "armistice": [
+   "File:Korean War armistice agreement 1953.jpg",
+   true
+  ],
+  "dmz": [
+   "File:DMZ south boundary fence, August 1968.png",
+   true
+  ],
+  "cho": [
+   "File:1945년 8월 조만식.jpg",
+   false
+  ],
+  "lyuh": [
+   "File:Lyuh Woon-hyung (여운형).jpg",
+   false
+  ],
+  "bonesteel": [
+   "smoke/portraits/bonesteel.png",
+   false
+  ],
+  "rhee": [
+   "smoke/portraits/rhee.png",
+   false
+  ]
+ },
+ "talkNote": "Dialogue scenes are dramatized; every fact comes from the sources below.",
+ "cast": {
+  "RUSK": {
+   "preset": "us_officer",
+   "name": "Col. Dean Rusk",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "AIDE": {
+   "preset": "us_officer",
+   "name": "A Pentagon officer",
+   "spec": {
+    "hat": "none",
+    "hair": "#2a1d12"
+   }
+  },
+  "AIDE2": {
+   "preset": "us_officer",
+   "name": "Another officer",
+   "spec": {
+    "hat": "none",
+    "hair": "#8a6a3a",
+    "glasses": 1
+   }
+  },
+  "WASH1": {
+   "preset": "clerk",
+   "name": "A Washington official"
+  },
+  "WASH2": {
+   "preset": "civilian",
+   "name": "Another official"
+  },
+  "FARMER": {
+   "preset": "korean",
+   "name": "A Korean farmer",
+   "spec": {
+    "coat": "#d8d1c0",
+    "coat2": "#8a7a5a"
+   }
+  },
+  "WIFE": {
+   "preset": "woman",
+   "name": "His wife",
+   "spec": {
+    "coat": "#e8e2d4",
+    "coat2": "#b3202a",
+    "hair": "#1c1a1a",
+    "skin": "#efc49c"
+   }
+  },
+  "PROT": {
+   "preset": "korean",
+   "name": "A protester"
+  },
+  "PROT2": {
+   "preset": "korean",
+   "name": "Another protester",
+   "spec": {
+    "coat2": "#34465a"
+   }
+  },
+  "TEACH": {
+   "preset": "korean",
+   "name": "A teacher",
+   "spec": {
+    "coat": "#2b2b33",
+    "glasses": 1
+   }
+  },
+  "STUD": {
+   "preset": "korean",
+   "name": "A student",
+   "spec": {
+    "coat": "#1f2a3a"
+   }
+  },
+  "STUD2": {
+   "preset": "korean",
+   "name": "Another student",
+   "spec": {
+    "coat": "#3a3226"
+   }
+  },
+  "SEOUL": {
+   "preset": "korean",
+   "name": "A man in Seoul",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "SOVCLERK": {
+   "preset": "clerk",
+   "name": "A Soviet clerk",
+   "spec": {
+    "coat": "#4a5a3a"
+   }
+  },
+  "SOVOFF": {
+   "preset": "soviet_officer",
+   "name": "A Soviet officer"
+  },
+  "SOVSOLD": {
+   "preset": "soviet_officer",
+   "name": "A Red Army soldier",
+   "spec": {
+    "medal": 0,
+    "epaulettes": 0
+   }
+  },
+  "SHOP": {
+   "preset": "korean",
+   "name": "A shopkeeper",
+   "spec": {
+    "coat": "#6a5a44"
+   }
+  },
+  "VIL1": {
+   "preset": "korean",
+   "name": "A villager"
+  },
+  "VIL2": {
+   "preset": "korean",
+   "name": "Another villager",
+   "spec": {
+    "coat": "#b8a888"
+   }
+  },
+  "CROWD1": {
+   "preset": "korean",
+   "name": "A man in the crowd"
+  },
+  "CROWD2": {
+   "preset": "woman",
+   "name": "A woman in the crowd",
+   "spec": {
+    "hair": "#1c1a1a",
+    "skin": "#efc49c"
+   }
+  },
+  "ABE": {
+   "preset": "civilian",
+   "name": "Gov.-Gen. Nobuyuki Abe",
+   "spec": {
+    "hair": "#d8d3cb",
+    "glasses": 1,
+    "skin": "#efc49c"
+   }
+  },
+  "SONG": {
+   "preset": "korean",
+   "name": "Song Jin-woo",
+   "spec": {
+    "coat": "#2b2b33",
+    "glasses": 1
+   }
+  },
+  "JPRES": {
+   "preset": "civilian",
+   "name": "A Japanese resident",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "JPRES2": {
+   "preset": "woman",
+   "name": "His neighbour",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "coat": "#3a4a5a"
+   }
+  },
+  "GI1": {
+   "preset": "us_officer",
+   "name": "An American private",
+   "spec": {
+    "medal": 0,
+    "trim": "#6f6438"
+   }
+  },
+  "GI2": {
+   "preset": "us_officer",
+   "name": "Another private",
+   "spec": {
+    "medal": 0,
+    "trim": "#6f6438",
+    "hair": "#2a1d12"
+   }
+  },
+  "SGT": {
+   "preset": "us_officer",
+   "name": "An American sergeant",
+   "spec": {
+    "medal": 0
+   }
+  },
+  "WOMAN": {
+   "preset": "woman",
+   "name": "A woman in Seoul",
+   "spec": {
+    "hair": "#1c1a1a",
+    "skin": "#efc49c",
+    "coat": "#e8e2d4"
+   }
+  },
+  "SELLER": {
+   "preset": "korean",
+   "name": "A rice seller",
+   "spec": {
+    "coat": "#6a5a44"
+   }
+  },
+  "NKOFF": {
+   "preset": "korean",
+   "name": "A land-reform official",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "USOFF1": {
+   "preset": "us_officer",
+   "name": "An American officer"
+  },
+  "USOFF2": {
+   "preset": "us_officer",
+   "name": "Another American officer",
+   "spec": {
+    "hair": "#8a6a3a"
+   }
+  },
+  "CHO": {
+   "preset": "korean",
+   "name": "Cho Man-sik",
+   "spec": {
+    "hair": "#d8d3cb",
+    "glasses": 1
+   }
+  },
+  "GUARD": {
+   "preset": "soviet_officer",
+   "name": "A border guard",
+   "spec": {
+    "medal": 0,
+    "epaulettes": 0
+   }
+  },
+  "TRAV": {
+   "preset": "korean",
+   "name": "A traveller",
+   "spec": {
+    "coat": "#b8a888"
+   }
+  },
+  "SOVDEL": {
+   "preset": "soviet_officer",
+   "name": "The Soviet delegate",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "USDEL": {
+   "preset": "civilian",
+   "name": "An American delegate"
+  },
+  "WORKER": {
+   "preset": "worker",
+   "name": "A worker in Seoul",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "WORKER2": {
+   "preset": "worker",
+   "name": "Another worker",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "coat": "#4a4a52"
+   }
+  },
+  "SOUTH": {
+   "preset": "korean",
+   "name": "A man in the south"
+  },
+  "NORTH": {
+   "preset": "korean",
+   "name": "A man in the north",
+   "spec": {
+    "coat": "#4a4a52"
+   }
+  },
+  "ROK1": {
+   "preset": "us_officer",
+   "name": "A South Korean soldier",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "medal": 0,
+    "coat": "#4a5a4a"
+   }
+  },
+  "ROK2": {
+   "preset": "us_officer",
+   "name": "Another soldier",
+   "spec": {
+    "skin": "#efc49c",
+    "hair": "#1c1a1a",
+    "medal": 0,
+    "coat": "#4a5a4a"
+   }
+  },
+  "NEG1": {
+   "preset": "us_officer",
+   "name": "A UN negotiator",
+   "spec": {
+    "hat": "none"
+   }
+  },
+  "NEG2": {
+   "preset": "soviet_officer",
+   "name": "A Communist negotiator",
+   "spec": {
+    "hat": "none",
+    "skin": "#efc49c",
+    "hair": "#1c1a1a"
+   }
+  },
+  "OLD": {
+   "preset": "korean",
+   "name": "An old farmer",
+   "spec": {
+    "hair": "#d8d3cb",
+    "coat": "#d8d1c0"
+   }
+  },
+  "GRAND": {
+   "preset": "korean",
+   "name": "His grandson"
+  },
+  "RHEE": {
+   "preset": "rhee",
+   "name": "Syngman Rhee"
+  },
+  "KIM": {
+   "preset": "kim",
+   "name": "Kim Il Sung"
+  },
+  "BONE": {
+   "preset": "us_officer",
+   "name": "Col. Charles Bonesteel",
+   "spec": {
+    "hat": "none",
+    "hair": "#6b4a2a",
+    "glasses": 0
+   }
+  },
+  "BONE66": {
+   "preset": "us_officer",
+   "name": "Gen. Charles Bonesteel, 1966",
+   "spec": {
+    "hair": "#b8b0a4",
+    "glasses": 0
+   }
+  }
+ },
+ "balls": {},
+ "id": "sb-korea-38th-short2",
+ "short": true,
+ "film": true,
+ "photosFrom": "sb-korea-38th",
+ "title": "Do You Know Korea Was Almost Split on the SAME Line 40 Years Earlier? #shorts",
+ "intro": {
+  "mood": "tension",
+  "beats": [
+   {
+    "say": "Do you know Korea's border was almost drawn on the very same line, forty years before the Americans drew it?",
+    "scene": {
+     "shot": "card",
+     "time": "40 YEARS EARLIER",
+     "place": "THE SAME PARALLEL",
+     "date": "Japan and Russia",
+     "size": 140
+    },
+    "cam": {
+     "lon": 127.0,
+     "lat": 38.0,
+     "scale": 4500
+    }
+   },
+   {
+    "say": "August 1945. Two American colonels, Dean Rusk and Charles Bonesteel, choose the thirty-eighth parallel to split Korea.",
+    "scene": {
+     "shot": "photo",
+     "img": "bonesteel",
+     "move": "in",
+     "caption": "Charles H. Bonesteel III"
+    }
+   },
+   {
+    "talk": [
+     {
+      "who": "RUSK",
+      "text": "Seoul stays on our side."
+     },
+     {
+      "who": "BONE",
+      "text": "Then the thirty-eighth it is."
+     }
+    ],
+    "bg": {
+     "shot": "set",
+     "time": "night",
+     "parts": [
+      {
+       "type": "room",
+       "flag": "us",
+       "window": 0.1,
+       "night": true,
+       "depth": 0.3
+      },
+      {
+       "type": "table",
+       "lamp": 0.5,
+       "candles": 1,
+       "papers": 8,
+       "w": 900,
+       "depth": 0.6
+      }
+     ]
+    }
+   },
+   {
+    "say": "What they did not know: about forty years earlier, Japan and the Russian Empire had already discussed sharing Korea. Along the same parallel.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "Japan and Russia, 40 years earlier (paraphrase)",
+     "lines": [
+      "Korea, shared",
+      "along the 38th parallel"
+     ],
+     "hl": 1
+    }
+   },
+   {
+    "say": "Korea was never asked either time.",
+    "scene": {
+     "shot": "set",
+     "time": "day",
+     "parts": [
+      {
+       "type": "hills",
+       "y": 0.5,
+       "n": 3,
+       "seed": 128,
+       "depth": 0.15
+      },
+      {
+       "type": "farm",
+       "x": 0.3,
+       "s": 0.7,
+       "y": 0.72,
+       "night": false,
+       "depth": 0.6
+      },
+      {
+       "type": "land",
+       "kind": "grass",
+       "y": 0.76,
+       "depth": 0.6
+      },
+      {
+       "type": "people",
+       "list": [
+        {
+         "x": 0.36,
+         "facing": 1,
+         "h": 0.85,
+         "preset": "korean",
+         "pose": "point"
+        },
+        {
+         "x": 0.62,
+         "facing": -1,
+         "h": 0.82,
+         "preset": "woman",
+         "spec": {
+          "hair": "#1c1a1a",
+          "skin": "#efc49c",
+          "coat": "#e8e2d4"
+         }
+        }
+       ],
+       "lx": 0.4,
+       "ly": 0.6,
+       "depth": 0.8
+      }
+     ]
+    }
+   },
+   {
+    "say": "Years later, Rusk admitted it. If he had known Korean history, he said, he would almost surely have chosen a different line.",
+    "scene": {
+     "shot": "doc",
+     "kind": "letter",
+     "header": "Dean Rusk, later",
+     "lines": [
+      "...almost surely,",
+      "have chosen a different line."
+     ],
+     "hl": 0
+    }
+   },
+   {
+    "say": "He did not. And that line split a country for more than eighty years.",
+    "scene": {
+     "shot": "photo",
+     "img": "dmz",
+     "move": "out",
+     "caption": "DMZ fence, August 1968"
+    },
+    "pause": 1.0
+   }
+  ]
+ },
+ "chapters": [],
+ "sources": [
+  "Wikipedia, Division of Korea: https://en.wikipedia.org/wiki/Division_of_Korea",
+  "Wikipedia, Dean Rusk: https://en.wikipedia.org/wiki/Dean_Rusk"
+ ]
+}
