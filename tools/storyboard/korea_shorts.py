@@ -41,15 +41,14 @@ def short(sid, title, beats, srcs):
     print('wrote', sid, sum(len(b.get('say', '').split()) + sum(len(t['text'].split()) for t in b.get('talk', [])) for b in beats), 'words')
 
 short("sb-korea-38th-short1", "Do You Know the Man Who Split Korea Came Back to GUARD the Line? #shorts", [
- B("Do you know the man who drew the line across Korea came back, twenty one years later, to guard it?", card("1945 → 1966", "THE 38TH PARALLEL", "one man, both ends"), cam=MAP),
- B("Tenth of August 1945. Soviet troops are pouring into northern Korea. In Washington, a colonel named Charles Bonesteel needs a line. Tonight.", photo("bonesteel", "Charles H. Bonesteel III")),
+ B("Do you know the man who split Korea came back, twenty one years later, to guard the line?", card("1945 → 1966", "THE 38TH PARALLEL", "one man, both ends"), cam=MAP),
+ B("August 1945. Soviet troops pour into Korea. In Washington, Colonel Charles Bonesteel needs a line. Tonight.", photo("bonesteel", "Charles H. Bonesteel III")),
  T([("AIDE", "Where do we stop them?"), ("BONE", "North of Seoul. The thirty-eighth parallel.")], OFFICE),
- B("He proposes it on a National Geographic map. Six days later, Moscow says yes. It is meant to be temporary.", {"shot": "map-desk", "push": 0.12, "pan": [60, 40]}),
- B("Then come two Koreas, and a war that kills millions.", photo("refugees", "Refugees in Korea", move="out")),
- B("In 1966, Bonesteel is a general. And the army sends him to Korea, to command American forces along the border he proposed.", card("1966", "SEOUL", "Commander, US Forces Korea")),
+ B("On a National Geographic map. Moscow says yes. It is meant to be temporary.", {"shot": "map-desk", "push": 0.12, "pan": [60, 40]}),
+ B("In 1966, General Bonesteel is sent to Korea, to command American forces on that very border.", card("1966", "SEOUL", "Commander, US Forces Korea")),
  T([("GI1", "Sir, you know this line well?"), ("BONE66", "Better than anyone, son.", "sad")], SNOW),
- B("Three years of raids and clashes follow. Historians call it the Korean DMZ Conflict.", photo("dmz", "DMZ fence, August 1968", move="out")),
- B("He retires in 1969. The line he drew in one night is still there.", card("TODAY", "THE DMZ", "still there"), pause=1.0),
+ B("Raids and clashes follow: the Korean DMZ Conflict.", photo("dmz", "DMZ fence, August 1968", move="out")),
+ B("He retires in 1969. His one-night line is still there.", card("TODAY", "THE DMZ", "still there"), pause=1.0),
 ], [SRC[8], SRC[0]])
 
 short("sb-korea-38th-short2", "Do You Know Korea Was Almost Split on the SAME Line 40 Years Earlier? #shorts", [

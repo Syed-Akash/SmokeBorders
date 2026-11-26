@@ -575,7 +575,7 @@
   "mood": "tension",
   "beats": [
    {
-    "say": "Do you know the man who drew the line across Korea came back, twenty one years later, to guard it?",
+    "say": "Do you know the man who split Korea came back, twenty one years later, to guard the line?",
     "scene": {
      "shot": "card",
      "time": "1945 → 1966",
@@ -590,7 +590,7 @@
     }
    },
    {
-    "say": "Tenth of August 1945. Soviet troops are pouring into northern Korea. In Washington, a colonel named Charles Bonesteel needs a line. Tonight.",
+    "say": "August 1945. Soviet troops pour into Korea. In Washington, Colonel Charles Bonesteel needs a line. Tonight.",
     "scene": {
      "shot": "photo",
      "img": "bonesteel",
@@ -632,7 +632,7 @@
     }
    },
    {
-    "say": "He proposes it on a National Geographic map. Six days later, Moscow says yes. It is meant to be temporary.",
+    "say": "On a National Geographic map. Moscow says yes. It is meant to be temporary.",
     "scene": {
      "shot": "map-desk",
      "push": 0.12,
@@ -643,16 +643,7 @@
     }
    },
    {
-    "say": "Then come two Koreas, and a war that kills millions.",
-    "scene": {
-     "shot": "photo",
-     "img": "refugees",
-     "move": "out",
-     "caption": "Refugees in Korea"
-    }
-   },
-   {
-    "say": "In 1966, Bonesteel is a general. And the army sends him to Korea, to command American forces along the border he proposed.",
+    "say": "In 1966, General Bonesteel is sent to Korea, to command American forces on that very border.",
     "scene": {
      "shot": "card",
      "time": "1966",
@@ -706,7 +697,7 @@
     }
    },
    {
-    "say": "Three years of raids and clashes follow. Historians call it the Korean DMZ Conflict.",
+    "say": "Raids and clashes follow: the Korean DMZ Conflict.",
     "scene": {
      "shot": "photo",
      "img": "dmz",
@@ -715,7 +706,7 @@
     }
    },
    {
-    "say": "He retires in 1969. The line he drew in one night is still there.",
+    "say": "He retires in 1969. His one-night line is still there.",
     "scene": {
      "shot": "card",
      "time": "TODAY",
