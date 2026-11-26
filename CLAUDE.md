@@ -116,6 +116,10 @@ take two runs.
 - **25 Nov 2026 run:** Western Front got its 14 photos, passes the FILM CHECK (trench part now takes a `seed` for set dressing so
   trench shots don't repeat), rendered at 26.9 min (Turbo) with both "Do you know" Shorts; thumbnails use Trébuchon (no photo of Miles
   exists on Commons) and Hitler. Kit sent for 30 Nov / 1 / 2 Dec. Korea REDO render not started (one render per run fits).
+- **26 Nov 2026 run:** Korea (sb-korea-38th) got its last 11 photos and rendered at 34.1 min (Turbo); two "Do you know" Shorts written
+  (tools/storyboard/korea_shorts.py: Bonesteel came back in 1966 to guard his own line; Japan and Russia discussed the same parallel
+  40 years earlier). Kit sent for 3/4/5 Dec; Korea is off the redo list. No redos left. Next: Berlin Wall (6 Dec), still an idea.
+  Vice City and WW2 kits still await the owner's video IDs.
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
 - Trial review on 5 Dec 2026.
 

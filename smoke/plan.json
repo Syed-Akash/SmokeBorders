@@ -115,17 +115,19 @@
    "id": "sb-korea-38th",
    "title": "How Two Men and a Map Split Korea",
    "publish": "2026-12-03T16:00:00Z",
-   "status": "storyboard",
+   "status": "kit",
    "audience": "US CA AU",
    "shorts": [
     {
-     "publish": "2026-12-04T16:00:00Z"
+     "publish": "2026-12-04T16:00:00Z",
+     "story": "sb-korea-38th-short1"
     },
     {
-     "publish": "2026-12-05T16:00:00Z"
+     "publish": "2026-12-05T16:00:00Z",
+     "story": "sb-korea-38th-short2"
     }
    ],
-   "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode.",
+   "note": "Owner, 17 Nov 2026: the old channel is deleted; this film-style redo goes on the new channel as a regular episode. 26 Nov 2026: rendered (34.1 min, Turbo) with two \"Do you know\" Shorts (Bonesteel guards his own line; Japan and Russia's same parallel); kit sent for 3/4/5 Dec.",
    "angle": "Hidden people: Dean Rusk and Charles Bonesteel, two young officers who drew the line in about 30 minutes with a National Geographic map.",
    "oldVideoId": "bWtNC0Mk7hg",
    "channel": "new"
@@ -201,12 +203,6 @@
   "Sun Tzu one-idea episode"
  ],
  "reviewTrial": "2026-12-05",
- "redo": [
-  {
-   "id": "sb-korea-38th",
-   "status": "render",
-   "note": "20 Nov 2026: voice done (Turbo, 34.1 min, FILM CHECK passes; clips on wip/sb-korea-38th). Photos 5/17 fetched: Wikimedia answered 429 all morning. Next run: fetch the rest (story 'photos' now names exact Commons files), then make_doc --resume. Publishes 3 Dec."
-  }
- ],
+ "redo": [],
  "redoNote": "Owner, 17 Nov 2026: the old channel is deleted, so the redos are regular new-channel episodes in 'episodes' (AmRev 18 Nov, Rome 24 Nov, Korea 30 Nov). Korea still needs its dialogue pass here; when done, set its episode status to scripted (sbplan.py set sb-korea-38th scripted) and empty this list."
 }
