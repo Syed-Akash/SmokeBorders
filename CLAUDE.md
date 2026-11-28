@@ -121,6 +121,9 @@ take two runs.
   40 years earlier). Kit sent for 3/4/5 Dec; Korea is off the redo list. No redos left. Next: Berlin Wall (6 Dec), still an idea.
   Vice City and WW2 kits still await the owner's video IDs.
 - Five animation looks exist (`"look"`: cinematic default, paper, ink, flat, film); the owner hasn't picked one yet.
+- **28 Nov 2026 run:** nothing to make (only ASK jobs: WW2, Vice City and Rome kits still need their video IDs). The YouTube refresh
+  token for @SmokeAndBorders is expired (Google says invalid_grant; Testing-mode tokens die after 7 days), so the 5 queued first
+  comments cannot post. Owner: make a new token and put it in YT_REFRESH_TOKEN_SMOKE, and publish the OAuth app so it stops expiring.
 - Trial review on 5 Dec 2026.
 
 ## Map of the repo
